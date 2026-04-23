@@ -8,8 +8,8 @@
     "authorUrl": "https://x.com/NossaCoisa1",
     "tags": [
       "zh",
-      "featured",
-      "ui"
+      "ui",
+      "featured"
     ],
     "category": "ui",
     "lang": "zh",
@@ -34,8 +34,8 @@
     "authorUrl": "https://x.com/Firisis_",
     "tags": [
       "zh",
-      "featured",
-      "ui"
+      "ui",
+      "featured"
     ],
     "category": "ui",
     "lang": "zh",
@@ -60,8 +60,8 @@
     "authorUrl": "https://x.com/Angaisb_",
     "tags": [
       "zh",
-      "featured",
-      "ui"
+      "ui",
+      "featured"
     ],
     "category": "ui",
     "lang": "zh",
@@ -86,8 +86,8 @@
     "authorUrl": "https://x.com/StableTom",
     "tags": [
       "zh",
-      "featured",
-      "advertising"
+      "advertising",
+      "featured"
     ],
     "category": "advertising",
     "lang": "zh",
@@ -137,8 +137,8 @@
     "authorUrl": "https://x.com/mm_zzm44854",
     "tags": [
       "en",
-      "featured",
-      "infographic"
+      "infographic",
+      "featured"
     ],
     "category": "infographic",
     "lang": "en",
@@ -163,8 +163,8 @@
     "authorUrl": "https://x.com/sjbbxhz",
     "tags": [
       "en",
-      "featured",
-      "infographic"
+      "infographic",
+      "featured"
     ],
     "category": "infographic",
     "lang": "en",
@@ -189,8 +189,8 @@
     "authorUrl": "https://x.com/GeekCatX",
     "tags": [
       "en",
-      "featured",
-      "infographic"
+      "infographic",
+      "featured"
     ],
     "category": "infographic",
     "lang": "en",
@@ -215,8 +215,8 @@
     "authorUrl": "https://x.com/wory37303852",
     "tags": [
       "en",
-      "featured",
-      "infographic"
+      "infographic",
+      "featured"
     ],
     "category": "infographic",
     "lang": "en",
@@ -241,8 +241,8 @@
     "authorUrl": "https://x.com/Tanemomi_Ver2",
     "tags": [
       "en",
-      "featured",
-      "manga"
+      "manga",
+      "featured"
     ],
     "category": "manga",
     "lang": "en",
@@ -373,8 +373,8 @@
     "authorUrl": "https://x.com/yammamon",
     "tags": [
       "ja",
-      "featured",
-      "infographic"
+      "infographic",
+      "featured"
     ],
     "category": "infographic",
     "lang": "ja",
@@ -13704,9 +13704,9 @@
     "authorUrl": "https://x.com/Tz_2022",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -16165,9 +16165,9 @@
     "authorUrl": "https://x.com/YTkexue",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -16241,9 +16241,9 @@
     "authorUrl": "https://x.com/shinshin86",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -16359,7 +16359,7 @@
   },
   {
     "id": "2046530758190440928",
-    "title": "やり方とプロンプトはツリー↓",
+    "title": "手相を診断",
     "thumbnail": "/images/2046530758190440928_0.jpg",
     "thumbnailAspect": 1.5,
     "author": "agi_aibusi",
@@ -16376,7 +16376,7 @@
       "views": 1372
     },
     "createdAt": "Tue Apr 21 10:05:30 +0000 2026",
-    "prompt": "やり方とプロンプトはツリー↓",
+    "prompt": "GPT-image-2でこの手相を診断して詳細な鑑定書を作って\n生命線・知能線・感情線・運命線・太陽線・財運線・結婚線を、線の形状・濃淡・枝分かれ・起点終点まで分析すること。\n助言を重点的に高品質な占い鑑定書にまとめること。",
     "outputImages": [
       "/images/2046530758190440928_0.jpg"
     ],
@@ -16491,9 +16491,9 @@
     "authorUrl": "https://x.com/maxescu",
     "tags": [
       "en",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "en",
     "stats": {
       "likes": 0,
@@ -16568,9 +16568,9 @@
     "authorUrl": "https://x.com/fuuro_ito",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -16621,9 +16621,9 @@
     "authorUrl": "https://x.com/94vanAI",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -16671,9 +16671,9 @@
     "authorUrl": "https://x.com/ChengSir404",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -16822,9 +16822,9 @@
     "authorUrl": "https://x.com/JE_Colors1",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -17743,9 +17743,9 @@
     "authorUrl": "https://x.com/Malek1173989",
     "tags": [
       "en",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "en",
     "stats": {
       "likes": 0,
@@ -17793,9 +17793,9 @@
     "authorUrl": "https://x.com/phasE89",
     "tags": [
       "en",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "en",
     "stats": {
       "likes": 0,
@@ -17869,9 +17869,9 @@
     "authorUrl": "https://x.com/alanblogsooo",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -17919,9 +17919,9 @@
     "authorUrl": "https://x.com/alanlovelq/status/2046048929490612464",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -17947,9 +17947,9 @@
     "authorUrl": "https://x.com/Gorden_Sun",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -17972,9 +17972,9 @@
     "authorUrl": "https://x.com/ohmuyi",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -17990,7 +17990,7 @@
   },
   {
     "id": "2046188377524076915",
-    "title": "画像のプロンプトはALTに載せてます。",
+    "title": "Manga",
     "thumbnail": "/images/2046188377524076915_0.jpg",
     "thumbnailAspect": 1.563,
     "author": "yudotanaka",
@@ -18007,7 +18007,7 @@
       "views": 1517
     },
     "createdAt": "Mon Apr 20 11:25:00 +0000 2026",
-    "prompt": "画像のプロンプトはALTに載せてます。",
+    "prompt": "Steampunk light novel cover featuring a young girl in a dress embedded with gears and pipes, holding a star‑shaped crystal in one hand; behind her rises a giant mechanized forge emitting steam; blending a Victorian workshop interior with a dark night sky in the background; color palette of bronze, cobalt blue, and deep crimson highlights; decorative title lettering “少女と機巧炉の夜空学” with gear motifs prominently at top; detailed anime style, vertical orientation",
     "outputImages": [
       "/images/2046188377524076915_0.jpg",
       "/images/2046188377524076915_1.jpg",
@@ -18484,9 +18484,9 @@
     "authorUrl": "https://x.com/patrickassale",
     "tags": [
       "en",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "en",
     "stats": {
       "likes": 0,
@@ -18611,9 +18611,9 @@
     "authorUrl": "https://x.com/underwoodxie96",
     "tags": [
       "en",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "en",
     "stats": {
       "likes": 0,
@@ -18662,9 +18662,9 @@
     "authorUrl": "https://x.com/Conor_D_Dart",
     "tags": [
       "en",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "en",
     "stats": {
       "likes": 0,
@@ -19320,9 +19320,9 @@
     "authorUrl": "https://x.com/liyue_ai",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -19773,9 +19773,9 @@
     "authorUrl": "https://x.com/K_polar_AI",
     "tags": [
       "ja",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "ja",
     "stats": {
       "likes": 0,
@@ -19955,9 +19955,9 @@
     "authorUrl": "https://x.com/Masimo_Blue",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -20357,9 +20357,9 @@
     "authorUrl": "https://x.com/Daein199X",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -21139,9 +21139,9 @@
     "authorUrl": "https://x.com/EchoraContinuum",
     "tags": [
       "zh",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -22069,7 +22069,7 @@
   },
   {
     "id": "2046215187678790140",
-    "title": "プロンプトはリプに最終ページとまとめて掲載します↓",
+    "title": "Manga",
     "thumbnail": "/images/2046215187678790140_0.jpg",
     "thumbnailAspect": 1.777,
     "author": "minesan_ai",
@@ -22086,7 +22086,7 @@
       "views": 207
     },
     "createdAt": "Mon Apr 20 13:11:32 +0000 2026",
-    "prompt": "プロンプトはリプに最終ページとまとめて掲載します↓",
+    "prompt": "添付の女の子に織田信長の生涯を解説する漫画を作成させて 9:16のFHDで、日本語のセリフで、日本のコミックスのページとコマの流れで作成してください。 絵柄はキャラクターに合わせてください。 全５ページで作成してください",
     "outputImages": [
       "/images/2046215187678790140_0.jpg",
       "/images/2046215187678790140_1.jpg",
@@ -22123,16 +22123,16 @@
   },
   {
     "id": "2046517653431545956",
-    "title": "in ALT and comment.",
+    "title": "Ad",
     "thumbnail": "/images/2046517653431545956_0.jpg",
     "thumbnailAspect": 1.333,
     "author": "fy360593",
     "authorUrl": "https://x.com/fy360593/status/2046517653431545956",
     "tags": [
       "en",
-      "other"
+      "advertising"
     ],
-    "category": "other",
+    "category": "advertising",
     "lang": "en",
     "stats": {
       "likes": 1,
@@ -22140,7 +22140,7 @@
       "views": 91
     },
     "createdAt": "Tue Apr 21 09:13:25 +0000 2026",
-    "prompt": "in ALT and comment.",
+    "prompt": "Generate a highly modern, glassmorphism-style visual design mockup.\n\nAt the center of the composition, a naturally posed human hand rises from the bottom of the frame, gently holding up a semi-transparent, glass-textured rounded rectangular card. The card has a vertical 3:4 aspect ratio, and the fingertips lightly touch its edge. Its material feels delicate, with soft edges, background blur, and a subtle gradient lighting effect that conveys the curved reflective quality of real glass. The card’s surface contains delicate arc-shaped light trails, softly embedded within the translucent glass, emphasizing a futuristic and refined aesthetic.\n\nOn the card, left-aligned typography reads:\nLarge text:[ Danfei]\nSmall text:[ Indie Developer| Prompter | Creator]\nMedium text: [PromptWall(product name)]\n\nThe whole background of mockup features a pure black gradient to accentuate the textures of the hand and the card. It remains clean and free of distractions. The light source comes slightly from a",
     "outputImages": [
       "/images/2046517653431545956_0.jpg",
       "/images/2046517653431545956_1.jpg"
@@ -22181,9 +22181,9 @@
     "authorUrl": "https://x.com/fy360593/status/2046512133295452363",
     "tags": [
       "en",
-      "other"
+      "portrait"
     ],
-    "category": "other",
+    "category": "portrait",
     "lang": "en",
     "stats": {
       "likes": 0,
@@ -22275,7 +22275,7 @@
   },
   {
     "id": "2046540642634047868",
-    "title": "Prompt见评论。",
+    "title": "古风仙侠",
     "thumbnail": "/images/2046540642634047868_0.jpg",
     "thumbnailAspect": 0.667,
     "author": "EurekaLuyao",
@@ -22292,7 +22292,7 @@
       "views": 41
     },
     "createdAt": "Tue Apr 21 10:44:46 +0000 2026",
-    "prompt": "Prompt见评论。",
+    "prompt": "写实古风仙侠RPG实机截图，第三人称。晴天古城街道，青石板、木楼、红灯笼，人群热闹有纵深。中央长发古风少女回眸，浅粉白金轻纱长裙。保留小地图、任务栏、技能栏，电影感，真实引擎渲染。\n",
     "outputImages": [
       "/images/2046540642634047868_0.jpg"
     ],
