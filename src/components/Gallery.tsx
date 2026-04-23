@@ -155,13 +155,20 @@ export default function Gallery({ entries }: Props) {
         )}
       </main>
 
-      {selected && (
-        <PromptModal
-          entry={selected}
-          onClose={() => setSelected(null)}
-          onTagClick={handleTagClick}
-        />
-      )}
+      {selected && (() => {
+        const idx = filtered.findIndex(e => e.id === selected.id);
+        return (
+          <PromptModal
+            entry={selected}
+            onClose={() => setSelected(null)}
+            onTagClick={handleTagClick}
+            hasPrev={idx > 0}
+            hasNext={idx < filtered.length - 1}
+            onPrev={() => idx > 0 && setSelected(filtered[idx - 1])}
+            onNext={() => idx < filtered.length - 1 && setSelected(filtered[idx + 1])}
+          />
+        );
+      })()}
     </>
   );
 }

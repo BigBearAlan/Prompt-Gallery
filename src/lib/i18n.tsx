@@ -30,6 +30,8 @@ export interface Translation {
   noImage: string;
 
   // Modal
+  prevEntry: string;
+  nextEntry: string;
   tabImage: string;
   tabPrompt: string;
   promptTemplate: string;
@@ -69,6 +71,8 @@ export const translations: Record<Locale, Translation> = {
     viewPrompt: '查看提示词',
     noImage: '暂无图片',
 
+    prevEntry: '上一个',
+    nextEntry: '下一个',
     tabImage: '图片',
     tabPrompt: '提示词',
     promptTemplate: '提示词模板',
@@ -107,6 +111,8 @@ export const translations: Record<Locale, Translation> = {
     viewPrompt: 'View Prompt',
     noImage: 'No image',
 
+    prevEntry: 'Previous',
+    nextEntry: 'Next',
     tabImage: 'Image',
     tabPrompt: 'Prompt',
     promptTemplate: 'Prompt Template',

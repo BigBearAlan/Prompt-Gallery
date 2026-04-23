@@ -15,9 +15,13 @@ interface Props {
   entry: PromptEntry;
   onClose: () => void;
   onTagClick: (tag: string) => void;
+  hasPrev?: boolean;
+  hasNext?: boolean;
+  onPrev?: () => void;
+  onNext?: () => void;
 }
 
-export default function PromptModal({ entry, onClose, onTagClick }: Props) {
+export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNext, onPrev, onNext }: Props) {
   const [editedPrompt, setEditedPrompt] = useState(entry.prompt);
   const [copied, setCopied] = useState(false);
   const [activeImage, setActiveImage] = useState(0);
@@ -33,10 +37,16 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
   }, [entry]);
 
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { onClose(); return; }
+      // Arrow nav — skip when user is typing in the textarea
+      if (document.activeElement?.tagName === 'TEXTAREA') return;
+      if (e.key === 'ArrowLeft'  && hasPrev && onPrev) onPrev();
+      if (e.key === 'ArrowRight' && hasNext && onNext) onNext();
+    };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [onClose]);
+  }, [onClose, hasPrev, hasNext, onPrev, onNext]);
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -62,8 +72,38 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
   const handleReset = useCallback(() => setEditedPrompt(entry.prompt), [entry.prompt]);
   const hasEdits = editedPrompt !== entry.prompt;
 
+  const NavBtn = ({ dir }: { dir: 'prev' | 'next' }) => {
+    const active = dir === 'prev' ? hasPrev : hasNext;
+    const handle = dir === 'prev' ? onPrev   : onNext;
+    const label  = dir === 'prev' ? tx.prevEntry : tx.nextEntry;
+    return (
+      <button
+        onClick={(e) => { e.stopPropagation(); handle?.(); }}
+        aria-label={label}
+        className="fixed top-1/2 -translate-y-1/2 z-[51] flex items-center justify-center w-10 h-10 rounded-full transition-all duration-150 active:scale-90"
+        style={{
+          [dir === 'prev' ? 'left' : 'right']: '12px',
+          background: active ? 'rgba(255,255,255,0.92)' : 'rgba(255,255,255,0.25)',
+          boxShadow: active ? '0 2px 12px rgba(0,0,0,0.18)' : 'none',
+          opacity: active ? 1 : 0.35,
+          cursor: active ? 'pointer' : 'default',
+          pointerEvents: active ? 'auto' : 'none',
+        }}
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="2.5" strokeLinecap="round">
+          {dir === 'prev'
+            ? <polyline points="15 18 9 12 15 6" />
+            : <polyline points="9 18 15 12 9 6" />}
+        </svg>
+      </button>
+    );
+  };
+
   return (
     <div className="modal-backdrop" onClick={onClose}>
+      <NavBtn dir="prev" />
+      <NavBtn dir="next" />
+
       <div
         className="modal-content w-full max-w-4xl max-h-[92vh] rounded-2xl overflow-hidden flex flex-col"
         style={{ background: 'var(--card)' }}
