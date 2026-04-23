@@ -84,7 +84,7 @@ The current top-level categories are:
 
 ## Redeploy Flow
 
-After curation, use the same deployment flow as before:
+After curation, use the same Cloudflare deployment flow as before:
 
 ```bash
 node scripts/sync-data.mjs
@@ -93,3 +93,32 @@ npx wrangler pages deploy out --project-name prompt-gallery --commit-dirty=true
 ```
 
 `scripts/sync-data.mjs` now reads `src/data/curation.json`, so hidden prompts and category overrides survive future syncs.
+
+## GitHub Pages
+
+GitHub Pages is a second static deployment target:
+
+- Repository: `https://github.com/BigBearAlan/Prompt-Gallery.git`
+- GitHub Pages URL: `https://bigbearalan.github.io/Prompt-Gallery/`
+- Cloudflare URL: `https://prompt-gallery-916.pages.dev`
+
+One-time GitHub setup:
+
+1. Open repository Settings.
+2. Go to Pages.
+3. Set Source to GitHub Actions.
+
+The workflow in `.github/workflows/github-pages.yml` runs on pushes to `main` and manual dispatch. It runs `npm ci`, `npm run sync`, then builds with:
+
+```bash
+NEXT_PUBLIC_BASE_PATH=/Prompt-Gallery npm run build
+```
+
+The base path is only set in the GitHub Pages workflow, so local and Cloudflare builds still serve from `/`.
+
+Verify GitHub Pages after deployment:
+
+```bash
+curl -L --max-time 30 -s https://bigbearalan.github.io/Prompt-Gallery/ | rg 'PromptCanvas|漫画|广告|游戏'
+curl -I --max-time 30 https://bigbearalan.github.io/Prompt-Gallery/images/2046201836525302032_0.jpg
+```

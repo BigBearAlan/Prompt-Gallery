@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import type { PromptEntry } from '@/lib/types';
+import { withBasePath } from '@/lib/asset-path';
 
 function formatNum(n: number): string {
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
@@ -114,7 +115,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
               {!imgFailed ? (
                 <img
                   key={entry.outputImages[activeImage]}
-                  src={entry.outputImages[activeImage] || entry.thumbnail}
+                  src={withBasePath(entry.outputImages[activeImage] || entry.thumbnail)}
                   alt={entry.title}
                   className="w-full object-cover"
                   onError={() => setImgFailed(true)}
@@ -137,7 +138,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                       i === activeImage ? 'border-gray-900' : 'border-transparent opacity-60 hover:opacity-100'
                     }`}
                   >
-                    <img src={url} alt="" className="w-full h-full object-cover" />
+                    <img src={withBasePath(url)} alt="" className="w-full h-full object-cover" />
                   </button>
                 ))}
               </div>

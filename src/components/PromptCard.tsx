@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import type { PromptEntry } from '@/lib/types';
+import { withBasePath } from '@/lib/asset-path';
 
 function cardGradient(id: string): string {
   const n = (parseInt(id.slice(-6), 16) % 360 + 360) % 360;
@@ -40,7 +41,7 @@ export default function PromptCard({ entry, onClick, onTagClick }: Props) {
       >
         {!imgFailed && (
           <img
-            src={entry.thumbnail}
+            src={withBasePath(entry.thumbnail)}
             alt={entry.title}
             className="w-full block object-cover transition-transform duration-300"
             style={{ transform: hovered ? 'scale(1.04)' : 'scale(1)' }}
