@@ -21,24 +21,21 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
   const [copied, setCopied] = useState(false);
   const [activeImage, setActiveImage] = useState(0);
   const [imgFailed, setImgFailed] = useState(false);
+  const [mobileTab, setMobileTab] = useState<'image' | 'prompt'>('image');
 
-  // Reset when entry changes
   useEffect(() => {
     setEditedPrompt(entry.prompt);
     setActiveImage(0);
     setImgFailed(false);
+    setMobileTab('image');
   }, [entry]);
 
-  // Close on Escape
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
+    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, [onClose]);
 
-  // Prevent body scroll
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => { document.body.style.overflow = ''; };
@@ -47,27 +44,20 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
   const handleCopy = useCallback(async () => {
     try {
       await navigator.clipboard.writeText(editedPrompt);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
     } catch {
-      // Fallback for browsers without clipboard API
       const ta = document.createElement('textarea');
       ta.value = editedPrompt;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
+      ta.style.cssText = 'position:fixed;opacity:0';
       document.body.appendChild(ta);
       ta.select();
       document.execCommand('copy');
       document.body.removeChild(ta);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
     }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   }, [editedPrompt]);
 
-  const handleReset = useCallback(() => {
-    setEditedPrompt(entry.prompt);
-  }, [entry.prompt]);
-
+  const handleReset = useCallback(() => setEditedPrompt(entry.prompt), [entry.prompt]);
   const hasEdits = editedPrompt !== entry.prompt;
 
   return (
@@ -77,25 +67,26 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
         style={{ background: 'var(--card)' }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Modal header */}
+        {/* ── Modal header ─────────────────────────────────── */}
         <div
-          className="flex items-center justify-between px-5 py-3 border-b shrink-0"
+          className="flex items-center justify-between px-4 py-3 border-b shrink-0"
           style={{ borderColor: 'var(--border)' }}
         >
           <div className="flex items-center gap-2 min-w-0">
             <span
-              className="text-xs font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide"
+              className="text-xs font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide shrink-0"
               style={{ background: '#f0f0f0', color: 'var(--text-secondary)' }}
             >
               {entry.category}
             </span>
-            <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>
+            <span className="text-xs truncate" style={{ color: 'var(--text-secondary)' }}>
               @{entry.author}
             </span>
           </div>
           <button
             onClick={onClose}
             className="p-1.5 rounded-full hover:bg-gray-100 transition-colors ml-2 shrink-0"
+            aria-label="关闭"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M18 6 6 18M6 6l12 12" />
@@ -103,11 +94,39 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
           </button>
         </div>
 
-        {/* Modal body */}
+        {/* ── Mobile tab bar (< md only) ───────────────────── */}
+        <div
+          className="flex md:hidden shrink-0 border-b"
+          style={{ borderColor: 'var(--border)' }}
+        >
+          <button
+            onClick={() => setMobileTab('image')}
+            className="flex-1 py-2.5 text-sm font-medium transition-colors relative"
+            style={{ color: mobileTab === 'image' ? 'var(--text-primary)' : 'var(--text-secondary)' }}
+          >
+            图片
+            {mobileTab === 'image' && (
+              <span className="absolute bottom-0 left-1/4 right-1/4 h-0.5 rounded-full" style={{ background: 'var(--text-primary)' }} />
+            )}
+          </button>
+          <button
+            onClick={() => setMobileTab('prompt')}
+            className="flex-1 py-2.5 text-sm font-medium transition-colors relative"
+            style={{ color: mobileTab === 'prompt' ? 'var(--text-primary)' : 'var(--text-secondary)' }}
+          >
+            提示词
+            {mobileTab === 'prompt' && (
+              <span className="absolute bottom-0 left-1/4 right-1/4 h-0.5 rounded-full" style={{ background: 'var(--text-primary)' }} />
+            )}
+          </button>
+        </div>
+
+        {/* ── Modal body ───────────────────────────────────── */}
         <div className="flex flex-col md:flex-row overflow-hidden flex-1 min-h-0">
-          {/* Left: image panel */}
+
+          {/* Left: image panel — full on mobile image tab, side panel on desktop */}
           <div
-            className="md:w-[45%] shrink-0 flex flex-col p-4 gap-3 overflow-y-auto scrollbar-none border-b md:border-b-0 md:border-r"
+            className={`${mobileTab === 'prompt' ? 'hidden' : 'flex'} md:flex md:w-[45%] shrink-0 flex-col p-4 gap-3 overflow-y-auto scrollbar-none border-b md:border-b-0 md:border-r`}
             style={{ borderColor: 'var(--border)', background: '#f8f8f8' }}
           >
             {/* Main image */}
@@ -121,13 +140,13 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                   onError={() => setImgFailed(true)}
                 />
               ) : (
-                <div className="w-full aspect-[9/16] flex items-center justify-center text-gray-400 text-sm">
+                <div className="w-full aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
                   图片不可用
                 </div>
               )}
             </div>
 
-            {/* Thumbnail strip (if multiple images) */}
+            {/* Thumbnail strip */}
             {entry.outputImages.length > 1 && (
               <div className="flex gap-2 overflow-x-auto scrollbar-none">
                 {entry.outputImages.map((url, i) => (
@@ -169,22 +188,21 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
             </div>
           </div>
 
-          {/* Right: prompt panel */}
-          <div className="flex-1 flex flex-col min-h-0 overflow-y-auto">
-            <div className="p-5 flex flex-col gap-4 flex-1">
+          {/* Right: prompt panel — full on mobile prompt tab, side panel on desktop */}
+          <div
+            className={`${mobileTab === 'image' ? 'hidden' : 'flex'} md:flex flex-1 flex-col min-h-0 overflow-y-auto`}
+          >
+            <div className="p-4 md:p-5 flex flex-col gap-4 flex-1">
               {/* Title */}
               <div>
-                <h2
-                  className="text-base font-bold leading-snug mb-2"
-                  style={{ color: 'var(--text-primary)' }}
-                >
+                <h2 className="text-base font-bold leading-snug mb-2" style={{ color: 'var(--text-primary)' }}>
                   {entry.title}
                 </h2>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1.5">
                   <span
-                    className="tag-pill"
+                    className="tag-pill cursor-pointer"
                     style={{ background: '#111', color: '#fff' }}
                     onClick={() => { onTagClick(entry.lang); onClose(); }}
                   >
@@ -195,7 +213,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                     .map((tag) => (
                       <span
                         key={tag}
-                        className="tag-pill"
+                        className="tag-pill cursor-pointer"
                         onClick={() => { onTagClick(tag); onClose(); }}
                       >
                         {tag}
@@ -204,7 +222,6 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                 </div>
               </div>
 
-              {/* Divider */}
               <div className="border-t" style={{ borderColor: 'var(--border)' }} />
 
               {/* Prompt editor */}
@@ -229,7 +246,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                 </p>
 
                 <textarea
-                  className="prompt-textarea w-full flex-1 min-h-[200px] p-3 rounded-xl border outline-none focus:ring-2 focus:ring-gray-900/20 transition"
+                  className="prompt-textarea w-full flex-1 min-h-[160px] p-3 rounded-xl border outline-none focus:ring-2 focus:ring-gray-900/20 transition"
                   style={{
                     borderColor: hasEdits ? '#999' : 'var(--border)',
                     background: '#fafafa',
@@ -249,7 +266,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
 
             {/* Sticky action bar */}
             <div
-              className="px-5 py-4 border-t flex items-center gap-3 shrink-0"
+              className="px-4 md:px-5 py-3 border-t flex items-center gap-2 shrink-0"
               style={{ borderColor: 'var(--border)', background: 'var(--card)' }}
             >
               <button
@@ -282,7 +299,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                 className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-medium border transition-colors hover:bg-gray-50"
                 style={{ borderColor: 'var(--border)', color: 'var(--text-secondary)' }}
               >
-                查看来源
+                来源
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   <polyline points="15 3 21 3 21 9" />

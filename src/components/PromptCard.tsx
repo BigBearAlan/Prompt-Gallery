@@ -20,7 +20,6 @@ export default function PromptCard({ entry, onClick, onTagClick }: Props) {
   const [hovered, setHovered] = useState(false);
 
   const displayTags = entry.tags.filter((t) => t !== entry.lang).slice(0, 3);
-  const langLabel = entry.lang.toUpperCase();
 
   return (
     <div
@@ -111,25 +110,20 @@ export default function PromptCard({ entry, onClick, onTagClick }: Props) {
           </span>
         </div>
 
-        {/* Tags + lang */}
-        <div className="flex flex-wrap gap-1 mt-1.5">
-          <span
-            className="tag-pill"
-            style={{ background: '#111', color: '#fff', cursor: 'default' }}
-            onClick={(e) => { e.stopPropagation(); onTagClick(entry.lang); }}
-          >
-            {langLabel}
-          </span>
-          {displayTags.map((tag) => (
-            <span
-              key={tag}
-              className="tag-pill"
-              onClick={(e) => { e.stopPropagation(); onTagClick(tag); }}
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        {/* Tags */}
+        {displayTags.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-1.5">
+            {displayTags.map((tag) => (
+              <span
+                key={tag}
+                className="tag-pill"
+                onClick={(e) => { e.stopPropagation(); onTagClick(tag); }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -11,7 +11,9 @@
     "curate": "node scripts/curate-gallery.mjs",
     "curate:audit": "node scripts/curate-gallery.mjs audit",
     "curate:reclassify": "node scripts/curate-gallery.mjs reclassify",
-    "import:x": "node scripts/import-x-search.mjs"
+    "import:x": "node scripts/import-x-search.mjs",
+    "admin": "node scripts/admin.mjs",
+    "cleanup": "node scripts/cleanup-prompts.mjs"
   },
   "dependencies": {
     "next": "15.3.1",

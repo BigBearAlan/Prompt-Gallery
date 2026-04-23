@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useRef } from 'react';
 import type { PromptEntry, SortBy } from '@/lib/types';
 import PromptCard from './PromptCard';
 import PromptModal from './PromptModal';
@@ -21,8 +21,21 @@ export default function Gallery({ entries }: Props) {
   const [selected, setSelected] = useState<PromptEntry | null>(null);
   const [tagFilter, setTagFilter] = useState('');
 
+  // Shuffle once per session (stable across re-renders, new order on page reload)
+  const sessionSeed = useRef(Math.random());
+  const shuffled = useMemo(() => {
+    const arr = [...entries];
+    let seed = sessionSeed.current;
+    for (let i = arr.length - 1; i > 0; i--) {
+      seed = (seed * 9301 + 49297) % 233280;
+      const j = Math.floor((seed / 233280) * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, [entries]);
+
   const filtered = useMemo(() => {
-    let result = entries;
+    let result = shuffled;
 
     if (search.trim()) {
       const q = search.toLowerCase();
@@ -47,12 +60,10 @@ export default function Gallery({ entries }: Props) {
       result = result.filter((e) => e.tags.includes(tagFilter));
     }
 
-    return [...result].sort((a, b) => {
-      if (sortBy === 'likes') return b.stats.likes - a.stats.likes;
-      if (sortBy === 'views') return b.stats.views - a.stats.views;
-      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-    });
-  }, [entries, search, category, lang, sortBy, tagFilter]);
+    if (sortBy === 'likes') return [...result].sort((a, b) => b.stats.likes - a.stats.likes);
+    if (sortBy === 'views') return [...result].sort((a, b) => b.stats.views - a.stats.views);
+    return result; // 'recent' keeps the session shuffle order
+  }, [shuffled, search, category, lang, sortBy, tagFilter]);
 
   const displayed = useMemo(
     () => filtered.slice(0, page * PAGE_SIZE),

@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PromptCanvas 图社 — Admin</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f2f0ed;
+  --card: #fff;
+  --accent: #e60023;
+  --text-primary: #111;
+  --text-secondary: #767676;
+  --border: #e5e5e5;
+  --topbar-h: 52px;
+}
+
+html { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+}
+
+/* ── Top bar ─────────────────────────────────────────── */
+#topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #111;
+  height: var(--topbar-h);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  margin-right: 4px;
+}
+.brand-logo {
+  width: 26px; height: 26px;
+  background: var(--accent);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+}
+.brand-name { font-size: 14px; font-weight: 700; color: #fff; }
+.brand-sub  { font-size: 11px; color: #666; }
+.admin-pill {
+  font-size: 10px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; background: #333;
+  color: #aaa; padding: 2px 6px; border-radius: 4px;
+}
+
+#search-wrap { position: relative; flex: 1; max-width: 340px; }
+#search-wrap svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #555; pointer-events: none; }
+#search {
+  width: 100%; background: #1c1c1c; border: 1px solid #333; color: #ddd;
+  border-radius: 18px; padding: 6px 12px 6px 32px;
+  font-size: 13px; outline: none;
+}
+#search::placeholder { color: #555; }
+#search:focus { border-color: #555; }
+
+.tb-select {
+  background: #1c1c1c; border: 1px solid #333; color: #bbb;
+  border-radius: 14px; padding: 5px 10px; font-size: 12px;
+  cursor: pointer; outline: none; flex-shrink: 0;
+}
+
+#count-label { font-size: 12px; color: #555; white-space: nowrap; flex-shrink: 0; }
+
+.spacer { flex: 1; }
+
+.dirty-dot {
+  width: 7px; height: 7px; background: #fbbf24;
+  border-radius: 50%; flex-shrink: 0; display: none;
+}
+.dirty-dot.on { display: block; }
+
+.tb-btn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 16px; border: none;
+  font-size: 13px; font-weight: 600; cursor: pointer;
+  transition: opacity .15s; flex-shrink: 0; white-space: nowrap;
+}
+.tb-btn:hover { opacity: .85; }
+.tb-btn:disabled { opacity: .35; cursor: not-allowed; }
+.btn-save   { background: #16a34a; color: #fff; }
+.btn-deploy { background: #2563eb; color: #fff; }
+
+/* ── Grid ───────────────────────────────────────────── */
+#main { max-width: 1800px; margin: 0 auto; padding: 10px 10px 120px; }
+
+.masonry { columns: 2; column-gap: 10px; }
+@media (min-width:  640px) { .masonry { columns: 3; } }
+@media (min-width:  900px) { .masonry { columns: 4; } }
+@media (min-width: 1200px) { .masonry { columns: 5; } }
+@media (min-width: 1600px) { .masonry { columns: 6; } }
+
+.mitem { break-inside: avoid; margin-bottom: 10px; }
+
+/* ── Card ───────────────────────────────────────────── */
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  cursor: default;
+  transition: box-shadow .15s;
+}
+.card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.13); }
+
+.card-img-wrap { position: relative; background: #eee; overflow: hidden; }
+.card-img-wrap img { width: 100%; height: auto; display: block; }
+
+/* Edit/delete overlay */
+.card-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.52);
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  opacity: 0; transition: opacity .15s;
+}
+.card:hover .card-overlay { opacity: 1; }
+
+.ov-btn {
+  display: flex; align-items: center; gap: 4px;
+  padding: 7px 13px; border-radius: 18px;
+  font-size: 12px; font-weight: 600; border: none; cursor: pointer;
+  transition: background .12s;
+}
+.ov-edit   { background: #fff; color: #111; }
+.ov-edit:hover { background: #f0f0f0; }
+.ov-delete { background: var(--accent); color: #fff; }
+.ov-delete:hover { background: #c00; }
+
+.card-body { padding: 9px 11px 10px; }
+.card-cat {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .05em; color: var(--text-secondary); margin-bottom: 3px;
+}
+.card-title {
+  font-size: 13px; font-weight: 600; line-height: 1.35;
+  overflow: hidden; display: -webkit-box;
+  -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  margin-bottom: 3px;
+}
+.card-author { font-size: 11px; color: var(--text-secondary); }
+
+/* Modified badge */
+.card.modified::before {
+  content: '✎';
+  position: absolute; top: 7px; left: 7px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: #fbbf24; color: #111; font-size: 11px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; z-index: 2;
+}
+
+/* ── Edit modal ─────────────────────────────────────── */
+.backdrop {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,.65); backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px;
+}
+.backdrop.hidden { display: none; }
+
+.modal-box {
+  background: var(--card); border-radius: 18px;
+  width: 100%; max-width: 920px; max-height: 92vh;
+  display: flex; flex-direction: column; overflow: hidden;
+}
+
+.modal-hdr {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px; border-bottom: 1px solid var(--border); flex-shrink: 0;
+}
+.modal-hdr-title { font-size: 15px; font-weight: 700; }
+.modal-close {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: #f0f0f0; border: none; cursor: pointer;
+  font-size: 17px; color: #555; display: flex;
+  align-items: center; justify-content: center; line-height: 1;
+}
+.modal-close:hover { background: #e0e0e0; }
+
+.modal-body {
+  display: flex; flex: 1; min-height: 0; overflow: hidden;
+}
+
+.modal-imgs {
+  width: 42%; flex-shrink: 0; background: #f7f7f7;
+  border-right: 1px solid var(--border); overflow-y: auto;
+  padding: 14px; display: flex; flex-direction: column; gap: 8px;
+}
+.modal-imgs img {
+  width: 100%; border-radius: 10px; display: block;
+  cursor: pointer; border: 2px solid transparent; transition: border-color .12s;
+}
+.modal-imgs img.active-thumb { border-color: #111; }
+.thumb-strip {
+  display: flex; gap: 6px; overflow-x: auto;
+  padding-bottom: 2px; flex-wrap: nowrap;
+}
+.thumb-strip img {
+  width: 52px; height: 52px; object-fit: cover;
+  border-radius: 6px; flex-shrink: 0;
+}
+
+.modal-fields {
+  flex: 1; overflow-y: auto; padding: 18px 20px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+
+.fld { display: flex; flex-direction: column; gap: 5px; }
+.fld-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--text-secondary);
+}
+.fld-input, .fld-select {
+  border: 1px solid var(--border); border-radius: 9px;
+  padding: 8px 11px; font-size: 13px; font-family: inherit;
+  color: var(--text-primary); background: #fafafa; outline: none;
+  transition: border-color .15s;
+}
+.fld-input:focus, .fld-select:focus { border-color: #999; background: #fff; }
+.fld-textarea {
+  border: 1px solid var(--border); border-radius: 9px;
+  padding: 10px 11px; font-size: 12px; font-family: 'SF Mono','Fira Code',monospace;
+  color: var(--text-primary); background: #fafafa; outline: none;
+  min-height: 240px; resize: vertical; line-height: 1.65;
+  transition: border-color .15s;
+}
+.fld-textarea:focus { border-color: #999; background: #fff; }
+.char-count { font-size: 11px; color: var(--text-secondary); text-align: right; }
+
+.modal-ftr {
+  padding: 12px 20px; border-top: 1px solid var(--border);
+  display: flex; justify-content: flex-end; gap: 8px; flex-shrink: 0;
+}
+.btn-cancel {
+  padding: 8px 18px; border-radius: 10px; border: none;
+  background: #f0f0f0; color: #555; font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.btn-apply {
+  padding: 8px 18px; border-radius: 10px; border: none;
+  background: #111; color: #fff; font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.btn-cancel:hover { background: #e5e5e5; }
+.btn-apply:hover  { background: #333; }
+
+/* ── Delete confirm ─────────────────────────────────── */
+.confirm-box {
+  background: var(--card); border-radius: 14px;
+  padding: 28px 24px; max-width: 380px; width: 100%; text-align: center;
+}
+.confirm-icon { font-size: 30px; margin-bottom: 10px; }
+.confirm-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.confirm-desc { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.5; }
+.confirm-btns { display: flex; gap: 10px; justify-content: center; }
+.btn-del { background: var(--accent) !important; }
+
+/* ── Deploy panel ───────────────────────────────────── */
+#deploy-panel {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 310px;
+  background: #0d0d0d; border-top: 1px solid #2a2a2a; z-index: 150;
+  display: flex; flex-direction: column;
+  transform: translateY(100%); transition: transform .28s cubic-bezier(.4,0,.2,1);
+}
+#deploy-panel.open { transform: translateY(0); }
+.dp-hdr {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 9px 16px; border-bottom: 1px solid #2a2a2a; flex-shrink: 0;
+}
+.dp-title { font-size: 13px; font-weight: 600; color: #ddd; display: flex; align-items: center; gap: 7px; }
+.dp-close {
+  background: none; border: none; color: #666; font-size: 20px;
+  cursor: pointer; line-height: 1; padding: 0 2px;
+}
+.dp-close:hover { color: #aaa; }
+#deploy-log {
+  flex: 1; overflow-y: auto; padding: 10px 16px;
+  font-family: 'SF Mono','Fira Code','Consolas',monospace;
+  font-size: 12px; line-height: 1.7; color: #bbb; white-space: pre-wrap;
+  word-break: break-all;
+}
+.log-ok  { color: #4ade80; }
+.log-err { color: #f87171; }
+.log-dim { color: #555; }
+
+/* ── Toast ──────────────────────────────────────────── */
+#toast {
+  position: fixed; bottom: 24px; right: 24px;
+  background: #111; color: #fff; padding: 11px 18px;
+  border-radius: 10px; font-size: 13px; font-weight: 500; z-index: 500;
+  transform: translateY(12px); opacity: 0;
+  transition: transform .2s, opacity .2s; pointer-events: none;
+}
+#toast.on { transform: translateY(0); opacity: 1; }
+#toast.err { background: #dc2626; }
+
+/* ── Misc ───────────────────────────────────────────── */
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.center-msg { text-align: center; padding: 80px 20px; color: var(--text-secondary); font-size: 14px; }
+</style>
+</head>
+<body>
+
+<!-- ── Top bar ── -->
+<div id="topbar">
+  <div class="brand">
+    <div class="brand-logo">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/>
+      </svg>
+    </div>
+    <span class="brand-name">PromptCanvas</span>
+    <span class="brand-sub">图社</span>
+    <span class="admin-pill">Admin</span>
+  </div>
+
+  <div id="search-wrap">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    </svg>
+    <input id="search" type="search" placeholder="搜索标题、提示词、作者…" oninput="applyFilters()">
+  </div>
+
+  <select class="tb-select" id="cat-filter" onchange="applyFilters()">
+    <option value="all">全部分类</option>
+    <option value="portrait">人像</option>
+    <option value="photography">摄影</option>
+    <option value="poster">海报</option>
+    <option value="illustration">插画</option>
+    <option value="ui">UI</option>
+    <option value="infographic">信息图</option>
+    <option value="logo">Logo</option>
+    <option value="other">其他</option>
+  </select>
+
+  <select class="tb-select" id="lang-filter" onchange="applyFilters()">
+    <option value="all">全部语言</option>
+    <option value="en">EN</option>
+    <option value="zh">中文</option>
+    <option value="ja">日本語</option>
+  </select>
+
+  <span id="count-label"></span>
+  <div class="spacer"></div>
+  <div class="dirty-dot" id="dirty-dot" title="有未保存的更改"></div>
+
+  <button class="tb-btn btn-save" id="save-btn" onclick="doSave()">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+      <polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>
+    </svg>
+    保存
+  </button>
+
+  <button class="tb-btn btn-deploy" id="deploy-btn" onclick="doDeploy()">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9z"/>
+    </svg>
+    部署
+  </button>
+</div>
+
+<!-- ── Main grid ── -->
+<div id="main">
+  <div id="msg" class="center-msg">加载中…</div>
+  <div id="grid" class="masonry" style="display:none"></div>
+</div>
+
+<!-- ── Edit modal ── -->
+<div id="edit-modal" class="backdrop hidden" onclick="backdropClose(event,'edit-modal',closeEdit)">
+  <div class="modal-box">
+    <div class="modal-hdr">
+      <span class="modal-hdr-title">编辑提示词</span>
+      <button class="modal-close" onclick="closeEdit()">×</button>
+    </div>
+    <div class="modal-body">
+      <!-- Image panel -->
+      <div class="modal-imgs scrollbar-none">
+        <img id="ei-main" src="" alt="" style="border-radius:10px">
+        <div id="ei-thumbs" class="thumb-strip scrollbar-none"></div>
+      </div>
+      <!-- Fields panel -->
+      <div class="modal-fields scrollbar-none">
+        <div class="fld">
+          <label class="fld-label">标题</label>
+          <input class="fld-input" id="ei-title" type="text" placeholder="卡片标题">
+        </div>
+        <div class="fld">
+          <label class="fld-label">分类</label>
+          <select class="fld-select" id="ei-cat">
+            <option value="portrait">人像 — portrait</option>
+            <option value="photography">摄影 — photography</option>
+            <option value="poster">海报 — poster</option>
+            <option value="illustration">插画 — illustration</option>
+            <option value="ui">UI — ui</option>
+            <option value="infographic">信息图 — infographic</option>
+            <option value="logo">Logo — logo</option>
+            <option value="other">其他 — other</option>
+          </select>
+        </div>
+        <div class="fld">
+          <label class="fld-label">作者</label>
+          <input class="fld-input" id="ei-author" type="text" placeholder="作者名称">
+        </div>
+        <div class="fld" style="flex:1">
+          <label class="fld-label">提示词</label>
+          <textarea class="fld-textarea" id="ei-prompt"
+            oninput="document.getElementById('ei-charcount').textContent=this.value.length+' 字符'"></textarea>
+          <span class="char-count" id="ei-charcount">0 字符</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-ftr">
+      <button class="btn-cancel" onclick="closeEdit()">取消</button>
+      <button class="btn-apply" onclick="applyEdit()">应用修改</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Delete confirm ── -->
+<div id="del-modal" class="backdrop hidden" onclick="backdropClose(event,'del-modal',closeDel)">
+  <div class="confirm-box">
+    <div class="confirm-icon">🗑️</div>
+    <div class="confirm-title">确认删除</div>
+    <div class="confirm-desc" id="del-desc">删除后将从列表中移除，点击"保存"后写入文件。</div>
+    <div class="confirm-btns">
+      <button class="btn-cancel" onclick="closeDel()">取消</button>
+      <button class="btn-apply btn-del" onclick="confirmDel()">确认删除</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Deploy panel ── -->
+<div id="deploy-panel">
+  <div class="dp-hdr">
+    <span class="dp-title">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>
+      </svg>
+      <span id="dp-title-text">部署日志</span>
+    </span>
+    <button class="dp-close" onclick="closeDeployPanel()">×</button>
+  </div>
+  <div id="deploy-log" class="scrollbar-none"></div>
+</div>
+
+<!-- ── Toast ── -->
+<div id="toast"></div>
+
+<script>
+// ════════════════════════════════════════════════════
+//  State
+// ════════════════════════════════════════════════════
+let allPrompts = [];      // source of truth (from server)
+let changes    = new Map(); // id → partial override obj
+let deletes    = new Set(); // ids marked for removal
+let filtered   = [];
+let editId     = null;
+let delId      = null;
+let isDirty    = false;
+
+// ════════════════════════════════════════════════════
+//  Bootstrap
+// ════════════════════════════════════════════════════
+async function init() {
+  try {
+    const r = await fetch('/api/prompts');
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    allPrompts = await r.json();
+    applyFilters();
+    document.getElementById('msg').style.display = 'none';
+    document.getElementById('grid').style.display = '';
+  } catch(e) {
+    document.getElementById('msg').textContent = '加载失败：' + e.message;
+  }
+}
+
+// ════════════════════════════════════════════════════
+//  Filter + Render
+// ════════════════════════════════════════════════════
+function applyFilters() {
+  const q    = (document.getElementById('search').value || '').toLowerCase();
+  const cat  = document.getElementById('cat-filter').value;
+  const lang = document.getElementById('lang-filter').value;
+
+  filtered = allPrompts.filter(p => {
+    if (deletes.has(p.id)) return false;
+    const c = merged(p);
+    if (cat  !== 'all' && c.category !== cat)  return false;
+    if (lang !== 'all' && c.lang     !== lang) return false;
+    if (q) {
+      const hay = ((c.title||'')+' '+(c.prompt||'')+' '+(c.author||'')).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  const total = allPrompts.length - deletes.size;
+  document.getElementById('count-label').textContent =
+    filtered.length === total ? `${total.toLocaleString()} 个`
+    : `${filtered.length} / ${total} 个`;
+
+  renderGrid();
+}
+
+// Merge base entry with any pending changes
+function merged(p) {
+  return changes.has(p.id) ? { ...p, ...changes.get(p.id) } : p;
+}
+
+function imgSrc(entry) {
+  return entry.thumbnail || (entry.outputImages && entry.outputImages[0]) || '';
+}
+
+function renderGrid() {
+  const grid = document.getElementById('grid');
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="center-msg" style="column-span:all">没有找到匹配的提示词</div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(p => {
+    const c  = merged(p);
+    const mod = changes.has(p.id);
+    const src = imgSrc(c);
+    return `<div class="mitem">
+      <div class="card${mod ? ' modified' : ''}" data-id="${esc(p.id)}">
+        <div class="card-img-wrap">
+          ${src
+            ? `<img src="${esc(src)}" alt="${esc(c.title)}" loading="lazy"
+                onerror="this.parentElement.style.minHeight='120px'">`
+            : '<div style="min-height:120px;background:#e5e5e5"></div>'}
+          <div class="card-overlay">
+            <button class="ov-btn ov-edit"   onclick="openEdit('${esc(p.id)}')">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+              </svg>编辑
+            </button>
+            <button class="ov-btn ov-delete" onclick="openDel('${esc(p.id)}')">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <polyline points="3 6 5 6 21 6"/>
+                <path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/>
+                <path d="M9 6V4h6v2"/>
+              </svg>删除
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">${esc(c.category)}${mod ? ' ✎' : ''}</div>
+          <div class="card-title">${esc(c.title)}</div>
+          <div class="card-author">@${esc(c.author)}</div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function esc(s) {
+  return String(s||'')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
+}
+
+// ════════════════════════════════════════════════════
+//  Edit modal
+// ════════════════════════════════════════════════════
+function openEdit(id) {
+  const p = allPrompts.find(p => p.id === id);
+  if (!p) return;
+  const c = merged(p);
+  editId = id;
+
+  document.getElementById('ei-title').value  = c.title  || '';
+  document.getElementById('ei-cat').value    = c.category || 'other';
+  document.getElementById('ei-author').value = c.author  || '';
+  document.getElementById('ei-prompt').value = c.prompt  || '';
+  document.getElementById('ei-charcount').textContent = (c.prompt||'').length + ' 字符';
+
+  // Main image
+  const imgs = c.outputImages || (c.thumbnail ? [c.thumbnail] : []);
+  const main  = document.getElementById('ei-main');
+  main.src = imgs[0] || '';
+  main.className = 'active-thumb';
+
+  // Thumb strip
+  const strip = document.getElementById('ei-thumbs');
+  if (imgs.length > 1) {
+    strip.innerHTML = imgs.map((url, i) =>
+      `<img src="${esc(url)}" loading="lazy"
+        class="${i===0?'active-thumb':''}"
+        onclick="selectThumb(this,'${esc(url)}')"
+        onerror="this.style.display='none'">`
+    ).join('');
+  } else {
+    strip.innerHTML = '';
+  }
+
+  document.getElementById('edit-modal').classList.remove('hidden');
+  document.getElementById('ei-title').focus();
+}
+
+function selectThumb(el, url) {
+  document.getElementById('ei-main').src = url;
+  document.querySelectorAll('#ei-thumbs img').forEach(i => i.classList.remove('active-thumb'));
+  el.classList.add('active-thumb');
+}
+
+function closeEdit() {
+  editId = null;
+  document.getElementById('edit-modal').classList.add('hidden');
+}
+
+function applyEdit() {
+  if (!editId) return;
+  const upd = {
+    title:    document.getElementById('ei-title').value.trim(),
+    category: document.getElementById('ei-cat').value,
+    author:   document.getElementById('ei-author').value.trim(),
+    prompt:   document.getElementById('ei-prompt').value,
+  };
+  changes.set(editId, upd);
+  closeEdit();
+  markDirty();
+  applyFilters();
+  toast('修改已暂存，点击"保存"写入文件');
+}
+
+// ════════════════════════════════════════════════════
+//  Delete
+// ════════════════════════════════════════════════════
+function openDel(id) {
+  delId = id;
+  const p = allPrompts.find(p => p.id === id);
+  const c = p ? merged(p) : {};
+  document.getElementById('del-desc').textContent =
+    `将删除「${c.title || id}」，点击"保存"后生效。`;
+  document.getElementById('del-modal').classList.remove('hidden');
+}
+
+function closeDel() {
+  delId = null;
+  document.getElementById('del-modal').classList.add('hidden');
+}
+
+function confirmDel() {
+  if (!delId) return;
+  deletes.add(delId);
+  changes.delete(delId); // clear any pending edits for this entry
+  closeDel();
+  markDirty();
+  applyFilters();
+  toast('已标记删除，点击"保存"写入文件');
+}
+
+// ════════════════════════════════════════════════════
+//  Dirty state
+// ════════════════════════════════════════════════════
+function markDirty() {
+  isDirty = true;
+  document.getElementById('dirty-dot').classList.add('on');
+}
+
+function clearDirty() {
+  isDirty = false;
+  document.getElementById('dirty-dot').classList.remove('on');
+}
+
+// ════════════════════════════════════════════════════
+//  Save
+// ════════════════════════════════════════════════════
+async function doSave() {
+  const btn = document.getElementById('save-btn');
+  btn.disabled = true;
+  btn.innerHTML = '保存中…';
+
+  try {
+    // Build final array: apply changes, remove deletes, sync tags/category
+    const out = allPrompts
+      .filter(p => !deletes.has(p.id))
+      .map(p => {
+        const c = changes.has(p.id) ? { ...p, ...changes.get(p.id) } : p;
+        // Keep tags in sync with lang + category
+        const baseTags = (c.tags || []).filter(t => t !== c.category && t !== p.category);
+        c.tags = [...new Set([c.lang, c.category, ...baseTags])];
+        return c;
+      });
+
+    const r = await fetch('/api/prompts', {
+      method:  'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(out),
+    });
+    if (!r.ok) throw new Error(await r.text());
+
+    // Commit to local state
+    allPrompts = out;
+    changes.clear();
+    deletes.clear();
+    clearDirty();
+    applyFilters();
+    toast(`✓ 已保存 ${out.length} 条记录`);
+  } catch(e) {
+    toast('保存失败：' + e.message, true);
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>保存`;
+  }
+}
+
+// ════════════════════════════════════════════════════
+//  Deploy
+// ════════════════════════════════════════════════════
+async function doDeploy() {
+  // Save first
+  await doSave();
+
+  const panel = document.getElementById('deploy-panel');
+  const log   = document.getElementById('deploy-log');
+  const title = document.getElementById('dp-title-text');
+
+  log.innerHTML = '';
+  panel.classList.add('open');
+  title.textContent = '部署中…';
+  document.getElementById('deploy-btn').disabled = true;
+
+  const append = (text, cls) => {
+    const span = document.createElement('span');
+    span.textContent = text;
+    if (cls) span.className = cls;
+    log.appendChild(span);
+    log.scrollTop = log.scrollHeight;
+  };
+
+  try {
+    const es = new EventSource('/api/deploy');
+
+    es.addEventListener('log', e => {
+      const { text } = JSON.parse(e.data);
+      append(text);
+    });
+
+    es.addEventListener('done', e => {
+      const { ok, error } = JSON.parse(e.data);
+      es.close();
+      document.getElementById('deploy-btn').disabled = false;
+      if (ok) {
+        title.textContent = '✓ 部署完成';
+        append('\n✓ 部署成功！\n', 'log-ok');
+        toast('✓ 部署成功！');
+      } else {
+        title.textContent = '✗ 部署失败';
+        append('\n✗ ' + (error || '部署失败') + '\n', 'log-err');
+        toast('部署失败，查看日志', true);
+      }
+    });
+
+    es.onerror = () => {
+      es.close();
+      document.getElementById('deploy-btn').disabled = false;
+      title.textContent = '✗ 连接中断';
+      append('\n✗ 与服务器的连接中断\n', 'log-err');
+    };
+  } catch(e) {
+    document.getElementById('deploy-btn').disabled = false;
+    toast('部署启动失败：' + e.message, true);
+  }
+}
+
+function closeDeployPanel() {
+  document.getElementById('deploy-panel').classList.remove('open');
+}
+
+// ════════════════════════════════════════════════════
+//  Helpers
+// ════════════════════════════════════════════════════
+function backdropClose(e, id, fn) {
+  if (e.target === document.getElementById(id)) fn();
+}
+
+let _toastTimer;
+function toast(msg, isErr = false) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.toggle('err', isErr);
+  el.classList.add('on');
+  clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(() => el.classList.remove('on'), 3000);
+}
+
+// ════════════════════════════════════════════════════
+//  Keyboard shortcuts
+// ════════════════════════════════════════════════════
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeEdit();
+    closeDel();
+  }
+  if ((e.metaKey || e.ctrlKey) && e.key === 's') {
+    e.preventDefault();
+    doSave();
+  }
+});
+
+// Warn before leaving with unsaved changes
+window.addEventListener('beforeunload', e => {
+  if (isDirty) {
+    e.preventDefault();
+    e.returnValue = '';
+  }
+});
+
+init();
+</script>
+</body>
+</html>
