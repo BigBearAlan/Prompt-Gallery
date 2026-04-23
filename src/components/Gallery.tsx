@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useCallback, useRef } from 'react';
 import type { PromptEntry, SortBy } from '@/lib/types';
+import { useLocale } from '@/lib/i18n';
 import PromptCard from './PromptCard';
 import PromptModal from './PromptModal';
 import SearchFilterBar from './SearchFilterBar';
@@ -13,6 +14,7 @@ interface Props {
 }
 
 export default function Gallery({ entries }: Props) {
+  const { tx } = useLocale();
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('all');
   const [lang, setLang] = useState('all');
@@ -117,7 +119,7 @@ export default function Gallery({ entries }: Props) {
             className="text-center py-24 text-sm"
             style={{ color: 'var(--text-secondary)' }}
           >
-            没有找到匹配的提示词，请尝试调整筛选条件。
+            {tx.noResults}
           </div>
         ) : (
           <div className="masonry">
@@ -126,7 +128,6 @@ export default function Gallery({ entries }: Props) {
                 key={entry.id}
                 entry={entry}
                 onClick={() => setSelected(entry)}
-                onTagClick={handleTagClick}
               />
             ))}
           </div>
@@ -139,7 +140,7 @@ export default function Gallery({ entries }: Props) {
               className="px-6 py-2.5 rounded-full text-sm font-medium border transition-colors hover:bg-gray-100"
               style={{ borderColor: 'var(--border)', color: 'var(--text-primary)' }}
             >
-              加载更多（剩余 {filtered.length - displayed.length} 个）
+              {tx.loadMore(filtered.length - displayed.length)}
             </button>
           </div>
         )}
@@ -149,7 +150,7 @@ export default function Gallery({ entries }: Props) {
             className="text-center text-xs pb-8 pt-4"
             style={{ color: 'var(--text-secondary)' }}
           >
-            已显示全部 {displayed.length} 个提示词
+            {tx.showingAll(displayed.length)}
           </p>
         )}
       </main>

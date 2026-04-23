@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { PromptEntry } from '@/lib/types';
 import { withBasePath } from '@/lib/asset-path';
+import { useLocale } from '@/lib/i18n';
 
 function formatNum(n: number): string {
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
@@ -22,6 +23,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
   const [activeImage, setActiveImage] = useState(0);
   const [imgFailed, setImgFailed] = useState(false);
   const [mobileTab, setMobileTab] = useState<'image' | 'prompt'>('image');
+  const { tx } = useLocale();
 
   useEffect(() => {
     setEditedPrompt(entry.prompt);
@@ -77,7 +79,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
               className="text-xs font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide shrink-0"
               style={{ background: '#f0f0f0', color: 'var(--text-secondary)' }}
             >
-              {entry.category}
+              {tx.catLabels[entry.category] ?? entry.category}
             </span>
             <span className="text-xs truncate" style={{ color: 'var(--text-secondary)' }}>
               @{entry.author}
@@ -86,7 +88,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
           <button
             onClick={onClose}
             className="p-1.5 rounded-full hover:bg-gray-100 transition-colors ml-2 shrink-0"
-            aria-label="关闭"
+            aria-label={tx.close}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M18 6 6 18M6 6l12 12" />
@@ -94,7 +96,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
           </button>
         </div>
 
-        {/* ── Mobile tab bar (< md only) ───────────────────── */}
+        {/* ── Mobile tab bar ───────────────────────────────── */}
         <div
           className="flex md:hidden shrink-0 border-b"
           style={{ borderColor: 'var(--border)' }}
@@ -104,7 +106,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
             className="flex-1 py-2.5 text-sm font-medium transition-colors relative"
             style={{ color: mobileTab === 'image' ? 'var(--text-primary)' : 'var(--text-secondary)' }}
           >
-            图片
+            {tx.tabImage}
             {mobileTab === 'image' && (
               <span className="absolute bottom-0 left-1/4 right-1/4 h-0.5 rounded-full" style={{ background: 'var(--text-primary)' }} />
             )}
@@ -114,7 +116,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
             className="flex-1 py-2.5 text-sm font-medium transition-colors relative"
             style={{ color: mobileTab === 'prompt' ? 'var(--text-primary)' : 'var(--text-secondary)' }}
           >
-            提示词
+            {tx.tabPrompt}
             {mobileTab === 'prompt' && (
               <span className="absolute bottom-0 left-1/4 right-1/4 h-0.5 rounded-full" style={{ background: 'var(--text-primary)' }} />
             )}
@@ -124,12 +126,11 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
         {/* ── Modal body ───────────────────────────────────── */}
         <div className="flex flex-col md:flex-row overflow-hidden flex-1 min-h-0">
 
-          {/* Left: image panel — full on mobile image tab, side panel on desktop */}
+          {/* Left: image panel */}
           <div
             className={`${mobileTab === 'prompt' ? 'hidden' : 'flex'} md:flex md:w-[45%] shrink-0 flex-col p-4 gap-3 overflow-y-auto scrollbar-none border-b md:border-b-0 md:border-r`}
             style={{ borderColor: 'var(--border)', background: '#f8f8f8' }}
           >
-            {/* Main image */}
             <div className="w-full rounded-xl overflow-hidden bg-gray-200 flex items-center justify-center">
               {!imgFailed ? (
                 <img
@@ -141,7 +142,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                 />
               ) : (
                 <div className="w-full aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
-                  图片不可用
+                  {tx.imageUnavailable}
                 </div>
               )}
             </div>
@@ -188,7 +189,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
             </div>
           </div>
 
-          {/* Right: prompt panel — full on mobile prompt tab, side panel on desktop */}
+          {/* Right: prompt panel */}
           <div
             className={`${mobileTab === 'image' ? 'hidden' : 'flex'} md:flex flex-1 flex-col min-h-0 overflow-y-auto`}
           >
@@ -198,8 +199,6 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                 <h2 className="text-base font-bold leading-snug mb-2" style={{ color: 'var(--text-primary)' }}>
                   {entry.title}
                 </h2>
-
-                {/* Tags */}
                 <div className="flex flex-wrap gap-1.5">
                   <span
                     className="tag-pill cursor-pointer"
@@ -228,7 +227,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
               <div className="flex flex-col gap-2 flex-1">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--text-secondary)' }}>
-                    提示词模板
+                    {tx.promptTemplate}
                   </span>
                   {hasEdits && (
                     <button
@@ -236,13 +235,13 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                       className="text-xs underline underline-offset-2"
                       style={{ color: 'var(--text-secondary)' }}
                     >
-                      重置
+                      {tx.reset}
                     </button>
                   )}
                 </div>
 
                 <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>
-                  在下方编辑提示词，然后复制到您的 AI 工具中使用。
+                  {tx.promptHint}
                 </p>
 
                 <textarea
@@ -258,8 +257,8 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                 />
 
                 <div className="flex items-center justify-between text-xs" style={{ color: 'var(--text-secondary)' }}>
-                  <span>{editedPrompt.length} 字符</span>
-                  {hasEdits && <span className="italic">已编辑</span>}
+                  <span>{tx.chars(editedPrompt.length)}</span>
+                  {hasEdits && <span className="italic">{tx.edited}</span>}
                 </div>
               </div>
             </div>
@@ -279,7 +278,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    已复制！
+                    {tx.copied}
                   </>
                 ) : (
                   <>
@@ -287,7 +286,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                       <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
                       <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
                     </svg>
-                    复制提示词
+                    {tx.copyPrompt}
                   </>
                 )}
               </button>
@@ -299,7 +298,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                 className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-medium border transition-colors hover:bg-gray-50"
                 style={{ borderColor: 'var(--border)', color: 'var(--text-secondary)' }}
               >
-                来源
+                {tx.source}
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   <polyline points="15 3 21 3 21 9" />

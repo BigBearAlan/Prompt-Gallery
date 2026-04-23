@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import type { PromptEntry } from '@/lib/types';
 import { withBasePath } from '@/lib/asset-path';
+import { useLocale } from '@/lib/i18n';
 
 function cardGradient(id: string): string {
   const n = (parseInt(id.slice(-6), 16) % 360 + 360) % 360;
@@ -12,33 +13,30 @@ function cardGradient(id: string): string {
 interface Props {
   entry: PromptEntry;
   onClick: () => void;
-  onTagClick: (tag: string) => void;
 }
 
-export default function PromptCard({ entry, onClick, onTagClick }: Props) {
+export default function PromptCard({ entry, onClick }: Props) {
   const [imgFailed, setImgFailed] = useState(false);
   const [hovered, setHovered] = useState(false);
-
-  const displayTags = entry.tags.filter((t) => t !== entry.lang).slice(0, 3);
+  const { tx } = useLocale();
 
   return (
     <div
-      className="masonry-item group cursor-pointer select-none"
+      className="masonry-item cursor-pointer select-none"
       onClick={onClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Image container */}
       <div
-        className="relative w-full rounded-2xl overflow-hidden transition-shadow duration-200"
+        className="relative w-full rounded-2xl overflow-hidden transition-all duration-200"
         style={{
           boxShadow: hovered
-            ? '0 8px 24px rgba(0,0,0,0.18)'
-            : '0 2px 8px rgba(0,0,0,0.10)',
-          background: imgFailed ? cardGradient(entry.id) : '#e5e5e5',
+            ? '0 12px 32px rgba(0,0,0,0.22)'
+            : '0 2px 8px rgba(0,0,0,0.08)',
+          transform: hovered ? 'translateY(-2px)' : 'translateY(0)',
         }}
       >
-        {!imgFailed && (
+        {!imgFailed ? (
           <img
             src={withBasePath(entry.thumbnail)}
             alt={entry.title}
@@ -47,14 +45,12 @@ export default function PromptCard({ entry, onClick, onTagClick }: Props) {
             loading="lazy"
             onError={() => setImgFailed(true)}
           />
-        )}
-
-        {imgFailed && (
+        ) : (
           <div
-            className="w-full flex items-center justify-center text-white/70 text-xs font-medium"
+            className="w-full flex items-center justify-center text-white/60 text-xs font-medium"
             style={{ aspectRatio: `1 / ${entry.thumbnailAspect}`, background: cardGradient(entry.id) }}
           >
-            暂无图片
+            {tx.noImage}
           </div>
         )}
 
@@ -62,10 +58,10 @@ export default function PromptCard({ entry, onClick, onTagClick }: Props) {
         {entry.outputImages.length > 1 && (
           <div
             className="absolute top-2 right-2 flex items-center gap-1 text-xs px-2 py-0.5 rounded-full font-medium"
-            style={{ background: 'rgba(0,0,0,0.55)', color: '#fff' }}
+            style={{ background: 'rgba(0,0,0,0.50)', color: '#fff', backdropFilter: 'blur(4px)' }}
           >
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2 5h16v2H2zm0 6h16v2H2zm0 6h16v2H2z" />
             </svg>
             {entry.outputImages.length}
           </div>
@@ -73,57 +69,17 @@ export default function PromptCard({ entry, onClick, onTagClick }: Props) {
 
         {/* Hover overlay */}
         <div
-          className="absolute inset-0 flex items-center justify-center transition-opacity duration-200"
+          className="absolute inset-0 flex items-end justify-stretch transition-opacity duration-200"
           style={{
-            background: 'rgba(0,0,0,0.38)',
             opacity: hovered ? 1 : 0,
-            pointerEvents: hovered ? 'auto' : 'none',
+            pointerEvents: 'none',
+            background: 'linear-gradient(to top, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.08) 55%, transparent 100%)',
           }}
         >
-          <span
-            className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold text-white"
-            style={{ background: 'var(--accent)' }}
-          >
-            查看提示词
+          <span className="w-full text-center text-sm font-semibold text-white pb-3 tracking-wide">
+            {tx.viewPrompt}
           </span>
         </div>
-      </div>
-
-      {/* Card metadata */}
-      <div className="px-1 pt-2 pb-1">
-        <p
-          className="text-sm font-semibold leading-snug line-clamp-2 mb-1"
-          style={{ color: 'var(--text-primary)' }}
-        >
-          {entry.title}
-        </p>
-
-        <div className="flex items-center justify-between">
-          <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>
-            @{entry.author}
-          </span>
-          <span className="flex items-center gap-1 text-xs" style={{ color: 'var(--text-secondary)' }}>
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-            </svg>
-            {entry.stats.likes.toLocaleString()}
-          </span>
-        </div>
-
-        {/* Tags */}
-        {displayTags.length > 0 && (
-          <div className="flex flex-wrap gap-1 mt-1.5">
-            {displayTags.map((tag) => (
-              <span
-                key={tag}
-                className="tag-pill"
-                onClick={(e) => { e.stopPropagation(); onTagClick(tag); }}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
       </div>
     </div>
   );

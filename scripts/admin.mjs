@@ -11,24 +11,28 @@ import { spawn } from 'child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __dirname  = path.dirname(fileURLToPath(import.meta.url));
+const __dirname   = path.dirname(fileURLToPath(import.meta.url));
 const ROOT        = path.resolve(__dirname, '..');
 const PROMPTS_FILE = path.join(ROOT, 'src', 'data', 'prompts.json');
 const IMAGES_DIR   = path.join(ROOT, 'public', 'images');
 const HTML_FILE    = path.join(__dirname, 'admin.html');
 const PORT         = 3001;
 
-// ── helpers ──────────────────────────────────────────────────────────────────
+// ── helpers ───────────────────────────────────────────────────────────────────
 
-function getBody(req) {
+function getRawBody(req) {
   return new Promise((resolve, reject) => {
     const chunks = [];
     req.on('data', c => chunks.push(c));
-    req.on('end', () => {
-      try { resolve(JSON.parse(Buffer.concat(chunks).toString() || 'null')); }
-      catch { resolve(null); }
-    });
+    req.on('end', () => resolve(Buffer.concat(chunks)));
     req.on('error', reject);
+  });
+}
+
+function getBody(req) {
+  return getRawBody(req).then(buf => {
+    try { return JSON.parse(buf.toString() || 'null'); }
+    catch { return null; }
   });
 }
 
@@ -43,7 +47,7 @@ function json(res, data, status = 200) {
 
 function cors(res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,OPTIONS');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 }
 
@@ -53,6 +57,29 @@ const EXT_MIME = {
   '.gif': 'image/gif',  '.html': 'text/html; charset=utf-8',
 };
 
+// SSE deploy helper — shared by Cloudflare and GitHub routes
+function sseSetup(res) {
+  res.writeHead(200, {
+    'Content-Type':      'text/event-stream',
+    'Cache-Control':     'no-cache',
+    'Connection':        'keep-alive',
+    'X-Accel-Buffering': 'no',
+  });
+  const send = (event, data) => {
+    if (!res.writableEnded)
+      res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
+  };
+  const runStep = (cmd, args, label, req) => new Promise(resolve => {
+    send('log', { text: `\n▶ ${label}\n` });
+    const child = spawn(cmd, args, { cwd: ROOT, shell: true });
+    child.stdout.on('data', d => send('log', { text: d.toString() }));
+    child.stderr.on('data', d => send('log', { text: d.toString() }));
+    child.on('close', code => resolve(code));
+    req.on('close', () => child.kill());
+  });
+  return { send, runStep };
+}
+
 // ── server ────────────────────────────────────────────────────────────────────
 
 const server = createServer(async (req, res) => {
@@ -60,7 +87,7 @@ const server = createServer(async (req, res) => {
 
   if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
 
-  const url  = new URL(req.url, `http://localhost:${PORT}`);
+  const url   = new URL(req.url, `http://localhost:${PORT}`);
   const path_ = url.pathname;
 
   try {
@@ -76,11 +103,11 @@ const server = createServer(async (req, res) => {
     if (path_ === '/api/prompts' && req.method === 'GET') {
       const raw = await readFile(PROMPTS_FILE, 'utf-8');
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(raw); // send as-is, already JSON
+      res.end(raw);
       return;
     }
 
-    // ── PUT /api/prompts  (full save) ──
+    // ── PUT /api/prompts ──
     if (path_ === '/api/prompts' && req.method === 'PUT') {
       const prompts = await getBody(req);
       if (!Array.isArray(prompts)) { json(res, { error: 'Expected array' }, 400); return; }
@@ -90,30 +117,41 @@ const server = createServer(async (req, res) => {
       return;
     }
 
-    // ── GET /api/deploy  (SSE stream of build + deploy) ──
-    if (path_ === '/api/deploy' && req.method === 'GET') {
-      res.writeHead(200, {
-        'Content-Type':  'text/event-stream',
-        'Cache-Control': 'no-cache',
-        'Connection':    'keep-alive',
-        'X-Accel-Buffering': 'no',
-      });
+    // ── POST /api/upload  (image file as base64 JSON) ──
+    if (path_ === '/api/upload' && req.method === 'POST') {
+      const body = await getBody(req);
+      if (!body || !body.filename || !body.data) {
+        json(res, { error: 'Missing filename or data' }, 400); return;
+      }
 
-      const send = (event, data) => {
-        if (!res.writableEnded)
-          res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
-      };
+      // Sanitise filename — only allow safe characters and known image extensions
+      const safeName = path.basename(body.filename).replace(/[^a-zA-Z0-9_\-\.]/g, '_');
+      const ext = path.extname(safeName).toLowerCase();
+      if (!['.jpg', '.jpeg', '.png', '.webp', '.gif'].includes(ext)) {
+        json(res, { error: 'Unsupported file type' }, 400); return;
+      }
 
-      const runStep = (cmd, args, label) => new Promise(resolve => {
-        send('log', { text: `\n▶ ${label}\n` });
-        const child = spawn(cmd, args, { cwd: ROOT, shell: true });
-        child.stdout.on('data', d => send('log', { text: d.toString() }));
-        child.stderr.on('data', d => send('log', { text: d.toString() }));
-        child.on('close', code => resolve(code));
-        req.on('close', () => child.kill());
-      });
+      // Decode base64 data URL
+      const match = body.data.match(/^data:image\/[^;]+;base64,(.+)$/s);
+      if (!match) { json(res, { error: 'Invalid image data' }, 400); return; }
 
-      const buildCode  = await runStep('npm', ['run', 'build'], 'npm run build');
+      const imageBuffer = Buffer.from(match[1], 'base64');
+      const destPath    = path.join(IMAGES_DIR, safeName);
+
+      // Guard against directory traversal
+      if (!destPath.startsWith(IMAGES_DIR)) { res.writeHead(403); res.end(); return; }
+
+      await writeFile(destPath, imageBuffer);
+      console.log(`[admin] Uploaded image → ${safeName} (${imageBuffer.length} bytes)`);
+      json(res, { ok: true, path: `/images/${safeName}` });
+      return;
+    }
+
+    // ── GET /api/deploy/cloudflare  (SSE: npm build + wrangler) ──
+    if (path_ === '/api/deploy/cloudflare' && req.method === 'GET') {
+      const { send, runStep } = sseSetup(res);
+
+      const buildCode = await runStep('npm', ['run', 'build'], 'npm run build', req);
       if (buildCode !== 0) {
         send('done', { ok: false, error: `Build exited ${buildCode}` });
         res.end(); return;
@@ -122,10 +160,48 @@ const server = createServer(async (req, res) => {
       const deployCode = await runStep(
         'npx',
         ['wrangler', 'pages', 'deploy', 'out', '--project-name', 'prompt-gallery', '--commit-dirty=true'],
-        'wrangler pages deploy'
+        'wrangler pages deploy',
+        req,
       );
-
       send('done', { ok: deployCode === 0 });
+      res.end();
+      return;
+    }
+
+    // ── GET /api/deploy/github  (SSE: git commit + push → triggers GH Actions) ──
+    if (path_ === '/api/deploy/github' && req.method === 'GET') {
+      const { send, runStep } = sseSetup(res);
+
+      // Stage only the prompts data file
+      const addCode = await runStep('git', ['add', 'src/data/prompts.json'], 'git add prompts.json', req);
+      if (addCode !== 0) {
+        send('done', { ok: false, error: `git add exited ${addCode}` });
+        res.end(); return;
+      }
+
+      // Check if there's actually anything to commit
+      const diffCode = await runStep('git', ['diff', '--cached', '--quiet'], 'Check for changes', req);
+      if (diffCode === 0) {
+        // Nothing staged — still push in case prior commits weren't pushed
+        send('log', { text: '\n(No new changes — pushing existing commits)\n' });
+      } else {
+        const commitCode = await runStep(
+          'git',
+          ['commit', '-m', 'Update prompts data [admin]'],
+          'git commit',
+          req,
+        );
+        if (commitCode !== 0) {
+          send('done', { ok: false, error: `git commit exited ${commitCode}` });
+          res.end(); return;
+        }
+      }
+
+      const pushCode = await runStep('git', ['push', 'origin', 'main'], 'git push origin main', req);
+      send('done', {
+        ok: pushCode === 0,
+        note: pushCode === 0 ? 'GitHub Actions is now building — check https://github.com/BigBearAlan/Prompt-Gallery/actions' : undefined,
+      });
       res.end();
       return;
     }
@@ -135,7 +211,6 @@ const server = createServer(async (req, res) => {
       const file     = decodeURIComponent(path_.slice('/images/'.length));
       const filepath = path.join(IMAGES_DIR, file);
 
-      // Prevent directory traversal
       if (!filepath.startsWith(IMAGES_DIR)) { res.writeHead(403); res.end(); return; }
 
       try {

@@ -1,8 +1,14 @@
+'use client';
+
+import { useLocale } from '@/lib/i18n';
+
 interface HeaderProps {
   total: number;
 }
 
 export default function Header({ total }: HeaderProps) {
+  const { locale, setLocale, tx } = useLocale();
+
   return (
     <header
       className="sticky top-0 z-40 border-b"
@@ -33,7 +39,7 @@ export default function Header({ total }: HeaderProps) {
               </span>
             </div>
             <p className="hidden sm:block text-[11px] mt-0.5 truncate" style={{ color: 'var(--text-secondary)' }}>
-              {total.toLocaleString()} 个 AI 图像提示词
+              {tx.tagline}
             </p>
           </div>
         </div>
@@ -41,8 +47,22 @@ export default function Header({ total }: HeaderProps) {
         {/* Right actions */}
         <div className="flex items-center gap-2 shrink-0">
           <span className="sm:hidden text-xs" style={{ color: 'var(--text-secondary)' }}>
-            {total.toLocaleString()} 个
+            {total.toLocaleString()}
           </span>
+
+          {/* Language toggle */}
+          <button
+            onClick={() => setLocale(locale === 'zh' ? 'en' : 'zh')}
+            className="flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full border transition-colors hover:bg-gray-100"
+            style={{ borderColor: 'var(--border)', color: 'var(--text-secondary)' }}
+            aria-label="Switch language"
+          >
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            {tx.langToggle}
+          </button>
         </div>
       </div>
     </header>

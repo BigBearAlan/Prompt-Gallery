@@ -95,8 +95,49 @@ body {
 }
 .tb-btn:hover { opacity: .85; }
 .tb-btn:disabled { opacity: .35; cursor: not-allowed; }
+.btn-add    { background: #555; color: #fff; }
 .btn-save   { background: #16a34a; color: #fff; }
-.btn-deploy { background: #2563eb; color: #fff; }
+
+/* Deploy split-button */
+.deploy-wrap { position: relative; flex-shrink: 0; display: flex; }
+.btn-deploy-cf {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 12px 6px 14px; border-radius: 16px 0 0 16px;
+  border: none; border-right: 1px solid rgba(255,255,255,.2);
+  background: #2563eb; color: #fff;
+  font-size: 13px; font-weight: 600; cursor: pointer;
+  transition: opacity .15s; white-space: nowrap;
+}
+.btn-deploy-cf:hover { opacity: .85; }
+.btn-deploy-cf:disabled { opacity: .35; cursor: not-allowed; }
+.btn-deploy-arrow {
+  display: flex; align-items: center; justify-content: center;
+  padding: 6px 10px; border-radius: 0 16px 16px 0;
+  border: none; background: #2563eb; color: #fff;
+  cursor: pointer; transition: opacity .15s; font-size: 11px;
+}
+.btn-deploy-arrow:hover { opacity: .85; background: #1d4ed8; }
+.deploy-menu {
+  position: absolute; top: calc(100% + 6px); right: 0;
+  background: #1a1a1a; border: 1px solid #333; border-radius: 10px;
+  overflow: hidden; min-width: 200px; z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,.5);
+  display: none;
+}
+.deploy-menu.open { display: block; }
+.deploy-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 11px 14px; cursor: pointer; font-size: 13px;
+  color: #ccc; transition: background .12s; border: none;
+  background: none; width: 100%; text-align: left;
+}
+.deploy-item:hover { background: #2a2a2a; color: #fff; }
+.deploy-item-icon {
+  width: 22px; height: 22px; border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.deploy-item-sub { font-size: 10px; color: #555; margin-top: 1px; }
 
 /* ── Grid ───────────────────────────────────────────── */
 #main { max-width: 1800px; margin: 0 auto; padding: 10px 10px 120px; }
@@ -123,7 +164,6 @@ body {
 .card-img-wrap { position: relative; background: #eee; overflow: hidden; }
 .card-img-wrap img { width: 100%; height: auto; display: block; }
 
-/* Edit/delete overlay */
 .card-overlay {
   position: absolute; inset: 0;
   background: rgba(0,0,0,.52);
@@ -156,7 +196,6 @@ body {
 }
 .card-author { font-size: 11px; color: var(--text-secondary); }
 
-/* Modified badge */
 .card.modified::before {
   content: '✎';
   position: absolute; top: 7px; left: 7px;
@@ -166,7 +205,12 @@ body {
   font-weight: 700; z-index: 2;
 }
 
-/* ── Edit modal ─────────────────────────────────────── */
+.card.new-entry::before {
+  content: '+';
+  background: #2563eb; color: #fff;
+}
+
+/* ── Modals (shared) ────────────────────────────────── */
 .backdrop {
   position: fixed; inset: 0; z-index: 200;
   background: rgba(0,0,0,.65); backdrop-filter: blur(4px);
@@ -194,9 +238,7 @@ body {
 }
 .modal-close:hover { background: #e0e0e0; }
 
-.modal-body {
-  display: flex; flex: 1; min-height: 0; overflow: hidden;
-}
+.modal-body { display: flex; flex: 1; min-height: 0; overflow: hidden; }
 
 .modal-imgs {
   width: 42%; flex-shrink: 0; background: #f7f7f7;
@@ -238,7 +280,7 @@ body {
   border: 1px solid var(--border); border-radius: 9px;
   padding: 10px 11px; font-size: 12px; font-family: 'SF Mono','Fira Code',monospace;
   color: var(--text-primary); background: #fafafa; outline: none;
-  min-height: 240px; resize: vertical; line-height: 1.65;
+  min-height: 200px; resize: vertical; line-height: 1.65;
   transition: border-color .15s;
 }
 .fld-textarea:focus { border-color: #999; background: #fff; }
@@ -258,6 +300,28 @@ body {
 }
 .btn-cancel:hover { background: #e5e5e5; }
 .btn-apply:hover  { background: #333; }
+
+/* ── Upload drop zone ───────────────────────────────── */
+.upload-zone {
+  width: 100%; aspect-ratio: 4/3;
+  border: 2px dashed var(--border); border-radius: 12px;
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 8px; cursor: pointer;
+  transition: border-color .15s, background .15s;
+  background: #fafafa; position: relative; overflow: hidden;
+}
+.upload-zone:hover, .upload-zone.drag-over {
+  border-color: #999; background: #f0f0f0;
+}
+.upload-zone img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: contain; border-radius: 10px; border: none;
+}
+.upload-zone input[type=file] {
+  position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%;
+}
+.upload-hint { font-size: 12px; color: var(--text-secondary); text-align: center; pointer-events: none; }
+.upload-hint svg { display: block; margin: 0 auto 6px; opacity: .4; }
 
 /* ── Delete confirm ─────────────────────────────────── */
 .confirm-box {
@@ -297,6 +361,7 @@ body {
 .log-ok  { color: #4ade80; }
 .log-err { color: #f87171; }
 .log-dim { color: #555; }
+.log-note { color: #93c5fd; }
 
 /* ── Toast ──────────────────────────────────────────── */
 #toast {
@@ -339,6 +404,9 @@ body {
 
   <select class="tb-select" id="cat-filter" onchange="applyFilters()">
     <option value="all">全部分类</option>
+    <option value="manga">漫画</option>
+    <option value="advertising">广告</option>
+    <option value="game">游戏</option>
     <option value="portrait">人像</option>
     <option value="photography">摄影</option>
     <option value="poster">海报</option>
@@ -360,6 +428,13 @@ body {
   <div class="spacer"></div>
   <div class="dirty-dot" id="dirty-dot" title="有未保存的更改"></div>
 
+  <button class="tb-btn btn-add" onclick="openAdd()">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+    </svg>
+    新增
+  </button>
+
   <button class="tb-btn btn-save" id="save-btn" onclick="doSave()">
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
@@ -368,12 +443,36 @@ body {
     保存
   </button>
 
-  <button class="tb-btn btn-deploy" id="deploy-btn" onclick="doDeploy()">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9z"/>
-    </svg>
-    部署
-  </button>
+  <!-- Deploy split-button -->
+  <div class="deploy-wrap" id="deploy-wrap">
+    <button class="btn-deploy-cf" id="deploy-btn" onclick="doDeploy('cloudflare')">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9z"/>
+      </svg>
+      Cloudflare
+    </button>
+    <button class="btn-deploy-arrow" id="deploy-arrow" onclick="toggleDeployMenu(event)" title="更多部署选项">▾</button>
+    <div class="deploy-menu" id="deploy-menu">
+      <button class="deploy-item" onclick="doDeploy('cloudflare');closeDeployMenu()">
+        <div class="deploy-item-icon" style="background:#f38020">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M16.6 10.9c-.2-2.8-2.5-5-5.4-5A5.4 5.4 0 0 0 5.8 10c-2 .3-3.5 2-3.5 4A4 4 0 0 0 6.3 18H17a3.5 3.5 0 0 0 3.5-3.5c0-1.8-1.3-3.3-3-3.6z"/></svg>
+        </div>
+        <div>
+          <div>Cloudflare Pages</div>
+          <div class="deploy-item-sub">npm build + wrangler deploy</div>
+        </div>
+      </button>
+      <button class="deploy-item" onclick="doDeploy('github');closeDeployMenu()">
+        <div class="deploy-item-icon" style="background:#24292f">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </div>
+        <div>
+          <div>GitHub Pages</div>
+          <div class="deploy-item-sub">git push → Actions build</div>
+        </div>
+      </button>
+    </div>
+  </div>
 </div>
 
 <!-- ── Main grid ── -->
@@ -390,12 +489,10 @@ body {
       <button class="modal-close" onclick="closeEdit()">×</button>
     </div>
     <div class="modal-body">
-      <!-- Image panel -->
       <div class="modal-imgs scrollbar-none">
         <img id="ei-main" src="" alt="" style="border-radius:10px">
         <div id="ei-thumbs" class="thumb-strip scrollbar-none"></div>
       </div>
-      <!-- Fields panel -->
       <div class="modal-fields scrollbar-none">
         <div class="fld">
           <label class="fld-label">标题</label>
@@ -404,6 +501,9 @@ body {
         <div class="fld">
           <label class="fld-label">分类</label>
           <select class="fld-select" id="ei-cat">
+            <option value="manga">漫画 — manga</option>
+            <option value="advertising">广告 — advertising</option>
+            <option value="game">游戏 — game</option>
             <option value="portrait">人像 — portrait</option>
             <option value="photography">摄影 — photography</option>
             <option value="poster">海报 — poster</option>
@@ -429,6 +529,89 @@ body {
     <div class="modal-ftr">
       <button class="btn-cancel" onclick="closeEdit()">取消</button>
       <button class="btn-apply" onclick="applyEdit()">应用修改</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Add Entry modal ── -->
+<div id="add-modal" class="backdrop hidden" onclick="backdropClose(event,'add-modal',closeAdd)">
+  <div class="modal-box">
+    <div class="modal-hdr">
+      <span class="modal-hdr-title">新增提示词</span>
+      <button class="modal-close" onclick="closeAdd()">×</button>
+    </div>
+    <div class="modal-body">
+      <!-- Upload panel -->
+      <div class="modal-imgs scrollbar-none" style="justify-content:flex-start">
+        <div class="fld-label" style="margin-bottom:6px">图片</div>
+        <div class="upload-zone" id="upload-zone"
+          ondragover="uploadDragOver(event)" ondragleave="uploadDragLeave()"
+          ondrop="uploadDrop(event)">
+          <input type="file" id="upload-input" accept="image/*" onchange="uploadFile(this.files[0])">
+          <div class="upload-hint">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            点击或拖拽上传图片<br>JPG · PNG · WebP
+          </div>
+        </div>
+        <div id="add-img-preview" style="display:none">
+          <img id="add-preview-img" src="" alt="" style="width:100%;border-radius:10px;margin-top:8px">
+        </div>
+      </div>
+      <!-- Fields panel -->
+      <div class="modal-fields scrollbar-none">
+        <div class="fld">
+          <label class="fld-label">标题 <span style="color:#e60023">*</span></label>
+          <input class="fld-input" id="add-title" type="text" placeholder="提示词标题">
+        </div>
+        <div style="display:flex;gap:10px">
+          <div class="fld" style="flex:1">
+            <label class="fld-label">分类</label>
+            <select class="fld-select" id="add-cat">
+              <option value="manga">漫画 — manga</option>
+              <option value="advertising">广告 — advertising</option>
+              <option value="game">游戏 — game</option>
+              <option value="portrait">人像 — portrait</option>
+              <option value="photography">摄影 — photography</option>
+              <option value="poster">海报 — poster</option>
+              <option value="illustration">插画 — illustration</option>
+              <option value="ui">UI — ui</option>
+              <option value="infographic">信息图 — infographic</option>
+              <option value="logo">Logo — logo</option>
+              <option value="other" selected>其他 — other</option>
+            </select>
+          </div>
+          <div class="fld" style="flex:1">
+            <label class="fld-label">语言</label>
+            <select class="fld-select" id="add-lang">
+              <option value="zh">中文</option>
+              <option value="en">English</option>
+              <option value="ja">日本語</option>
+            </select>
+          </div>
+        </div>
+        <div class="fld">
+          <label class="fld-label">作者</label>
+          <input class="fld-input" id="add-author" type="text" placeholder="作者名称（可选）">
+        </div>
+        <div class="fld">
+          <label class="fld-label">来源链接</label>
+          <input class="fld-input" id="add-source" type="url" placeholder="https://（可选）">
+        </div>
+        <div class="fld" style="flex:1">
+          <label class="fld-label">提示词 <span style="color:#e60023">*</span></label>
+          <textarea class="fld-textarea" id="add-prompt"
+            oninput="document.getElementById('add-charcount').textContent=this.value.length+' 字符'"
+            style="min-height:160px"></textarea>
+          <span class="char-count" id="add-charcount">0 字符</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-ftr">
+      <button class="btn-cancel" onclick="closeAdd()">取消</button>
+      <button class="btn-apply" id="add-submit-btn" onclick="submitAdd()">添加到列表</button>
     </div>
   </div>
 </div>
@@ -467,13 +650,15 @@ body {
 // ════════════════════════════════════════════════════
 //  State
 // ════════════════════════════════════════════════════
-let allPrompts = [];      // source of truth (from server)
-let changes    = new Map(); // id → partial override obj
-let deletes    = new Set(); // ids marked for removal
-let filtered   = [];
-let editId     = null;
-let delId      = null;
-let isDirty    = false;
+let allPrompts  = [];
+let changes     = new Map();
+let deletes     = new Set();
+let newEntries  = [];        // entries created in this session (not yet saved)
+let filtered    = [];
+let editId      = null;
+let delId       = null;
+let isDirty     = false;
+let uploadedImg = null;      // { filename, dataUrl } for the add-modal
 
 // ════════════════════════════════════════════════════
 //  Bootstrap
@@ -499,7 +684,9 @@ function applyFilters() {
   const cat  = document.getElementById('cat-filter').value;
   const lang = document.getElementById('lang-filter').value;
 
-  filtered = allPrompts.filter(p => {
+  const pool = [...newEntries, ...allPrompts];
+
+  filtered = pool.filter(p => {
     if (deletes.has(p.id)) return false;
     const c = merged(p);
     if (cat  !== 'all' && c.category !== cat)  return false;
@@ -511,7 +698,7 @@ function applyFilters() {
     return true;
   });
 
-  const total = allPrompts.length - deletes.size;
+  const total = pool.length - deletes.size;
   document.getElementById('count-label').textContent =
     filtered.length === total ? `${total.toLocaleString()} 个`
     : `${filtered.length} / ${total} 个`;
@@ -519,13 +706,16 @@ function applyFilters() {
   renderGrid();
 }
 
-// Merge base entry with any pending changes
 function merged(p) {
   return changes.has(p.id) ? { ...p, ...changes.get(p.id) } : p;
 }
 
 function imgSrc(entry) {
   return entry.thumbnail || (entry.outputImages && entry.outputImages[0]) || '';
+}
+
+function isNew(p) {
+  return newEntries.some(n => n.id === p.id);
 }
 
 function renderGrid() {
@@ -536,16 +726,17 @@ function renderGrid() {
   }
 
   grid.innerHTML = filtered.map(p => {
-    const c  = merged(p);
+    const c   = merged(p);
     const mod = changes.has(p.id);
+    const nw  = isNew(p);
     const src = imgSrc(c);
     return `<div class="mitem">
-      <div class="card${mod ? ' modified' : ''}" data-id="${esc(p.id)}">
+      <div class="card${mod ? ' modified' : ''}${nw ? ' new-entry' : ''}" data-id="${esc(p.id)}">
         <div class="card-img-wrap">
           ${src
             ? `<img src="${esc(src)}" alt="${esc(c.title)}" loading="lazy"
                 onerror="this.parentElement.style.minHeight='120px'">`
-            : '<div style="min-height:120px;background:#e5e5e5"></div>'}
+            : '<div style="min-height:120px;background:#e5e5e5;display:flex;align-items:center;justify-content:center;color:#bbb;font-size:12px">无图片</div>'}
           <div class="card-overlay">
             <button class="ov-btn ov-edit"   onclick="openEdit('${esc(p.id)}')">
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -563,7 +754,7 @@ function renderGrid() {
           </div>
         </div>
         <div class="card-body">
-          <div class="card-cat">${esc(c.category)}${mod ? ' ✎' : ''}</div>
+          <div class="card-cat">${esc(c.category)}${nw ? ' ✦ new' : mod ? ' ✎' : ''}</div>
           <div class="card-title">${esc(c.title)}</div>
           <div class="card-author">@${esc(c.author)}</div>
         </div>
@@ -583,35 +774,33 @@ function esc(s) {
 //  Edit modal
 // ════════════════════════════════════════════════════
 function openEdit(id) {
-  const p = allPrompts.find(p => p.id === id);
+  const pool = [...newEntries, ...allPrompts];
+  const p = pool.find(p => p.id === id);
   if (!p) return;
   const c = merged(p);
   editId = id;
 
-  document.getElementById('ei-title').value  = c.title  || '';
+  document.getElementById('ei-title').value  = c.title    || '';
   document.getElementById('ei-cat').value    = c.category || 'other';
-  document.getElementById('ei-author').value = c.author  || '';
-  document.getElementById('ei-prompt').value = c.prompt  || '';
+  document.getElementById('ei-author').value = c.author   || '';
+  document.getElementById('ei-prompt').value = c.prompt   || '';
   document.getElementById('ei-charcount').textContent = (c.prompt||'').length + ' 字符';
 
-  // Main image
   const imgs = c.outputImages || (c.thumbnail ? [c.thumbnail] : []);
   const main  = document.getElementById('ei-main');
   main.src = imgs[0] || '';
+  main.style.display = imgs[0] ? '' : 'none';
   main.className = 'active-thumb';
 
-  // Thumb strip
   const strip = document.getElementById('ei-thumbs');
-  if (imgs.length > 1) {
-    strip.innerHTML = imgs.map((url, i) =>
-      `<img src="${esc(url)}" loading="lazy"
-        class="${i===0?'active-thumb':''}"
-        onclick="selectThumb(this,'${esc(url)}')"
-        onerror="this.style.display='none'">`
-    ).join('');
-  } else {
-    strip.innerHTML = '';
-  }
+  strip.innerHTML = imgs.length > 1
+    ? imgs.map((url, i) =>
+        `<img src="${esc(url)}" loading="lazy"
+          class="${i===0?'active-thumb':''}"
+          onclick="selectThumb(this,'${esc(url)}')"
+          onerror="this.style.display='none'">`
+      ).join('')
+    : '';
 
   document.getElementById('edit-modal').classList.remove('hidden');
   document.getElementById('ei-title').focus();
@@ -644,11 +833,128 @@ function applyEdit() {
 }
 
 // ════════════════════════════════════════════════════
+//  Add Entry modal
+// ════════════════════════════════════════════════════
+function openAdd() {
+  uploadedImg = null;
+  document.getElementById('upload-input').value = '';
+  document.getElementById('add-preview-img').src = '';
+  document.getElementById('add-img-preview').style.display = 'none';
+  document.getElementById('upload-zone').querySelector('.upload-hint').style.display = '';
+  document.getElementById('add-title').value  = '';
+  document.getElementById('add-author').value = '';
+  document.getElementById('add-source').value = '';
+  document.getElementById('add-prompt').value = '';
+  document.getElementById('add-charcount').textContent = '0 字符';
+  document.getElementById('add-cat').value  = 'other';
+  document.getElementById('add-lang').value = 'zh';
+  document.getElementById('add-modal').classList.remove('hidden');
+  document.getElementById('add-title').focus();
+}
+
+function closeAdd() {
+  document.getElementById('add-modal').classList.add('hidden');
+}
+
+// Image upload handling
+function uploadDragOver(e) {
+  e.preventDefault();
+  document.getElementById('upload-zone').classList.add('drag-over');
+}
+function uploadDragLeave() {
+  document.getElementById('upload-zone').classList.remove('drag-over');
+}
+function uploadDrop(e) {
+  e.preventDefault();
+  document.getElementById('upload-zone').classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file) uploadFile(file);
+}
+function uploadFile(file) {
+  if (!file || !file.type.startsWith('image/')) return;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const dataUrl = e.target.result;
+    uploadedImg = { filename: file.name, dataUrl };
+    document.getElementById('add-preview-img').src = dataUrl;
+    document.getElementById('add-img-preview').style.display = '';
+    document.getElementById('upload-zone').querySelector('.upload-hint').style.display = 'none';
+  };
+  reader.readAsDataURL(file);
+}
+
+async function submitAdd() {
+  const title  = document.getElementById('add-title').value.trim();
+  const prompt = document.getElementById('add-prompt').value.trim();
+  if (!title)  { toast('请填写标题', true); return; }
+  if (!prompt) { toast('请填写提示词', true); return; }
+
+  const btn = document.getElementById('add-submit-btn');
+  btn.disabled = true;
+  btn.textContent = '处理中…';
+
+  try {
+    let imagePath = '';
+
+    // Upload image if provided
+    if (uploadedImg) {
+      const ext      = uploadedImg.filename.split('.').pop() || 'jpg';
+      const newId    = Date.now().toString();
+      const filename = `${newId}_0.${ext}`;
+
+      const r = await fetch('/api/upload', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify({ filename, data: uploadedImg.dataUrl }),
+      });
+      const res = await r.json();
+      if (!r.ok || !res.ok) throw new Error(res.error || 'Upload failed');
+      imagePath = res.path;
+    }
+
+    const id       = Date.now().toString();
+    const lang     = document.getElementById('add-lang').value;
+    const category = document.getElementById('add-cat').value;
+    const author   = document.getElementById('add-author').value.trim() || 'unknown';
+    const source   = document.getElementById('add-source').value.trim();
+
+    const entry = {
+      id,
+      title,
+      thumbnail:      imagePath,
+      thumbnailAspect: 1,
+      author,
+      authorUrl:      source,
+      tags:           [lang, category],
+      category,
+      lang,
+      stats:          { likes: 0, retweets: 0, views: 0 },
+      createdAt:      new Date().toUTCString(),
+      prompt,
+      outputImages:   imagePath ? [imagePath] : [],
+      sourceUrl:      source,
+    };
+
+    newEntries.unshift(entry);
+    closeAdd();
+    markDirty();
+    applyFilters();
+    toast('✦ 已添加，点击"保存"写入文件');
+  } catch(e) {
+    toast('添加失败：' + e.message, true);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '添加到列表';
+  }
+}
+
+// ════════════════════════════════════════════════════
 //  Delete
 // ════════════════════════════════════════════════════
 function openDel(id) {
   delId = id;
-  const p = allPrompts.find(p => p.id === id);
+  const pool = [...newEntries, ...allPrompts];
+  const p = pool.find(p => p.id === id);
   const c = p ? merged(p) : {};
   document.getElementById('del-desc').textContent =
     `将删除「${c.title || id}」，点击"保存"后生效。`;
@@ -662,8 +968,14 @@ function closeDel() {
 
 function confirmDel() {
   if (!delId) return;
-  deletes.add(delId);
-  changes.delete(delId); // clear any pending edits for this entry
+  // If it's a new (unsaved) entry, remove from newEntries directly
+  const newIdx = newEntries.findIndex(n => n.id === delId);
+  if (newIdx !== -1) {
+    newEntries.splice(newIdx, 1);
+  } else {
+    deletes.add(delId);
+  }
+  changes.delete(delId);
   closeDel();
   markDirty();
   applyFilters();
@@ -692,12 +1004,11 @@ async function doSave() {
   btn.innerHTML = '保存中…';
 
   try {
-    // Build final array: apply changes, remove deletes, sync tags/category
-    const out = allPrompts
+    const pool = [...newEntries, ...allPrompts];
+    const out = pool
       .filter(p => !deletes.has(p.id))
       .map(p => {
         const c = changes.has(p.id) ? { ...p, ...changes.get(p.id) } : p;
-        // Keep tags in sync with lang + category
         const baseTags = (c.tags || []).filter(t => t !== c.category && t !== p.category);
         c.tags = [...new Set([c.lang, c.category, ...baseTags])];
         return c;
@@ -710,8 +1021,8 @@ async function doSave() {
     });
     if (!r.ok) throw new Error(await r.text());
 
-    // Commit to local state
     allPrompts = out;
+    newEntries = [];
     changes.clear();
     deletes.clear();
     clearDirty();
@@ -728,18 +1039,32 @@ async function doSave() {
 // ════════════════════════════════════════════════════
 //  Deploy
 // ════════════════════════════════════════════════════
-async function doDeploy() {
-  // Save first
+function toggleDeployMenu(e) {
+  e.stopPropagation();
+  document.getElementById('deploy-menu').classList.toggle('open');
+}
+function closeDeployMenu() {
+  document.getElementById('deploy-menu').classList.remove('open');
+}
+document.addEventListener('click', (e) => {
+  if (!document.getElementById('deploy-wrap').contains(e.target)) closeDeployMenu();
+});
+
+async function doDeploy(target) {
   await doSave();
 
-  const panel = document.getElementById('deploy-panel');
-  const log   = document.getElementById('deploy-log');
-  const title = document.getElementById('dp-title-text');
+  const panel  = document.getElementById('deploy-panel');
+  const log    = document.getElementById('deploy-log');
+  const title  = document.getElementById('dp-title-text');
+  const cfBtn  = document.getElementById('deploy-btn');
+  const arrow  = document.getElementById('deploy-arrow');
 
   log.innerHTML = '';
   panel.classList.add('open');
-  title.textContent = '部署中…';
-  document.getElementById('deploy-btn').disabled = true;
+  const label = target === 'github' ? 'GitHub Pages' : 'Cloudflare Pages';
+  title.textContent = `部署至 ${label}…`;
+  cfBtn.disabled = true;
+  arrow.disabled = true;
 
   const append = (text, cls) => {
     const span = document.createElement('span');
@@ -749,8 +1074,10 @@ async function doDeploy() {
     log.scrollTop = log.scrollHeight;
   };
 
+  const endpoint = target === 'github' ? '/api/deploy/github' : '/api/deploy/cloudflare';
+
   try {
-    const es = new EventSource('/api/deploy');
+    const es = new EventSource(endpoint);
 
     es.addEventListener('log', e => {
       const { text } = JSON.parse(e.data);
@@ -758,15 +1085,17 @@ async function doDeploy() {
     });
 
     es.addEventListener('done', e => {
-      const { ok, error } = JSON.parse(e.data);
+      const { ok, error, note } = JSON.parse(e.data);
       es.close();
-      document.getElementById('deploy-btn').disabled = false;
+      cfBtn.disabled = false;
+      arrow.disabled = false;
       if (ok) {
-        title.textContent = '✓ 部署完成';
+        title.textContent = `✓ ${label} 部署完成`;
         append('\n✓ 部署成功！\n', 'log-ok');
-        toast('✓ 部署成功！');
+        if (note) append(note + '\n', 'log-note');
+        toast(`✓ 已推送至 ${label}`);
       } else {
-        title.textContent = '✗ 部署失败';
+        title.textContent = `✗ ${label} 部署失败`;
         append('\n✗ ' + (error || '部署失败') + '\n', 'log-err');
         toast('部署失败，查看日志', true);
       }
@@ -774,12 +1103,14 @@ async function doDeploy() {
 
     es.onerror = () => {
       es.close();
-      document.getElementById('deploy-btn').disabled = false;
+      cfBtn.disabled = false;
+      arrow.disabled = false;
       title.textContent = '✗ 连接中断';
       append('\n✗ 与服务器的连接中断\n', 'log-err');
     };
   } catch(e) {
-    document.getElementById('deploy-btn').disabled = false;
+    cfBtn.disabled = false;
+    arrow.disabled = false;
     toast('部署启动失败：' + e.message, true);
   }
 }
@@ -812,6 +1143,8 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     closeEdit();
     closeDel();
+    closeAdd();
+    closeDeployMenu();
   }
   if ((e.metaKey || e.ctrlKey) && e.key === 's') {
     e.preventDefault();
@@ -819,12 +1152,8 @@ document.addEventListener('keydown', e => {
   }
 });
 
-// Warn before leaving with unsaved changes
 window.addEventListener('beforeunload', e => {
-  if (isDirty) {
-    e.preventDefault();
-    e.returnValue = '';
-  }
+  if (isDirty) { e.preventDefault(); e.returnValue = ''; }
 });
 
 init();
