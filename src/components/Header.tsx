@@ -32,10 +32,10 @@ export default function Header({ total }: HeaderProps) {
                 PromptCanvas
               </span>
               <span
-                className="hidden sm:inline text-[11px] font-semibold px-1.5 py-0.5 rounded-md tracking-wide"
-                style={{ background: '#f0f0f0', color: 'var(--text-secondary)' }}
+                className="text-[15px] font-bold tracking-tight whitespace-nowrap"
+                style={{ color: 'var(--text-primary)' }}
               >
-                图社
+                AI生图提示词
               </span>
             </div>
             <p className="hidden sm:block text-[11px] mt-0.5 truncate" style={{ color: 'var(--text-secondary)' }}>
