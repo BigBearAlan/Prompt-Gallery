@@ -18,7 +18,7 @@ export default function Gallery({ entries }: Props) {
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('all');
   const [lang, setLang] = useState('all');
-  const [sortBy, setSortBy] = useState<SortBy>('likes');
+  const [sortBy, setSortBy] = useState<SortBy>('recent');
   const [page, setPage] = useState(1);
   const [selected, setSelected] = useState<PromptEntry | null>(null);
   const [tagFilter, setTagFilter] = useState('');
