@@ -1,0 +1,297 @@
+'use client';
+
+import { useState, useEffect, useCallback } from 'react';
+import type { PromptEntry } from '@/lib/types';
+
+function formatNum(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
+  return String(n);
+}
+
+interface Props {
+  entry: PromptEntry;
+  onClose: () => void;
+  onTagClick: (tag: string) => void;
+}
+
+export default function PromptModal({ entry, onClose, onTagClick }: Props) {
+  const [editedPrompt, setEditedPrompt] = useState(entry.prompt);
+  const [copied, setCopied] = useState(false);
+  const [activeImage, setActiveImage] = useState(0);
+  const [imgFailed, setImgFailed] = useState(false);
+
+  // Reset when entry changes
+  useEffect(() => {
+    setEditedPrompt(entry.prompt);
+    setActiveImage(0);
+    setImgFailed(false);
+  }, [entry]);
+
+  // Close on Escape
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [onClose]);
+
+  // Prevent body scroll
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = ''; };
+  }, []);
+
+  const handleCopy = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(editedPrompt);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback for browsers without clipboard API
+      const ta = document.createElement('textarea');
+      ta.value = editedPrompt;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  }, [editedPrompt]);
+
+  const handleReset = useCallback(() => {
+    setEditedPrompt(entry.prompt);
+  }, [entry.prompt]);
+
+  const hasEdits = editedPrompt !== entry.prompt;
+
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div
+        className="modal-content w-full max-w-4xl max-h-[92vh] rounded-2xl overflow-hidden flex flex-col"
+        style={{ background: 'var(--card)' }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Modal header */}
+        <div
+          className="flex items-center justify-between px-5 py-3 border-b shrink-0"
+          style={{ borderColor: 'var(--border)' }}
+        >
+          <div className="flex items-center gap-2 min-w-0">
+            <span
+              className="text-xs font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide"
+              style={{ background: '#f0f0f0', color: 'var(--text-secondary)' }}
+            >
+              {entry.category}
+            </span>
+            <span className="text-xs" style={{ color: 'var(--text-secondary)' }}>
+              @{entry.author}
+            </span>
+          </div>
+          <button
+            onClick={onClose}
+            className="p-1.5 rounded-full hover:bg-gray-100 transition-colors ml-2 shrink-0"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Modal body */}
+        <div className="flex flex-col md:flex-row overflow-hidden flex-1 min-h-0">
+          {/* Left: image panel */}
+          <div
+            className="md:w-[45%] shrink-0 flex flex-col p-4 gap-3 overflow-y-auto scrollbar-none border-b md:border-b-0 md:border-r"
+            style={{ borderColor: 'var(--border)', background: '#f8f8f8' }}
+          >
+            {/* Main image */}
+            <div className="w-full rounded-xl overflow-hidden bg-gray-200 flex items-center justify-center">
+              {!imgFailed ? (
+                <img
+                  key={entry.outputImages[activeImage]}
+                  src={entry.outputImages[activeImage] || entry.thumbnail}
+                  alt={entry.title}
+                  className="w-full object-cover"
+                  onError={() => setImgFailed(true)}
+                />
+              ) : (
+                <div className="w-full aspect-[9/16] flex items-center justify-center text-gray-400 text-sm">
+                  Image unavailable
+                </div>
+              )}
+            </div>
+
+            {/* Thumbnail strip (if multiple images) */}
+            {entry.outputImages.length > 1 && (
+              <div className="flex gap-2 overflow-x-auto scrollbar-none">
+                {entry.outputImages.map((url, i) => (
+                  <button
+                    key={url}
+                    onClick={() => { setActiveImage(i); setImgFailed(false); }}
+                    className={`shrink-0 w-14 h-14 rounded-lg overflow-hidden border-2 transition-all ${
+                      i === activeImage ? 'border-gray-900' : 'border-transparent opacity-60 hover:opacity-100'
+                    }`}
+                  >
+                    <img src={url} alt="" className="w-full h-full object-cover" />
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Stats */}
+            <div className="flex items-center gap-4 text-xs" style={{ color: 'var(--text-secondary)' }}>
+              <span className="flex items-center gap-1">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+                {formatNum(entry.stats.likes)}
+              </span>
+              <span className="flex items-center gap-1">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                {formatNum(entry.stats.views)}
+              </span>
+              <span className="flex items-center gap-1">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M23 7 16 12 23 17V7z" />
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                </svg>
+                {formatNum(entry.stats.retweets)}
+              </span>
+            </div>
+          </div>
+
+          {/* Right: prompt panel */}
+          <div className="flex-1 flex flex-col min-h-0 overflow-y-auto">
+            <div className="p-5 flex flex-col gap-4 flex-1">
+              {/* Title */}
+              <div>
+                <h2
+                  className="text-base font-bold leading-snug mb-2"
+                  style={{ color: 'var(--text-primary)' }}
+                >
+                  {entry.title}
+                </h2>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-1.5">
+                  <span
+                    className="tag-pill"
+                    style={{ background: '#111', color: '#fff' }}
+                    onClick={() => { onTagClick(entry.lang); onClose(); }}
+                  >
+                    {entry.lang.toUpperCase()}
+                  </span>
+                  {entry.tags
+                    .filter((t) => t !== entry.lang)
+                    .map((tag) => (
+                      <span
+                        key={tag}
+                        className="tag-pill"
+                        onClick={() => { onTagClick(tag); onClose(); }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className="border-t" style={{ borderColor: 'var(--border)' }} />
+
+              {/* Prompt editor */}
+              <div className="flex flex-col gap-2 flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--text-secondary)' }}>
+                    Prompt Template
+                  </span>
+                  {hasEdits && (
+                    <button
+                      onClick={handleReset}
+                      className="text-xs underline underline-offset-2"
+                      style={{ color: 'var(--text-secondary)' }}
+                    >
+                      Reset
+                    </button>
+                  )}
+                </div>
+
+                <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>
+                  Edit the prompt below, then copy to use in your AI tool.
+                </p>
+
+                <textarea
+                  className="prompt-textarea w-full flex-1 min-h-[200px] p-3 rounded-xl border outline-none focus:ring-2 focus:ring-gray-900/20 transition"
+                  style={{
+                    borderColor: hasEdits ? '#999' : 'var(--border)',
+                    background: '#fafafa',
+                    color: 'var(--text-primary)',
+                  }}
+                  value={editedPrompt}
+                  onChange={(e) => setEditedPrompt(e.target.value)}
+                  spellCheck={false}
+                />
+
+                <div className="flex items-center justify-between text-xs" style={{ color: 'var(--text-secondary)' }}>
+                  <span>{editedPrompt.length} chars</span>
+                  {hasEdits && <span className="italic">Edited</span>}
+                </div>
+              </div>
+            </div>
+
+            {/* Sticky action bar */}
+            <div
+              className="px-5 py-4 border-t flex items-center gap-3 shrink-0"
+              style={{ borderColor: 'var(--border)', background: 'var(--card)' }}
+            >
+              <button
+                onClick={handleCopy}
+                className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold text-white transition-all active:scale-95"
+                style={{ background: copied ? '#16a34a' : 'var(--accent)' }}
+              >
+                {copied ? (
+                  <>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Copied!
+                  </>
+                ) : (
+                  <>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+                    </svg>
+                    Copy Prompt
+                  </>
+                )}
+              </button>
+
+              <a
+                href={entry.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-medium border transition-colors hover:bg-gray-50"
+                style={{ borderColor: 'var(--border)', color: 'var(--text-secondary)' }}
+              >
+                Source
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" x2="21" y1="14" y2="3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

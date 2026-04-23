@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --yes)",
+      "Bash(gh api *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(node -e \"try { JSON.parse\\(require\\('fs'\\).readFileSync\\('src/data/prompts.json', 'utf-8'\\)\\); console.log\\('valid'\\) } catch\\(e\\) { console.log\\(e.message\\) }\")",
+      "Bash(python3)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3456/)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(npx serve *)",
+      "Bash(pkill -f \"serve\")",
+      "Bash(timeout 60 node scripts/sync-data.mjs)",
+      "Bash(node scripts/sync-data.mjs)",
+      "Bash(gh auth *)",
+      "Bash(git --version)",
+      "Bash(npx wrangler *)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}

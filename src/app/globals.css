@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f2f0ed;
+  --card: #ffffff;
+  --accent: #e60023;
+  --text-primary: #111111;
+  --text-secondary: #767676;
+  --border: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Masonry grid using CSS columns */
+.masonry {
+  column-count: 2;
+  column-gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .masonry { column-count: 3; }
+}
+
+@media (min-width: 900px) {
+  .masonry { column-count: 4; }
+}
+
+@media (min-width: 1200px) {
+  .masonry { column-count: 5; }
+}
+
+@media (min-width: 1600px) {
+  .masonry { column-count: 6; }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 12px;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Prompt textarea */
+.prompt-textarea {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Courier New', monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+/* Tag pill */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: #f0f0f0;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  user-select: none;
+}
+
+.tag-pill:hover {
+  background: #e0e0e0;
+  color: #111;
+}
+
+.tag-pill.active {
+  background: #111;
+  color: #fff;
+}

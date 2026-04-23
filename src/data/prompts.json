@@ -1,0 +1,1763 @@
+[
+  {
+    "id": "2046201836525302032",
+    "title": "帮我生成xxxx真迹图片",
+    "thumbnail": "/images/2046201836525302032_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus/status/2046201836525302032",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 591,
+      "retweets": 82,
+      "views": 120367
+    },
+    "createdAt": "Mon Apr 20 12:18:29 +0000 2026",
+    "prompt": "帮我生成xxxx真迹图片",
+    "outputImages": [
+      "/images/2046201836525302032_0.jpg",
+      "/images/2046201836525302032_1.jpg",
+      "/images/2046201836525302032_2.jpg",
+      "/images/2046201836525302032_3.jpg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046201836525302032"
+  },
+  {
+    "id": "2046154976159035613",
+    "title": "この画像からゲームのステータス画面を作ってください。情報量多め。言語は日本語。",
+    "thumbnail": "/images/2046154976159035613_0.jpg",
+    "thumbnailAspect": 0.667,
+    "author": "Kashiko_AIart",
+    "authorUrl": "https://x.com/Kashiko_AIart/status/2046154976159035613",
+    "tags": [
+      "ja",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "ja",
+    "stats": {
+      "likes": 546,
+      "retweets": 59,
+      "views": 34384
+    },
+    "createdAt": "Mon Apr 20 09:12:16 +0000 2026",
+    "prompt": "この画像からゲームのステータス画面を作ってください。情報量多め。言語は日本語。",
+    "outputImages": [
+      "/images/2046154976159035613_0.jpg",
+      "/images/2046154976159035613_1.jpg",
+      "/images/2046154976159035613_2.jpg",
+      "/images/2046154976159035613_3.jpg"
+    ],
+    "sourceUrl": "https://x.com/Kashiko_AIart/status/2046154976159035613"
+  },
+  {
+    "id": "2046231542817497392",
+    "title": "请根据【主题】生成一张高质量竖版「科普百科图」。",
+    "thumbnail": "/images/2046231542817497392_0.jpg",
+    "thumbnailAspect": 1.25,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus/status/2046231542817497392",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 441,
+      "retweets": 66,
+      "views": 26050
+    },
+    "createdAt": "Mon Apr 20 14:16:31 +0000 2026",
+    "prompt": "请根据【主题】生成一张高质量竖版「科普百科图」。 \n\n这张图不是普通海报，也不是单纯插画，而是一张兼具“图鉴感、百科感、信息结构感、收藏感”的模块化科普信息图。整体风格参考高级博物图鉴、现代百科书页、生活方式知识卡和社交媒体高传播信息图的结合。\n\n请让画面包含：\n- 一个清晰漂亮的主题主视觉\n- 若干局部特征放大细节\n- 多个圆角模块化信息分区\n- 清楚的标题层级与重点标签\n- 简洁但丰富的百科内容\n- 可视化评分、要点总结或Top 5模块\n\n内容栏目请根据主题自动适配，优先从这些方向中选择并合理组合：\n基础档案、分类信息、外观特征、习性/生态、形成机制/结构组成、生长或使用条件、养护或维护建议、风险与注意事项、适合人群或适用场景、优缺点对比、快速评分卡。\n\n视觉要求：\n浅色干净背景，柔和配色，轻阴影，精致小图标，圆角信息框，整洁排版，信息密度高但不拥挤，阅读体验好。整体必须像真正可以发布、阅读、收藏、系列化生产的科普百科卡，而不是广告图。\n\n请不要做成普通商业宣传海报。要突出“知识整理 + 模块信息 + 图鉴式展示”的特征。",
+    "outputImages": [
+      "/images/2046231542817497392_0.jpg",
+      "/images/2046231542817497392_1.jpg",
+      "/images/2046231542817497392_2.jpg",
+      "/images/2046231542817497392_3.jpg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046231542817497392"
+  },
+  {
+    "id": "2046151898621993364",
+    "title": "9:16 vertical — a 3x3 grid collage (nine images) forming a Korean i...",
+    "thumbnail": "/images/2046151898621993364_0.jpg",
+    "thumbnailAspect": 1.777,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain/status/2046151898621993364",
+    "tags": [
+      "en",
+      "portrait",
+      "photography",
+      "analog",
+      "film",
+      "idol",
+      "grid"
+    ],
+    "category": "portrait",
+    "lang": "en",
+    "stats": {
+      "likes": 406,
+      "retweets": 43,
+      "views": 27502
+    },
+    "createdAt": "Mon Apr 20 09:00:02 +0000 2026",
+    "prompt": "9:16 vertical — a 3x3 grid collage (nine images) forming a Korean idol portrait photoshoot series. Each frame features the same young Korean female idol, maintaining 100% consistency in facial features, proportions, hairstyle, and identity across all nine shots.   Natural, ultra-realistic skin texture, no retouching, no smoothing. Clean idol-style minimal makeup, soft glow, subtle imperfections.   Hair: long, voluminous dark hair, slightly tousled, consistent across all frames (natural loose flow, slight movement).  Outfit: cohesive Korean idol photoshoot styling — white shirt + short bottoms (or simple neutral-toned outfit), youthful, clean, slightly casual but styled. Same outfit across all frames.  Setting: minimal studio or simple indoor environment (plain wall, soft window light, clean background). Focus on subject, not environment.  Lighting: soft diffused natural light, gentle highlights, low contrast, slightly airy tones, subtle film-like softness.  Camera style: intimate portrait photography, slightly handheld feel, subtle imperfections (minor grain, slight blur in motion frames, imperfect framing).  Frame breakdown (3x3 grid):  Top row: - Top left: standing naturally, looking slightly away, relaxed expression - Top center: facing camera, casual mid-motion (hair or body slight movement) - Top right: slight side angle, soft gaze, natural candid feel  Middle row: - Center left: looking slightly upward, soft thoughtful expression - Center: close-up portrait, direct eye contact, gentle idol smile - Center right: turning body slightly, mid-motion candid frame  Bottom row: - Bottom left: seated or leaning casually, relaxed posture - Bottom center: back partially turned, looking over shoulder toward camera - Bottom right: standing close to frame, slightly playful or soft expression  Mood: Korean idol photobook / photocard aesthetic, intimate, soft, natural, everyday charm.  Quality: ultra-realistic, 8K detail, subtle analog film grain, natural imperfections, soft dreamy tone",
+    "outputImages": [
+      "/images/2046151898621993364_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046151898621993364"
+  },
+  {
+    "id": "2046115431144902732",
+    "title": "Analog 35mm film photography, soft airy Japanese-style aesthetic, g...",
+    "thumbnail": "/images/2046115431144902732_0.jpg",
+    "thumbnailAspect": 1.777,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain/status/2046115431144902732",
+    "tags": [
+      "en",
+      "portrait",
+      "photography",
+      "analog",
+      "film"
+    ],
+    "category": "portrait",
+    "lang": "en",
+    "stats": {
+      "likes": 363,
+      "retweets": 22,
+      "views": 18742
+    },
+    "createdAt": "Mon Apr 20 06:35:08 +0000 2026",
+    "prompt": "Analog 35mm film photography, soft airy Japanese-style aesthetic, gentle diffused natural window light, slight overexposure, pastel tones, low contrast, soft highlights,  minimal indoor setting near a window with white curtains, clean light-colored wall, natural composition, eye-level, slightly closer full-body framing (mid-thigh to head),  young East Asian woman, natural minimal makeup, soft realistic skin texture, long slightly messy dark hair,  oversized white button-up shirt, light casual shorts, barefoot, simple and relaxed styling,  standing naturally with relaxed posture, arms loosely at sides or slightly behind, facing camera, gentle soft smile, subtle stillness,  focus on light, air, and quiet everyday mood, soft film grain, dreamy and understated atmosphere --ar 9:16",
+    "outputImages": [
+      "/images/2046115431144902732_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046115431144902732"
+  },
+  {
+    "id": "2046190539213885806",
+    "title": "{   \"prompt\": {     \"style_and_tech\": \"mobile phone photo, o",
+    "thumbnail": "/images/2046190539213885806_0.jpg",
+    "thumbnailAspect": 1.777,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain/status/2046190539213885806",
+    "tags": [
+      "en",
+      "portrait",
+      "idol",
+      "ccd"
+    ],
+    "category": "portrait",
+    "lang": "en",
+    "stats": {
+      "likes": 190,
+      "retweets": 11,
+      "views": 8884
+    },
+    "createdAt": "Mon Apr 20 11:33:35 +0000 2026",
+    "prompt": "{   \"prompt\": {     \"style_and_tech\": \"mobile phone photo, old CCD camera aesthetic, harsh flash, grainy, dim messy indoor lighting, candid snapshot feeling, slight motion blur\",      \"subject\": \"young Korean female idol, soft innocent look\",      \"pose\": \"mid-action, slightly turning head toward camera as if just noticed being photographed, shoulders slightly raised\",      \"expression\": \"eyes widened slightly, lips parted in surprise, shy and caught-off-guard expression\",      \"clothing\": \"loose soft homewear (thin cardigan + inner top), slightly slipping off one shoulder but not revealing\",      \"vibe\": \"unprepared, intimate, accidental moment, evokes curiosity and protectiveness\"，   \"aspect ratio\":\"9:16\"    } }",
+    "outputImages": [
+      "/images/2046190539213885806_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046190539213885806"
+  },
+  {
+    "id": "2046434670724907395",
+    "title": "9:16 vertical — editorial portrait, single subject  soft black mist...",
+    "thumbnail": "/images/2046434670724907395_0.jpg",
+    "thumbnailAspect": 1.777,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain/status/2046434670724907395",
+    "tags": [
+      "en",
+      "portrait",
+      "editorial"
+    ],
+    "category": "portrait",
+    "lang": "en",
+    "stats": {
+      "likes": 183,
+      "retweets": 10,
+      "views": 6919
+    },
+    "createdAt": "Tue Apr 21 03:43:41 +0000 2026",
+    "prompt": "9:16 vertical — editorial portrait, single subject  soft black mist filter, subtle haze, gentle highlight bloom, muted tones  minimal indoor space, clean background, slight texture  young Korean woman, minimal makeup, natural skin texture  outfit: fitted ribbed knit top or soft camisole layered under a loose shirt, paired with high-waisted shorts or skirt; fabric slightly clings to body shape, soft and natural, no revealing elements  hair: slightly messy, natural volume  pose: sitting on floor with one leg bent and the other relaxed, body slightly leaning, shoulders not aligned, head tilted  composition: subject slightly off-center, negative space present  expression: calm, slightly distant, natural lips  lighting: soft side light, gentle shadow falloff  mood: understated, quiet, subtly sensual through natural body lines, relaxed and unposed  quality: fine grain, slight softness, realistic look",
+    "outputImages": [
+      "/images/2046434670724907395_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046434670724907395"
+  },
+  {
+    "id": "2046498264774791514",
+    "title": "この商品広告をプロのデザイナー目線でリデザインして。",
+    "thumbnail": "/images/2046498264774791514_0.jpg",
+    "thumbnailAspect": 1.416,
+    "author": "genel_ai",
+    "authorUrl": "https://x.com/genel_ai/status/2046498264774791514",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 99,
+      "retweets": 4,
+      "views": 14967
+    },
+    "createdAt": "Tue Apr 21 07:56:23 +0000 2026",
+    "prompt": "この商品広告をプロのデザイナー目線でリデザインして。\n今のトレンド、ターゲットに合わせた洗練されたデザインで。",
+    "outputImages": [
+      "/images/2046498264774791514_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/genel_ai/status/2046498264774791514"
+  },
+  {
+    "id": "2046509734954741780",
+    "title": "架空のアニメ映画のポスターをGPT image2で作成。",
+    "thumbnail": "/images/2046509734954741780_0.jpg",
+    "thumbnailAspect": 1.416,
+    "author": "seiiiiiiiiiiru",
+    "authorUrl": "https://x.com/seiiiiiiiiiiru/status/2046509734954741780",
+    "tags": [
+      "ja",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "ja",
+    "stats": {
+      "likes": 98,
+      "retweets": 9,
+      "views": 6559
+    },
+    "createdAt": "Tue Apr 21 08:41:57 +0000 2026",
+    "prompt": "架空のアニメ映画のポスターをGPT image2で作成。",
+    "outputImages": [
+      "/images/2046509734954741780_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/seiiiiiiiiiiru/status/2046509734954741780"
+  },
+  {
+    "id": "2046268941941850575",
+    "title": "9:16 vertical — Korean idol portrait photoshoot, 3x3 grid (nine fra...",
+    "thumbnail": "/images/2046268941941850575_0.jpg",
+    "thumbnailAspect": 1.777,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain/status/2046268941941850575",
+    "tags": [
+      "en",
+      "portrait",
+      "film",
+      "idol",
+      "grid"
+    ],
+    "category": "portrait",
+    "lang": "en",
+    "stats": {
+      "likes": 89,
+      "retweets": 10,
+      "views": 6379
+    },
+    "createdAt": "Mon Apr 20 16:45:08 +0000 2026",
+    "prompt": "9:16 vertical — Korean idol portrait photoshoot, 3x3 grid (nine frames), same person in all images, consistent facial features and styling.\n\nsoft black mist filter effect, lowered contrast, blooming highlights, subtle glow around light sources, slightly faded blacks\n\nnatural indoor setting near window, white curtains, clean wall background\n\nyoung Korean female idol, minimal makeup, soft realistic skin texture, slight imperfections\n\noutfit: white shirt + shorts, simple and relaxed styling\n\nhair: long dark hair, slightly messy, naturally flowing\n\nposes vary across nine frames: standing, slight movement, seated, looking away, close-up, over-shoulder glance, candid transitions\n\nlighting: diffused daylight, soft shadows, gentle highlight bloom\n\nmood: quiet, intimate, everyday poetic moment, photobook aesthetic\n\nquality: ultra-realistic, subtle film grain, soft focus edges, dreamy atmosphere",
+    "outputImages": [
+      "/images/2046268941941850575_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046268941941850575"
+  },
+  {
+    "id": "2046215276249993720",
+    "title": "新中式水墨山水海报，竖版9:16构图，东方极简美学风格，",
+    "thumbnail": "/images/2046215276249993720_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "liyue_ai",
+    "authorUrl": "https://x.com/liyue_ai/status/2046215276249993720",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 46,
+      "retweets": 3,
+      "views": 3801
+    },
+    "createdAt": "Mon Apr 20 13:11:53 +0000 2026",
+    "prompt": "新中式水墨山水海报，竖版9:16构图，东方极简美学风格，\n大面积留白，整体色调为春日清晨氛围（青绿色、雾蓝、淡灰、浅墨），低饱和、清透柔和，高级质感。\n画面主体为奇峻巍峨的群山，从中间平静湖面的两侧拔地而起，占据左右两侧画面，\n山体以水墨晕染表现，浓淡干湿变化丰富，局部融入淡青绿色渲染，体现春意生机。\n山峰被湿润轻柔的晨雾包裹，雾气层层递进，与浅青蓝天空自然融合，形成空气透视与空间纵深。\n\n湖面如镜面般平静，呈现微青绿色调，倒映山体与天空，反射略带柔焦与雾化扩散效果，增强春日湿润与梦幻氛围。\n中景一艘带弧形篷顶的小木舟缓慢漂浮，船桨轻触水面形成细腻涟漪，水纹自然扩散，整体保持极静状态。\n\n船上为一位红衣渔女，体量较小（远景比例），人物简化处理为水墨剪影 + 轻微设色，\n身着低饱和朱砂红传统服饰（非鲜艳红），颜色略被雾气柔化，\n人物面部不刻画细节，仅保留轮廓与姿态（如轻扶船篷或执桨），\n红色在水面形成淡淡倒影，作为画面唯一暖色视觉焦点。\n\n岸边点缀疏林与春季新生植被，采用淡墨 + 淡青绿点染，虚实结合，增强节奏与生命气息。\n\n少量飞鸟在远空掠过，轻盈疏散分布，增强空间层次与灵动感。\n\n画面顶部居中竖排书法：“东方美学”，采用传统手写行书或行草风格（王羲之笔意），\n笔触自然起伏、提按分明，带飞白与墨韵扩散效果，避免字体感。\n书法颜色为深墨青或柔和墨黑，与整体画面统一。\n整体风格：水墨 + 现代极简设计融合，春日禅意、空灵湿润、宁静氛围，\n冷暖对比克制，电影感光影，高级艺术海报质感，8K超清细节。",
+    "outputImages": [
+      "/images/2046215276249993720_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/liyue_ai/status/2046215276249993720"
+  },
+  {
+    "id": "2046483268019884384",
+    "title": "9:16 vertical — Japanese Fuji film style portrait, single subject  ...",
+    "thumbnail": "/images/2046483268019884384_0.jpg",
+    "thumbnailAspect": 1.777,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain/status/2046483268019884384",
+    "tags": [
+      "en",
+      "portrait",
+      "analog",
+      "film",
+      "idol",
+      "fujifilm"
+    ],
+    "category": "portrait",
+    "lang": "en",
+    "stats": {
+      "likes": 42,
+      "retweets": 3,
+      "views": 1823
+    },
+    "createdAt": "Tue Apr 21 06:56:47 +0000 2026",
+    "prompt": "9:16 vertical — Japanese Fuji film style portrait, single subject  Fujifilm analog aesthetic (Pro 400H / Superia feel), soft pastel tones, slight green-magenta shift, low contrast, gentle highlight roll-off, fine film grain, subtle halation, slight vignette  bright natural daylight, diffused sunlight through window, soft shadows, airy atmosphere  young Japanese female idol, natural minimal makeup, fresh glowing skin, realistic texture, slight imperfections  outfit: Japanese school uniform (sailor-style or blazer uniform), neatly styled, non-revealing, youthful and clean  hair: natural dark hair, straight or softly flowing, a few loose strands  pose: front-facing or slight angle toward camera, relaxed posture; one hand gently holding a strawberry near lips, mid-action as if about to take a bite; shoulders relaxed, subtle natural body curve  expression: soft playful gaze, light smile or neutral lips, gentle eye contact with camera  setting: minimal indoor near window or simple outdoor corner, clean background, everyday atmosphere  composition: slightly off-center framing, intimate distance, candid feel  mood: fresh, youthful, sweet everyday moment, understated charm  quality: ultra-realistic, analog film look, natural imperfections, soft dreamy finish",
+    "outputImages": [
+      "/images/2046483268019884384_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046483268019884384"
+  },
+  {
+    "id": "2046493442428039212",
+    "title": "1、生成不知火舞和貂蝉的游戏对战海报图",
+    "thumbnail": "/images/2046493442428039212_0.jpg",
+    "thumbnailAspect": 0.563,
+    "author": "joshesye",
+    "authorUrl": "https://x.com/joshesye/status/2046493442428039212",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 35,
+      "retweets": 7,
+      "views": 4236
+    },
+    "createdAt": "Tue Apr 21 07:37:13 +0000 2026",
+    "prompt": "1、生成不知火舞和貂蝉的游戏对战海报图\n2、生成一张K-pop团体时尚专辑封面\n3、请你生成 《斗破苍穹》 的关键人物关系图\n4、帮我截一张上传图片的抖音首页的女网红图",
+    "outputImages": [
+      "/images/2046493442428039212_0.jpg",
+      "/images/2046493442428039212_1.jpg",
+      "/images/2046493442428039212_2.jpg",
+      "/images/2046493442428039212_3.jpg"
+    ],
+    "sourceUrl": "https://x.com/joshesye/status/2046493442428039212"
+  },
+  {
+    "id": "2046530758190440928",
+    "title": "やり方とプロンプトはツリー↓",
+    "thumbnail": "/images/2046530758190440928_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "agi_aibusi",
+    "authorUrl": "https://x.com/agi_aibusi/status/2046530758190440928",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 32,
+      "retweets": 0,
+      "views": 1372
+    },
+    "createdAt": "Tue Apr 21 10:05:30 +0000 2026",
+    "prompt": "やり方とプロンプトはツリー↓",
+    "outputImages": [
+      "/images/2046530758190440928_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/agi_aibusi/status/2046530758190440928"
+  },
+  {
+    "id": "2046144801071079612",
+    "title": "A mecha girl mid-teens, pale skin smudged with soot and salt spray,...",
+    "thumbnail": "/images/2046144801071079612_0.jpg",
+    "thumbnailAspect": 0.563,
+    "author": "old_pgmrs_will",
+    "authorUrl": "https://x.com/old_pgmrs_will/status/2046144801071079612",
+    "tags": [
+      "en",
+      "portrait",
+      "film",
+      "editorial"
+    ],
+    "category": "portrait",
+    "lang": "en",
+    "stats": {
+      "likes": 30,
+      "retweets": 3,
+      "views": 2238
+    },
+    "createdAt": "Mon Apr 20 08:31:50 +0000 2026",
+    "prompt": "A mecha girl mid-teens, pale skin smudged with soot and salt spray, sharp amber eyes with glowing HUD reticles, waist-length ash-white hair tied in a high ponytail whipping in the sea wind, matte gunmetal exoskeleton armor plating her shoulders, forearms and shins, exposed hydraulic pistons at the joints, chest rig with glowing cyan coolant lines, oversized oil-stained hangar jacket half slipping off one shoulder, a massive rail cannon resting on her right shoulder, dog tags and frayed red ribbon at her collar , standing off-center to the left on the rusted edge of a tilted steel platform jutting out over dark water, weight shifted onto one leg, left hand gripping the cannon strap, head turned slightly toward camera with a quiet defiant stare, steam venting from her back thrusters, her ponytail and jacket streaming sideways in the salt wind , a vast derelict sea-city at dusk, colossal megastructures of unknown purpose rising from the ocean in staggered silhouettes, bone-white monolithic towers fused with barnacled steel, cyclopean ring-shaped constructs canted at broken angles, rusted skeletal gantries threaded with dead cables, dark swells rolling between the pylons, shipwrecks half-swallowed at their feet, thick sea fog clinging to the bases while the upper structures pierce into a bruised sky, scattered faint lights blinking high in the towers like distant eyes , moody low-key lighting, cold teal ambient from the overcast sky, warm amber sodium glow leaking from a distant structure camera-right, hard backlight from a low sun behind the towers carving her silhouette, volumetric god rays cutting through sea mist, wet specular highlights on her armor , 35mm anamorphic lens, slight low angle looking up past her shoulder toward the structures, medium-wide shot, shallow depth of field with foreground rust in soft focus, horizontal lens flares, fine atmospheric haze compressing the distant megastructures into layered silhouettes , cinematic anime key visual, painterly digital illustration with crisp line art, desaturated oceanic palette of teal, bone-white and rust punched by small warm accent lights, film grain, high-contrast editorial poster aesthetic . Format 16:9.",
+    "outputImages": [
+      "/images/2046144801071079612_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/old_pgmrs_will/status/2046144801071079612"
+  },
+  {
+    "id": "2046371076402503709",
+    "title": "「神層37区　特級執行官　神巫サバト」この名称のキャラクターと世界観に合ったビジュアルイメージを、プロのデザイナーとして縦長のポスター...",
+    "thumbnail": "/images/2046371076402503709_0.jpg",
+    "thumbnailAspect": 1.411,
+    "author": "tebasaki3D",
+    "authorUrl": "https://x.com/tebasaki3D/status/2046371076402503709",
+    "tags": [
+      "ja",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "ja",
+    "stats": {
+      "likes": 29,
+      "retweets": 1,
+      "views": 882
+    },
+    "createdAt": "Mon Apr 20 23:30:59 +0000 2026",
+    "prompt": "「神層37区　特級執行官　神巫サバト」この名称のキャラクターと世界観に合ったビジュアルイメージを、プロのデザイナーとして縦長のポスターイメージとして制作して",
+    "outputImages": [
+      "/images/2046371076402503709_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/tebasaki3D/status/2046371076402503709"
+  },
+  {
+    "id": "2046243132774494607",
+    "title": "平面插画，东方幻想风格高端城市海报设计，竖版9:16构图，整体采用对角线+S型流动构图，从左下向右上延展，画面以深邃黑色为背景，自上而...",
+    "thumbnail": "/images/2046243132774494607_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "liyue_ai",
+    "authorUrl": "https://x.com/liyue_ai/status/2046243132774494607",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 25,
+      "retweets": 1,
+      "views": 3201
+    },
+    "createdAt": "Mon Apr 20 15:02:34 +0000 2026",
+    "prompt": "平面插画，东方幻想风格高端城市海报设计，竖版9:16构图，整体采用对角线+S型流动构图，从左下向右上延展，画面以深邃黑色为背景，自上而下渐变至浓烈暗红色，形成强烈冷暖对比与空间纵深，背景带微弱星尘与颗粒质感。画面中央一条金色流动能量线条如火焰般蜿蜒贯穿，自底部向上延伸，具有流体质感、粒子光效与渐变高光，局部带细微能量碎屑与体积光。\n\n金色流光中逐层浮现广州城市地标建筑群：广州塔为视觉核心，比例突出，周围融合珠江新城高楼群、猎德大桥及现代与岭南建筑元素，建筑采用“精细线描 + 金色发光体块”表现，轮廓清晰、细节丰富，在金色光晕映衬下仿佛悬浮于虚空，形成超现实空间层次，远景轻微雾化增强纵深感。\n\n画面底部为一位东方白发女性形象，长发飘逸，如烟似雾，与金色流光自然衔接并逐渐融合，发丝半透明带渐变光感，姿态柔美，双目微闭，神情宁静，怀抱一束多彩鲜花，花间点缀微光粒子与星点效果，象征人与城市能量的精神连接，人物细节适度简化以突出整体设计感。\n\n光影集中于金色流线、建筑与人物轮廓，形成强烈明暗对比与视觉聚焦，整体氛围宏大、神秘、具有东方神话意境且略带治愈感。色彩以黑与暗红为基底，高亮鎏金为主视觉强调，金色具备丰富明暗层次，辅以小面积高饱和花束色彩点缀，整体高级克制。\n\n页面文字与画面融合排版：顶部居中宋体大字“广州·中国”，下方小字“2026/04/20”，再下方小字“LIYUE”，文字采用淡金色或柔和暖白色，与整体光影统一。高品质细节，电影级光影表现，体积光与粒子细节丰富，画面干净无噪点，超高清8K分辨率，商业级海报质感。",
+    "outputImages": [
+      "/images/2046243132774494607_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/liyue_ai/status/2046243132774494607"
+  },
+  {
+    "id": "2046518189509734903",
+    "title": "9:16 vertical — Korean idol portrait photography, single subject  s...",
+    "thumbnail": "/images/2046518189509734903_0.jpg",
+    "thumbnailAspect": 1.777,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain/status/2046518189509734903",
+    "tags": [
+      "en",
+      "portrait",
+      "photography",
+      "film",
+      "idol"
+    ],
+    "category": "portrait",
+    "lang": "en",
+    "stats": {
+      "likes": 23,
+      "retweets": 2,
+      "views": 769
+    },
+    "createdAt": "Tue Apr 21 09:15:33 +0000 2026",
+    "prompt": "9:16 vertical — Korean idol portrait photography, single subject  soft black mist filter effect, lowered contrast, gentle highlight bloom, subtle glow, soft diffusion, slightly faded blacks  minimal indoor setting near window, white curtains, clean light-toned background  young Korean female idol, natural minimal makeup, dewy realistic skin texture, subtle imperfections  outfit: oversized white button-up shirt + short bottoms, slightly loose fit, soft and casual styling, no revealing elements  hair: long dark hair, slightly messy, natural volume, softly flowing  pose: relaxed standing or slight lean, body subtly angled, one leg slightly forward, shoulders relaxed; one hand lightly touching collar or resting near neckline, the other relaxed; gentle body curve without exaggeration  expression: soft cute smile, slightly playful eyes, direct or slightly off-camera gaze  camera: close to mid-body framing, eye-level, intimate distance, slight handheld feel  lighting: diffused natural daylight, soft shadows, gentle light wrapping around face and body  mood: cute yet subtly sensual, intimate, everyday softness, quiet romantic atmosphere  quality: ultra-realistic, fine film grain, slight softness at edges, natural imperfections, dreamy understated tone",
+    "outputImages": [
+      "/images/2046518189509734903_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046518189509734903"
+  },
+  {
+    "id": "2046502288102170757",
+    "title": "9:16 vertical — Japanese Fuji film style couple portrait, two subje...",
+    "thumbnail": "/images/2046502288102170757_0.jpg",
+    "thumbnailAspect": 1.777,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain/status/2046502288102170757",
+    "tags": [
+      "en",
+      "portrait",
+      "analog",
+      "film",
+      "fujifilm"
+    ],
+    "category": "portrait",
+    "lang": "en",
+    "stats": {
+      "likes": 20,
+      "retweets": 2,
+      "views": 924
+    },
+    "createdAt": "Tue Apr 21 08:12:22 +0000 2026",
+    "prompt": "9:16 vertical — Japanese Fuji film style couple portrait, two subjects  Fujifilm analog aesthetic (Pro 400H / Superia feel), soft pastel tones, slight green-magenta shift, low contrast, gentle highlight roll-off, fine film grain, subtle halation  bright natural daylight, diffused sunlight through window, soft shadows, airy atmosphere  young Japanese couple, natural minimal makeup, realistic skin texture, slight imperfections  female outfit: oversized button-up shirt with loose shorts, relaxed fit, soft casual styling   male outfit: simple t-shirt or light shirt, clean and understated  hair: natural, slightly tousled for both  pose: close intimate distance — sitting or standing close together; the girl gently leaning toward him, one hand lightly resting on his shoulder or chest; the boy slightly leaning in, faces close, almost touching, capturing the moment just before a kiss  expression: soft smiles or gentle gaze toward each other, relaxed and natural, emotional connection visible  camera: close framing (waist-up), eye-level, intimate distance, slight handheld feel  setting: minimal indoor near window, light curtains, clean soft background  lighting: diffused daylight, gentle highlight bloom, soft shadow transitions  mood: warm, romantic, intimate everyday moment, natural affection  quality: ultra-realistic, analog film look, fine grain, slight softness, natural imperfections",
+    "outputImages": [
+      "/images/2046502288102170757_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046502288102170757"
+  },
+  {
+    "id": "2046494262158930154",
+    "title": "バックプロパゲーションについて詳しく図解して",
+    "thumbnail": "/images/2046494262158930154_0.jpg",
+    "thumbnailAspect": 1.085,
+    "author": "itnavi2022",
+    "authorUrl": "https://x.com/itnavi2022/status/2046494262158930154",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 20,
+      "retweets": 2,
+      "views": 1940
+    },
+    "createdAt": "Tue Apr 21 07:40:28 +0000 2026",
+    "prompt": "バックプロパゲーションについて詳しく図解して",
+    "outputImages": [
+      "/images/2046494262158930154_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/itnavi2022/status/2046494262158930154"
+  },
+  {
+    "id": "2046536551681954207",
+    "title": "生成一个抖音直播的截图 里面是一个美女在直播，在卖丝袜和内衣，她的在线人数是99996，热度是18+，有个叫小互的大哥，给她刷了一个飞机礼物",
+    "thumbnail": "/images/2046536551681954207_0.jpg",
+    "thumbnailAspect": 2.162,
+    "author": "xiaohu",
+    "authorUrl": "https://x.com/xiaohu/status/2046536551681954207",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 19,
+      "retweets": 1,
+      "views": 2640
+    },
+    "createdAt": "Tue Apr 21 10:28:31 +0000 2026",
+    "prompt": "生成一个抖音直播的截图 里面是一个美女在直播，在卖丝袜和内衣，她的在线人数是99996，热度是18+，有个叫小互的大哥，给她刷了一个飞机礼物",
+    "outputImages": [
+      "/images/2046536551681954207_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/xiaohu/status/2046536551681954207"
+  },
+  {
+    "id": "2046500429786402973",
+    "title": "デメニギスの体の構造を解説するカラー図鑑のページ",
+    "thumbnail": "/images/2046500429786402973_0.jpg",
+    "thumbnailAspect": 1.094,
+    "author": "itnavi2022",
+    "authorUrl": "https://x.com/itnavi2022/status/2046500429786402973",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 16,
+      "retweets": 3,
+      "views": 1052
+    },
+    "createdAt": "Tue Apr 21 08:04:59 +0000 2026",
+    "prompt": "デメニギスの体の構造を解説するカラー図鑑のページ",
+    "outputImages": [
+      "/images/2046500429786402973_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/itnavi2022/status/2046500429786402973"
+  },
+  {
+    "id": "2046272578705068476",
+    "title": "an ingame screenshot of rust",
+    "thumbnail": "/images/2046272578705068476_0.jpg",
+    "thumbnailAspect": 0.667,
+    "author": "FixlationAI",
+    "authorUrl": "https://x.com/FixlationAI/status/2046272578705068476",
+    "tags": [
+      "en",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "en",
+    "stats": {
+      "likes": 16,
+      "retweets": 2,
+      "views": 2645
+    },
+    "createdAt": "Mon Apr 20 16:59:35 +0000 2026",
+    "prompt": "an ingame screenshot of rust",
+    "outputImages": [
+      "/images/2046272578705068476_0.jpg",
+      "/images/2046272578705068476_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/FixlationAI/status/2046272578705068476"
+  },
+  {
+    "id": "2046188377524076915",
+    "title": "画像のプロンプトはALTに載せてます。",
+    "thumbnail": "/images/2046188377524076915_0.jpg",
+    "thumbnailAspect": 1.563,
+    "author": "yudotanaka",
+    "authorUrl": "https://x.com/yudotanaka/status/2046188377524076915",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 13,
+      "retweets": 1,
+      "views": 1517
+    },
+    "createdAt": "Mon Apr 20 11:25:00 +0000 2026",
+    "prompt": "画像のプロンプトはALTに載せてます。",
+    "outputImages": [
+      "/images/2046188377524076915_0.jpg",
+      "/images/2046188377524076915_1.jpg",
+      "/images/2046188377524076915_2.jpg",
+      "/images/2046188377524076915_3.jpg"
+    ],
+    "sourceUrl": "https://x.com/yudotanaka/status/2046188377524076915"
+  },
+  {
+    "id": "2046514205529088501",
+    "title": "Create a Science fiction movie poster",
+    "thumbnail": "/images/2046514205529088501_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "underwoodxie96",
+    "authorUrl": "https://x.com/underwoodxie96/status/2046514205529088501",
+    "tags": [
+      "en",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "en",
+    "stats": {
+      "likes": 10,
+      "retweets": 1,
+      "views": 1049
+    },
+    "createdAt": "Tue Apr 21 08:59:43 +0000 2026",
+    "prompt": "Create a Science fiction movie poster",
+    "outputImages": [
+      "/images/2046514205529088501_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/underwoodxie96/status/2046514205529088501"
+  },
+  {
+    "id": "2046501692246470871",
+    "title": "少し暑くなってきた今の時期に、さわやかにさっぱりしたい、みずみずしさ、みたいなところをもっと強く感じたい。冷たいうどんやナス、つゆを口...",
+    "thumbnail": "/images/2046501692246470871_0.jpg",
+    "thumbnailAspect": 1.333,
+    "author": "genel_ai",
+    "authorUrl": "https://x.com/genel_ai/status/2046501692246470871",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 8,
+      "retweets": 0,
+      "views": 1096
+    },
+    "createdAt": "Tue Apr 21 08:10:00 +0000 2026",
+    "prompt": "少し暑くなってきた今の時期に、さわやかにさっぱりしたい、みずみずしさ、みたいなところをもっと強く感じたい。冷たいうどんやナス、つゆを口に含んだ時の爽快感、みたいなものをもっと感じるように",
+    "outputImages": [
+      "/images/2046501692246470871_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/genel_ai/status/2046501692246470871"
+  },
+  {
+    "id": "2046514998965371144",
+    "title": "生成一张手写中/西医药方图",
+    "thumbnail": "/images/2046514998965371144_0.jpg",
+    "thumbnailAspect": 1.334,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus/status/2046514998965371144",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 5,
+      "retweets": 0,
+      "views": 754
+    },
+    "createdAt": "Tue Apr 21 09:02:52 +0000 2026",
+    "prompt": "生成一张手写中/西医药方图",
+    "outputImages": [
+      "/images/2046514998965371144_0.jpg",
+      "/images/2046514998965371144_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046514998965371144"
+  },
+  {
+    "id": "2046476566537080849",
+    "title": "生成圣斗士星矢12个黄金圣斗士的12宫格卡牌图片，每张卡牌上写上对应的中文名，每行4个，宽高比16:9。",
+    "thumbnail": "/images/2046476566537080849_0.jpg",
+    "thumbnailAspect": 0.563,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen/status/2046476566537080849",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 5,
+      "retweets": 0,
+      "views": 2763
+    },
+    "createdAt": "Tue Apr 21 06:30:09 +0000 2026",
+    "prompt": "生成圣斗士星矢12个黄金圣斗士的12宫格卡牌图片，每张卡牌上写上对应的中文名，每行4个，宽高比16:9。",
+    "outputImages": [
+      "/images/2046476566537080849_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046476566537080849"
+  },
+  {
+    "id": "2046523491940225366",
+    "title": "玄武门之变的朋友圈",
+    "thumbnail": "/images/2046523491940225366_0.jpg",
+    "thumbnailAspect": 1.333,
+    "author": "Tz_2022",
+    "authorUrl": "https://x.com/Tz_2022/status/2046523491940225366",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 4,
+      "retweets": 1,
+      "views": 454
+    },
+    "createdAt": "Tue Apr 21 09:36:37 +0000 2026",
+    "prompt": "玄武门之变的朋友圈",
+    "outputImages": [
+      "/images/2046523491940225366_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/Tz_2022/status/2046523491940225366"
+  },
+  {
+    "id": "2046523494003851300",
+    "title": "生成【城市】三天旅游攻略，就这么简单一句话",
+    "thumbnail": "/images/2046523494003851300_0.jpg",
+    "thumbnailAspect": 1.779,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus/status/2046523494003851300",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 4,
+      "retweets": 0,
+      "views": 276
+    },
+    "createdAt": "Tue Apr 21 09:36:38 +0000 2026",
+    "prompt": "生成【城市】三天旅游攻略，就这么简单一句话",
+    "outputImages": [
+      "/images/2046523494003851300_0.jpg",
+      "/images/2046523494003851300_1.jpg",
+      "/images/2046523494003851300_2.jpg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046523494003851300"
+  },
+  {
+    "id": "2046510831832006970",
+    "title": "generate image: Selfie of Sam Altman riding a bear",
+    "thumbnail": "/images/2046510831832006970_0.jpg",
+    "thumbnailAspect": 0.8,
+    "author": "JustinGorya",
+    "authorUrl": "https://x.com/JustinGorya/status/2046510831832006970",
+    "tags": [
+      "en",
+      "portrait"
+    ],
+    "category": "portrait",
+    "lang": "en",
+    "stats": {
+      "likes": 4,
+      "retweets": 0,
+      "views": 173
+    },
+    "createdAt": "Tue Apr 21 08:46:19 +0000 2026",
+    "prompt": "generate image: Selfie of Sam Altman riding a bear\n\nEdit prompt: Remove the background make it transparent",
+    "outputImages": [
+      "/images/2046510831832006970_0.jpg",
+      "/images/2046510831832006970_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/JustinGorya/status/2046510831832006970"
+  },
+  {
+    "id": "2046502217843376292",
+    "title": "AmongUsの精密な実際のゲーム画像を生成して",
+    "thumbnail": "/images/2046502217843376292_0.jpg",
+    "thumbnailAspect": 0.667,
+    "author": "ReYYYYoking",
+    "authorUrl": "https://x.com/ReYYYYoking/status/2046502217843376292",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 4,
+      "retweets": 0,
+      "views": 248
+    },
+    "createdAt": "Tue Apr 21 08:12:05 +0000 2026",
+    "prompt": "AmongUsの精密な実際のゲーム画像を生成して",
+    "outputImages": [
+      "/images/2046502217843376292_0.jpg",
+      "/images/2046502217843376292_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/ReYYYYoking/status/2046502217843376292"
+  },
+  {
+    "id": "2046491397424111659",
+    "title": "创作一幅超逼真的 3D 插画，描绘一个略微倾斜的 Twitter/X 个人资料页面，背景为简洁的灰色。保留原有的卡通头像。界面必须与真...",
+    "thumbnail": "/images/2046491397424111659_0.jpg",
+    "thumbnailAspect": 1.333,
+    "author": "GoSailGlobal",
+    "authorUrl": "https://x.com/GoSailGlobal/status/2046491397424111659",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 4,
+      "retweets": 0,
+      "views": 664
+    },
+    "createdAt": "Tue Apr 21 07:29:05 +0000 2026",
+    "prompt": "创作一幅超逼真的 3D 插画，描绘一个略微倾斜的 Twitter/X 个人资料页面，背景为简洁的灰色。保留原有的卡通头像。界面必须与真实的 X 截图相似，包含真实的布局、认证徽章、粉丝统计、个人资料横幅和推文部分。\n\n个人资料详情：\n\n一位时尚的年轻男子，有着蓬松的亮黑色短发和白皙的皮肤，从个人资料页面的右侧撕开的纸片中跃然而出。他保留了原有的面部特征，只是将表情改为自然自信的微笑。他握着撕开的纸片边缘，纸屑四处飞溅，营造出强烈的 3D 突破效果。\n\n柔和的影棚灯光、电影级的阴影、景深、超高细节、清晰的焦点、逼真的皮肤、逼真的 UI 反射、优质的构图、4K 分辨率、逼真与微妙的皮克斯风格融合。\n\n重要提示：\n\n- 请勿更改头像\n\n- 保持 X UI 界面准确\n\n- 保留原有的面部特征\n\n- 角色为男性\n\n- 仅增强笑容\n\n- 确保所有中文文字清晰易读",
+    "outputImages": [
+      "/images/2046491397424111659_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/GoSailGlobal/status/2046491397424111659"
+  },
+  {
+    "id": "2046165776055546341",
+    "title": "生成一张慈禧的X主页",
+    "thumbnail": "/images/2046165776055546341_0.jpg",
+    "thumbnailAspect": 1.333,
+    "author": "Cryptohaifeng_",
+    "authorUrl": "https://x.com/Cryptohaifeng_/status/2046165776055546341",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 4,
+      "retweets": 0,
+      "views": 370
+    },
+    "createdAt": "Mon Apr 20 09:55:11 +0000 2026",
+    "prompt": "生成一张慈禧的X主页",
+    "outputImages": [
+      "/images/2046165776055546341_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/Cryptohaifeng_/status/2046165776055546341"
+  },
+  {
+    "id": "2046530764871696750",
+    "title": "GPT-image-2でこの手相を診断して詳細な鑑定書を作って",
+    "thumbnail": "/images/2046530764871696750_0.jpg",
+    "thumbnailAspect": 1.711,
+    "author": "agi_aibusi",
+    "authorUrl": "https://x.com/agi_aibusi/status/2046530764871696750",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 3,
+      "retweets": 0,
+      "views": 380
+    },
+    "createdAt": "Tue Apr 21 10:05:31 +0000 2026",
+    "prompt": "GPT-image-2でこの手相を診断して詳細な鑑定書を作って\n生命線・知能線・感情線・運命線・太陽線・財運線・結婚線を、線の形状・濃淡・枝分かれ・起点終点まで分析すること。\n助言を重点的に高品質な占い鑑定書にまとめること。",
+    "outputImages": [
+      "/images/2046530764871696750_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/agi_aibusi/status/2046530764871696750"
+  },
+  {
+    "id": "2046515319947354603",
+    "title": "在计算机博物馆里，一个程序员在展厅中央，正在演示C语言编程，很多参观者在围观，屏幕上的代码清晰可见。旁边的牌子写着：古法编程，现场表演...",
+    "thumbnail": "/images/2046515319947354603_0.jpg",
+    "thumbnailAspect": 0.563,
+    "author": "XiaohuiAI666",
+    "authorUrl": "https://x.com/XiaohuiAI666/status/2046515319947354603",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 3,
+      "retweets": 0,
+      "views": 480
+    },
+    "createdAt": "Tue Apr 21 09:04:09 +0000 2026",
+    "prompt": "在计算机博物馆里，一个程序员在展厅中央，正在演示C语言编程，很多参观者在围观，屏幕上的代码清晰可见。旁边的牌子写着：古法编程，现场表演。2D卡通画风，16:9",
+    "outputImages": [
+      "/images/2046515319947354603_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/XiaohuiAI666/status/2046515319947354603"
+  },
+  {
+    "id": "2046510310253539764",
+    "title": "生成一张【字体】书法临摹字帖",
+    "thumbnail": "/images/2046510310253539764_0.jpg",
+    "thumbnailAspect": 1.25,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus/status/2046510310253539764",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 3,
+      "retweets": 0,
+      "views": 935
+    },
+    "createdAt": "Tue Apr 21 08:44:14 +0000 2026",
+    "prompt": "生成一张【字体】书法临摹字帖",
+    "outputImages": [
+      "/images/2046510310253539764_0.jpg",
+      "/images/2046510310253539764_1.jpg",
+      "/images/2046510310253539764_2.jpg",
+      "/images/2046510310253539764_3.jpg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046510310253539764"
+  },
+  {
+    "id": "2046506783850815703",
+    "title": "A dusk shindig  with multiple fake imagination projections all alig...",
+    "thumbnail": "/images/2046506783850815703_0.jpg",
+    "thumbnailAspect": 0.667,
+    "author": "workingclassbud",
+    "authorUrl": "https://x.com/workingclassbud/status/2046506783850815703",
+    "tags": [
+      "en"
+    ],
+    "category": "other",
+    "lang": "en",
+    "stats": {
+      "likes": 3,
+      "retweets": 0,
+      "views": 120
+    },
+    "createdAt": "Tue Apr 21 08:30:14 +0000 2026",
+    "prompt": "A dusk shindig  with multiple fake imagination projections all aligned in the 14th dimensions",
+    "outputImages": [
+      "/images/2046506783850815703_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/workingclassbud/status/2046506783850815703"
+  },
+  {
+    "id": "2046437230127034774",
+    "title": "GPT Image 2を使って、OpenClawの情報を調べてドンキの広告ポップ風に実際のドンキに貼っているような感じで画像生成してください",
+    "thumbnail": "/images/2046437230127034774_0.jpg",
+    "thumbnailAspect": 1.333,
+    "author": "loglogrog",
+    "authorUrl": "https://x.com/loglogrog/status/2046437230127034774",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 3,
+      "retweets": 0,
+      "views": 351
+    },
+    "createdAt": "Tue Apr 21 03:53:51 +0000 2026",
+    "prompt": "GPT Image 2を使って、OpenClawの情報を調べてドンキの広告ポップ風に実際のドンキに貼っているような感じで画像生成してください",
+    "outputImages": [
+      "/images/2046437230127034774_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/loglogrog/status/2046437230127034774"
+  },
+  {
+    "id": "2046514558064586782",
+    "title": "『賑やかで魅力的なスーパーマーケットの折り込みチラシの画像。上部には「特売」の大きな文字と今週の日付。カラフルな商品写真（野菜・果物・...",
+    "thumbnail": "/images/2046514558064586782_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "weel_corp",
+    "authorUrl": "https://x.com/weel_corp/status/2046514558064586782",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 158
+    },
+    "createdAt": "Tue Apr 21 09:01:07 +0000 2026",
+    "prompt": "『賑やかで魅力的なスーパーマーケットの折り込みチラシの画像。上部には「特売」の大きな文字と今週の日付。カラフルな商品写真（野菜・果物・牛肉・鮮魚）、赤枠の価格タグ、「超目玉商品」「家計応援」のキャッチ…』",
+    "outputImages": [
+      "/images/2046514558064586782_0.jpg",
+      "/images/2046514558064586782_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/weel_corp/status/2046514558064586782"
+  },
+  {
+    "id": "2046263153546174935",
+    "title": "请根据【主题】，生成一张高设计感的人物关系图海报。要求这张图不是普通插画，而是兼具信息可视化、叙事结构、海报设计感和作品风格还原度的人...",
+    "thumbnail": "/images/2046263153546174935_0.jpg",
+    "thumbnailAspect": 1.25,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus/status/2046263153546174935",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 800
+    },
+    "createdAt": "Mon Apr 20 16:22:08 +0000 2026",
+    "prompt": "请根据【主题】，生成一张高设计感的人物关系图海报。要求这张图不是普通插画，而是兼具信息可视化、叙事结构、海报设计感和作品风格还原度的人物关系图。\n\n请自动完成以下内容：\n- 识别该主题对应的作品及其核心设定\n- 提取最具代表性的 6–12 位关键人物，必要时不超过 15 位\n- 识别并展示关键人物关系，包括血缘、爱情、友情、联盟、敌对、师徒、主从、操控、背叛、秘密关系等\n- 自动按作品特点选择合适的构图方式，如主角中心型、双核心对峙型、阵营分区型、家族谱系型或时间演变型\n- 自动提炼作品的风格DNA，包括色彩、世界观符号、材质纹理、情绪氛围、排版语言和代表性元素\n- 将这些风格元素转化为人物关系图的整体视觉设计，而不是简单复制某张官方海报\n- 用不同颜色、线型、箭头区分不同关系，保证线条清晰、层次分明、不杂乱\n- 核心人物最突出，重要人物次之，次级人物弱化，形成明确视觉层级\n- 每个人物名称清晰可读，必要时可加入身份或阵营标签\n\n最终成品应满足：\n- 一眼看懂人物主次和关键关系\n- 具有明显的原作品气质与设定感\n- 兼具信息图的清晰度与海报的高级设计感\n- 画面统一、精致、完整、适合社交媒体传播或海报展示\n- 避免廉价流程图感、避免杂乱堆砌、避免信息过载",
+    "outputImages": [
+      "/images/2046263153546174935_0.jpg",
+      "/images/2046263153546174935_1.jpg",
+      "/images/2046263153546174935_2.jpg",
+      "/images/2046263153546174935_3.jpg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046263153546174935"
+  },
+  {
+    "id": "2046224777208361126",
+    "title": "围绕【主题】自动生成一张顶级暗黑史诗概念海报 / 电影感信息图海报。",
+    "thumbnail": "/images/2046224777208361126_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "A9Quant",
+    "authorUrl": "https://x.com/A9Quant/status/2046224777208361126",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 254
+    },
+    "createdAt": "Mon Apr 20 13:49:38 +0000 2026",
+    "prompt": "围绕【主题】自动生成一张顶级暗黑史诗概念海报 / 电影感信息图海报。\n\n唯一需要输入的变量只有：\n【主题】：___特朗普的思考____ \n\n除【主题】之外，其余全部由 AI 自动适配完成，包括但不限于：\n- 核心主体（自动判断更适合人物、守护者、战士、产品、器物、雕像、抽象象征或其他主视觉对象）\n- 中央承载结构（自动判断更适合王座、石座、祭坛、机械基座、遗迹、高台或其他支撑体）\n- 环境空间（自动判断更适合洞穴、神殿、废墟、深渊、地下宫殿、密室或其他封闭史诗空间）\n- 上方开口与光源形式（自动判断更适合月光、神光、能量束、审判之光、圣光或其他单一强光）\n- 象征元素（自动判断更适合骷髅、徽记、残碑、纹章、符文、能量环、神性符号等）\n- 色彩体系\n- 材质组合\n- 标题、副标题、辅助文案\n- 排版与整体叙事气质\n\n【总风格】\n高预算 90 年代好莱坞史诗大片海报气质，融合 cinematic matte painting、超写实摄影质感、极强明暗对比、厚重空间叙事、暗黑英雄主义与仪式感构图。整体必须像一张真正的电影主海报，而不是普通插画或电商图。\n\n【核心结构锁定】\n整张海报必须保留以下结构基因：\n1. 一个巨大、压迫感极强的黑暗封闭空间\n2. 一束从上方斜向切入的强烈体积光，作为画面的第一视觉秩序\n3. 中央偏右或光束终点位置的核心主体与承载结构\n4. 左下角作为高密度标题与信息锚点\n5. 四周保留大量纯黑或近黑负空间，形成电影感呼吸区\n\n【自动适配规则】\nAI 必须依据【主题】自动推导最适合的视觉系统：\n- 如果【主题】偏暗黑英雄、复仇、正义、孤独、宿命，则自动偏向石质王座、孤高人物、冷色神光、废墟或洞穴感空间\n- 如果【主题】偏神秘、幽灵、潜行、幻影、夜行，则自动偏向月光、迷雾、冷蓝色体积光、深渊式黑暗空间\n- 如果【主题】偏权力、统治、王者、秩序，则自动强化 throne / altar / crown-like symbol / ritual space 的表达\n- 如果【主题】偏科技、AI、未来、机械，则自动将王座和空间替换为机械神座、能量基座、金属洞窟、工业神殿等未来化形态\n- 如果【主题】偏产品、品牌、器物，则自动把核心主体替换为最合适的 hero object，并保留被神光审判式凸显的史诗构图\n\n【画布与色彩系统】\n- 背景底层必须是极深、近乎吞噬一切的黑暗空间\n- 主环境色由 AI 根据【主题】自动决定，但整体必须克制，以暗色为主\n- 强光区域色彩必须高度集中，只服务于体积光与主体高光\n- 主题色 / 强调色只能集中用于主视觉核心，不允许全画面泛滥\n- 必须建立明确的“黑暗底色 + 单一主光 + 少量主题强调色”的层级秩序\n\n【构图与视觉重力】\n- 采用强烈的斜向张力与向中心汇聚的视觉引导\n- 视觉重力从上方光源强势落下，最终压在核心主体之上\n- 主体必须处于被命运、审判、神性或权力照中的位置\n- 边缘必须自然融入黑暗，不能出现无意义背景填充\n- 所有元素必须服务于唯一的主叙事核心\n\n【材质与光影】\n- 不使用轮廓线，不使用平面化描边\n- 完全依赖体积光、阴影切割、反射、高光、雾气、粉尘、湿润岩石或其他真实材质来建构画面\n- 材质必须形成明显对比，例如：\n  粗粝岩石 / 冷硬金属 / 柔韧织物 / 古老石雕 / 湿润表面 / 尘雾光柱\n- 光束必须具有强烈 Tyndall effect，真实、厚重、可感知体积密度\n\n【排版系统】\n- 整体 80% 视觉，20% 文字\n- AI 根据【主题】自动生成主标题、副标题和底部信息块\n- 主标题应尽量简洁、有气势、有电影海报感\n- 若主题更适合中文，则优先中文；若更适合英文，则自动英文；也可双语，但必须统一\n- 主标题可沿光束垂直排布，仿佛由光本身构成\n- 左下角设置一个高密度信息模块，包括副标题、小字信息、电影 credits 风格占位文字或品牌说明\n- 文字必须锐利、干净、真实嵌入环境，不得廉价漂浮\n\n【模块结构 —— 必须严格保持 3 块】\n[MOD 1: TOP-TO-CENTER BEAM]\n从顶部开口斜向切下的巨大体积光柱，作为第一视觉通道，并承载主标题或主视觉文字。\n\n[MOD 2: CENTER-RIGHT CORE]\n位于光束终点的核心主体与承载结构，形成整张海报的权力中心 / 命运中心 / 叙事中心。\n\n[MOD 3: BOTTOM-LEFT TEXT]\n位于左下角负空间中的高密度排版区，包含副标题、说明文字、credits 风格信息块、品牌信息或活动信息。\n\n【作者署名】\n在底部角落自然加入作者署名：\n@a9quant\n署名要小而清晰，精致、克制、高级，不喧宾夺主，像正式电影概念海报或艺术作品落款。\n\n【输出要求】\n输出为单张统一构图海报。\n所有视觉系统必须内部一致，不能有风格污染。\n画面必须具备：暗黑感、史诗感、压迫感、仪式感、命运感、电影完成度。\n最大细节密度，超清，电影级，印刷级，高端成片质感。",
+    "outputImages": [
+      "/images/2046224777208361126_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/A9Quant/status/2046224777208361126"
+  },
+  {
+    "id": "2046523198116889064",
+    "title": "A refined 2026 Silicon Valley city promotional poster with a futuri...",
+    "thumbnail": "/images/2046523198116889064_0.jpg",
+    "thumbnailAspect": 1.777,
+    "author": "carsonyungos",
+    "authorUrl": "https://x.com/carsonyungos/status/2046523198116889064",
+    "tags": [
+      "en",
+      "poster",
+      "editorial"
+    ],
+    "category": "poster",
+    "lang": "en",
+    "stats": {
+      "likes": 1,
+      "retweets": 1,
+      "views": 70
+    },
+    "createdAt": "Tue Apr 21 09:35:27 +0000 2026",
+    "prompt": "A refined 2026 Silicon Valley city promotional poster with a futuristic yet elegant atmosphere.\n\nDouble exposure composition, preserving an S-shaped sense of flowing movement. On a pure white textured background, in the lower-right corner, a miniature figure dressed in sleek modern techwear is releasing a long ribbon of luminous silver-blue light. The ribbon flows gracefully through the air, showing a soft silk-like texture, and as it drifts toward the upper-left, it magically transforms into a grand landscape of rolling hills, coastline, data streams, and illuminated urban terrain.\n\nWithin this flowing “river of light,” overlay a hand-drawn panoramic map of Silicon Valley, blending technology, nature, innovation, and California sunlight. The scene feels visionary, expansive, sophisticated, and inspiring.\n\nInclude iconic Silicon Valley and Bay Area elements: Stanford University arches, Apple Park, Google campus-inspired buildings, Meta-like glass offices, Tesla-style innovation imagery, venture capital offices on Sand Hill Road, Palo Alto tree-lined streets, San Jose skyline, the Santa Cruz Mountains, San Francisco Bay, highways, autonomous vehicles, startup labs, semiconductor patterns, AI data centers, and subtle circuit-board textures.\n\nSurrounded by soft mist, golden California light, floating clouds, and delicate digital particles. Rich colors, complex structure, highly detailed, grand and breathtaking, yet still fresh and minimal because of the large areas of white space.\n\nIn the lower-left corner, elegant typography reads “SILICON VALLEY 2026” with a vertical promotional slogan: “Where Ideas Shape Tomorrow.” Beautiful editorial layout, graceful spacing, clear and complete lettering, premium city branding poster, cinematic lighting, sophisticated details, 9:16 aspect ratio.",
+    "outputImages": [
+      "/images/2046523198116889064_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/carsonyungos/status/2046523198116889064"
+  },
+  {
+    "id": "2046413660147314714",
+    "title": "Generate a high-quality vertical \"science popularization encycloped...",
+    "thumbnail": "/images/2046413660147314714_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "pfanis",
+    "authorUrl": "https://x.com/pfanis/status/2046413660147314714",
+    "tags": [
+      "en",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "en",
+    "stats": {
+      "likes": 1,
+      "retweets": 1,
+      "views": 244
+    },
+    "createdAt": "Tue Apr 21 02:20:11 +0000 2026",
+    "prompt": "Generate a high-quality vertical \"science popularization encyclopedia image\" based on [Theme].  \n\n This image is not an ordinary poster, nor is it purely an illustration; it's a modular science information graphic that combines \"atlas-like feel, encyclopedic feel, information structure, and collectible appeal.\" The overall style references a blend of advanced natural history atlases, modern encyclopedia pages, lifestyle knowledge cards, and highly shareable social media infographics.  Please include in the image: - A clear and beautiful main visual of the theme - Several magnified close-up details of partial features - Multiple rounded modular information sections - Clear title hierarchy and key labels - Concise yet rich encyclopedic content - Visualized ratings, key point summaries, or Top 5 modules  Content sections should automatically adapt based on the theme, prioritizing selection and reasonable combination from these directions: Basic profile, classification info, appearance features, habits/ecology, formation mechanism/structure composition, growth or usage conditions, care or maintenance tips, risks and precautions, suitable people or application scenarios, pros and cons comparison, quick rating card.  Visual requirements: Light, clean background; soft color palette; subtle shadows; refined small icons; rounded info boxes; neat typography; high information density without clutter; excellent reading experience. The overall design must feel like a genuine science encyclopedia card that can be published, read, collected, and produced in series—not like an ad graphic.  Please don't make it into an ordinary commercial promotional poster. Emphasize the features of \"knowledge organization + modular info + atlas-style presentation.",
+    "outputImages": [
+      "/images/2046413660147314714_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/pfanis/status/2046413660147314714"
+  },
+  {
+    "id": "2046215187678790140",
+    "title": "プロンプトはリプに最終ページとまとめて掲載します↓",
+    "thumbnail": "/images/2046215187678790140_0.jpg",
+    "thumbnailAspect": 1.777,
+    "author": "minesan_ai",
+    "authorUrl": "https://x.com/minesan_ai/status/2046215187678790140",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 1,
+      "retweets": 1,
+      "views": 207
+    },
+    "createdAt": "Mon Apr 20 13:11:32 +0000 2026",
+    "prompt": "プロンプトはリプに最終ページとまとめて掲載します↓",
+    "outputImages": [
+      "/images/2046215187678790140_0.jpg",
+      "/images/2046215187678790140_1.jpg",
+      "/images/2046215187678790140_2.jpg",
+      "/images/2046215187678790140_3.jpg"
+    ],
+    "sourceUrl": "https://x.com/minesan_ai/status/2046215187678790140"
+  },
+  {
+    "id": "2046517653431545956",
+    "title": "in ALT and comment.",
+    "thumbnail": "/images/2046517653431545956_0.jpg",
+    "thumbnailAspect": 1.333,
+    "author": "fy360593",
+    "authorUrl": "https://x.com/fy360593/status/2046517653431545956",
+    "tags": [
+      "en"
+    ],
+    "category": "other",
+    "lang": "en",
+    "stats": {
+      "likes": 1,
+      "retweets": 0,
+      "views": 91
+    },
+    "createdAt": "Tue Apr 21 09:13:25 +0000 2026",
+    "prompt": "in ALT and comment.",
+    "outputImages": [
+      "/images/2046517653431545956_0.jpg",
+      "/images/2046517653431545956_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/fy360593/status/2046517653431545956"
+  },
+  {
+    "id": "2046448773162033240",
+    "title": "# 混沌としたメモ書き・記号の集合体からキャラクターの顔を浮かび上がらせるアート",
+    "thumbnail": "/images/2046448773162033240_0.jpg",
+    "thumbnailAspect": 1,
+    "author": "loglogrog",
+    "authorUrl": "https://x.com/loglogrog/status/2046448773162033240",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 1,
+      "retweets": 0,
+      "views": 218
+    },
+    "createdAt": "Tue Apr 21 04:39:43 +0000 2026",
+    "prompt": "# 混沌としたメモ書き・記号の集合体からキャラクターの顔を浮かび上がらせるアート\n\n--- スタイル\n- 白い紙の上に黒インクで描かれた大量の手書きメモ、数式、記号、ランダムな線。\n- 紙いっぱいに散らばる書き殴り風のカオス。\n- 所々に赤インクの強調（ライン、塗り潰し、マーカー風の塊）。\n- アナログのノート落書きのような質感。\n\n--- 構図\n- ランダムなメモや記号が全体を覆い尽くす。\n- 黒インクの線や文字の密度が「キャラクターの顔」の位置に集中する。\n- 結果として、混沌の中から「与えられたキャラクターの顔のシルエット・表情」がうっすら浮かび上がる。\n- 顔は写実的ではなく、カオスの断片が集まって形を成す。\n\n--- 色彩\n- モノクロ（黒・白）を主体に構成。\n- 赤インクをアクセントとして散発的に配置。\n- 彩度は抑えめ、アナログの紙とインク感を重視。\n\n--- 表現要素\n- 読めるようで読めない文字列、日本語や英数字が混在。\n- 数式記号、矢印、点、斜線、クロス、ドリップ（インクの飛び散り）。\n- キャラクターの顔の目や髪の輪郭は、メモや記号の配置の「余白」や「濃淡」で浮かび上がる。\n\n--- 禁止事項\n- 顔を直接的に描き込む写実ポートレート。\n- デジタル処理的で整然とした幾何学模様。\n- カラフルな彩色や過飽和表現。\n- ロゴ、透かし、人工的なCG感。\n\n--- Definition of Done (DoD)\n- 全体は「混沌としたメモ・記号の集合体」として成立している。  \n- 与えられたキャラクターの顔が、混沌の濃淡・配置から自然に浮かび上がる。  \n- 色はモノクロ＋赤アクセントのみ。  \n- 紙とインクの手描き的質感を保持している。",
+    "outputImages": [
+      "/images/2046448773162033240_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/loglogrog/status/2046448773162033240"
+  },
+  {
+    "id": "2046414546378584558",
+    "title": "Generate for me a UI design system with a very cutting-edge, bold, ...",
+    "thumbnail": "/images/2046414546378584558_0.jpg",
+    "thumbnailAspect": 0.75,
+    "author": "pfanis",
+    "authorUrl": "https://x.com/pfanis/status/2046414546378584558",
+    "tags": [
+      "en",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "en",
+    "stats": {
+      "likes": 1,
+      "retweets": 0,
+      "views": 275
+    },
+    "createdAt": "Tue Apr 21 02:23:43 +0000 2026",
+    "prompt": "Generate for me a UI design system with a very cutting-edge, bold, and unique theme that includes glassy visuals and transparencies",
+    "outputImages": [
+      "/images/2046414546378584558_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/pfanis/status/2046414546378584558"
+  },
+  {
+    "id": "2046406024303976904",
+    "title": "戦前日本の怪しげな研究所を探検しているマイクラのスクリーンショット画像を作成して",
+    "thumbnail": "/images/2046406024303976904_0.jpg",
+    "thumbnailAspect": 0.563,
+    "author": "RitaStar1128",
+    "authorUrl": "https://x.com/RitaStar1128/status/2046406024303976904",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 1,
+      "retweets": 0,
+      "views": 265
+    },
+    "createdAt": "Tue Apr 21 01:49:51 +0000 2026",
+    "prompt": "戦前日本の怪しげな研究所を探検しているマイクラのスクリーンショット画像を作成して",
+    "outputImages": [
+      "/images/2046406024303976904_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/RitaStar1128/status/2046406024303976904"
+  },
+  {
+    "id": "2046218165961753047",
+    "title": "根据你对我的认知 给我生成一个“你认识的我”的 图片",
+    "thumbnail": "/images/2046218165961753047_0.jpg",
+    "thumbnailAspect": 0.8,
+    "author": "80vul",
+    "authorUrl": "https://x.com/80vul/status/2046218165961753047",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 1,
+      "retweets": 0,
+      "views": 498
+    },
+    "createdAt": "Mon Apr 20 13:23:22 +0000 2026",
+    "prompt": "根据你对我的认知 给我生成一个“你认识的我”的 图片",
+    "outputImages": [
+      "/images/2046218165961753047_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/80vul/status/2046218165961753047"
+  },
+  {
+    "id": "2046542225358917945",
+    "title": "この画像のプロンプト↓",
+    "thumbnail": "/images/2046542225358917945_0.jpg",
+    "thumbnailAspect": 0.667,
+    "author": "hiro_ai_auto",
+    "authorUrl": "https://x.com/hiro_ai_auto/status/2046542225358917945",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 24
+    },
+    "createdAt": "Tue Apr 21 10:51:04 +0000 2026",
+    "prompt": "この画像のプロンプト↓",
+    "outputImages": [
+      "/images/2046542225358917945_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/hiro_ai_auto/status/2046542225358917945"
+  },
+  {
+    "id": "2046540642634047868",
+    "title": "Prompt见评论。",
+    "thumbnail": "/images/2046540642634047868_0.jpg",
+    "thumbnailAspect": 0.667,
+    "author": "EurekaLuyao",
+    "authorUrl": "https://x.com/EurekaLuyao/status/2046540642634047868",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 41
+    },
+    "createdAt": "Tue Apr 21 10:44:46 +0000 2026",
+    "prompt": "Prompt见评论。",
+    "outputImages": [
+      "/images/2046540642634047868_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/EurekaLuyao/status/2046540642634047868"
+  },
+  {
+    "id": "2046528889124728993",
+    "title": "ピラティス教室の広告画像を作成したい テキストはよりユーザーが登録をするのに惹かれるような文言にし、画像内には女性がピラティスを実際に...",
+    "thumbnail": "/images/2046528889124728993_0.jpg",
+    "thumbnailAspect": 1,
+    "author": "ck_igarashi",
+    "authorUrl": "https://x.com/ck_igarashi/status/2046528889124728993",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 91
+    },
+    "createdAt": "Tue Apr 21 09:58:04 +0000 2026",
+    "prompt": "ピラティス教室の広告画像を作成したい テキストはよりユーザーが登録をするのに惹かれるような文言にし、画像内には女性がピラティスを実際に行っている様子を映して",
+    "outputImages": [
+      "/images/2046528889124728993_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/ck_igarashi/status/2046528889124728993"
+  },
+  {
+    "id": "2046519658166317160",
+    "title": "日本のソシャゲのガチャ画面を生成して、",
+    "thumbnail": "/images/2046519658166317160_0.jpg",
+    "thumbnailAspect": 1.777,
+    "author": "the_wheel_2024",
+    "authorUrl": "https://x.com/the_wheel_2024/status/2046519658166317160",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 117
+    },
+    "createdAt": "Tue Apr 21 09:21:23 +0000 2026",
+    "prompt": "日本のソシャゲのガチャ画面を生成して、",
+    "outputImages": [
+      "/images/2046519658166317160_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/the_wheel_2024/status/2046519658166317160"
+  },
+  {
+    "id": "2046517163826246133",
+    "title": "Generate somthing super complex and info dense…",
+    "thumbnail": "/images/2046517163826246133_0.jpg",
+    "thumbnailAspect": 0.667,
+    "author": "EchoraContinuum",
+    "authorUrl": "https://x.com/EchoraContinuum/status/2046517163826246133",
+    "tags": [
+      "en",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "en",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 78
+    },
+    "createdAt": "Tue Apr 21 09:11:28 +0000 2026",
+    "prompt": "Generate somthing super complex and info dense…",
+    "outputImages": [
+      "/images/2046517163826246133_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/EchoraContinuum/status/2046517163826246133"
+  },
+  {
+    "id": "2046512133295452363",
+    "title": "in ALT &amp; comment.",
+    "thumbnail": "/images/2046512133295452363_0.jpg",
+    "thumbnailAspect": 1.777,
+    "author": "fy360593",
+    "authorUrl": "https://x.com/fy360593/status/2046512133295452363",
+    "tags": [
+      "en"
+    ],
+    "category": "other",
+    "lang": "en",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 96
+    },
+    "createdAt": "Tue Apr 21 08:51:29 +0000 2026",
+    "prompt": "in ALT &amp; comment.",
+    "outputImages": [
+      "/images/2046512133295452363_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/fy360593/status/2046512133295452363"
+  },
+  {
+    "id": "2046508044528582861",
+    "title": "(cheak in Comment)",
+    "thumbnail": "/images/2046508044528582861_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "Gdthainakub",
+    "authorUrl": "https://x.com/Gdthainakub/status/2046508044528582861",
+    "tags": [
+      "en"
+    ],
+    "category": "other",
+    "lang": "en",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 127
+    },
+    "createdAt": "Tue Apr 21 08:35:14 +0000 2026",
+    "prompt": "(cheak in Comment)",
+    "outputImages": [
+      "/images/2046508044528582861_0.jpg",
+      "/images/2046508044528582861_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/Gdthainakub/status/2046508044528582861"
+  },
+  {
+    "id": "2046507931907080330",
+    "title": "用可爱的风格讲述中国远征军的历史故事",
+    "thumbnail": "/images/2046507931907080330_0.jpg",
+    "thumbnailAspect": 1.098,
+    "author": "RainHuangapp",
+    "authorUrl": "https://x.com/RainHuangapp/status/2046507931907080330",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 94
+    },
+    "createdAt": "Tue Apr 21 08:34:47 +0000 2026",
+    "prompt": "用可爱的风格讲述中国远征军的历史故事\n用波普风格讲述金刚经",
+    "outputImages": [
+      "/images/2046507931907080330_0.jpg",
+      "/images/2046507931907080330_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/RainHuangapp/status/2046507931907080330"
+  },
+  {
+    "id": "2046507362266259832",
+    "title": "サムアルトマンがメジャーリーガーでバットを構えている。よくあるようなテレビ画面の構図",
+    "thumbnail": "/images/2046507362266259832_0.jpg",
+    "thumbnailAspect": 0.8,
+    "author": "16kthir0GRXgNqn",
+    "authorUrl": "https://x.com/16kthir0GRXgNqn/status/2046507362266259832",
+    "tags": [
+      "ja"
+    ],
+    "category": "other",
+    "lang": "ja",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 90
+    },
+    "createdAt": "Tue Apr 21 08:32:32 +0000 2026",
+    "prompt": "サムアルトマンがメジャーリーガーでバットを構えている。よくあるようなテレビ画面の構図",
+    "outputImages": [
+      "/images/2046507362266259832_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/16kthir0GRXgNqn/status/2046507362266259832"
+  },
+  {
+    "id": "2046501587762188535",
+    "title": "A 9:16 vertical version, high-detail realistic style Chinese TikTok...",
+    "thumbnail": "/images/2046501587762188535_0.jpg",
+    "thumbnailAspect": 1.777,
+    "author": "Shinning1010",
+    "authorUrl": "https://x.com/Shinning1010/status/2046501587762188535",
+    "tags": [
+      "en",
+      "portrait",
+      "photography"
+    ],
+    "category": "portrait",
+    "lang": "en",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 122
+    },
+    "createdAt": "Tue Apr 21 08:09:35 +0000 2026",
+    "prompt": "A 9:16 vertical version, high-detail realistic style Chinese TikTok live screenshot, Elon Musk is talking to the mobile phone camera in the live broadcast room, excited, smiling, and the live atmosphere is warm and real. He held a white handwritten sign in one hand, which clearly said: \"Thank you Shinning\". There are obvious Chinese TikTok interface elements in the live broadcast screen, including likes, comments and share icons arranged vertically on the right, scrolling Chinese bullet screens and interactive comments below, and the \"live broadcast\" logo at the top, which looks like a real mobile phone screenshot. There is an eye-catching gift prompt special effect in the screen: \"Shinning sent TikTok No. 1\", with gift animation light effect and platform-style prompt box. Musk is in a professional live broadcast environment, with a mobile phone holder, a ring fill light and a desktop microphone in front of him. The background is a modern technology live broadcast room with bright lights and a slight neon atmosphere. The composition is real and natural, like the ongoing live screenshot of the Chinese short video platform. The interface information is rich but not messy, the characters are clear, the expression is vivid, the details are rich, the sense of real photography, the depth of field, high definition, cinematic, photorealistic, realistic livestream screenshot, social media UI, Chinese Douyin live room, detailed lighting, natural skin texture.\n\nNegative prompts:\n\nLow definition, blur, cartoon, illustration, too strong CG sense, two-dimensional, deformed fingers, wrong text, scrambled code, multiple mobile phones, multiple brands, character repetition, face collapse, facial features distortion, excessive skin polishing, overexposure, too dark, messy background, wrong UI, non-Chinese short video interface, too many English bullet screens, gift special effects are not obvious, cropping error, proportional error\n\nSupplementary reinforcement words:\n\nReal mobile phone screen recording screenshot feeling, the live broadcast UI is complete, the gift prompt box conforms to the style of the Chinese short video platform, the Chinese comment area is active, the number of people online in the live broadcast room is clearly displayed, and the time, power and signal bar are visible.",
+    "outputImages": [
+      "/images/2046501587762188535_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/Shinning1010/status/2046501587762188535"
+  },
+  {
+    "id": "2046479783765397629",
+    "title": "9:16 的图片比例，生成一张抖音直播的截图，里面是 刘亦菲 在直播，刘亦菲 手里拿着牌子，牌子里写着 今晚直播，欢迎来参亦菲畅聊！",
+    "thumbnail": "/images/2046479783765397629_0.jpg",
+    "thumbnailAspect": 0.643,
+    "author": "kylegeeks",
+    "authorUrl": "https://x.com/kylegeeks/status/2046479783765397629",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 399
+    },
+    "createdAt": "Tue Apr 21 06:42:56 +0000 2026",
+    "prompt": "9:16 的图片比例，生成一张抖音直播的截图，里面是 刘亦菲 在直播，刘亦菲 手里拿着牌子，牌子里写着 今晚直播，欢迎来参亦菲畅聊！",
+    "outputImages": [
+      "/images/2046479783765397629_0.jpg",
+      "/images/2046479783765397629_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/kylegeeks/status/2046479783765397629"
+  },
+  {
+    "id": "2046468976092533180",
+    "title": "用未来都市风格生成UI设计系统，灵感来自赛博朋克城市夜景，包含霓虹灯、玻璃建筑反射、高对比光影，配色以紫色、蓝色、粉色霓虹为主，设计网...",
+    "thumbnail": "/images/2046468976092533180_0.jpg",
+    "thumbnailAspect": 0.667,
+    "author": "AZLnfvp",
+    "authorUrl": "https://x.com/AZLnfvp/status/2046468976092533180",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 140
+    },
+    "createdAt": "Tue Apr 21 06:00:00 +0000 2026",
+    "prompt": "用未来都市风格生成UI设计系统，灵感来自赛博朋克城市夜景，包含霓虹灯、玻璃建筑反射、高对比光影，配色以紫色、蓝色、粉色霓虹为主，设计网页Dashboard、移动端界面、卡片、按钮、控件等，视觉炫酷、层次丰富、科技感极强",
+    "outputImages": [
+      "/images/2046468976092533180_0.jpg",
+      "/images/2046468976092533180_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/AZLnfvp/status/2046468976092533180"
+  },
+  {
+    "id": "2046410519595348397",
+    "title": "counter strike in game screenshot, mixed with Terraria",
+    "thumbnail": "/images/2046410519595348397_0.jpg",
+    "thumbnailAspect": 0.667,
+    "author": "yssrski",
+    "authorUrl": "https://x.com/yssrski/status/2046410519595348397",
+    "tags": [
+      "en",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "en",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 218
+    },
+    "createdAt": "Tue Apr 21 02:07:42 +0000 2026",
+    "prompt": "counter strike in game screenshot, mixed with Terraria",
+    "outputImages": [
+      "/images/2046410519595348397_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/yssrski/status/2046410519595348397"
+  },
+  {
+    "id": "2046378199681257920",
+    "title": "请根据【主题】生成一张高质量竖版「科普百科图」。",
+    "thumbnail": "/images/2046378199681257920_0.jpg",
+    "thumbnailAspect": 1.25,
+    "author": "alanlovelq",
+    "authorUrl": "https://x.com/alanlovelq/status/2046378199681257920",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 192
+    },
+    "createdAt": "Mon Apr 20 23:59:17 +0000 2026",
+    "prompt": "请根据【主题】生成一张高质量竖版「科普百科图」。 \n\n这张图不是普通海报，也不是单纯插画，而是一张兼具“图鉴感、百科感、信息结构感、收藏感”的模块化科普信息图。整体风格参考高级博物图鉴、现代百科书页、生活方式知识卡和社交媒体高传播信息图的结合。\n\n请让画面包含：\n- 一个清晰漂亮的主题主视觉\n- 若干局部特征放大细节\n- 多个圆角模块化信息分区\n- 清楚的标题层级与重点标签\n- 简洁但丰富的百科内容\n- 可视化评分、要点总结或Top 5模块\n\n内容栏目请根据主题自动适配，优先从这些方向中选择并合理组合：\n基础档案、分类信息、外观特征、习性/生态、形成机制/结构组成、生长或使用条件、养护或维护建议、风险与注意事项、适合人群或适用场景、优缺点对比、快速评分卡。\n\n视觉要求：\n浅色干净背景，柔和配色，轻阴影，精致小图标，圆角信息框，整洁排版，信息密度高但不拥挤，阅读体验好。整体必须像真正可以发布、阅读、收藏、系列化生产的科普百科卡，而不是广告图。\n\n请不要做成普通商业宣传海报。要突出“知识整理 + 模块信息 + 图鉴式展示”的特征。",
+    "outputImages": [
+      "/images/2046378199681257920_0.jpg",
+      "/images/2046378199681257920_1.jpg",
+      "/images/2046378199681257920_2.jpg",
+      "/images/2046378199681257920_3.jpg"
+    ],
+    "sourceUrl": "https://x.com/alanlovelq/status/2046378199681257920"
+  },
+  {
+    "id": "2046271877577097376",
+    "title": "以中国连环画（小人书）的风格帮我绘制大闹天空",
+    "thumbnail": "/images/2046271877577097376_0.jpg",
+    "thumbnailAspect": 0.8,
+    "author": "overseas58",
+    "authorUrl": "https://x.com/overseas58/status/2046271877577097376",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 278
+    },
+    "createdAt": "Mon Apr 20 16:56:48 +0000 2026",
+    "prompt": "以中国连环画（小人书）的风格帮我绘制大闹天空",
+    "outputImages": [
+      "/images/2046271877577097376_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/overseas58/status/2046271877577097376"
+  },
+  {
+    "id": "2046267707881029934",
+    "title": "帮我制作辣椒炒肉这道菜的详细制作流程图，真实风格，适用于小红书图文比例",
+    "thumbnail": "/images/2046267707881029934_0.jpg",
+    "thumbnailAspect": 1.333,
+    "author": "Kurt_Rousey466",
+    "authorUrl": "https://x.com/Kurt_Rousey466/status/2046267707881029934",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 236
+    },
+    "createdAt": "Mon Apr 20 16:40:14 +0000 2026",
+    "prompt": "帮我制作辣椒炒肉这道菜的详细制作流程图，真实风格，适用于小红书图文比例",
+    "outputImages": [
+      "/images/2046267707881029934_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/Kurt_Rousey466/status/2046267707881029934"
+  },
+  {
+    "id": "2046228485841334559",
+    "title": "请围绕【主题】自动生成一张顶级概念海报 / 信息图式电影海报。",
+    "thumbnail": "/images/2046228485841334559_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "A9Quant",
+    "authorUrl": "https://x.com/A9Quant/status/2046228485841334559",
+    "tags": [
+      "zh",
+      "poster",
+      "editorial"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 159
+    },
+    "createdAt": "Mon Apr 20 14:04:22 +0000 2026",
+    "prompt": "请围绕【主题】自动生成一张顶级概念海报 / 信息图式电影海报。\n\n唯一输入变量只有：\n【主题】：__中国历史上的皇帝排名_         \n\n要求 AI 根据这个主题，自动推导并统一设计以下全部视觉系统，不需要我额外指定：\n- 核心主体（可以自动判断更适合人物、产品、建筑、器物、符号、场景或抽象意象）\n- 底部支撑结构\n- 上方悬浮符号或精神象征\n- 场景包裹元素\n- 隐喻系统\n- 色彩层级\n- 材质对比\n- 光影逻辑\n- 标题、副标题、辅助文案\n- 品牌感与高级感表达方式\n\n最终画面必须是：\n一张震撼、精密、统一、电影级、超高细节、可用于高端印刷的概念主视觉海报。\n\n【总风格】\n超写实 3D 商业 CGI 渲染，融合电影级布光、奢侈品视觉语言、未来感概念设计与史诗级构图。画面必须具有“唯一主视觉核心”，不能杂乱，不能像拼贴，不能像普通电商海报。\n\n【自动推导规则】\nAI 必须依据【主题】自动决定最合适的：\n1. 核心视觉隐喻\n2. 主体类型与姿态\n3. 支撑结构形式\n4. 悬浮元素形式\n5. 场景外壳与空间氛围\n6. 主色、辅色、强调色\n7. 材质组合\n8. 文字气质与版式风格\n\n例如：\n- 如果主题偏权力、秩序、资本、统治，则自动偏向王座、冠冕、机械、神殿、红幕、金属、权力结构\n- 如果主题偏科技、AI、芯片、未来，则自动偏向机械结构、能量核心、光束、深色金属、全息感\n- 如果主题偏奢侈品、高定、稀缺、收藏，则自动偏向珠宝、镜面材质、黑金体系、展台、博物馆式布光\n- 如果主题偏人物、IP、角色，则自动以人物为主视觉核心，并自动匹配对应世界观与象征系统\n- 如果主题偏城市、文明、史诗、命运，则自动转化为宏大叙事型空间结构与仪式感场景\n\n【构图规则】\n- 绝对高级感\n- 强烈中心秩序，整体统一\n- 允许中轴对称或接近中轴的史诗级构图\n- 视觉重力明确，从上到下形成清晰的层级落点\n- 边缘负空间干净、克制、有呼吸感\n- 不允许无意义装饰，不允许风格污染，不允许多个系统互相打架\n\n【视觉质量】\n- 超高细节\n- 体积光清晰\n- 材质真实\n- 反射、折射、阴影、雾气、景深自然\n- 每个元素都像经过工业级视觉总监审美控制\n- 整体达到高端品牌 campaign key visual / luxury invitation poster / conceptual editorial poster 水准\n\n【排版系统】\n- 整体为 90% 视觉，10% 文字\n- AI 根据【主题】自动生成最匹配的主标题和副标题\n- 标题必须简洁、锋利、有气势\n- 文案分布在安全负空间内，不压主体\n- 若主题适合中文，则优先生成中文标题；若主题更适合英文，则自动生成英文标题；也可中英结合，但必须统一高级\n- 文字必须尽量少而准，不要堆字\n\n【署名要求】\n在画面底部角落自然加入作者署名：\n@a9quant\n署名要小，但清晰、精致、高级，不喧宾夺主，像顶级视觉作品中的正式作者落款。\n\n【输出要求】\n输出为单张统一构图海报。\n自动根据【主题】完成全部视觉决策。\n画面必须具备史诗感、秩序感、控制力、仪式感、商业完成度。\n最大细节密度，超清，电影级，印刷级，高端成片质感。",
+    "outputImages": [
+      "/images/2046228485841334559_0.jpg",
+      "/images/2046228485841334559_1.jpg",
+      "/images/2046228485841334559_2.jpg"
+    ],
+    "sourceUrl": "https://x.com/A9Quant/status/2046228485841334559"
+  },
+  {
+    "id": "2046162334440448339",
+    "title": "以涂鸦速写风表现【一个厉害的AI builder】，整体呈现快速勾勒、自由变形、即兴手绘与草稿式的视觉效果。线条随手、夸张、可粗细不一...",
+    "thumbnail": "/images/2046162334440448339_0.jpg",
+    "thumbnailAspect": 0.667,
+    "author": "opc_8838",
+    "authorUrl": "https://x.com/opc_8838/status/2046162334440448339",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 160
+    },
+    "createdAt": "Mon Apr 20 09:41:31 +0000 2026",
+    "prompt": "以涂鸦速写风表现【一个厉害的AI builder】，整体呈现快速勾勒、自由变形、即兴手绘与草稿式的视觉效果。线条随手、夸张、可粗细不一，略显凌乱但具有节奏和表现力，强调概括、夸张、趣味和随性，而不是严谨写实或精细刻画。  颜色采用粗糙、干刷感明显的块面表现，可保留不均匀的涂抹痕迹、刷痕、飞白与覆盖感，色彩根据【主题/主体】自动适配，但整体保持涂鸦式、速写式、概括式的表达。不要透明水彩晕染效果，不要细腻水彩过渡，不要纸纹理，不要柔和雾化，不要梦幻质感。  背景以留白为主，保持简洁、轻松、未完成感和设计感，可加入少量辅助性符号、箭头、记号、圈画、重复线、随手写的文字或其他涂鸦元素，以增强速写本或随笔式视觉语言，但不可过于拥挤，不可破坏主体和留白气质。  画面内容不需要预先写清楚，由【一个厉害的AI builder】自动推演并生成最适合的主体形象、动作、相关元素、符号或简化场景，整体保持统一的涂鸦速写风和夸张概括的表现方式，避免复杂写实背景和过度铺陈。 画面中需自然加入专属签名\"BlanPlan\"，作为画面的一部分，位置低调但清晰，可放在左下角、右下角或标题附近，风格需与整体版式统一，像作品署名或设计落款；签名字体精致、克制、高级，不可过大，不可破坏主体构图，不可显得突兀或廉价。",
+    "outputImages": [
+      "/images/2046162334440448339_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/opc_8838/status/2046162334440448339"
+  },
+  {
+    "id": "2046048929490612464",
+    "title": "1、生成特朗普和金正恩在抖音直播间打PK的截图",
+    "thumbnail": "/images/2046048929490612464_0.jpg",
+    "thumbnailAspect": 1.333,
+    "author": "alanlovelq",
+    "authorUrl": "https://x.com/alanlovelq/status/2046048929490612464",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 190
+    },
+    "createdAt": "Mon Apr 20 02:10:53 +0000 2026",
+    "prompt": "1、生成特朗普和金正恩在抖音直播间打PK的截图  \n2、生成不知火舞的小红书主页截图  \n3、生成图片: 手写在教室黑板上的出师表全文，真实感的粉笔字迹，晴朗白天用iPhone手机实拍  \n4、生成图片: T-800机器人的淘宝商品详情页，展示: 机器人的正面侧面背面三视图， 产品价格， 产品细节， 功能和使用场景等",
+    "outputImages": [
+      "/images/2046048929490612464_0.jpg",
+      "/images/2046048929490612464_1.jpg",
+      "/images/2046048929490612464_2.jpg",
+      "/images/2046048929490612464_3.jpg"
+    ],
+    "sourceUrl": "https://x.com/alanlovelq/status/2046048929490612464"
+  }
+]
