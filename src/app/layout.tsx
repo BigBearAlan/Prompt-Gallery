@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Prompt Gallery — Curated AI Image Prompts',
+  title: 'Prompt Gallery — AI 图像提示词精选',
   description:
-    'A curated collection of reusable AI image generation prompts. Browse, filter, edit, and copy prompts for GPT Image, Midjourney, and more.',
+    '精选 AI 图像生成提示词合集，支持浏览、筛选、编辑和一键复制，适用于 GPT Image、Midjourney 等工具。',
   openGraph: {
     title: 'Prompt Gallery',
-    description: 'Curated AI image generation prompts — browse, edit, and copy.',
+    description: 'AI 图像提示词精选 — 浏览、编辑、一键复制。',
     type: 'website',
   },
 };

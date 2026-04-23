@@ -17,6 +17,7 @@ export interface PromptEntry {
   prompt: string;
   outputImages: string[];
   sourceUrl: string;
+  sourceId?: string;
 }
 
 export type SortBy = 'likes' | 'views' | 'recent';
@@ -24,6 +25,9 @@ export type LangFilter = 'all' | 'en' | 'zh' | 'ja' | 'other';
 
 export const CATEGORIES = [
   'all',
+  'manga',
+  'advertising',
+  'game',
   'portrait',
   'photography',
   'poster',

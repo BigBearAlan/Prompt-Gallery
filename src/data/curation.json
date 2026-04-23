@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "entries": {
+    "2046378199681257920": {
+      "hidden": true,
+      "reason": "Duplicate prompt; keep higher-engagement source 2046231542817497392."
+    },
+    "2046231542817497392": {
+      "category": "infographic",
+      "reason": "Science explainer poster is more useful under infographic than poster."
+    }
+  }
+}

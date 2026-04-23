@@ -106,7 +106,7 @@ export default function Gallery({ entries }: Props) {
             className="text-center py-24 text-sm"
             style={{ color: 'var(--text-secondary)' }}
           >
-            No prompts match your filters. Try adjusting your search.
+            没有找到匹配的提示词，请尝试调整筛选条件。
           </div>
         ) : (
           <div className="masonry">
@@ -128,7 +128,7 @@ export default function Gallery({ entries }: Props) {
               className="px-6 py-2.5 rounded-full text-sm font-medium border transition-colors hover:bg-gray-100"
               style={{ borderColor: 'var(--border)', color: 'var(--text-primary)' }}
             >
-              Load more ({filtered.length - displayed.length} remaining)
+              加载更多（剩余 {filtered.length - displayed.length} 个）
             </button>
           </div>
         )}
@@ -138,7 +138,7 @@ export default function Gallery({ entries }: Props) {
             className="text-center text-xs pb-8 pt-4"
             style={{ color: 'var(--text-secondary)' }}
           >
-            {displayed.length} prompts shown
+            已显示全部 {displayed.length} 个提示词
           </p>
         )}
       </main>

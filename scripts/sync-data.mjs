@@ -1,10 +1,11 @@
 /**
- * Fetches prompt data from the awesome-gpt-image-2-prompts repo,
- * downloads images to public/images/, and writes processed prompts
- * to src/data/prompts.json.
+ * Fetches and merges prompt data from two sources:
+ *   1. EvoLinkAI/awesome-gpt-image-2-prompts  (Twitter JSON)
+ *   2. YouMind-OpenLab/awesome-gpt-image-2     (README.md)
  *
- * Run: node scripts/sync-data.mjs
- * Cloudflare Pages build command: node scripts/sync-data.mjs && next build
+ * Downloads all images to public/images/ and writes src/data/prompts.json.
+ * Run:  node scripts/sync-data.mjs
+ * CF Pages build command:  node scripts/sync-data.mjs && next build
  */
 
 import { writeFile, mkdir, access } from 'fs/promises';
@@ -12,170 +13,252 @@ import { createWriteStream } from 'fs';
 import { pipeline } from 'stream/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import {
+  applyCuration,
+  detectCategory,
+  ensureUniqueEntryIds,
+  extractTags,
+  loadCuration,
+  mapYouMindSection,
+  truncate,
+} from './gallery-utils.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, '..');
+const ROOT       = path.resolve(__dirname, '..');
 const IMAGES_DIR = path.join(ROOT, 'public', 'images');
-const OUTPUT = path.join(ROOT, 'src', 'data', 'prompts.json');
+const OUTPUT     = path.join(ROOT, 'src', 'data', 'prompts.json');
+const CURATION   = path.join(ROOT, 'src', 'data', 'curation.json');
 
-const RAW_URL =
-  'https://raw.githubusercontent.com/EvoLinkAI/awesome-gpt-image-2-prompts/main/gpt_image2_prompts.json';
+const TWITTER_URL = 'https://raw.githubusercontent.com/EvoLinkAI/awesome-gpt-image-2-prompts/main/gpt_image2_prompts.json';
+const YOUMIND_URL = 'https://raw.githubusercontent.com/YouMind-OpenLab/awesome-gpt-image-2/main/README.md';
 
-const CATEGORY_KEYWORDS = {
-  portrait: ['portrait', 'face', 'headshot', 'idol', 'girl', 'woman', 'man', 'korean', 'japanese female', 'selfie'],
-  photography: ['photo', 'photograph', 'camera', '35mm', 'film grain', 'analog', 'lens', 'bokeh', 'fujifilm', 'ccd'],
-  poster: ['poster', 'movie', 'film', 'banner', 'cover', 'album', 'advertisement', '海报', 'ポスター'],
-  illustration: ['illustration', 'painting', 'watercolor', 'ink', 'art', 'anime', 'cartoon', 'manga', '水墨', 'イラスト'],
-  ui: ['ui', 'interface', 'app', 'screen', 'dashboard', 'website', 'button', 'icon', 'ステータス画面', '界面'],
-  infographic: ['infographic', 'chart', 'info', '科普', '信息图', 'information'],
-  logo: ['logo', 'brand', 'identity', 'symbol', 'wordmark'],
-};
+// ─── Source 1: Twitter JSON ───────────────────────────────────────────────────
 
-function detectCategory(text) {
-  const lower = text.toLowerCase();
-  for (const [cat, keywords] of Object.entries(CATEGORY_KEYWORDS)) {
-    if (keywords.some((kw) => lower.includes(kw))) return cat;
-  }
-  return 'other';
+async function fetchTwitterSource() {
+  process.stdout.write('Fetching Twitter JSON source… ');
+  const res = await fetch(TWITTER_URL);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const raw = await res.json();
+  console.log(`${raw.length} tweets`);
+
+  return raw
+    .filter(t => t.media?.some(m => m.type === 'photo'))
+    .map(t => {
+      const photos = t.media.filter(m => m.type === 'photo');
+      const thumb  = photos[0];
+      const lang   = t.lang || 'en';
+      const cat    = detectCategory(t.text);
+      const firstLine = t.text.split('\n')[0].replace(/\{.*/, '').trim();
+      return {
+        id:              t.id,
+        title:           truncate(firstLine || t.text),
+        thumbnail:       thumb.url,
+        thumbnailAspect: parseFloat((thumb.height / thumb.width).toFixed(3)),
+        author:          t.author,
+        authorUrl:       t.url,
+        tags:            extractTags(t.text, lang, cat),
+        category:        cat,
+        lang,
+        stats:           { likes: t.likeCount, retweets: t.retweetCount, views: t.viewCount },
+        createdAt:       t.createdAt,
+        prompt:          t.text,
+        outputImages:    photos.map(p => p.url),
+        sourceUrl:       t.url,
+        _dl: photos.map((p, i) => ({ url: p.url, i })),
+      };
+    });
 }
 
-function extractTags(text, lang, category) {
-  const tags = new Set([lang]);
-  if (category !== 'other') tags.add(category);
+// ─── Source 2: YouMind README ─────────────────────────────────────────────────
 
-  // Extract hashtags
-  const hashtags = text.match(/#(\w+)/g) || [];
-  for (const tag of hashtags) {
-    const t = tag.slice(1).toLowerCase();
-    if (t.length > 1 && t.length < 20) tags.add(t);
+function parseYouMindBlock(block) {
+  const headingMatch = block.match(/^### No\. (\d+): (.+)$/m);
+  if (!headingMatch) return null;
+
+  const blockNo = headingMatch[1];
+  const fullTitle = headingMatch[2].trim();
+  let category = 'other';
+  let title    = fullTitle;
+
+  // "Category - Title" pattern
+  const catTitle = fullTitle.match(/^(.+?) - (.+)$/);
+  if (catTitle) {
+    category = mapYouMindSection(catTitle[1]);
+    title    = catTitle[2].trim();
+  } else {
+    category = detectCategory(fullTitle);
   }
 
-  // Common English keywords
-  const enKeywords = ['portrait', 'photography', 'analog', 'film', 'idol', 'editorial', 'fujifilm', 'CCD', 'grid'];
-  for (const kw of enKeywords) {
-    if (text.toLowerCase().includes(kw.toLowerCase())) tags.add(kw.toLowerCase());
+  // Language badge
+  const langM = block.match(/Language-([A-Z]{2})/i);
+  const lang  = langM ? langM[1].toLowerCase() : 'en';
+
+  // Prompt (fenced code block after the 📝 Prompt heading)
+  const promptM = block.match(/####\s*📝 Prompt\s*\n```[^\n]*\n([\s\S]*?)```/);
+  if (!promptM) return null;
+  const prompt = promptM[1].trim();
+
+  // Images
+  const imgs = [...block.matchAll(/<img src="([^"]+)"/g)].map(m => m[1]);
+  if (imgs.length === 0) return null;
+
+  // Author
+  const authorM = block.match(/\*\*Author:\*\* \[([^\]]+)\]\(([^)]+)\)/);
+  const author    = authorM ? authorM[1] : 'Unknown';
+  const authorUrl = authorM ? authorM[2] : '';
+
+  // Source
+  const srcM     = block.match(/\*\*Source:\*\* \[(?:Twitter Post|Source)\]\(([^)]+)\)/);
+  const sourceUrl = srcM ? srcM[1] : authorUrl;
+
+  // Date
+  const dateM    = block.match(/\*\*Published:\*\* (.+)$/m);
+  const createdAt = dateM ? dateM[1].trim() : '';
+
+  // Stable ID: YouMind can publish several cards from one tweet, so prefer its
+  // own block/item ID and keep the tweet ID as sourceId for traceability.
+  const tweetM = (sourceUrl || '').match(/status\/(\d+)/);
+  const ymM    = block.match(/youmind\.com\/gpt-image-2-prompts\?id=(\d+)/);
+  const id     = ymM ? `ym${ymM[1]}` : tweetM ? tweetM[1] : `ym-no-${blockNo}`;
+  if (!id) return null;
+
+  const featured = block.includes('⭐');
+
+  return {
+    id,
+    title:           truncate(title),
+    thumbnail:       imgs[0],
+    thumbnailAspect: 1.33,
+    author,
+    authorUrl,
+    tags:            [...new Set([lang, category, ...(featured ? ['featured'] : [])])],
+    category,
+    lang,
+    stats:           { likes: featured ? 500 : 0, retweets: 0, views: 0 },
+    createdAt,
+    prompt,
+    outputImages:    [...imgs],
+    sourceUrl,
+    sourceId:        tweetM ? tweetM[1] : undefined,
+    _dl: imgs.map((url, i) => ({ url, i })),
+  };
+}
+
+async function fetchYouMindSource() {
+  process.stdout.write('Fetching YouMind README… ');
+  const res = await fetch(YOUMIND_URL, { signal: AbortSignal.timeout(30000) });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const text = await res.text();
+
+  const blocks = text.split(/\n---\n/).filter(b => /### No\. \d+:/.test(b));
+  console.log(`${blocks.length} blocks found`);
+
+  const entries = [];
+  for (const block of blocks) {
+    const e = parseYouMindBlock(block);
+    if (e) entries.push(e);
   }
-
-  return [...tags].slice(0, 8);
+  console.log(`YouMind: ${entries.length} valid entries parsed`);
+  return entries;
 }
 
-function makeTitle(text) {
-  const first = text.split('\n')[0].replace(/\{.*/, '').trim();
-  if (!first) return text.slice(0, 60);
-  return first.length > 70 ? first.slice(0, 67) + '...' : first;
-}
+// ─── Image download ───────────────────────────────────────────────────────────
 
 async function downloadImage(url, dest) {
-  // Skip if already downloaded
-  try {
-    await access(dest);
-    return true;
-  } catch {
-    // file doesn't exist, download it
-  }
-
+  try { await access(dest); return true; } catch {}
   try {
     const res = await fetch(url, {
-      signal: AbortSignal.timeout(15000),
+      signal:  AbortSignal.timeout(25000),
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; PromptGallery/1.0)' },
     });
     if (!res.ok || !res.body) return false;
     await pipeline(res.body, createWriteStream(dest));
     return true;
-  } catch (err) {
-    console.warn(`  Failed to download ${url}: ${err.message}`);
+  } catch {
     return false;
   }
 }
 
-async function main() {
-  console.log('Fetching prompt data from GitHub...');
-  const res = await fetch(RAW_URL);
-  if (!res.ok) throw new Error(`Failed to fetch: ${res.status}`);
-  const raw = await res.json();
-
-  console.log(`Found ${raw.length} entries. Filtering for photo entries...`);
-
-  const withPhotos = raw.filter(
-    (t) => t.media?.some((m) => m.type === 'photo')
-  );
-  console.log(`${withPhotos.length} entries have photos.`);
-
-  await mkdir(IMAGES_DIR, { recursive: true });
-
-  const processed = [];
-  let downloaded = 0;
-  let failed = 0;
-
-  for (let i = 0; i < withPhotos.length; i++) {
-    const t = withPhotos[i];
-    const photos = t.media.filter((m) => m.type === 'photo');
-    const thumb = photos[0];
-
-    if (i % 10 === 0) {
-      process.stdout.write(`\r  Processing ${i + 1}/${withPhotos.length}...`);
+async function runConcurrent(fns, concurrency = 10) {
+  let idx = 0, ok = 0, fail = 0;
+  async function worker() {
+    while (idx < fns.length) {
+      const fn = fns[idx++];
+      (await fn()) ? ok++ : fail++;
+      if ((ok + fail) % 100 === 0)
+        process.stdout.write(`\r  Images: ${ok + fail}/${fns.length} (${fail} failed)   `);
     }
-
-    const category = detectCategory(t.text);
-    const tags = extractTags(t.text, t.lang, category);
-
-    // Build image paths — try local first
-    const localPaths = photos.map((_, idx) =>
-      path.join(IMAGES_DIR, `${t.id}_${idx}.jpg`)
-    );
-    const webPaths = photos.map((_, idx) => `/images/${t.id}_${idx}.jpg`);
-
-    // Download first image (thumbnail) only
-    const thumbDest = localPaths[0];
-    const ok = await downloadImage(thumb.url, thumbDest);
-    if (ok) {
-      downloaded++;
-    } else {
-      failed++;
-    }
-
-    // Download remaining images (best-effort, non-blocking)
-    for (let j = 1; j < photos.length; j++) {
-      await downloadImage(photos[j].url, localPaths[j]).catch(() => {});
-    }
-
-    processed.push({
-      id: t.id,
-      title: makeTitle(t.text),
-      // Use local path if download succeeded, CDN URL as fallback
-      thumbnail: ok ? webPaths[0] : thumb.url,
-      thumbnailAspect: parseFloat((thumb.height / thumb.width).toFixed(3)),
-      author: t.author,
-      authorUrl: t.url,
-      tags,
-      category,
-      lang: t.lang,
-      stats: {
-        likes: t.likeCount,
-        retweets: t.retweetCount,
-        views: t.viewCount,
-      },
-      createdAt: t.createdAt,
-      prompt: t.text,
-      outputImages: photos.map((p, idx) => {
-        const dest = localPaths[idx];
-        // We can't know synchronously if subsequent images downloaded, use web path
-        return webPaths[idx];
-      }),
-      sourceUrl: t.url,
-    });
   }
-
-  console.log(`\nDownloaded: ${downloaded}, Failed: ${failed}`);
-
-  // Sort by likes descending
-  processed.sort((a, b) => b.stats.likes - a.stats.likes);
-
-  await writeFile(OUTPUT, JSON.stringify(processed, null, 2), 'utf-8');
-  console.log(`Written ${processed.length} entries to ${OUTPUT}`);
+  await Promise.all(Array.from({ length: concurrency }, worker));
+  console.log(`\n  Total: ${ok} downloaded, ${fail} failed`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// ─── Main ─────────────────────────────────────────────────────────────────────
+
+async function main() {
+  await mkdir(IMAGES_DIR, { recursive: true });
+
+  const [twitter, youmind] = await Promise.all([
+    fetchTwitterSource().catch(e => { console.error('Twitter error:', e.message); return []; }),
+    fetchYouMindSource().catch(e => { console.error('YouMind error:', e.message); return []; }),
+  ]);
+
+  // Merge by generated entry ID.
+  const seen = new Set();
+  const all  = [];
+  for (const entry of [...twitter, ...youmind]) {
+    if (seen.has(entry.id)) continue;
+    seen.add(entry.id);
+    all.push(entry);
+  }
+  console.log(`Merged: ${all.length} unique entries`);
+
+  const { entries: uniqueAll, stats: uniqueIdStats } = ensureUniqueEntryIds(all);
+  if (uniqueIdStats.idsChanged) {
+    console.log(
+      `IDs: made ${uniqueIdStats.idsChanged} duplicate IDs unique across ` +
+      `${uniqueIdStats.duplicateIdGroups} source ID groups`
+    );
+  }
+
+  const curation = await loadCuration(CURATION);
+  const { entries: curatedAll, stats: curationStats } = applyCuration(uniqueAll, curation);
+  if (
+    curationStats.hidden ||
+    curationStats.categoryOverrides ||
+    curationStats.titleOverrides ||
+    curationStats.tagChanges
+  ) {
+    console.log(
+      `Curation: hid ${curationStats.hidden}, category overrides ${curationStats.categoryOverrides}, ` +
+      `title overrides ${curationStats.titleOverrides}, tag changes ${curationStats.tagChanges}`
+    );
+  }
+
+  // Build download tasks — update entry URLs in-place on success
+  const tasks = curatedAll.flatMap(entry =>
+    (entry._dl || []).map(({ url, i }) => async () => {
+      const dest    = path.join(IMAGES_DIR, `${entry.id}_${i}.jpg`);
+      const webPath = `/images/${entry.id}_${i}.jpg`;
+      const ok      = await downloadImage(url, dest);
+      if (ok) {
+        entry.outputImages[i] = webPath;
+        if (i === 0) entry.thumbnail = webPath;
+      }
+      return ok;
+    })
+  );
+
+  console.log(`Downloading ${tasks.length} images with concurrency=10…`);
+  await runConcurrent(tasks, 10);
+
+  // Strip internal field, sort by likes
+  const out = curatedAll
+    .map(({ _dl, ...rest }) => rest)
+    .sort((a, b) => b.stats.likes - a.stats.likes);
+
+  await writeFile(OUTPUT, JSON.stringify(out, null, 2), 'utf-8');
+  console.log(`✓ Written ${out.length} entries → ${OUTPUT}`);
+}
+
+main().catch(e => { console.error(e); process.exit(1); });

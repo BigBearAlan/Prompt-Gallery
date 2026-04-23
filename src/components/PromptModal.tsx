@@ -121,7 +121,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                 />
               ) : (
                 <div className="w-full aspect-[9/16] flex items-center justify-center text-gray-400 text-sm">
-                  Image unavailable
+                  图片不可用
                 </div>
               )}
             </div>
@@ -210,7 +210,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
               <div className="flex flex-col gap-2 flex-1">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--text-secondary)' }}>
-                    Prompt Template
+                    提示词模板
                   </span>
                   {hasEdits && (
                     <button
@@ -218,13 +218,13 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                       className="text-xs underline underline-offset-2"
                       style={{ color: 'var(--text-secondary)' }}
                     >
-                      Reset
+                      重置
                     </button>
                   )}
                 </div>
 
                 <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>
-                  Edit the prompt below, then copy to use in your AI tool.
+                  在下方编辑提示词，然后复制到您的 AI 工具中使用。
                 </p>
 
                 <textarea
@@ -240,8 +240,8 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                 />
 
                 <div className="flex items-center justify-between text-xs" style={{ color: 'var(--text-secondary)' }}>
-                  <span>{editedPrompt.length} chars</span>
-                  {hasEdits && <span className="italic">Edited</span>}
+                  <span>{editedPrompt.length} 字符</span>
+                  {hasEdits && <span className="italic">已编辑</span>}
                 </div>
               </div>
             </div>
@@ -261,7 +261,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    Copied!
+                    已复制！
                   </>
                 ) : (
                   <>
@@ -269,7 +269,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                       <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
                       <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
                     </svg>
-                    Copy Prompt
+                    复制提示词
                   </>
                 )}
               </button>
@@ -281,7 +281,7 @@ export default function PromptModal({ entry, onClose, onTagClick }: Props) {
                 className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-medium border transition-colors hover:bg-gray-50"
                 style={{ borderColor: 'var(--border)', color: 'var(--text-secondary)' }}
               >
-                Source
+                查看来源
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   <polyline points="15 3 21 3 21 9" />

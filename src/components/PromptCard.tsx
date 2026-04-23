@@ -54,7 +54,7 @@ export default function PromptCard({ entry, onClick, onTagClick }: Props) {
             className="w-full flex items-center justify-center text-white/70 text-xs font-medium"
             style={{ aspectRatio: `1 / ${entry.thumbnailAspect}`, background: cardGradient(entry.id) }}
           >
-            No image
+            暂无图片
           </div>
         )}
 
@@ -84,7 +84,7 @@ export default function PromptCard({ entry, onClick, onTagClick }: Props) {
             className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold text-white"
             style={{ background: 'var(--accent)' }}
           >
-            View Prompt
+            查看提示词
           </span>
         </div>
       </div>
