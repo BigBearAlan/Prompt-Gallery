@@ -22900,5 +22900,1020 @@
       "/images/2047267562757714204_3.jpg"
     ],
     "sourceUrl": "https://x.com/jesseweb3ai/status/2047267562757714204"
+  },
+  {
+    "id": "2047256189311099313",
+    "title": "现在提示词网站已经很多了，找几个 prompt 不难。",
+    "author": "古一",
+    "sourceUrl": "https://x.com/MANISH1027512/status/2047256189311099313",
+    "prompt": "现在提示词网站已经很多了，找几个 prompt 不难。\n\n真正难的是：\n做出一张图，没人知道哪里好、哪里不对、怎么继续改；看见一张好图，也不知道背后到底怎么做出来的；遇到问题了，也经常找不到一个合适的地方问。\n\n所以我们更想做一个能聊天、能拆图、能提问、能互相给反馈的 AIGC 视觉论坛。",
+    "category": "other",
+    "lang": "zh",
+    "thumbnail": "/images/2047256189311099313_0.jpg",
+    "thumbnailAspect": 0.57,
+    "outputImages": [
+      "/images/2047256189311099313_0.jpg",
+      "/images/2047256189311099313_1.jpg"
+    ],
+    "tags": [
+      "zh"
+    ],
+    "stats": {
+      "likes": 132,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T10:08:06.000Z"
+  },
+  {
+    "id": "2047253398307975283",
+    "title": "看腻了密密麻麻的信息图 来尝试一下threads上面流行的手绘风标注，刷起来极度舒适治愈，非常适合养生美食博主，随手一拍就能生成。用GPT-Image 2 效…",
+    "author": "知识猫图解",
+    "sourceUrl": "https://x.com/GeekCatX/status/2047253398307975283",
+    "prompt": "看腻了密密麻麻的信息图 来尝试一下threads上面流行的手绘风标注，刷起来极度舒适治愈，非常适合养生美食博主，随手一拍就能生成。用GPT-Image 2 效果更佳！\n\n提示词 \n\n请观察照片中的元素，并为每个元素添加有意义的手绘注释。\n【画面里的东西】",
+    "category": "infographic",
+    "lang": "zh",
+    "thumbnail": "/images/2047253398307975283_0.jpg",
+    "thumbnailAspect": 1.3333,
+    "outputImages": [
+      "/images/2047253398307975283_0.jpg",
+      "/images/2047253398307975283_1.jpg",
+      "/images/2047253398307975283_2.jpg",
+      "/images/2047253398307975283_3.jpg",
+      "/images/2047253398307975283_4.jpg",
+      "/images/2047253398307975283_5.jpg",
+      "/images/2047253398307975283_6.jpg",
+      "/images/2047253398307975283_7.jpg"
+    ],
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "stats": {
+      "likes": 117,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T09:57:00.000Z"
+  },
+  {
+    "id": "2047257644625469738",
+    "title": "妈耶，有了 GPT image 2 ",
+    "author": "Nicolechan",
+    "sourceUrl": "https://x.com/stark_nico99/status/2047257644625469738",
+    "prompt": "妈耶，有了 GPT image 2 \n历代大师成为你的专属老师\n再也不怕学不进去了\n提示词：\n生成一张真实的大学教室照片，iPhone16质感，XX老师在教XX知识，黑板上有详细而清晰的粉笔介绍，有图形辅助理解，不需要同学\n\n或者你也可以使用这个YouMind Skill\n只需输入人名就可出图",
+    "category": "photography",
+    "lang": "zh",
+    "thumbnail": "/images/2047257644625469738_0.jpg",
+    "thumbnailAspect": 0.6667,
+    "outputImages": [
+      "/images/2047257644625469738_0.jpg",
+      "/images/2047257644625469738_1.jpg",
+      "/images/2047257644625469738_2.jpg",
+      "/images/2047257644625469738_3.jpg",
+      "/images/2047257644625469738_4.jpg",
+      "/images/2047257644625469738_5.jpg",
+      "/images/2047257644625469738_6.jpg",
+      "/images/2047257644625469738_7.jpg"
+    ],
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "stats": {
+      "likes": 96,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T10:13:53.000Z"
+  },
+  {
+    "id": "2047297031883112920",
+    "title": "卧槽，电商生图从没这么容易过，一次直出🔥",
+    "author": "Yanhua",
+    "sourceUrl": "https://x.com/yanhua1010/status/2047297031883112920",
+    "prompt": "卧槽，电商生图从没这么容易过，一次直出🔥\n\nGPT image 2.0生图最大的感受是：模型自带推理，不用写复杂提示词，看看效果👇",
+    "category": "advertising",
+    "lang": "zh",
+    "thumbnail": "/images/2047297031883112920_0.jpg",
+    "thumbnailAspect": 1.7768,
+    "outputImages": [
+      "/images/2047297031883112920_0.jpg",
+      "/images/2047297031883112920_1.jpg",
+      "/images/2047297031883112920_2.jpg",
+      "/images/2047297031883112920_3.jpg"
+    ],
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "stats": {
+      "likes": 46,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T12:50:23.000Z"
+  },
+  {
+    "id": "2047248326198743174",
+    "title": "GPT-image 2➕ Seedance 2.0 两大SOTA 模型强强联手，基本上是可以告别复杂提示词工程 ！",
+    "author": "John",
+    "sourceUrl": "https://x.com/johnAGI168/status/2047248326198743174",
+    "prompt": "GPT-image 2➕ Seedance 2.0 两大SOTA 模型强强联手，基本上是可以告别复杂提示词工程 ！\n\n只需输入想要生成影片的想法让 GPT-image 2 生成电影级别分镜图，然后用这张分镜图使用 Seedance 2.0 直接生成视频，效果杠杠的👍",
+    "category": "other",
+    "lang": "zh",
+    "thumbnail": "/images/2047248326198743174_0.jpg",
+    "thumbnailAspect": 0.5628,
+    "outputImages": [
+      "/images/2047248326198743174_0.jpg",
+      "/images/2047248326198743174_1.jpg"
+    ],
+    "tags": [
+      "zh"
+    ],
+    "stats": {
+      "likes": 42,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T09:36:51.000Z"
+  },
+  {
+    "id": "2047279374563790929",
+    "title": "真人感生图测评：ChatGPT Image 2",
+    "author": "波妞PONYO",
+    "sourceUrl": "https://x.com/ponyodong/status/2047279374563790929",
+    "prompt": "真人感生图测评：ChatGPT Image 2\n谁在课堂被抓包了？\n课本堆成墙，世界却在屏幕里。\n她低着头，偷偷活在另一个频道，\n以为没人发现。\n直到那一下轻轻的触碰——\n时间像卡顿了一帧，\n她抬头的瞬间，\n情绪全都露馅了。\n\n这种不经意的瞬间，比任何摆拍都真实。\n提示词进群领取ponyoassist\n#抓拍美学",
+    "category": "ui",
+    "lang": "zh",
+    "thumbnail": "/images/2047279374563790929_0.jpg",
+    "thumbnailAspect": 1.2427,
+    "outputImages": [
+      "/images/2047279374563790929_0.jpg",
+      "/images/2047279374563790929_1.jpg",
+      "/images/2047279374563790929_2.jpg",
+      "/images/2047279374563790929_3.jpg"
+    ],
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "stats": {
+      "likes": 40,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T11:40:14.000Z"
+  },
+  {
+    "id": "2047315771206861119",
+    "title": "两大SOTA模型强强联手👬 ",
+    "author": "John",
+    "sourceUrl": "https://x.com/johnAGI168/status/2047315771206861119",
+    "prompt": "两大SOTA模型强强联手👬 \n\nChatGPT image 2 📷➕Seedance 2.0 🎬\n\n鹿鼎记直接开拍，直接让韦小宝当皇帝算了😂\n\n仅仅一张参考图➕一段提示词生成效果🚗",
+    "category": "illustration",
+    "lang": "zh",
+    "thumbnail": "/images/2047315771206861119_0.jpg",
+    "thumbnailAspect": 1.3333,
+    "outputImages": [
+      "/images/2047315771206861119_0.jpg",
+      "/images/2047315771206861119_1.jpg"
+    ],
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "stats": {
+      "likes": 26,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T14:04:51.000Z"
+  },
+  {
+    "id": "2047247352029983055",
+    "title": "学英语必备提示词",
+    "author": "林悦己Cheer",
+    "sourceUrl": "https://x.com/cheerselflin/status/2047247352029983055",
+    "prompt": "学英语必备提示词\nGPT-image-2出图\n小红书起号绝对没问题\n提示词👇",
+    "category": "other",
+    "lang": "zh",
+    "thumbnail": "/images/2047247352029983055_0.jpg",
+    "thumbnailAspect": 1.7768,
+    "outputImages": [
+      "/images/2047247352029983055_0.jpg",
+      "/images/2047247352029983055_1.jpg"
+    ],
+    "tags": [
+      "zh"
+    ],
+    "stats": {
+      "likes": 26,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T09:32:59.000Z"
+  },
+  {
+    "id": "2047309786069492022",
+    "title": "老提示词 新模型新发！",
+    "author": "虎小象",
+    "sourceUrl": "https://x.com/hx831126/status/2047309786069492022",
+    "prompt": "老提示词 新模型新发！\n\n提示词思路是输入地名得到结果\n我的需求是上传人物参考图！\n\n做图还是要给自己一点情绪价值！\n但是我觉得让 GPT 重新写一个可能效果更好一下 \n\nimage V2 时代应该不需要分享提示词来吧？",
+    "category": "illustration",
+    "lang": "zh",
+    "thumbnail": "/images/2047309786069492022_0.jpg",
+    "thumbnailAspect": 1.7768,
+    "outputImages": [
+      "/images/2047309786069492022_0.jpg",
+      "/images/2047309786069492022_1.jpg",
+      "/images/2047309786069492022_2.jpg",
+      "/images/2047309786069492022_3.jpg",
+      "/images/2047309786069492022_4.jpg",
+      "/images/2047309786069492022_5.jpg",
+      "/images/2047309786069492022_6.jpg",
+      "/images/2047309786069492022_7.jpg"
+    ],
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "stats": {
+      "likes": 25,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T13:41:04.000Z"
+  },
+  {
+    "id": "2047297449883021563",
+    "title": "卧槽！GPT Image 2 玩到嗨了，直接可以出这种工程图！",
+    "author": "Cell 细胞",
+    "sourceUrl": "https://x.com/cellinlab/status/2047297449883021563",
+    "prompt": "卧槽！GPT Image 2 玩到嗨了，直接可以出这种工程图！\n\n提示词：\n四轴无人机 带尺寸工程图，包括不限于下面这些内容，记得角落做一些产品概念图\n\n三视图：主视图、俯视图、左视图，用二维表达三维结构\n零件图：每个零件单独画，带尺寸、孔位、材料、公差\n装配图：说明各零件怎么装在一起\n爆炸图 /",
+    "category": "infographic",
+    "lang": "zh",
+    "thumbnail": "/images/2047297449883021563_0.jpg",
+    "thumbnailAspect": 0.6667,
+    "outputImages": [
+      "/images/2047297449883021563_0.jpg",
+      "/images/2047297449883021563_1.jpg"
+    ],
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "stats": {
+      "likes": 11,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T12:52:03.000Z"
+  },
+  {
+    "id": "2047308188987560168",
+    "title": "我没去网上找什么提示词教程……",
+    "author": "Yves Yang",
+    "sourceUrl": "https://x.com/SelfBystander/status/2047308188987560168",
+    "prompt": "我没去网上找什么提示词教程……\n用 GPT Image 2 做出来这张海报的时候自己都惊了\n\n跟 Claude Opus 随便聊了几轮，提示词就磨出来了，直接出图。下一步想用 Seedance 2.0 做成视频。\n\n全程都在 @happycapyai  完成，没跳一个平台。\n\n我的完整步骤在这里👇\n #gptimage2 #claude #happycapy",
+    "category": "poster",
+    "lang": "zh",
+    "thumbnail": "/images/2047308188987560168_0.jpg",
+    "thumbnailAspect": 1.5,
+    "outputImages": [
+      "/images/2047308188987560168_0.jpg",
+      "/images/2047308188987560168_1.jpg"
+    ],
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "stats": {
+      "likes": 5,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T13:34:44.000Z"
+  },
+  {
+    "id": "2047307796262375483",
+    "title": "卧槽，GPT-image2 生图也太强了，感觉好真实啊！！！",
+    "author": "Joruno",
+    "sourceUrl": "https://x.com/wsl8297/status/2047307796262375483",
+    "prompt": "卧槽，GPT-image2 生图也太强了，感觉好真实啊！！！\n\n这个快拍效果真的好棒啊，大家快去试试这个提示词吧！！！\n\n- 风格：截取一张雅儿贝德 cos 的 ins 快拍写真\n- 内容：蹲在地上正对镜头，双手做夸张叛逆手势，翻白眼，表情嚣张又不屑",
+    "category": "photography",
+    "lang": "zh",
+    "thumbnail": "/images/2047307796262375483_0.jpg",
+    "thumbnailAspect": 1.7768,
+    "outputImages": [
+      "/images/2047307796262375483_0.jpg",
+      "/images/2047307796262375483_1.jpg"
+    ],
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "stats": {
+      "likes": 4,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T13:33:10.000Z"
+  },
+  {
+    "id": "2047303787249803449",
+    "title": "Image-2生成的乙女恋爱海报",
+    "author": "Larus Canus",
+    "sourceUrl": "https://x.com/MrLarus/status/2047303787249803449",
+    "prompt": "Image-2生成的乙女恋爱海报\n\n提示词：\n\n请创作一张【主题为：】的“乙女恋爱游戏主视觉海报”风格的二次元宣传图。",
+    "category": "poster",
+    "lang": "zh",
+    "thumbnail": "/images/2047303787249803449_0.jpg",
+    "thumbnailAspect": 1.2496,
+    "outputImages": [
+      "/images/2047303787249803449_0.jpg",
+      "/images/2047303787249803449_1.jpg"
+    ],
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T13:17:14.000Z"
+  },
+  {
+    "id": "2047275268184948931",
+    "title": "ChatGPT Images 2 最强的地方，不是出图更精致。 而是你随手一句生活化描述，它已经能补全场景、情绪和社交媒体感。 现在真有点像：把脑内画面直接拖…",
+    "author": "柳中仙",
+    "sourceUrl": "https://x.com/Liu_zhongxisn/status/2047275268184948931",
+    "prompt": "ChatGPT Images 2 最强的地方，不是出图更精致。 而是你随手一句生活化描述，它已经能补全场景、情绪和社交媒体感。 现在真有点像：把脑内画面直接拖到现实里。\n下面还有一些其他我的提示词",
+    "category": "ui",
+    "lang": "zh",
+    "thumbnail": "/images/2047275268184948931_0.jpg",
+    "thumbnailAspect": 0.7195,
+    "outputImages": [
+      "/images/2047275268184948931_0.jpg",
+      "/images/2047275268184948931_1.jpg"
+    ],
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T11:23:55.000Z"
+  },
+  {
+    "id": "2047264120601473133",
+    "title": "今天的ChatGpt Image 2.0无疑是刷屏的",
+    "author": "月无关 | 0xKyne",
+    "sourceUrl": "https://x.com/0xkyne/status/2047264120601473133",
+    "prompt": "今天的ChatGpt Image 2.0无疑是刷屏的\n也诞生了无数梗图流量图\n\n高强度刷推一天之后\n我总结了三个宝藏prompt提示词开源网站\n推上爆款的AI生图，基本都能在这里找到同款\n\n不会写prompt的人，直接复制粘贴用起来，省的自己不停反复尝试了\n\n1.awesome-gpt-image-2-prompts",
+    "category": "other",
+    "lang": "zh",
+    "thumbnail": "/images/2047264120601473133_0.jpg",
+    "thumbnailAspect": 0.8813,
+    "outputImages": [
+      "/images/2047264120601473133_0.jpg",
+      "/images/2047264120601473133_1.jpg",
+      "/images/2047264120601473133_2.jpg",
+      "/images/2047264120601473133_3.jpg",
+      "/images/2047264120601473133_4.jpg",
+      "/images/2047264120601473133_5.jpg"
+    ],
+    "tags": [
+      "zh"
+    ],
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T10:39:37.000Z"
+  },
+  {
+    "id": "2047261404022108517",
+    "title": "再一次感叹 GPT Image 2.0 的牛逼",
+    "author": "是小衡呀",
+    "sourceUrl": "https://x.com/xcbnbcrypto/status/2047261404022108517",
+    "prompt": "再一次感叹 GPT Image 2.0 的牛逼\n\n生图界又要变天了，设计师什么的通通都得哭晕了。\n\n这是我用 GPT Image 2.0 配合 YouMind 的 research agent 生成的一张关于潘金莲的人物履历海报。提示词放评论区了，再次感叹，太牛了。。。",
+    "category": "poster",
+    "lang": "zh",
+    "thumbnail": "/images/2047261404022108517_0.jpg",
+    "thumbnailAspect": 1.5,
+    "outputImages": [
+      "/images/2047261404022108517_0.jpg",
+      "/images/2047261404022108517_1.jpg"
+    ],
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T10:28:49.000Z"
+  },
+  {
+    "id": "2047260475508109555",
+    "title": "还有gpt image 2生成不了的图吗？不需要多么复杂的提示词：帮我生成【城市名】城市宣传海报",
+    "author": "xiaobeiLin(小北)",
+    "sourceUrl": "https://x.com/linxiaobei888/status/2047260475508109555",
+    "prompt": "还有gpt image 2生成不了的图吗？不需要多么复杂的提示词：帮我生成【城市名】城市宣传海报",
+    "category": "poster",
+    "lang": "zh",
+    "thumbnail": "/images/2047260475508109555_0.jpg",
+    "thumbnailAspect": 1.3333,
+    "outputImages": [
+      "/images/2047260475508109555_0.jpg",
+      "/images/2047260475508109555_1.jpg",
+      "/images/2047260475508109555_2.jpg",
+      "/images/2047260475508109555_3.jpg",
+      "/images/2047260475508109555_4.jpg",
+      "/images/2047260475508109555_5.jpg"
+    ],
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T10:25:08.000Z"
+  },
+  {
+    "id": "2047253028462317674",
+    "title": "生产力·续！🤯我用ChatGPT-Image-2.0做品牌包装系统展示图，又强又稳！",
+    "author": "Larus Canus",
+    "sourceUrl": "https://x.com/MrLarus/status/2047253028462317674",
+    "prompt": "生产力·续！🤯我用ChatGPT-Image-2.0做品牌包装系统展示图，又强又稳！\n\n不同的产品调性，海报都呈现出已经运营多年的成熟品牌的感觉，这波AI包装提案封神！（提示词见下方）\n\n1、【MISSYOU】韩式潮流口红\n2、【浅序轻膳】健康轻食谷物\n3、【朝绪屋】日系清新烘焙\n4、【小茶叙】国风新式茶饮",
+    "category": "poster",
+    "lang": "zh",
+    "thumbnail": "/images/2047253028462317674_0.jpg",
+    "thumbnailAspect": 1.2496,
+    "outputImages": [
+      "/images/2047253028462317674_0.jpg",
+      "/images/2047253028462317674_1.jpg",
+      "/images/2047253028462317674_2.jpg",
+      "/images/2047253028462317674_3.jpg",
+      "/images/2047253028462317674_4.jpg",
+      "/images/2047253028462317674_5.jpg",
+      "/images/2047253028462317674_6.jpg",
+      "/images/2047253028462317674_7.jpg"
+    ],
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "stats": {
+      "likes": 1,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T09:55:32.000Z"
+  },
+  {
+    "id": "2047251595214360643",
+    "title": "GPT image2发布后",
+    "author": "AIGC｜欧阳",
+    "sourceUrl": "https://x.com/JiahaoYang_art/status/2047251595214360643",
+    "prompt": "GPT image2发布后\n研究的自动分镜提示词\n只需输入一张图一句话\n直出连续分镜图\n几乎不越轴只需微调",
+    "category": "other",
+    "lang": "zh",
+    "thumbnail": "/images/2047251595214360643_0.jpg",
+    "thumbnailAspect": 0.5625,
+    "outputImages": [
+      "/images/2047251595214360643_0.jpg",
+      "/images/2047251595214360643_1.jpg"
+    ],
+    "tags": [
+      "zh"
+    ],
+    "stats": {
+      "likes": 1,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T09:49:51.000Z"
+  },
+  {
+    "id": "2047341961988686318",
+    "title": "Open AI 的 gpt-image-2 模型真的是强啊！文生图，就一句简单的提示词，细节惊人！",
+    "author": "科爷的数字生命",
+    "sourceUrl": "https://x.com/keyelifeai/status/2047341961988686318",
+    "prompt": "Open AI 的 gpt-image-2 模型真的是强啊！文生图，就一句简单的提示词，细节惊人！",
+    "category": "other",
+    "lang": "zh",
+    "thumbnail": "/images/2047341961988686318_0.jpg",
+    "thumbnailAspect": 0.9139,
+    "outputImages": [
+      "/images/2047341961988686318_0.jpg",
+      "/images/2047341961988686318_1.jpg",
+      "/images/2047341961988686318_2.jpg",
+      "/images/2047341961988686318_3.jpg"
+    ],
+    "tags": [
+      "zh"
+    ],
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:48:56.000Z"
+  },
+  {
+    "id": "2047318634394165408",
+    "title": "炸裂！Openai 的codex让复杂代码one-shot-success，现在让生图也one-shot-success。致敬！ #随声提词  #提词器 #s…",
+    "author": "GlowJames 追光🐬",
+    "sourceUrl": "https://x.com/jameszz343698/status/2047318634394165408",
+    "prompt": "炸裂！Openai 的codex让复杂代码one-shot-success，现在让生图也one-shot-success。致敬！ #随声提词  #提词器 #speechcue",
+    "category": "other",
+    "lang": "zh",
+    "thumbnail": "/images/2047318634394165408_0.jpg",
+    "thumbnailAspect": 1.3333,
+    "outputImages": [
+      "/images/2047318634394165408_0.jpg",
+      "/images/2047318634394165408_1.jpg"
+    ],
+    "tags": [
+      "zh"
+    ],
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T14:16:14.000Z"
+  },
+  {
+    "id": "2047312783184998415",
+    "title": "为了管理文生图的提示词，准备做一个 Prompt Studio",
+    "author": "mkdev ｜我爱吃清补凉",
+    "sourceUrl": "https://x.com/mkdir700/status/2047312783184998415",
+    "prompt": "为了管理文生图的提示词，准备做一个 Prompt Studio\n\n大家有没有现成的工具推荐，不想造轮子了。",
+    "category": "other",
+    "lang": "zh",
+    "thumbnail": "/images/2047312783184998415_0.jpg",
+    "thumbnailAspect": 0.647,
+    "outputImages": [
+      "/images/2047312783184998415_0.jpg",
+      "/images/2047312783184998415_1.jpg"
+    ],
+    "tags": [
+      "zh"
+    ],
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T13:52:59.000Z"
+  },
+  {
+    "id": "2047301313407676857",
+    "title": "看到群里发的豆包和GPT Image2的对比图，我去实测了一下，大概率是真的。  ",
+    "author": "小路",
+    "sourceUrl": "https://x.com/xiaoluv12o/status/2047301313407676857",
+    "prompt": "看到群里发的豆包和GPT Image2的对比图，我去实测了一下，大概率是真的。  \n\n我出图的效果，确实挺接近的，再调整调整提示词，应该可以做得更好。（不过细看，发现一个大问题，人物重叠，长的太像），追加一次修改，好了点。  \n\n以前还能根据一些细节分辨图是不是AI做的，现在有点难了。",
+    "category": "other",
+    "lang": "zh",
+    "thumbnail": "/images/2047301313407676857_0.jpg",
+    "thumbnailAspect": 1.3346,
+    "outputImages": [
+      "/images/2047301313407676857_0.jpg",
+      "/images/2047301313407676857_1.jpg",
+      "/images/2047301313407676857_2.jpg",
+      "/images/2047301313407676857_3.jpg",
+      "/images/2047301313407676857_4.jpg",
+      "/images/2047301313407676857_5.jpg",
+      "/images/2047301313407676857_6.jpg",
+      "/images/2047301313407676857_7.jpg"
+    ],
+    "tags": [
+      "zh"
+    ],
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T13:07:24.000Z"
+  },
+  {
+    "id": "2047285104792236215",
+    "title": "AI小白醒醒！  ",
+    "author": "IntGalaxy",
+    "sourceUrl": "https://x.com/intgalaxy/status/2047285104792236215",
+    "prompt": "AI小白醒醒！  \n还在觉得AI高深莫测、完全听不懂？  \n\n《图灵的猫《人人都能听懂的AI通识课》》真正把AI讲明白了！  \n\n干货直接安排👇  \n\n✅ AI到底是什么，一听就懂  \n✅ 主流AI工具怎么用  \n✅ 提示词入门技巧  \n✅ AI时代的生存与机会  \n\n听完这门课，从AI小白变懂行人就差执行力！",
+    "category": "other",
+    "lang": "zh",
+    "thumbnail": "/images/2047285104792236215_0.jpg",
+    "thumbnailAspect": 0.5185,
+    "outputImages": [
+      "/images/2047285104792236215_0.jpg",
+      "/images/2047285104792236215_1.jpg"
+    ],
+    "tags": [
+      "zh"
+    ],
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T12:03:00.000Z"
+  },
+  {
+    "id": "2047341502792339652",
+    "title": "残りの2人も再調整した、gpt-image-v2はバストアップでのアップスケール再生成をさせても十分いいクオリティを出してくれるな。",
+    "thumbnail": "/images/2047341502792339652_0.jpg",
+    "thumbnailAspect": 1.3333,
+    "author": "m46",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:47:06.000Z",
+    "prompt": "残りの2人も再調整した、gpt-image-v2はバストアップでのアップスケール再生成をさせても十分いいクオリティを出してくれるな。",
+    "outputImages": [
+      "/images/2047341502792339652_0.jpg",
+      "/images/2047341502792339652_1.jpg",
+      "/images/2047341502792339652_2.jpg",
+      "/images/2047341502792339652_3.jpg",
+      "/images/2047341502792339652_4.jpg",
+      "/images/2047341502792339652_5.jpg",
+      "/images/2047341502792339652_6.jpg",
+      "/images/2047341502792339652_7.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047341502792339652"
+  },
+  {
+    "id": "2047341174663565776",
+    "title": "GPT-Image-2試行その3。この出来ならi2i問題なし。コンビニとかで売ってる中高年向けの雑誌の表紙。「中高年向けの雑誌」と書いたら蹴られました。なんか…",
+    "thumbnail": "/images/2047341174663565776_0.jpg",
+    "thumbnailAspect": 1.3333,
+    "author": "ライコ＠AI illustration",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:45:48.000Z",
+    "prompt": "GPT-Image-2試行その3。この出来ならi2i問題なし。コンビニとかで売ってる中高年向けの雑誌の表紙。「中高年向けの雑誌」と書いたら蹴られました。なんか判ってらっしゃるｗプロンプトはALTに置きましたので良かったら。また入浴中につまらん事を思いついてしまったｗ #AIart",
+    "outputImages": [
+      "/images/2047341174663565776_0.jpg",
+      "/images/2047341174663565776_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047341174663565776"
+  },
+  {
+    "id": "2047340985005285717",
+    "title": "@nicdunz Apparently, my GPT 2 image is feeling a bit nostalgic",
+    "thumbnail": "/images/2047340985005285717_0.jpg",
+    "thumbnailAspect": 0.6667,
+    "author": "Suilon",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "en"
+    ],
+    "category": "other",
+    "lang": "en",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:45:03.000Z",
+    "prompt": "@nicdunz Apparently, my GPT 2 image is feeling a bit nostalgic",
+    "outputImages": [
+      "/images/2047340985005285717_0.jpg",
+      "/images/2047340985005285717_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047340985005285717"
+  },
+  {
+    "id": "2047340787588116571",
+    "title": "GPT Image 2直接把图像生成拉到新次元！",
+    "thumbnail": "/images/2047340787588116571_0.jpg",
+    "thumbnailAspect": 0.6667,
+    "author": "火山哥🕊️",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:44:16.000Z",
+    "prompt": "GPT Image 2直接把图像生成拉到新次元！\n\n几分钟出以假乱真的商用海报、产品渲染、YouTube封面，Fiverr上旧照修复、AI商用图单子多到爆，客单价$20-100+，老外超爱买。 \n\n 有人直接用它生成交易策略图和内容封面，效率翻倍。AI把普通人变现门槛又砍了一刀——会写Prompt就能接单！",
+    "outputImages": [
+      "/images/2047340787588116571_0.jpg",
+      "/images/2047340787588116571_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047340787588116571"
+  },
+  {
+    "id": "2047340744374145388",
+    "title": "#AIart️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️ #AIイラスト",
+    "thumbnail": "/images/2047340744374145388_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "千菊",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:44:05.000Z",
+    "prompt": "#AIart️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️ #AIイラスト\ngpt-image-2で。タイトルは本当にそうなった件ｗｗ",
+    "outputImages": [
+      "/images/2047340744374145388_0.jpg",
+      "/images/2047340744374145388_1.jpg",
+      "/images/2047340744374145388_2.jpg",
+      "/images/2047340744374145388_3.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047340744374145388"
+  },
+  {
+    "id": "2047340674689962176",
+    "title": "Presenting You The Greatest Meme Image of all time ",
+    "thumbnail": "/images/2047340674689962176_0.jpg",
+    "thumbnailAspect": 0.6667,
+    "author": "aditya dand",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "en"
+    ],
+    "category": "other",
+    "lang": "en",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:43:49.000Z",
+    "prompt": "Presenting You The Greatest Meme Image of all time \nmade by Gpt-image-2 generation\n\nthis literally took gpt 5 mins to generate \n\ntruely memeworthy",
+    "outputImages": [
+      "/images/2047340674689962176_0.jpg",
+      "/images/2047340674689962176_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047340674689962176"
+  },
+  {
+    "id": "2047340568934801818",
+    "title": "TGV/TERで行くコルマール旅行パックの販促ポスター　",
+    "thumbnail": "/images/2047340568934801818_0.jpg",
+    "thumbnailAspect": 1.41,
+    "author": "まや",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:43:24.000Z",
+    "prompt": "TGV/TERで行くコルマール旅行パックの販促ポスター　\n\n※Generated by GPT image 2",
+    "outputImages": [
+      "/images/2047340568934801818_0.jpg",
+      "/images/2047340568934801818_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047340568934801818"
+  },
+  {
+    "id": "2047340558138703888",
+    "title": "真的没人发现百度Ernie-image这个宝藏模型吗？？",
+    "thumbnail": "/images/2047340558138703888_0.jpg",
+    "thumbnailAspect": 1,
+    "author": "Max For AI",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:43:21.000Z",
+    "prompt": "真的没人发现百度Ernie-image这个宝藏模型吗？？\n\n都在说GPT-image-2\n但我强烈想安利大家看下\n目前同参数最强开源生图模型\nErine-image👀\n\n8B的参数连长文本解说和\n复杂网页UI都能直接完美输出？！\n\n之前我折腾各种开源模型\n目前我实测跑下来\nERNIE-Image绝对是当之无愧\nNanoBanana开源最强平替",
+    "outputImages": [
+      "/images/2047340558138703888_0.jpg",
+      "/images/2047340558138703888_1.jpg",
+      "/images/2047340558138703888_2.jpg",
+      "/images/2047340558138703888_3.jpg",
+      "/images/2047340558138703888_4.jpg",
+      "/images/2047340558138703888_5.jpg",
+      "/images/2047340558138703888_6.jpg",
+      "/images/2047340558138703888_7.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047340558138703888"
+  },
+  {
+    "id": "2047340334858879283",
+    "title": "Made this with Gpt Image 2",
+    "thumbnail": "/images/2047340334858879283_0.jpg",
+    "thumbnailAspect": 1.2496,
+    "author": "Fito",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "en"
+    ],
+    "category": "other",
+    "lang": "en",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:42:28.000Z",
+    "prompt": "Made this with Gpt Image 2",
+    "outputImages": [
+      "/images/2047340334858879283_0.jpg",
+      "/images/2047340334858879283_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047340334858879283"
+  },
+  {
+    "id": "2047340309651370155",
+    "title": "@deebeeeff I've created the cartoon bear in @midjourney , then I asked GPT-IMAG…",
+    "thumbnail": "/images/2047340309651370155_0.jpg",
+    "thumbnailAspect": 0.5625,
+    "author": "Ofir Brown",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "en",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "en",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:42:22.000Z",
+    "prompt": "@deebeeeff I've created the cartoon bear in @midjourney , then I asked GPT-IMAGE 2 using @openart_ai  to turn it into photorealistic image, then I asked it to build a storyboard where he is a mafia boss who can shapeshift into a teddy bear. I fed the storyboard into Seedance 2",
+    "outputImages": [
+      "/images/2047340309651370155_0.jpg",
+      "/images/2047340309651370155_1.jpg",
+      "/images/2047340309651370155_2.jpg",
+      "/images/2047340309651370155_3.jpg",
+      "/images/2047340309651370155_4.jpg",
+      "/images/2047340309651370155_5.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047340309651370155"
+  },
+  {
+    "id": "2047340281352302889",
+    "title": "Prompted by my favorite book “Furiously Happy” — a pile of chameleons on top of…",
+    "thumbnail": "/images/2047340281352302889_0.jpg",
+    "thumbnailAspect": 0.8003,
+    "author": "Shef Wang",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "en"
+    ],
+    "category": "other",
+    "lang": "en",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:42:15.000Z",
+    "prompt": "Prompted by my favorite book “Furiously Happy” — a pile of chameleons on top of a pile of skittles :) by GPT image 2",
+    "outputImages": [
+      "/images/2047340281352302889_0.jpg",
+      "/images/2047340281352302889_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047340281352302889"
+  },
+  {
+    "id": "2047340080990461998",
+    "title": "@y7469591 從思考鏈的內容來看，或許你說的是對的，但我也不能斷定 GPT-image-2 的思考鏈完全不懂 CFG Scale 的意思。",
+    "thumbnail": "/images/2047340080990461998_0.jpg",
+    "thumbnailAspect": 0.943,
+    "author": "Reu.",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "zh"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:41:27.000Z",
+    "prompt": "@y7469591 從思考鏈的內容來看，或許你說的是對的，但我也不能斷定 GPT-image-2 的思考鏈完全不懂 CFG Scale 的意思。\n\n不過實際指定風格還有加上「避免過多的光效與光點」效果應該會更好，如果 API 比較穩定的話就去用 API 吧。",
+    "outputImages": [
+      "/images/2047340080990461998_0.jpg",
+      "/images/2047340080990461998_1.jpg",
+      "/images/2047340080990461998_2.jpg",
+      "/images/2047340080990461998_3.jpg",
+      "/images/2047340080990461998_4.jpg",
+      "/images/2047340080990461998_5.jpg",
+      "/images/2047340080990461998_6.jpg",
+      "/images/2047340080990461998_7.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047340080990461998"
+  },
+  {
+    "id": "2047339809480622339",
+    "title": "GPT Image 2 text rendering is finally usable.",
+    "thumbnail": "/images/2047339809480622339_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "compareheights",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "en",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "en",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:40:22.000Z",
+    "prompt": "GPT Image 2 text rendering is finally usable.\n\nPosters, UI, even dense layouts come out clean — no more broken or random text.\n\nFeels like the first AI image generator you can actually use for real design work.",
+    "outputImages": [
+      "/images/2047339809480622339_0.jpg",
+      "/images/2047339809480622339_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047339809480622339"
+  },
+  {
+    "id": "2047339619080159425",
+    "title": "Here's a better thumbnail for my new YT video 🌅",
+    "thumbnail": "/images/2047339619080159425_0.jpg",
+    "thumbnailAspect": 0.5628,
+    "author": "Hasan Cagli",
+    "authorUrl": "https://x.com/i",
+    "tags": [
+      "en",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "en",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T15:39:37.000Z",
+    "prompt": "Here's a better thumbnail for my new YT video 🌅\n\nGenerated with gpt-image-2 again.\n\nI realized the old one below was so chaotic.\n\n❌ Too much text\n❌ Hard to see what's going on\n\nThis one has bigger text with keywords (instead of full title).\n\nAny improvement ideas? 🤔",
+    "outputImages": [
+      "/images/2047339619080159425_0.jpg",
+      "/images/2047339619080159425_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/i/status/2047339619080159425"
   }
 ]
