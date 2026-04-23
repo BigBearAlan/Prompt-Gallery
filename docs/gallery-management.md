@@ -108,13 +108,15 @@ One-time GitHub setup:
 2. Go to Pages.
 3. Set Source to GitHub Actions.
 
-The workflow in `.github/workflows/github-pages.yml` runs on pushes to `main` and manual dispatch. It runs `npm ci`, `npm run sync`, then builds with:
+The workflow in `.github/workflows/github-pages.yml` runs on pushes to `main` and manual dispatch. It uses the committed curated data and image assets, then builds with:
 
 ```bash
 NEXT_PUBLIC_BASE_PATH=/Prompt-Gallery npm run build
 ```
 
 The base path is only set in the GitHub Pages workflow, so local and Cloudflare builds still serve from `/`.
+
+Do not run `npm run sync` inside the GitHub Pages workflow. The public upstream sources can be smaller than the curated gallery, so syncing during deployment can shrink the published prompt count.
 
 Verify GitHub Pages after deployment:
 
