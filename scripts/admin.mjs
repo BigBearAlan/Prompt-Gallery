@@ -57,6 +57,14 @@ const EXT_MIME = {
   '.gif': 'image/gif',  '.html': 'text/html; charset=utf-8',
 };
 
+// Env without proxy vars — prevents local VPN/proxy from blocking wrangler uploads
+function noProxyEnv() {
+  const env = { ...process.env };
+  for (const k of ['http_proxy', 'https_proxy', 'HTTP_PROXY', 'HTTPS_PROXY', 'ALL_PROXY', 'all_proxy'])
+    delete env[k];
+  return env;
+}
+
 // SSE deploy helper — shared by Cloudflare and GitHub routes
 function sseSetup(res) {
   res.writeHead(200, {
@@ -69,9 +77,11 @@ function sseSetup(res) {
     if (!res.writableEnded)
       res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
   };
-  const runStep = (cmd, args, label, req) => new Promise(resolve => {
+  // stripProxy: strip local proxy env vars (needed for wrangler on machines with VPN)
+  const runStep = (cmd, args, label, req, { stripProxy = false } = {}) => new Promise(resolve => {
     send('log', { text: `\n▶ ${label}\n` });
-    const child = spawn(cmd, args, { cwd: ROOT, shell: true });
+    const env = stripProxy ? noProxyEnv() : process.env;
+    const child = spawn(cmd, args, { cwd: ROOT, shell: true, env });
     child.stdout.on('data', d => send('log', { text: d.toString() }));
     child.stderr.on('data', d => send('log', { text: d.toString() }));
     child.on('close', code => resolve(code));
@@ -151,7 +161,7 @@ const server = createServer(async (req, res) => {
     if (path_ === '/api/deploy/cloudflare' && req.method === 'GET') {
       const { send, runStep } = sseSetup(res);
 
-      const buildCode = await runStep('npm', ['run', 'build'], 'npm run build', req);
+      const buildCode = await runStep('npm', ['run', 'build'], 'npm run build', req, { stripProxy: true });
       if (buildCode !== 0) {
         send('done', { ok: false, error: `Build exited ${buildCode}` });
         res.end(); return;
@@ -162,6 +172,7 @@ const server = createServer(async (req, res) => {
         ['wrangler', 'pages', 'deploy', 'out', '--project-name', 'prompt-gallery', '--commit-dirty=true'],
         'wrangler pages deploy',
         req,
+        { stripProxy: true },
       );
       send('done', { ok: deployCode === 0 });
       res.end();
@@ -172,8 +183,8 @@ const server = createServer(async (req, res) => {
     if (path_ === '/api/deploy/github' && req.method === 'GET') {
       const { send, runStep } = sseSetup(res);
 
-      // Stage only the prompts data file
-      const addCode = await runStep('git', ['add', 'src/data/prompts.json'], 'git add prompts.json', req);
+      // Stage prompts data + any newly uploaded images
+      const addCode = await runStep('git', ['add', 'src/data/prompts.json', 'public/images/'], 'git add prompts + images', req);
       if (addCode !== 0) {
         send('done', { ok: false, error: `git add exited ${addCode}` });
         res.end(); return;
