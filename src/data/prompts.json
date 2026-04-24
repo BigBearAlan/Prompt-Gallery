@@ -1,5 +1,30 @@
 [
   {
+    "id": "1777002504795",
+    "title": "故宫",
+    "thumbnail": "/images/1777002504781_0.jpeg",
+    "thumbnailAspect": 1,
+    "author": "unknown",
+    "authorUrl": "https://x.com/Bitturing/status/2047208320281555173/photo/1",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "Fri, 24 Apr 2026 03:48:24 GMT",
+    "prompt": "“[对象]的高级技术信息图。在一张专业且逼真的新照片中重新诠释主题，照片干净明亮，背景更合适且更具美感。保持物品作为真实照片，而非插图。添加一个技术蓝图风格的叠加图，包含白线、箭头、尺寸、标签以及零件、材料、尺寸和功能的小型示意图。清晰、优雅且信息丰富的文章。在左上角放置一个写有“OBJECT”的草图框。1：1 维度。”",
+    "outputImages": [
+      "/images/1777002504781_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Bitturing/status/2047208320281555173/photo/1"
+  },
+  {
     "id": "2046619828606136508",
     "title": "豪华房地产 App UI 设计稿",
     "thumbnail": "/images/2046619828606136508_0.jpg",
@@ -803,7 +828,8 @@
     "outputImages": [
       "/images/2046533787329458305_0.jpg"
     ],
-    "sourceUrl": "https://x.com/xuanyuanzhifeng/status/2046533787329458305#reversed-1"
+    "sourceUrl": "https://x.com/xuanyuanzhifeng/status/2046533787329458305#reversed-1",
+    "approved": true
   },
   {
     "id": "2046469645155303730",
@@ -831,31 +857,6 @@
     "sourceUrl": "https://x.com/yyyole/status/2046469645155303730"
   },
   {
-    "id": "2044453450235420988",
-    "title": "YouTube 深色模式桌面端 UI 原型",
-    "thumbnail": "/images/2044453450235420988_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "すぐる | ChatGPTガチ勢 𝕏",
-    "authorUrl": "https://x.com/SuguruKun_ai",
-    "tags": [
-      "en",
-      "manga"
-    ],
-    "category": "manga",
-    "lang": "en",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "2026-04-15T16:31:01.000Z",
-    "prompt": "{\n  \"type\": \"desktop UI mockup\",\n  \"application\": \"YouTube homepage\",\n  \"theme\": \"{argument name=\\\"theme\\\" default=\\\"dark mode\\\"}\",\n  \"browser_window\": {\n    \"url_bar\": \"{argument name=\\\"browser URL\\\" default=\\\"youtube.com\\\"}\",\n    \"tabs\": 1,\n    \"elements\": [\"back/forward buttons\", \"refresh\", \"extensions\", \"profile avatar\"]\n  },\n  \"layout\": {\n    \"sidebar\": {\n      \"position\": \"left\",\n      \"sections\": [\n        { \"title\": \"Main\", \"count\": 3, \"items\": [\"Home\", \"Shorts\", \"Subscriptions\"] },\n        { \"title\": \"You\", \"count\": 6, \"items\": [\"Your channel\", \"History\", \"Playlists\", \"Your videos\", \"Watch later\", \"Liked videos\"] },\n        { \"title\": \"Subscriptions\", \"count\": 8, \"items\": [\"Linus Tech Tips\", \"MrBeast\", \"Kurzgesagt - In a...\", \"ColdFusion\", \"3Blue1Brown\", \"Khan Academy\", \"Veritasium\", \"Show more\"] },\n        { \"title\": \"Explore\", \"count\": 7, \"items\": [\"Trending\", \"Music\", \"Films\", \"Live\", \"Gaming\", \"News\", \"Sport\"] },\n        { \"title\": \"More from YouTube\", \"count\": 3, \"items\": [\"YouTube Premium\", \"YouTube Music\", \"YouTube Kids\"] }\n      ]\n    },\n    \"top_filter_bar\": {\n      \"count\": 11,\n      \"labels\": [\"All\", \"Gaming\", \"Music\", \"Live\", \"Podcasts\", \"Mixes\", \"Science\", \"Lo-fi\", \"Thrillers\", \"Recently uploaded\", \"Watched\"]\n    },\n    \"video_grid\": {\n      \"layout\": \"4 rows by 3 columns\",\n      \"count\": 12,\n      \"videos\": [\n        { \"title\": \"Why Build Your Own GPU is Almost Impossible\", \"channel\": \"Linus Tech Tips\", \"thumbnail\": \"GPU chip with red arrow\" },\n        { \"title\": \"Survive 100 Days In Circle, Win $500,000\", \"channel\": \"MrBeast\", \"thumbnail\": \"MrBeast smiling with contestants in background\" },\n        { \"title\": \"What If We Nuke an Asteroid?\", \"channel\": \"Kurzgesagt - In a Nutshell\", \"thumbnail\": \"Missile approaching an asteroid in space\" },\n        { \"title\": \"How Dubai Became a $10 Billion City\", \"channel\": \"ColdFusion\", \"thumbnail\": \"Man next to Dubai skyline with text '$0 TO $10B'\" },\n        { \"title\": \"The Beautiful Math of Euler's Identity\", \"channel\": \"3Blue1Brown\", \"thumbnail\": \"Math equation and spiral graph on black background\" },\n        { \"title\": \"The World in 2040 - Population, Climate & More\", \"channel\": \"Veritasium\", \"thumbnail\": \"Lush green forest with text 'The World in 2040'\" },\n        { \"title\": \"I've Been Using Linux For 12 Years, This Is What Finally...\", \"channel\": \"DistroTube\", \"thumbnail\": \"Laptop and smartphone with a blue arrow connecting them\" },\n        { \"title\": \"Black Holes Explained - From Birth to Death\", \"channel\": \"Khan Academy\", \"thumbnail\": \"Glowing orange accretion disk of a black hole\" },\n        { \"title\": \"The Problem With Diet Advice\", \"channel\": \"Andrew Huberman\", \"thumbnail\": \"Man in black shirt with text 'the problem with diet advice'\" },\n        { \"title\": \"How to Learn Anything (Evidence-Based)\", \"channel\": \"Ali Abdaal\", \"thumbnail\": \"Flat illustration of a man reading a book surrounded by colorful leaves\" },\n        { \"title\": \"The Last of Us Part 2 is a Masterpiece\", \"channel\": \"Naughty Dog\", \"thumbnail\": \"Gritty portrait of Ellie with game logo\" },\n        { \"title\": \"lofi hip hop radio - beats to relax/study to\", \"channel\": \"Lofi Girl\", \"thumbnail\": \"Anime girl studying at a desk with city view at sunset\" }\n      ]\n    }\n  },\n  \"os_environment\": {\n    \"os\": \"{argument name=\\\"operating system\\\" default=\\\"Windows 10\\\"}\",\n    \"taskbar_position\": \"bottom\",\n    \"visible_icons\": [\"Start\", \"Search bar\", \"Task View\", \"File Explorer\", \"Edge\", \"Spotify\"],\n    \"system_tray\": [\"network\", \"volume\", \"battery\", \"clock showing 08:34 03/04/2024\"]\n  }\n}",
-    "outputImages": [
-      "/images/2044453450235420988_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/SuguruKun_ai/status/2044453450235420988"
-  },
-  {
     "id": "2044753309991571682",
     "title": "科幻机甲母舰规格表",
     "thumbnail": "/images/2044753309991571682_0.jpg",
@@ -878,7 +879,9 @@
     "outputImages": [
       "/images/2044753309991571682_0.jpg"
     ],
-    "sourceUrl": "https://x.com/old_pgmrs_will/status/2044753309991571682"
+    "sourceUrl": "https://x.com/old_pgmrs_will/status/2044753309991571682",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046618179037024377",
@@ -2031,7 +2034,9 @@
     "outputImages": [
       "/images/2046799393307996376_0.jpg"
     ],
-    "sourceUrl": "https://x.com/mar_vn_nv_cie/status/2046799393307996376#reversed-0"
+    "sourceUrl": "https://x.com/mar_vn_nv_cie/status/2046799393307996376#reversed-0",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2043731296065859698",
@@ -2924,7 +2929,8 @@
       "/images/2045259289993048284_0.jpg",
       "/images/2045259289993048284_1.jpg"
     ],
-    "sourceUrl": "https://x.com/tsubaki_ew/status/2045259289993048284"
+    "sourceUrl": "https://x.com/tsubaki_ew/status/2045259289993048284",
+    "approved": true
   },
   {
     "id": "2044913275239125302",
@@ -2975,7 +2981,9 @@
       "/images/2044948073617711532_0.jpg",
       "/images/2044948073617711532_1.jpg"
     ],
-    "sourceUrl": "https://x.com/ray_lightfield/status/2044948073617711532"
+    "sourceUrl": "https://x.com/ray_lightfield/status/2044948073617711532",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2044789137853792669-a64214ee",
@@ -4460,7 +4468,8 @@
     "outputImages": [
       "/images/2044430585930895864_0.jpg"
     ],
-    "sourceUrl": "https://x.com/minesan_ai/status/2044430585930895864"
+    "sourceUrl": "https://x.com/minesan_ai/status/2044430585930895864",
+    "approved": true
   },
   {
     "id": "2045144769660408306",
@@ -4485,7 +4494,8 @@
     "outputImages": [
       "/images/2045144769660408306_0.jpg"
     ],
-    "sourceUrl": "https://x.com/HuZhou_Mr/status/2045144769660408306"
+    "sourceUrl": "https://x.com/HuZhou_Mr/status/2045144769660408306",
+    "approved": true
   },
   {
     "id": "2046224777208361126",
@@ -4586,7 +4596,8 @@
       "/images/2046715368987664526_0.jpg",
       "/images/2046715368987664526_1.jpg"
     ],
-    "sourceUrl": "https://x.com/Angusyo16060873/status/2046715368987664526"
+    "sourceUrl": "https://x.com/Angusyo16060873/status/2046715368987664526",
+    "approved": true
   },
   {
     "id": "2045416935106773045",
@@ -23956,5 +23967,247 @@
       "/images/2047339619080159425_1.jpg"
     ],
     "sourceUrl": "https://x.com/i/status/2047339619080159425"
+  },
+  {
+    "id": "2046945118674932203",
+    "title": "完蛋了🥚",
+    "author": "John",
+    "sourceUrl": "https://x.com/johnAGI168/status/2046945118674932203",
+    "prompt": "prompt：XXX 代言 XXX 汽车海报",
+    "category": "poster",
+    "lang": "zh",
+    "thumbnail": "/images/2046945118674932203_0.jpg",
+    "thumbnailAspect": 0.75,
+    "outputImages": [
+      "/images/2046945118674932203_0.jpg",
+      "/images/2046945118674932203_1.jpg",
+      "/images/2046945118674932203_2.jpg",
+      "/images/2046945118674932203_3.jpg",
+      "/images/2046945118674932203_4.jpg",
+      "/images/2046945118674932203_5.jpg",
+      "/images/2046945118674932203_6.jpg",
+      "/images/2046945118674932203_7.jpg"
+    ],
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "stats": {
+      "likes": 2376,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T13:32:01.000Z",
+    "pending": false
+  },
+  {
+    "id": "2047179590335177095",
+    "title": "以防你不知道GPT Image2到底发展成什么程度了",
+    "author": "炼金叔叔",
+    "sourceUrl": "https://x.com/AirdropAlchemis/status/2047179590335177095",
+    "prompt": "生成70年代、90年代、2000年代，和2020年代的中国家庭聚餐照片",
+    "category": "photography",
+    "lang": "zh",
+    "thumbnail": "/images/2047179590335177095_0.jpg",
+    "thumbnailAspect": 0.75,
+    "outputImages": [
+      "/images/2047179590335177095_0.jpg",
+      "/images/2047179590335177095_1.jpg",
+      "/images/2047179590335177095_2.jpg",
+      "/images/2047179590335177095_3.jpg",
+      "/images/2047179590335177095_4.jpg",
+      "/images/2047179590335177095_5.jpg",
+      "/images/2047179590335177095_6.jpg",
+      "/images/2047179590335177095_7.jpg"
+    ],
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "stats": {
+      "likes": 2066,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T05:03:43.000Z",
+    "pending": false
+  },
+  {
+    "id": "2047198974902509839",
+    "title": "女生",
+    "author": "Aigirl",
+    "sourceUrl": "https://x.com/fdtreesky/status/2047198974902509839",
+    "prompt": "一位來自中國的18歲網紅美女，整體氣質： 清純、可愛、無辜、鄰家女孩，模特兒身材，大胸部，",
+    "category": "portrait",
+    "lang": "zh",
+    "thumbnail": "/images/2047198974902509839_0.jpg",
+    "thumbnailAspect": 1.7768,
+    "outputImages": [
+      "/images/2047198974902509839_0.jpg",
+      "/images/2047198974902509839_1.jpg",
+      "/images/2047198974902509839_2.jpg",
+      "/images/2047198974902509839_3.jpg",
+      "/images/2047198974902509839_4.jpg",
+      "/images/2047198974902509839_5.jpg",
+      "/images/2047198974902509839_6.jpg",
+      "/images/2047198974902509839_7.jpg"
+    ],
+    "tags": [
+      "zh",
+      "portrait"
+    ],
+    "stats": {
+      "likes": 656,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T06:20:45.000Z",
+    "pending": false
+  },
+  {
+    "id": "2046767544359657719",
+    "title": "笔尖落墨，万物生花 🖋️📖",
+    "author": "两斤",
+    "sourceUrl": "https://x.com/0x00_Krypt/status/2046767544359657719",
+    "prompt": "A colossal hand gripping an enormous vintage fountain pen, captured in vertical portrait format (9:16), writing on endless textured paper that fills the frame. Where the ink flows, the story of [BOOK_NAME] bursts into vivid life — [iconic characters, key objects, and signature scenes from [BOOK_NAME] emerging as tiny miniature figures on the paper, each no larger than a fingernail, ultra-miniature scale]. The miniature world cascades downward across the page as the pen moves, characters frozen mid-story, ink still wet at the edges where they emerge. Extreme close-up of the enormous pen nib touching paper, ink bleeding into fiber, fingertips with visible skin texture. Warm amber and soft golden light raking across the paper surface, deep shadows, cinematic depth of field, magical realism, hyper-detailed, photorealistic, 8K, --ar 9:16\n",
+    "category": "other",
+    "lang": "zh",
+    "thumbnail": "/images/2046767544359657719_0.jpg",
+    "thumbnailAspect": 1.5,
+    "outputImages": [
+      "/images/2046767544359657719_0.jpg",
+      "/images/2046767544359657719_1.jpg"
+    ],
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "stats": {
+      "likes": 495,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T01:46:24.000Z",
+    "pending": false
+  },
+  {
+    "id": "2046454408524030324",
+    "title": "national stadium bird nest",
+    "author": "知识猫图解",
+    "sourceUrl": "https://x.com/GeekCatX/status/2046454408524030324",
+    "prompt": "制作一张【national stadium bird nest】的信息图：结合地标真实照片与白色技术注释/图解叠加，在角落手绘方框中写建筑名称。叠加复杂白色技术标注，展示关键结构数据、重要测量、材料数量、细部做法，并包含剖面图、平面图以及显著建筑/工程特征。风格：HUD平视显示、信息图表美学、细致清晰白线、技术/建筑注释风格、教育信息图感；注释后能看到真实环境；竖向构图。",
+    "category": "photography",
+    "lang": "zh",
+    "thumbnail": "/images/2046454408524030324_0.jpg",
+    "thumbnailAspect": 1.3403,
+    "outputImages": [
+      "/images/2046454408524030324_0.jpg",
+      "/images/2046454408524030324_1.jpg",
+      "/images/2046454408524030324_2.jpg",
+      "/images/2046454408524030324_3.jpg",
+      "/images/2046454408524030324_4.jpg",
+      "/images/2046454408524030324_5.jpg",
+      "/images/2046454408524030324_6.jpg",
+      "/images/2046454408524030324_7.jpg"
+    ],
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "stats": {
+      "likes": 238,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T05:02:06.000Z",
+    "pending": false
+  },
+  {
+    "id": "2046818974713966792",
+    "title": "Top100种艺术大师风格",
+    "author": "知识猫图解",
+    "sourceUrl": "https://x.com/GeekCatX/status/2046818974713966792",
+    "prompt": "Top100种艺术大师风格\nTop100种构图布局架构\nTop100种视觉美学风格",
+    "category": "infographic",
+    "lang": "zh",
+    "thumbnail": "/images/2046818974713966792_0.jpg",
+    "thumbnailAspect": 1.5,
+    "outputImages": [
+      "/images/2046818974713966792_0.jpg",
+      "/images/2046818974713966792_1.jpg",
+      "/images/2046818974713966792_2.jpg",
+      "/images/2046818974713966792_3.jpg",
+      "/images/2046818974713966792_4.jpg",
+      "/images/2046818974713966792_5.jpg"
+    ],
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "stats": {
+      "likes": 34,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T05:10:46.000Z",
+    "pending": false
+  },
+  {
+    "id": "2046815236301476197",
+    "title": "电商产品页",
+    "author": "bonniewinds",
+    "sourceUrl": "https://x.com/bonniewinds0/status/2046815236301476197",
+    "prompt": "用GPT- image2做的海报，我只写“基于我拍的盘子做一个电商产品页，是英国transferware，品牌Johnson Brothers, England, 1883。24元。10寸牛排盘。” 这样效果可以。",
+    "category": "advertising",
+    "lang": "zh",
+    "thumbnail": "/images/2046815236301476197_0.jpg",
+    "thumbnailAspect": 1.5,
+    "outputImages": [
+      "/images/2046815236301476197_0.jpg",
+      "/images/2046815236301476197_1.jpg"
+    ],
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "stats": {
+      "likes": 11,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T04:55:54.000Z",
+    "pending": false
+  },
+  {
+    "id": "2046190530133160146",
+    "title": "城市微缩景观地图",
+    "author": "知识猫图解",
+    "sourceUrl": "https://x.com/GeekCatX/status/2046190530133160146",
+    "prompt": "提示词：\n(Concept Artist) You are a top-notch city miniature landscape concept designer, skilled in combining city maps with three-dimensional miniature landscapes. The user has specified [Beijing].",
+    "category": "other",
+    "lang": "zh",
+    "thumbnail": "/images/2046190530133160146_0.jpg",
+    "thumbnailAspect": 1.4927,
+    "outputImages": [
+      "/images/2046190530133160146_0.jpg",
+      "/images/2046190530133160146_1.jpg",
+      "/images/2046190530133160146_2.jpg",
+      "/images/2046190530133160146_3.jpg",
+      "/images/2046190530133160146_4.jpg",
+      "/images/2046190530133160146_5.jpg",
+      "/images/2046190530133160146_6.jpg",
+      "/images/2046190530133160146_7.jpg"
+    ],
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "stats": {
+      "likes": 10,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T11:33:33.000Z",
+    "pending": false
   }
 ]
