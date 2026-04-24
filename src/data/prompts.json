@@ -23,7 +23,8 @@
     "outputImages": [
       "/images/2046619828606136508_0.jpg"
     ],
-    "sourceUrl": "https://x.com/NossaCoisa1/status/2046619828606136508"
+    "sourceUrl": "https://x.com/NossaCoisa1/status/2046619828606136508",
+    "approved": true
   },
   {
     "id": "2046690794434621550",
@@ -49,7 +50,8 @@
     "outputImages": [
       "/images/2046690794434621550_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Firisis_/status/2046690794434621550"
+    "sourceUrl": "https://x.com/Firisis_/status/2046690794434621550",
+    "approved": true
   },
   {
     "id": "2046706923941114242",
@@ -75,12 +77,13 @@
     "outputImages": [
       "/images/2046706923941114242_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Angaisb_/status/2046706923941114242"
+    "sourceUrl": "https://x.com/Angaisb_/status/2046706923941114242",
+    "approved": true
   },
   {
     "id": "2046577842486477007",
     "title": "奢华装饰艺术风格家居装饰邮件",
-    "thumbnail": "/images/2046577842486477007_0.jpg",
+    "thumbnail": "/images/2046577842486477007_0.jpeg",
     "thumbnailAspect": 1.33,
     "author": "Creative Diffusion",
     "authorUrl": "https://x.com/StableTom",
@@ -99,9 +102,10 @@
     "createdAt": "",
     "prompt": "{\"type\":\"奢华促销邮件通讯排版\",\"brand\":{\"name\":\"{argument name=\\\"brand name\\\" default=\\\"MAISON LUXE\\\"}\",\"tagline\":\"EST. 1925\",\"style\":\"优雅的装饰艺术风格家居装饰品牌，采用纤细的金色线条和精致的排版\"},\"canvas\":{\"aspect_ratio\":\"9:16 竖版\",\"background\":\"暖象牙白\",\"border\":\"双层纤细金属金边框，配有精致的边角装饰\"},\"palette\":{\"colors\":[\"象牙白\",\"柔和腮红粉\",\"浅鼠尾草绿\",\"柔和米色\",\"金属金\",\"炭灰色文字\"]},\"layout\":{\"sections\":[{\"title\":\"首屏\",\"position\":\"顶部\",\"count\":3,\"labels\":[\"左侧装饰拱门面板\",\"中央品牌及标题块\",\"右侧带花瓶的装饰拱门面板\"]},{\"title\":\"特色亮点\",\"position\":\"中上部\",\"count\":3,\"labels\":[\"精选系列\",\"卓越品质\",\"灵感空间\"]},{\"title\":\"季节性促销\",\"position\":\"中下部\",\"count\":2,\"labels\":[\"带有装饰椅和边桌的室内照片\",\"SPRING REFRESH 文字面板\"]},{\"title\":\"社交媒体页脚\",\"position\":\"底部\",\"count\":4,\"labels\":[\"Instagram\",\"Pinterest\",\"Facebook\",\"电子邮件\"]},{\"title\":\"实用信息页脚\",\"position\":\"最底部\",\"count\":5,\"labels\":[\"订单满 150 美元免运费\",\"轻松退货\",\"全球配送\",\"取消订阅\",\"在浏览器中查看\"]}],\"spacing\":\"对称的编辑网格，留白充裕且居中对齐\",\"dividers\":\"细金线和特色栏之间的垂直分隔符\"},\"hero\":{\"logo\":\"品牌名称上方的扇形装饰艺术标志\",\"headline\":\"{argument name=\\\"headline text\\\" default=\\\"永恒优雅，现代生活\\\"}\",\"body\":\"探索精致单品与精选灵感，以一丝永恒的奢华感提升您的日常生活。\",\"cta\":{\"text\":\"{argument name=\\\"button text\\\" default=\\\"探索系列\\\"}\",\"style\":\"金色矩形按钮，配白色大写文字\"},\"left_panel\":{\"arch\":\"浅鼠尾草绿色的高大装饰艺术拱门\",\"details\":\"金色的简约几何扇形和线条图案\"},\"right_panel\":{\"arch\":\"腮红粉色的高大装饰艺术拱门\",\"object\":\"叠放的腮红粉展示台上的多面金色花瓶，插有纤细的叶茎\"}},\"features\":{\"icons\":3,\"items\":[{\"title\":\"精选系列\",\"description\":\"融合经典魅力与现代精致感的精选单品。\",\"icon\":\"扇贝标志\"},{\"title\":\"卓越品质\",\"description\":\"精心打造，采用旨在终身使用的优质材料。\",\"icon\":\"菱形线条标志\"},{\"title\":\"灵感空间\",\"description\":\"为您提供创意与灵感，打造彰显独特风格的家居空间。\",\"icon\":\"拱形窗标志\"}]},\"promo\":{\"image_side\":\"左\",\"image\":{\"scene\":\"奢华客厅角落\",\"objects_count\":4,\"objects\":[\"带有金色椅腿的薄荷绿扇形靠背天鹅绒装饰椅\",\"深色台面配金色框架的圆形边桌\",\"带有圆顶灯罩的小型金色台灯\",\"镶板墙上部分的金色太阳放射状镜子\"],\"floor\":\"浅色纹理地毯\",\"framing\":\"嵌入拱形轮廓的大型圆形裁剪\"},\"text_side\":\"右\",\"title\":\"{argument name=\\\"promo title\\\" default=\\\"春季焕新\\\"}\",\"body\":\"用我们的春季新品系列点亮您的空间。清新的色调、优雅的饰面和永恒的细节等待着您。\",\"cta\":{\"text\":\"{argument name=\\\"secondary button text\\\" default=\\\"选购新品\\\"}\",\"style\":\"金色矩形按钮，配白色大写文字\"},\"background\":\"带有金色边角装饰的柔和腮红粉色\"},\"footer\":{\"social_header\":\"保持联系\",\"social_icons_count\":4,\"shipping_bar\":{\"background\":\"浅鼠尾草绿条纹\",\"items_count\":3,\"items\":[\"订单满 150 美元免运费\",\"轻松退货\",\"全球配送\"]},\"legal\":\"您收到此邮件是因为您订阅了 Maison Luxe。\"},\"render_style\":\"高端邮件营销模板，简洁的奢华编辑设计，清爽的矢量线条艺术与柔和写实的产品摄影相结合，平衡的负空间，精致的高端美学\"}",
     "outputImages": [
-      "/images/2046577842486477007_0.jpg"
+      "/images/2046577842486477007_0.jpeg"
     ],
-    "sourceUrl": "https://x.com/StableTom/status/2046577842486477007"
+    "sourceUrl": "https://x.com/StableTom/status/2046577842486477007",
+    "approved": true
   },
   {
     "id": "2046727812921413837",
@@ -126,7 +130,9 @@
     "outputImages": [
       "/images/2046727812921413837_0.jpg"
     ],
-    "sourceUrl": "https://x.com/diogosantosbr/status/2046727812921413837#reversed-0"
+    "sourceUrl": "https://x.com/diogosantosbr/status/2046727812921413837#reversed-0",
+    "approved": true,
+    "hq": true
   },
   {
     "id": "2045861258520568230",
@@ -152,7 +158,9 @@
     "outputImages": [
       "/images/2045861258520568230_0.jpg"
     ],
-    "sourceUrl": "https://x.com/mm_zzm44854/status/2045861258520568230#reversed-1"
+    "sourceUrl": "https://x.com/mm_zzm44854/status/2045861258520568230#reversed-1",
+    "approved": true,
+    "hq": true
   },
   {
     "id": "2045684734714380687",
@@ -163,10 +171,10 @@
     "authorUrl": "https://x.com/sjbbxhz",
     "tags": [
       "en",
-      "infographic",
+      "other",
       "featured"
     ],
-    "category": "infographic",
+    "category": "other",
     "lang": "en",
     "stats": {
       "likes": 500,
@@ -178,7 +186,8 @@
     "outputImages": [
       "/images/2045684734714380687_0.jpg"
     ],
-    "sourceUrl": "https://x.com/sjbbxhz/status/2045684734714380687#reversed-0"
+    "sourceUrl": "https://x.com/sjbbxhz/status/2045684734714380687#reversed-0",
+    "approved": true
   },
   {
     "id": "2045792240044511277",
@@ -204,7 +213,9 @@
     "outputImages": [
       "/images/2045792240044511277_0.jpg"
     ],
-    "sourceUrl": "https://x.com/GeekCatX/status/2045792240044511277#reversed-1"
+    "sourceUrl": "https://x.com/GeekCatX/status/2045792240044511277#reversed-1",
+    "approved": true,
+    "hq": true
   },
   {
     "id": "2045925660401795478",
@@ -215,10 +226,10 @@
     "authorUrl": "https://x.com/wory37303852",
     "tags": [
       "en",
-      "infographic",
+      "advertising",
       "featured"
     ],
-    "category": "infographic",
+    "category": "advertising",
     "lang": "en",
     "stats": {
       "likes": 500,
@@ -230,7 +241,9 @@
     "outputImages": [
       "/images/2045925660401795478_0.jpg"
     ],
-    "sourceUrl": "https://x.com/wory37303852/status/2045925660401795478#reversed-0"
+    "sourceUrl": "https://x.com/wory37303852/status/2045925660401795478#reversed-0",
+    "approved": true,
+    "hq": true
   },
   {
     "id": "2046063806846214265",
@@ -256,7 +269,8 @@
     "outputImages": [
       "/images/2046063806846214265_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Tanemomi_Ver2/status/2046063806846214265#reversed-0"
+    "sourceUrl": "https://x.com/Tanemomi_Ver2/status/2046063806846214265#reversed-0",
+    "approved": true
   },
   {
     "id": "2046151898621993364",
@@ -281,7 +295,9 @@
     "outputImages": [
       "/images/2046151898621993364_0.jpg"
     ],
-    "sourceUrl": "https://x.com/BubbleBrain/status/2046151898621993364"
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046151898621993364",
+    "approved": true,
+    "hq": true
   },
   {
     "id": "2046201836525302032",
@@ -309,7 +325,8 @@
       "/images/2046201836525302032_2.jpg",
       "/images/2046201836525302032_3.jpg"
     ],
-    "sourceUrl": "https://x.com/MrLarus/status/2046201836525302032"
+    "sourceUrl": "https://x.com/MrLarus/status/2046201836525302032",
+    "approved": true
   },
   {
     "id": "2046154976159035613",
@@ -337,7 +354,8 @@
       "/images/2046154976159035613_2.jpg",
       "/images/2046154976159035613_3.jpg"
     ],
-    "sourceUrl": "https://x.com/Kashiko_AIart/status/2046154976159035613"
+    "sourceUrl": "https://x.com/Kashiko_AIart/status/2046154976159035613",
+    "approved": true
   },
   {
     "id": "2046726072600027296",
@@ -362,7 +380,8 @@
     "outputImages": [
       "/images/2046726072600027296_0.jpg"
     ],
-    "sourceUrl": "https://x.com/5656nya5nya/status/2046726072600027296#reversed-0"
+    "sourceUrl": "https://x.com/5656nya5nya/status/2046726072600027296#reversed-0",
+    "approved": true
   },
   {
     "id": "2045778624092254603",
@@ -389,12 +408,13 @@
       "/images/2045778624092254603_0.jpg",
       "/images/2045778624092254603_1.jpg"
     ],
-    "sourceUrl": "https://x.com/yammamon/status/2045778624092254603"
+    "sourceUrl": "https://x.com/yammamon/status/2045778624092254603",
+    "approved": true
   },
   {
     "id": "2046454226080219281-f02f1b88",
     "title": "Chinese Medical Gout Infographic Poster",
-    "thumbnail": "/images/2046454226080219281_0.jpg",
+    "thumbnail": "/images/2046454226080219281-f02f1b88_0.jpeg",
     "thumbnailAspect": 1.33,
     "author": "虎小象",
     "authorUrl": "https://x.com/hx831126",
@@ -412,11 +432,13 @@
     "createdAt": "",
     "prompt": "{\"type\":\"medical infographic poster\",\"topic\":\"gout pathogenesis and progression\",\"style\":\"ultra-detailed 3D biomedical illustration blended with editorial infographic design\",\"language\":\"Chinese with smaller English subtitles\",\"canvas\":{\"orientation\":\"vertical\",\"aspect_ratio\":\"approximately 2:1\",\"background\":\"warm off-white paper texture with subtle aging and clinical poster aesthetics\"},\"title_block\":{\"headline_cn\":\"痛风诞生的因果链\",\"headline_en\":\"THE CAUSAL CHAIN OF GOUT\",\"subheading\":\"A continuous chain from purines to crystals to inflammation, showing the full-body metabolic and immune pathway\"},\"central_visual\":{\"description\":\"a semi-transparent full-body human anatomical figure, front view, from head to feet, with the face intentionally obscured by a soft rectangular blur; visible muscles, bones, arteries, veins, nerves, lungs outline, digestive tract, kidneys, liver, bladder region, and lower limb structures; glowing internal pathways and directional flow arrows connect metabolic stages; several circular cutaway zoom-ins show urate crystals, blood components, inflamed tissue, and joint damage\",\"labels_count\":4,\"labels\":[\"肝脏\",\"肾脏\",\"尿酸循环\",\"结晶沉积\"]},\"top_process_strip\":{\"title_cn\":\"一条从分子到临床的连续因果链\",\"title_en\":\"A CONTINUOUS CHAIN FROM MOLECULE TO CLINICAL DISEASE\",\"count\":6,\"icons\":[\"代谢\",\"转运\",\"结晶\",\"免疫\",\"炎症\",\"损伤\"]},\"layout\":{\"sections\":[{\"number\":\"01\",\"title_cn\":\"嘌呤来源\",\"title_en\":\"Purine Sources\",\"position\":\"upper left\",\"count\":6,\"items\":[\"外源性嘌呤摄入: 红肉\",\"外源性嘌呤摄入: 内脏\",\"外源性嘌呤摄入: 海鲜\",\"外源性嘌呤摄入: 啤酒\",\"内源性细胞代谢\",\"果糖负荷 / 含糖饮料\"]},{\"number\":\"02\",\"title_cn\":\"尿酸生成\",\"title_en\":\"Uric Acid Production\",\"position\":\"left upper-mid\",\"count\":5,\"items\":[\"嘌呤\",\"次黄嘌呤\",\"黄嘌呤\",\"尿酸\",\"黄嘌呤氧化酶 pathway with oxygen and hydrogen peroxide byproducts\"]},{\"number\":\"03\",\"title_cn\":\"肾脏与肠道排泄\",\"title_en\":\"Renal & Intestinal Excretion\",\"position\":\"left middle\",\"count\":2,\"items\":[\"肾脏排泄 with renal tubule transporters including GLUT9, OAT4, ABCG2, reabsorption and urinary excretion\",\"肠道排泄 with intestinal excretion and ABCG2 secretion\"]},{\"number\":\"04\",\"title_cn\":\"高尿酸血症\",\"title_en\":\"Hyperuricemia\",\"position\":\"left lower-mid\",\"count\":4,\"items\":[\"血尿酸水平 comparison\",\"正常 range threshold\",\"高尿酸血症 threshold\",\"溶解度阈值 / supersaturation line graph\"]},{\"number\":\"05\",\"title_cn\":\"结晶物理学\",\"title_en\":\"Crystal Physics\",\"position\":\"lower left-center\",\"count\":5,\"items\":[\"过饱和 supersaturation\",\"沉淀形成 precipitation\",\"单钠尿酸盐结晶 monohydrate urate crystals\",\"低温诱导 lower temperature effect\",\"低 pH effect and ion microenvironment\"]},{\"number\":\"06\",\"title_cn\":\"关节沉积与局部环境\",\"title_en\":\"Joint Deposition & Local Environment\",\"position\":\"bottom left-center\",\"count\":5,\"items\":[\"第一跖趾关节 first metatarsophalangeal joint focus\",\"寒冷/低温\",\"滑液环境\",\"软骨表面\",\"结晶沉积\"]},{\"number\":\"07\",\"title_cn\":\"免疫炎症级联\",\"title_en\":\"Immune Inflammatory Cascade\",\"position\":\"upper right\",\"count\":6,\"items\":[\"先天免疫识别 innate immune recognition\",\"巨噬细胞吞噬结晶 macrophage crystal uptake\",\"炎症小体激活 NLRP3 inflammasome\",\"中性粒细胞募集 neutrophil recruitment\",\"炎症因子释放 cytokine release\",\"白细胞介素 labels: IL-1β, IL-6, TNF-α, IL-8, MCP-1\"]},{\"number\":\"08\",\"title_cn\":\"急性痛风发作\",\"title_en\":\"Acute Gout Flare\",\"position\":\"right middle\",\"count\":5,\"items\":[\"红、肿、热、痛 heel/big toe illustration\",\"夜间突发 sudden onset\",\"关节肿胀 joint distention\",\"剧烈疼痛 exquisite tenderness\",\"足部局部发红发光\"]},{\"number\":\"09\",\"title_cn\":\"慢性结构损伤\",\"title_en\":\"Chronic Structural Damage\",\"position\":\"right lower-mid\",\"count\":4,\"items\":[\"反复发作 recurrent flares\",\"慢性滑膜炎 chronic synovitis\",\"软骨损伤 cartilage injury\",\"骨侵蚀 / 关节结构损伤 bone erosion and joint structural damage\"]},{\"number\":\"10\",\"title_cn\":\"痛风石形成\",\"title_en\":\"Tophus Formation\",\"position\":\"right lower\",\"count\":4,\"items\":[\"长期尿酸负荷 long-term urate burden\",\"慢性晶体积聚 chronic crystal accumulation\",\"痛风石 urate crystal mass\",\"手指与组织结节示意 multiple clinical examples\"]},{\"number\":\"11\",\"title_cn\":\"超越关节的系统影响\",\"title_en\":\"Beyond the Joint\",\"position\":\"lower right\",\"count\":4,\"items\":[\"尿酸性肾结石 uric acid kidney stones\",\"间质性肾损伤 / 肾脏受累\",\"软组织沉积 soft tissue deposition\",\"代谢综合征相关 systemic metabolic association\"]},{\"number\":\"12\",\"title_cn\":\"疼痛只是最后一层表象\",\"title_en\":\"Pain Is the Final Signal\",\"position\":\"bottom full width\",\"count\":6,\"items\":[\"嘌呤负荷增加\",\"尿酸生成过多或排泄不足\",\"高尿酸血症\",\"结晶形成与沉积\",\"免疫激活与炎症\",\"急性疼痛与临床表现\"]}]},\"visual_details\":{\"arrows\":\"curved tan-gold arrows linking sections in a clockwise and downward causal flow\",\"rendering\":\"hyperreal organs and joints, glossy translucent skin, microscopic crystal closeups, immune cell scenes, medical textbook precision\",\"color_palette\":\"sepia beige, ivory, muted red, dark brown, vascular blue and red, amber highlights, inflammatory crimson, crystal white\",\"typography\":\"large Chinese serif-like heading, smaller English uppercase subtitle, boxed numbered modules with thin borders and rounded corners\"},\"negative_constraints\":[\"no modern flat vector style\",\"no cartoon anatomy\",\"no bright neon sci-fi palette\",\"no black background\"],\"generation_goal\":\"Create a premium Chinese medical education poster explaining the complete causal chain of gout from purine intake and uric acid metabolism to crystal formation, immune activation, acute flare, chronic damage, tophi, and systemic complications, centered on a transparent full-body anatomical figure with 12 numbered infographic panels and 6 top process icons.\"}",
     "outputImages": [
-      "/images/2046454226080219281_0.jpg",
+      "/images/2046454226080219281-f02f1b88_0.jpeg",
       "/images/2046454226080219281_1.jpg"
     ],
     "sourceUrl": "https://x.com/hx831126/status/2046454226080219281",
-    "sourceId": "2046454226080219281"
+    "sourceId": "2046454226080219281",
+    "approved": true,
+    "hq": true
   },
   {
     "id": "2046570822366802131",
@@ -466,7 +488,9 @@
     "outputImages": [
       "/images/2046844345081336299_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Capitaine/status/2046844345081336299#reversed-0"
+    "sourceUrl": "https://x.com/Capitaine/status/2046844345081336299#reversed-0",
+    "approved": true,
+    "hq": true
   },
   {
     "id": "2046231542817497392",
@@ -494,7 +518,9 @@
       "/images/2046231542817497392_2.jpg",
       "/images/2046231542817497392_3.jpg"
     ],
-    "sourceUrl": "https://x.com/MrLarus/status/2046231542817497392"
+    "sourceUrl": "https://x.com/MrLarus/status/2046231542817497392",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046115431144902732",
@@ -570,7 +596,8 @@
     "outputImages": [
       "/images/2044380730592260134_0.jpg"
     ],
-    "sourceUrl": "https://x.com/itnavi2022/status/2044380730592260134"
+    "sourceUrl": "https://x.com/itnavi2022/status/2044380730592260134",
+    "approved": true
   },
   {
     "id": "2046774203920113932",
@@ -595,7 +622,9 @@
     "outputImages": [
       "/images/2046774203920113932_0.jpg"
     ],
-    "sourceUrl": "https://x.com/PolloAIFR/status/2046774203920113932#reversed-1"
+    "sourceUrl": "https://x.com/PolloAIFR/status/2046774203920113932#reversed-1",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046705402742460471",
@@ -671,7 +700,9 @@
       "/images/2046739393348546597_0.jpg",
       "/images/2046739393348546597_1.jpg"
     ],
-    "sourceUrl": "https://x.com/alphinctom/status/2046739393348546597#reversed-0"
+    "sourceUrl": "https://x.com/alphinctom/status/2046739393348546597#reversed-0",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046716329894506956",
@@ -746,7 +777,8 @@
     "outputImages": [
       "/images/2046612424321913069_0.jpg"
     ],
-    "sourceUrl": "https://x.com/taya_mama_AI/status/2046612424321913069"
+    "sourceUrl": "https://x.com/taya_mama_AI/status/2046612424321913069",
+    "approved": true
   },
   {
     "id": "2046533787329458305",
@@ -896,7 +928,9 @@
     "outputImages": [
       "/images/2046932542998364645_0.jpg"
     ],
-    "sourceUrl": "https://x.com/muku_sns/status/2046932542998364645#reversed-0"
+    "sourceUrl": "https://x.com/muku_sns/status/2046932542998364645#reversed-0",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2044947505931317657",
@@ -921,7 +955,9 @@
     "outputImages": [
       "/images/2044947505931317657_0.jpg"
     ],
-    "sourceUrl": "https://x.com/old_pgmrs_will/status/2044947505931317657"
+    "sourceUrl": "https://x.com/old_pgmrs_will/status/2044947505931317657",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2043480770954645754",
@@ -996,12 +1032,14 @@
     "outputImages": [
       "/images/2044802802149650631_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Colin_Leeee/status/2044802802149650631#reversed-2"
+    "sourceUrl": "https://x.com/Colin_Leeee/status/2044802802149650631#reversed-2",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046091784812708315",
     "title": "Bakery Promotional Flyer",
-    "thumbnail": "/images/2046091784812708315_0.jpg",
+    "thumbnail": "/images/2046091784812708315_0.jpeg",
     "thumbnailAspect": 1.33,
     "author": "かなまる",
     "authorUrl": "https://x.com/uniyume",
@@ -1019,9 +1057,10 @@
     "createdAt": "",
     "prompt": "{\n  \"type\": \"promotional flyer for baked goods\",\n  \"style\": \"warm, cozy, natural, beige and pastel tones, scrapbook aesthetic with torn paper elements and delicate line art floral illustrations\",\n  \"brand\": {\n    \"name\": \"{argument name=\\\"brand name\\\" default=\\\"Hana to OYATSU\\\"}\",\n    \"social_handle\": \"@hana_to_oyatsu\"\n  },\n  \"layout\": {\n    \"top_section\": {\n      \"main_copy\": \"{argument name=\\\"main catchphrase\\\" default=\\\"ほっとひといき、私をやさしくしてくれるおやつ。\\\"}\",\n      \"sub_copy\": \"Paragraph about carefully baked sweets for relaxing moments\",\n      \"top_right_badge\": \"Circular text badge about gentle ingredients and daily happiness\",\n      \"main_image\": \"Large ceramic plate filled with an assortment of baked goods including madeleines, financiers, and sesame cookies, styled with soft natural lighting and a blurred background with a teacup and greenery\"\n    },\n    \"middle_left_section\": {\n      \"ingredients_note\": {\n        \"background\": \"Torn paper scrap taped to the background\",\n        \"title\": \"Carefully selected ingredients\",\n        \"count\": 4,\n        \"items\": [\"Domestic wheat flour\", \"Cultured butter\", \"Cane sugar\", \"Eggs\"],\n        \"illustrations\": \"Small line art of wheat stalks and a block of butter\"\n      },\n      \"message_note\": {\n        \"background\": \"Torn paper scrap\",\n        \"text\": \"Message about rewarding oneself or gifting to a loved one\",\n        \"illustration\": \"Small hand-drawn heart\"\n      }\n    },\n    \"middle_center_section\": {\n      \"section_title\": \"Gentle sweetness and comforting taste for you\",\n      \"product_lineup\": {\n        \"count\": 3,\n        \"items\": [\n          {\n            \"name\": \"{argument name=\\\"product 1 name\\\" default=\\\"マドレーヌ\\\"}\",\n            \"image\": \"Single madeleine\",\n            \"description\": \"Crispy outside, fluffy inside with butter aroma\"\n          },\n          {\n            \"name\": \"{argument name=\\\"product 2 name\\\" default=\\\"フィナンシェ\\\"}\",\n            \"image\": \"Single rectangular financier\",\n            \"description\": \"Rich almond flavor and moist texture\"\n          },\n          {\n            \"name\": \"{argument name=\\\"product 3 name\\\" default=\\\"ディアマンクッキー\\\"}\",\n            \"image\": \"Two round sesame cookies\",\n            \"description\": \"Crumbly texture and gentle sweetness, perfect with tea or coffee\"\n          }\n        ]\n      }\n    },\n    \"middle_right_section\": {\n      \"badge\": \"Pink circular badge with text 'Handmade baked sweets assortment' and a bow illustration\",\n      \"packaging_image\": \"Kraft paper gift box tied with a ribbon and a white label reading 'For your cozy time Hana to OYATSU homemade baked sweets' with botanical line art\"\n    },\n    \"bottom_section\": {\n      \"feature_icons\": {\n        \"count\": 3,\n        \"items\": [\n          { \"icon\": \"Gift box\", \"text\": \"Perfect for gifts\" },\n          { \"icon\": \"Coffee cup\", \"text\": \"Enjoy with coffee or tea\" },\n          { \"icon\": \"Heart\", \"text\": \"Comforting, gentle taste\" }\n        ]\n      },\n      \"footer\": {\n        \"banner_text\": \"Wishing happiness reaches you who worked hard today.\",\n        \"brand_info\": \"Hana to OYATSU logo, subtitle 'Heartfelt, handmade taste'\",\n        \"contact_info\": \"Instagram logo, handle, hashtag, and a QR code\"\n      }\n    }\n  }\n}",
     "outputImages": [
-      "/images/2046091784812708315_0.jpg"
+      "/images/2046091784812708315_0.jpeg"
     ],
-    "sourceUrl": "https://x.com/uniyume/status/2046091784812708315"
+    "sourceUrl": "https://x.com/uniyume/status/2046091784812708315",
+    "approved": true
   },
   {
     "id": "2046348036394393677",
@@ -1172,7 +1211,8 @@
     "outputImages": [
       "/images/2046695673630728261_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Sr_Donze/status/2046695673630728261"
+    "sourceUrl": "https://x.com/Sr_Donze/status/2046695673630728261",
+    "approved": true
   },
   {
     "id": "2046604079628161268",
@@ -1277,7 +1317,7 @@
   {
     "id": "2046448092871041500-48323fcd",
     "title": "3D Urban Systems Atlas Infographic",
-    "thumbnail": "/images/2046448092871041500_0.jpg",
+    "thumbnail": "/images/2046448092871041500-48323fcd_0.jpeg",
     "thumbnailAspect": 1.33,
     "author": "虎小象",
     "authorUrl": "https://x.com/hx831126",
@@ -1295,10 +1335,12 @@
     "createdAt": "",
     "prompt": "{\n  \"type\": \"complex urban systems atlas infographic\",\n  \"style\": \"{argument name=\\\"color palette\\\" default=\\\"dark background with glowing blue, gold, and purple accents\\\"}, highly detailed technical illustration, 3D isometric cutaway\",\n  \"header\": {\n    \"title\": \"{argument name=\\\"chinese city name\\\" default=\\\"上海\\\"}城市系统剖面 {argument name=\\\"english city name\\\" default=\\\"SHANGHAI\\\"} URBAN SYSTEMS ATLAS\",\n    \"subtitles\": [\n      \"地表之上，是城市；地表之下，是秩序 {argument name=\\\"english subtitle\\\" default=\\\"Beneath the skyline lies the machine.\\\"}\",\n      \"一座城市如何运转 How a Megacity Actually Works\"\n    ]\n  },\n  \"layout\": {\n    \"top_left\": \"Compass rose and city map labeled '上海市域位置 SHANGHAI LOCATION'\",\n    \"top_right\": \"Data table titled '城市数据 CITY DATA' with 7 rows of statistics\",\n    \"centerpiece\": {\n      \"description\": \"{argument name=\\\"centerpiece style\\\" default=\\\"highly detailed 3D isometric cutaway render\\\"} of a megacity river landscape\",\n      \"layers\": [\n        \"地面层 SURFACE\",\n        \"排水层 DRAINAGE LAYER\",\n        \"电力层 POWER LAYER\",\n        \"通信层 COMMUNICATION LAYER\",\n        \"轨道交通层 METRO LAYER\",\n        \"道路隧道层 ROAD TUNNEL LAYER\",\n        \"管廊综合层 UTILITY CORRIDOR LAYER\"\n      ]\n    },\n    \"side_panels\": [\n      { \"id\": \"01\", \"title\": \"城市主骨架 URBAN SKELETON\", \"elements\": \"Map with 8 legend items\" },\n      { \"id\": \"02\", \"title\": \"排水与地下水网 DRAINAGE + STORMWATER\", \"elements\": \"Cross-section diagram '典型排水剖面 DRAINAGE SECTION' with 5 legend items\" },\n      { \"id\": \"03\", \"title\": \"电网与能源分配 POWER GRID + ENERGY\", \"elements\": \"Cross-section diagram '典型变电站剖面 SUBSTATION SECTION' with 6 legend items\" },\n      { \"id\": \"04\", \"title\": \"通信与网络骨干 TELECOM + INTERNET\", \"elements\": \"Cross-section diagram '数据中心剖面 DATA CENTER SECTION' with 6 legend items\" },\n      { \"id\": \"05\", \"title\": \"地铁与地下交通 METRO + SUBSURFACE MOBILITY\", \"elements\": \"Cross-section diagram '人民广场站剖面 PEOPLE'S SQUARE STATION' with 6 legend items\" },\n      { \"id\": \"06\", \"title\": \"道路、高架与循环 ROADS + ELEVATED MOBILITY\", \"elements\": \"Cross-section diagram '南浦大桥剖面 NANPU BRIDGE SECTION' with 6 legend items\" },\n      { \"id\": \"07\", \"title\": \"管廊与地下设施 UTILITY CORRIDORS + PLUMBING\", \"elements\": \"Cross-section diagram '综合管廊 UTILITY CORRIDOR' with 8 legend items\" },\n      { \"id\": \"08\", \"title\": \"城市流量与系统协同 URBAN FLOWS + COORDINATION\", \"elements\": \"Map diagram '城市运行指挥中心 CITY OPERATIONS CENTER' with 6 legend items\" }\n    ],\n    \"bottom_panels\": {\n      \"system_logic\": {\n        \"title\": \"城市系统协同逻辑 SYSTEM COORDINATION LOGIC\",\n        \"steps\": 4,\n        \"labels\": [\"感知层 SENSING LAYER\", \"网络层 NETWORK LAYER\", \"平台层 PLATFORM LAYER\", \"应用层 APPLICATION LAYER\"]\n      },\n      \"city_brain\": {\n        \"title\": \"城市大脑 CITY BRAIN\",\n        \"central_node\": 1,\n        \"peripheral_nodes\": 8\n      },\n      \"references\": {\n        \"depth_scale\": { \"title\": \"深度与尺度 DEPTH & SCALE REFERENCE\", \"icons\": 5 },\n        \"map_scale\": { \"title\": \"比例尺 SCALE\", \"markers\": 4 }\n      }\n    }\n  }\n}",
     "outputImages": [
-      "/images/2046448092871041500_0.jpg"
+      "/images/2046448092871041500-48323fcd_0.jpeg"
     ],
     "sourceUrl": "https://x.com/hx831126/status/2046448092871041500",
-    "sourceId": "2046448092871041500"
+    "sourceId": "2046448092871041500",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045764016858087720",
@@ -1500,7 +1542,8 @@
     "outputImages": [
       "/images/2045020608770224419_0.jpg"
     ],
-    "sourceUrl": "https://x.com/wtry1102/status/2045020608770224419"
+    "sourceUrl": "https://x.com/wtry1102/status/2045020608770224419",
+    "approved": true
   },
   {
     "id": "2045545878824595667",
@@ -1525,7 +1568,9 @@
     "outputImages": [
       "/images/2045545878824595667_0.jpg"
     ],
-    "sourceUrl": "https://x.com/old_pgmrs_will/status/2045545878824595667"
+    "sourceUrl": "https://x.com/old_pgmrs_will/status/2045545878824595667",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046343828739911683",
@@ -1828,7 +1873,8 @@
     "outputImages": [
       "/images/2046434670724907395_0.jpg"
     ],
-    "sourceUrl": "https://x.com/BubbleBrain/status/2046434670724907395"
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046434670724907395",
+    "approved": true
   },
   {
     "id": "2044356515751231527",
@@ -2028,7 +2074,8 @@
     "outputImages": [
       "/images/2046778808221733337_0.jpg"
     ],
-    "sourceUrl": "https://x.com/polloai_kr/status/2046778808221733337#reversed-1"
+    "sourceUrl": "https://x.com/polloai_kr/status/2046778808221733337#reversed-1",
+    "approved": true
   },
   {
     "id": "2046110944242348329",
@@ -2255,7 +2302,9 @@
     "outputImages": [
       "/images/2045461386063659038_0.jpg"
     ],
-    "sourceUrl": "https://x.com/kotsu_kotsu_san/status/2045461386063659038"
+    "sourceUrl": "https://x.com/kotsu_kotsu_san/status/2045461386063659038",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045057984200687645",
@@ -2280,7 +2329,9 @@
     "outputImages": [
       "/images/2045057984200687645_0.jpg"
     ],
-    "sourceUrl": "https://x.com/AmberPromptai/status/2045057984200687645"
+    "sourceUrl": "https://x.com/AmberPromptai/status/2045057984200687645",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046212158422159493",
@@ -2559,31 +2610,6 @@
     "sourceUrl": "https://x.com/aidavid125/status/2046504856060670389"
   },
   {
-    "id": "2046171479763828888",
-    "title": "2x2 SNS School Banner Ad Grid",
-    "thumbnail": "/images/2046171479763828888_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "パク🎈動画広告分析Pro × AI",
-    "authorUrl": "https://x.com/masapark95",
-    "tags": [
-      "zh",
-      "advertising"
-    ],
-    "category": "advertising",
-    "lang": "zh",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "",
-    "prompt": "{\n  \"type\": \"2x2 grid of banner advertisements\",\n  \"theme\": \"{argument name=\\\"school name\\\" default=\\\"SNSスクール\\\"}\",\n  \"target_audience\": \"{argument name=\\\"target audience\\\" default=\\\"学生\\\"}\",\n  \"layout\": {\n    \"grid\": \"2x2\",\n    \"panels\": [\n      {\n        \"position\": \"top-left\",\n        \"style\": \"dark neon, blue and purple\",\n        \"subject\": \"young woman looking up hopefully, holding a smartphone, wearing a purple sweatshirt\",\n        \"main_text\": \"{argument name=\\\"banner 1 headline\\\" default=\\\"SNSを仕事にしたい人へ\\\"}\",\n        \"sub_text\": \"“好き”をカタチに。未来を変える一歩を、今。\",\n        \"elements\": [\n          \"white and yellow typography\",\n          \"yellow call-to-action button: チェックする >\",\n          \"hand-drawn neon accents (crown, stars, heart)\"\n        ]\n      },\n      {\n        \"position\": \"top-right\",\n        \"style\": \"bright, pop, cyan and white\",\n        \"subject\": \"young woman smiling directly at camera, holding a smartphone, wearing a teal hoodie, hair in a bun\",\n        \"main_text\": \"{argument name=\\\"banner 2 headline\\\" default=\\\"好きな発信を武器にする\\\"}\",\n        \"sub_text\": \"企画・編集・投稿を学ぶ\",\n        \"elements\": [\n          \"torn paper texture backgrounds for text\",\n          \"yellow starburst sticker: 無料体験\",\n          \"3 feature icons with text: lightbulb (企画力), pencil (編集力), paper plane (投稿力)\"\n        ]\n      },\n      {\n        \"position\": \"bottom-left\",\n        \"style\": \"dark, analytical, neon purple and green\",\n        \"subject\": \"young man looking thoughtfully at his smartphone, wearing a black hoodie\",\n        \"main_text\": \"{argument name=\\\"banner 3 headline\\\" default=\\\"バズるだけじゃない 分析まで学べる\\\"}\",\n        \"sub_text\": \"#伸びる理由がわかると、もっと伸ばせる。\",\n        \"elements\": [\n          \"3 floating holographic data panels with line graphs and stats (125.6万, 23.8%, 12.6%)\",\n          \"3 feature icons at bottom: bar chart (データ分析), magnifying glass (改善提案), target (成果につなげる)\",\n          \"yellow call-to-action button: 詳しく見る >\"\n        ]\n      },\n      {\n        \"position\": \"bottom-right\",\n        \"style\": \"bright, friendly, purple and white\",\n        \"subject\": \"group of 4 young people (3 women, 1 man) huddled together smiling at a smartphone\",\n        \"main_text\": \"SNSで未来の可能性を広げよう\",\n        \"sub_text\": \"仲間と学べるコミュニティ\",\n        \"elements\": [\n          \"torn paper texture backgrounds for text\",\n          \"3 bullet points with icons (people, speech bubbles, rising chart)\",\n          \"2 polaroid-style inset photos showing students studying at a desk\",\n          \"yellow call-to-action button: 今すぐ参加 >\"\n        ]\n      }\n    ]\n  }\n}",
-    "outputImages": [
-      "/images/2046171479763828888_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/masapark95/status/2046171479763828888"
-  },
-  {
     "id": "2046078922258100558",
     "title": "Sci-Fi Deep Sea Concept Art & Reference Sheet",
     "thumbnail": "/images/2046078922258100558_0.jpg",
@@ -2707,7 +2733,9 @@
     "outputImages": [
       "/images/2046144801071079612_0.jpg"
     ],
-    "sourceUrl": "https://x.com/old_pgmrs_will/status/2046144801071079612"
+    "sourceUrl": "https://x.com/old_pgmrs_will/status/2046144801071079612",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2043663336445989369",
@@ -2784,32 +2812,6 @@
       "/images/2045108485801816165_0.jpg"
     ],
     "sourceUrl": "https://x.com/songsummer920/status/2045108485801816165"
-  },
-  {
-    "id": "2044382053521936809-4cc509b7",
-    "title": "深色模式 AI API 定价页面模型",
-    "thumbnail": "/images/2044382053521936809_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "IDK",
-    "authorUrl": "https://x.com/Gdthainakub",
-    "tags": [
-      "en",
-      "ui"
-    ],
-    "category": "ui",
-    "lang": "en",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "2026-04-15T11:47:18.000Z",
-    "prompt": "{\n  \"type\": \"dark mode web page UI mockup\",\n  \"theme\": \"sleek, modern, dark theme with white and light grey text\",\n  \"header\": {\n    \"logo\": \"{argument name=\\\"company name\\\" default=\\\"OpenAI\\\"}\",\n    \"navigation\": [\"Research\", \"Products\", \"Safety\", \"Company\"],\n    \"actions\": [\"Search icon\", \"Log in\", \"Try ChatGPT button\"]\n  },\n  \"layout\": {\n    \"left_column\": {\n      \"label\": \"PRICING\",\n      \"headline\": \"{argument name=\\\"model name\\\" default=\\\"GPT-8\\\"}\",\n      \"subheading\": \"{argument name=\\\"main tagline\\\" default=\\\"Our most powerful model yet.\\\"}\",\n      \"description\": \"GPT-8 is designed for intelligence, reliability, and real-world impact. Built with multimodal reasoning, long-context understanding, and advanced tool use.\",\n      \"button\": \"GET STARTED\",\n      \"features\": {\n        \"count\": 3,\n        \"items\": [\n          {\"icon\": \"brain\", \"title\": \"Frontier intelligence\", \"desc\": \"State-of-the-art reasoning, coding, and problem solving.\"},\n          {\"icon\": \"shield\", \"title\": \"Trusted by design\", \"desc\": \"Stronger safety, more steerability, and enterprise-grade reliability.\"},\n          {\"icon\": \"lightning bolt\", \"title\": \"Built for builders\", \"desc\": \"Native tool use, structured outputs, and long-context workflows.\"}\n        ]\n      }\n    },\n    \"right_column\": {\n      \"type\": \"pricing card\",\n      \"header\": \"PRICING - Simple, token-based pricing. No hidden fees.\",\n      \"toggle\": [\"INPUT\", \"CACHE READ\"],\n      \"token_pricing\": {\n        \"count\": 5,\n        \"rows\": [\n          {\"name\": \"Text tokens\", \"unit\": \"Per 1M tokens\", \"price\": \"{argument name=\\\"text token price\\\" default=\\\"$3.00\\\"}\"},\n          {\"name\": \"Image tokens\", \"unit\": \"Per 1M tokens\", \"price\": \"$10.00\"},\n          {\"name\": \"Audio tokens\", \"unit\": \"Per 1M tokens\", \"price\": \"$6.00\"},\n          {\"name\": \"Video tokens\", \"unit\": \"Per 1M tokens\", \"price\": \"$15.00\"},\n          {\"name\": \"Output tokens\", \"unit\": \"Per 1M tokens\", \"price\": \"{argument name=\\\"output token price\\\" default=\\\"$12.00\\\"}\"}\n        ]\n      },\n      \"additional_features\": {\n        \"count\": 2,\n        \"rows\": [\n          {\"name\": \"Caching\", \"desc\": \"Save on repeated inputs with caching.\", \"price\": \"$0.30 / 1M tokens\"},\n          {\"name\": \"Batch API (50% discount)\", \"desc\": \"Lower costs for asynchronous workloads.\", \"price\": \"-50%\"}\n        ]\n      },\n      \"footer_links\": [\"LEARN MORE\", \"Model docs\", \"Pricing details\"]\n    }\n  },\n  \"footer\": \"Prices are in USD. View the full pricing table in our docs.\"\n}",
-    "outputImages": [
-      "/images/2044382053521936809_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/Gdthainakub/status/2044382053521936809",
-    "sourceId": "2044382053521936809"
   },
   {
     "id": "2046317327134638212",
@@ -2966,7 +2968,7 @@
   {
     "id": "2044789137853792669-a64214ee",
     "title": "SaaS AI 仪表盘落地页",
-    "thumbnail": "/images/2044789137853792669_0.jpg",
+    "thumbnail": "/images/2044789137853792669-a64214ee_0.jpeg",
     "thumbnailAspect": 1.33,
     "author": "Daniel",
     "authorUrl": "https://x.com/Fancyfreer",
@@ -2984,7 +2986,7 @@
     "createdAt": "2026-04-16T14:44:55.000Z",
     "prompt": "{\n  \"type\": \"SaaS landing page hero graphic\",\n  \"style\": \"Modern UI/UX, light theme, soft shadows, glassmorphism, {argument name=\\\"primary theme color\\\" default=\\\"purple and blue gradients\\\"}\",\n  \"header\": {\n    \"headline\": \"{argument name=\\\"main headline\\\" default=\\\"Run your work with AI clarity.\\\"}\",\n    \"subheadline\": \"Coordinate tasks, context, and execution across your tools in one intelligent workspace.\"\n  },\n  \"layout\": {\n    \"center_dashboard\": {\n      \"app_name\": \"{argument name=\\\"app name\\\" default=\\\"FlowBridge\\\"}\",\n      \"greeting\": \"{argument name=\\\"user greeting\\\" default=\\\"Good morning, Alex 👋\\\"}\",\n      \"sidebar_links\": 8,\n      \"top_metrics_cards\": 4,\n      \"recent_activity_items\": 3,\n      \"project_progress_bars\": 3,\n      \"floating_action_bar\": \"{argument name=\\\"floating bar text\\\" default=\\\"Ask AI anything or type a command...\\\"}\"\n    },\n    \"left_integrations\": {\n      \"count\": 4,\n      \"style\": \"pill-shaped cards connected by thin lines to the center dashboard\",\n      \"labels\": [\n        \"Google Calendar: Events & schedule\",\n        \"Notion: Docs & knowledge\",\n        \"Slack: Messages & updates\",\n        \"Google Drive: Files & assets\"\n      ]\n    },\n    \"right_integrations\": {\n      \"count\": 4,\n      \"style\": \"pill-shaped cards connected by thin lines to the center dashboard\",\n      \"labels\": [\n        \"Asana: Tasks & projects\",\n        \"GitHub: Code & commits\",\n        \"Figma: Design files\",\n        \"Microsoft Teams: Calls & meetings\"\n      ]\n    },\n    \"bottom_feature_cards\": {\n      \"count\": 3,\n      \"style\": \"rectangular cards with soft shadows\",\n      \"cards\": [\n        {\n          \"title\": \"AI-powered overview\",\n          \"description\": \"Get instant clarity on goals, progress, and what needs your attention.\",\n          \"visuals\": \"Line chart showing 24.6 hr focus time, and 3 bottom metrics (Meetings, Deep work, Tasks done)\"\n        },\n        {\n          \"title\": \"Connected execution\",\n          \"description\": \"Stay aligned with tasks, updates, and dependencies across your tools.\",\n          \"visuals\": \"List of 4 upcoming tasks and 4 team workload progress bars with user avatars\"\n        },\n        {\n          \"title\": \"Insights that drive impact\",\n          \"description\": \"Understand progress, unblock risks, and make smarter decisions.\",\n          \"visuals\": \"Donut chart showing 18 projects by status, and a list of 3 top risks with red flag icons\"\n        }\n      ]\n    }\n  }\n}",
     "outputImages": [
-      "/images/2044789137853792669_0.jpg"
+      "/images/2044789137853792669-a64214ee_0.jpeg"
     ],
     "sourceUrl": "https://x.com/Fancyfreer/status/2044789137853792669",
     "sourceId": "2044789137853792669"
@@ -2992,15 +2994,15 @@
   {
     "id": "2044781525942821206-7accf700",
     "title": "四款游戏联动活动宣传海报",
-    "thumbnail": "/images/2044781525942821206_0.jpg",
+    "thumbnail": "/images/2044781525942821206-7accf700_0.jpeg",
     "thumbnailAspect": 1.33,
     "author": "伟豪学长AI",
     "authorUrl": "https://x.com/wilsondu311",
     "tags": [
       "zh",
-      "manga"
+      "game"
     ],
-    "category": "manga",
+    "category": "game",
     "lang": "zh",
     "stats": {
       "likes": 0,
@@ -3010,10 +3012,11 @@
     "createdAt": "2026-04-16T14:14:40.000Z",
     "prompt": "{\n  \"type\": \"video game crossover promotional poster\",\n  \"layout\": {\n    \"header\": {\n      \"description\": \"4 distinct game logos separated by 'X' marks\",\n      \"logos\": [\"原神\", \"鸣潮\", \"黑神话：悟空\", \"洛克王国：世界\"]\n    },\n    \"character_collage\": {\n      \"description\": \"A dynamic V-shaped collage merging 4 distinct game art styles\",\n      \"sections\": [\n        {\n          \"position\": \"top-left\",\n          \"style\": \"anime cel-shaded\",\n          \"content\": \"girl with white hair and blue top hat, small floating white-haired companion, water magic effects, fantasy castle background\"\n        },\n        {\n          \"position\": \"top-right\",\n          \"style\": \"anime cel-shaded\",\n          \"content\": \"male and female protagonists in black tactical outfits, dark night sky with full moon, ruined landscape\"\n        },\n        {\n          \"position\": \"center\",\n          \"style\": \"hyper-realistic 3D\",\n          \"content\": \"monkey king in ornate dark armor, intense expression, epic battlefield background\"\n        },\n        {\n          \"position\": \"bottom-right\",\n          \"style\": \"bright anime\",\n          \"content\": \"young boy in blue cap holding a wooden staff, accompanied by 3 small cute elemental mascot monsters, vibrant fantasy town\"\n        }\n      ]\n    },\n    \"center_typography\": {\n      \"main_headline\": \"{argument name=\\\"main headline\\\" default=\\\"跨越世界 共赴热爱\\\"}\",\n      \"subtitle\": \"{argument name=\\\"subtitle\\\" default=\\\"四大游戏联动开启\\\"}\",\n      \"game_list\": \"原神 × 鸣潮 × 黑神话：悟空 × 洛克王国：世界\"\n    },\n    \"information_panels\": {\n      \"event_details_panel\": {\n        \"columns\": 2,\n        \"left_column\": {\n          \"title\": \"联动时间\",\n          \"value\": \"{argument name=\\\"event dates\\\" default=\\\"2024/10/01 - 2024/12/31\\\"}\"\n        },\n        \"right_column\": {\n          \"title\": \"联动内容\",\n          \"bullet_points_count\": 4,\n          \"details\": [\"联动限定角色 & 皮肤\", \"专属任务 & 剧情\", \"联动道具 & 宠物\", \"主题活动 & 丰厚奖励\"]\n        }\n      },\n      \"rewards_preview_panel\": {\n        \"title\": \"联动奖励预览\",\n        \"count\": 5,\n        \"items\": [\n          { \"icon\": \"four-pointed star gem\", \"label\": \"原石×1600\" },\n          { \"icon\": \"dark metallic sphere\", \"label\": \"星声×800\" },\n          { \"icon\": \"golden bell relic\", \"label\": \"珍玩：风铎\" },\n          { \"icon\": \"blue mascot pet\", \"label\": \"洛克联动宠物\" },\n          { \"icon\": \"set of 3 cards\", \"label\": \"联动纪念名片\" }\n        ]\n      }\n    },\n    \"footer\": \"copyright text and official announcement disclaimer in small print\"\n  }\n}",
     "outputImages": [
-      "/images/2044781525942821206_0.jpg"
+      "/images/2044781525942821206-7accf700_0.jpeg"
     ],
     "sourceUrl": "https://x.com/wilsondu311/status/2044781525942821206",
-    "sourceId": "2044781525942821206"
+    "sourceId": "2044781525942821206",
+    "approved": true
   },
   {
     "id": "2045665083846733914",
@@ -3038,7 +3041,9 @@
     "outputImages": [
       "/images/2045665083846733914_0.jpg"
     ],
-    "sourceUrl": "https://x.com/ChoJaehun3/status/2045665083846733914"
+    "sourceUrl": "https://x.com/ChoJaehun3/status/2045665083846733914",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045427471852711997",
@@ -3314,7 +3319,9 @@
       "/images/2045029905164030264_0.jpg"
     ],
     "sourceUrl": "https://x.com/Samo_Toshu/status/2045029905164030264",
-    "sourceId": "2045029905164030264"
+    "sourceId": "2045029905164030264",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046646147653984645",
@@ -3692,7 +3699,9 @@
     "outputImages": [
       "/images/2046637130072682750_0.jpg"
     ],
-    "sourceUrl": "https://x.com/3DVR3/status/2046637130072682750"
+    "sourceUrl": "https://x.com/3DVR3/status/2046637130072682750",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046153405845147806",
@@ -3793,7 +3802,8 @@
     "outputImages": [
       "/images/2046534506673496404_0.jpg"
     ],
-    "sourceUrl": "https://x.com/MurphChenOnX/status/2046534506673496404"
+    "sourceUrl": "https://x.com/MurphChenOnX/status/2046534506673496404",
+    "approved": true
   },
   {
     "id": "2046189362933858580-c759c6d8",
@@ -3851,7 +3861,7 @@
   {
     "id": "2046295223584862235-abdbcfd3",
     "title": "Japanese Happiness Seminar Promo Poster",
-    "thumbnail": "/images/2046295223584862235_0.jpg",
+    "thumbnail": "/images/2046295223584862235-abdbcfd3_0.jpeg",
     "thumbnailAspect": 1.33,
     "author": "中崎工房 | AIで1時間の仕事を5分で終わらせる人",
     "authorUrl": "https://x.com/nakazakifam",
@@ -3869,7 +3879,7 @@
     "createdAt": "",
     "prompt": "{\n  \"type\": \"promotional poster\",\n  \"theme\": \"radiant, golden, sparkling, overwhelming happiness\",\n  \"color_palette\": [\"gold\", \"white\", \"warm yellow\", \"pink accents\"],\n  \"header\": {\n    \"top_catchcopy\": \"全人類から究極の幸せの極みの感情を吸い上げた\",\n    \"main_title\": \"{argument name=\\\"main title\\\" default=\\\"究極の幸せ\\\"}\",\n    \"subtitle\": \"{argument name=\\\"catchphrase\\\" default=\\\"伝染させちゃうよ!!\\\"}\",\n    \"title_style\": \"large, bold, sparkling gold texture, 3D effect\"\n  },\n  \"hero_section\": {\n    \"image\": \"{argument name=\\\"hero subject\\\" default=\\\"a family of three laughing ecstatically, looking upwards, bathed in golden light\\\"}\",\n    \"background\": \"rainbow, sparkling particles, glowing aura\",\n    \"overlay_text_center\": \"この一枚が、あなたの人生を最幸に変える!!\",\n    \"vertical_text_left\": \"幸せは、伝染する。あなたの笑顔が、世界を幸せにする。\",\n    \"vertical_text_right\": \"史上最高の幸せ体験を、あなたに。\",\n    \"badge_top_right\": {\n      \"shape\": \"gold circle\",\n      \"text\": \"累計販売枚数 {argument name=\\\"sales badge text\\\" default=\\\"300,000\\\"} 枚突破!!\"\n    }\n  },\n  \"middle_section\": {\n    \"section_title\": \"究極の幸せ体験を実現する5つの幸せポイント\",\n    \"count\": 5,\n    \"cards\": [\n      { \"number\": 1, \"title\": \"1 幸せ覚醒\", \"image\": \"person on beach at sunset with arms raised\" },\n      { \"number\": 2, \"title\": \"2 愛と感謝の連鎖\", \"image\": \"family of four hugging warmly\" },\n      { \"number\": 3, \"title\": \"3 心の充足MAX\", \"image\": \"woman with hands clasped in gratitude, glowing light\" },\n      { \"number\": 4, \"title\": \"4 幸せ体質に変化\", \"image\": \"woman in flower field with arms raised\" },\n      { \"number\": 5, \"title\": \"5 永遠の幸せループ\", \"image\": \"sunlit path through a lush flower garden\" }\n    ]\n  },\n  \"bottom_section\": {\n    \"left_panel\": {\n      \"title\": \"今だけ! 5大特典付き!!\",\n      \"list_count\": 5,\n      \"icon\": \"gold gift box with ribbon\"\n    },\n    \"center_panel\": {\n      \"title\": \"究極の幸せポスター\",\n      \"subtitle\": \"B2サイズ (728×515mm) 超高精細印刷 / 選べる3種のデザイン\",\n      \"thumbnail_count\": 3,\n      \"thumbnail_labels\": [\"光の祝福ver.\", \"虹の奇跡ver.\", \"花の喜びver.\"]\n    },\n    \"right_panel\": {\n      \"title\": \"魂の価格\",\n      \"price\": \"{argument name=\\\"price\\\" default=\\\"¥2,980\\\"}\",\n      \"shipping\": \"送料無料\",\n      \"style\": \"large red numbers for price, gold background\"\n    }\n  },\n  \"footer\": {\n    \"text\": \"幸せは、分かち合うほど増えていく。さあ、あなたの幸せを、世界中に広げよう!!\",\n    \"icon\": \"small red heart drawn with a line\"\n  }\n}",
     "outputImages": [
-      "/images/2046295223584862235_0.jpg"
+      "/images/2046295223584862235-abdbcfd3_0.jpeg"
     ],
     "sourceUrl": "https://x.com/nakazakifam/status/2046295223584862235",
     "sourceId": "2046295223584862235"
@@ -3898,7 +3908,9 @@
       "/images/2046251166636622216_0.jpg"
     ],
     "sourceUrl": "https://x.com/anemone_sd/status/2046251166636622216",
-    "sourceId": "2046251166636622216"
+    "sourceId": "2046251166636622216",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045092212246225051",
@@ -3924,7 +3936,9 @@
       "/images/2045092212246225051_0.jpg",
       "/images/2045092212246225051_1.jpg"
     ],
-    "sourceUrl": "https://x.com/Nico_Nico_Ch/status/2045092212246225051"
+    "sourceUrl": "https://x.com/Nico_Nico_Ch/status/2045092212246225051",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045679633832595558",
@@ -4227,7 +4241,8 @@
       "/images/2046062551264268396_0.jpg",
       "/images/2046062551264268396_1.jpg"
     ],
-    "sourceUrl": "https://x.com/ai_hakase_/status/2046062551264268396"
+    "sourceUrl": "https://x.com/ai_hakase_/status/2046062551264268396",
+    "approved": true
   },
   {
     "id": "2045408172463276258",
@@ -4252,7 +4267,9 @@
     "outputImages": [
       "/images/2045408172463276258_0.jpg"
     ],
-    "sourceUrl": "https://x.com/tshikimi/status/2045408172463276258"
+    "sourceUrl": "https://x.com/tshikimi/status/2045408172463276258",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046532512202228089",
@@ -4704,7 +4721,8 @@
       "/images/2045074817339052095_0.jpg"
     ],
     "sourceUrl": "https://x.com/kevintao1024/status/2045074817339052095",
-    "sourceId": "2045074817339052095"
+    "sourceId": "2045074817339052095",
+    "approved": true
   },
   {
     "id": "2045506378824143114",
@@ -5489,7 +5507,9 @@
     "outputImages": [
       "/images/2046199980059418936_0.jpg"
     ],
-    "sourceUrl": "https://x.com/llinze521/status/2046199980059418936"
+    "sourceUrl": "https://x.com/llinze521/status/2046199980059418936",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045872239015506184",
@@ -6245,7 +6265,9 @@
       "/images/2045033963744633232_0.jpg"
     ],
     "sourceUrl": "https://x.com/arrakis_ai/status/2045033963744633232",
-    "sourceId": "2045033963744633232"
+    "sourceId": "2045033963744633232",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2043600744037994896",
@@ -6445,7 +6467,9 @@
     "outputImages": [
       "/images/2044685484040049036_0.jpg"
     ],
-    "sourceUrl": "https://x.com/c0tanpoTesh1ta/status/2044685484040049036"
+    "sourceUrl": "https://x.com/c0tanpoTesh1ta/status/2044685484040049036",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2044981630767673481",
@@ -6521,7 +6545,9 @@
     "outputImages": [
       "/images/2046523198116889064_0.jpg"
     ],
-    "sourceUrl": "https://x.com/carsonyungos/status/2046523198116889064"
+    "sourceUrl": "https://x.com/carsonyungos/status/2046523198116889064",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046570968257294410",
@@ -6773,7 +6799,9 @@
     "outputImages": [
       "/images/2046268941941850575_0.jpg"
     ],
-    "sourceUrl": "https://x.com/BubbleBrain/status/2046268941941850575"
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046268941941850575",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045370162627629275",
@@ -6824,7 +6852,9 @@
       "/images/2046586251956875763_0.jpg",
       "/images/2046586251956875763_1.jpg"
     ],
-    "sourceUrl": "https://x.com/exit_dev/status/2046586251956875763"
+    "sourceUrl": "https://x.com/exit_dev/status/2046586251956875763",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2044787289956753739",
@@ -22576,7 +22606,8 @@
     "author": "哈基雅尔维的波尔卡",
     "authorUrl": "https://x.com/AlexChan258",
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "category": "other",
     "lang": "zh",
@@ -22705,7 +22736,8 @@
     "author": "林克 Link",
     "authorUrl": "https://x.com/veoxft",
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "category": "other",
     "lang": "zh",
@@ -22820,7 +22852,8 @@
     "author": "蜡笔进化论",
     "authorUrl": "https://x.com/crayon1267",
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "category": "other",
     "lang": "zh",
@@ -22916,7 +22949,8 @@
       "/images/2047256189311099313_1.jpg"
     ],
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "stats": {
       "likes": 132,
@@ -23029,7 +23063,8 @@
       "/images/2047248326198743174_1.jpg"
     ],
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "stats": {
       "likes": 42,
@@ -23105,7 +23140,8 @@
       "/images/2047247352029983055_1.jpg"
     ],
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "stats": {
       "likes": 26,
@@ -23289,7 +23325,8 @@
       "/images/2047264120601473133_5.jpg"
     ],
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "stats": {
       "likes": 2,
@@ -23398,7 +23435,8 @@
       "/images/2047251595214360643_1.jpg"
     ],
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "stats": {
       "likes": 1,
@@ -23424,7 +23462,8 @@
       "/images/2047341961988686318_3.jpg"
     ],
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "stats": {
       "likes": 0,
@@ -23448,7 +23487,8 @@
       "/images/2047318634394165408_1.jpg"
     ],
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "stats": {
       "likes": 0,
@@ -23472,7 +23512,8 @@
       "/images/2047312783184998415_1.jpg"
     ],
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "stats": {
       "likes": 0,
@@ -23502,7 +23543,8 @@
       "/images/2047301313407676857_7.jpg"
     ],
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "stats": {
       "likes": 0,
@@ -23526,7 +23568,8 @@
       "/images/2047285104792236215_1.jpg"
     ],
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "stats": {
       "likes": 0,
@@ -23543,7 +23586,8 @@
     "author": "m46",
     "authorUrl": "https://x.com/i",
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "category": "other",
     "lang": "zh",
@@ -23574,7 +23618,8 @@
     "author": "ライコ＠AI illustration",
     "authorUrl": "https://x.com/i",
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "category": "other",
     "lang": "zh",
@@ -23599,7 +23644,8 @@
     "author": "Suilon",
     "authorUrl": "https://x.com/i",
     "tags": [
-      "en"
+      "en",
+      "other"
     ],
     "category": "other",
     "lang": "en",
@@ -23678,7 +23724,8 @@
     "author": "aditya dand",
     "authorUrl": "https://x.com/i",
     "tags": [
-      "en"
+      "en",
+      "other"
     ],
     "category": "other",
     "lang": "en",
@@ -23761,7 +23808,8 @@
     "author": "Fito",
     "authorUrl": "https://x.com/i",
     "tags": [
-      "en"
+      "en",
+      "other"
     ],
     "category": "other",
     "lang": "en",
@@ -23816,7 +23864,8 @@
     "author": "Shef Wang",
     "authorUrl": "https://x.com/i",
     "tags": [
-      "en"
+      "en",
+      "other"
     ],
     "category": "other",
     "lang": "en",
@@ -23841,7 +23890,8 @@
     "author": "Reu.",
     "authorUrl": "https://x.com/i",
     "tags": [
-      "zh"
+      "zh",
+      "other"
     ],
     "category": "other",
     "lang": "zh",
