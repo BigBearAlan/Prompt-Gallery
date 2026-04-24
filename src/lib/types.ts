@@ -23,6 +23,35 @@ export interface PromptEntry {
 export type SortBy = 'likes' | 'views' | 'recent';
 export type LangFilter = 'all' | 'en' | 'zh' | 'ja' | 'other';
 
+export interface LocalizedSearchText {
+  zh: string;
+  en: string;
+  ja: string;
+}
+
+export interface LocalizedSearchKeywords {
+  zh: string[];
+  en: string[];
+  ja: string[];
+}
+
+export interface ImageSearchDoc {
+  id: string;
+  caption: LocalizedSearchText;
+  keywords: LocalizedSearchKeywords;
+  visibleText: string[];
+  objects: string[];
+  searchText: string;
+  version: string;
+  imagePaths?: string[];
+}
+
+export interface SearchIndexFile {
+  version: string;
+  generatedAt: string;
+  entries: Record<string, ImageSearchDoc>;
+}
+
 export const CATEGORIES = [
   'all',
   'manga',

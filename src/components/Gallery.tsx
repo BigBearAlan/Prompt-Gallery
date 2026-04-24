@@ -1,8 +1,15 @@
 'use client';
 
-import { useState, useMemo, useCallback, useRef } from 'react';
-import type { PromptEntry, SortBy } from '@/lib/types';
+import { useState, useMemo, useCallback, useEffect, useRef, useDeferredValue, startTransition } from 'react';
+import type { PromptEntry, SearchIndexFile, SortBy } from '@/lib/types';
+import { withBasePath } from '@/lib/asset-path';
 import { useLocale } from '@/lib/i18n';
+import {
+  compareBySecondarySort,
+  parseSearchQuery,
+  scoreImageSearch,
+  scorePrefixSearch,
+} from '@/lib/search';
 import PromptCard from './PromptCard';
 import PromptModal from './PromptModal';
 import SearchFilterBar from './SearchFilterBar';
@@ -16,12 +23,15 @@ interface Props {
 export default function Gallery({ entries }: Props) {
   const { tx } = useLocale();
   const [search, setSearch] = useState('');
+  const deferredSearch = useDeferredValue(search);
   const [category, setCategory] = useState('all');
   const [lang, setLang] = useState('all');
   const [sortBy, setSortBy] = useState<SortBy>('recent');
   const [page, setPage] = useState(1);
   const [selected, setSelected] = useState<PromptEntry | null>(null);
   const [tagFilter, setTagFilter] = useState('');
+  const [searchIndex, setSearchIndex] = useState<SearchIndexFile | null>(null);
+  const [searchIndexStatus, setSearchIndexStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
 
   // Shuffle once per session (stable across re-renders, new order on page reload)
   const sessionSeed = useRef(Math.random());
@@ -36,18 +46,68 @@ export default function Gallery({ entries }: Props) {
     return arr;
   }, [entries]);
 
-  const filtered = useMemo(() => {
-    let result = shuffled;
+  const parsedSearch = useMemo(() => parseSearchQuery(deferredSearch), [deferredSearch]);
 
-    if (search.trim()) {
-      const q = search.toLowerCase();
-      result = result.filter(
-        (e) =>
-          e.title.toLowerCase().includes(q) ||
-          e.prompt.toLowerCase().includes(q) ||
-          e.author.toLowerCase().includes(q) ||
-          e.tags.some((t) => t.toLowerCase().includes(q))
-      );
+  useEffect(() => {
+    if (!parsedSearch.normalizedTerm || parsedSearch.mode !== 'image') return;
+    if (searchIndex || searchIndexStatus === 'loading') return;
+
+    let cancelled = false;
+    setSearchIndexStatus('loading');
+
+    fetch(withBasePath('/search-index.json'))
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((json: SearchIndexFile) => {
+        if (cancelled) return;
+        setSearchIndex(json);
+        setSearchIndexStatus('ready');
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setSearchIndexStatus('error');
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [parsedSearch.mode, parsedSearch.normalizedTerm, searchIndex, searchIndexStatus]);
+
+  const searchInfo = useMemo(() => {
+    if (!parsedSearch.normalizedTerm) return '';
+    if (parsedSearch.mode === 'author') return tx.searchAuthorHint;
+    if (parsedSearch.mode === 'title') return tx.searchTitleHint;
+    if (searchIndexStatus === 'loading' || searchIndexStatus === 'idle') return tx.searchLoading;
+    if (searchIndexStatus === 'error') return tx.searchUnavailable;
+    return tx.searchImageHint;
+  }, [parsedSearch.mode, parsedSearch.normalizedTerm, searchIndexStatus, tx]);
+
+  const filtered = useMemo(() => {
+    let result: PromptEntry[];
+
+    if (parsedSearch.normalizedTerm) {
+      if (parsedSearch.mode === 'image' && searchIndexStatus !== 'ready') {
+        return [];
+      }
+
+      const scored = entries
+        .map((entry) => ({
+          entry,
+          score: parsedSearch.mode === 'image'
+            ? scoreImageSearch(searchIndex?.entries?.[entry.id], parsedSearch)
+            : scorePrefixSearch(entry, parsedSearch),
+        }))
+        .filter((item) => item.score > 0)
+        .sort((a, b) => {
+          if (b.score !== a.score) return b.score - a.score;
+          return compareBySecondarySort(a.entry, b.entry, sortBy);
+        });
+
+      result = scored.map((item) => item.entry);
+    } else {
+      result = shuffled;
     }
 
     if (category !== 'all') {
@@ -62,10 +122,14 @@ export default function Gallery({ entries }: Props) {
       result = result.filter((e) => e.tags.includes(tagFilter));
     }
 
+    if (parsedSearch.normalizedTerm) {
+      return result;
+    }
+
     if (sortBy === 'likes') return [...result].sort((a, b) => b.stats.likes - a.stats.likes);
     if (sortBy === 'views') return [...result].sort((a, b) => b.stats.views - a.stats.views);
     return result; // 'recent' keeps the session shuffle order
-  }, [shuffled, search, category, lang, sortBy, tagFilter]);
+  }, [category, entries, lang, parsedSearch, searchIndex, searchIndexStatus, shuffled, sortBy, tagFilter]);
 
   const displayed = useMemo(
     () => filtered.slice(0, page * PAGE_SIZE),
@@ -75,8 +139,10 @@ export default function Gallery({ entries }: Props) {
   const hasMore = displayed.length < filtered.length;
 
   const handleSearch = useCallback((v: string) => {
-    setSearch(v);
-    setPage(1);
+    startTransition(() => {
+      setSearch(v);
+      setPage(1);
+    });
   }, []);
 
   const handleCategory = useCallback((v: string) => {
@@ -101,6 +167,7 @@ export default function Gallery({ entries }: Props) {
       <SearchFilterBar
         search={search}
         onSearchChange={handleSearch}
+        searchInfo={searchInfo}
         category={category}
         onCategoryChange={handleCategory}
         lang={lang}
@@ -119,7 +186,9 @@ export default function Gallery({ entries }: Props) {
             className="text-center py-24 text-sm"
             style={{ color: 'var(--text-secondary)' }}
           >
-            {tx.noResults}
+            {parsedSearch.mode === 'image' && parsedSearch.normalizedTerm && searchIndexStatus !== 'ready'
+              ? searchInfo
+              : tx.noResults}
           </div>
         ) : (
           <div className="masonry">

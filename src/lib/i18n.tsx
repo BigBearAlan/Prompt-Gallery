@@ -12,6 +12,11 @@ export interface Translation {
 
   // Search / filter bar
   searchPlaceholder: string;
+  searchImageHint: string;
+  searchAuthorHint: string;
+  searchTitleHint: string;
+  searchLoading: string;
+  searchUnavailable: string;
   sortLikes: string;
   sortViews: string;
   sortRecent: string;
@@ -51,7 +56,12 @@ export const translations: Record<Locale, Translation> = {
     tagline: '全网最全的 GPT Image 2.0 生图词库',
     langToggle: 'EN',
 
-    searchPlaceholder: '搜索提示词、作者...',
+    searchPlaceholder: '搜索图片内容，如 面包、狗、海边；用 author: 或 title: 精确查找',
+    searchImageHint: '按图片内容相关性排序；当前排序仅作为次级规则',
+    searchAuthorHint: '按作者字段精确查找',
+    searchTitleHint: '按标题字段精确查找',
+    searchLoading: '正在加载图片搜索索引...',
+    searchUnavailable: '图片搜索索引加载失败，请稍后重试。',
     sortLikes: '最多点赞',
     sortViews: '最多浏览',
     sortRecent: '最新',
@@ -91,7 +101,12 @@ export const translations: Record<Locale, Translation> = {
     tagline: 'The most comprehensive GPT Image 2.0 prompt library',
     langToggle: '中文',
 
-    searchPlaceholder: 'Search prompts, authors...',
+    searchPlaceholder: 'Search image content like bread, dog, beach; use author: or title: for exact lookup',
+    searchImageHint: 'Ranked by image-content relevance; current sort is only a tie-breaker',
+    searchAuthorHint: 'Searching only author names',
+    searchTitleHint: 'Searching only titles',
+    searchLoading: 'Loading image search index...',
+    searchUnavailable: 'Failed to load the image search index. Please try again.',
     sortLikes: 'Most Liked',
     sortViews: 'Most Viewed',
     sortRecent: 'Recent',

@@ -18,6 +18,7 @@ const LANG_OPTIONS: { value: string; label: string }[] = [
 interface Props {
   search: string;
   onSearchChange: (v: string) => void;
+  searchInfo?: string;
   category: string;
   onCategoryChange: (v: string) => void;
   lang: string;
@@ -32,6 +33,7 @@ interface Props {
 
 export default function SearchFilterBar({
   search, onSearchChange,
+  searchInfo,
   category, onCategoryChange,
   lang, onLangChange,
   sortBy, onSortChange,
@@ -113,6 +115,14 @@ export default function SearchFilterBar({
           {count === total ? tx.countAll(total) : tx.countFiltered(count, total)}
         </span>
       </div>
+
+      {searchInfo && (
+        <div className="max-w-screen-2xl mx-auto px-4 pb-2">
+          <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>
+            {searchInfo}
+          </p>
+        </div>
+      )}
 
       {/* Category + mobile extras row */}
       <div className="relative">
