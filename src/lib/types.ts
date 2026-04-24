@@ -18,6 +18,9 @@ export interface PromptEntry {
   outputImages: string[];
   sourceUrl: string;
   sourceId?: string;
+  hq?: boolean;
+  approved?: boolean;
+  pending?: boolean;
 }
 
 export type SortBy = 'likes' | 'views' | 'recent';

@@ -29,7 +29,7 @@ export default function Header({ total }: HeaderProps) {
           <div className="min-w-0">
             <div className="flex items-center gap-2 leading-none">
               <span className="font-bold text-[15px] tracking-tight whitespace-nowrap" style={{ color: 'var(--text-primary)' }}>
-                PromptCanvas
+                Prompt Gallery
               </span>
               <span
                 className="text-[15px] font-bold tracking-tight whitespace-nowrap"

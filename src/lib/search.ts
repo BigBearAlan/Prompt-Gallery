@@ -113,6 +113,23 @@ export function scorePrefixSearch(entry: PromptEntry, query: ParsedSearchQuery):
   return Math.round(strength * 100);
 }
 
+/**
+ * Score an entry by directly searching its title, prompt text, and author.
+ * No search index needed — used for instant results while the image index loads,
+ * and as a supplementary signal when the index is available.
+ */
+export function scorePromptText(entry: PromptEntry, query: ParsedSearchQuery): number {
+  if (!query.normalizedTerm) return 0;
+  const titleStrength  = tokenMatchStrength(entry.title  || '', query);
+  const promptStrength = tokenMatchStrength(entry.prompt || '', query);
+  const authorStrength = tokenMatchStrength(entry.author || '', query);
+  let score = 0;
+  score += titleStrength  * 90;
+  score += promptStrength * 55;
+  score += authorStrength * 35;
+  return Math.round(score);
+}
+
 export function scoreImageSearch(doc: ImageSearchDoc | undefined, query: ParsedSearchQuery): number {
   if (!doc || !query.normalizedTerm) return 0;
 

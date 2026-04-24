@@ -198,7 +198,7 @@ const server = createServer(async (req, res) => {
       } else {
         const commitCode = await runStep(
           'git',
-          ['commit', '-m', 'Update prompts data [admin]'],
+          ['commit', '-m', '"chore: update prompts data via admin"'],
           'git commit',
           req,
         );

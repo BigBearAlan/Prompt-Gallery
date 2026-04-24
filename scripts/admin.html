@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PromptCanvas 图社 — Admin</title>
+<title>Prompt Gallery — Admin</title>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -28,30 +28,15 @@ body {
 
 /* ── Top bar ─────────────────────────────────────────── */
 #topbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #111;
-  height: var(--topbar-h);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 0 16px;
-  border-bottom: 1px solid #2a2a2a;
+  position: sticky; top: 0; z-index: 100;
+  background: #111; height: var(--topbar-h);
+  display: flex; align-items: center; gap: 10px;
+  padding: 0 16px; border-bottom: 1px solid #2a2a2a;
 }
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  flex-shrink: 0;
-  margin-right: 4px;
-}
+.brand { display: flex; align-items: center; gap: 7px; flex-shrink: 0; margin-right: 4px; }
 .brand-logo {
-  width: 26px; height: 26px;
-  background: var(--accent);
-  border-radius: 6px;
-  display: flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; background: var(--accent);
+  border-radius: 6px; display: flex; align-items: center; justify-content: center;
 }
 .brand-name { font-size: 14px; font-weight: 700; color: #fff; }
 .brand-sub  { font-size: 11px; color: #666; }
@@ -60,33 +45,26 @@ body {
   text-transform: uppercase; background: #333;
   color: #aaa; padding: 2px 6px; border-radius: 4px;
 }
-
 #search-wrap { position: relative; flex: 1; max-width: 340px; }
 #search-wrap svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #555; pointer-events: none; }
 #search {
   width: 100%; background: #1c1c1c; border: 1px solid #333; color: #ddd;
-  border-radius: 18px; padding: 6px 12px 6px 32px;
-  font-size: 13px; outline: none;
+  border-radius: 18px; padding: 6px 12px 6px 32px; font-size: 13px; outline: none;
 }
 #search::placeholder { color: #555; }
 #search:focus { border-color: #555; }
-
 .tb-select {
   background: #1c1c1c; border: 1px solid #333; color: #bbb;
   border-radius: 14px; padding: 5px 10px; font-size: 12px;
   cursor: pointer; outline: none; flex-shrink: 0;
 }
-
 #count-label { font-size: 12px; color: #555; white-space: nowrap; flex-shrink: 0; }
-
 .spacer { flex: 1; }
-
 .dirty-dot {
   width: 7px; height: 7px; background: #fbbf24;
   border-radius: 50%; flex-shrink: 0; display: none;
 }
 .dirty-dot.on { display: block; }
-
 .tb-btn {
   display: flex; align-items: center; gap: 6px;
   padding: 6px 14px; border-radius: 16px; border: none;
@@ -95,8 +73,8 @@ body {
 }
 .tb-btn:hover { opacity: .85; }
 .tb-btn:disabled { opacity: .35; cursor: not-allowed; }
-.btn-add    { background: #555; color: #fff; }
-.btn-save   { background: #16a34a; color: #fff; }
+.btn-add  { background: #555; color: #fff; }
+.btn-save { background: #16a34a; color: #fff; }
 
 /* Deploy split-button */
 .deploy-wrap { position: relative; flex-shrink: 0; display: flex; }
@@ -121,8 +99,7 @@ body {
   position: absolute; top: calc(100% + 6px); right: 0;
   background: #1a1a1a; border: 1px solid #333; border-radius: 10px;
   overflow: hidden; min-width: 200px; z-index: 200;
-  box-shadow: 0 8px 24px rgba(0,0,0,.5);
-  display: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,.5); display: none;
 }
 .deploy-menu.open { display: block; }
 .deploy-item {
@@ -134,97 +111,231 @@ body {
 .deploy-item:hover { background: #2a2a2a; color: #fff; }
 .deploy-item-icon {
   width: 22px; height: 22px; border-radius: 5px;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .deploy-item-sub { font-size: 10px; color: #555; margin-top: 1px; }
 
-/* ── Grid ───────────────────────────────────────────── */
-#main { max-width: 1800px; margin: 0 auto; padding: 10px 10px 120px; }
+/* ── List grid ──────────────────────────────────────── */
+#main { max-width: 1400px; margin: 0 auto; padding: 10px 14px 120px; }
+.masonry { display: flex; flex-direction: column; gap: 8px; }
+.mitem { width: 100%; }
 
-.masonry { columns: 2; column-gap: 10px; }
-@media (min-width:  640px) { .masonry { columns: 3; } }
-@media (min-width:  900px) { .masonry { columns: 4; } }
-@media (min-width: 1200px) { .masonry { columns: 5; } }
-@media (min-width: 1600px) { .masonry { columns: 6; } }
-
-.mitem { break-inside: avoid; margin-bottom: 10px; }
-
-/* ── Card ───────────────────────────────────────────── */
+/* ── Card — horizontal list row ─────────────────────── */
 .card {
-  background: var(--card);
-  border-radius: 14px;
-  overflow: hidden;
-  position: relative;
-  cursor: default;
+  background: var(--card); border-radius: 12px;
+  overflow: hidden; position: relative;
+  display: flex; flex-direction: row;
   transition: box-shadow .15s;
 }
-.card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.13); }
+.card:hover { box-shadow: 0 2px 16px rgba(0,0,0,.11); }
 
-.card-img-wrap { position: relative; background: #eee; overflow: hidden; }
-.card-img-wrap img { width: 100%; height: auto; display: block; }
-
-.card-overlay {
-  position: absolute; inset: 0;
-  background: rgba(0,0,0,.52);
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  opacity: 0; transition: opacity .15s;
+/* Image column */
+.card-img-wrap {
+  width: 160px; min-width: 160px; flex-shrink: 0;
+  position: relative; background: #eee; overflow: hidden;
+  align-self: stretch;
 }
-.card:hover .card-overlay { opacity: 1; }
-
-.ov-btn {
-  display: flex; align-items: center; gap: 4px;
-  padding: 7px 13px; border-radius: 18px;
-  font-size: 12px; font-weight: 600; border: none; cursor: pointer;
-  transition: background .12s;
+.card-img-wrap img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
 }
-.ov-edit   { background: #fff; color: #111; }
-.ov-edit:hover { background: #f0f0f0; }
-.ov-delete { background: var(--accent); color: #fff; }
-.ov-delete:hover { background: #c00; }
-
-.card-body { padding: 9px 11px 10px; }
-.card-cat {
-  font-size: 10px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: .05em; color: var(--text-secondary); margin-bottom: 3px;
+.card-img-wrap .card-no-img {
+  width: 100%; height: 100%; min-height: 100px;
+  display: flex; align-items: center; justify-content: center;
+  color: #bbb; font-size: 11px;
 }
-.card-title {
-  font-size: 13px; font-weight: 600; line-height: 1.35;
-  overflow: hidden; display: -webkit-box;
-  -webkit-line-clamp: 2; -webkit-box-orient: vertical;
-  margin-bottom: 3px;
-}
-.card-author { font-size: 11px; color: var(--text-secondary); }
 
-.card.modified::before {
-  content: '✎';
+/* Modified/new indicator badge on image */
+.card-badge {
   position: absolute; top: 7px; left: 7px;
   width: 20px; height: 20px; border-radius: 50%;
-  background: #fbbf24; color: #111; font-size: 11px;
+  font-size: 11px; font-weight: 700; z-index: 2;
   display: flex; align-items: center; justify-content: center;
-  font-weight: 700; z-index: 2;
+  pointer-events: none;
+}
+.card-badge.mod { background: #fbbf24; color: #111; }
+.card-badge.new { background: #2563eb; color: #fff; }
+
+/* Content column */
+.card-body {
+  flex: 1; min-width: 0; padding: 10px 13px 10px;
+  display: flex; flex-direction: column; gap: 6px;
 }
 
-.card.new-entry::before {
-  content: '+';
-  background: #2563eb; color: #fff;
+/* Top row: meta + stats + action buttons */
+.card-top {
+  display: flex; align-items: center; gap: 8px;
 }
+.card-meta {
+  flex: 1; min-width: 0;
+  display: flex; align-items: center; gap: 5px; flex-wrap: wrap;
+}
+.card-meta-badge {
+  font-size: 9px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .04em; padding: 2px 6px; border-radius: 4px;
+  background: #f0f0f0; color: var(--text-secondary); flex-shrink: 0;
+}
+.card-meta-dot { color: #ddd; font-size: 10px; }
+.card-meta-author { font-size: 11px; color: var(--text-secondary); }
+.card-meta-status {
+  font-size: 10px; font-weight: 600; color: #f59e0b;
+  background: #fffbeb; padding: 1px 5px; border-radius: 4px;
+}
+.card-likes {
+  font-size: 11px; color: var(--text-secondary);
+  display: flex; align-items: center; gap: 3px; flex-shrink: 0;
+}
+.card-likes svg { opacity: .5; }
+
+/* Action buttons — always visible */
+.card-actions {
+  display: flex; gap: 5px; flex-shrink: 0;
+}
+.card-btn {
+  display: flex; align-items: center; gap: 4px;
+  padding: 4px 10px; border-radius: 7px;
+  font-size: 11px; font-weight: 600; border: none;
+  cursor: pointer; transition: background .12s; white-space: nowrap;
+}
+.card-btn-edit  { background: #f3f4f6; color: #374151; }
+.card-btn-edit:hover { background: #e5e7eb; }
+.card-btn-del   { background: #fee2e2; color: #b91c1c; }
+.card-btn-del:hover { background: #fecaca; }
+
+/* Prompt: 3-line clamp by default, expandable */
+.card-prompt {
+  font-size: 12.5px; color: #222; line-height: 1.6;
+  word-break: break-word; white-space: pre-wrap;
+  overflow: hidden; display: -webkit-box;
+  -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+}
+.card-prompt.expanded {
+  display: block; -webkit-line-clamp: unset; overflow: visible;
+}
+.card-prompt.empty { color: #ccc; font-style: italic; display: block; }
+
+/* Bottom row: expand toggle + source link */
+.card-footer {
+  display: flex; align-items: center; gap: 10px;
+}
+.prompt-toggle {
+  font-size: 10.5px; color: #999; background: none; border: none;
+  cursor: pointer; padding: 0; transition: color .12s; flex-shrink: 0;
+}
+.prompt-toggle:hover { color: #2563eb; }
+
+.card-source {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-size: 10.5px; color: var(--text-secondary);
+  text-decoration: none; transition: color .12s; min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.card-source:hover { color: #2563eb; text-decoration: underline; }
+
+/* ── Publish button (pending → gallery) ────────────── */
+.card-btn-publish { background: #dbeafe; color: #1d4ed8; font-weight: 700; }
+.card-btn-publish:hover { background: #bfdbfe; }
+.card-btn-reject  { background: #fee2e2; color: #b91c1c; }
+.card-btn-reject:hover  { background: #fecaca; }
+.card-pending-badge {
+  position: absolute; top: 7px; left: 7px;
+  background: rgba(59,130,246,.88); color: #fff;
+  font-size: 10px; font-weight: 700; padding: 2px 7px;
+  border-radius: 10px; pointer-events: none; z-index: 2; letter-spacing: .03em;
+}
+
+/* ── Approve button ─────────────────────────────────── */
+.card-btn-approve {
+  background: #dcfce7; color: #15803d; font-weight: 700;
+}
+.card-btn-approve:hover { background: #bbf7d0; }
+.card-btn-revoke { background: #f3f4f6; color: #6b7280; }
+.card-btn-revoke:hover { background: #e5e7eb; }
+
+/* ── HQ (精选) button ───────────────────────────────── */
+.card-btn-hq { background: #fef9c3; color: #92400e; }
+.card-btn-hq:hover { background: #fef08a; }
+.card-btn-hq.hq-on { background: #fde047; color: #713f12; font-weight: 800; }
+.card-btn-hq.hq-on:hover { background: #facc15; }
+.card-hq-badge {
+  position: absolute; top: 7px; right: 7px;
+  background: rgba(234,179,8,.92); color: #fff;
+  font-size: 11px; font-weight: 800; padding: 1px 6px;
+  border-radius: 10px; pointer-events: none; z-index: 2;
+}
+
+/* ── Tab bar ────────────────────────────────────────── */
+#tab-bar {
+  background: #fff; border-bottom: 1px solid var(--border);
+  padding: 0 16px; display: flex; align-items: center; gap: 0;
+  position: sticky; top: var(--topbar-h); z-index: 90;
+}
+.tab-btn {
+  padding: 10px 18px; font-size: 13px; font-weight: 500;
+  border: none; background: none; cursor: pointer;
+  color: var(--text-secondary); border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+  display: flex; align-items: center; gap: 7px; white-space: nowrap;
+}
+.tab-btn.active { color: var(--text-primary); border-bottom-color: #111; }
+.tab-btn:hover:not(.active) { color: var(--text-primary); }
+.tab-count {
+  font-size: 11px; font-weight: 700;
+  padding: 1px 7px; border-radius: 10px;
+  background: #f0f0f0; color: var(--text-secondary);
+  transition: background .15s, color .15s;
+}
+.tab-btn.active .tab-count { background: #111; color: #fff; }
+
+/* ── Lightbox ───────────────────────────────────────── */
+#lightbox {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(0,0,0,.9); backdrop-filter: blur(8px);
+  display: flex; align-items: center; justify-content: center;
+  cursor: zoom-out;
+}
+#lightbox.hidden { display: none; }
+#lightbox-img {
+  max-width: 90vw; max-height: 90vh;
+  object-fit: contain; border-radius: 6px;
+  box-shadow: 0 24px 80px rgba(0,0,0,.6);
+  cursor: default; display: block;
+}
+#lightbox-close {
+  position: absolute; top: 16px; right: 20px;
+  background: rgba(255,255,255,.12); border: none; color: #fff;
+  width: 38px; height: 38px; border-radius: 50%; font-size: 22px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background .15s; line-height: 1;
+}
+#lightbox-close:hover { background: rgba(255,255,255,.25); }
+.lb-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,.12); border: none; color: #fff;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 26px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background .15s; line-height: 1;
+}
+.lb-nav:hover { background: rgba(255,255,255,.25); }
+#lb-prev { left: 20px; }
+#lb-next { right: 20px; }
+#lb-counter {
+  position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%);
+  color: rgba(255,255,255,.6); font-size: 12px; pointer-events: none;
+}
+.card-img-wrap img { cursor: zoom-in; }
 
 /* ── Modals (shared) ────────────────────────────────── */
 .backdrop {
   position: fixed; inset: 0; z-index: 200;
   background: rgba(0,0,0,.65); backdrop-filter: blur(4px);
-  display: flex; align-items: center; justify-content: center;
-  padding: 16px;
+  display: flex; align-items: center; justify-content: center; padding: 16px;
 }
 .backdrop.hidden { display: none; }
-
 .modal-box {
   background: var(--card); border-radius: 18px;
-  width: 100%; max-width: 920px; max-height: 92vh;
+  width: 100%; max-width: 980px; max-height: 92vh;
   display: flex; flex-direction: column; overflow: hidden;
 }
-
 .modal-hdr {
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 20px; border-bottom: 1px solid var(--border); flex-shrink: 0;
@@ -240,8 +351,9 @@ body {
 
 .modal-body { display: flex; flex: 1; min-height: 0; overflow: hidden; }
 
+/* Image panel */
 .modal-imgs {
-  width: 42%; flex-shrink: 0; background: #f7f7f7;
+  width: 44%; flex-shrink: 0; background: #f7f7f7;
   border-right: 1px solid var(--border); overflow-y: auto;
   padding: 14px; display: flex; flex-direction: column; gap: 8px;
 }
@@ -250,6 +362,7 @@ body {
   cursor: pointer; border: 2px solid transparent; transition: border-color .12s;
 }
 .modal-imgs img.active-thumb { border-color: #111; }
+
 .thumb-strip {
   display: flex; gap: 6px; overflow-x: auto;
   padding-bottom: 2px; flex-wrap: nowrap;
@@ -259,11 +372,43 @@ body {
   border-radius: 6px; flex-shrink: 0;
 }
 
+/* Image replace section */
+.img-replace-section {
+  margin-top: 4px; padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+.img-replace-btn {
+  display: flex; align-items: center; gap: 6px;
+  width: 100%; padding: 7px 12px;
+  border: 1.5px dashed var(--border); border-radius: 9px;
+  background: #fafafa; color: var(--text-secondary);
+  font-size: 12px; font-weight: 500; font-family: inherit;
+  cursor: pointer; transition: border-color .15s, background .15s;
+  justify-content: center;
+}
+.img-replace-btn:hover {
+  border-color: #999; background: #f0f0f0; color: var(--text-primary);
+}
+.img-replace-new { position: relative; margin-top: 8px; }
+.img-replace-new img {
+  width: 100%; border-radius: 8px; display: block;
+  border: 2px solid #2563eb !important; cursor: default;
+}
+.img-new-badge {
+  position: absolute; top: 7px; right: 7px;
+  background: #2563eb; color: #fff; font-size: 10px; font-weight: 700;
+  padding: 2px 7px; border-radius: 5px; letter-spacing: .04em;
+}
+.img-replace-hint {
+  font-size: 10px; color: var(--text-secondary);
+  text-align: center; margin-top: 5px;
+}
+
+/* Fields panel */
 .modal-fields {
   flex: 1; overflow-y: auto; padding: 18px 20px;
   display: flex; flex-direction: column; gap: 14px;
 }
-
 .fld { display: flex; flex-direction: column; gap: 5px; }
 .fld-label {
   font-size: 10px; font-weight: 700; text-transform: uppercase;
@@ -300,8 +445,9 @@ body {
 }
 .btn-cancel:hover { background: #e5e5e5; }
 .btn-apply:hover  { background: #333; }
+.btn-apply:disabled { opacity: .45; cursor: not-allowed; }
 
-/* ── Upload drop zone ───────────────────────────────── */
+/* ── Upload drop zone (Add modal) ───────────────────── */
 .upload-zone {
   width: 100%; aspect-ratio: 4/3;
   border: 2px dashed var(--border); border-radius: 12px;
@@ -310,9 +456,7 @@ body {
   transition: border-color .15s, background .15s;
   background: #fafafa; position: relative; overflow: hidden;
 }
-.upload-zone:hover, .upload-zone.drag-over {
-  border-color: #999; background: #f0f0f0;
-}
+.upload-zone:hover, .upload-zone.drag-over { border-color: #999; background: #f0f0f0; }
 .upload-zone img {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: contain; border-radius: 10px; border: none;
@@ -347,20 +491,16 @@ body {
   padding: 9px 16px; border-bottom: 1px solid #2a2a2a; flex-shrink: 0;
 }
 .dp-title { font-size: 13px; font-weight: 600; color: #ddd; display: flex; align-items: center; gap: 7px; }
-.dp-close {
-  background: none; border: none; color: #666; font-size: 20px;
-  cursor: pointer; line-height: 1; padding: 0 2px;
-}
+.dp-close { background: none; border: none; color: #666; font-size: 20px; cursor: pointer; line-height: 1; padding: 0 2px; }
 .dp-close:hover { color: #aaa; }
 #deploy-log {
   flex: 1; overflow-y: auto; padding: 10px 16px;
   font-family: 'SF Mono','Fira Code','Consolas',monospace;
-  font-size: 12px; line-height: 1.7; color: #bbb; white-space: pre-wrap;
-  word-break: break-all;
+  font-size: 12px; line-height: 1.7; color: #bbb; white-space: pre-wrap; word-break: break-all;
 }
-.log-ok  { color: #4ade80; }
-.log-err { color: #f87171; }
-.log-dim { color: #555; }
+.log-ok   { color: #4ade80; }
+.log-err  { color: #f87171; }
+.log-dim  { color: #555; }
 .log-note { color: #93c5fd; }
 
 /* ── Toast ──────────────────────────────────────────── */
@@ -390,8 +530,7 @@ body {
         <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/>
       </svg>
     </div>
-    <span class="brand-name">PromptCanvas</span>
-    <span class="brand-sub">图社</span>
+    <span class="brand-name">Prompt Gallery</span>
     <span class="admin-pill">Admin</span>
   </div>
 
@@ -443,7 +582,6 @@ body {
     保存
   </button>
 
-  <!-- Deploy split-button -->
   <div class="deploy-wrap" id="deploy-wrap">
     <button class="btn-deploy-cf" id="deploy-btn" onclick="doDeploy('cloudflare')">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -475,6 +613,19 @@ body {
   </div>
 </div>
 
+<!-- ── Tab bar ── -->
+<div id="tab-bar">
+  <button class="tab-btn" id="tab-pending" onclick="switchTab('pending')">
+    待发布 <span class="tab-count" id="count-pending">0</span>
+  </button>
+  <button class="tab-btn active" id="tab-review" onclick="switchTab('review')">
+    已发布 <span class="tab-count" id="count-review">0</span>
+  </button>
+  <button class="tab-btn" id="tab-approved" onclick="switchTab('approved')">
+    已通过 <span class="tab-count" id="count-approved">0</span>
+  </button>
+</div>
+
 <!-- ── Main grid ── -->
 <div id="main">
   <div id="msg" class="center-msg">加载中…</div>
@@ -489,10 +640,37 @@ body {
       <button class="modal-close" onclick="closeEdit()">×</button>
     </div>
     <div class="modal-body">
+
+      <!-- Left: image panel -->
       <div class="modal-imgs scrollbar-none">
+        <!-- Main image -->
         <img id="ei-main" src="" alt="" style="border-radius:10px">
+        <!-- Thumbnail strip (multi-image entries) -->
         <div id="ei-thumbs" class="thumb-strip scrollbar-none"></div>
+
+        <!-- Replace image section -->
+        <div class="img-replace-section">
+          <input type="file" id="ei-replace-input" accept="image/*" style="display:none"
+            onchange="editUploadFile(this.files[0])">
+          <button class="img-replace-btn" onclick="document.getElementById('ei-replace-input').click()">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+            替换图片
+          </button>
+          <div id="ei-replace-new" style="display:none" class="img-replace-new">
+            <img id="ei-replace-preview" src="" alt="">
+            <span class="img-new-badge">NEW</span>
+          </div>
+          <div id="ei-replace-hint" class="img-replace-hint" style="display:none">
+            点击"应用修改"后上传并保存
+          </div>
+        </div>
       </div>
+
+      <!-- Right: fields panel -->
       <div class="modal-fields scrollbar-none">
         <div class="fld">
           <label class="fld-label">标题</label>
@@ -528,7 +706,7 @@ body {
     </div>
     <div class="modal-ftr">
       <button class="btn-cancel" onclick="closeEdit()">取消</button>
-      <button class="btn-apply" onclick="applyEdit()">应用修改</button>
+      <button class="btn-apply" id="ei-apply-btn" onclick="applyEdit()">应用修改</button>
     </div>
   </div>
 </div>
@@ -541,7 +719,6 @@ body {
       <button class="modal-close" onclick="closeAdd()">×</button>
     </div>
     <div class="modal-body">
-      <!-- Upload panel -->
       <div class="modal-imgs scrollbar-none" style="justify-content:flex-start">
         <div class="fld-label" style="margin-bottom:6px">图片</div>
         <div class="upload-zone" id="upload-zone"
@@ -560,7 +737,6 @@ body {
           <img id="add-preview-img" src="" alt="" style="width:100%;border-radius:10px;margin-top:8px">
         </div>
       </div>
-      <!-- Fields panel -->
       <div class="modal-fields scrollbar-none">
         <div class="fld">
           <label class="fld-label">标题 <span style="color:#e60023">*</span></label>
@@ -643,6 +819,15 @@ body {
   <div id="deploy-log" class="scrollbar-none"></div>
 </div>
 
+<!-- ── Lightbox ── -->
+<div id="lightbox" class="hidden" onclick="closeLightbox()">
+  <button id="lightbox-close" onclick="closeLightbox()">×</button>
+  <button class="lb-nav" id="lb-prev" onclick="event.stopPropagation();lightboxNav(-1)">‹</button>
+  <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+  <button class="lb-nav" id="lb-next" onclick="event.stopPropagation();lightboxNav(1)">›</button>
+  <div id="lb-counter"></div>
+</div>
+
 <!-- ── Toast ── -->
 <div id="toast"></div>
 
@@ -653,12 +838,17 @@ body {
 let allPrompts  = [];
 let changes     = new Map();
 let deletes     = new Set();
-let newEntries  = [];        // entries created in this session (not yet saved)
+let newEntries  = [];
 let filtered    = [];
 let editId      = null;
 let delId       = null;
 let isDirty     = false;
-let uploadedImg = null;      // { filename, dataUrl } for the add-modal
+let uploadedImg     = null;   // for add modal
+let editUploadedImg = null;   // for edit modal image replacement
+let editActiveIdx   = 0;      // which image index is currently selected in edit modal
+let currentTab      = 'review';
+let lightboxImgs    = [];
+let lightboxIdx     = 0;
 
 // ════════════════════════════════════════════════════
 //  Bootstrap
@@ -669,6 +859,7 @@ async function init() {
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     allPrompts = await r.json();
     applyFilters();
+    updateTabCounts();
     document.getElementById('msg').style.display = 'none';
     document.getElementById('grid').style.display = '';
   } catch(e) {
@@ -683,12 +874,14 @@ function applyFilters() {
   const q    = (document.getElementById('search').value || '').toLowerCase();
   const cat  = document.getElementById('cat-filter').value;
   const lang = document.getElementById('lang-filter').value;
-
   const pool = [...newEntries, ...allPrompts];
 
   filtered = pool.filter(p => {
     if (deletes.has(p.id)) return false;
     const c = merged(p);
+    if (currentTab === 'pending'  && c.pending !== true)                    return false;
+    if (currentTab === 'review'   && (c.pending === true || c.approved === true)) return false;
+    if (currentTab === 'approved' && (c.pending === true || c.approved !== true)) return false;
     if (cat  !== 'all' && c.category !== cat)  return false;
     if (lang !== 'all' && c.lang     !== lang) return false;
     if (q) {
@@ -703,6 +896,7 @@ function applyFilters() {
     filtered.length === total ? `${total.toLocaleString()} 个`
     : `${filtered.length} / ${total} 个`;
 
+  updateTabCounts();
   renderGrid();
 }
 
@@ -714,8 +908,12 @@ function imgSrc(entry) {
   return entry.thumbnail || (entry.outputImages && entry.outputImages[0]) || '';
 }
 
-function isNew(p) {
-  return newEntries.some(n => n.id === p.id);
+function isNew(p) { return newEntries.some(n => n.id === p.id); }
+
+function togglePrompt(id, btn) {
+  const el = document.getElementById('prompt-' + id);
+  const expanded = el.classList.toggle('expanded');
+  btn.textContent = expanded ? '收起 ▲' : '展开 ▼';
 }
 
 function renderGrid() {
@@ -726,37 +924,95 @@ function renderGrid() {
   }
 
   grid.innerHTML = filtered.map(p => {
-    const c   = merged(p);
-    const mod = changes.has(p.id);
-    const nw  = isNew(p);
-    const src = imgSrc(c);
+    const c      = merged(p);
+    const mod    = changes.has(p.id);
+    const nw     = isNew(p);
+    const src    = imgSrc(c);
+    const prompt = (c.prompt || '').trim();
+    const srcLabel = c.sourceUrl
+      ? c.sourceUrl.replace(/^https?:\/\/(www\.)?/, '').slice(0, 55)
+      : '';
+    const likes = c.stats?.likes || c.likes || 0;
+    const likesStr = likes >= 1000 ? (likes/1000).toFixed(1)+'K' : likes > 0 ? String(likes) : '';
+
     return `<div class="mitem">
-      <div class="card${mod ? ' modified' : ''}${nw ? ' new-entry' : ''}" data-id="${esc(p.id)}">
+      <div class="card" data-id="${esc(p.id)}">
+
+        <!-- Image -->
         <div class="card-img-wrap">
+          ${mod ? '<span class="card-badge mod">✎</span>' : ''}
+          ${nw  ? '<span class="card-badge new">+</span>'  : ''}
+          ${isHQ(p) ? '<span class="card-hq-badge">★</span>' : ''}
+          ${isPending(p) ? '<span class="card-pending-badge">待发布</span>' : ''}
           ${src
-            ? `<img src="${esc(src)}" alt="${esc(c.title)}" loading="lazy"
-                onerror="this.parentElement.style.minHeight='120px'">`
-            : '<div style="min-height:120px;background:#e5e5e5;display:flex;align-items:center;justify-content:center;color:#bbb;font-size:12px">无图片</div>'}
-          <div class="card-overlay">
-            <button class="ov-btn ov-edit"   onclick="openEdit('${esc(p.id)}')">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-              </svg>编辑
-            </button>
-            <button class="ov-btn ov-delete" onclick="openDel('${esc(p.id)}')">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                <polyline points="3 6 5 6 21 6"/>
-                <path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/>
-                <path d="M9 6V4h6v2"/>
-              </svg>删除
-            </button>
-          </div>
+            ? `<img src="${esc(src)}" alt="" loading="lazy" onerror="this.style.display='none'" onclick="openLightbox('${esc(p.id)}')">`
+            : '<div class="card-no-img">无图片</div>'}
         </div>
+
+        <!-- Content -->
         <div class="card-body">
-          <div class="card-cat">${esc(c.category)}${nw ? ' ✦ new' : mod ? ' ✎' : ''}</div>
-          <div class="card-title">${esc(c.title)}</div>
-          <div class="card-author">@${esc(c.author)}</div>
+
+          <!-- Meta + likes + actions -->
+          <div class="card-top">
+            <div class="card-meta">
+              <span class="card-meta-badge">${esc(c.category)}</span>
+              <span class="card-meta-dot">·</span>
+              <span class="card-meta-author">@${esc(c.author)}</span>
+              <span class="card-meta-dot">·</span>
+              <span class="card-meta-author">${esc((c.lang||'').toUpperCase())}</span>
+              ${mod ? '<span class="card-meta-status">edited</span>' : ''}
+              ${nw  ? '<span class="card-meta-status" style="color:#2563eb;background:#eff6ff">new</span>' : ''}
+            </div>
+            ${likesStr ? `<span class="card-likes">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              ${esc(likesStr)}
+            </span>` : ''}
+            <div class="card-actions">
+              <button class="card-btn card-btn-edit" onclick="openEdit('${esc(p.id)}')">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                </svg>编辑
+              </button>
+              ${currentTab === 'pending' ? `
+              <button class="card-btn card-btn-reject" onclick="openDel('${esc(p.id)}')">拒绝</button>
+              <button class="card-btn card-btn-publish" onclick="publishEntry('${esc(p.id)}')">✓ 发布</button>
+              ` : `
+              <button class="card-btn card-btn-del" onclick="openDel('${esc(p.id)}')">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/>
+                  <path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/>
+                </svg>删除
+              </button>
+              ${isApproved(p)
+                ? `<button class="card-btn card-btn-revoke" onclick="revokeApproval('${esc(p.id)}')">撤销</button>`
+                : `<button class="card-btn card-btn-approve" onclick="approveEntry('${esc(p.id)}')">✓ 通过</button>`
+              }
+              <button class="card-btn card-btn-hq${isHQ(p) ? ' hq-on' : ''}" onclick="toggleHQ('${esc(p.id)}')">
+                ${isHQ(p) ? '★ 精选' : '☆ 精选'}
+              </button>
+              `}
+            </div>
+          </div>
+
+          <!-- Prompt: 3-line clamp -->
+          <div class="card-prompt${prompt ? '' : ' empty'}" id="prompt-${esc(p.id)}">${prompt ? esc(prompt) : '无提示词'}</div>
+
+          <!-- Footer: expand toggle + source -->
+          <div class="card-footer">
+            ${prompt.length > 120
+              ? `<button class="prompt-toggle" onclick="togglePrompt('${esc(p.id)}',this)">展开 ▼</button>`
+              : ''}
+            ${srcLabel
+              ? `<a class="card-source" href="${esc(c.sourceUrl)}" target="_blank" rel="noopener">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/>
+                  </svg>${esc(srcLabel)}
+                </a>`
+              : ''}
+          </div>
+
         </div>
       </div>
     </div>`;
@@ -780,12 +1036,21 @@ function openEdit(id) {
   const c = merged(p);
   editId = id;
 
+  // Reset image replace state
+  editUploadedImg = null;
+  editActiveIdx   = 0;
+  document.getElementById('ei-replace-input').value = '';
+  document.getElementById('ei-replace-new').style.display   = 'none';
+  document.getElementById('ei-replace-hint').style.display  = 'none';
+
+  // Fill fields
   document.getElementById('ei-title').value  = c.title    || '';
   document.getElementById('ei-cat').value    = c.category || 'other';
   document.getElementById('ei-author').value = c.author   || '';
   document.getElementById('ei-prompt').value = c.prompt   || '';
   document.getElementById('ei-charcount').textContent = (c.prompt||'').length + ' 字符';
 
+  // Images
   const imgs = c.outputImages || (c.thumbnail ? [c.thumbnail] : []);
   const main  = document.getElementById('ei-main');
   main.src = imgs[0] || '';
@@ -797,7 +1062,7 @@ function openEdit(id) {
     ? imgs.map((url, i) =>
         `<img src="${esc(url)}" loading="lazy"
           class="${i===0?'active-thumb':''}"
-          onclick="selectThumb(this,'${esc(url)}')"
+          onclick="selectThumb(this,'${esc(url)}',${i})"
           onerror="this.style.display='none'">`
       ).join('')
     : '';
@@ -806,30 +1071,98 @@ function openEdit(id) {
   document.getElementById('ei-title').focus();
 }
 
-function selectThumb(el, url) {
+function selectThumb(el, url, idx) {
+  editActiveIdx = idx;
+  // Cancel any pending replacement when switching images
+  editUploadedImg = null;
+  document.getElementById('ei-replace-new').style.display  = 'none';
+  document.getElementById('ei-replace-hint').style.display = 'none';
+  document.getElementById('ei-replace-input').value = '';
+
   document.getElementById('ei-main').src = url;
   document.querySelectorAll('#ei-thumbs img').forEach(i => i.classList.remove('active-thumb'));
   el.classList.add('active-thumb');
 }
 
+function editUploadFile(file) {
+  if (!file || !file.type.startsWith('image/')) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    const dataUrl = ev.target.result;
+    editUploadedImg = { filename: file.name, dataUrl };
+
+    // Show preview in replace section
+    document.getElementById('ei-replace-preview').src = dataUrl;
+    document.getElementById('ei-replace-new').style.display  = '';
+    document.getElementById('ei-replace-hint').style.display = '';
+
+    // Also update main image preview immediately
+    document.getElementById('ei-main').src = dataUrl;
+  };
+  reader.readAsDataURL(file);
+}
+
 function closeEdit() {
   editId = null;
+  editUploadedImg = null;
   document.getElementById('edit-modal').classList.add('hidden');
 }
 
-function applyEdit() {
+async function applyEdit() {
   if (!editId) return;
-  const upd = {
-    title:    document.getElementById('ei-title').value.trim(),
-    category: document.getElementById('ei-cat').value,
-    author:   document.getElementById('ei-author').value.trim(),
-    prompt:   document.getElementById('ei-prompt').value,
-  };
-  changes.set(editId, upd);
-  closeEdit();
-  markDirty();
-  applyFilters();
-  toast('修改已暂存，点击"保存"写入文件');
+
+  const btn = document.getElementById('ei-apply-btn');
+  btn.disabled = true;
+  btn.textContent = '处理中…';
+
+  try {
+    let imagePath = null;
+
+    // Upload replacement image if one was selected
+    if (editUploadedImg) {
+      const ext      = editUploadedImg.filename.split('.').pop() || 'jpg';
+      const filename = `${editId}_${editActiveIdx}.${ext}`;
+
+      const r = await fetch('/api/upload', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify({ filename, data: editUploadedImg.dataUrl }),
+      });
+      const res = await r.json();
+      if (!r.ok || !res.ok) throw new Error(res.error || '图片上传失败');
+      imagePath = res.path;
+    }
+
+    const upd = {
+      title:    document.getElementById('ei-title').value.trim(),
+      category: document.getElementById('ei-cat').value,
+      author:   document.getElementById('ei-author').value.trim(),
+      prompt:   document.getElementById('ei-prompt').value,
+    };
+
+    if (imagePath) {
+      // Update the specific image at editActiveIdx
+      const pool = [...newEntries, ...allPrompts];
+      const p = pool.find(p => p.id === editId);
+      const c = merged(p);
+      const imgs = [...(c.outputImages || (c.thumbnail ? [c.thumbnail] : []))];
+      imgs[editActiveIdx] = imagePath;
+      upd.outputImages = imgs;
+      if (editActiveIdx === 0) upd.thumbnail = imagePath;
+    }
+
+    changes.set(editId, upd);
+    editUploadedImg = null;
+    closeEdit();
+    markDirty();
+    applyFilters();
+    toast(imagePath ? '✓ 图片已替换，修改已暂存' : '修改已暂存，点击"保存"写入文件');
+  } catch(e) {
+    toast('操作失败：' + e.message, true);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '应用修改';
+  }
 }
 
 // ════════════════════════════════════════════════════
@@ -856,7 +1189,6 @@ function closeAdd() {
   document.getElementById('add-modal').classList.add('hidden');
 }
 
-// Image upload handling
 function uploadDragOver(e) {
   e.preventDefault();
   document.getElementById('upload-zone').classList.add('drag-over');
@@ -895,13 +1227,10 @@ async function submitAdd() {
 
   try {
     let imagePath = '';
-
-    // Upload image if provided
     if (uploadedImg) {
       const ext      = uploadedImg.filename.split('.').pop() || 'jpg';
       const newId    = Date.now().toString();
       const filename = `${newId}_0.${ext}`;
-
       const r = await fetch('/api/upload', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -919,20 +1248,18 @@ async function submitAdd() {
     const source   = document.getElementById('add-source').value.trim();
 
     const entry = {
-      id,
-      title,
-      thumbnail:      imagePath,
+      id, title,
+      thumbnail:       imagePath,
       thumbnailAspect: 1,
       author,
-      authorUrl:      source,
-      tags:           [lang, category],
-      category,
-      lang,
-      stats:          { likes: 0, retweets: 0, views: 0 },
-      createdAt:      new Date().toUTCString(),
+      authorUrl:       source,
+      tags:            [lang, category],
+      category, lang,
+      stats:           { likes: 0, retweets: 0, views: 0 },
+      createdAt:       new Date().toUTCString(),
       prompt,
-      outputImages:   imagePath ? [imagePath] : [],
-      sourceUrl:      source,
+      outputImages:    imagePath ? [imagePath] : [],
+      sourceUrl:       source,
     };
 
     newEntries.unshift(entry);
@@ -968,7 +1295,6 @@ function closeDel() {
 
 function confirmDel() {
   if (!delId) return;
-  // If it's a new (unsaved) entry, remove from newEntries directly
   const newIdx = newEntries.findIndex(n => n.id === delId);
   if (newIdx !== -1) {
     newEntries.splice(newIdx, 1);
@@ -985,42 +1311,171 @@ function confirmDel() {
 // ════════════════════════════════════════════════════
 //  Dirty state
 // ════════════════════════════════════════════════════
-function markDirty() {
-  isDirty = true;
-  document.getElementById('dirty-dot').classList.add('on');
+function markDirty()  { isDirty = true;  document.getElementById('dirty-dot').classList.add('on'); }
+function clearDirty() { isDirty = false; document.getElementById('dirty-dot').classList.remove('on'); }
+
+// ════════════════════════════════════════════════════
+//  Tab / Approve
+// ════════════════════════════════════════════════════
+function isPending(p) {
+  const c = merged(p);
+  return c.pending === true;
 }
 
-function clearDirty() {
-  isDirty = false;
-  document.getElementById('dirty-dot').classList.remove('on');
+function isApproved(p) {
+  const c = merged(p);
+  return c.approved === true;
+}
+
+function isHQ(p) {
+  const c = merged(p);
+  return c.hq === true;
+}
+
+async function toggleHQ(id) {
+  const pool = [...newEntries, ...allPrompts];
+  const p = pool.find(q => q.id === id);
+  if (!p) return;
+  const wasHQ = isHQ(p);
+  const existing = changes.get(id) || {};
+  changes.set(id, { ...existing, hq: !wasHQ });
+  markDirty();
+  try {
+    const out = await saveData();
+    allPrompts = out; newEntries = []; changes.clear(); deletes.clear(); clearDirty();
+    toast(wasHQ ? '已取消精选' : '★ 已标记为精选');
+  } catch(e) {
+    toast('保存失败：' + e.message, true);
+  }
+  applyFilters();
+}
+
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+  applyFilters();
+}
+
+function updateTabCounts() {
+  const pool = [...newEntries, ...allPrompts].filter(p => !deletes.has(p.id));
+  document.getElementById('count-pending').textContent  = pool.filter(p =>  isPending(p)).length;
+  document.getElementById('count-review').textContent   = pool.filter(p => !isPending(p) && !isApproved(p)).length;
+  document.getElementById('count-approved').textContent = pool.filter(p => !isPending(p) &&  isApproved(p)).length;
+}
+
+async function publishEntry(id) {
+  const existing = changes.get(id) || {};
+  changes.set(id, { ...existing, pending: false });
+  markDirty();
+  try {
+    const out = await saveData();
+    allPrompts = out; newEntries = []; changes.clear(); deletes.clear(); clearDirty();
+    toast('✓ 已发布到图库');
+  } catch(e) {
+    toast('发布失败：' + e.message, true);
+  }
+  applyFilters();
+}
+
+async function approveEntry(id) {
+  const existing = changes.get(id) || {};
+  changes.set(id, { ...existing, approved: true });
+  markDirty();
+  try {
+    const out = await saveData();
+    allPrompts = out; newEntries = []; changes.clear(); deletes.clear(); clearDirty();
+    toast('✓ 已通过审核');
+  } catch(e) {
+    toast('保存失败：' + e.message, true);
+  }
+  applyFilters();
+}
+
+async function revokeApproval(id) {
+  const existing = changes.get(id) || {};
+  changes.set(id, { ...existing, approved: false });
+  markDirty();
+  try {
+    const out = await saveData();
+    allPrompts = out; newEntries = []; changes.clear(); deletes.clear(); clearDirty();
+    toast('已撤销通过');
+  } catch(e) {
+    toast('保存失败：' + e.message, true);
+  }
+  applyFilters();
+}
+
+// ════════════════════════════════════════════════════
+//  Lightbox
+// ════════════════════════════════════════════════════
+function openLightbox(entryId) {
+  const pool = [...newEntries, ...allPrompts];
+  const p = pool.find(p => p.id === entryId);
+  if (!p) return;
+  const c = merged(p);
+  lightboxImgs = (c.outputImages && c.outputImages.length) ? c.outputImages : (c.thumbnail ? [c.thumbnail] : []);
+  if (lightboxImgs.length === 0) return;
+  lightboxIdx = 0;
+  showLightboxImg();
+  document.getElementById('lightbox').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function showLightboxImg() {
+  document.getElementById('lightbox-img').src = lightboxImgs[lightboxIdx];
+  const counter = document.getElementById('lb-counter');
+  if (lightboxImgs.length > 1) {
+    counter.textContent = `${lightboxIdx + 1} / ${lightboxImgs.length}`;
+    document.getElementById('lb-prev').style.display = lightboxIdx > 0 ? '' : 'none';
+    document.getElementById('lb-next').style.display = lightboxIdx < lightboxImgs.length - 1 ? '' : 'none';
+  } else {
+    counter.textContent = '';
+    document.getElementById('lb-prev').style.display = 'none';
+    document.getElementById('lb-next').style.display = 'none';
+  }
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+function lightboxNav(dir) {
+  lightboxIdx = Math.max(0, Math.min(lightboxImgs.length - 1, lightboxIdx + dir));
+  showLightboxImg();
 }
 
 // ════════════════════════════════════════════════════
 //  Save
 // ════════════════════════════════════════════════════
+async function saveData() {
+  const pool = [...newEntries, ...allPrompts];
+  const out = pool
+    .filter(p => !deletes.has(p.id))
+    .map(p => {
+      const c = changes.has(p.id) ? { ...p, ...changes.get(p.id) } : p;
+      const baseTags = (c.tags || []).filter(t => t !== c.category && t !== p.category);
+      c.tags = [...new Set([c.lang, c.category, ...baseTags])];
+      return c;
+    });
+
+  const r = await fetch('/api/prompts', {
+    method:  'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body:    JSON.stringify(out),
+  });
+  if (!r.ok) throw new Error(await r.text());
+  return out;
+}
+
 async function doSave() {
   const btn = document.getElementById('save-btn');
   btn.disabled = true;
   btn.innerHTML = '保存中…';
 
   try {
-    const pool = [...newEntries, ...allPrompts];
-    const out = pool
-      .filter(p => !deletes.has(p.id))
-      .map(p => {
-        const c = changes.has(p.id) ? { ...p, ...changes.get(p.id) } : p;
-        const baseTags = (c.tags || []).filter(t => t !== c.category && t !== p.category);
-        c.tags = [...new Set([c.lang, c.category, ...baseTags])];
-        return c;
-      });
-
-    const r = await fetch('/api/prompts', {
-      method:  'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify(out),
-    });
-    if (!r.ok) throw new Error(await r.text());
-
+    const out = await saveData();
     allPrompts = out;
     newEntries = [];
     changes.clear();
@@ -1141,10 +1596,8 @@ function toast(msg, isErr = false) {
 // ════════════════════════════════════════════════════
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
-    closeEdit();
-    closeDel();
-    closeAdd();
-    closeDeployMenu();
+    if (!document.getElementById('lightbox').classList.contains('hidden')) { closeLightbox(); return; }
+    closeEdit(); closeDel(); closeAdd(); closeDeployMenu();
   }
   if ((e.metaKey || e.ctrlKey) && e.key === 's') {
     e.preventDefault();

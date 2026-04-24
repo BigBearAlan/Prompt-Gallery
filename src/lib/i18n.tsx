@@ -16,6 +16,7 @@ export interface Translation {
   searchAuthorHint: string;
   searchTitleHint: string;
   searchLoading: string;
+  searchLoadingFallback: string;
   searchUnavailable: string;
   sortLikes: string;
   sortViews: string;
@@ -61,6 +62,7 @@ export const translations: Record<Locale, Translation> = {
     searchAuthorHint: '按作者字段精确查找',
     searchTitleHint: '按标题字段精确查找',
     searchLoading: '正在加载图片搜索索引...',
+    searchLoadingFallback: '图片识别索引加载中，当前显示文本匹配结果…',
     searchUnavailable: '图片搜索索引加载失败，请稍后重试。',
     sortLikes: '最多点赞',
     sortViews: '最多浏览',
@@ -106,6 +108,7 @@ export const translations: Record<Locale, Translation> = {
     searchAuthorHint: 'Searching only author names',
     searchTitleHint: 'Searching only titles',
     searchLoading: 'Loading image search index...',
+    searchLoadingFallback: 'Image index loading — showing text-match results for now…',
     searchUnavailable: 'Failed to load the image search index. Please try again.',
     sortLikes: 'Most Liked',
     sortViews: 'Most Viewed',

@@ -9,6 +9,7 @@ import {
   parseSearchQuery,
   scoreImageSearch,
   scorePrefixSearch,
+  scorePromptText,
 } from '@/lib/search';
 import PromptCard from './PromptCard';
 import PromptModal from './PromptModal';
@@ -36,23 +37,30 @@ export default function Gallery({ entries }: Props) {
   // Shuffle once per session (stable across re-renders, new order on page reload)
   const sessionSeed = useRef(Math.random());
   const shuffled = useMemo(() => {
-    const arr = [...entries];
     let seed = sessionSeed.current;
-    for (let i = arr.length - 1; i > 0; i--) {
+    const rng = () => {
       seed = (seed * 9301 + 49297) % 233280;
-      const j = Math.floor((seed / 233280) * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
+      return seed / 233280;
+    };
+    // Weighted shuffle: HQ entries draw from [0, 0.4), regular from [0, 1).
+    // They genuinely mix but HQ tends toward the front without being separated.
+    return [...entries]
+      .map(e => ({ e, pos: rng() * (e.hq ? 0.4 : 1) }))
+      .sort((a, b) => a.pos - b.pos)
+      .map(x => x.e);
   }, [entries]);
 
   const parsedSearch = useMemo(() => parseSearchQuery(deferredSearch), [deferredSearch]);
 
+  // Track whether a fetch has been started so we never double-fetch or
+  // accidentally cancel an in-flight request when dependencies re-render.
+  const fetchAttempted = useRef(false);
+
   useEffect(() => {
     if (!parsedSearch.normalizedTerm || parsedSearch.mode !== 'image') return;
-    if (searchIndex || searchIndexStatus === 'loading') return;
+    if (fetchAttempted.current) return;
+    fetchAttempted.current = true;
 
-    let cancelled = false;
     setSearchIndexStatus('loading');
 
     fetch(withBasePath('/search-index.json'))
@@ -61,26 +69,24 @@ export default function Gallery({ entries }: Props) {
         return res.json();
       })
       .then((json: SearchIndexFile) => {
-        if (cancelled) return;
         setSearchIndex(json);
         setSearchIndexStatus('ready');
       })
       .catch(() => {
-        if (cancelled) return;
+        fetchAttempted.current = false; // allow retry on next search
         setSearchIndexStatus('error');
       });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [parsedSearch.mode, parsedSearch.normalizedTerm, searchIndex, searchIndexStatus]);
+  // Only re-run when search mode/term changes — intentionally excludes
+  // searchIndex and searchIndexStatus to avoid cancelling an in-flight fetch.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [parsedSearch.mode, parsedSearch.normalizedTerm]);
 
   const searchInfo = useMemo(() => {
     if (!parsedSearch.normalizedTerm) return '';
     if (parsedSearch.mode === 'author') return tx.searchAuthorHint;
     if (parsedSearch.mode === 'title') return tx.searchTitleHint;
-    if (searchIndexStatus === 'loading' || searchIndexStatus === 'idle') return tx.searchLoading;
     if (searchIndexStatus === 'error') return tx.searchUnavailable;
+    if (searchIndexStatus !== 'ready') return tx.searchLoadingFallback;
     return tx.searchImageHint;
   }, [parsedSearch.mode, parsedSearch.normalizedTerm, searchIndexStatus, tx]);
 
@@ -88,17 +94,30 @@ export default function Gallery({ entries }: Props) {
     let result: PromptEntry[];
 
     if (parsedSearch.normalizedTerm) {
-      if (parsedSearch.mode === 'image' && searchIndexStatus !== 'ready') {
-        return [];
-      }
+      const indexReady = searchIndexStatus === 'ready';
 
       const scored = entries
-        .map((entry) => ({
-          entry,
-          score: parsedSearch.mode === 'image'
-            ? scoreImageSearch(searchIndex?.entries?.[entry.id], parsedSearch)
-            : scorePrefixSearch(entry, parsedSearch),
-        }))
+        .map((entry) => {
+          let score = 0;
+
+          if (parsedSearch.mode !== 'image') {
+            // author / title — instant, no index needed
+            score = scorePrefixSearch(entry, parsedSearch);
+          } else if (indexReady) {
+            // Image index ready: image-content score (primary) + prompt text (secondary)
+            const imgScore = scoreImageSearch(searchIndex?.entries?.[entry.id], parsedSearch);
+            const txtScore = scorePromptText(entry, parsedSearch);
+            // If the image index found something, blend in text as a tiebreaker;
+            // if not, fall back to prompt text alone so we never return 0 for a real match.
+            score = imgScore > 0 ? imgScore + txtScore * 0.35 : txtScore * 0.6;
+          } else {
+            // Index still loading — search title + prompt text immediately
+            score = scorePromptText(entry, parsedSearch);
+          }
+
+          score += entry.hq ? 30 : 0;
+          return { entry, score };
+        })
         .filter((item) => item.score > 0)
         .sort((a, b) => {
           if (b.score !== a.score) return b.score - a.score;
@@ -126,9 +145,14 @@ export default function Gallery({ entries }: Props) {
       return result;
     }
 
-    if (sortBy === 'likes') return [...result].sort((a, b) => b.stats.likes - a.stats.likes);
-    if (sortBy === 'views') return [...result].sort((a, b) => b.stats.views - a.stats.views);
-    return result; // 'recent' keeps the session shuffle order
+    // HQ entries get a 1.5× score boost so they surface higher without hard-separating tiers
+    if (sortBy === 'likes') return [...result].sort((a, b) =>
+      b.stats.likes * (b.hq ? 1.5 : 1) - a.stats.likes * (a.hq ? 1.5 : 1)
+    );
+    if (sortBy === 'views') return [...result].sort((a, b) =>
+      b.stats.views * (b.hq ? 1.5 : 1) - a.stats.views * (a.hq ? 1.5 : 1)
+    );
+    return result; // 'recent' uses the weighted shuffle above
   }, [category, entries, lang, parsedSearch, searchIndex, searchIndexStatus, shuffled, sortBy, tagFilter]);
 
   const displayed = useMemo(
@@ -186,9 +210,7 @@ export default function Gallery({ entries }: Props) {
             className="text-center py-24 text-sm"
             style={{ color: 'var(--text-secondary)' }}
           >
-            {parsedSearch.mode === 'image' && parsedSearch.normalizedTerm && searchIndexStatus !== 'ready'
-              ? searchInfo
-              : tx.noResults}
+            {tx.noResults}
           </div>
         ) : (
           <div className="masonry">
