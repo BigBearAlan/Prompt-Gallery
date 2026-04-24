@@ -570,7 +570,8 @@
     "outputImages": [
       "/images/2046115431144902732_0.jpg"
     ],
-    "sourceUrl": "https://x.com/BubbleBrain/status/2046115431144902732"
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046115431144902732",
+    "approved": true
   },
   {
     "id": "2044061942025724144-ff13dee0",
@@ -596,7 +597,8 @@
       "/images/2044061942025724144_0.jpg"
     ],
     "sourceUrl": "https://x.com/ivangdavila/status/2044061942025724144",
-    "sourceId": "2044061942025724144"
+    "sourceId": "2044061942025724144",
+    "approved": true
   },
   {
     "id": "2044380730592260134",
@@ -674,7 +676,9 @@
     "outputImages": [
       "/images/2046705402742460471_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Gdgtify/status/2046705402742460471#reversed-1"
+    "sourceUrl": "https://x.com/Gdgtify/status/2046705402742460471#reversed-1",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046902204670611919",
@@ -777,7 +781,8 @@
     "outputImages": [
       "/images/2046512945862201450_0.jpg"
     ],
-    "sourceUrl": "https://x.com/seiiiiiiiiiiru/status/2046512945862201450"
+    "sourceUrl": "https://x.com/seiiiiiiiiiiru/status/2046512945862201450",
+    "approved": true
   },
   {
     "id": "2046612424321913069",
@@ -1114,7 +1119,9 @@
       "/images/2044241756523507788_0.jpg"
     ],
     "sourceUrl": "https://x.com/HbTteok/status/2044241756523507788",
-    "sourceId": "2044241756523507788"
+    "sourceId": "2044241756523507788",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2044975385419583710",
@@ -1139,7 +1146,8 @@
     "outputImages": [
       "/images/2044975385419583710_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Kukkuree/status/2044975385419583710"
+    "sourceUrl": "https://x.com/Kukkuree/status/2044975385419583710",
+    "approved": true
   },
   {
     "id": "2046602618269733010",
@@ -1164,7 +1172,8 @@
     "outputImages": [
       "/images/2046602618269733010_0.jpg"
     ],
-    "sourceUrl": "https://x.com/desds1678/status/2046602618269733010"
+    "sourceUrl": "https://x.com/desds1678/status/2046602618269733010",
+    "approved": true
   },
   {
     "id": "2046080527896314302",
@@ -1654,7 +1663,9 @@
     "outputImages": [
       "/images/2044240982951288925_0.jpg"
     ],
-    "sourceUrl": "https://x.com/adishakti2004/status/2044240982951288925"
+    "sourceUrl": "https://x.com/adishakti2004/status/2044240982951288925",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046344973835231524",
@@ -2009,7 +2020,8 @@
     "outputImages": [
       "/images/2046633092711157769_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Youtae/status/2046633092711157769"
+    "sourceUrl": "https://x.com/Youtae/status/2046633092711157769",
+    "approved": true
   },
   {
     "id": "2046799393307996376",
@@ -3643,7 +3655,8 @@
     "outputImages": [
       "/images/2046501587762188535_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Shinning1010/status/2046501587762188535"
+    "sourceUrl": "https://x.com/Shinning1010/status/2046501587762188535",
+    "approved": true
   },
   {
     "id": "2046140825952989627-159c5613",
@@ -3876,7 +3889,9 @@
       "/images/2046876482224746543_1.jpg",
       "/images/2046876482224746543_2.jpg"
     ],
-    "sourceUrl": "https://x.com/HarunagaMutsuki/status/2046876482224746543#reversed-0"
+    "sourceUrl": "https://x.com/HarunagaMutsuki/status/2046876482224746543#reversed-0",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046295223584862235-abdbcfd3",
@@ -3902,7 +3917,9 @@
       "/images/2046295223584862235-abdbcfd3_0.jpeg"
     ],
     "sourceUrl": "https://x.com/nakazakifam/status/2046295223584862235",
-    "sourceId": "2046295223584862235"
+    "sourceId": "2046295223584862235",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046251166636622216-820342e8",
@@ -3963,7 +3980,7 @@
   {
     "id": "2045679633832595558",
     "title": "中国历史时间轴信息图",
-    "thumbnail": "/images/2045679633832595558_0.jpg",
+    "thumbnail": "/images/2045679633832595558_0.jpeg",
     "thumbnailAspect": 1.33,
     "author": "axiaisacat",
     "authorUrl": "https://x.com/axiaisacat",
@@ -3981,9 +3998,11 @@
     "createdAt": "2026-04-19T01:43:26.000Z",
     "prompt": "{\n  \"type\": \"infographic timeline\",\n  \"style\": {\n    \"background\": \"{argument name=\\\"background style\\\" default=\\\"textured beige rice paper\\\"}\",\n    \"art_style\": \"{argument name=\\\"art style\\\" default=\\\"traditional Chinese watercolor and ink wash illustration\\\"}\"\n  },\n  \"header\": {\n    \"title\": \"{argument name=\\\"main title\\\" default=\\\"中国历史朝代图\\\"}\",\n    \"subtitle\": \"{argument name=\\\"subtitle\\\" default=\\\"华夏文明·源远流长\\\"}\",\n    \"elements\": [\"red calligraphy title\", \"red square seal stamp top right\", \"cloud motifs\"]\n  },\n  \"layout\": {\n    \"sections_count\": 4,\n    \"sections\": [\n      {\n        \"id\": \"1\",\n        \"label\": \"壹 先秦时期\",\n        \"date_range\": \"(约前2070年—前221年)\",\n        \"description\": \"华夏起源，诸侯纷争，百家争鸣。\",\n        \"timeline_nodes\": 4,\n        \"dynasties\": [\"夏\", \"商\", \"西周\", \"东周\"],\n        \"illustrations\": [\"scholar holding bamboo slips\", \"bronze ding tripod\", \"bronze ritual vessel\", \"horse-drawn chariot\", \"bamboo slips and brush\"]\n      },\n      {\n        \"id\": \"2\",\n        \"label\": \"贰 秦汉三国\",\n        \"date_range\": \"(前221年—280年)\",\n        \"description\": \"大一统时代，开疆拓土，英雄辈出。\",\n        \"timeline_nodes\": 3,\n        \"dynasties\": [\"秦\", \"汉\", \"三国\"],\n        \"illustrations\": [\"terracotta warrior\", \"cavalryman on galloping horse\", \"three generals in traditional armor\"]\n      },\n      {\n        \"id\": \"3\",\n        \"label\": \"叁 两晋南北朝 隋唐五代\",\n        \"date_range\": \"(280年—960年)\",\n        \"description\": \"分裂与融合并存，盛世辉煌，文化鼎盛。\",\n        \"timeline_nodes\": 5,\n        \"dynasties\": [\"两晋\", \"南北朝\", \"隋\", \"唐\", \"五代十国\"],\n        \"illustrations\": [\"scholar drinking wine\", \"seated Buddha statue\", \"arched stone bridge with boat\", \"elegant Tang dynasty lady\", \"cavalryman holding a flag\"]\n      },\n      {\n        \"id\": \"4\",\n        \"label\": \"肆 宋元明清\",\n        \"date_range\": \"(960年—1912年)\",\n        \"description\": \"经济繁荣，民族融合，走向近代。\",\n        \"timeline_nodes\": 4,\n        \"dynasties\": [\"宋\", \"元\", \"明\", \"清\"],\n        \"illustrations\": [\"bustling riverside townscape\", \"mounted archer shooting backwards\", \"palace complex\", \"Qing dynasty official\"]\n      }\n    ]\n  },\n  \"footer\": {\n    \"quote\": \"{argument name=\\\"bottom quote\\\" default=\\\"以史为鉴，可以知兴替；以人为镜，可以明得失。\\\"}\",\n    \"decorations\": [\"bamboo leaves on bottom left\", \"Great Wall illustration on bottom right\"]\n  }\n}",
     "outputImages": [
-      "/images/2045679633832595558_0.jpg"
+      "/images/2045679633832595558_0.jpeg"
     ],
-    "sourceUrl": "https://x.com/axiaisacat/status/2045679633832595558"
+    "sourceUrl": "https://x.com/axiaisacat/status/2045679633832595558",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045341456110666143",
@@ -4570,7 +4589,8 @@
     "outputImages": [
       "/images/2046852355535274063_0.jpg"
     ],
-    "sourceUrl": "https://x.com/ZHO_ZHO_ZHO/status/2046852355535274063#reversed-0"
+    "sourceUrl": "https://x.com/ZHO_ZHO_ZHO/status/2046852355535274063#reversed-0",
+    "approved": true
   },
   {
     "id": "2046715368987664526",
@@ -6401,7 +6421,9 @@
     "outputImages": [
       "/images/2045945940528509109_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Nolan_Osi/status/2045945940528509109"
+    "sourceUrl": "https://x.com/Nolan_Osi/status/2045945940528509109",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045126926927552778",
@@ -7016,7 +7038,9 @@
     "outputImages": [
       "/images/2046413660147314714_0.jpg"
     ],
-    "sourceUrl": "https://x.com/pfanis/status/2046413660147314714"
+    "sourceUrl": "https://x.com/pfanis/status/2046413660147314714",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046640942116188212",
@@ -7041,7 +7065,8 @@
     "outputImages": [
       "/images/2046640942116188212_0.jpg"
     ],
-    "sourceUrl": "https://x.com/acupofai/status/2046640942116188212"
+    "sourceUrl": "https://x.com/acupofai/status/2046640942116188212",
+    "approved": true
   },
   {
     "id": "2045105915502989649",
@@ -7343,7 +7368,8 @@
     "outputImages": [
       "/images/2046631477400805661_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Pajoca_/status/2046631477400805661"
+    "sourceUrl": "https://x.com/Pajoca_/status/2046631477400805661",
+    "approved": true
   },
   {
     "id": "2045513515130318998",
@@ -7393,7 +7419,9 @@
     "outputImages": [
       "/images/2046483268019884384_0.jpg"
     ],
-    "sourceUrl": "https://x.com/BubbleBrain/status/2046483268019884384"
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046483268019884384",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2044290987875275215",
@@ -7518,7 +7546,9 @@
     "outputImages": [
       "/images/2045028562626081240_0.jpg"
     ],
-    "sourceUrl": "https://x.com/FuHongCloud/status/2045028562626081240"
+    "sourceUrl": "https://x.com/FuHongCloud/status/2045028562626081240",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2044130225437716921",
@@ -8481,7 +8511,9 @@
     "outputImages": [
       "/images/2046802557872562478_0.jpg"
     ],
-    "sourceUrl": "https://x.com/MathMedix/status/2046802557872562478#reversed-0"
+    "sourceUrl": "https://x.com/MathMedix/status/2046802557872562478#reversed-0",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046714718790816171",
@@ -11023,7 +11055,9 @@
     "outputImages": [
       "/images/2046498264774791514_0.jpg"
     ],
-    "sourceUrl": "https://x.com/genel_ai/status/2046498264774791514"
+    "sourceUrl": "https://x.com/genel_ai/status/2046498264774791514",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046661936381911182",
@@ -11325,7 +11359,9 @@
     "outputImages": [
       "/images/2046509734954741780_0.jpg"
     ],
-    "sourceUrl": "https://x.com/seiiiiiiiiiiru/status/2046509734954741780"
+    "sourceUrl": "https://x.com/seiiiiiiiiiiru/status/2046509734954741780",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2044787810176246089",
@@ -11810,7 +11846,9 @@
     "outputImages": [
       "/images/2045409072560898406_0.jpg"
     ],
-    "sourceUrl": "https://x.com/chengzhx/status/2045409072560898406"
+    "sourceUrl": "https://x.com/chengzhx/status/2045409072560898406",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045055579534893434",
@@ -13121,7 +13159,8 @@
     "outputImages": [
       "/images/2044835814819950963_0.jpg"
     ],
-    "sourceUrl": "https://x.com/abdlhakai/status/2044835814819950963"
+    "sourceUrl": "https://x.com/abdlhakai/status/2044835814819950963",
+    "approved": true
   },
   {
     "id": "2046630257701048775",
@@ -14583,7 +14622,9 @@
     "outputImages": [
       "/images/2046689539243049156_0.jpg"
     ],
-    "sourceUrl": "https://x.com/RichardGibbonsX/status/2046689539243049156"
+    "sourceUrl": "https://x.com/RichardGibbonsX/status/2046689539243049156",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045040830227050885",
@@ -14919,7 +14960,8 @@
       "/images/2046574334572212694_2.jpg",
       "/images/2046574334572212694_3.jpg"
     ],
-    "sourceUrl": "https://x.com/GeekCatX/status/2046574334572212694"
+    "sourceUrl": "https://x.com/GeekCatX/status/2046574334572212694",
+    "approved": true
   },
   {
     "id": "2045165565858496942",
@@ -15904,7 +15946,9 @@
     "outputImages": [
       "/images/2046671651606282716_0.jpg"
     ],
-    "sourceUrl": "https://x.com/rathan_pmr/status/2046671651606282716"
+    "sourceUrl": "https://x.com/rathan_pmr/status/2046671651606282716",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046693279664935272-07173222",
@@ -16082,7 +16126,8 @@
     "outputImages": [
       "/images/2046371076402503709_0.jpg"
     ],
-    "sourceUrl": "https://x.com/tebasaki3D/status/2046371076402503709"
+    "sourceUrl": "https://x.com/tebasaki3D/status/2046371076402503709",
+    "approved": true
   },
   {
     "id": "2046679497110675635-7c198463",
@@ -16535,7 +16580,8 @@
     "outputImages": [
       "/images/2045036186734039545_0.jpg"
     ],
-    "sourceUrl": "https://x.com/maxescu/status/2045036186734039545"
+    "sourceUrl": "https://x.com/maxescu/status/2045036186734039545",
+    "approved": true
   },
   {
     "id": "2046559605074076112",
@@ -16561,7 +16607,9 @@
       "/images/2046559605074076112_0.jpg",
       "/images/2046559605074076112_1.jpg"
     ],
-    "sourceUrl": "https://x.com/GeekCatX/status/2046559605074076112"
+    "sourceUrl": "https://x.com/GeekCatX/status/2046559605074076112",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046783449504116790",
@@ -16841,7 +16889,9 @@
     "outputImages": [
       "/images/2046723051895800086_0.jpg"
     ],
-    "sourceUrl": "https://x.com/dotey/status/2046723051895800086"
+    "sourceUrl": "https://x.com/dotey/status/2046723051895800086",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046660908630356433",
@@ -17123,7 +17173,9 @@
       "/images/2045130715109716094_2.jpg",
       "/images/2045130715109716094_3.jpg"
     ],
-    "sourceUrl": "https://x.com/frankfu1688/status/2045130715109716094"
+    "sourceUrl": "https://x.com/frankfu1688/status/2045130715109716094",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046789718428594409",
@@ -17331,7 +17383,9 @@
     "outputImages": [
       "/images/2046564674112831920_0.jpg"
     ],
-    "sourceUrl": "https://x.com/BubbleBrain/status/2046564674112831920"
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046564674112831920",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046739223001309256",
@@ -17683,7 +17737,8 @@
     "outputImages": [
       "/images/2045875219307655337_0.jpg"
     ],
-    "sourceUrl": "https://x.com/liyue_ai/status/2045875219307655337"
+    "sourceUrl": "https://x.com/liyue_ai/status/2045875219307655337",
+    "approved": true
   },
   {
     "id": "2046787206585430189",
@@ -19038,7 +19093,9 @@
     "outputImages": [
       "/images/2046043859726303709_0.jpg"
     ],
-    "sourceUrl": "https://x.com/j_zou93/status/2046043859726303709"
+    "sourceUrl": "https://x.com/j_zou93/status/2046043859726303709",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046245597796257937",
@@ -19465,7 +19522,9 @@
     "outputImages": [
       "/images/2046930310613332075_0.jpg"
     ],
-    "sourceUrl": "https://x.com/ToroJushiAi/status/2046930310613332075"
+    "sourceUrl": "https://x.com/ToroJushiAi/status/2046930310613332075",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046470907762450900",
@@ -19490,7 +19549,9 @@
     "outputImages": [
       "/images/2046470907762450900_0.jpg"
     ],
-    "sourceUrl": "https://x.com/TanShilong/status/2046470907762450900"
+    "sourceUrl": "https://x.com/TanShilong/status/2046470907762450900",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045355342998221257",
@@ -19641,7 +19702,9 @@
     "outputImages": [
       "/images/2046254319163302131_0.jpg"
     ],
-    "sourceUrl": "https://x.com/ecooai/status/2046254319163302131"
+    "sourceUrl": "https://x.com/ecooai/status/2046254319163302131",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046795552650936695",
