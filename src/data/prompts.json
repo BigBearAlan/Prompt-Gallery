@@ -22585,7 +22585,9 @@
       "/images/2047333456380940449_2.jpg",
       "/images/2047333456380940449_3.jpg"
     ],
-    "sourceUrl": "https://x.com/yhslgg/status/2047333456380940449"
+    "sourceUrl": "https://x.com/yhslgg/status/2047333456380940449",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2047329628642267456",
