@@ -1523,6 +1523,11 @@ async function doDeploy(target) {
   const endpoint = '/api/deploy/vercel';
 
   try {
+    const status = await fetch('/api/deploy/status', { cache: 'no-store' });
+    if (!status.ok) {
+      throw new Error('Admin server is outdated. Restart it with npm run admin, then reload this page.');
+    }
+
     const es = new EventSource(endpoint);
 
     es.addEventListener('log', e => {

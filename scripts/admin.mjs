@@ -147,6 +147,12 @@ const server = createServer(async (req, res) => {
       return;
     }
 
+    // ── GET /api/deploy/status ──
+    if (path_ === '/api/deploy/status' && req.method === 'GET') {
+      json(res, { ok: true, target: 'vercel' });
+      return;
+    }
+
     // ── GET /api/deploy/vercel  (SSE: build check + git push → Vercel) ──
     if (path_ === '/api/deploy/vercel' && req.method === 'GET') {
       const { send, runStep } = sseSetup(res);
