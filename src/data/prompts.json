@@ -1186,7 +1186,8 @@
     "outputImages": [
       "/images/2046080527896314302_0.jpg"
     ],
-    "sourceUrl": "https://x.com/wtry1102/status/2046080527896314302"
+    "sourceUrl": "https://x.com/wtry1102/status/2046080527896314302",
+    "approved": true
   },
   {
     "id": "2046695673630728261",
@@ -1390,7 +1391,8 @@
     "outputImages": [
       "/images/2045108716501094794_0.jpg"
     ],
-    "sourceUrl": "https://x.com/old_pgmrs_will/status/2045108716501094794"
+    "sourceUrl": "https://x.com/old_pgmrs_will/status/2045108716501094794",
+    "approved": true
   },
   {
     "id": "2045022929273167927",
@@ -1415,7 +1417,9 @@
     "outputImages": [
       "/images/2045022929273167927_0.jpg"
     ],
-    "sourceUrl": "https://x.com/noriyang_crypt/status/2045022929273167927"
+    "sourceUrl": "https://x.com/noriyang_crypt/status/2045022929273167927",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046739397786448177",
@@ -1748,7 +1752,8 @@
       "/images/2046502136973001143_0.jpg"
     ],
     "sourceUrl": "https://x.com/op7418/status/2046502136973001143",
-    "sourceId": "2046502136973001143"
+    "sourceId": "2046502136973001143",
+    "approved": true
   },
   {
     "id": "2045091769180914019",
@@ -1924,7 +1929,8 @@
     "outputImages": [
       "/images/2046603022365839777_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Jackywine/status/2046603022365839777"
+    "sourceUrl": "https://x.com/Jackywine/status/2046603022365839777",
+    "approved": true
   },
   {
     "id": "2045302790852108317",
@@ -1949,7 +1955,8 @@
     "outputImages": [
       "/images/2045302790852108317_0.jpg"
     ],
-    "sourceUrl": "https://x.com/hayatopika/status/2045302790852108317"
+    "sourceUrl": "https://x.com/hayatopika/status/2045302790852108317",
+    "approved": true
   },
   {
     "id": "2044974254769463312",
@@ -2049,7 +2056,8 @@
     "outputImages": [
       "/images/2043731296065859698_0.jpg"
     ],
-    "sourceUrl": "https://x.com/darren_ter/status/2043731296065859698"
+    "sourceUrl": "https://x.com/darren_ter/status/2043731296065859698",
+    "approved": true
   },
   {
     "id": "2046778808221733337",
@@ -2125,7 +2133,8 @@
     "outputImages": [
       "/images/2046165102290948331_0.jpg"
     ],
-    "sourceUrl": "https://x.com/dhythm_dev/status/2046165102290948331"
+    "sourceUrl": "https://x.com/dhythm_dev/status/2046165102290948331",
+    "approved": true
   },
   {
     "id": "2045355354188632229",
@@ -2150,7 +2159,8 @@
     "outputImages": [
       "/images/2045355354188632229_0.jpg"
     ],
-    "sourceUrl": "https://x.com/fang_ceo/status/2045355354188632229"
+    "sourceUrl": "https://x.com/fang_ceo/status/2045355354188632229",
+    "approved": true
   },
   {
     "id": "2045343176056266771",
@@ -2175,7 +2185,8 @@
     "outputImages": [
       "/images/2045343176056266771_0.jpg"
     ],
-    "sourceUrl": "https://x.com/amiger1412/status/2045343176056266771"
+    "sourceUrl": "https://x.com/amiger1412/status/2045343176056266771",
+    "approved": true
   },
   {
     "id": "2046190539213885806",
@@ -2226,7 +2237,8 @@
       "/images/2045070694934097922_0.jpg"
     ],
     "sourceUrl": "https://x.com/PMHasSpring/status/2045070694934097922",
-    "sourceId": "2045070694934097922"
+    "sourceId": "2045070694934097922",
+    "approved": true
   },
   {
     "id": "2045734492225376501-b7dfa959",
@@ -4063,32 +4075,9 @@
     "outputImages": [
       "/images/2044790962002784678_0.jpg"
     ],
-    "sourceUrl": "https://x.com/yyyole/status/2044790962002784678"
-  },
-  {
-    "id": "2044776883049451619",
-    "title": "电商直播 UI 原型图",
-    "thumbnail": "/images/2044776883049451619_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "行者AI视频",
-    "authorUrl": "https://x.com/joshesye",
-    "tags": [
-      "zh",
-      "ui"
-    ],
-    "category": "ui",
-    "lang": "zh",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "2026-04-16T13:56:13.000Z",
-    "prompt": "{\n  \"type\": \"mobile live stream UI mockup\",\n  \"subject\": {\n    \"description\": \"young Asian woman in traditional light peach Hanfu with floral embroidery, ornate gold and pearl hairpins with pink flowers, smiling, looking at camera, holding a round tin of floral tea\",\n    \"foreground_objects\": {\n      \"count\": 5,\n      \"items\": [\n        \"round tin held by host\",\n        \"round tin on table\",\n        \"rectangular box on table\",\n        \"open tin with dried tea leaves\",\n        \"clear glass teacup with blooming pink flower\"\n      ],\n      \"labels\": [\"牡丹花茶\"]\n    },\n    \"background\": \"traditional Chinese interior, warm lighting, wooden lattice screens, pink floral branches\"\n  },\n  \"ui_layout\": {\n    \"top_bar\": {\n      \"elements\": [\"19:37\", \"signal bars\", \"wifi\", \"battery\"]\n    },\n    \"top_left\": {\n      \"host_info\": {\n        \"name\": \"{argument name=\\\"host name\\\" default=\\\"小雅国风严选\\\"}\",\n        \"stats\": \"83.0万本场点赞\",\n        \"button\": \"关注\"\n      },\n      \"badges\": [\"带货榜\", \"人气榜\"],\n      \"promo_banner\": \"领券下单更优惠 点击领取\"\n    },\n    \"top_right\": {\n      \"viewers\": {\n        \"count\": 3,\n        \"text\": \"10万+\",\n        \"close_button\": \"X\"\n      },\n      \"links\": [\"更多直播 >\"],\n      \"event_banner\": {\n        \"title\": \"{argument name=\\\"event banner text\\\" default=\\\"抖音618好物节\\\"}\",\n        \"dates\": \"5.24-6.18\"\n      }\n    },\n    \"mid_left_events\": {\n      \"gift_count\": 2,\n      \"gifts\": [\n        {\"user\": \"可乐\", \"action\": \"送小心心\", \"combo\": \"x 16\"},\n        {\"user\": \"安安\", \"action\": \"送人气票\", \"combo\": \"x 21\"}\n      ],\n      \"join_notification\": \"加入了直播间\"\n    },\n    \"bottom_left_chat\": {\n      \"message_count\": 5,\n      \"messages\": [\n        \"{argument name=\\\"chat message\\\" default=\\\"主播这款花茶喝了美容养颜吗？\\\"}\",\n        \"包装也太好看了吧！\",\n        \"拍了2号链接，期待发货~\",\n        \"主播讲讲功效呗\",\n        \"已经回购三次了，味道很正！\"\n      ]\n    },\n    \"bottom_product_card\": {\n      \"title\": \"小雅严选 {argument name=\\\"product name\\\" default=\\\"牡丹花茶\\\"}礼盒装\",\n      \"guarantee\": \"坏损包退 7天无理由退货\",\n      \"price\": \"{argument name=\\\"product price\\\" default=\\\"¥ 89.9\\\"}\",\n      \"button\": \"抢\"\n    },\n    \"bottom_nav_bar\": {\n      \"input_placeholder\": \"说点什么...\",\n      \"icons_count\": 5,\n      \"icons\": [\"smiley\", \"shopping cart\", \"gift\", \"heart\", \"more options\"]\n    }\n  }\n}",
-    "outputImages": [
-      "/images/2044776883049451619_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/joshesye/status/2044776883049451619"
+    "sourceUrl": "https://x.com/yyyole/status/2044790962002784678",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045516955470147894",
@@ -4319,7 +4308,9 @@
     "outputImages": [
       "/images/2046348182301683954_0.jpg"
     ],
-    "sourceUrl": "https://x.com/aiehon_aya/status/2046348182301683954#reversed-0"
+    "sourceUrl": "https://x.com/aiehon_aya/status/2046348182301683954#reversed-0",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2043979078798323727",
@@ -5177,7 +5168,9 @@
       "/images/2046649953888731390_2.jpg",
       "/images/2046649953888731390_3.jpg"
     ],
-    "sourceUrl": "https://x.com/akira_papa_IT/status/2046649953888731390"
+    "sourceUrl": "https://x.com/akira_papa_IT/status/2046649953888731390",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046797126089474457",
@@ -5202,7 +5195,8 @@
     "outputImages": [
       "/images/2046797126089474457_0.jpg"
     ],
-    "sourceUrl": "https://x.com/kabumira862571/status/2046797126089474457"
+    "sourceUrl": "https://x.com/kabumira862571/status/2046797126089474457",
+    "approved": true
   },
   {
     "id": "2046569122109300869",
@@ -5662,7 +5656,8 @@
       "/images/2044289258580574463_1.jpg",
       "/images/2044289258580574463_2.jpg"
     ],
-    "sourceUrl": "https://x.com/ivanjurashere/status/2044289258580574463"
+    "sourceUrl": "https://x.com/ivanjurashere/status/2044289258580574463",
+    "approved": true
   },
   {
     "id": "2046710556208288008",
@@ -5889,7 +5884,9 @@
     "outputImages": [
       "/images/2046735438128333096_0.jpg"
     ],
-    "sourceUrl": "https://x.com/levelsio/status/2046735438128333096#reversed-2"
+    "sourceUrl": "https://x.com/levelsio/status/2046735438128333096#reversed-2",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2043687975662580206",
@@ -6189,7 +6186,8 @@
     "outputImages": [
       "/images/2043865857722622248_0.jpg"
     ],
-    "sourceUrl": "https://x.com/QuadroSub_2/status/2043865857722622248"
+    "sourceUrl": "https://x.com/QuadroSub_2/status/2043865857722622248",
+    "approved": true
   },
   {
     "id": "2046879433462854011",
@@ -6597,7 +6595,8 @@
     "outputImages": [
       "/images/2046695203004985466_0.jpg"
     ],
-    "sourceUrl": "https://x.com/1littlecoder/status/2046695203004985466"
+    "sourceUrl": "https://x.com/1littlecoder/status/2046695203004985466",
+    "approved": true
   },
   {
     "id": "2046582942303174916",
@@ -6774,7 +6773,8 @@
     "outputImages": [
       "/images/2044932099623272868_0.jpg"
     ],
-    "sourceUrl": "https://x.com/damage2525/status/2044932099623272868"
+    "sourceUrl": "https://x.com/damage2525/status/2044932099623272868",
+    "approved": true
   },
   {
     "id": "2046268941941850575",
@@ -6826,7 +6826,8 @@
     "outputImages": [
       "/images/2045370162627629275_0.jpg"
     ],
-    "sourceUrl": "https://x.com/ryuta_fit/status/2045370162627629275"
+    "sourceUrl": "https://x.com/ryuta_fit/status/2045370162627629275",
+    "approved": true
   },
   {
     "id": "2046586251956875763",
@@ -7079,7 +7080,8 @@
     "outputImages": [
       "/images/2046550068140937575_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Artedeingenio/status/2046550068140937575"
+    "sourceUrl": "https://x.com/Artedeingenio/status/2046550068140937575",
+    "approved": true
   },
   {
     "id": "2043741751731769649",
@@ -7732,7 +7734,8 @@
     "outputImages": [
       "/images/2045353488704774396_0.jpg"
     ],
-    "sourceUrl": "https://x.com/genel_ai/status/2045353488704774396"
+    "sourceUrl": "https://x.com/genel_ai/status/2045353488704774396",
+    "approved": true
   },
   {
     "id": "2044196589669847350",
@@ -7885,31 +7888,6 @@
     "sourceUrl": "https://x.com/flowith/status/2046562155148009495"
   },
   {
-    "id": "2045631136358134205",
-    "title": "日式饮料广告海报",
-    "thumbnail": "/images/2045631136358134205_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "MW岩井",
-    "authorUrl": "https://x.com/mwiwai",
-    "tags": [
-      "zh",
-      "advertising"
-    ],
-    "category": "advertising",
-    "lang": "zh",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "2026-04-18T22:30:43.000Z",
-    "prompt": "{\n  \"type\": \"Japanese beverage advertisement poster\",\n  \"subject\": {\n    \"description\": \"young Asian woman, profile view, {argument name=\\\"subject vibe\\\" default=\\\"eyes closed, looking up, feeling refreshed\\\"}\",\n    \"appearance\": \"wet hair, wet skin, sheer white top\",\n    \"environment\": \"floating water droplets, bright blue sky, sunny lighting\"\n  },\n  \"product\": {\n    \"type\": \"aluminum beverage can\",\n    \"placement\": \"bottom right\",\n    \"design\": \"white and yellow gradient, condensation drops\",\n    \"branding\": \"{argument name=\\\"product name\\\" default=\\\"YUZU SPARK\\\"} in large serif font, 'ユズスパーク' below\",\n    \"illustration\": \"yellow {argument name=\\\"flavor fruit\\\" default=\\\"yuzu\\\"} fruit with green leaves\",\n    \"props\": \"2 whole yellow yuzu fruits with green leaves behind the can\"\n  },\n  \"layout\": {\n    \"top_left\": \"Logo with starburst icon and 'KIRARA'\",\n    \"main_copy_left\": \"large vertical black text: {argument name=\\\"main headline\\\" default=\\\"ゆず香る、新しいわたし。\\\"}\",\n    \"sub_copy_left\": \"vertical black text in yellow pill: 'がんばる日々に、やさしいごほうびを。'\",\n    \"script_text\": \"yellow cursive text: 'Refresh!'\",\n    \"right_copy\": \"white handwritten text with underline: '私を、ほどくひとしゅわ。'\",\n    \"badges\": [\n      { \"position\": \"bottom left\", \"style\": \"yellow circle\", \"text\": \"{argument name=\\\"badge text\\\" default=\\\"国産ゆず果汁3%\\\"}\" },\n      { \"position\": \"mid right\", \"style\": \"yellow circle\", \"text\": \"NEW\" }\n    ],\n    \"bottom_text\": \"small black text: 'すっきり、軽やか。やさしい甘さのご褒美時間。'\",\n    \"footer\": \"solid yellow horizontal bar containing product name, tagline 'やさしさ弾ける、ゆずの微炭酸。', and boxed text '数量限定発売中'\"\n  }\n}",
-    "outputImages": [
-      "/images/2045631136358134205_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/mwiwai/status/2045631136358134205"
-  },
-  {
     "id": "2046502288102170757",
     "title": "9:16 vertical — Japanese Fuji film style couple portrait, two subjects  Fujifil…",
     "thumbnail": "/images/2046502288102170757_0.jpg",
@@ -7932,7 +7910,9 @@
     "outputImages": [
       "/images/2046502288102170757_0.jpg"
     ],
-    "sourceUrl": "https://x.com/BubbleBrain/status/2046502288102170757"
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046502288102170757",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046025895941750868",
@@ -8109,7 +8089,8 @@
     "outputImages": [
       "/images/2046192483680575703_0.jpg"
     ],
-    "sourceUrl": "https://x.com/junchan_sim/status/2046192483680575703"
+    "sourceUrl": "https://x.com/junchan_sim/status/2046192483680575703",
+    "approved": true
   },
   {
     "id": "2044613172641108240-a42cd982",
@@ -8160,7 +8141,9 @@
     "outputImages": [
       "/images/2046570100141224061_0.jpg"
     ],
-    "sourceUrl": "https://x.com/so_ainsight/status/2046570100141224061"
+    "sourceUrl": "https://x.com/so_ainsight/status/2046570100141224061",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2044636475317424310",
@@ -8663,7 +8646,9 @@
     "outputImages": [
       "/images/2046035090883703088_0.jpg"
     ],
-    "sourceUrl": "https://x.com/berryxia/status/2046035090883703088"
+    "sourceUrl": "https://x.com/berryxia/status/2046035090883703088",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046586640760791107",
@@ -8713,7 +8698,9 @@
     "outputImages": [
       "/images/2046262205604417726_0.jpg"
     ],
-    "sourceUrl": "https://x.com/loilokoji/status/2046262205604417726"
+    "sourceUrl": "https://x.com/loilokoji/status/2046262205604417726",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046678589739839969",
@@ -9343,7 +9330,9 @@
     "outputImages": [
       "/images/2046009612755755195_0.jpg"
     ],
-    "sourceUrl": "https://x.com/o_tal_do_ken/status/2046009612755755195"
+    "sourceUrl": "https://x.com/o_tal_do_ken/status/2046009612755755195",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046313506396574102",
@@ -9368,7 +9357,9 @@
     "outputImages": [
       "/images/2046313506396574102_0.jpg"
     ],
-    "sourceUrl": "https://x.com/NumeroBTC/status/2046313506396574102"
+    "sourceUrl": "https://x.com/NumeroBTC/status/2046313506396574102",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046228485841334559",
@@ -9395,7 +9386,9 @@
       "/images/2046228485841334559_1.jpg",
       "/images/2046228485841334559_2.jpg"
     ],
-    "sourceUrl": "https://x.com/A9Quant/status/2046228485841334559"
+    "sourceUrl": "https://x.com/A9Quant/status/2046228485841334559",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046687463716905333",
@@ -9420,7 +9413,8 @@
     "outputImages": [
       "/images/2046687463716905333_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Nocodeboy/status/2046687463716905333"
+    "sourceUrl": "https://x.com/Nocodeboy/status/2046687463716905333",
+    "approved": true
   },
   {
     "id": "2045098289390051792",
@@ -9696,7 +9690,9 @@
     "outputImages": [
       "/images/2043482871089013166_0.jpg"
     ],
-    "sourceUrl": "https://x.com/patrickassale/status/2043482871089013166"
+    "sourceUrl": "https://x.com/patrickassale/status/2043482871089013166",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046299699452506121",
@@ -9796,7 +9792,9 @@
     "outputImages": [
       "/images/2045385800997908891_0.jpg"
     ],
-    "sourceUrl": "https://x.com/foencc/status/2045385800997908891"
+    "sourceUrl": "https://x.com/foencc/status/2045385800997908891",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046119597590618295",
@@ -10097,7 +10095,9 @@
     "outputImages": [
       "/images/2046634130281222178_0.jpg"
     ],
-    "sourceUrl": "https://x.com/hotarugawaR/status/2046634130281222178"
+    "sourceUrl": "https://x.com/hotarugawaR/status/2046634130281222178",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046114481240244394",
@@ -10122,7 +10122,8 @@
     "outputImages": [
       "/images/2046114481240244394_0.jpg"
     ],
-    "sourceUrl": "https://x.com/koshian_to/status/2046114481240244394"
+    "sourceUrl": "https://x.com/koshian_to/status/2046114481240244394",
+    "approved": true
   },
   {
     "id": "2044146818888474892",
@@ -10251,31 +10252,6 @@
     "sourceUrl": "https://x.com/Asan0_Misaki/status/2046904727674462560#reversed-0"
   },
   {
-    "id": "2045186369920897037",
-    "title": "水彩双重曝光奇幻剪影",
-    "thumbnail": "/images/2045186369920897037_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "AI Network Technology",
-    "authorUrl": "https://x.com/AINetworkTech",
-    "tags": [
-      "en",
-      "manga"
-    ],
-    "category": "manga",
-    "lang": "en",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "2026-04-17T17:03:22.000Z",
-    "prompt": "A dreamy watercolor double-exposure illustration where the main shape is the side profile silhouette of a {argument name=\"main subject silhouette\" default=\"young anime girl facing left\"}. Inside her silhouette is a rich, layered fantasy world. At the top is a {argument name=\"top scenery\" default=\"grand white castle with multiple spires under a starry night sky with a crescent moon\"}. Below the castle, two cloaked figures stand in a mystical forest. In the center, a {argument name=\"central character\" default=\"young female mage with pink hair holding a glowing magical staff\"} stands prominently. To the left of the mage, a white horse is visible. At the bottom of the silhouette is a {argument name=\"bottom scenery\" default=\"fantasy village surrounded by blooming cherry blossom trees, with a large open spellbook and a sword resting in the foreground\"}. The artwork features a {argument name=\"color palette\" default=\"soft pastel purples, pinks, and blues\"} color palette. The background outside the silhouette is textured parchment with soft watercolor splatters and fading cherry blossom petals, with the signature \"tamanyo\" written in cursive at the bottom left.",
-    "outputImages": [
-      "/images/2045186369920897037_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/AINetworkTech/status/2045186369920897037"
-  },
-  {
     "id": "2045484111171915887",
     "title": "Summer Beach Beverage Commercial Shot",
     "thumbnail": "/images/2045484111171915887_0.jpg",
@@ -10324,7 +10300,8 @@
       "/images/2044374910336970770_0.jpg"
     ],
     "sourceUrl": "https://x.com/itnavi2022/status/2044374910336970770",
-    "sourceId": "2044374910336970770"
+    "sourceId": "2044374910336970770",
+    "approved": true
   },
   {
     "id": "2044914754943435146",
@@ -10374,7 +10351,8 @@
     "outputImages": [
       "/images/2046702504188993556_0.jpg"
     ],
-    "sourceUrl": "https://x.com/PromptSin/status/2046702504188993556"
+    "sourceUrl": "https://x.com/PromptSin/status/2046702504188993556",
+    "approved": true
   },
   {
     "id": "2046107762686652666",
@@ -10399,7 +10377,9 @@
     "outputImages": [
       "/images/2046107762686652666_0.jpg"
     ],
-    "sourceUrl": "https://x.com/panchaaan_2/status/2046107762686652666#reversed-2"
+    "sourceUrl": "https://x.com/panchaaan_2/status/2046107762686652666#reversed-2",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045429933103858015",
@@ -10725,7 +10705,8 @@
     "outputImages": [
       "/images/2045101968960766108_0.jpg"
     ],
-    "sourceUrl": "https://x.com/passluo/status/2045101968960766108"
+    "sourceUrl": "https://x.com/passluo/status/2045101968960766108",
+    "approved": true
   },
   {
     "id": "2044343760536862882",
@@ -10800,7 +10781,9 @@
     "outputImages": [
       "/images/2045414765640786184_0.jpg"
     ],
-    "sourceUrl": "https://x.com/xzjken/status/2045414765640786184#reversed-1"
+    "sourceUrl": "https://x.com/xzjken/status/2045414765640786184#reversed-1",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046740061719584955",
@@ -10825,7 +10808,9 @@
     "outputImages": [
       "/images/2046740061719584955_0.jpg"
     ],
-    "sourceUrl": "https://x.com/furoku/status/2046740061719584955#reversed-1"
+    "sourceUrl": "https://x.com/furoku/status/2046740061719584955#reversed-1",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045093397887652291",
@@ -10925,7 +10910,9 @@
     "outputImages": [
       "/images/2046643741931254071_0.jpg"
     ],
-    "sourceUrl": "https://x.com/AlwaveNazca/status/2046643741931254071"
+    "sourceUrl": "https://x.com/AlwaveNazca/status/2046643741931254071",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2044603116415521201",
@@ -11352,7 +11339,9 @@
     "outputImages": [
       "/images/2044787810176246089_0.jpg"
     ],
-    "sourceUrl": "https://x.com/UNIBRACITY/status/2044787810176246089"
+    "sourceUrl": "https://x.com/UNIBRACITY/status/2044787810176246089",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046665346161988062",
