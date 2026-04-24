@@ -57,15 +57,7 @@ const EXT_MIME = {
   '.gif': 'image/gif',  '.html': 'text/html; charset=utf-8',
 };
 
-// Env without proxy vars — prevents local VPN/proxy from blocking wrangler uploads
-function noProxyEnv() {
-  const env = { ...process.env };
-  for (const k of ['http_proxy', 'https_proxy', 'HTTP_PROXY', 'HTTPS_PROXY', 'ALL_PROXY', 'all_proxy'])
-    delete env[k];
-  return env;
-}
-
-// SSE deploy helper — shared by Cloudflare and GitHub routes
+// SSE helper for the admin deploy stream.
 function sseSetup(res) {
   res.writeHead(200, {
     'Content-Type':      'text/event-stream',
@@ -77,11 +69,9 @@ function sseSetup(res) {
     if (!res.writableEnded)
       res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
   };
-  // stripProxy: strip local proxy env vars (needed for wrangler on machines with VPN)
-  const runStep = (cmd, args, label, req, { stripProxy = false } = {}) => new Promise(resolve => {
+  const runStep = (cmd, args, label, req) => new Promise(resolve => {
     send('log', { text: `\n▶ ${label}\n` });
-    const env = stripProxy ? noProxyEnv() : process.env;
-    const child = spawn(cmd, args, { cwd: ROOT, shell: true, env });
+    const child = spawn(cmd, args, { cwd: ROOT, shell: true, env: process.env });
     child.stdout.on('data', d => send('log', { text: d.toString() }));
     child.stderr.on('data', d => send('log', { text: d.toString() }));
     child.on('close', code => resolve(code));
@@ -157,33 +147,23 @@ const server = createServer(async (req, res) => {
       return;
     }
 
-    // ── GET /api/deploy/cloudflare  (SSE: npm build + wrangler) ──
-    if (path_ === '/api/deploy/cloudflare' && req.method === 'GET') {
+    // ── GET /api/deploy/vercel  (SSE: build check + git push → Vercel) ──
+    if (path_ === '/api/deploy/vercel' && req.method === 'GET') {
       const { send, runStep } = sseSetup(res);
 
-      const buildCode = await runStep('npm', ['run', 'build'], 'npm run build', req, { stripProxy: true });
+      const cleanIndexCode = await runStep('git', ['diff', '--cached', '--quiet'], 'Check for pre-staged changes', req);
+      if (cleanIndexCode !== 0) {
+        send('done', { ok: false, error: 'There are already staged git changes. Commit or unstage them before using admin deploy.' });
+        res.end(); return;
+      }
+
+      const buildCode = await runStep('npm', ['run', 'build'], 'npm run build', req);
       if (buildCode !== 0) {
         send('done', { ok: false, error: `Build exited ${buildCode}` });
         res.end(); return;
       }
 
-      const deployCode = await runStep(
-        'npx',
-        ['wrangler', 'pages', 'deploy', 'out', '--project-name', 'prompt-gallery', '--commit-dirty=true'],
-        'wrangler pages deploy',
-        req,
-        { stripProxy: true },
-      );
-      send('done', { ok: deployCode === 0 });
-      res.end();
-      return;
-    }
-
-    // ── GET /api/deploy/github  (SSE: git commit + push → triggers GH Actions) ──
-    if (path_ === '/api/deploy/github' && req.method === 'GET') {
-      const { send, runStep } = sseSetup(res);
-
-      // Stage prompts data + any newly uploaded images
+      // Stage prompts data + any newly uploaded images. Vercel builds from GitHub.
       const addCode = await runStep('git', ['add', 'src/data/prompts.json', 'public/images/'], 'git add prompts + images', req);
       if (addCode !== 0) {
         send('done', { ok: false, error: `git add exited ${addCode}` });
@@ -211,7 +191,7 @@ const server = createServer(async (req, res) => {
       const pushCode = await runStep('git', ['push', 'origin', 'main'], 'git push origin main', req);
       send('done', {
         ok: pushCode === 0,
-        note: pushCode === 0 ? 'GitHub Actions is now building — check https://github.com/BigBearAlan/Prompt-Gallery/actions' : undefined,
+        note: pushCode === 0 ? 'Vercel will deploy from GitHub — check https://vercel.com/jcai3299-8698s-projects/prompt-gallery and https://gptprompt.asia' : undefined,
       });
       res.end();
       return;

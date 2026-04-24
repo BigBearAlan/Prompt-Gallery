@@ -2,7 +2,7 @@
 
 A curated gallery of 880+ AI image generation prompts, browsable by category, language, and popularity. Built with Next.js 15 and deployed as a static site.
 
-**Live site →** [prompt-gallery-916.pages.dev](https://prompt-gallery-916.pages.dev)
+**Live site →** [gptprompt.asia](https://gptprompt.asia)
 
 ![PromptCanvas screenshot](public/images/og-preview.jpg)
 
@@ -27,7 +27,7 @@ A curated gallery of 880+ AI image generation prompts, browsable by category, la
 | Framework | Next.js 15 (App Router, `output: 'export'`) |
 | Styling | Tailwind CSS v3 |
 | Language | TypeScript |
-| Deployment | Cloudflare Pages |
+| Deployment | Vercel |
 | Admin tool | Standalone Node.js server (no framework) |
 
 ---

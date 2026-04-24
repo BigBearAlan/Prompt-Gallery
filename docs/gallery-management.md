@@ -84,43 +84,29 @@ The current top-level categories are:
 
 ## Redeploy Flow
 
-After curation, use the same Cloudflare deployment flow as before:
+After curation, build locally, commit the curated data, and push to `main`.
+Vercel is connected to GitHub and publishes production automatically.
 
 ```bash
-node scripts/sync-data.mjs
 npm run build
-npx wrangler pages deploy out --project-name prompt-gallery --commit-dirty=true
+git add src/data/prompts.json src/data/curation.json public/images/
+git commit -m "chore: update prompts data via admin"
+git push origin main
 ```
 
 `scripts/sync-data.mjs` now reads `src/data/curation.json`, so hidden prompts and category overrides survive future syncs.
 
-## GitHub Pages
+The admin portal runs this same Vercel-oriented flow from its **Vercel** deploy button.
 
-GitHub Pages is a second static deployment target:
+## Production
 
 - Repository: `https://github.com/BigBearAlan/Prompt-Gallery.git`
-- GitHub Pages URL: `https://bigbearalan.github.io/Prompt-Gallery/`
-- Cloudflare URL: `https://prompt-gallery-916.pages.dev`
+- Production URL: `https://gptprompt.asia`
+- Vercel fallback URL: `https://prompt-gallery-topaz.vercel.app`
 
-One-time GitHub setup:
-
-1. Open repository Settings.
-2. Go to Pages.
-3. Set Source to GitHub Actions.
-
-The workflow in `.github/workflows/github-pages.yml` runs on pushes to `main` and manual dispatch. It uses the committed curated data and image assets, then builds with:
+Verify production after deployment:
 
 ```bash
-NEXT_PUBLIC_BASE_PATH=/Prompt-Gallery npm run build
-```
-
-The base path is only set in the GitHub Pages workflow, so local and Cloudflare builds still serve from `/`.
-
-Do not run `npm run sync` inside the GitHub Pages workflow. The public upstream sources can be smaller than the curated gallery, so syncing during deployment can shrink the published prompt count.
-
-Verify GitHub Pages after deployment:
-
-```bash
-curl -L --max-time 30 -s https://bigbearalan.github.io/Prompt-Gallery/ | rg 'PromptCanvas|漫画|广告|游戏'
-curl -I --max-time 30 https://bigbearalan.github.io/Prompt-Gallery/images/2046201836525302032_0.jpg
+curl -L --max-time 30 -s https://gptprompt.asia | rg 'PromptCanvas|漫画|广告|游戏'
+curl -I --max-time 30 https://gptprompt.asia/images/2046201836525302032_0.jpg
 ```
