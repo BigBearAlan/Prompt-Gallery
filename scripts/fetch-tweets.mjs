@@ -226,8 +226,8 @@ async function main() {
   const out = [...existing, ...newEntries];
   await writeFile(OUTPUT, JSON.stringify(out, null, 2), 'utf-8');
   console.log(`\n✓ Added ${newEntries.length} entries → ${out.length} total in prompts.json`);
-  console.log('\nNext step: deploy via admin panel or run:');
-  console.log('  npm run build && npx wrangler pages deploy out --project-name prompt-gallery --commit-dirty=true');
+  console.log('\nNext step: review and deploy via admin panel, or run:');
+  console.log('  npm run build && git add src/data/prompts.json public/images/ && git commit -m "chore: update prompts data via admin" && git push origin main');
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

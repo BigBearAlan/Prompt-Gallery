@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react';
 import type { PromptEntry } from '@/lib/types';
-import { withBasePath } from '@/lib/asset-path';
 import { useLocale } from '@/lib/i18n';
 
 function cardGradient(id: string): string {
@@ -66,7 +65,7 @@ export default function PromptCard({ entry, onClick }: Props) {
         {/* ── Image ── */}
         {!imgFailed && (
           <img
-            src={withBasePath(entry.thumbnail)}
+            src={entry.thumbnail}
             alt={entry.title}
             loading="lazy"
             onLoad={() => setImgLoaded(true)}

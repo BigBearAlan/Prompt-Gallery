@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import type { PromptEntry } from '@/lib/types';
-import { withBasePath } from '@/lib/asset-path';
 import { useLocale } from '@/lib/i18n';
 
 function formatNum(n: number): string {
@@ -175,7 +174,7 @@ export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNe
               {!imgFailed ? (
                 <img
                   key={entry.outputImages[activeImage]}
-                  src={withBasePath(entry.outputImages[activeImage] || entry.thumbnail)}
+                  src={entry.outputImages[activeImage] || entry.thumbnail}
                   alt={entry.title}
                   className="w-full object-cover"
                   onError={() => setImgFailed(true)}
@@ -198,7 +197,7 @@ export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNe
                       i === activeImage ? 'border-gray-900' : 'border-transparent opacity-60 hover:opacity-100'
                     }`}
                   >
-                    <img src={withBasePath(url)} alt="" className="w-full h-full object-cover" />
+                    <img src={url} alt="" className="w-full h-full object-cover" />
                   </button>
                 ))}
               </div>

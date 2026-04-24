@@ -10,7 +10,9 @@
  *
  * After it finishes:
  *   npm run build
- *   npx wrangler pages deploy out --project-name prompt-gallery --commit-dirty=true
+ *   git add src/data/prompts.json public/images/
+ *   git commit -m "chore: update prompts data via admin"
+ *   git push origin main
  */
 
 import { chromium } from 'playwright';
@@ -339,7 +341,9 @@ async function main() {
   console.log(`\n✓ Done — ${out.length} total entries written to src/data/prompts.json`);
   console.log('\nNext steps:');
   console.log('  npm run build');
-  console.log('  npx wrangler pages deploy out --project-name prompt-gallery --commit-dirty=true');
+  console.log('  git add src/data/prompts.json public/images/');
+  console.log('  git commit -m "chore: update prompts data via admin"');
+  console.log('  git push origin main');
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

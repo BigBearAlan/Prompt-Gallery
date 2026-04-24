@@ -1,5 +1,0 @@
-# Cloudflare Pages configuration
-# Deploy via: Cloudflare dashboard → Pages → Create project → Connect to Git
-
-name = "prompt-gallery"
-pages_build_output_dir = "out"

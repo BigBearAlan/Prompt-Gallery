@@ -163,8 +163,8 @@ const server = createServer(async (req, res) => {
         res.end(); return;
       }
 
-      // Stage prompts data + any newly uploaded images. Vercel builds from GitHub.
-      const addCode = await runStep('git', ['add', 'src/data/prompts.json', 'public/images/'], 'git add prompts + images', req);
+      // Stage curated data + any newly uploaded images. Vercel builds from GitHub.
+      const addCode = await runStep('git', ['add', 'src/data/prompts.json', 'src/data/curation.json', 'public/images/'], 'git add prompt data + images', req);
       if (addCode !== 0) {
         send('done', { ok: false, error: `git add exited ${addCode}` });
         res.end(); return;

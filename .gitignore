@@ -11,16 +11,15 @@
 /.next/
 /out/
 
-# curated image assets used by GitHub Pages
+# temporary scraper/admin assets
 /tmp/
 
 # env
 .env
 .env*.local
 
-# vercel / cloudflare
+# vercel
 .vercel
-.wrangler
 
 # misc
 .DS_Store

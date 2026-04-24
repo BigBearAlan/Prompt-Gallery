@@ -2,7 +2,6 @@
 
 import { useState, useMemo, useCallback, useEffect, useRef, useDeferredValue, startTransition } from 'react';
 import type { PromptEntry, SearchIndexFile, SortBy } from '@/lib/types';
-import { withBasePath } from '@/lib/asset-path';
 import { useLocale } from '@/lib/i18n';
 import {
   compareBySecondarySort,
@@ -63,7 +62,7 @@ export default function Gallery({ entries }: Props) {
 
     setSearchIndexStatus('loading');
 
-    fetch(withBasePath('/search-index.json'))
+    fetch('/search-index.json')
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
