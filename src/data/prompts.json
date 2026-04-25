@@ -3351,7 +3351,8 @@
     "outputImages": [
       "/images/2045039006443069887_0.jpg"
     ],
-    "sourceUrl": "https://x.com/zstmfhy/status/2045039006443069887"
+    "sourceUrl": "https://x.com/zstmfhy/status/2045039006443069887",
+    "approved": true
   },
   {
     "id": "2044439170870026306",
@@ -3376,7 +3377,9 @@
     "outputImages": [
       "/images/2044439170870026306_0.jpg"
     ],
-    "sourceUrl": "https://x.com/old_pgmrs_will/status/2044439170870026306"
+    "sourceUrl": "https://x.com/old_pgmrs_will/status/2044439170870026306",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2044811441383850051",
@@ -3401,7 +3404,8 @@
     "outputImages": [
       "/images/2044811441383850051_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Ixel111/status/2044811441383850051"
+    "sourceUrl": "https://x.com/Ixel111/status/2044811441383850051",
+    "approved": true
   },
   {
     "id": "2046603329271480353",
@@ -3426,7 +3430,8 @@
     "outputImages": [
       "/images/2046603329271480353_0.jpg"
     ],
-    "sourceUrl": "https://x.com/nyaa_toraneko/status/2046603329271480353"
+    "sourceUrl": "https://x.com/nyaa_toraneko/status/2046603329271480353",
+    "approved": true
   },
   {
     "id": "2046257786292769230",
@@ -3584,7 +3589,8 @@
     "outputImages": [
       "/images/2043884989461475732_0.jpg"
     ],
-    "sourceUrl": "https://x.com/s_shigel/status/2043884989461475732"
+    "sourceUrl": "https://x.com/s_shigel/status/2043884989461475732",
+    "approved": true
   },
   {
     "id": "2045124550388854975",
@@ -3687,7 +3693,8 @@
     "outputImages": [
       "/images/2046206927492047336_0.jpg"
     ],
-    "sourceUrl": "https://x.com/chatgpt_liberty/status/2046206927492047336"
+    "sourceUrl": "https://x.com/chatgpt_liberty/status/2046206927492047336",
+    "approved": true
   },
   {
     "id": "2044801679435206668",
@@ -3712,7 +3719,8 @@
     "outputImages": [
       "/images/2044801679435206668_0.jpg"
     ],
-    "sourceUrl": "https://x.com/laomo198/status/2044801679435206668"
+    "sourceUrl": "https://x.com/laomo198/status/2044801679435206668",
+    "approved": true
   },
   {
     "id": "2046501587762188535",
@@ -3842,7 +3850,8 @@
     "outputImages": [
       "/images/2046153405845147806_0.jpg"
     ],
-    "sourceUrl": "https://x.com/BirdiePage71493/status/2046153405845147806"
+    "sourceUrl": "https://x.com/BirdiePage71493/status/2046153405845147806",
+    "approved": true
   },
   {
     "id": "2044564212073251178",
@@ -3894,7 +3903,8 @@
       "/images/2045493771715129752_0.jpg",
       "/images/2045493771715129752_1.jpg"
     ],
-    "sourceUrl": "https://x.com/TlanoAI/status/2045493771715129752"
+    "sourceUrl": "https://x.com/TlanoAI/status/2045493771715129752",
+    "approved": true
   },
   {
     "id": "2046534506673496404",
@@ -4112,7 +4122,8 @@
     "outputImages": [
       "/images/2045341456110666143_0.jpg"
     ],
-    "sourceUrl": "https://x.com/ryuya__31/status/2045341456110666143"
+    "sourceUrl": "https://x.com/ryuya__31/status/2045341456110666143",
+    "approved": true
   },
   {
     "id": "2046596110731669529",
@@ -4137,7 +4148,8 @@
     "outputImages": [
       "/images/2046596110731669529_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Mocha45389036/status/2046596110731669529"
+    "sourceUrl": "https://x.com/Mocha45389036/status/2046596110731669529",
+    "approved": true
   },
   {
     "id": "2046391772159643803",
@@ -4162,7 +4174,8 @@
     "outputImages": [
       "/images/2046391772159643803_0.jpg"
     ],
-    "sourceUrl": "https://x.com/old_pgmrs_will/status/2046391772159643803"
+    "sourceUrl": "https://x.com/old_pgmrs_will/status/2046391772159643803",
+    "approved": true
   },
   {
     "id": "2044790962002784678",
@@ -4214,7 +4227,8 @@
     "outputImages": [
       "/images/2045516955470147894_0.jpg"
     ],
-    "sourceUrl": "https://x.com/FarAICoder/status/2045516955470147894"
+    "sourceUrl": "https://x.com/FarAICoder/status/2045516955470147894",
+    "approved": true
   },
   {
     "id": "2043885086085656866",
@@ -4240,7 +4254,8 @@
       "/images/2043885086085656866_0.jpg",
       "/images/2043885086085656866_1.jpg"
     ],
-    "sourceUrl": "https://x.com/s_shigel/status/2043885086085656866"
+    "sourceUrl": "https://x.com/s_shigel/status/2043885086085656866",
+    "approved": true
   },
   {
     "id": "2044721146873225398",
@@ -4292,7 +4307,8 @@
       "/images/2045180142159577473_0.jpg"
     ],
     "sourceUrl": "https://x.com/qiufenghyf/status/2045180142159577473",
-    "sourceId": "2045180142159577473"
+    "sourceId": "2045180142159577473",
+    "approved": true
   },
   {
     "id": "2044957465947844993",
@@ -4317,7 +4333,8 @@
     "outputImages": [
       "/images/2044957465947844993_0.jpg"
     ],
-    "sourceUrl": "https://x.com/malonpon/status/2044957465947844993"
+    "sourceUrl": "https://x.com/malonpon/status/2044957465947844993",
+    "approved": true
   },
   {
     "id": "2046062551264268396",
@@ -4396,7 +4413,8 @@
     "outputImages": [
       "/images/2046532512202228089_0.jpg"
     ],
-    "sourceUrl": "https://x.com/GPT_AOI/status/2046532512202228089"
+    "sourceUrl": "https://x.com/GPT_AOI/status/2046532512202228089",
+    "approved": true
   },
   {
     "id": "2046348182301683954",
@@ -4500,32 +4518,8 @@
     "outputImages": [
       "/images/2046317516297765219_0.jpg"
     ],
-    "sourceUrl": "https://x.com/HumanOS_v2/status/2046317516297765219"
-  },
-  {
-    "id": "2044384873432092928",
-    "title": "日语课堂黑板笔记",
-    "thumbnail": "/images/2044384873432092928_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "jaizard",
-    "authorUrl": "https://x.com/jaizard1",
-    "tags": [
-      "zh",
-      "infographic"
-    ],
-    "category": "infographic",
-    "lang": "zh",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "2026-04-15T11:58:31.000Z",
-    "prompt": "{\n  \"type\": \"photorealistic chalkboard with handwritten educational notes\",\n  \"setting\": \"green classroom chalkboard with a wooden chalk ledge at the bottom containing white and yellow chalk pieces and a yellow eraser\",\n  \"style\": \"neat Japanese handwriting using white, yellow, and pink/red chalk, organized into distinct boxed sections\",\n  \"layout\": {\n    \"top_row\": [\n      { \"title\": \"{argument name=\\\"main subject\\\" default=\\\"現代文まとめ\\\"}\", \"subtitle\": \"〜読むための3つのポイント〜\", \"count\": 3, \"type\": \"numbered list\", \"note\": \"まずは全体を把握！段落ごとの要点をつかむ\" },\n      { \"title\": \"論理の展開パターン\", \"count\": 4, \"type\": \"bulleted list\", \"labels\": [\"起\", \"承\", \"転\", \"結\"], \"note\": \"筆者は何を伝えたいのか？常に意識しよう！\" },\n      { \"title\": \"接続語に注目！\", \"count\": 6, \"type\": \"categorized list\", \"labels\": [\"順接\", \"逆接\", \"並列\", \"対比\", \"例示\", \"言換\"] },\n      { \"title\": \"記述問題の解き方\", \"count\": 3, \"type\": \"numbered list\", \"note\": \"根拠＋自分の考えで説得力のある答案に！\" }\n    ],\n    \"middle_row\": [\n      { \"title\": \"理解を深める読解のコツ\", \"count\": 4, \"type\": \"bulleted list\", \"note\": \"「なぜそう言えるのか？」を考えるクセをつけよう！\" },\n      { \"title\": \"center_quote\", \"text\": \"{argument name=\\\"center quote\\\" default=\\\"「情報があふれる現代において、私たちは、何が正しく、何が大切なのかを見きわめる力を持つことが求められている。多様な価値観を理解し、他者と対話しながら、自分の考えを深めていくことが、よりよい社会をつくる第一歩となる。」\\\"}\", \"summary\": \"筆者の主張：情報社会で大切なのは、見きわめる力と対話する姿勢\" },\n      { \"title\": \"テーマのよく出るキーワード\", \"count\": 10, \"type\": \"two-column list\" }\n    ],\n    \"bottom_row\": [\n      { \"title\": \"文学的文章のポイント\", \"count\": 3, \"type\": \"bulleted list\", \"note\": \"気持ちの変化や情景の移り変わりを丁寧に追おう！\", \"illustration\": \"open book and pencil\" },\n      { \"title\": \"よく出る漢字・語句\", \"count\": 9, \"type\": \"3x3 grid list\", \"note\": \"意味と読みをセットで覚えよう！\" },\n      { \"title\": \"対比の構造をつかもう！\", \"type\": \"flowchart diagram\", \"elements\": [\"A - vs - B\", \"共通点\", \"筆者の考え・結論\"] },\n      { \"title\": \"答案を書くときの注意点\", \"count\": 4, \"type\": \"checkmarked list\", \"note\": \"見直しの時間を必ずとろう！\" }\n    ],\n    \"far_right_vertical\": {\n      \"date\": \"{argument name=\\\"date\\\" default=\\\"5月24日(金)\\\"}\",\n      \"duty\": \"{argument name=\\\"duty student\\\" default=\\\"日直 山田\\\"}\",\n      \"motivational_quote\": \"{argument name=\\\"motivational quote\\\" default=\\\"継続は力なり！毎日の積み重ねが大きな差を生む！！\\\"}\"\n    }\n  }\n}",
-    "outputImages": [
-      "/images/2044384873432092928_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/jaizard1/status/2044384873432092928"
+    "sourceUrl": "https://x.com/HumanOS_v2/status/2046317516297765219",
+    "approved": true
   },
   {
     "id": "2045512596460282097",
@@ -4550,7 +4544,8 @@
     "outputImages": [
       "/images/2045512596460282097_0.jpg"
     ],
-    "sourceUrl": "https://x.com/fumanpnp/status/2045512596460282097"
+    "sourceUrl": "https://x.com/fumanpnp/status/2045512596460282097",
+    "approved": true
   },
   {
     "id": "2044430585930895864",
@@ -4627,32 +4622,8 @@
     "outputImages": [
       "/images/2046224777208361126_0.jpg"
     ],
-    "sourceUrl": "https://x.com/A9Quant/status/2046224777208361126"
-  },
-  {
-    "id": "2046564209123799063",
-    "title": "Flashy Japanese AI Thumbnail",
-    "thumbnail": "/images/2046564209123799063_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "まさお@AI駆動開発",
-    "authorUrl": "https://x.com/AI_masaou",
-    "tags": [
-      "en",
-      "manga"
-    ],
-    "category": "manga",
-    "lang": "en",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "April 21, 2026",
-    "prompt": "Create a hyper-saturated Japanese YouTube thumbnail in a flashy clickbait anime style, 16:9 landscape, with a split composition: huge stacked text blocks dominating the left two-thirds and an anime character on the right one-third. The background is a fiery explosion of red, orange, and gold energy with glowing sparks, lens flares, glittering star highlights, and a high-contrast metallic shine effect everywhere. On the left, place 4 bold text groups stacked vertically with thick black outlines, white inner strokes, intense outer glow, and glossy 3D treatment. Top line: giant Japanese headline text {argument name=\"headline text\" default=\"紅エンジニア必見\"} in vivid red with white edging and bright gold spark accents. Second line: a rounded square orange app-like icon with a white stylized \"M\" to the left of the word {argument name=\"product name\" default=\"masatra\"} in enormous lowercase white sans-serif letters with black outline and subtle gray shading. Third line: a black rectangular banner with compact bold white Japanese text reading \"次世代AIエージェントフレームワーク\". Bottom line: very large gold metallic Japanese text {argument name=\"bottom text\" default=\"徹底解説\"} with beveled 3D embossing, orange-to-gold gradient, bright specular highlights, and glowing edges. On the right, show 1 anime-style young adult woman from chest up, with {argument name=\"hair color\" default=\"brown\"} medium-length hair, wearing a white open lab coat over a white shirt, leaning toward the camera and pointing directly at the viewer with a foreshortened hand and extended index finger in the foreground. Her pose should feel confident, urgent, and attention-grabbing. Use dramatic rim lighting from the fiery background, strong orange highlights on skin and clothing, and a polished commercial thumbnail finish. Reserve a large rectangular area over the upper-right face region as a flat placeholder block in {argument name=\"placeholder color\" default=\"light brown\"}, obscuring most of the face. Make the overall design extremely dense, glossy, explosive, and optimized for maximum readability at small size.",
-    "outputImages": [
-      "/images/2046564209123799063_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/AI_masaou/status/2046564209123799063#reversed-1"
+    "sourceUrl": "https://x.com/A9Quant/status/2046224777208361126",
+    "approved": true
   },
   {
     "id": "2046852355535274063",
@@ -4760,31 +4731,6 @@
     "approved": true
   },
   {
-    "id": "2046626506722746736",
-    "title": "Premium Blueberry Product Poster",
-    "thumbnail": "/images/2046626506722746736_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "歸藏(guizang.ai)",
-    "authorUrl": "https://x.com/op7418",
-    "tags": [
-      "en",
-      "advertising"
-    ],
-    "category": "advertising",
-    "lang": "en",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "April 21, 2026",
-    "prompt": "A premium e-commerce poster for fresh blueberries in a clean Chinese product-advertising style. Show a clear plastic clamshell box of blueberries as the main subject, placed diagonally from lower center to right side on folded blue fabric, viewed from a slightly elevated angle. The package must remain realistic and consistent: a transparent square container with rounded corners, filled with dark blue blueberries, with a large irregular rounded label on top in white, pale blue, and deep blue, featuring one oversized blueberry illustration in the center and elegant Chinese branding. Make the fruit inside look larger, plumper, fresher, and covered with subtle moisture droplets, while keeping the overall blueberry arrangement believable. The background is an airy icy-blue tabletop with soft cloudy texture, cool daylight, and scattered loose blueberries around the package. Add a few blurred green leaves entering from the top right and bottom right edges for a fresh natural feeling. In the upper-right corner, include 1 small inset image showing the original product package from above on a warm brown surface, like a reference thumbnail. On the left side, create Chinese promotional typography with a large dark blue calligraphy headline {argument name=\"headline text\" default=\"决茗新\"}, followed by 2 smaller lines of copy: {argument name=\"subheadline text\" default=\"新鲜蓝莓 自然之选\"} and {argument name=\"tagline text\" default=\"每一颗都是自然的礼物\"}. Below that, place 3 vertically stacked feature icons with short Chinese captions: a leaf icon for natural ripeness, a fruit icon for juicy fullness, and a heart icon for rich nutrition. Near the bottom left, add large white brush-style Chinese text {argument name=\"product name\" default=\"蓝莓\"}, a secondary line {argument name=\"benefit text\" default=\"膳食纤维+花青素\"}, and a small net weight line reading 125克. Use cool blue color grading, crisp commercial lighting, sparkling highlights on the plastic lid, premium supermarket packaging aesthetics, high detail, realistic product photography blended with polished graphic design.",
-    "outputImages": [
-      "/images/2046626506722746736_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/op7418/status/2046626506722746736#reversed-0"
-  },
-  {
     "id": "2045189263650877495",
     "title": "横幅设计变体布局",
     "thumbnail": "/images/2045189263650877495_0.jpg",
@@ -4807,7 +4753,8 @@
     "outputImages": [
       "/images/2045189263650877495_0.jpg"
     ],
-    "sourceUrl": "https://x.com/shupeiman/status/2045189263650877495"
+    "sourceUrl": "https://x.com/shupeiman/status/2045189263650877495",
+    "approved": true
   },
   {
     "id": "2045074817339052095-c6284ece",
@@ -4859,7 +4806,8 @@
     "outputImages": [
       "/images/2045506378824143114_0.jpg"
     ],
-    "sourceUrl": "https://x.com/ad_htm024016/status/2045506378824143114"
+    "sourceUrl": "https://x.com/ad_htm024016/status/2045506378824143114",
+    "approved": true
   },
   {
     "id": "2046735877628670430",
@@ -4888,32 +4836,6 @@
     "approved": true
   },
   {
-    "id": "2046584887327764725-ef0d8443",
-    "title": "火之精灵角色参考图",
-    "thumbnail": "/images/2046584887327764725_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "Heliocore.C6",
-    "authorUrl": "https://x.com/chenoh61",
-    "tags": [
-      "zh",
-      "poster"
-    ],
-    "category": "poster",
-    "lang": "zh",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "",
-    "prompt": "{\"type\":\"动漫角色设计参考图海报\",\"subject\":{\"character\":{\"name\":\"{argument name=\\\"character name\\\" default=\\\"Heliocore. C6\\\"}\",\"title\":\"火之精灵 / IGNIS SPIRITUS\",\"gender_presentation\":\"空灵的年轻女性\",\"age_note\":\"外表 19 岁，实际年龄不明\",\"height\":\"168cm\",\"theme\":\"火元素精灵，圣火守护者，优雅的奇幻原创角色\",\"appearance\":{\"hair\":{\"color\":\"{argument name=\\\"hair color\\\" default=\\\"深红色\\\"}\",\"style\":\"极长的飘逸波浪卷发，带有层次感，闪烁着余烬般的高光，佩戴华丽的晶体与金属火焰冠饰\"},\"outfit\":{\"silhouette\":\"奢华的半透明多层长裙，带有拖尾雪纺面料和花瓣状的火焰造型\",\"primary_color\":\"{argument name=\\\"main outfit color\\\" default=\\\"深宝石红\\\"}\",\"details\":\"躯干处饰有金色花丝盔甲珠宝，水晶火焰纹样，半透明的粉色与红色面纱，宝石链条，高跟鞋，全身散发着闪烁的余烬\"}}},\"layout\":{\"orientation\":\"竖版海报\",\"background\":\"从柔和的淡粉色到象牙白的渐变背景，带有发光的火焰、烟雾和魔法光效，呈现高级编辑排版风格\",\"sections\":[{\"title\":\"角色档案\",\"position\":\"左侧栏\",\"count\":8,\"labels\":[\"姓名\",\"种族\",\"年龄\",\"身高\",\"阵营\",\"武器\",\"属性\",\"CV\"]},{\"title\":\"三视图 / THREE VIEWS\",\"position\":\"右上角\",\"count\":3,\"labels\":[\"正面图 / FRONT\",\"侧面图 / SIDE\",\"后背图 / BACK\"]},{\"title\":\"配色方案 / COLOR PALETTE\",\"position\":\"中右侧\",\"count\":3,\"labels\":[\"主色 / MAIN COLOR\",\"辅色 / SECONDARY COLOR\",\"点缀色 / ACCENT COLOR\"]},{\"title\":\"材质参考 / MATERIAL REFERENCE\",\"position\":\"右中下方\",\"count\":5,\"labels\":[\"丝绸 / SILK\",\"金属 / METAL\",\"火焰 / FLAME\",\"水晶 / CRYSTAL\",\"薄纱 / GAUZE\"]},{\"title\":\"武器与道具 / WEAPONS & ITEMS\",\"position\":\"左下角\",\"count\":5,\"labels\":[\"带有红色晶体头的长杖\",\"细长魔杖 1\",\"细长魔杖 2\",\"漂浮的火焰球\",\"冠状饰物\"]},{\"title\":\"设计主题 / DESIGN CONCEPT\",\"position\":\"底部中心\",\"count\":1,\"labels\":[\"焰羽流光 / IGNIS LUMINIS\"]},{\"title\":\"角色文案 / CHARACTER STORY\",\"position\":\"右下角\",\"count\":1,\"labels\":[\"背景故事文本块\"]}],\"centerpiece\":\"海报左半部分是一幅大型且富有戏剧性的四分之三背影肖像，角色微微转身，头发和裙摆在风中与发光的火焰中飘动\"},\"style\":{\"genre\":\"高细节奇幻动漫概念艺术\",\"rendering\":\"精致的角色参考图，细腻的线条，油画质感的光影，光泽材质，发光粒子，优雅的排版，高级游戏美术呈现\",\"mood\":\"庄严、神圣、浪漫、炽热、空灵\",\"color_palette\":\"红色、珊瑚色、玫瑰粉、金色、淡粉色、白色高光\"},\"text_elements\":{\"headline\":\"{argument name=\\\"headline text\\\" default=\\\"Heliocore. C6\\\"}\",\"subheadline\":\"火之精灵\",\"latin_subtitle\":\"IGNIS SPIRITUS\",\"design_concept\":\"焰羽流光 / IGNIS LUMINIS\",\"footer\":\"© 2024 Heliocore.C6 All Rights Reserved.\"},\"composition_notes\":\"保持宽裕的留白和面板间细致的分割线，使用精致的杂志风格网格，混合中文与小型英文副标题，清晰展示所有标注区域，使角色成为绝对的视觉焦点，并确保每个样本面板整齐对齐，呈现出高级原创角色参考项目的水准。\"}",
-    "outputImages": [
-      "/images/2046584887327764725_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/chenoh61/status/2046584887327764725",
-    "sourceId": "2046584887327764725"
-  },
-  {
     "id": "2044865935752708451",
     "title": "动漫 VTuber 反应视频缩略图",
     "thumbnail": "/images/2044865935752708451_0.jpg",
@@ -4936,32 +4858,8 @@
     "outputImages": [
       "/images/2044865935752708451_0.jpg"
     ],
-    "sourceUrl": "https://x.com/abdiisan/status/2044865935752708451"
-  },
-  {
-    "id": "2045002232761045215",
-    "title": "电商直播界面模型",
-    "thumbnail": "/images/2045002232761045215_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "清风徐来028",
-    "authorUrl": "https://x.com/onlyhuman028",
-    "tags": [
-      "zh",
-      "ui"
-    ],
-    "category": "ui",
-    "lang": "zh",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "2026-04-17T04:51:41.000Z",
-    "prompt": "{\n  \"type\": \"e-commerce livestream UI mockup\",\n  \"subject\": {\n    \"description\": \"photorealistic young Asian woman, sweaty glowing skin, long dark wavy hair, wearing a white short-sleeve polo shirt and white pleated tennis skirt, holding a white tennis racket over her right shoulder, looking directly at camera, studio lighting, white background\"\n  },\n  \"layout\": {\n    \"top_header\": {\n      \"host_info\": {\n        \"name\": \"{argument name=\\\"host name\\\" default=\\\"小鹿运动优选\\\"}\",\n        \"stats\": \"12.8万本场点赞\",\n        \"button\": \"关注\"\n      },\n      \"rank_tag\": \"带货榜第3名\",\n      \"viewer_stats\": \"1.2万\"\n    },\n    \"top_right\": {\n      \"coupon\": {\n        \"title\": \"直播间专属券\",\n        \"value\": \"￥20 满199可用\",\n        \"button\": \"领取\"\n      }\n    },\n    \"left_overlay\": {\n      \"title\": \"{argument name=\\\"campaign title\\\" default=\\\"夏日运动季\\\"}\",\n      \"subtitle\": \"{argument name=\\\"campaign subtitle\\\" default=\\\"活力开场\\\"}\",\n      \"bullet_points\": {\n        \"count\": 3,\n        \"items\": [\"透气速干\", \"弹力舒适\", \"运动百搭\"]\n      }\n    },\n    \"right_overlay\": {\n      \"product_cards\": {\n        \"count\": 2,\n        \"card_1\": {\n          \"status\": \"正在讲解\",\n          \"image\": \"white polo shirt and skirt flat lay\",\n          \"title\": \"{argument name=\\\"product name\\\" default=\\\"运动POLO衫套装\\\"}\",\n          \"details\": \"白色·M码\",\n          \"price\": \"{argument name=\\\"price\\\" default=\\\"￥129\\\"}\",\n          \"button\": \"去抢购\"\n        },\n        \"card_2\": {\n          \"status\": \"热卖 x 156\",\n          \"image\": \"miniature of main model\",\n          \"title\": \"运动POLO衫套装女\",\n          \"details\": \"透气速干 显瘦百搭\",\n          \"price\": \"{argument name=\\\"price\\\" default=\\\"￥129\\\"}\",\n          \"button\": \"抢\"\n        }\n      }\n    },\n    \"bottom_left\": {\n      \"chat_messages\": {\n        \"count\": 5,\n        \"description\": \"scrolling chat messages with usernames and comments\"\n      },\n      \"purchase_alert\": \"用户_6789 等3人 正在去购买\"\n    },\n    \"bottom_bar\": {\n      \"input_field\": \"说点什么...\",\n      \"icons\": {\n        \"count\": 5,\n        \"types\": [\"smile\", \"shopping cart\", \"heart\", \"gift\", \"more\"]\n      }\n    }\n  }\n}",
-    "outputImages": [
-      "/images/2045002232761045215_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/onlyhuman028/status/2045002232761045215"
+    "sourceUrl": "https://x.com/abdiisan/status/2044865935752708451",
+    "approved": true
   },
   {
     "id": "2045098539412595124",
@@ -4986,7 +4884,8 @@
     "outputImages": [
       "/images/2045098539412595124_0.jpg"
     ],
-    "sourceUrl": "https://x.com/dendendensho810/status/2045098539412595124"
+    "sourceUrl": "https://x.com/dendendensho810/status/2045098539412595124",
+    "approved": true
   },
   {
     "id": "2046061073720369228",
@@ -5011,7 +4910,8 @@
     "outputImages": [
       "/images/2046061073720369228_0.jpg"
     ],
-    "sourceUrl": "https://x.com/chi_vc_/status/2046061073720369228#reversed-0"
+    "sourceUrl": "https://x.com/chi_vc_/status/2046061073720369228#reversed-0",
+    "approved": true
   },
   {
     "id": "2044998037848932482",
@@ -5036,7 +4936,8 @@
     "outputImages": [
       "/images/2044998037848932482_0.jpg"
     ],
-    "sourceUrl": "https://x.com/gantrols/status/2044998037848932482"
+    "sourceUrl": "https://x.com/gantrols/status/2044998037848932482",
+    "approved": true
   },
   {
     "id": "2045077344604614919",
@@ -5165,7 +5066,8 @@
     "outputImages": [
       "/images/2045973715280929275_0.jpg"
     ],
-    "sourceUrl": "https://x.com/cheatyyyy/status/2045973715280929275"
+    "sourceUrl": "https://x.com/cheatyyyy/status/2045973715280929275",
+    "approved": true
   },
   {
     "id": "2046151314061881459",
@@ -5499,7 +5401,8 @@
     "outputImages": [
       "/images/2045128450101711039_0.jpg"
     ],
-    "sourceUrl": "https://x.com/gengdaJ/status/2045128450101711039"
+    "sourceUrl": "https://x.com/gengdaJ/status/2045128450101711039",
+    "approved": true
   },
   {
     "id": "2045456827618627863",
@@ -5661,31 +5564,6 @@
     "approved": true
   },
   {
-    "id": "2044737247090811315",
-    "title": "直播 App 界面模型",
-    "thumbnail": "/images/2044737247090811315_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "finaltasy",
-    "authorUrl": "https://x.com/finaltasy",
-    "tags": [
-      "zh",
-      "ui"
-    ],
-    "category": "ui",
-    "lang": "zh",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "2026-04-16T11:18:43.000Z",
-    "prompt": "{\n  \"type\": \"mobile live streaming app interface mockup\",\n  \"subject\": {\n    \"description\": \"{argument name=\\\"broadcaster appearance\\\" default=\\\"young Asian woman with long dark hair wearing a white ruffled top\\\"}\",\n    \"action\": \"holding a white paper sign with handwritten text and drawn hearts\",\n    \"sign_text\": \"{argument name=\\\"sign text\\\" default=\\\"谢谢 Gorden Sun 的大火箭！\\\"}\",\n    \"background\": \"cozy room with a teddy bear, framed picture, and warm glowing lamp on a shelf, microphone visible on the right\"\n  },\n  \"ui_layout\": {\n    \"top_bar\": {\n      \"left\": {\n        \"broadcaster_info\": {\n          \"name\": \"{argument name=\\\"broadcaster name\\\" default=\\\"小甜心✨\\\"}\",\n          \"stats\": \"28.6万本场点赞\",\n          \"button\": \"关注\",\n          \"rank_badge\": \"小时榜第 3 名\"\n        }\n      },\n      \"right\": {\n        \"viewers\": {\n          \"avatars_count\": 3,\n          \"total_count\": \"1.2万\"\n        },\n        \"controls\": [\n          \"close button\",\n          \"更多直播 >\",\n          \"礼物展馆 24/28\"\n        ]\n      }\n    },\n    \"mid_screen\": {\n      \"gift_notification_banner\": {\n        \"sender\": \"{argument name=\\\"gift sender name\\\" default=\\\"Gorden Sun\\\"}\",\n        \"action\": \"送了\",\n        \"gift\": \"{argument name=\\\"gift name\\\" default=\\\"大火箭\\\"}\",\n        \"quantity\": \"x1\",\n        \"icon\": \"rocket\"\n      }\n    },\n    \"bottom_area\": {\n      \"chat_overlay\": {\n        \"message_count\": 7,\n        \"messages\": [\n          \"Gorden Sun 送出大火箭 🚀 x1\",\n          \"小飞侠: 哇哦，大火箭！\",\n          \"甜甜圈: 主播好美呀～\",\n          \"爱你呦: 666666\",\n          \"一路向北: 支持支持！\",\n          \"粉红色的回忆: 主播棒棒哒～\",\n          \"用户12345678910 关注了主播\"\n        ]\n      },\n      \"interaction_bar\": {\n        \"input_placeholder\": \"说点什么...\",\n        \"icons_count\": 5,\n        \"icons\": [\n          \"smiley face\",\n          \"link\",\n          \"heart\",\n          \"gift box\",\n          \"three dots\"\n        ]\n      },\n      \"floating_animation\": \"column of colorful floating hearts on the bottom right\"\n    }\n  }\n}",
-    "outputImages": [
-      "/images/2044737247090811315_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/finaltasy/status/2044737247090811315"
-  },
-  {
     "id": "2046169184493793370",
     "title": "9-Panel Self-Care Infographic Grid",
     "thumbnail": "/images/2046169184493793370_0.jpg",
@@ -5709,32 +5587,6 @@
       "/images/2046169184493793370_0.jpg"
     ],
     "sourceUrl": "https://x.com/j_zou93/status/2046169184493793370"
-  },
-  {
-    "id": "2044615968941555760-2be60980",
-    "title": "手写日语学习笔记",
-    "thumbnail": "/images/2044615968941555760_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "Kouji Fujii｜AI × Business",
-    "authorUrl": "https://x.com/fujikou25",
-    "tags": [
-      "zh",
-      "photography"
-    ],
-    "category": "photography",
-    "lang": "zh",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "2026-04-16T03:16:48.000Z",
-    "prompt": "A top-down photorealistic image of an open lined notebook resting on a smooth wooden desk. A dark green HB pencil with a silver ferrule and white eraser lies diagonally on the desk to the right of the notebook. The notebook pages are filled with neat, handwritten text in pencil, resembling a student's study notes. On the left page, the top left corner reads {argument name=\"date\" default=\"2024年5月20日(月)\"} above {argument name=\"subject\" default=\"国語 「枕草子」\"}. Below this is a rectangular boxed heading reading {argument name=\"left page heading\" default=\"清少納言のものの見方\"}, followed by exactly three bulleted sentences: one about valuing the changes in nature and seasons, one about finding beauty and amusement in small everyday things, and one about being honest with one's senses while having a sense of humor. Further down is a cloud-shaped border containing a heading translated as 'Words that left an impression', followed by a famous classical quote about spring mornings and a brief explanation below it marked with an arrow. On the right page, the top section has the heading {argument name=\"right page heading\" default=\"〈現代とのちがい〉\"} with exactly two bulleted points: one noting that the perception of seasons is much more delicate than today, and another stating that the perspective is sensory and poetic. This is followed by an arrow pointing to a concluding thought about wanting to cherish this sensibility. Below this is another cloud-shaped border containing a heading translated as 'Summary' and a short paragraph about how the 1000-year-old text still resonates today and the importance of carefully observing nature. At the bottom right of the page, there is a small, simple line drawing of a leafy plant stem next to a scalloped thought bubble containing the text {argument name=\"final thought\" default=\"感性をみがくって、素敵なことだなあ。\"}. The lighting is soft and natural, highlighting the texture of the paper and the graphite pencil marks.",
-    "outputImages": [
-      "/images/2044615968941555760_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/fujikou25/status/2044615968941555760",
-    "sourceId": "2044615968941555760"
   },
   {
     "id": "2044289258580574463",
@@ -5787,7 +5639,8 @@
     "outputImages": [
       "/images/2046710556208288008_0.jpg"
     ],
-    "sourceUrl": "https://x.com/olusrodri/status/2046710556208288008#reversed-1"
+    "sourceUrl": "https://x.com/olusrodri/status/2046710556208288008#reversed-1",
+    "approved": true
   },
   {
     "id": "2045056420408971420",
@@ -5812,7 +5665,8 @@
     "outputImages": [
       "/images/2045056420408971420_0.jpg"
     ],
-    "sourceUrl": "https://x.com/sgy121/status/2045056420408971420"
+    "sourceUrl": "https://x.com/sgy121/status/2045056420408971420",
+    "approved": true
   },
   {
     "id": "2044724985734770712-b7395ee8",
@@ -5839,7 +5693,8 @@
       "/images/2044724985734770712_1.jpg"
     ],
     "sourceUrl": "https://x.com/zhongjoji00000/status/2044724985734770712",
-    "sourceId": "2044724985734770712"
+    "sourceId": "2044724985734770712",
+    "approved": true
   },
   {
     "id": "2045442187119534099",
@@ -5895,56 +5750,6 @@
     "approved": true
   },
   {
-    "id": "2045020476813312191",
-    "title": "复古日式游戏杂志广告",
-    "thumbnail": "/images/2045020476813312191_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "ヤマザキタカシ",
-    "authorUrl": "https://x.com/WhisperBK",
-    "tags": [
-      "zh",
-      "game"
-    ],
-    "category": "game",
-    "lang": "zh",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "2026-04-17T06:04:10.000Z",
-    "prompt": "{\n  \"type\": \"retro Japanese video game magazine advertisement\",\n  \"style\": \"photograph of a glossy magazine page, slightly curved with visible page edges on the left\",\n  \"game_info\": {\n    \"title_logo\": \"{argument name=\\\"game title\\\" default=\\\"シェンムー III ~Shenmue III~\\\"}\",\n    \"console\": \"{argument name=\\\"console name\\\" default=\\\"Dreamcast\\\"}\",\n    \"release_date\": \"{argument name=\\\"release year\\\" default=\\\"1999年 発売予定\\\"}\",\n    \"publisher\": \"SEGA\"\n  },\n  \"main_visual\": {\n    \"character\": \"{argument name=\\\"main character description\\\" default=\\\"3D CGI male character with spiky black hair, a band-aid on his cheek, wearing a brown leather jacket\\\"}\",\n    \"background\": \"traditional Asian village with wooden buildings, a river, and mountains under a cloudy sky\",\n    \"overlay\": \"faint dragon graphic behind the main logo\"\n  },\n  \"layout\": {\n    \"sections\": [\n      {\n        \"title\": \"Top Header\",\n        \"position\": \"top\",\n        \"elements\": [\n          \"Dreamcast swirl logo\",\n          \"Large horizontal catchphrase: {argument name=\\\"main catchphrase\\\" default=\\\"あれから——涼、再び旅立つ。\\\"}\"\n        ]\n      },\n      {\n        \"title\": \"Vertical Copy\",\n        \"position\": \"left and right edges\",\n        \"elements\": [\n          \"Left vertical text: 人は、運命のために生まれてくるのか——\",\n          \"Right vertical text: シェンムー、ついに完結へ。\"\n        ]\n      },\n      {\n        \"title\": \"Feature Screenshots\",\n        \"position\": \"mid-right\",\n        \"count\": 4,\n        \"labels\": [\n          \"さらなる強敵たちとの出会い。\",\n          \"広大な世界、進化したグラフィック。\",\n          \"新たな仲間たちとの絆。\",\n          \"すべての謎が、ここに結ばれる。\"\n        ]\n      },\n      {\n        \"title\": \"Footer Information\",\n        \"position\": \"bottom\",\n        \"elements\": [\n          \"Presented by SEGA logo\",\n          \"Game spec text block\",\n          \"Age rating box: 15才以上\",\n          \"Image of the Dreamcast console and controller\",\n          \"URL: http://www.sega.co.jp/\"\n        ]\n      }\n    ]\n  }\n}",
-    "outputImages": [
-      "/images/2045020476813312191_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/WhisperBK/status/2045020476813312191"
-  },
-  {
-    "id": "2046546991006802057",
-    "title": "Explosive Anime Launch Thumbnail",
-    "thumbnail": "/images/2046546991006802057_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "みどるっち｜AIで人生アップデート",
-    "authorUrl": "https://x.com/mido_lucci",
-    "tags": [
-      "en",
-      "manga"
-    ],
-    "category": "manga",
-    "lang": "en",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "April 21, 2026",
-    "prompt": "Create a flashy Japanese YouTube thumbnail in a high-impact anime promotional style with explosive lighting, dense spark effects, and dramatic contrast. The composition is a single unified scene with a dark black-and-neon-green background, gold glitter bursts, and a subtle city skyline silhouette along the bottom edge. On the right side, show a cute chibi anime boy from the waist up with messy dark brown to black hair accented by vivid neon green streaks and a small red accent near one side, huge bright green eyes, an open excited smile, and an energetic pose pointing directly toward the viewer with one hand while the other fist is raised. He wears a black hoodie layered under a green jacket with glossy highlights. On the left side, place 1 glowing green hourglass with swirling green energy inside. Fill the image with intense starbursts, lens flares, golden particles, and speed-line energy for a viral thumbnail look. Add 5 bold Japanese text elements in oversized display typography: a red ribbon banner across the upper left reading {argument name=\"top banner text\" default=\"4月28日スタート\"} in thick yellow letters with white edging; the main central headline in massive metallic gold kanji reading {argument name=\"main headline\" default=\"ついに解禁\"} with heavy black shadow and bright gold texture; a large white-and-green subheadline across the lower left reading {argument name=\"subheadline\" default=\"AI副業で人生変わる\"}; 1 green rounded badge near the lower center-right reading {argument name=\"bonus badge text\" default=\"無料10大特典\"} in bold white and yellow text; and 1 black slanted banner in the lower right reading {argument name=\"corner banner text\" default=\"近日公開\"} with smaller white English text beneath it saying COMING SOON. Make everything feel urgent, celebratory, and attention-grabbing, like a high-CTR launch announcement thumbnail, with thick outlines, glowing edges, metallic text, and layered depth.",
-    "outputImages": [
-      "/images/2046546991006802057_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/mido_lucci/status/2046546991006802057#reversed-3"
-  },
-  {
     "id": "2046241739997098022",
     "title": "Anime Character Reference Sheet",
     "thumbnail": "/images/2046241739997098022_0.jpg",
@@ -5967,7 +5772,8 @@
     "outputImages": [
       "/images/2046241739997098022_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Luvune/status/2046241739997098022"
+    "sourceUrl": "https://x.com/Luvune/status/2046241739997098022",
+    "approved": true
   },
   {
     "id": "2046735438128333096",
@@ -6121,7 +5927,9 @@
     "outputImages": [
       "/images/2045833848924279054_0.jpg"
     ],
-    "sourceUrl": "https://x.com/aichof21/status/2045833848924279054"
+    "sourceUrl": "https://x.com/aichof21/status/2045833848924279054",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2044974882115682719",
@@ -6148,31 +5956,6 @@
     ],
     "sourceUrl": "https://x.com/masukarasulove/status/2044974882115682719",
     "approved": true
-  },
-  {
-    "id": "2046856808921248120",
-    "title": "Robot Painter Collage Ad",
-    "thumbnail": "/images/2046856808921248120_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "01net",
-    "authorUrl": "https://x.com/01net",
-    "tags": [
-      "en",
-      "illustration"
-    ],
-    "category": "illustration",
-    "lang": "en",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "April 22, 2026",
-    "prompt": "{\"type\":\"promotional collage illustration\",\"subject\":{\"main\":\"cute white humanoid robot artist with oversized glowing blue eyes\",\"design\":\"smooth rounded white shell, black mechanical joints, small smile, friendly childlike proportions, glossy finish\",\"activity\":\"painting on canvas with a thin paintbrush while holding a painter's palette\"},\"layout\":{\"composition\":\"2x2 grid collage with a large centered title overlay crossing the middle seam\",\"sections\":[{\"position\":\"top-left\",\"count\":1,\"label\":\"3\",\"scene\":\"robot painting a colorful ocean sunset seascape with bright sun on the horizon, pink and orange sky, blue water, expressive brushstrokes\"},{\"position\":\"top-right\",\"count\":1,\"label\":\"6\",\"scene\":\"robot painting a bouquet of pink flowers in a blue vase, soft pastel floral still life\"},{\"position\":\"bottom-left\",\"count\":1,\"label\":\"4\",\"scene\":\"robot painting a lush green waterfall landscape with forest foliage and a stream\"},{\"position\":\"bottom-right\",\"count\":1,\"label\":\"7\",\"scene\":\"robot painting a glowing modern city skyline at sunset with tall skyscrapers and warm reflections\"}],\"title_overlay\":{\"text\":\"{argument name=\\\"headline text\\\" default=\\\"ChatGPT Images 2.0\\\"}\",\"style\":\"very large bold white sans-serif text with dark drop shadow, centered horizontally across the collage\"}},\"environment\":{\"setting\":\"cozy art studio interior\",\"background\":\"soft-focus shelves, framed pictures, warm ambient lighting, neutral curtains, occasional houseplant\",\"easel\":\"wooden tabletop easel in each panel\",\"palette\":\"round painter's palette with many vivid paint dabs in each panel\"},\"style\":{\"rendering\":\"highly polished 3D cartoon realism\",\"mood\":\"playful, creative, inviting, tech-meets-art\",\"camera\":\"medium close-up framing, robot on the right side of each panel facing left toward the canvas\",\"lighting\":\"warm indoor light with gentle highlights and shallow depth of field\"}}",
-    "outputImages": [
-      "/images/2046856808921248120_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/01net/status/2046856808921248120#reversed-0"
   },
   {
     "id": "2044773766048420301",
