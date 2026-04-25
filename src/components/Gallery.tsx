@@ -106,9 +106,12 @@ export default function Gallery({ entries }: Props) {
             // Image index ready: image-content score (primary) + prompt text (secondary)
             const imgScore = scoreImageSearch(searchIndex?.entries?.[entry.id], parsedSearch);
             const txtScore = scorePromptText(entry, parsedSearch);
-            // If the image index found something, blend in text as a tiebreaker;
-            // if not, fall back to prompt text alone so we never return 0 for a real match.
-            score = imgScore > 0 ? imgScore + txtScore * 0.35 : txtScore * 0.6;
+            // Require text-side corroboration to suppress OCR noise (e.g. brand names
+            // accidentally matching a query word). Image-only matches get a 45% penalty.
+            const imgFinal = imgScore > 0
+              ? (txtScore > 0 ? imgScore + txtScore * 0.35 : imgScore * 0.45)
+              : 0;
+            score = imgFinal > 0 ? imgFinal : txtScore * 0.6;
           } else {
             // Index still loading — search title + prompt text immediately
             score = scorePromptText(entry, parsedSearch);
@@ -117,7 +120,9 @@ export default function Gallery({ entries }: Props) {
           score += entry.hq ? 30 : 0;
           return { entry, score };
         })
-        .filter((item) => item.score > 0)
+        // Minimum threshold: filters noise/weak partial matches.
+        // scorePromptText title-match alone ≈ 79, prompt-match alone ≈ 48 — both pass 38.
+        .filter((item) => item.score >= 38)
         .sort((a, b) => {
           if (b.score !== a.score) return b.score - a.score;
           return compareBySecondarySort(a.entry, b.entry, sortBy);

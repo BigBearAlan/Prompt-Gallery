@@ -55,14 +55,13 @@ function tokenMatchStrength(haystackRaw: string, query: ParsedSearchQuery): numb
   if (haystack === query.normalizedTerm) return 1;
 
   if (query.isCjk) {
-    if (haystack.includes(query.normalizedTerm)) {
-      if (haystack.length <= query.normalizedTerm.length + 2) return 0.82;
-      if ((haystack.startsWith(query.normalizedTerm) || haystack.endsWith(query.normalizedTerm)) &&
-          haystack.length <= query.normalizedTerm.length + 4) {
-        return 0.58;
-      }
-    }
-    return 0;
+    if (!haystack.includes(query.normalizedTerm)) return 0;
+    // Score by specificity: shorter haystack relative to term = more focused match
+    const ratio = query.normalizedTerm.length / haystack.length;
+    if (ratio >= 0.85) return 0.95; // near-exact
+    if (ratio >= 0.50) return 0.80; // term is bulk of haystack
+    if (ratio >= 0.20) return 0.60; // mention in medium text
+    return 0.40;                    // brief mention in long text
   }
 
   const boundary = new RegExp(`(^|\\s)${escapeRegExp(query.normalizedTerm)}(\\s|$)`, 'i');
@@ -143,7 +142,7 @@ export function scoreImageSearch(doc: ImageSearchDoc | undefined, query: ParsedS
   let score = 0;
   score += keywordScore * 120;
   score += objectScore * 110;
-  score += visibleTextScore * 95;
+  score += visibleTextScore * 50; // OCR text — lower weight to avoid spurious brand/label matches
   score += captionScore * 70;
   score += searchTextScore * 35;
 

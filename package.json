@@ -12,9 +12,13 @@
     "curate:audit": "node scripts/curate-gallery.mjs audit",
     "curate:reclassify": "node scripts/curate-gallery.mjs reclassify",
     "import:x": "node scripts/import-x-search.mjs",
+    "import:opennana": "node scripts/import-opennana.mjs",
     "admin": "node scripts/admin.mjs",
     "cleanup": "node scripts/cleanup-prompts.mjs",
-    "search:index": "node scripts/build-search-index.mjs"
+    "search:index": "node scripts/build-search-index.mjs",
+    "prompt:clean": "node scripts/prompt-clean-pending.mjs",
+    "test:image-metadata": "node scripts/image-metadata-self-test.mjs",
+    "test:prompt-clean": "node scripts/prompt-clean-self-test.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

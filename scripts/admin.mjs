@@ -18,6 +18,8 @@ const IMAGES_DIR   = path.join(ROOT, 'public', 'images');
 const HTML_FILE    = path.join(__dirname, 'admin.html');
 const PORT         = 3001;
 
+let deployLocked = false;
+
 // ── helpers ───────────────────────────────────────────────────────────────────
 
 function getRawBody(req) {
@@ -155,25 +157,33 @@ const server = createServer(async (req, res) => {
 
     // ── GET /api/deploy/vercel  (SSE: build check + git push → Vercel) ──
     if (path_ === '/api/deploy/vercel' && req.method === 'GET') {
+      if (deployLocked) {
+        res.writeHead(409, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ ok: false, error: 'A deploy is already in progress.' }));
+        return;
+      }
+      deployLocked = true;
       const { send, runStep } = sseSetup(res);
+
+      const finish = (payload) => { deployLocked = false; send('done', payload); res.end(); };
 
       const cleanIndexCode = await runStep('git', ['diff', '--cached', '--quiet'], 'Check for pre-staged changes', req);
       if (cleanIndexCode !== 0) {
-        send('done', { ok: false, error: 'There are already staged git changes. Commit or unstage them before using admin deploy.' });
-        res.end(); return;
+        finish({ ok: false, error: 'There are already staged git changes. Commit or unstage them before using admin deploy.' });
+        return;
       }
 
       const buildCode = await runStep('npm', ['run', 'build'], 'npm run build', req);
       if (buildCode !== 0) {
-        send('done', { ok: false, error: `Build exited ${buildCode}` });
-        res.end(); return;
+        finish({ ok: false, error: `Build exited ${buildCode}` });
+        return;
       }
 
       // Stage curated data + any newly uploaded images. Vercel builds from GitHub.
       const addCode = await runStep('git', ['add', 'src/data/prompts.json', 'src/data/curation.json', 'public/images/'], 'git add prompt data + images', req);
       if (addCode !== 0) {
-        send('done', { ok: false, error: `git add exited ${addCode}` });
-        res.end(); return;
+        finish({ ok: false, error: `git add exited ${addCode}` });
+        return;
       }
 
       // Check if there's actually anything to commit
@@ -189,17 +199,23 @@ const server = createServer(async (req, res) => {
           req,
         );
         if (commitCode !== 0) {
-          send('done', { ok: false, error: `git commit exited ${commitCode}` });
-          res.end(); return;
+          finish({ ok: false, error: `git commit exited ${commitCode}` });
+          return;
         }
       }
 
+      // --autostash handles any dirty working tree files (e.g. .next build artifacts)
+      const pullCode = await runStep('git', ['pull', '--rebase', '--autostash', 'origin', 'main'], 'git pull --rebase origin main', req);
+      if (pullCode !== 0) {
+        finish({ ok: false, error: `git pull --rebase failed (exit ${pullCode}) — resolve conflicts and retry` });
+        return;
+      }
+
       const pushCode = await runStep('git', ['push', 'origin', 'main'], 'git push origin main', req);
-      send('done', {
+      finish({
         ok: pushCode === 0,
         note: pushCode === 0 ? 'Vercel will deploy from GitHub — check https://vercel.com/jcai3299-8698s-projects/prompt-gallery and https://gptprompt.asia' : undefined,
       });
-      res.end();
       return;
     }
 

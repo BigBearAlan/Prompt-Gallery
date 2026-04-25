@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
 import type { SortBy } from '@/lib/types';
 import { useLocale, SORT_VALUES } from '@/lib/i18n';
 
@@ -42,6 +43,21 @@ export default function SearchFilterBar({
 }: Props) {
   const { tx } = useLocale();
 
+  // Local display value — search only fires on Enter or the search button click,
+  // never on every keystroke. IME composition is also tracked so Chinese/Japanese
+  // input isn't interrupted mid-composition.
+  const [localSearch, setLocalSearch] = useState(search);
+  const composing = useRef(false);
+
+  // Sync parent → local when the parent clears search (e.g. tag filter click)
+  useEffect(() => {
+    if (!composing.current) setLocalSearch(search);
+  }, [search]);
+
+  const commitSearch = (val: string) => {
+    onSearchChange(val);
+  };
+
   const sortLabels: Record<SortBy, string> = {
     likes: tx.sortLikes,
     views: tx.sortViews,
@@ -61,19 +77,36 @@ export default function SearchFilterBar({
       <div className="max-w-screen-2xl mx-auto px-4 pt-2.5 pb-2 flex items-center gap-2">
         {/* Search */}
         <div className="relative flex-1">
-          <svg
-            className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"
-            style={{ color: 'var(--text-secondary)' }}
-            width="15" height="15" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" strokeWidth="2"
+          <button
+            type="button"
+            onClick={() => commitSearch(localSearch)}
+            className="absolute left-3 top-1/2 -translate-y-1/2 cursor-pointer"
+            style={{ color: 'var(--text-secondary)', background: 'none', border: 'none', padding: 0, lineHeight: 0 }}
+            tabIndex={-1}
+            aria-label="Search"
           >
-            <circle cx="11" cy="11" r="8" />
-            <path d="m21 21-4.35-4.35" />
-          </svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
           <input
             type="search"
-            value={search}
-            onChange={(e) => onSearchChange(e.target.value)}
+            value={localSearch}
+            onCompositionStart={() => { composing.current = true; }}
+            onCompositionEnd={(e) => {
+              composing.current = false;
+              setLocalSearch((e.currentTarget as HTMLInputElement).value);
+            }}
+            onChange={(e) => {
+              const val = e.target.value;
+              setLocalSearch(val);
+              // Clear search immediately when field is emptied
+              if (val === '') commitSearch('');
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !composing.current) commitSearch(localSearch);
+            }}
             placeholder={tx.searchPlaceholder}
             className="w-full pl-9 pr-4 py-2 rounded-full text-sm border outline-none focus:ring-2 focus:ring-gray-900/20 transition"
             style={{ borderColor: 'var(--border)', background: '#f8f8f8', color: 'var(--text-primary)' }}

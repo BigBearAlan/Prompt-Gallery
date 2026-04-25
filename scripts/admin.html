@@ -75,45 +75,18 @@ body {
 .tb-btn:disabled { opacity: .35; cursor: not-allowed; }
 .btn-add  { background: #555; color: #fff; }
 .btn-save { background: #16a34a; color: #fff; }
+.btn-bulk { background: #1f2937; color: #fff; }
 
-/* Deploy split-button */
-.deploy-wrap { position: relative; flex-shrink: 0; display: flex; }
+/* Deploy button */
 .btn-deploy-cf {
   display: flex; align-items: center; gap: 6px;
-  padding: 6px 12px 6px 14px; border-radius: 16px 0 0 16px;
-  border: none; border-right: 1px solid rgba(255,255,255,.2);
-  background: #2563eb; color: #fff;
+  padding: 6px 16px; border-radius: 16px;
+  border: none; background: #2563eb; color: #fff;
   font-size: 13px; font-weight: 600; cursor: pointer;
-  transition: opacity .15s; white-space: nowrap;
+  transition: opacity .15s; white-space: nowrap; flex-shrink: 0;
 }
 .btn-deploy-cf:hover { opacity: .85; }
 .btn-deploy-cf:disabled { opacity: .35; cursor: not-allowed; }
-.btn-deploy-arrow {
-  display: flex; align-items: center; justify-content: center;
-  padding: 6px 10px; border-radius: 0 16px 16px 0;
-  border: none; background: #2563eb; color: #fff;
-  cursor: pointer; transition: opacity .15s; font-size: 11px;
-}
-.btn-deploy-arrow:hover { opacity: .85; background: #1d4ed8; }
-.deploy-menu {
-  position: absolute; top: calc(100% + 6px); right: 0;
-  background: #1a1a1a; border: 1px solid #333; border-radius: 10px;
-  overflow: hidden; min-width: 200px; z-index: 200;
-  box-shadow: 0 8px 24px rgba(0,0,0,.5); display: none;
-}
-.deploy-menu.open { display: block; }
-.deploy-item {
-  display: flex; align-items: center; gap: 10px;
-  padding: 11px 14px; cursor: pointer; font-size: 13px;
-  color: #ccc; transition: background .12s; border: none;
-  background: none; width: 100%; text-align: left;
-}
-.deploy-item:hover { background: #2a2a2a; color: #fff; }
-.deploy-item-icon {
-  width: 22px; height: 22px; border-radius: 5px;
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-}
-.deploy-item-sub { font-size: 10px; color: #555; margin-top: 1px; }
 
 /* ── List grid ──────────────────────────────────────── */
 #main { max-width: 1400px; margin: 0 auto; padding: 10px 14px 120px; }
@@ -128,6 +101,21 @@ body {
   transition: box-shadow .15s;
 }
 .card:hover { box-shadow: 0 2px 16px rgba(0,0,0,.11); }
+.card.selected {
+  outline: 2px solid #111;
+  box-shadow: 0 2px 16px rgba(0,0,0,.14);
+}
+
+.card-select {
+  position: absolute; top: 8px; right: 8px; z-index: 5;
+  width: 24px; height: 24px; border-radius: 7px;
+  background: rgba(255,255,255,.96); border: 1px solid rgba(0,0,0,.14);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+.card-select input {
+  width: 15px; height: 15px; accent-color: #111; cursor: pointer;
+}
 
 /* Image column */
 .card-img-wrap {
@@ -242,7 +230,6 @@ body {
   font-size: 10px; font-weight: 700; padding: 2px 7px;
   border-radius: 10px; pointer-events: none; z-index: 2; letter-spacing: .03em;
 }
-
 /* ── Approve button ─────────────────────────────────── */
 .card-btn-approve {
   background: #dcfce7; color: #15803d; font-weight: 700;
@@ -257,12 +244,11 @@ body {
 .card-btn-hq.hq-on { background: #fde047; color: #713f12; font-weight: 800; }
 .card-btn-hq.hq-on:hover { background: #facc15; }
 .card-hq-badge {
-  position: absolute; top: 7px; right: 7px;
+  position: absolute; top: 7px; right: 38px;
   background: rgba(234,179,8,.92); color: #fff;
   font-size: 11px; font-weight: 800; padding: 1px 6px;
   border-radius: 10px; pointer-events: none; z-index: 2;
 }
-
 /* ── Tab bar ────────────────────────────────────────── */
 #tab-bar {
   background: #fff; border-bottom: 1px solid var(--border);
@@ -285,6 +271,28 @@ body {
   transition: background .15s, color .15s;
 }
 .tab-btn.active .tab-count { background: #111; color: #fff; }
+
+/* ── Bulk actions ──────────────────────────────────── */
+#bulk-bar {
+  background: #fafafa; border-bottom: 1px solid var(--border);
+  padding: 8px 16px; display: flex; align-items: center; gap: 10px;
+  position: sticky; top: calc(var(--topbar-h) + 39px); z-index: 85;
+}
+.bulk-check {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 12px; color: #444; white-space: nowrap;
+}
+.bulk-check input { width: 15px; height: 15px; accent-color: #111; cursor: pointer; }
+#bulk-count { font-size: 12px; color: var(--text-secondary); white-space: nowrap; }
+.bulk-actions { display: flex; align-items: center; gap: 7px; margin-left: auto; }
+.bulk-btn {
+  padding: 5px 11px; border: none; border-radius: 8px;
+  font-size: 12px; font-weight: 700; cursor: pointer;
+}
+.bulk-btn:disabled { opacity: .35; cursor: not-allowed; }
+.bulk-btn-approve { background: #dcfce7; color: #15803d; }
+.bulk-btn-delete { background: #fee2e2; color: #b91c1c; }
+.bulk-btn-clear { background: #f3f4f6; color: #4b5563; }
 
 /* ── Lightbox ───────────────────────────────────────── */
 #lightbox {
@@ -582,26 +590,16 @@ body {
     保存
   </button>
 
-  <div class="deploy-wrap" id="deploy-wrap">
-    <button class="btn-deploy-cf" id="deploy-btn" onclick="doDeploy('vercel')">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9z"/>
-      </svg>
-      Vercel
-    </button>
-    <button class="btn-deploy-arrow" id="deploy-arrow" onclick="toggleDeployMenu(event)" title="更多部署选项">▾</button>
-    <div class="deploy-menu" id="deploy-menu">
-      <button class="deploy-item" onclick="doDeploy('vercel');closeDeployMenu()">
-        <div class="deploy-item-icon" style="background:#24292f">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-        </div>
-        <div>
-          <div>Vercel Production</div>
-          <div class="deploy-item-sub">build check + git push → Vercel</div>
-        </div>
-      </button>
-    </div>
-  </div>
+  <button class="tb-btn btn-bulk" onclick="toggleAllVisible()">
+    批量选择
+  </button>
+
+  <button class="btn-deploy-cf" id="deploy-btn" onclick="doDeploy()">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9z"/>
+    </svg>
+    Deploy
+  </button>
 </div>
 
 <!-- ── Tab bar ── -->
@@ -615,6 +613,20 @@ body {
   <button class="tab-btn" id="tab-approved" onclick="switchTab('approved')">
     已通过 <span class="tab-count" id="count-approved">0</span>
   </button>
+</div>
+
+<!-- ── Bulk actions ── -->
+<div id="bulk-bar">
+  <label class="bulk-check">
+    <input type="checkbox" id="select-all-visible" onchange="setAllVisibleSelected(this.checked)">
+    <span>选择当前列表</span>
+  </label>
+  <span id="bulk-count">已选择 0 项</span>
+  <div class="bulk-actions">
+    <button class="bulk-btn bulk-btn-approve" id="bulk-approve-btn" onclick="approveSelected()" disabled>通过</button>
+    <button class="bulk-btn bulk-btn-delete" id="bulk-delete-btn" onclick="openBulkDel()" disabled>删除</button>
+    <button class="bulk-btn bulk-btn-clear" id="bulk-clear-btn" onclick="clearSelection()" disabled>清空</button>
+  </div>
 </div>
 
 <!-- ── Main grid ── -->
@@ -833,14 +845,15 @@ let newEntries  = [];
 let filtered    = [];
 let editId      = null;
 let delId       = null;
+let isBulkDel   = false;
 let isDirty     = false;
+let selectedIds = new Set();
 let uploadedImg     = null;   // for add modal
 let editUploadedImg = null;   // for edit modal image replacement
 let editActiveIdx   = 0;      // which image index is currently selected in edit modal
 let currentTab      = 'review';
 let lightboxImgs    = [];
 let lightboxIdx     = 0;
-
 // ════════════════════════════════════════════════════
 //  Bootstrap
 // ════════════════════════════════════════════════════
@@ -888,7 +901,9 @@ function applyFilters() {
     : `${filtered.length} / ${total} 个`;
 
   updateTabCounts();
+  syncSelection();
   renderGrid();
+  updateBulkControls();
 }
 
 function merged(p) {
@@ -927,7 +942,11 @@ function renderGrid() {
     const likesStr = likes >= 1000 ? (likes/1000).toFixed(1)+'K' : likes > 0 ? String(likes) : '';
 
     return `<div class="mitem">
-      <div class="card" data-id="${esc(p.id)}">
+      <div class="card${selectedIds.has(p.id) ? ' selected' : ''}" data-id="${esc(p.id)}">
+        <label class="card-select" title="选择">
+          <input type="checkbox" ${selectedIds.has(p.id) ? 'checked' : ''}
+            onchange="toggleSelect('${esc(p.id)}', this.checked)" onclick="event.stopPropagation()">
+        </label>
 
         <!-- Image -->
         <div class="card-img-wrap">
@@ -1015,6 +1034,99 @@ function esc(s) {
     .replace(/&/g,'&amp;').replace(/</g,'&lt;')
     .replace(/>/g,'&gt;').replace(/"/g,'&quot;')
     .replace(/'/g,'&#39;');
+}
+
+// ════════════════════════════════════════════════════
+//  Selection / Bulk actions
+// ════════════════════════════════════════════════════
+function visibleIds() {
+  return filtered.map(p => p.id);
+}
+
+function syncSelection() {
+  const poolIds = new Set([...newEntries, ...allPrompts].map(p => p.id));
+  selectedIds = new Set([...selectedIds].filter(id => poolIds.has(id) && !deletes.has(id)));
+}
+
+function updateBulkControls() {
+  const ids = visibleIds();
+  const selectedVisible = ids.filter(id => selectedIds.has(id));
+  const selectedCount = selectedIds.size;
+  const allVisibleSelected = ids.length > 0 && selectedVisible.length === ids.length;
+  const someVisibleSelected = selectedVisible.length > 0 && selectedVisible.length < ids.length;
+  const selectAll = document.getElementById('select-all-visible');
+
+  selectAll.checked = allVisibleSelected;
+  selectAll.indeterminate = someVisibleSelected;
+  document.getElementById('bulk-count').textContent = `已选择 ${selectedCount} 项`;
+  document.getElementById('bulk-approve-btn').disabled = selectedCount === 0;
+  document.getElementById('bulk-delete-btn').disabled = selectedCount === 0;
+  document.getElementById('bulk-clear-btn').disabled = selectedCount === 0;
+}
+
+function toggleSelect(id, checked) {
+  if (checked) selectedIds.add(id);
+  else selectedIds.delete(id);
+  renderGrid();
+  updateBulkControls();
+}
+
+function setAllVisibleSelected(checked) {
+  visibleIds().forEach(id => {
+    if (checked) selectedIds.add(id);
+    else selectedIds.delete(id);
+  });
+  renderGrid();
+  updateBulkControls();
+}
+
+function toggleAllVisible() {
+  const ids = visibleIds();
+  if (ids.length === 0) return;
+  const shouldSelect = ids.some(id => !selectedIds.has(id));
+  setAllVisibleSelected(shouldSelect);
+}
+
+function clearSelection() {
+  selectedIds.clear();
+  renderGrid();
+  updateBulkControls();
+}
+
+async function approveSelected() {
+  const ids = [...selectedIds];
+  if (ids.length === 0) return;
+
+  const btn = document.getElementById('bulk-approve-btn');
+  btn.disabled = true;
+  btn.textContent = '通过中…';
+
+  ids.forEach(id => {
+    const existing = changes.get(id) || {};
+    changes.set(id, { ...existing, approved: true, pending: false });
+  });
+  markDirty();
+
+  try {
+    const out = await saveData();
+    allPrompts = out; newEntries = []; changes.clear(); deletes.clear(); clearDirty();
+    selectedIds.clear();
+    toast(`✓ 已通过 ${ids.length} 项`);
+  } catch(e) {
+    toast('批量通过失败：' + e.message, true);
+  } finally {
+    btn.textContent = '通过';
+    applyFilters();
+  }
+}
+
+function openBulkDel() {
+  if (selectedIds.size === 0) return;
+  isBulkDel = true;
+  delId = null;
+  document.getElementById('del-desc').textContent =
+    `将删除已选择的 ${selectedIds.size} 项，点击"保存"后生效。`;
+  document.getElementById('del-modal').classList.remove('hidden');
 }
 
 // ════════════════════════════════════════════════════
@@ -1270,6 +1382,7 @@ async function submitAdd() {
 //  Delete
 // ════════════════════════════════════════════════════
 function openDel(id) {
+  isBulkDel = false;
   delId = id;
   const pool = [...newEntries, ...allPrompts];
   const p = pool.find(p => p.id === id);
@@ -1281,22 +1394,29 @@ function openDel(id) {
 
 function closeDel() {
   delId = null;
+  isBulkDel = false;
   document.getElementById('del-modal').classList.add('hidden');
 }
 
 function confirmDel() {
-  if (!delId) return;
-  const newIdx = newEntries.findIndex(n => n.id === delId);
-  if (newIdx !== -1) {
-    newEntries.splice(newIdx, 1);
-  } else {
-    deletes.add(delId);
-  }
-  changes.delete(delId);
+  const ids = isBulkDel ? [...selectedIds] : (delId ? [delId] : []);
+  if (ids.length === 0) return;
+
+  ids.forEach(id => {
+    const newIdx = newEntries.findIndex(n => n.id === id);
+    if (newIdx !== -1) {
+      newEntries.splice(newIdx, 1);
+    } else {
+      deletes.add(id);
+    }
+    changes.delete(id);
+    selectedIds.delete(id);
+  });
+
   closeDel();
   markDirty();
   applyFilters();
-  toast('已标记删除，点击"保存"写入文件');
+  toast(ids.length > 1 ? `已标记删除 ${ids.length} 项，点击"保存"写入文件` : '已标记删除，点击"保存"写入文件');
 }
 
 // ════════════════════════════════════════════════════
@@ -1471,6 +1591,7 @@ async function doSave() {
     newEntries = [];
     changes.clear();
     deletes.clear();
+    selectedIds.clear();
     clearDirty();
     applyFilters();
     toast(`✓ 已保存 ${out.length} 条记录`);
@@ -1485,32 +1606,18 @@ async function doSave() {
 // ════════════════════════════════════════════════════
 //  Deploy
 // ════════════════════════════════════════════════════
-function toggleDeployMenu(e) {
-  e.stopPropagation();
-  document.getElementById('deploy-menu').classList.toggle('open');
-}
-function closeDeployMenu() {
-  document.getElementById('deploy-menu').classList.remove('open');
-}
-document.addEventListener('click', (e) => {
-  if (!document.getElementById('deploy-wrap').contains(e.target)) closeDeployMenu();
-});
-
-async function doDeploy(target) {
+async function doDeploy() {
   await doSave();
 
-  const panel  = document.getElementById('deploy-panel');
-  const log    = document.getElementById('deploy-log');
-  const title  = document.getElementById('dp-title-text');
-  const cfBtn  = document.getElementById('deploy-btn');
-  const arrow  = document.getElementById('deploy-arrow');
+  const panel = document.getElementById('deploy-panel');
+  const log   = document.getElementById('deploy-log');
+  const title = document.getElementById('dp-title-text');
+  const btn   = document.getElementById('deploy-btn');
 
   log.innerHTML = '';
   panel.classList.add('open');
-  const label = 'Vercel';
-  title.textContent = `部署至 ${label}…`;
-  cfBtn.disabled = true;
-  arrow.disabled = true;
+  title.textContent = '部署至 Vercel…';
+  btn.disabled = true;
 
   const append = (text, cls) => {
     const span = document.createElement('span');
@@ -1520,15 +1627,13 @@ async function doDeploy(target) {
     log.scrollTop = log.scrollHeight;
   };
 
-  const endpoint = '/api/deploy/vercel';
-
   try {
     const status = await fetch('/api/deploy/status', { cache: 'no-store' });
     if (!status.ok) {
       throw new Error('Admin server is outdated. Restart it with npm run admin, then reload this page.');
     }
 
-    const es = new EventSource(endpoint);
+    const es = new EventSource('/api/deploy/vercel');
 
     es.addEventListener('log', e => {
       const { text } = JSON.parse(e.data);
@@ -1538,15 +1643,14 @@ async function doDeploy(target) {
     es.addEventListener('done', e => {
       const { ok, error, note } = JSON.parse(e.data);
       es.close();
-      cfBtn.disabled = false;
-      arrow.disabled = false;
+      btn.disabled = false;
       if (ok) {
-        title.textContent = `✓ ${label} 部署完成`;
+        title.textContent = '✓ Vercel 部署完成';
         append('\n✓ 部署成功！\n', 'log-ok');
         if (note) append(note + '\n', 'log-note');
-        toast(`✓ 已推送至 ${label}`);
+        toast('✓ 已推送至 Vercel');
       } else {
-        title.textContent = `✗ ${label} 部署失败`;
+        title.textContent = '✗ 部署失败';
         append('\n✗ ' + (error || '部署失败') + '\n', 'log-err');
         toast('部署失败，查看日志', true);
       }
@@ -1554,14 +1658,12 @@ async function doDeploy(target) {
 
     es.onerror = () => {
       es.close();
-      cfBtn.disabled = false;
-      arrow.disabled = false;
+      btn.disabled = false;
       title.textContent = '✗ 连接中断';
       append('\n✗ 与服务器的连接中断\n', 'log-err');
     };
   } catch(e) {
-    cfBtn.disabled = false;
-    arrow.disabled = false;
+    btn.disabled = false;
     toast('部署启动失败：' + e.message, true);
   }
 }
@@ -1593,7 +1695,7 @@ function toast(msg, isErr = false) {
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
     if (!document.getElementById('lightbox').classList.contains('hidden')) { closeLightbox(); return; }
-    closeEdit(); closeDel(); closeAdd(); closeDeployMenu();
+    closeEdit(); closeDel(); closeAdd();
   }
   if ((e.metaKey || e.ctrlKey) && e.key === 's') {
     e.preventDefault();
