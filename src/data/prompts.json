@@ -3451,7 +3451,8 @@
     "outputImages": [
       "/images/2046257786292769230_0.jpg"
     ],
-    "sourceUrl": "https://x.com/pcneko_lab/status/2046257786292769230"
+    "sourceUrl": "https://x.com/pcneko_lab/status/2046257786292769230",
+    "approved": true
   },
   {
     "id": "2045029905164030264-73537a34",
@@ -3504,7 +3505,8 @@
     "outputImages": [
       "/images/2046646147653984645_0.jpg"
     ],
-    "sourceUrl": "https://x.com/icreatelife/status/2046646147653984645"
+    "sourceUrl": "https://x.com/icreatelife/status/2046646147653984645",
+    "approved": true
   },
   {
     "id": "2046154007136366866",
@@ -3529,7 +3531,8 @@
     "outputImages": [
       "/images/2046154007136366866_0.jpg"
     ],
-    "sourceUrl": "https://x.com/ozwxy/status/2046154007136366866"
+    "sourceUrl": "https://x.com/ozwxy/status/2046154007136366866",
+    "approved": true
   },
   {
     "id": "2043665159890321628",
@@ -3555,7 +3558,8 @@
       "/images/2043665159890321628_0.jpg",
       "/images/2043665159890321628_1.jpg"
     ],
-    "sourceUrl": "https://x.com/hawkymisc/status/2043665159890321628"
+    "sourceUrl": "https://x.com/hawkymisc/status/2043665159890321628",
+    "approved": true
   },
   {
     "id": "2043884989461475732",
@@ -3630,58 +3634,8 @@
     "outputImages": [
       "/images/2044800630771134677_0.jpg"
     ],
-    "sourceUrl": "https://x.com/akokoi1/status/2044800630771134677"
-  },
-  {
-    "id": "2046507756740657433",
-    "title": "日本过山车销售横幅广告",
-    "thumbnail": "/images/2046507756740657433_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "Torishima / INTP",
-    "authorUrl": "https://x.com/izutorishima",
-    "tags": [
-      "zh",
-      "advertising"
-    ],
-    "category": "advertising",
-    "lang": "zh",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "",
-    "prompt": "{\"type\":\"日本智能手机横幅广告\",\"style\":\"高转化商业促销横幅，光泽且激进的销售设计，紧凑的日本广告布局，生动的游乐园营销视觉，精致的企业活动图形\",\"format\":{\"aspect_ratio\":\"正方形\",\"intended_use\":\"智能手机网页横幅或社交媒体广告\"},\"brand\":{\"name\":\"東急Qシート\",\"romanization\":\"TOKYU Q-SEAT\",\"logo_position\":\"右上角圆形白色徽章内\"},\"subject\":{\"main_visual\":\"一辆戏剧性的过山车从前方视角沿陡峭轨道俯冲，车上坐满了兴奋的乘客，采用低角度拍摄以展现速度感和冲击力\",\"vehicle_label\":\"FUJIYAMA\",\"background\":\"明亮的蓝天与轻云，游乐园氛围，带有山景暗示，金色纸屑在构图中飘落\"},\"color_palette\":{\"primary\":[\"红色\",\"金色\",\"白色\",\"深蓝色\",\"黑色\"],\"mood\":\"紧迫、庆典感、高端、充满活力\"},\"layout\":{\"sections\":[{\"title\":\"顶部丝带\",\"position\":\"左上角横跨上方区域\",\"count\":1,\"labels\":[\"待ち時間をお金で買う、最高の体験を。\"]},{\"title\":\"主标题区\",\"position\":\"左上方至中心\",\"count\":3,\"labels\":[\"並ばず、もっと楽しむ!\",\"東急Qシートで\",\"売上UP!\"]},{\"title\":\"中部红色副标题丝带\",\"position\":\"主标题下方\",\"count\":1,\"labels\":[\"来園者満足度UPでリピーター増加!\"]},{\"title\":\"优势卡片\",\"position\":\"白色背景上的中下部条带\",\"count\":3,\"labels\":[\"待ち時間を 大幅カット!\",\"満足度UPで リピーター増加!\",\"単価UP・売上UPに 貢献!\"]},{\"title\":\"底部深蓝色成就条带\",\"position\":\"CTA 上方的下部区域\",\"count\":3,\"labels\":[\"導入施設 増加中!\",\"利用者満足度 95%以上!\",\"カンタン導入 最短1週間!\"]},{\"title\":\"行动呼吁区域\",\"position\":\"底部红色条带\",\"count\":2,\"labels\":[\"今すぐチェック!\",\"資料請求・お問い合わせはこちら\"]}],\"additional_elements_count\":5,\"additional_elements\":[\"左下角的智能手机样机，显示服务界面\",\"第一个优势卡片中的时钟图标\",\"第二个优势卡片中的人群图标\",\"第三个优势卡片中的柱状图箭头图标\",\"三个成就信息周围的金色月桂花环装饰\"],\"typography\":{\"language\":\"日语\",\"headline_style\":\"超粗无衬线字体，带有超大汉字和片假名\",\"headline_effect\":\"金黄色渐变填充，带有粗红色轮廓、白色光晕和微妙的阴影（针对“売上UP!”）\",\"support_text_style\":\"黑色、红色和白色的粗体日语无衬线字体\"},\"composition\":\"创建一个紧凑的日本游乐园销售横幅，过山车图像占据右半部分，巨大的销售标题占据左半部分。使用对角能量线、重叠的丝带、强烈的层级感和零售广告的紧迫感。右上角包含一个白色圆形徽标，最顶部有一个红色丝带标题，中心有一个超大促销标题，一个白色三栏优势条，一个深蓝色成就条，以及一个底部红色 CTA 条。通篇添加金色纸屑和高级感高光。\",\"text\":{\"top_ribbon\":\"待ち時間をお金で買う、最高の体験を。\",\"headline_line_1\":\"並ばず、もっと楽しむ!\",\"headline_line_2\":\"{argument name=\\\"service name\\\" default=\\\"東急Qシート\\\"}で\",\"headline_line_3\":\"{argument name=\\\"main sales phrase\\\" default=\\\"売上UP!\\\"}\",\"subheadline\":\"来園者満足度UPでリピーター増加!\",\"benefit_1\":\"待ち時間を 大幅カット!\",\"benefit_1_sub\":\"スムーズにアトラクション体験\",\"benefit_2\":\"満足度UPで リピーター増加!\",\"benefit_2_sub\":\"口コミ・SNSでも話題に\",\"benefit_3\":\"単価UP・売上UPに 貢献!\",\"benefit_3_sub\":\"収益性の向上をサポート\",\"achievement_1\":\"導入施設 増加中!\",\"achievement_2\":\"利用者満足度 {argument name=\\\"satisfaction figure\\\" default=\\\"95%以上!\\\"}\",\"achievement_2_note\":\"※自社アンケート調べ\",\"achievement_3\":\"カンタン導入 最短1週間!\",\"bottom_left\":\"今すぐチェック!\",\"bottom_center\":\"{argument name=\\\"bottom message\\\" default=\\\"東急Qシートで あなたの施設の売上を最大化!\\\"}\",\"cta\":\"{argument name=\\\"call to action\\\" default=\\\"資料請求・お問い合わせはこちら\\\"}\"}}",
-    "outputImages": [
-      "/images/2046507756740657433_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/izutorishima/status/2046507756740657433"
-  },
-  {
-    "id": "2045026556561719581-c42283fa",
-    "title": "电商直播间 UI 设计稿",
-    "thumbnail": "/images/2045026556561719581_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "可可耐特coconut",
-    "authorUrl": "https://x.com/coconut_256",
-    "tags": [
-      "zh",
-      "ui"
-    ],
-    "category": "ui",
-    "lang": "zh",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "2026-04-17T06:28:20.000Z",
-    "prompt": "{\n  \"type\": \"e-commerce live stream interface mockup\",\n  \"subject\": {\n    \"description\": \"young Asian woman, long wavy dark hair, wearing a white short-sleeve polo shirt and white pleated tennis skirt, holding a white tennis racket over her right shoulder, looking directly at the camera with a soft expression\",\n    \"background\": \"soft light grey studio background\"\n  },\n  \"layout\": {\n    \"header\": {\n      \"left\": {\n        \"avatar\": \"female portrait\",\n        \"name\": \"{argument name=\\\"host name\\\" default=\\\"小鹿运动优选\\\"}\",\n        \"stats\": \"12.8万本场点赞\",\n        \"button\": \"关注\",\n        \"badge\": \"带货榜第3名\"\n      },\n      \"right\": {\n        \"viewer_avatars_count\": 3,\n        \"viewer_count\": \"1.2万\",\n        \"close_icon\": \"X\"\n      }\n    },\n    \"floating_elements\": [\n      {\n        \"position\": \"top right\",\n        \"type\": \"coupon card\",\n        \"title\": \"直播间专属券\",\n        \"details\": \"¥20 满199可用\",\n        \"button\": \"领取\"\n      },\n      {\n        \"position\": \"mid left\",\n        \"type\": \"campaign text\",\n        \"subtitle\": \"夏日运动季\",\n        \"headline\": \"{argument name=\\\"main headline\\\" default=\\\"活力开场\\\"}\",\n        \"bullet_points_count\": 3,\n        \"bullet_points\": [\"透气速干\", \"弹力舒适\", \"运动百搭\"]\n      },\n      {\n        \"position\": \"mid right\",\n        \"type\": \"product card active\",\n        \"badge\": \"正在讲解\",\n        \"image\": \"white polo and skirt flat lay\",\n        \"title\": \"{argument name=\\\"product name\\\" default=\\\"运动POLO衫套装\\\"}\",\n        \"details\": \"白色·M码\",\n        \"price\": \"{argument name=\\\"price\\\" default=\\\"¥129\\\"}\",\n        \"button\": \"去抢购\"\n      },\n      {\n        \"position\": \"bottom right\",\n        \"type\": \"product card secondary\",\n        \"badge\": \"热卖 x 156\",\n        \"image\": \"model wearing the outfit\",\n        \"title\": \"运动POLO衫套装女 透气速干 显瘦百搭\",\n        \"tags\": [\"7天无理由退货\", \"运费险\"],\n        \"price\": \"¥129\",\n        \"button\": \"抢\"\n      }\n    ],\n    \"chat_overlay\": {\n      \"position\": \"bottom left\",\n      \"message_count\": 5,\n      \"messages\": [\n        \"小鹿姐姐: 欢迎新朋友们来到直播间~\",\n        \"运动达人: {argument name=\\\"chat message\\\" default=\\\"这套好看!\\\"}\",\n        \"卡卡西: 布料透气吗?\",\n        \"小鹿运动优选: 我们这个面料是冰丝速干的，运动出汗也不闷热哦~\",\n        \"用户_6789: 已拍!\"\n      ],\n      \"purchase_alert\": \"用户_6789 等3人 正在去购买\"\n    },\n    \"footer\": {\n      \"input_bar\": \"说点什么...\",\n      \"icons_count\": 5,\n      \"icons\": [\"smile\", \"shopping cart\", \"heart\", \"share\", \"more\"]\n    }\n  }\n}",
-    "outputImages": [
-      "/images/2045026556561719581_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/coconut_256/status/2045026556561719581",
-    "sourceId": "2045026556561719581"
+    "sourceUrl": "https://x.com/akokoi1/status/2044800630771134677",
+    "approved": true
   },
   {
     "id": "2046794478888042551",
@@ -3706,7 +3660,8 @@
     "outputImages": [
       "/images/2046794478888042551_0.jpg"
     ],
-    "sourceUrl": "https://x.com/ObserverKR/status/2046794478888042551#reversed-1"
+    "sourceUrl": "https://x.com/ObserverKR/status/2046794478888042551#reversed-1",
+    "approved": true
   },
   {
     "id": "2046206927492047336",
