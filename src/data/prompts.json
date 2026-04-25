@@ -24180,5 +24180,233 @@
     },
     "createdAt": "2026-02-11T01:13:39.000Z",
     "pending": false
+  },
+  {
+    "id": "2047919218134511765",
+    "title": "单页信息图",
+    "thumbnail": "/images/2047919218134511765_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "绿豆仁",
+    "authorUrl": "https://x.com/Lvdouren163",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-25T06:02:44.000Z",
+    "prompt": "你是一位擅长手绘风信息图的视觉设计师。请根据以下内容创作一张单页信息图。\n\n风格要求\n\n整体风格：Hand-drawn educational infographic on warm cream paper texture (#F5F0E8)。所有线条和形状带轻微手绘抖动感（slight hand-drawn wobble），整体干净清晰，像高质量演示文稿的单页视觉摘要。无写实元素。\n\n配色方案：\n- 信息区色块：马卡龙色系圆角卡片——浅蓝 #A8D8EA、薄荷绿 #B5E5CF、薰衣草紫 #D5C6E0、浅桃 #F4C7AB，根据内容分区选用\n- 强调色：珊瑚红 #E8655A，用于关键词、重要数据、勾选标记等需要视觉突出的元素\n- 线条与主文字：黑色\n- 辅助标注：暖灰 #6B6B6B，字号较小\n\n图形优先：用图标、简笔画卡通形象、示意图承载信息，文字仅用于标注和点睛，能用图说清的绝不用文字。像好的 slides 一样——一眼看懂结构，细看理解细节。\n\n信息结构：根据内容自动选择最佳视觉布局（流程→箭头串联，对比→左右分栏，循环→环形，组成→并列卡片，层级→嵌套等）。用圆角色块、气泡、虚线框等容器分区，区域间用手绘波浪箭头（hand-drawn wavy arrows）连接并标注简短关系词。\n\n文字层次：标题顶部居中，粗体大号手绘字（bold, large, hand-drawn lettering）；区域内用粗体关键词 + 暖灰小字短标签（2-5 词）区分层次。\n\n渲染细节：马卡龙色块不完全填满轮廓（colors do not completely fill outlines），涂鸦装饰点缀（小星星、下划线、小箭头等），充足留白，干净构图。\n\n底部金句：图片底部一句粗体居中总结，概括核心观点。\n\n要图解的内容\n<insert your content here>",
+    "outputImages": [
+      "/images/2047919218134511765_0.jpg",
+      "/images/2047919218134511765_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/Lvdouren163/status/2047919218134511765",
+    "pending": false
+  },
+  {
+    "id": "2047919049284214842",
+    "title": "我感觉GPTimage2出来，传统出版行业彻底完蛋了。",
+    "thumbnail": "/images/2047919049284214842_0.jpg",
+    "thumbnailAspect": 0.6667,
+    "author": "Gabrielle",
+    "authorUrl": "https://x.com/WooGabriel76263",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-25T06:02:04.000Z",
+    "prompt": "一张大图讲清楚西方美术史与现代美术史，4K",
+    "outputImages": [
+      "/images/2047919049284214842_0.jpg",
+      "/images/2047919049284214842_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/WooGabriel76263/status/2047919049284214842",
+    "pending": false
+  },
+  {
+    "id": "2047890051820912867",
+    "title": "GPT Image 2 像素游戏一句话提示词！",
+    "thumbnail": "/images/2047890051820912867_0.jpg",
+    "thumbnailAspect": 0.6667,
+    "author": "Cell 细胞",
+    "authorUrl": "https://x.com/cellinlab",
+    "tags": [
+      "zh",
+      "game"
+    ],
+    "category": "game",
+    "lang": "zh",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-25T04:06:50.000Z",
+    "prompt": "爱情公寓 电视剧主题 像素养成类游戏概念图，包括 场景全局内容，周围环绕各人物形象三视图，底部是场景特写，右下角是剧情梗概",
+    "outputImages": [
+      "/images/2047890051820912867_0.jpg",
+      "/images/2047890051820912867_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/cellinlab/status/2047890051820912867",
+    "pending": false
+  },
+  {
+    "id": "2047848576491888874",
+    "title": "GPT image 2 是吃了多少个设计师 才能达到这样的效果啊 🤔",
+    "thumbnail": "/images/2047848576491888874_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "joe qiao",
+    "authorUrl": "https://x.com/joe_qiao_ai",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-25T01:22:02.000Z",
+    "prompt": "生成一张《水浒传108将人物关系图》海报，采用中国古典水墨 +",
+    "outputImages": [
+      "/images/2047848576491888874_0.jpg",
+      "/images/2047848576491888874_1.jpg",
+      "/images/2047848576491888874_2.jpg",
+      "/images/2047848576491888874_3.jpg",
+      "/images/2047848576491888874_4.jpg",
+      "/images/2047848576491888874_5.jpg",
+      "/images/2047848576491888874_6.jpg",
+      "/images/2047848576491888874_7.jpg"
+    ],
+    "sourceUrl": "https://x.com/joe_qiao_ai/status/2047848576491888874",
+    "pending": false
+  },
+  {
+    "id": "2047714102701883707",
+    "title": "乐高版本，城市海报提示词来了",
+    "thumbnail": "/images/2047714102701883707_0.jpg",
+    "thumbnailAspect": 0.5,
+    "author": "小小东",
+    "authorUrl": "https://x.com/xiaoxiaodong01",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 4,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-24T16:27:41.000Z",
+    "prompt": "创作一张具有收藏价值、设计师海报气质与作者性审美的高完成度视觉作品。整体风格为：创意乐高积木风格 + 大师级排版文字设计。",
+    "outputImages": [
+      "/images/2047714102701883707_0.jpg",
+      "/images/2047714102701883707_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/xiaoxiaodong01/status/2047714102701883707",
+    "pending": false
+  },
+  {
+    "id": "2046723080211587145",
+    "title": "老干妈 * 星巴克",
+    "thumbnail": "/images/2046723080211587145_0.jpg",
+    "thumbnailAspect": 1.2496,
+    "author": "Jiafeng Sun 孙加峰 🕊️",
+    "authorUrl": "https://x.com/JiafengS",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T22:49:43.000Z",
+    "prompt": "生成完整高端的品牌运营图 ，产品是老干妈和星巴克的联名款：老干妈美式，中间是主图，下面放一些联名的设计，包装袋、杯套以及吉祥物。",
+    "outputImages": [
+      "/images/2046723080211587145_0.jpg",
+      "/images/2046723080211587145_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/JiafengS/status/2046723080211587145",
+    "pending": false
+  },
+  {
+    "id": "2045506567735558336",
+    "title": "gpt image 2生成东风美学海报：穷奇。",
+    "thumbnail": "/images/2045506567735558336_0.jpg",
+    "thumbnailAspect": 1.5,
+    "author": "李岳",
+    "authorUrl": "https://x.com/liyue_ai",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 149,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-18T14:15:44.000Z",
+    "prompt": "极简主义，新中式风格立体图形设计，图像下端有楷体中国文字：“东方美学”，“2026/04/18”，署名 “CHINA”，和“@LIYUE”；平整纯白色的亚光质感厚艺术纸上绘充满东方诗意氛围的山水创意画，不规则的撕纸效果；",
+    "outputImages": [
+      "/images/2045506567735558336_0.jpg",
+      "/images/2045506567735558336_1.jpg"
+    ],
+    "sourceUrl": "https://x.com/liyue_ai/status/2045506567735558336",
+    "pending": false
+  },
+  {
+    "id": "2047224935144362400",
+    "title": "品牌设计",
+    "thumbnail": "/images/2047224935144362400_0.jpg",
+    "thumbnailAspect": 1.4987,
+    "author": "AbleGPT",
+    "authorUrl": "https://x.com/AbleGPT",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T08:03:54.000Z",
+    "prompt": "为一家名为「任何品牌名称」的公司打造一套精致的多页品牌视觉手册(多张图片形式)。品牌整体气质应当充满趣味、具有未来感、色彩鲜明，并且设计感强烈，在“玩具般的活力”与“高端创意科技品牌的精致感”之间取得平衡。视觉风格需采用大胆且具有实验性的品牌语言，包括:高饱和亮色、简洁几何图形、现代字体设计、富有动感的视觉节奏，以及略带超现实感的图像表达。\n整体氛围应传递出:创造力、年轻感、节奏感、触感体验以及概念前卫性。在表达上，需要融合消费级产品的趣味性、时尚品牌的呈现方式，以及当代数字设计的语言体系。品牌手册中应体现:\n对产品细节的极致关注(product obsession)多样化的视觉实验(visual experimentation)包装设计探索(packaging exploration)编辑风格摄影(editorial photography)沉浸式零售体验(immersive retail)跨平台品牌应用 (cross-platform brand application)最终呈现应构建一个自信、当代、统一且完整的品牌世界观一既易于理解与接近，又具备强烈的艺术指导感(artdirection)在视觉上保持高度一致性，同时展现出高端创意工作室级别的美学标准。",
+    "outputImages": [
+      "/images/2047224935144362400_0.jpg",
+      "/images/2047224935144362400_1.jpg",
+      "/images/2047224935144362400_2.jpg",
+      "/images/2047224935144362400_3.jpg",
+      "/images/2047224935144362400_4.jpg",
+      "/images/2047224935144362400_5.jpg",
+      "/images/2047224935144362400_6.jpg",
+      "/images/2047224935144362400_7.jpg"
+    ],
+    "sourceUrl": "https://x.com/AbleGPT/status/2047224935144362400",
+    "pending": false
   }
 ]
