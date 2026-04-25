@@ -3609,7 +3609,8 @@
     "outputImages": [
       "/images/2045124550388854975_0.jpg"
     ],
-    "sourceUrl": "https://x.com/old_pgmrs_will/status/2045124550388854975"
+    "sourceUrl": "https://x.com/old_pgmrs_will/status/2045124550388854975",
+    "approved": true
   },
   {
     "id": "2044800630771134677",
@@ -3866,7 +3867,8 @@
     "outputImages": [
       "/images/2044564212073251178_0.jpg"
     ],
-    "sourceUrl": "https://x.com/koyo_koyoy/status/2044564212073251178"
+    "sourceUrl": "https://x.com/koyo_koyoy/status/2044564212073251178",
+    "approved": true
   },
   {
     "id": "2045493771715129752",
@@ -3944,7 +3946,8 @@
       "/images/2046189362933858580_0.jpg"
     ],
     "sourceUrl": "https://x.com/masapark95/status/2046189362933858580",
-    "sourceId": "2046189362933858580"
+    "sourceId": "2046189362933858580",
+    "approved": true
   },
   {
     "id": "2046876482224746543",
