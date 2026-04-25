@@ -3,12 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --bg: #f2f0ed;
+  --bg: #f7f7f5;
   --card: #ffffff;
   --accent: #e60023;
   --text-primary: #111111;
   --text-secondary: #767676;
   --border: #e5e5e5;
+  --surface-muted: #f4f4f2;
 }
 
 * {
@@ -37,37 +38,45 @@ body {
 
 /* Masonry grid using CSS columns */
 .masonry {
-  column-count: 2;
-  column-gap: 12px;
+  column-width: 154px;
+  column-gap: 10px;
 }
 
 @media (min-width: 640px) {
-  .masonry { column-count: 3; }
-}
-
-@media (min-width: 900px) {
-  .masonry { column-count: 4; }
+  .masonry {
+    column-width: 190px;
+    column-gap: 12px;
+  }
 }
 
 @media (min-width: 1200px) {
-  .masonry { column-count: 5; }
-}
-
-@media (min-width: 1600px) {
-  .masonry { column-count: 6; }
+  .masonry {
+    column-width: 218px;
+    column-gap: 14px;
+  }
 }
 
 .masonry-item {
   break-inside: avoid;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  content-visibility: auto;
+  contain-intrinsic-size: 260px 340px;
+}
+
+@media (min-width: 640px) {
+  .masonry-item { margin-bottom: 12px; }
+}
+
+@media (min-width: 1200px) {
+  .masonry-item { margin-bottom: 14px; }
 }
 
 /* Modal backdrop */
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.52);
+  backdrop-filter: blur(8px);
   z-index: 50;
   display: flex;
   align-items: center;

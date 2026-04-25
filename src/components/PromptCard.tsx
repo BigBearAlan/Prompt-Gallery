@@ -17,7 +17,6 @@ interface Props {
 export default function PromptCard({ entry, onClick }: Props) {
   const [imgFailed, setImgFailed]   = useState(false);
   const [imgLoaded, setImgLoaded]   = useState(false);
-  const [hovered, setHovered]       = useState(false);
   const [cardCopied, setCardCopied] = useState(false);
   const { tx } = useLocale();
 
@@ -39,30 +38,20 @@ export default function PromptCard({ entry, onClick }: Props) {
   }, [entry.prompt]);
 
   return (
-    <div
-      className="masonry-item cursor-pointer select-none"
+    <article
+      className="masonry-item group cursor-zoom-in select-none"
       onClick={onClick}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
     >
       <div
-        className="relative w-full rounded-2xl overflow-hidden transition-all duration-200"
-        style={{
-          boxShadow: hovered
-            ? '0 12px 32px rgba(0,0,0,0.22)'
-            : '0 2px 8px rgba(0,0,0,0.08)',
-          transform: hovered ? 'translateY(-2px)' : 'translateY(0)',
-        }}
+        className="relative w-full rounded-lg overflow-hidden bg-white border border-black/[0.04] transition-all duration-200 group-hover:border-black/[0.09]"
       >
-        {/* ── Skeleton shimmer (shown while image loads) ── */}
         {!imgLoaded && !imgFailed && (
           <div
-            className="skeleton w-full rounded-2xl"
+            className="skeleton w-full rounded-lg"
             style={{ aspectRatio: `1 / ${entry.thumbnailAspect}` }}
           />
         )}
 
-        {/* ── Image ── */}
         {!imgFailed && (
           <img
             src={entry.thumbnail}
@@ -70,18 +59,15 @@ export default function PromptCard({ entry, onClick }: Props) {
             loading="lazy"
             onLoad={() => setImgLoaded(true)}
             onError={() => { setImgFailed(true); setImgLoaded(true); }}
-            className="w-full block object-cover transition-transform duration-300"
+            className="w-full block object-cover transition-transform duration-300 group-hover:scale-[1.015]"
             style={{
-              transform: hovered ? 'scale(1.04)' : 'scale(1)',
               opacity: imgLoaded ? 1 : 0,
-              // while loading, sit behind skeleton without taking layout space
               position: imgLoaded ? 'relative' : 'absolute',
               inset: imgLoaded ? 'auto' : 0,
             }}
           />
         )}
 
-        {/* ── Fallback gradient ── */}
         {imgFailed && (
           <div
             className="w-full flex items-center justify-center text-white/60 text-xs font-medium"
@@ -91,11 +77,10 @@ export default function PromptCard({ entry, onClick }: Props) {
           </div>
         )}
 
-        {/* ── Multiple images badge ── */}
         {entry.outputImages.length > 1 && (
           <div
-            className="absolute top-2 right-2 flex items-center gap-1 text-xs px-2 py-0.5 rounded-full font-medium"
-            style={{ background: 'rgba(0,0,0,0.50)', color: '#fff', backdropFilter: 'blur(4px)' }}
+            className="absolute top-2 right-2 flex items-center gap-1 text-[11px] px-2 py-0.5 rounded-full font-medium"
+            style={{ background: 'rgba(0,0,0,0.42)', color: '#fff', backdropFilter: 'blur(8px)' }}
           >
             <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor">
               <path d="M2 5h16v2H2zm0 6h16v2H2zm0 6h16v2H2z" />
@@ -104,42 +89,37 @@ export default function PromptCard({ entry, onClick }: Props) {
           </div>
         )}
 
-        {/* ── Hover overlay ── */}
         <div
-          className="absolute inset-0 flex items-end transition-opacity duration-200"
-          style={{
-            opacity: hovered ? 1 : 0,
-            pointerEvents: hovered ? 'auto' : 'none',
-            background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.08) 55%, transparent 100%)',
-          }}
-        >
-          {/* Bottom row: view label (centre) + quick-copy (right) */}
-          <div className="w-full flex items-center justify-between px-3 pb-3">
-            <span className="flex-1 text-center text-sm font-semibold text-white tracking-wide pl-7">
-              {tx.viewPrompt}
-            </span>
+          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+          style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.42), rgba(0,0,0,0.04) 58%, transparent)' }}
+        />
 
-            {/* Quick-copy button */}
-            <button
-              onClick={handleQuickCopy}
-              aria-label={tx.copyPrompt}
-              className="flex items-center justify-center w-7 h-7 rounded-full transition-all active:scale-90 shrink-0"
-              style={{ background: cardCopied ? '#16a34a' : 'rgba(255,255,255,0.20)', backdropFilter: 'blur(4px)' }}
-            >
-              {cardCopied ? (
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              ) : (
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2">
-                  <rect width="12" height="12" x="9" y="9" rx="2" />
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                </svg>
-              )}
-            </button>
-          </div>
+        <div
+          className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 p-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+        >
+          <span className="min-w-0 truncate text-xs font-medium text-white/95 drop-shadow">
+            {entry.title}
+          </span>
+
+          <button
+            onClick={handleQuickCopy}
+            aria-label={tx.copyPrompt}
+            className="flex items-center justify-center w-8 h-8 rounded-full transition-all active:scale-90 shrink-0"
+            style={{ background: cardCopied ? '#16a34a' : 'rgba(255,255,255,0.92)', color: cardCopied ? '#fff' : '#111', backdropFilter: 'blur(8px)' }}
+          >
+            {cardCopied ? (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            ) : (
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                <rect width="12" height="12" x="9" y="9" rx="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg>
+            )}
+          </button>
         </div>
       </div>
-    </div>
+    </article>
   );
 }

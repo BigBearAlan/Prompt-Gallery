@@ -8,7 +8,7 @@ import Gallery from './Gallery';
 export default function ClientRoot({ entries }: { entries: PromptEntry[] }) {
   return (
     <LocaleProvider>
-      <Header total={entries.length} />
+      <Header />
       <Gallery entries={entries} />
     </LocaleProvider>
   );

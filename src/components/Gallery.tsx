@@ -32,11 +32,32 @@ export default function Gallery({ entries }: Props) {
   const [tagFilter, setTagFilter] = useState('');
   const [searchIndex, setSearchIndex] = useState<SearchIndexFile | null>(null);
   const [searchIndexStatus, setSearchIndexStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
+  const [shuffleSeed, setShuffleSeed] = useState(0.5);
 
-  // Shuffle once per session (stable across re-renders, new order on page reload)
-  const sessionSeed = useRef(Math.random());
+  // Shuffle once per tab session after hydration so SSR and the first client
+  // render match, then preserve that order while the tab stays open.
+  useEffect(() => {
+    const key = 'prompt-gallery-shuffle-seed';
+    try {
+      const stored = sessionStorage.getItem(key);
+      if (stored) {
+        const parsed = Number(stored);
+        if (Number.isFinite(parsed)) {
+          setShuffleSeed(parsed);
+          return;
+        }
+      }
+
+      const next = Math.random();
+      sessionStorage.setItem(key, String(next));
+      setShuffleSeed(next);
+    } catch {
+      setShuffleSeed(Math.random());
+    }
+  }, []);
+
   const shuffled = useMemo(() => {
-    let seed = sessionSeed.current;
+    let seed = shuffleSeed;
     const rng = () => {
       seed = (seed * 9301 + 49297) % 233280;
       return seed / 233280;
@@ -47,7 +68,7 @@ export default function Gallery({ entries }: Props) {
       .map(e => ({ e, pos: rng() * (e.hq ? 0.4 : 1) }))
       .sort((a, b) => a.pos - b.pos)
       .map(x => x.e);
-  }, [entries]);
+  }, [entries, shuffleSeed]);
 
   const parsedSearch = useMemo(() => parseSearchQuery(deferredSearch), [deferredSearch]);
 
@@ -79,15 +100,6 @@ export default function Gallery({ entries }: Props) {
   // searchIndex and searchIndexStatus to avoid cancelling an in-flight fetch.
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [parsedSearch.mode, parsedSearch.normalizedTerm]);
-
-  const searchInfo = useMemo(() => {
-    if (!parsedSearch.normalizedTerm) return '';
-    if (parsedSearch.mode === 'author') return tx.searchAuthorHint;
-    if (parsedSearch.mode === 'title') return tx.searchTitleHint;
-    if (searchIndexStatus === 'error') return tx.searchUnavailable;
-    if (searchIndexStatus !== 'ready') return tx.searchLoadingFallback;
-    return tx.searchImageHint;
-  }, [parsedSearch.mode, parsedSearch.normalizedTerm, searchIndexStatus, tx]);
 
   const filtered = useMemo(() => {
     let result: PromptEntry[];
@@ -195,7 +207,6 @@ export default function Gallery({ entries }: Props) {
       <SearchFilterBar
         search={search}
         onSearchChange={handleSearch}
-        searchInfo={searchInfo}
         category={category}
         onCategoryChange={handleCategory}
         lang={lang}
@@ -204,11 +215,9 @@ export default function Gallery({ entries }: Props) {
         onSortChange={setSortBy}
         tagFilter={tagFilter}
         onTagFilterClear={() => setTagFilter('')}
-        count={filtered.length}
-        total={entries.length}
       />
 
-      <main className="max-w-screen-2xl mx-auto px-3 py-4">
+      <main className="max-w-[1800px] mx-auto px-2.5 sm:px-4 py-3 sm:py-4">
         {displayed.length === 0 ? (
           <div
             className="text-center py-24 text-sm"
@@ -232,21 +241,12 @@ export default function Gallery({ entries }: Props) {
           <div className="text-center mt-8 pb-8">
             <button
               onClick={() => setPage((p) => p + 1)}
-              className="px-6 py-2.5 rounded-full text-sm font-medium border transition-colors hover:bg-gray-100"
-              style={{ borderColor: 'var(--border)', color: 'var(--text-primary)' }}
+              className="px-6 py-2.5 rounded-full text-sm font-medium border transition-colors hover:bg-gray-50"
+              style={{ borderColor: 'var(--border)', color: 'var(--text-primary)', background: '#fff' }}
             >
               {tx.loadMore(filtered.length - displayed.length)}
             </button>
           </div>
-        )}
-
-        {!hasMore && displayed.length > 0 && (
-          <p
-            className="text-center text-xs pb-8 pt-4"
-            style={{ color: 'var(--text-secondary)' }}
-          >
-            {tx.showingAll(displayed.length)}
-          </p>
         )}
       </main>
 

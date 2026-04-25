@@ -4,12 +4,6 @@ import { useState, useEffect, useCallback } from 'react';
 import type { PromptEntry } from '@/lib/types';
 import { useLocale } from '@/lib/i18n';
 
-function formatNum(n: number): string {
-  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
-  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
-  return String(n);
-}
-
 interface Props {
   entry: PromptEntry;
   onClose: () => void;
@@ -104,7 +98,7 @@ export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNe
       <NavBtn dir="next" />
 
       <div
-        className="modal-content w-full max-w-4xl max-h-[92vh] rounded-2xl overflow-hidden flex flex-col"
+        className="modal-content w-full max-w-5xl max-h-[92vh] rounded-xl overflow-hidden flex flex-col"
         style={{ background: 'var(--card)' }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -120,9 +114,9 @@ export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNe
             >
               {tx.catLabels[entry.category] ?? entry.category}
             </span>
-            <span className="text-xs truncate" style={{ color: 'var(--text-secondary)' }}>
-              @{entry.author}
-            </span>
+              <span className="text-xs truncate hidden sm:inline" style={{ color: 'var(--text-secondary)' }}>
+                @{entry.author}
+              </span>
           </div>
           <button
             onClick={onClose}
@@ -167,10 +161,10 @@ export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNe
 
           {/* Left: image panel */}
           <div
-            className={`${mobileTab === 'prompt' ? 'hidden' : 'flex'} md:flex md:w-[45%] shrink-0 flex-col p-4 gap-3 overflow-y-auto scrollbar-none border-b md:border-b-0 md:border-r`}
-            style={{ borderColor: 'var(--border)', background: '#f8f8f8' }}
+            className={`${mobileTab === 'prompt' ? 'hidden' : 'flex'} md:flex md:w-[48%] shrink-0 flex-col p-3 gap-3 overflow-y-auto scrollbar-none border-b md:border-b-0 md:border-r`}
+            style={{ borderColor: 'var(--border)', background: 'var(--surface-muted)' }}
           >
-            <div className="w-full rounded-xl overflow-hidden bg-gray-200 flex items-center justify-center">
+            <div className="w-full rounded-lg overflow-hidden bg-gray-200 flex items-center justify-center">
               {!imgFailed ? (
                 <img
                   key={entry.outputImages[activeImage]}
@@ -193,7 +187,7 @@ export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNe
                   <button
                     key={url}
                     onClick={() => { setActiveImage(i); setImgFailed(false); }}
-                    className={`shrink-0 w-14 h-14 rounded-lg overflow-hidden border-2 transition-all ${
+                    className={`shrink-0 w-14 h-14 rounded-lg overflow-hidden border transition-all ${
                       i === activeImage ? 'border-gray-900' : 'border-transparent opacity-60 hover:opacity-100'
                     }`}
                   >
@@ -202,30 +196,6 @@ export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNe
                 ))}
               </div>
             )}
-
-            {/* Stats */}
-            <div className="flex items-center gap-4 text-xs" style={{ color: 'var(--text-secondary)' }}>
-              <span className="flex items-center gap-1">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                </svg>
-                {formatNum(entry.stats.likes)}
-              </span>
-              <span className="flex items-center gap-1">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                  <circle cx="12" cy="12" r="3" />
-                </svg>
-                {formatNum(entry.stats.views)}
-              </span>
-              <span className="flex items-center gap-1">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M23 7 16 12 23 17V7z" />
-                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
-                </svg>
-                {formatNum(entry.stats.retweets)}
-              </span>
-            </div>
           </div>
 
           {/* Right: prompt panel */}
@@ -279,15 +249,11 @@ export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNe
                   )}
                 </div>
 
-                <p className="text-xs" style={{ color: 'var(--text-secondary)' }}>
-                  {tx.promptHint}
-                </p>
-
                 <textarea
-                  className="prompt-textarea w-full flex-1 min-h-[160px] p-3 rounded-xl border outline-none focus:ring-2 focus:ring-gray-900/20 transition"
+                  className="prompt-textarea w-full flex-1 min-h-[180px] p-3 rounded-lg border outline-none focus:ring-2 focus:ring-gray-900/10 transition"
                   style={{
                     borderColor: hasEdits ? '#999' : 'var(--border)',
-                    background: '#fafafa',
+                    background: 'var(--surface-muted)',
                     color: 'var(--text-primary)',
                   }}
                   value={editedPrompt}
@@ -309,7 +275,7 @@ export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNe
             >
               <button
                 onClick={handleCopy}
-                className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold text-white transition-all active:scale-95"
+                className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold text-white transition-all active:scale-95"
                 style={{ background: copied ? '#16a34a' : 'var(--accent)' }}
               >
                 {copied ? (
@@ -334,7 +300,7 @@ export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNe
                 href={entry.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-medium border transition-colors hover:bg-gray-50"
+                className="flex items-center gap-1.5 px-4 py-2.5 rounded-lg text-sm font-medium border transition-colors hover:bg-gray-50"
                 style={{ borderColor: 'var(--border)', color: 'var(--text-secondary)' }}
               >
                 {tx.source}
