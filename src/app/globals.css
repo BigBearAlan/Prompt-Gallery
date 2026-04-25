@@ -36,23 +36,30 @@ body {
   display: none;
 }
 
-/* Masonry grid using CSS columns */
+/* Masonry grid — Pinterest-style, fewer wider columns */
 .masonry {
-  column-width: 154px;
+  column-width: 160px; /* mobile: ~2 cols */
   column-gap: 10px;
 }
 
 @media (min-width: 640px) {
   .masonry {
-    column-width: 190px;
+    column-width: 240px; /* tablet: ~3 cols */
     column-gap: 12px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .masonry {
-    column-width: 218px;
+    column-width: 290px; /* desktop: ~3-4 cols */
     column-gap: 14px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .masonry {
+    column-width: 330px; /* wide: ~4 cols */
+    column-gap: 16px;
   }
 }
 
@@ -60,15 +67,19 @@ body {
   break-inside: avoid;
   margin-bottom: 10px;
   content-visibility: auto;
-  contain-intrinsic-size: 260px 340px;
+  contain-intrinsic-size: 320px 420px;
 }
 
 @media (min-width: 640px) {
   .masonry-item { margin-bottom: 12px; }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .masonry-item { margin-bottom: 14px; }
+}
+
+@media (min-width: 1440px) {
+  .masonry-item { margin-bottom: 16px; }
 }
 
 /* Modal backdrop */
