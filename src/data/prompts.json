@@ -759,7 +759,8 @@
     "outputImages": [
       "/images/2046902204670611919_0.jpg"
     ],
-    "sourceUrl": "https://x.com/maynoha_maru/status/2046902204670611919#reversed-0"
+    "sourceUrl": "https://x.com/maynoha_maru/status/2046902204670611919#reversed-0",
+    "approved": true
   },
   {
     "id": "2046739393348546597",
@@ -812,7 +813,8 @@
     "outputImages": [
       "/images/2046716329894506956_0.jpg"
     ],
-    "sourceUrl": "https://x.com/meiya_coin/status/2046716329894506956#reversed-0"
+    "sourceUrl": "https://x.com/meiya_coin/status/2046716329894506956#reversed-0",
+    "approved": true
   },
   {
     "id": "2046512945862201450",
@@ -915,7 +917,8 @@
     "outputImages": [
       "/images/2046469645155303730_0.jpg"
     ],
-    "sourceUrl": "https://x.com/yyyole/status/2046469645155303730"
+    "sourceUrl": "https://x.com/yyyole/status/2046469645155303730",
+    "approved": true
   },
   {
     "id": "2044753309991571682",
@@ -967,7 +970,8 @@
     "outputImages": [
       "/images/2046618179037024377_0.jpg"
     ],
-    "sourceUrl": "https://x.com/hageatama/status/2046618179037024377#reversed-1"
+    "sourceUrl": "https://x.com/hageatama/status/2046618179037024377#reversed-1",
+    "approved": true
   },
   {
     "id": "2046932542998364645",
@@ -1589,7 +1593,8 @@
       "/images/2046717757182685486_1.jpg",
       "/images/2046717757182685486_2.jpg"
     ],
-    "sourceUrl": "https://x.com/jonigata_ai/status/2046717757182685486#reversed-0"
+    "sourceUrl": "https://x.com/jonigata_ai/status/2046717757182685486#reversed-0",
+    "approved": true
   },
   {
     "id": "2045020608770224419",
@@ -1746,7 +1751,8 @@
     "outputImages": [
       "/images/2046344973835231524_0.jpg"
     ],
-    "sourceUrl": "https://x.com/onofumi_AI/status/2046344973835231524"
+    "sourceUrl": "https://x.com/onofumi_AI/status/2046344973835231524",
+    "approved": true
   },
   {
     "id": "2046609528079212900",
@@ -1873,7 +1879,8 @@
     "outputImages": [
       "/images/2046700437785792566_0.jpg"
     ],
-    "sourceUrl": "https://x.com/wing_sky_nine/status/2046700437785792566#reversed-0"
+    "sourceUrl": "https://x.com/wing_sky_nine/status/2046700437785792566#reversed-0",
+    "approved": true
   },
   {
     "id": "2046481583109267873",
@@ -2466,7 +2473,8 @@
     "outputImages": [
       "/images/2046172302837191085_0.jpg"
     ],
-    "sourceUrl": "https://x.com/studiomasakaki/status/2046172302837191085"
+    "sourceUrl": "https://x.com/studiomasakaki/status/2046172302837191085",
+    "approved": true
   },
   {
     "id": "2045516968812257323-074e7fcf",
@@ -2742,7 +2750,8 @@
     "outputImages": [
       "/images/2044172156557504731_0.jpg"
     ],
-    "sourceUrl": "https://x.com/aiclass_g2/status/2044172156557504731"
+    "sourceUrl": "https://x.com/aiclass_g2/status/2044172156557504731",
+    "approved": true
   },
   {
     "id": "2044521189343637602-5b34fecc",
@@ -2793,7 +2802,8 @@
     "outputImages": [
       "/images/2045002293813362967_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Eris_Create_Lab/status/2045002293813362967"
+    "sourceUrl": "https://x.com/Eris_Create_Lab/status/2045002293813362967",
+    "approved": true
   },
   {
     "id": "2046144801071079612",
@@ -2871,12 +2881,13 @@
     "outputImages": [
       "/images/2044462775989371003_0.jpg"
     ],
-    "sourceUrl": "https://x.com/old_pgmrs_will/status/2044462775989371003"
+    "sourceUrl": "https://x.com/old_pgmrs_will/status/2044462775989371003",
+    "approved": true
   },
   {
     "id": "2045108485801816165",
     "title": "AI 助手 App UI 设计稿",
-    "thumbnail": "/images/2045108485801816165_0.jpg",
+    "thumbnail": "/images/2045108485801816165_0.png",
     "thumbnailAspect": 1.33,
     "author": "summer song",
     "authorUrl": "https://x.com/songsummer920",
@@ -2894,9 +2905,11 @@
     "createdAt": "2026-04-17T11:53:53.000Z",
     "prompt": "{\n  \"type\": \"mobile app UI mockup\",\n  \"theme\": \"futuristic AI assistant, 3D glassmorphism, light blue and white color palette\",\n  \"header\": {\n    \"user_profile\": {\n      \"avatar\": \"small 3D robot head\",\n      \"name\": \"{argument name=\\\"app name\\\" default=\\\"小智机器人\\\"}\",\n      \"level_badge\": \"LV.8 星耀\",\n      \"experience\": \"经验值 680/1000\"\n    },\n    \"top_right_icons\": {\n      \"count\": 2,\n      \"labels\": [\"签到\", \"设置\"]\n    }\n  },\n  \"hero_display\": {\n    \"subject\": \"cute 3D robot with glass helmet and glowing blue eyes\",\n    \"pose\": \"standing on a glowing futuristic circular podium\",\n    \"speech_bubble\": \"{argument name=\\\"robot greeting\\\" default=\\\"Hi~ 今天也要加油哦！\\\"}\",\n    \"background\": \"abstract light blue tech environment with floating transparent bubbles\"\n  },\n  \"layout\": {\n    \"sections\": [\n      {\n        \"title\": \"每日签到\",\n        \"subtitle\": \"连续签到 3 天\",\n        \"type\": \"horizontal scroll cards\",\n        \"count\": 5,\n        \"items\": [\n          {\"state\": \"active blue card\", \"reward\": \"+10 gold coin\", \"label\": \"可签到\"},\n          {\"state\": \"inactive white card\", \"reward\": \"+15 gold coin\", \"label\": \"2天\"},\n          {\"state\": \"inactive white card\", \"reward\": \"+20 gold coin\", \"label\": \"3天\"},\n          {\"state\": \"inactive white card\", \"reward\": \"+30 gold coin\", \"label\": \"4天\"},\n          {\"state\": \"inactive white card\", \"reward\": \"+50 purple diamond\", \"label\": \"7天\"}\n        ]\n      },\n      {\n        \"title\": \"成长任务\",\n        \"type\": \"vertical list\",\n        \"count\": 4,\n        \"items\": [\n          {\"icon\": \"blue book\", \"text\": \"{argument name=\\\"task 1 title\\\" default=\\\"完成 1 次智能问答\\\"}\", \"progress\": \"1/1\", \"reward\": \"+15\", \"button\": \"领取\"},\n          {\"icon\": \"green rocket\", \"text\": \"{argument name=\\\"task 2 title\\\" default=\\\"探索 3 个新功能\\\"}\", \"progress\": \"2/3\", \"reward\": \"+20\", \"button\": \"去完成\"},\n          {\"icon\": \"purple chat bubble\", \"text\": \"分享给 1 位好友\", \"progress\": \"0/1\", \"reward\": \"+30\", \"button\": \"去完成\"},\n          {\"style\": \"blue gradient banner\", \"icon\": \"3D diamond\", \"text\": \"{argument name=\\\"upgrade banner text\\\" default=\\\"升级到 LV.9 可解锁新皮肤\\\"}\", \"progress\": \"680/1000\", \"button\": \"去升级\"}\n        ]\n      }\n    ],\n    \"bottom_navigation\": {\n      \"count\": 5,\n      \"items\": [\n        {\"icon\": \"blue home\", \"label\": \"首页\"},\n        {\"icon\": \"grey compass\", \"label\": \"发现\"},\n        {\"icon\": \"large protruding 3D robot head\", \"label\": \"\"},\n        {\"icon\": \"grey chat bubble with red dot\", \"label\": \"消息\"},\n        {\"icon\": \"grey user profile\", \"label\": \"我的\"}\n      ]\n    }\n  }\n}",
     "outputImages": [
-      "/images/2045108485801816165_0.jpg"
+      "/images/2045108485801816165_0.png"
     ],
-    "sourceUrl": "https://x.com/songsummer920/status/2045108485801816165"
+    "sourceUrl": "https://x.com/songsummer920/status/2045108485801816165",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046317327134638212",
@@ -3738,7 +3751,8 @@
       "/images/2046140825952989627_0.jpg"
     ],
     "sourceUrl": "https://x.com/wtry1102/status/2046140825952989627",
-    "sourceId": "2046140825952989627"
+    "sourceId": "2046140825952989627",
+    "approved": true
   },
   {
     "id": "2046572121547997548",
@@ -4236,7 +4250,8 @@
     "outputImages": [
       "/images/2044721146873225398_0.jpg"
     ],
-    "sourceUrl": "https://x.com/op7418/status/2044721146873225398"
+    "sourceUrl": "https://x.com/op7418/status/2044721146873225398",
+    "approved": true
   },
   {
     "id": "2045180142159577473-f2c8b81b",
@@ -4418,7 +4433,8 @@
     "outputImages": [
       "/images/2043979078798323727_0.jpg"
     ],
-    "sourceUrl": "https://x.com/maxescu/status/2043979078798323727"
+    "sourceUrl": "https://x.com/maxescu/status/2043979078798323727",
+    "approved": true
   },
   {
     "id": "2044846335728467996",
@@ -4443,7 +4459,8 @@
     "outputImages": [
       "/images/2044846335728467996_0.jpg"
     ],
-    "sourceUrl": "https://x.com/BubbleBrain/status/2044846335728467996"
+    "sourceUrl": "https://x.com/BubbleBrain/status/2044846335728467996",
+    "approved": true
   },
   {
     "id": "2046317516297765219",
@@ -4698,7 +4715,8 @@
     "outputImages": [
       "/images/2045416935106773045_0.jpg"
     ],
-    "sourceUrl": "https://x.com/coder_left/status/2045416935106773045#reversed-1"
+    "sourceUrl": "https://x.com/coder_left/status/2045416935106773045#reversed-1",
+    "approved": true
   },
   {
     "id": "2044984378250711306",
@@ -4723,7 +4741,8 @@
     "outputImages": [
       "/images/2044984378250711306_0.jpg"
     ],
-    "sourceUrl": "https://x.com/wtry1102/status/2044984378250711306"
+    "sourceUrl": "https://x.com/wtry1102/status/2044984378250711306",
+    "approved": true
   },
   {
     "id": "2046626506722746736",
@@ -4850,7 +4869,8 @@
     "outputImages": [
       "/images/2046735877628670430_0.jpg"
     ],
-    "sourceUrl": "https://x.com/jaguring1/status/2046735877628670430#reversed-0"
+    "sourceUrl": "https://x.com/jaguring1/status/2046735877628670430#reversed-0",
+    "approved": true
   },
   {
     "id": "2046584887327764725-ef0d8443",
@@ -5026,7 +5046,8 @@
     "outputImages": [
       "/images/2045077344604614919_0.jpg"
     ],
-    "sourceUrl": "https://x.com/slashui/status/2045077344604614919"
+    "sourceUrl": "https://x.com/slashui/status/2045077344604614919",
+    "approved": true
   },
   {
     "id": "2044960627739996226",
@@ -5077,7 +5098,8 @@
       "/images/2046205568474403194_0.jpg"
     ],
     "sourceUrl": "https://x.com/Gc_qube/status/2046205568474403194",
-    "sourceId": "2046205568474403194"
+    "sourceId": "2046205568474403194",
+    "approved": true
   },
   {
     "id": "2045092643630391790",
@@ -5102,7 +5124,8 @@
     "outputImages": [
       "/images/2045092643630391790_0.jpg"
     ],
-    "sourceUrl": "https://x.com/xlcomplete/status/2045092643630391790"
+    "sourceUrl": "https://x.com/xlcomplete/status/2045092643630391790",
+    "approved": true
   },
   {
     "id": "2045973715280929275",
@@ -5227,7 +5250,8 @@
     "outputImages": [
       "/images/2044948185895076255_0.jpg"
     ],
-    "sourceUrl": "https://x.com/austinit/status/2044948185895076255"
+    "sourceUrl": "https://x.com/austinit/status/2044948185895076255",
+    "approved": true
   },
   {
     "id": "2046649953888731390",
@@ -5512,7 +5536,8 @@
       "/images/2046634445826871572_1.jpg",
       "/images/2046634445826871572_2.jpg"
     ],
-    "sourceUrl": "https://x.com/LudovicCreator/status/2046634445826871572"
+    "sourceUrl": "https://x.com/LudovicCreator/status/2046634445826871572",
+    "approved": true
   },
   {
     "id": "2046707536947269912",
@@ -5537,33 +5562,8 @@
     "outputImages": [
       "/images/2046707536947269912_0.jpg"
     ],
-    "sourceUrl": "https://x.com/su_nagomi/status/2046707536947269912"
-  },
-  {
-    "id": "2044754985183785208-bdf75d93",
-    "title": "YouTube 视频界面模型",
-    "thumbnail": "/images/2044754985183785208_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "Vi",
-    "authorUrl": "https://x.com/tehno_maniak",
-    "tags": [
-      "en",
-      "ui"
-    ],
-    "category": "ui",
-    "lang": "en",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "2026-04-16T12:29:12.000Z",
-    "prompt": "{\n  \"type\": \"desktop video platform UI mockup\",\n  \"theme\": \"dark mode\",\n  \"header\": {\n    \"logo\": \"YouTube IN\",\n    \"search_bar\": \"centered, with magnifying glass icon\",\n    \"right_icons\": {\n      \"count\": 4,\n      \"items\": [\"microphone\", \"+ Create button\", \"notifications bell\", \"user profile picture\"]\n    }\n  },\n  \"video_player\": {\n    \"scene\": \"Studio setting with two tech reviewers at a desk.\",\n    \"subjects\": [\n      \"{argument name=\\\"left person\\\" default=\\\"Marques Brownlee (MKBHD)\\\"} in black t-shirt\",\n      \"{argument name=\\\"right person\\\" default=\\\"Arun Maini (Mrwhosetheboss)\\\"} in green overshirt\",\n      \"{argument name=\\\"robot model\\\" default=\\\"Tesla Optimus humanoid robot\\\"} standing between them\"\n    ],\n    \"props\": [\"black mug with logo\", \"background screen with glowing blue neon M logo\"],\n    \"controls_bar\": {\n      \"progress_bar\": \"red, near the beginning\",\n      \"timestamp\": \"0:01 / 18:47\",\n      \"left_icons\": {\n        \"count\": 3,\n        \"items\": [\"play/pause\", \"next track\", \"volume\"]\n      },\n      \"right_icons\": {\n        \"count\": 6,\n        \"items\": [\"CC\", \"settings with 4K badge\", \"miniplayer\", \"theater mode\", \"cast\", \"fullscreen\"]\n      }\n    }\n  },\n  \"video_details\": {\n    \"title\": \"{argument name=\\\"video title\\\" default=\\\"Tesla Optimus Robot Review: Futures Are Here!\\\"}\",\n    \"channel_info\": {\n      \"name\": \"{argument name=\\\"channel name\\\" default=\\\"Mrwhosetheboss\\\"}\",\n      \"badges\": [\"verified checkmark\"],\n      \"subscribers\": \"20.5M subscribers\",\n      \"button\": \"white Subscribe button\"\n    },\n    \"action_buttons\": {\n      \"count\": 6,\n      \"items\": [\"Like (215K) / Dislike (4.2K) pill\", \"Share\", \"Download\", \"Clip\", \"Save\", \"More (...)\"]\n    }\n  },\n  \"description_box\": {\n    \"metadata\": \"3,278,456 views Apr 12, 2024 #7 on Trending\",\n    \"text\": \"MKBHD & I review Tesla's Optimus humanoid robot. We cover the design, walk, AI, hands-on & what it means for the future!\",\n    \"links\": [\"Marques's Channel: @mkbhd\"]\n  }\n}",
-    "outputImages": [
-      "/images/2044754985183785208_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/tehno_maniak/status/2044754985183785208",
-    "sourceId": "2044754985183785208"
+    "sourceUrl": "https://x.com/su_nagomi/status/2046707536947269912",
+    "approved": true
   },
   {
     "id": "2046199980059418936",
@@ -5615,7 +5615,9 @@
     "outputImages": [
       "/images/2045872239015506184_0.jpg"
     ],
-    "sourceUrl": "https://x.com/johnAGI168/status/2045872239015506184"
+    "sourceUrl": "https://x.com/johnAGI168/status/2045872239015506184",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2045031439771881770",
@@ -5640,7 +5642,8 @@
     "outputImages": [
       "/images/2045031439771881770_0.jpg"
     ],
-    "sourceUrl": "https://x.com/project_pain666/status/2045031439771881770"
+    "sourceUrl": "https://x.com/project_pain666/status/2045031439771881770",
+    "approved": true
   },
   {
     "id": "2044737247090811315",
@@ -6051,7 +6054,8 @@
     "outputImages": [
       "/images/2044786711180484784_0.jpg"
     ],
-    "sourceUrl": "https://x.com/LLAiTrade/status/2044786711180484784"
+    "sourceUrl": "https://x.com/LLAiTrade/status/2044786711180484784",
+    "approved": true
   },
   {
     "id": "2046301764371259589",
@@ -6076,7 +6080,8 @@
     "outputImages": [
       "/images/2046301764371259589_0.jpg"
     ],
-    "sourceUrl": "https://x.com/DanDaniDaniel01/status/2046301764371259589"
+    "sourceUrl": "https://x.com/DanDaniDaniel01/status/2046301764371259589",
+    "approved": true
   },
   {
     "id": "2045833848924279054",
@@ -6126,7 +6131,8 @@
     "outputImages": [
       "/images/2044974882115682719_0.jpg"
     ],
-    "sourceUrl": "https://x.com/masukarasulove/status/2044974882115682719"
+    "sourceUrl": "https://x.com/masukarasulove/status/2044974882115682719",
+    "approved": true
   },
   {
     "id": "2046856808921248120",
@@ -6179,31 +6185,6 @@
     "sourceUrl": "https://x.com/underwoodxie96/status/2044773766048420301"
   },
   {
-    "id": "2045846999032008876",
-    "title": "Livestream E-commerce Interface Mockup",
-    "thumbnail": "/images/2045846999032008876_0.jpg",
-    "thumbnailAspect": 1.33,
-    "author": "Proof · AI Productivity",
-    "authorUrl": "https://x.com/JCutcut47692",
-    "tags": [
-      "en",
-      "ui"
-    ],
-    "category": "ui",
-    "lang": "en",
-    "stats": {
-      "likes": 0,
-      "retweets": 0,
-      "views": 0
-    },
-    "createdAt": "April 19, 2026",
-    "prompt": "{\n  \"type\": \"mobile livestream e-commerce interface mockup\",\n  \"subject\": {\n    \"person\": \"Elon Musk\",\n    \"clothing\": \"black t-shirt with SPACEX logo\",\n    \"pose\": \"gesturing towards camera with both hands, explaining enthusiastically\",\n    \"watermark\": \"@Proof AI\"\n  },\n  \"background\": {\n    \"setting\": \"large display screen\",\n    \"image\": \"Mars landscape with Starship rocket and dome habitats\",\n    \"text\": [\n      \"SPACEX\",\n      \"{argument name=\\\"background title\\\" default=\\\"移民火星计划\\\"}\"\n    ]\n  },\n  \"ui_layout\": {\n    \"header\": {\n      \"broadcaster_info\": {\n        \"name\": \"{argument name=\\\"broadcaster name\\\" default=\\\"ElonMusk\\\"}\",\n        \"stats\": \"75.8万本场点赞\",\n        \"follow_button\": \"关注\"\n      },\n      \"viewer_stats\": {\n        \"avatars_count\": 3,\n        \"text\": \"10万+\",\n        \"close_button\": \"X\"\n      },\n      \"tags\": [\n        \"带货总榜第1名\",\n        \"更多直播 >\"\n      ]\n    },\n    \"product_card\": {\n      \"position\": \"mid-right\",\n      \"status\": \"讲解中\",\n      \"image\": \"Mars dome habitats\",\n      \"title\": \"{argument name=\\\"product title\\\" default=\\\"火星移民基础套餐\\\"}\",\n      \"price\": \"{argument name=\\\"product price\\\" default=\\\"¥99.00\\\"}\",\n      \"action_button\": \"抢\"\n    },\n    \"chat_overlay\": {\n      \"position\": \"bottom-left\",\n      \"join_alert\": \"星辰大海 加入了直播间\",\n      \"messages_count\": 7,\n      \"messages\": [\n        \"{argument name=\\\"top chat message\\\" default=\\\"梦想家: 支持马斯克！！🚀\\\"}\",\n        \"火星弟弟: 多少钱一位？\",\n        \"科技迷: 太酷了！想去火星！\",\n        \"未来已来: 如何报名？\",\n        \"小火箭: 🌹🌹🌹\",\n        \"宇宙无敌: 讲解一下细节\",\n        \"东方不败: 老马牛逼！👍👍👍\"\n      ]\n    },\n    \"bottom_action_bar\": {\n      \"input_placeholder\": \"说点什么...\",\n      \"icons_count\": 4,\n      \"icons\": [\"shopping cart\", \"gift box\", \"heart planet\", \"plus sign\"]\n    },\n    \"floating_reactions\": {\n      \"position\": \"bottom-right\",\n      \"elements\": \"stack of floating hearts, thumbs up, and laughing emojis\"\n    }\n  }\n}",
-    "outputImages": [
-      "/images/2045846999032008876_0.jpg"
-    ],
-    "sourceUrl": "https://x.com/JCutcut47692/status/2045846999032008876#reversed-0"
-  },
-  {
     "id": "2044442979952390486",
     "title": "短视频 App 界面模型",
     "thumbnail": "/images/2044442979952390486_0.jpg",
@@ -6226,7 +6207,8 @@
     "outputImages": [
       "/images/2044442979952390486_0.jpg"
     ],
-    "sourceUrl": "https://x.com/yangfei33113/status/2044442979952390486"
+    "sourceUrl": "https://x.com/yangfei33113/status/2044442979952390486",
+    "approved": true
   },
   {
     "id": "2044456247416738199",
@@ -6433,7 +6415,8 @@
     "outputImages": [
       "/images/2046726900668907673_0.jpg"
     ],
-    "sourceUrl": "https://x.com/jaguring1/status/2046726900668907673#reversed-0"
+    "sourceUrl": "https://x.com/jaguring1/status/2046726900668907673#reversed-0",
+    "approved": true
   },
   {
     "id": "2044797885393609188",
@@ -7154,7 +7137,8 @@
     "outputImages": [
       "/images/2045105915502989649_0.jpg"
     ],
-    "sourceUrl": "https://x.com/trendsan_jpn/status/2045105915502989649"
+    "sourceUrl": "https://x.com/trendsan_jpn/status/2045105915502989649",
+    "approved": true
   },
   {
     "id": "2046550068140937575",
@@ -7231,7 +7215,8 @@
       "/images/2044809140795801689_0.jpg"
     ],
     "sourceUrl": "https://x.com/you1873118/status/2044809140795801689",
-    "sourceId": "2044809140795801689"
+    "sourceId": "2044809140795801689",
+    "approved": true
   },
   {
     "id": "2044967217176146073",
@@ -7914,7 +7899,8 @@
     "outputImages": [
       "/images/2046245319973949816_0.jpg"
     ],
-    "sourceUrl": "https://x.com/liyue_ai/status/2046245319973949816"
+    "sourceUrl": "https://x.com/liyue_ai/status/2046245319973949816",
+    "approved": true
   },
   {
     "id": "2044447596811526514",
@@ -7939,7 +7925,8 @@
     "outputImages": [
       "/images/2044447596811526514_0.jpg"
     ],
-    "sourceUrl": "https://x.com/kiyoshi_shin/status/2044447596811526514"
+    "sourceUrl": "https://x.com/kiyoshi_shin/status/2044447596811526514",
+    "approved": true
   },
   {
     "id": "2046562155148009495",
@@ -7964,7 +7951,8 @@
     "outputImages": [
       "/images/2046562155148009495_0.jpg"
     ],
-    "sourceUrl": "https://x.com/flowith/status/2046562155148009495"
+    "sourceUrl": "https://x.com/flowith/status/2046562155148009495",
+    "approved": true
   },
   {
     "id": "2046502288102170757",
@@ -8016,7 +8004,8 @@
     "outputImages": [
       "/images/2046025895941750868_0.jpg"
     ],
-    "sourceUrl": "https://x.com/austinit/status/2046025895941750868"
+    "sourceUrl": "https://x.com/austinit/status/2046025895941750868",
+    "approved": true
   },
   {
     "id": "2044608825332830486-0a11ed61",
@@ -8042,7 +8031,8 @@
       "/images/2044608825332830486_0.jpg"
     ],
     "sourceUrl": "https://x.com/adityarao310/status/2044608825332830486",
-    "sourceId": "2044608825332830486"
+    "sourceId": "2044608825332830486",
+    "approved": true
   },
   {
     "id": "2044977684426695156",
@@ -8247,7 +8237,8 @@
     "outputImages": [
       "/images/2044636475317424310_0.jpg"
     ],
-    "sourceUrl": "https://x.com/lakeside529/status/2044636475317424310"
+    "sourceUrl": "https://x.com/lakeside529/status/2044636475317424310",
+    "approved": true
   },
   {
     "id": "2044552425177325723",
@@ -8473,7 +8464,8 @@
     "outputImages": [
       "/images/2046713681741038048_0.jpg"
     ],
-    "sourceUrl": "https://x.com/Maoku/status/2046713681741038048#reversed-0"
+    "sourceUrl": "https://x.com/Maoku/status/2046713681741038048#reversed-0",
+    "approved": true
   },
   {
     "id": "2046415445645791361-046b1110",
@@ -8981,7 +8973,8 @@
     "outputImages": [
       "/images/2045514811031830755_0.jpg"
     ],
-    "sourceUrl": "https://x.com/FET_SHIZAIBU/status/2045514811031830755"
+    "sourceUrl": "https://x.com/FET_SHIZAIBU/status/2045514811031830755",
+    "approved": true
   },
   {
     "id": "2043614837914169803-7e687a8e",
@@ -9798,7 +9791,8 @@
     "outputImages": [
       "/images/2046299699452506121_0.jpg"
     ],
-    "sourceUrl": "https://x.com/gamemangaanime/status/2046299699452506121"
+    "sourceUrl": "https://x.com/gamemangaanime/status/2046299699452506121",
+    "approved": true
   },
   {
     "id": "2044991545380905256",
@@ -9981,7 +9975,8 @@
     "outputImages": [
       "/images/2046819602869768507_0.jpg"
     ],
-    "sourceUrl": "https://x.com/pigeon__s/status/2046819602869768507#reversed-0"
+    "sourceUrl": "https://x.com/pigeon__s/status/2046819602869768507#reversed-0",
+    "approved": true
   },
   {
     "id": "2045133210125017535",
@@ -10794,7 +10789,8 @@
     "outputImages": [
       "/images/2044343760536862882_0.jpg"
     ],
-    "sourceUrl": "https://x.com/dummerspast39/status/2044343760536862882"
+    "sourceUrl": "https://x.com/dummerspast39/status/2044343760536862882",
+    "approved": true
   },
   {
     "id": "2044870065074647183",
@@ -12022,7 +12018,8 @@
       "/images/2046604182359327055_0.jpg"
     ],
     "sourceUrl": "https://x.com/marslipu/status/2046604182359327055",
-    "sourceId": "2046604182359327055"
+    "sourceId": "2046604182359327055",
+    "approved": true
   },
   {
     "id": "2046612071719342322",
@@ -13672,7 +13669,8 @@
     "outputImages": [
       "/images/2046781861502779523_0.jpg"
     ],
-    "sourceUrl": "https://x.com/dotey/status/2046781861502779523"
+    "sourceUrl": "https://x.com/dotey/status/2046781861502779523",
+    "approved": true
   },
   {
     "id": "2044726628920742398",
@@ -14180,7 +14178,9 @@
       "/images/2046284007101390987_0.jpg"
     ],
     "sourceUrl": "https://x.com/nicdunz/status/2046284007101390987",
-    "sourceId": "2046284007101390987"
+    "sourceId": "2046284007101390987",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2044620924952137991-f8711538",
@@ -15509,7 +15509,7 @@
   {
     "id": "2046617697639620818",
     "title": "暗黑漫画风怪物海报",
-    "thumbnail": "/images/2046617697639620818_0.jpg",
+    "thumbnail": "/images/2046617697639620818_0.jpeg",
     "thumbnailAspect": 1.33,
     "author": "cyber",
     "authorUrl": "https://x.com/AI_CyberDreams",
@@ -15527,9 +15527,11 @@
     "createdAt": "",
     "prompt": "一张纯黑背景下的暗黑单色漫画风恐怖插画，采用竖版海报构图。画面底部中心是一个孤独的短发少年，他坐在地上，双膝蜷缩抱在胸前，头微微低垂，传达出恐惧、孤立和无助感。在他上方，一个巨大的生物机械恶魔或装甲怪物头颅正俯冲而下，有着长而有棱角的骷髅状面孔、尖锐的下巴、狭窄空洞的眼眶、层叠的头盔状甲片以及锯齿状的张开大嘴。男孩周围有 2 只巨大的骨骼利爪，左右各一，像牢笼一样将他围住；每只手都有长长的分段式金属手指，指尖尖锐，向内弯曲，极具威胁感。整体采用粗犷的白色划痕线条和厚重的交叉排线，在深黑色背景下呈现出强烈的对比，极具青年漫画（Seinen manga）的张力。在怪物的脸部、利爪和地面上添加鲜艳的霓虹紫色液体泼溅和长长的滴落痕迹，汇聚在男孩周围，成为画面中唯一的强色彩点缀。在右上角添加竖排日文文字“逃げちゃダメだ”，并在其下方添加白色小字英文：EGO BORDER: ACTIVE。整体氛围压抑、心理化、幽闭且充满梦魇感，宛如一张关于内心恐惧与精神崩溃的暗黑动漫海报。",
     "outputImages": [
-      "/images/2046617697639620818_0.jpg"
+      "/images/2046617697639620818_0.jpeg"
     ],
-    "sourceUrl": "https://x.com/AI_CyberDreams/status/2046617697639620818"
+    "sourceUrl": "https://x.com/AI_CyberDreams/status/2046617697639620818",
+    "hq": true,
+    "approved": true
   },
   {
     "id": "2046734344396411281",
@@ -16271,7 +16273,8 @@
       "/images/2046623205981319339_0.jpg"
     ],
     "sourceUrl": "https://x.com/YTkexue/status/2046623205981319339",
-    "sourceId": "2046623205981319339"
+    "sourceId": "2046623205981319339",
+    "approved": true
   },
   {
     "id": "2046052296866648195",
@@ -18116,7 +18119,8 @@
       "/images/2046188377524076915_2.jpg",
       "/images/2046188377524076915_3.jpg"
     ],
-    "sourceUrl": "https://x.com/yudotanaka/status/2046188377524076915"
+    "sourceUrl": "https://x.com/yudotanaka/status/2046188377524076915",
+    "approved": true
   },
   {
     "id": "2046083802058166616",
@@ -18547,7 +18551,8 @@
     "outputImages": [
       "/images/2046719692803580298_0.jpg"
     ],
-    "sourceUrl": "https://x.com/h_okumura/status/2046719692803580298"
+    "sourceUrl": "https://x.com/h_okumura/status/2046719692803580298",
+    "approved": true
   },
   {
     "id": "2045356799751303194",
@@ -22212,7 +22217,8 @@
       "/images/2046215187678790140_2.jpg",
       "/images/2046215187678790140_3.jpg"
     ],
-    "sourceUrl": "https://x.com/minesan_ai/status/2046215187678790140"
+    "sourceUrl": "https://x.com/minesan_ai/status/2046215187678790140",
+    "approved": true
   },
   {
     "id": "2046507931907080330",
