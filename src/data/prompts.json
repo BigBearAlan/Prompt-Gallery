@@ -754,7 +754,8 @@
       "/images/2045506567735558336_1.jpg"
     ],
     "sourceUrl": "https://x.com/liyue_ai/status/2045506567735558336",
-    "pending": false
+    "pending": false,
+    "hq": false
   },
   {
     "id": "2047253398307975283",
@@ -1731,6 +1732,60 @@
     "sourceUrl": "https://x.com/biteye_sister/status/2046833441283752054"
   },
   {
+    "id": "2032019839070716170",
+    "title": "创意树叶拼贴构成的角色画像",
+    "thumbnail": "/images/2032019839070716170_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "meng_dagg695",
+    "authorUrl": "https://x.com/meng_dagg695",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 6,
+      "retweets": 0,
+      "views": 245
+    },
+    "createdAt": "2026-03-12T16:40:14.745Z",
+    "prompt": "{ 角色名称 } 完全由天然树叶制成，创意树叶拼贴艺术，分层绿叶和干叶构成身体、面部和衣服，可见叶脉和纹理，手工植物艺术风格，干净的白色背景，俯视平铺构图，高度细节，柔和自然光，逼真树叶纹理，8k",
+    "outputImages": [
+      "/images/2032019839070716170_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/meng_dagg695/status/2032019839070716170",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2028417667846341062",
+    "title": "晨曦薰衣草田梦幻少女三联画",
+    "thumbnail": "/images/2028417667846341062_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Naiknelofar788",
+    "authorUrl": "https://x.com/Naiknelofar788",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 6,
+      "retweets": 0,
+      "views": 214
+    },
+    "createdAt": "2026-03-02T15:35:19.980Z",
+    "prompt": "日出时分薰衣草田中女子的水平三联画。\n上部：半身像，闭着眼睛，淡紫色连衣裙，一只手放在头发里，模糊的薰衣草前景。\n中部：特写镜头，看着镜头，蓬乱的头发，薄纱围巾，脸上的阳光。\n下部：四分之三镜头，手持薰衣草花束，飘逸的裙子，柔和的粉彩天空，温暖的梦幻色调。",
+    "outputImages": [
+      "/images/2028417667846341062_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Naiknelofar788/status/2028417667846341062",
+    "pending": false,
+    "approved": true
+  },
+  {
     "id": "2046476566537080849",
     "title": "生成圣斗士星矢12个黄金圣斗士的12宫格卡牌图片，每张卡牌上写上对应的中文名，每行4个，宽高比16:9。",
     "thumbnail": "/images/2046476566537080849_0.jpg",
@@ -1911,6 +1966,114 @@
       "views": 0
     },
     "createdAt": "2026-04-23T13:34:44.000Z"
+  },
+  {
+    "id": "2027903683154088431",
+    "title": "梦幻蓝紫烟雾环绕的NUBELLA奢华护肤软管",
+    "thumbnail": "/images/2027903683154088431_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Fujimoto_hina",
+    "authorUrl": "https://x.com/Fujimoto_hina",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 5,
+      "retweets": 0,
+      "views": 157
+    },
+    "createdAt": "2026-03-01T16:33:16.997Z",
+    "prompt": "{\n  \"style\": \"超写实奢华化妆品产品摄影\",\n  \"composition\": {\n    \"color_scheme\": \"戏剧性的单色蓝紫色\",\n    \"resolution\": \"8K超高分辨率\",\n    \"depth\": \"电影级景深\",\n    \"aesthetic\": \"高端香氛护肤品广告风格\"\n  },\n  \"product\": {\n    \"type\": \"软管包装\",\n    \"finish\": \"缎面质感\",\n    \"color\": \"长春花蓝\",\n    \"label\": \"NUBELLA\",\n    \"typography\": \"优雅的银色字体\",\n    \"cap\": \"反光金属铬盖\",\n    \"position\": \"垂直居中\"\n  },\n  \"surroundings\": {\n    \"smoke\": {\n      \"type\": \"墨水般的旋涡云雾\",\n      \"colors\": [\n        \"薰衣草色\",\n        \"靛蓝色\",\n        \"冰蓝色\"\n      ],\n      \"texture\": \"柔软、翻腾\",\n      \"interaction\": \"环绕在产品周围\"\n    },\n    \"flowers\": {\n      \"primary\": [\n        {\n          \"color\": \"紫色\",\n          \"details\": \"错综复杂的花瓣细节\",\n          \"center\": \"鲜艳的黄色\"\n        },\n        {\n          \"color\": \"紫丁香色\",\n          \"details\": \"错综复杂的花瓣细节\",\n          \"center\": \"鲜艳的黄色\"\n        }\n      ],\n      \"secondary\": {\n        \"type\": \"细小的紫罗兰色花朵\",\n        \"purpose\": \"增加立体感\"\n      }\n    }\n  },\n  \"lighting\": {\n    \"direction\": \"来自左上方的柔和定向照明\",\n    \"effects\": [\n      \"突显软管的光滑曲度\",\n      \"为金属盖增添微妙的光泽\",\n      \"在烟雾中营造深度\"\n    ]\n  },\n  \"background\": {\n    \"blend\": \"无缝的冷色调蓝色和紫色调\",\n    \"enhancement\": \"空灵的花香美学\"\n  },\n  \"details\": \"花瓣和蒸汽的超精细纹理\"\n}",
+    "outputImages": [
+      "/images/2027903683154088431_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Fujimoto_hina/status/2027903683154088431",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2026941078885310750",
+    "title": "珊瑚色极简影棚时尚商业大片",
+    "thumbnail": "/images/2026941078885310750_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Maercihh",
+    "authorUrl": "https://x.com/Maercihh",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 5,
+      "retweets": 0,
+      "views": 74
+    },
+    "createdAt": "2026-02-26T13:11:06.586Z",
+    "prompt": "超写实高端时尚商业广告大片，使用上传的模特照片作为严格的身份参考。保留精确的面部特征、比例和自然皮肤纹理——无修图，无变形。场景：珊瑚色单色工作室盒，配有光泽反光棋盘格或极简抛光地板。拥有柔和光线渐变的干净几何墙壁。产品：产品放置在前景中心超大位置，因广角透视而占据画面主导地位。包装超清晰，文字完全可读，具有逼真的反射和材质纹理。较小的产品单元可对称放置在背景中。模特姿势：站在产品后方，微蹲或前倾，一只手伸向镜头以创造深度感。强烈自信的表情，时尚态度。相机：低角度 24-35mm 镜头感，戏剧性透视畸变，对产品和模特都进行深焦处理。灯光：明亮的商业影棚灯光，柔和阴影，包装上有光泽高光，高端广告成片质感。4K–8K 写实主义，无水印，无嵌入式文本。纵横比 9:13",
+    "outputImages": [
+      "/images/2026941078885310750_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Maercihh/status/2026941078885310750",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2017311074551533921",
+    "title": "街头炫瓶男模",
+    "thumbnail": "/images/2017311074551533921_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "ecommartinez",
+    "authorUrl": "https://x.com/ecommartinez",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 5,
+      "retweets": 0,
+      "views": 72
+    },
+    "createdAt": "2026-01-31T15:38:22.925Z",
+    "prompt": "专业照片，一位男士，30岁的俄罗斯模特（参考图像），正对着镜头，向相机倾斜，从下往上拍摄，使用广角镜头。男士倾斜着身体，近距离将一瓶饮料展示给镜头，一只手拿着瓶子，紧贴在镜头前。瓶子的标签和方向保持笔直，以便标签清晰可读。他穿着白色运动鞋，一只脚在镜头前方。男士站在街道上，湿漉漉的沥青和飞溅的水花从下方拍出。鲜艳的色彩，电影级灯光，光线从后方打在模特的脸上。--v7 --ar 3:4 --style raw",
+    "outputImages": [
+      "/images/2017311074551533921_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/ecommartinez/status/2017311074551533921",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2011334627290726746",
+    "title": "沉香玫瑰悬浮幻景",
+    "thumbnail": "/images/2011334627290726746_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "meng_dagg695",
+    "authorUrl": "https://x.com/meng_dagg695",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 5,
+      "retweets": 0,
+      "views": 83
+    },
+    "createdAt": "2026-01-14T15:00:59.118Z",
+    "prompt": "{\n  \"master_prompt_type\": \"超精细8K AI图像生成\",\n  \"global_settings\": {\n    \"resolution\": \"8K UHD\",\n    \"aspect_ratio\": \"2:3 竖版\",\n    \"render_quality\": \"极致锐度、超微细节、电影级光效\",\n    \"style\": \"超现实商业产品摄影\",\n    \"color_profile\": \"温暖金调搭配柔和琥珀高光\",\n    \"environment\": {\n      \"location\": \"古老中东市场走廊\",\n      \"architecture\": {\n        \"walls\": \"岁月痕迹的粗糙石墙与可见纹理\",\n        \"arches\": \"背景巨型石拱\",\n        \"floor\": \"暖棕色石材地面\"\n      },\n      \"background_elements\": [\n        \"装满香料的木架\",\n        \"袋装与碗装干货\",\n        \"悬挂草药束\",\n        \"散发暖黄光的传统金属灯笼\"\n      ],\n      \"lighting\": {\n        \"primary\": \"柔和金色环境光\",\n        \"secondary\": \"两侧暖灯笼辉光\",\n        \"atmosphere\": \"薄雾增强光线漫射\"\n      }\n    },\n    \"main_subject\": {\n      \"type\": \"香水瓶\",\n      \"position\": \"中心前景\",\n      \"placement\": \"置于华丽木桌之上\",\n      \"material\": {\n        \"bottle\": \"透明清玻璃\",\n        \"cap\": \"黄金金属矩形瓶盖\",\n        \"liquid\": \"淡金香水液体\"\n      },\n      \"design\": {\n        \"shape\": \"圆角矩形瓶身\",\n        \"finish\": \"高光反射表面\",\n        \"label\": \"无可见标签\"\n      },\n      \"table\": {\n        \"material\": \"深色雕花木材\",\n        \"shape\": \"方形台面\",\n        \"details\": [\n          \"繁复花卉与几何雕刻\",\n          \"金色镶嵌装饰\",\n          \"抛光表面映光\"\n        ]\n      },\n      \"floating_elements\": {\n        \"composition_style\": \"竖向成分堆叠\",\n        \"motion\": \"成分悬浮并伴随旋转金光\",\n        \"effects\": [\n          \"发光粒子\",\n          \"闪耀尘埃\",\n          \"柔光尾迹连接元素\"\n        ],\n        \"elements_order_top_to_bottom\": [\n          {\n            \"ingredient\": \"琥珀树脂\",\n            \"appearance\": \"半透明金棕树脂块\",\n            \"glow\": \"温暖内发光\"\n          },\n          {\n            \"ingredient\": \"大马士革玫瑰\",\n            \"appearance\": \"盛放粉色玫瑰\",\n            \"details\": [\n              \"柔软层叠花瓣\",\n              \"自然绿叶\",\n              \"轻飘附近花瓣\"\n            ]\n          },\n          {\n            \"ingredient\": \"白麝香\",\n            \"appearance\": \"光滑白水晶状石块\",\n            \"additional\": \"石下细白粉末\"\n          },\n          {\n            \"ingredient\": \"陈年沉香\",\n            \"appearance\": \"深棕木片\",\n            \"texture\": \"粗糙纤维木纹\",\n            \"effect\": \"缕缕白烟上升\"\n          }\n        ]\n      },\n      \"text_elements\": {\n        \"title\": {\n          \"text\": \"精致叙利亚香水\",\n          \"font_style\": \"优雅衬线体\",\n          \"color\": \"金色\",\n          \"position\": \"顶部中央\"\n        },\n        \"subtitle\": {\n          \"text\": \"奢华叙利亚香水\",\n          \"font_style\": \"较小衬线体\",\n          \"color\": \"金色\",\n          \"position\": \"主标题下方\"\n        },\n        \"ingredient_labels\": [\n          {\n            \"title\": \"纯琥珀\",\n            \"description\": \"来自自然深处的珍贵树脂\"\n          },\n          {\n            \"title\": \"大马士革玫瑰\",\n            \"description\": \"美丽与叙利亚传承的象征\"\n          },\n          {\n            \"title\": \"白麝香\",\n            \"description\": \"干净、粉感、永恒优雅的香氛\"\n          },\n          {\n            \"title\": \"陈年沉香\",\n            \"description\": \"深邃温暖、浓郁烟熏木香\"\n          }\n        ],\n        \"typography_details\": {\n          \"connector_lines\": \"细弯金线连接文字与成分\",\n          \"icons\": \"线末端小圆点标记\"\n        },\n        \"opacity\": \"轻微半透明\"\n      }\n    },\n    \"overall_mood\": {\n      \"tone\": \"奢华、温暖、优雅\",\n      \"theme\": \"传承香水工艺\",\n      \"visual_feel\": \"浓郁、高端、电影级广告\"\n    }\n  }\n}",
+    "outputImages": [
+      "/images/2011334627290726746_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/meng_dagg695/status/2011334627290726746",
+    "pending": false,
+    "approved": true
   },
   {
     "id": "2046491397424111659",
@@ -2121,6 +2284,114 @@
     "pending": false
   },
   {
+    "id": "2046666653791047715",
+    "title": "千禧甜美风少女杂志内页",
+    "thumbnail": "/images/2046666653791047715_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "JoywDan",
+    "authorUrl": "https://x.com/JoywDan",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 4,
+      "retweets": 0,
+      "views": 284
+    },
+    "createdAt": "2026-04-22T07:06:48.829Z",
+    "prompt": "参考例图五官发型，生成一页古早少女系时尚杂志内页，类似 2000s-2010s 早期日系甜美穿搭月刊风格，真实的杂志内容页。\n整体是高完成度杂志排版设计，画面中要有：\n•主模特大图（占页面主体）\n•多个穿搭单品拆解模块\n•妆容教学小框（眼妆、唇妆、腮红技巧）\n•发型技巧小框 / hair arrange\n•搭配建议 / 3days coordinate / item checklist\n•若干产品图（衣服、包包、鞋子、化妆品）\n•杂志标题、小标题、注释、价格标签、说明文字\n•版面丰富，信息量大，但排版清晰，像真实杂志，不要海报感，不要只有一个人物大图",
+    "outputImages": [
+      "/images/2046666653791047715_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/JoywDan/status/2046666653791047715",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2028388808320819277",
+    "title": "鲜艳霓虹光影下的动感苏打水飞溅商业海报",
+    "thumbnail": "/images/2028388808320819277_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Fujimoto_hina",
+    "authorUrl": "https://x.com/Fujimoto_hina",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 4,
+      "retweets": 0,
+      "views": 186
+    },
+    "createdAt": "2026-03-02T15:19:37.487Z",
+    "prompt": "{\n  \"prompt\": \"一个充满活力的高端广告构图中的三个超动态苏打水罐 —— 一罐热带冲刺苏打水伴随着戏剧性的水和热带水果飞溅而爆炸，鲜艳的橙色和粉色背景光；一罐柠檬冰爽苏打水在发光的绿色动态光背景下被冷水泼溅；两罐都覆盖着逼真的冷凝水和运动模糊的水滴，充满果味和清爽的能量。深橙色、粉色和霓虹绿灯光在大胆的演播室布置中融合。由使用佳能 50mm 镜头的专业摄影师拍摄，超写实纹理，清晰的细节，超高分辨率，明亮的商业海报美学，丰富的色彩鲜艳度，电影级飞溅效果 --ar 3:4\"\n}",
+    "outputImages": [
+      "/images/2028388808320819277_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Fujimoto_hina/status/2028388808320819277",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2026941078885310750",
+    "title": "震撼视觉的深红影棚广角美妆大片",
+    "thumbnail": "/images/2026941078885310750_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Maercihh",
+    "authorUrl": "https://x.com/Maercihh",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 4,
+      "retweets": 0,
+      "views": 74
+    },
+    "createdAt": "2026-02-26T13:11:09.827Z",
+    "prompt": "照片级真实感的大胆美妆宣传活动，使用上传的模特作为精确的身份参考。不做面部改变，不做平滑处理。\n场景：深红色饱和的摄影棚环境，具有高对比度的地板图案或光滑表面。\n产品：产品被握持或放置在极其靠近镜头的位置，由于透视关系显得巨大。\n模特姿势：俏皮或自信的微笑，手臂完全伸向相机，手指因广角镜头而略微变形。透过太阳镜的强烈眼神交流或自然凝视。\n相机：超广角 20–28mm 美学，动态前景夸张，浅至中等景深。\n灯光：强有力的商业照明，具有清晰的高光和反射，锐利的包装边缘，充满活力的调色。超精细的皮肤纹理和织物真实感。",
+    "outputImages": [
+      "/images/2026941078885310750_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Maercihh/status/2026941078885310750",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2025972876554510482",
+    "title": "冰火双雄背靠背史诗电影海报",
+    "thumbnail": "/images/2025972876554510482_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Naiknelofar788",
+    "authorUrl": "https://x.com/Naiknelofar788",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 4,
+      "retweets": 0,
+      "views": 127
+    },
+    "createdAt": "2026-02-24T09:20:21.140Z",
+    "prompt": "一幅戏剧性的电影海报风格肖像，描绘了两位史诗奇幻战士在冰冻风暴中背靠背站立。左侧是一位身经百战的男性战士，留着湿漉漉的深色卷发，低头以此表达坚定的决心，紧握着一把插在冰里的中世纪长剑。霜雪附着在他毛皮镶边的斗篷和肩膀上。右侧是一位强有力的女性战士侧影，苍白的皮肤在炽热的橙色光芒下闪耀，她的身体部分被火焰吞没，与冰冷的蓝色氛围形成对比。雪花粒子在空中盘旋，在象征性的冲突中融合了火与冰。超精细的面部细节，情感强度，体积雾，电影级布光，冷蓝色调混合温暖的火焰高光，浅景深，史诗奇幻电影海报，超写实，8K分辨率，戏剧性构图，清晰聚焦，高对比度，逼真纹理。",
+    "outputImages": [
+      "/images/2025972876554510482_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Naiknelofar788/status/2025972876554510482",
+    "pending": false,
+    "approved": true
+  },
+  {
     "id": "2046530764871696750",
     "title": "GPT-image-2でこの手相を診断して詳細な鑑定書を作って",
     "thumbnail": "/images/2046530764871696750_0.jpg",
@@ -2307,6 +2578,87 @@
       "/images/2047286307987353653_7.jpg"
     ],
     "sourceUrl": "https://x.com/you1873118/status/2047286307987353653"
+  },
+  {
+    "id": "opennana-2385",
+    "title": "都市落日时尚大片",
+    "thumbnail": "/images/opennana-2385_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "OpenNana",
+    "authorUrl": "https://opennana.com/awesome-prompt-gallery/urban-sunset-fashion-silhouette",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 3,
+      "retweets": 0,
+      "views": 98
+    },
+    "createdAt": "2026-02-04T17:23:24.403Z",
+    "prompt": "一张超现实电影感时尚照片，一位二十出头惊艳的年轻女性，全身可见，站在现代城市中心，黄金时段。  \n她随意地单肩靠在交通信号灯杆上，没有意识到相机的存在，仿佛这一刻是自然捕捉的。  \n她穿着紧身蓝色牛仔裤、棕色皮靴，以及一件短款棕色麂皮夹克，带有柔软羊皮翻领。夹克下，一件极简深色露脐上衣，隐约露出精致的乳沟和紧致的腹部。  \n\n她的体型天生女性化，均衡而优雅，姿态自信。  \n一只手穿过她丰盈的浅棕色长发，将其向后撩起，头部微微转向那一侧，眼睛自然地看向别处，没有摆拍。  \n\n肤色为轻微日晒后的奶油般柔和光泽，真实肌肤纹理，细腻毛孔与高光——毫无塑料感。  \n妆容醒目却精致：清晰的眼部、浓密睫毛、立体腮红、柔和修容，以及自然光泽唇——具备高端美妆广告质感。  \n光线为温暖金色时段阳光，包裹她的轮廓与发丝，营造柔和高光与电影感对比。  \n背景为城市街道，汽车与都市灯光以强烈散景呈现，浅景深——焦点锁定在女性身上。  \n\n使用全画幅电影摄影机拍摄，85mm镜头，f/1.8，超现实细节，高动态范围，电影级调色，胶片质感，顶级时尚大片美学，高预算电影剧照氛围。",
+    "outputImages": [
+      "/images/opennana-2385_0.jpeg"
+    ],
+    "sourceUrl": "https://opennana.com/awesome-prompt-gallery/urban-sunset-fashion-silhouette",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2015337737860403283",
+    "title": "复古巴士上的红风衣女郎",
+    "thumbnail": "/images/2015337737860403283_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "iamsofiaijaz",
+    "authorUrl": "https://x.com/iamsofiaijaz",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 3,
+      "retweets": 0,
+      "views": 136
+    },
+    "createdAt": "2026-01-25T11:27:54.623Z",
+    "prompt": "一位时尚年轻女子坐在老式复古巴士的前缘，身穿红色长风衣、羊毛无檐小便帽、圆形蓝色反光太阳镜、叠层项链和粗犷的棕色皮靴。她有着波浪状金发，带着自信而梦幻的表情，仰望天空。巴士漆面剥落，呈青绿色与铁锈红色调。明亮清澈的蓝天，城市背景建筑极少，柔和日光，电影级色彩分级，浅景深，高端时尚旅行氛围，编辑摄影，超写实，4K分辨率，锐利对焦，自然肌肤质感，戏剧性构图，电影静帧美学。",
+    "outputImages": [
+      "/images/2015337737860403283_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/iamsofiaijaz/status/2015337737860403283",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2008896649901535342",
+    "title": "烬甲猎鹰者与燃翼神禽",
+    "thumbnail": "/images/2008896649901535342_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "iamsofiaijaz",
+    "authorUrl": "https://x.com/iamsofiaijaz",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 3,
+      "retweets": 0,
+      "views": 105
+    },
+    "createdAt": "2026-01-08T15:19:19.198Z",
+    "prompt": "一幅充满奇幻色彩的电影场景：一位英姿飒爽的女战士兼猎鹰师，身着饱经战火洗礼、饰以闪耀余烬纹理的皮甲，漫步于幽暗迷雾笼罩的森林之中。她高举手臂，指挥着一头巨大的凤凰与雄鹰的混合体，这头猛禽双翼燃烧，羽毛燃焰，尖端喷吐着火焰。它周身散发着橙红色的熔岩光芒，火星和余烬飞溅。女战士梳着辫子，皮肤上沾满了灰烬，神情坚定，手中拿着绳索和工具袋。画面细节丰富，羽毛纹理逼真，火焰物理效果自然，光照效果极具戏剧性，运用了体积雾、浅景深等技术，营造出史诗般的奇幻氛围，色彩调校极具电影质感，背景阴郁深沉，分辨率高达8K，呈现出概念艺术的精髓，并采用了虚幻引擎的渲染效果。",
+    "outputImages": [
+      "/images/2008896649901535342_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/iamsofiaijaz/status/2008896649901535342",
+    "pending": false,
+    "approved": true
   },
   {
     "id": "2046224777208361126",
@@ -2691,6 +3043,169 @@
     "pending": false
   },
   {
+    "id": "2046584217656570035",
+    "title": "苍白陶瓷娃娃沙滩仰视",
+    "thumbnail": "/images/2046584217656570035_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "IamEmily2050",
+    "authorUrl": "https://x.com/IamEmily2050",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 372
+    },
+    "createdAt": "2026-04-21T15:14:23.516Z",
+    "prompt": "{\n  \"相机参数\": {\n    \"设备类型\": \"iPhone 15 Pro 前置自拍\",\n    \"镜头\": \"24mm\",\n    \"构图\": \"高角度 POV（第一人称视角）\",\n    \"后期处理\": \"计算摄影风格，清晰的数字读出，深景深\"\n  },\n  \"主体描述\": {\n    \"特征\": \"陶瓷娃娃审美，无瑕的苍白皮肤，巨大的冰蓝色眼睛，小巧的鼻子，翘起的自然色嘴唇\",\n    \"表情\": \"面无表情，空洞，瞪大眼睛注视\",\n    \"造型\": \"白金色的双紧辫发型，鲜艳的蓝色美甲\",\n    \"服装\": \"浅蓝色紧身弹力棉上衣，极深超宽 V 领，深邃锁骨与领口线\",\n    \"动作\": \"抬头仰视镜头，用一只手遮挡刺眼的阳光\"\n  },\n  \"环境与灯光\": {\n    \"场景\": \"广阔的沙滩，背景中模糊的海平线\",\n    \"灯光\": \"高调明亮的沿海日光，5500K 色温，强烈的白沙反光填充，均匀照明\",\n    \"质感\": \"微带露水的无孔皮肤，细腻的反光白沙颗粒\"\n  },\n  \"技术约束\": {\n    \"色彩科学\": \"柔和的粉彩色调，线性中性色，高曝光\",\n    \"负面提示词\": [\n      \"重阴影\",\n      \"雪\",\n      \"冬装\",\n      \"红指甲\",\n      \"黑色上衣\",\n      \"保守的领口\",\n      \"胶片颗粒感\"\n    ]\n  }\n}",
+    "outputImages": [
+      "/images/2046584217656570035_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/IamEmily2050/status/2046584217656570035",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2031795709243019280",
+    "title": "零食品牌技术分解图",
+    "thumbnail": "/images/2031795709243019280_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "TechieBySA",
+    "authorUrl": "https://x.com/TechieBySA",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 231
+    },
+    "createdAt": "2026-03-12T16:40:14.726Z",
+    "prompt": "创建一个 [SNACK] 的品牌技术信息图，结合产品的真实照片或照片级真实渲染，并将技术注释覆盖层直接置于其上。在纯白摄影棚背景上使用带有策略性 [BRAND COLOR] 点缀的黑色墨水风格线条画（建筑草图外观），包括：\n• 关键组件标签\n• 显示结构、分层或内部设计的内部截面图\n• 测量数据、尺寸和规格\n• 带有成分和数量的材料标注\n• 指示主要功能和结构完整性的箭头\n• 显示关键机械或设计元素的简单示意图或剖面图\n• 可持续性标注\n标题位置：位于手绘技术注释框内，带有强调色边框，粗体字显示产品名称，置于上角。\n风格与布局规则：\n• 真实产品保持清晰可见\n• 注释具有素描感、技术感和建筑感\n• 强调色用于高光（占线条工作的 20-30%），黑色用于主要技术线条（70-80%）\n• 构图整洁，负空间平衡\n• 具有教育意义、食品工程氛围和高端品牌感\n• 在角落包含微妙的品牌标志\n视觉风格：极简技术插画美学，黑色线条在真实图像上带有点缀，精确但略带手绘感。\n调色板：白色背景，黑色注释线/文本，[BRAND COLOR] 仅用于点缀和关键标注。\n输出：1080×1080，超清晰，社交媒体动态优化，无水印。",
+    "outputImages": [
+      "/images/2031795709243019280_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/TechieBySA/status/2031795709243019280",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2028045894088630679",
+    "title": "红蓝光影下的未来都市双重曝光青年",
+    "thumbnail": "/images/2028045894088630679_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Fujimoto_hina",
+    "authorUrl": "https://x.com/Fujimoto_hina",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 161
+    },
+    "createdAt": "2026-03-01T14:18:49.867Z",
+    "prompt": "{\n  \"prompt\": \"一位年轻男子的超写实电影级双重曝光侧脸肖像，表情专注强烈，皮肤纹理细节丰富，眼神锐利。他的面部与从剪影中浮现的未来主义城市天际线无缝融合，摩天大楼和城市建筑构成了他的颈部和下颌线。深蓝色和鲜艳红色的强烈对比，象征着冲突与力量。抽象的数字划痕、碎裂的玻璃纹理和漏光效果覆盖在面部，营造出戏剧性的效果。干净的白色背景，超精细的灯光，专业电影海报风格，高对比度，清晰聚焦，8K分辨率，逼真的发丝，社论海报构图，现代平面设计美学，戏剧性的氛围，超高清，照片级真实。\",\n  \"negative_prompt\": \"模糊，低分辨率，扭曲的面部，多余的肢体，过饱和的颜色，嘈杂的背景，平淡的灯光，卡通化，低细节\",\n  \"resolution\": \"8K\",\n  \"style\": \"电影感，双重曝光，照片级真实感，社论海报\",\n  \"background\": \"干净的白色\",\n  \"lighting\": \"高对比度，戏剧性的蓝红分割布光\"\n}",
+    "outputImages": [
+      "/images/2028045894088630679_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Fujimoto_hina/status/2028045894088630679",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2015776042989039997",
+    "title": "超真实3D INS广告大片",
+    "thumbnail": "/images/2015776042989039997_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Mystveil7",
+    "authorUrl": "https://x.com/Mystveil7",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 125
+    },
+    "createdAt": "2026-01-26T15:49:59.684Z",
+    "prompt": "Create a hyper-realistic, cinematic Instagram post layout where the Instagram UI exists as a physical, tangible 3D object, photographed like a premium commercial product shot. The result should feel indistinguishable from a real studio photograph.\nInstagram Frame (UI Accuracy – Critical)\nAuthentic Instagram interface rendered as a solid white physical 3D card\nSmooth matte plastic surface with subtle micro-texture\nSlight thickness visible on edges, realistic bevels\nPerfectly rounded corners (exact Instagram radius)\nSoft studio reflections and realistic edge highlights\nTop Bar (Pixel-accurate UI):\nCircular profile avatar on the left\nUsername text: “June” in Instagram’s default bold UI font\nLight blue FOLLOW button with correct proportions\nThree-dot menu icon aligned to the far right\nExact spacing, typography, and icon sizing matching the real Instagram app\nAspect ratio 1:1, centered, balanced, premium composition.\nMain Subject (Pose – Match Reference Image Exactly)\nA photorealistic athletic woman partially emerging out of the Instagram frame into real 3D space\nSeated pose identical to the reference image:\nBoth legs bent and angled to the side\nOne knee slightly raised and closer to the chest\nArms gently wrapped around the raised knee\nHands relaxed, fingers naturally resting\nTorso leaning slightly back against the frame edge\nExpression: calm, thoughtful, self-assured\nGaze: looking slightly to the side and upward, not engaging the camera\nNatural body proportions, relaxed posture, editorial realism\nNo exaggerated curves, no artificial posing\nClothing (Nike Only – Realistic Fit)\nMuted ivory / off-white Nike fitted short-sleeve blouse\nSoft neutral tone that contrasts beautifully with the background\nVisible white Nike swoosh\nNatural fabric stretch and tension\nDeep blue Nike athletic pants, length up to the knee\nTailored, performance-fit silhouette\nRealistic fabric weight with subtle folds at the knee bend\nClean stitching and breathable sports material\nClean white Nike sneakers\nSlight wear realism\nCorrect sole texture and stitching\nPremium sportswear look, real commercial styling\nNo distortion, no fantasy fashion\nBackground (Inside the Instagram Post Only)\nDark indoor gym or studio environment\nCool blue and muted purple cinematic lighting\nSoft haze in the background\nSubtle volumetric light beams barely visible\nShallow depth of field, background softly blurred\nSubject and Instagram frame remain sharp and dominant\nLighting & Photorealism\nStudio-grade cinematic lighting\nSoft key light illuminating the subject naturally\nGentle rim light outlining the body and Instagram frame\nRealistic skin texture with visible pores and natural highlights\nAccurate contact shadows where the subject touches the frame\nPhysically correct light falloff and reflections\nFooter UI (Engagement Section)\nInstagram action icons: like, comment, share, save (accurate icons)\nText visible: “785 likes”\nCaption begins with June\nCaption text:\nFreedom isn’t found in comfort.\nIt’s built in the quiet moments where discipline meets belief.\nHashtags partially visible and naturally cropped\nOverall Style & Quality\nUltra-high resolution\nAdvertising-grade realism\nClean, modern, editorial Instagram aesthetic\nHyper-realistic blend of 3D object + real photography\nNo extra elements\nNo text errors\nNo distortion\nLooks like a real product photoshoot, not AI art",
+    "outputImages": [
+      "/images/2015776042989039997_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Mystveil7/status/2015776042989039997",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2013473309485343120",
+    "title": "皮克斯风阳光少年",
+    "thumbnail": "/images/2013473309485343120_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "iamsofiaijaz",
+    "authorUrl": "https://x.com/iamsofiaijaz",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 82
+    },
+    "createdAt": "2026-01-20T14:33:26.278Z",
+    "prompt": "一个风格化的3D卡通肖像，一位年轻男子，拥有短棕发和富有表现力的绿色眼睛，温暖地微笑。他穿着黑色西装外套内搭白色T恤，现代休闲时尚。类似皮克斯/迪士尼风格角色设计，皮肤光滑，柔和光照，略微夸张的面部特征。高细节、精美的3D渲染，友好且平易近人的表情。渐变背景为柔和的蓝绿色和粉色，工作室灯光，浅景深，高分辨率。",
+    "outputImages": [
+      "/images/2013473309485343120_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/iamsofiaijaz/status/2013473309485343120",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2012437899955097836",
+    "title": "红蓝撞色高跟诱惑",
+    "thumbnail": "/images/2012437899955097836_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "meng_dagg695",
+    "authorUrl": "https://x.com/meng_dagg695",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 2,
+      "retweets": 0,
+      "views": 84
+    },
+    "createdAt": "2026-01-18T03:44:26.798Z",
+    "prompt": "{\n  \"global_settings\": {\n    \"resolution\": \"8K\",\n    \"quality\": \"超高清晰度\",\n    \"aspect_ratio\": \"2:3\",\n    \"render_style\": \"AI编辑、高细节3D渲染\",\n    \"lighting_quality\": \"柔和影棚光与逼真阴影\",\n    \"sharpness\": \"极致清晰、锐利边缘\",\n    \"noise\": \"无\",\n    \"compression\": \"无\"\n  },\n  \"Module_1_Image_1_Style\": {\n    \"subject\": {\n      \"character_type\": \"风格化3D卡通女性\",\n      \"pose\": \"站立、身体微微侧转、一手抬起食指触唇\",\n      \"expression\": \"灿烂微笑、大眼睛\",\n      \"hair\": {\n        \"color\": \"黑色\",\n        \"style\": \"双辫马尾\",\n        \"accessories\": \"绿色帽子\"\n      },\n      \"face\": {\n        \"eyes\": \"大而圆、深色瞳孔\",\n        \"skin\": \"光滑、哑光、风格化纹理\"\n      }\n    },\n    \"clothing\": {\n      \"top\": \"无袖绿色短款上衣\",\n      \"bottom\": \"宽松绿色束脚运动裤配抽绳\",\n      \"footwear\": \"白色运动鞋\"\n    },\n    \"accessories\": {\n      \"luggage\": \"绿色硬壳拉杆行李箱\"\n    },\n    \"color_palette\": [\n      \"多种绿色\",\n      \"白色点缀\"\n    ],\n    \"background\": {\n      \"color\": \"纯绿色\",\n      \"texture\": \"柔软、微颗粒影棚背景\"\n    },\n    \"composition\": {\n      \"framing\": \"全身\",\n      \"camera_angle\": \"平视\",\n      \"depth\": \"主体与背景锐利分离\"\n    }\n  },\n  \"Module_2_Image_2_Style\": {\n    \"subject\": {\n      \"character_type\": \"风格化3D卡通女性\",\n      \"pose\": \"微微后仰靠在背景上\",\n      \"expression\": \"俏皮、嘴唇轻撅、眼睛斜视\",\n      \"hair\": {\n        \"color\": \"棕色\",\n        \"style\": \"短发、凌乱\",\n        \"accessories\": \"红色太阳镜架在头顶\"\n      }\n    },\n    \"clothing\": {\n      \"dress\": \"贴身蓝色罗纹吊带裙\",\n      \"footwear\": \"红色高跟凉鞋配蝴蝶结\"\n    },\n    \"color_palette\": [\n      \"大胆红色\",\n      \"深蓝\"\n    ],\n    \"background\": {\n      \"color\": \"纯红色\",\n      \"texture\": \"光滑哑光表面\"\n    },\n    \"lighting\": {\n      \"direction\": \"一侧柔和定向光\",\n      \"shadow\": \"在红色背景上投下清晰影子\"\n    },\n    \"composition\": {\n      \"framing\": \"全身\",\n      \"pose_emphasis\": \"弯曲身姿、交叉双腿\"\n    }\n  },\n  \"Module_3_Image_3_Style\": {\n    \"subject\": {\n      \"characters\": [\n        {\n          \"type\": \"风格化3D卡通女性\",\n          \"position\": \"左侧\",\n          \"wrapped_in\": \"红色纹理毯子\",\n          \"expression\": \"平静、浅笑、眼睛向上看\"\n        },\n        {\n          \"type\": \"风格化3D卡通男性\",\n          \"position\": \"右侧\",\n          \"wrapped_in\": \"橙色纹理毯子\",\n          \"expression\": \"中性、温柔目光向上\"\n        }\n      ]\n    },\n    \"environment\": {\n      \"furniture\": \"红色沙发\",\n      \"floor\": \"红色地面\",\n      \"background\": {\n        \"color\": \"深红色\",\n        \"texture\": \"织物状横向纹理\"\n      }\n    },\n    \"details\": {\n      \"feet\": \"女性赤脚、男性穿袜\",\n      \"blanket_texture\": \"厚实针织面料\"\n    },\n    \"composition\": {\n      \"framing\": \"居中、中景宽镜头\",\n      \"symmetry\": \"左右平衡构图\"\n    }\n  }\n}",
+    "outputImages": [
+      "/images/2012437899955097836_0.jpeg",
+      "/images/2012437899955097836_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/meng_dagg695/status/2012437899955097836",
+    "pending": false,
+    "approved": true
+  },
+  {
     "id": "2046523198116889064",
     "title": "A refined 2026 Silicon Valley city promotional poster with a futuristic yet ele…",
     "thumbnail": "/images/2046523198116889064_0.jpg",
@@ -3067,6 +3582,87 @@
       "views": 0
     },
     "createdAt": "2026-04-23T09:49:51.000Z"
+  },
+  {
+    "id": "2044744023261519920",
+    "title": "抖音直播截图画面",
+    "thumbnail": "/images/2044744023261519920_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "_FORAB",
+    "authorUrl": "https://x.com/_FORAB",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 1,
+      "retweets": 0,
+      "views": 311
+    },
+    "createdAt": "2026-04-17T07:33:37.383Z",
+    "prompt": "9:16 的图片比例，生成一张抖音直播的截图，里面是 xxx 在直播，xxx 手里拿着牌子，牌子里写着 xxxx。",
+    "outputImages": [
+      "/images/2044744023261519920_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/_FORAB/status/2044744023261519920",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2026284342549340190",
+    "title": "鸟群织就的梦幻高定时装秀",
+    "thumbnail": "/images/2026284342549340190_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrDasOnX",
+    "authorUrl": "https://x.com/MrDasOnX",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 1,
+      "retweets": 0,
+      "views": 63
+    },
+    "createdAt": "2026-02-25T04:15:16.330Z",
+    "prompt": "一个充满趣味的高级时装T台场景，主角是一位自信的女性，正走在奢华时装秀的T台上，身穿一件完全由鸟类制成的非凡高级定制礼服。数百只优雅、色彩鲜艳的鸟类构成了飘逸的雕塑感礼服形状，像活着的羽毛一样层叠，翅膀微微张开，营造出布料和运动的错觉。一些鸟儿在她周围轻轻升入空中，捕捉于飞行瞬间，增添了神奇、超现实的运动感。鸟儿们展现出丰富多样的色彩——彩虹般的蓝色、光芒四射的红色、金黄色和柔和的白色——拥有错综复杂的羽毛细节和自然纹理。她在迈步间摆出姿势，带着快乐、自信的表情，富有表现力的眼睛，以及精致的T台妆容。戏剧性的舞台灯光配以发光的高光，黑暗模糊的观众背景，电影级的景深，奇幻现实主义，超精细纹理，高对比度，清晰聚焦，奇思妙想的奢华时装秀，超现实主义高级定制，4K分辨率，专业调色。",
+    "outputImages": [
+      "/images/2026284342549340190_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrDasOnX/status/2026284342549340190",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2009834337043394622",
+    "title": "俯拍巨女城景自拍",
+    "thumbnail": "/images/2009834337043394622_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "saniaspeaks_",
+    "authorUrl": "https://x.com/saniaspeaks_",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 1,
+      "retweets": 0,
+      "views": 130
+    },
+    "createdAt": "2026-01-10T14:55:05.780Z",
+    "prompt": "{\n  \"type\": \"图像生成提示词\",\n  \"language\": \"zh\",\n  \"style\": \"超现实电影感自拍摄影\",\n  \"aspect_ratio\": \"9:16\",\n  \"identity_preservation\": {\n    \"use_reference_image\": true,\n    \"strict_identity_lock\": true,\n    \"alter_face\": false,\n    \"alter_skin\": false,\n    \"alter_hair\": false,\n    \"alter_gender\": false,\n    \"notes\": \"保留上传参考图像中完全一致的脸部特征、皮肤纹理、头发、眼镜、年龄和性别。禁止合成皮肤或雕塑感。\"\n  },\n  \"subject\": {\n    \"gender\": \"女性\",\n    \"capture_method\": \"由主体本人拍摄的自拍\",\n    \"pose\": {\n      \"selfie_arm\": {\n        \"description\": \"一只手臂完全伸直并完全向上伸展，手持拍摄自拍的相机\",\n        \"visibility\": \"手臂在画面中清晰可见、笔直且占主导地位\",\n        \"camera_visibility\": \"自拍相机设备本身不得在画面中出现\"\n      },\n      \"product_arm\": {\n        \"description\": \"另一只手臂完全伸向相机，手持附带的佳能相机\",\n        \"importance\": \"产品最靠近相机并在视觉上占主导地位\"\n      },\n      \"head\": {\n        \"tilt\": \"头部向自拍相机微微倾斜\"\n      },\n      \"expression\": \"自然放松的面部表情\"\n    },\n    \"body_visibility\": \"从头到脚全身可见\",\n    \"feet\": \"双脚清晰接触路面\"\n  },\n  \"composition\": {\n    \"perspective\": \"胸部高度的自然自拍视角\",\n    \"camera_angle\": \"极端俯拍角度，相机位于主体正上方并直视下方\",\n    \"layer_depth\": [\n      \"产品（最靠近相机）\",\n      \"脸部\",\n      \"全身\",\n      \"城市环境（背景）\"\n    ]\n  },\n  \"scale_and_perspective\": {\n    \"effect\": \"强制透视\",\n    \"subject_scale\": \"女性呈现极度巨大\",\n    \"buildings_scale\": \"建筑物显得小得多，最高不超过她的膝盖\",\n    \"dominance\": \"主体在视觉上完全主导整个场景\",\n    \"realism\": \"激发规模感同时保持物理可信\"\n  },\n  \"environment\": {\n    \"location\": \"真实城市十字路口\",\n    \"elements\": [\n      \"人行横道\",\n      \"道路标线\",\n      \"交通标志\",\n      \"汽车\",\n      \"自行车\",\n      \"真实人类尺度的行人\"\n    ],\n    \"setting\": \"地面层城市环境\"\n  },\n  \"lighting\": {\n    \"type\": \"自然日光\",\n    \"conditions\": \"晴朗或轻度多云天空\",\n    \"shadows\": \"柔和且真实\",\n    \"restrictions\": \"禁止奇幻或戏剧性照明\"\n  },\n  \"product_rules\": {\n    \"usage\": \"完全按提供的上传佳能产品使用\",\n    \"distortion\": \"无\",\n    \"logo\": \"保持不变\",\n    \"appearance\": \"仅有自然反射和真实高光\"\n  },\n  \"camera_quality\": {\n    \"realism\": \"最大照片真实感\",\n    \"depth\": \"前景、主体与背景清晰分离\",\n    \"artifacts\": \"无\"\n  },\n  \"constraints\": [\n    \"禁止AI艺术感\",\n    \"禁止塑料或雕塑皮肤\",\n    \"禁止扭曲脸部或身体\",\n    \"禁止多余肢体或错误解剖\",\n    \"禁止文字或水印\",\n    \"禁止可见自拍相机设备\"\n  ],\n  \"output_goal\": \"创作一张超现实电影感自拍图像：女性使用其确切参考身份，从极端俯拍视角在真实城市人行横道拍摄，具备强制透视比例、自然日光，并将佳能相机产品明显持向镜头。\"\n}",
+    "outputImages": [
+      "/images/2009834337043394622_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/saniaspeaks_/status/2009834337043394622",
+    "pending": false,
+    "approved": true
   },
   {
     "id": "1777027774548",
@@ -25593,5 +26189,4479 @@
     ],
     "sourceUrl": "https://x.com/songguoxiansen/status/2047142024898617538",
     "pending": false
+  },
+  {
+    "id": "2047196508270084104",
+    "title": "暗黑史诗风哪吒悬浮虚空图",
+    "thumbnail": "/images/2047196508270084104_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T17:21:00.422Z",
+    "prompt": "玄幻小说封面，哪吒三头六臂悬浮虚空，火焰莲台底座，暗黑史诗风",
+    "outputImages": [
+      "/images/2047196508270084104_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2047196508270084104",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2047122441454096527",
+    "title": "唐代长安元宵灯会全景图",
+    "thumbnail": "/images/2047122441454096527_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T17:20:55.119Z",
+    "prompt": "唐代长安城元宵灯会全景，万盏花灯照亮夜空，工笔重彩长卷",
+    "outputImages": [
+      "/images/2047122441454096527_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2047122441454096527",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2047129703702802811",
+    "title": "中国航天纪念烫金邮票",
+    "thumbnail": "/images/2047129703702802811_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T17:20:50.183Z",
+    "prompt": "中国航天纪念邮票小全张，火箭发射场景，烫金边框工艺",
+    "outputImages": [
+      "/images/2047129703702802811_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2047129703702802811",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2047221920186462428",
+    "title": "真实微信聊天随手拍照片",
+    "thumbnail": "/images/2047221920186462428_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "xiaohu",
+    "authorUrl": "https://x.com/xiaohu",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T14:01:23.940Z",
+    "prompt": "生成图片，比例3:4\n\n一张真实拍摄的 iPhone 手机随手拍照片，手持拍摄，屏幕显示真实微信聊天界面，环境自然光，略带阳光反射，画面略微倾斜，生活化，不完美构图，真实感强，高细节，4K，屏幕玻璃表面有明显指纹、油渍、细小划痕，并带有自然反光、局部眩光和真实拍摄的屏幕污染感\n\n参考图1作为我的头像\n参考图2作为对方头像\n\n联系人：[联系人名称]\n\n聊天内容由GPT自行补充\n要求是自然中文微信对话，符合真实聊天习惯，围绕这个主题展开：\n[场景主题]\n\n对话里要包含一个Word文件附件\n文件名：[文件名].docx\n文件大小：[文件大小]\n\n界面必须像真实微信\n左侧对方，右侧我\n顶部栏、气泡、头像、时间分隔、留白都符合真实微信风格\n底部输入栏必须严格为：\n左侧语音按钮，中间白色长输入框，输入框内右侧麦克风图标，最右侧表情按钮和加号按钮\n\n不要句号\n不要多余空格\n不要设计稿感\n不要UI示意图感\n要像真实手机拍出来的微信聊天照片",
+    "outputImages": [
+      "/images/2047221920186462428_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/xiaohu/status/2047221920186462428",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2047091751731519744",
+    "title": "鹿鼎记绝美双主角海报",
+    "thumbnail": "/images/2047091751731519744_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "caiziboshi",
+    "authorUrl": "https://x.com/caiziboshi",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T14:01:16.533Z",
+    "prompt": "生成鹿鼎记海报，展现韦小宝跟老婆XXX，忠于原著的描述，夸大特点，强调女性的美艳和男性的气质",
+    "outputImages": [
+      "/images/2047091751731519744_0.jpeg",
+      "/images/2047091751731519744_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/caiziboshi/status/2047091751731519744",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046795105802289214",
+    "title": "天龙八部康敏妖妇角色SSR卡",
+    "thumbnail": "/images/2046795105802289214_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T14:01:16.513Z",
+    "prompt": "天龙八部康敏SSR角色卡，红唇卷发妖妇，幽暗烛光下眼神勾人",
+    "outputImages": [
+      "/images/2046795105802289214_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046795105802289214",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046942186755719185",
+    "title": "极简几何风艺术产品海报",
+    "thumbnail": "/images/2046942186755719185_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T14:01:02.885Z",
+    "prompt": "请为【主题产品】创作一张“极简几何装置风产品海报”。\n\n如果我提供了产品图片，请以该图片为主要参考，保留产品的核心外观特征、包装形态、颜色、材质、品牌识别和整体气质，并优先沿用产品图中的主色调与配色关系进行设计。\n如果我没有提供产品图片，请根据【主题产品】自动生成符合该产品定位的产品外观与包装设计，并根据产品属性、品类特征和气质，自动匹配自然合理的主色、辅助色、道具造型与展示方式。\n\n海报整体风格要求：\n画面采用高键白色或暖白色摄影棚背景，整体干净、通透、柔和、明亮，具有高级商业感与现代品牌视觉气质。构图不是普通电商棚拍，而是像品牌视觉提案、艺术静物摄影与3D产品陈列结合的概念海报。\n\n画面主体应包含：\n1. 【主题产品】本体\n2. 产品包装\n3. 与产品相关的原料、切片、部件、功能元素或材质细节\n\n三者共同构成完整的视觉链路，使观者一眼就能理解“这是什么产品、内容是什么、卖点或来源是什么”。\n\n场景中加入简洁且具有设计感的几何装置道具，例如：圆柱、方块、长条块、圆环、球体、半圆、平台、堆叠积木、亚克力支架、玩具感结构体等，用于承托、悬置、围绕或衬托产品主体，形成富有秩序感、节奏感和层次感的艺术陈列构图。\n\n整体配色应围绕产品本身自然展开，以产品关联色为主视觉核心，搭配白色、奶油色、浅灰色等中性色，必要时加入少量辅助点缀色，使画面颜色统一、克制、舒适、清爽，不杂乱、不花哨。不同产品应自动适配不同配色，不固定使用某一种背景色。\n\n材质表现要细腻真实，具有高质量商业渲染质感。透明塑料、亚克力、磨砂材质、纸质标签、玻璃、金属、光滑塑胶、果肉纹理、食材纹理或产品表面细节都应自然可信。可以有轻微反射与柔和阴影，但不要过重、不要脏乱。\n\n构图要求留白充足，主体明确，画面平衡，视觉整洁，具有轻松、温和、现代、精致、亲和、带一点童趣但不幼稚的品牌气质。整体感觉像一张高审美的品牌产品KV海报，非常适合电商主视觉、社交媒体种草图、产品展示图。\n\n输出要求：\n- 竖版构图\n-  比例\n- 单张海报\n- 高级感、简洁感、品牌感强",
+    "outputImages": [
+      "/images/2046942186755719185_0.jpeg",
+      "/images/2046942186755719185_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046942186755719185",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046845640580239567",
+    "title": "敦煌神女残金壁画",
+    "thumbnail": "/images/2046845640580239567_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T14:00:49.864Z",
+    "prompt": "请以 【主题】 为核心，创作一幅 敦煌壁画风的高端艺术画作。画面采用 构图方式，以主体角色为唯一主视觉核心，表现其核心动作 / 情境的神圣瞬间。整体氛围应为 整体氛围，具有博物馆级审美、文化厚度与收藏级艺术感。\n\n主体形象要求：\n主体角色应呈现出优雅庄严、修长华贵、神性强烈的气质，姿态舒展，具有鲜明的敦煌壁画式神圣性与仪式感。面容需静穆、圣洁、含蓄、不可侵犯，带有敦煌壁画中神女 / 菩萨 / 飞天式的庄严气质，而不是普通古风美女。\n发髻高挽，佩戴复杂精美的 金饰发冠、珠链步摇、耳饰、璎珞、臂钏、腰饰，服饰华丽，衣纹流畅，线条细劲有力，富有飞天韵律与宫廷级壁画质感。衣袂、飘带、裙摆与袖口应形成富有节奏感的流动曲线，强化神圣升腾感与画面韵律。\n\n用金结构要求：\n画面需强化 结构性用金，不是零散点金，而是形成明确的奢华秩序：\n主体角色的发冠、首饰、衣缘、袖口、腰封、飘带边线、裙摆纹样采用 描金、泥金、鎏金、金线刺绣、残损金箔痕迹；\n核心神圣元素，如月轮 / 佛光 / 法轮 / 宝盖 / 莲台、云纹、莲花花瓣、宝相花、藻井纹饰、团花纹、边框装饰也应带有 清晰可见但克制高级的金色装饰；\n整体呈现 金碧辉煌但不俗艳、富丽精工但不廉价 的效果，表现出历经千年风化后仍保有金碧辉煌余韵的 残损奢华感。\n\n色彩要求：\n色彩以 赭红、朱砂、青绿、石青、石绿、土黄、象牙白 为主，辅以克制精致的 土金、鎏金。\n整体色调要 浓郁、浑厚、古雅、贵气，避免轻飘糖水色。\n背景可采用 背景主色氛围，如深邃石青天幕 / 温润古壁底色 / 暗金矿物底色与古壁肌理结合，衬托出主体的神圣与尊贵。\n\n装饰元素要求：\n画面可融入 飞天、莲花、宝相花、藻井、祥云、伎乐、团花纹、楼阁宫阙、法器、圣光圆轮、古典边框装饰 等典型敦煌视觉语言，但必须围绕主体集中分布，层级清晰，避免平均铺满全画面。\n陪衬人物控制在 陪衬人数位即可，作为礼赞与陪衬，分布在主体周围或下方，形成朝向主体的仪式感动势。她们可陪衬动作，如持莲花 / 奏琵琶 / 吹笛 / 奉花 / 托灯 / 执幡，线条轻盈流动，与主体形成呼应，但不可喧宾夺主。\n\n空间与构图要求：\n构图中应保留适度的 云气空间、圣光留白、月光或天幕留白，让画面有呼吸感。\n核心神圣元素需醒目、庄严、圆满，周围可有 鎏金光晕、圣光圆轮、细密金线轨迹，强化主题的神圣性。\n远处可点缀远景元素，如月宫楼阁 / 云中宫阙 / 佛国建筑 / 仙界天幕，但不可过多，以增强空间层次与仙界气息。\n\n材质表现要求：\n需强调古老石窟壁画与矿物颜料肌理：\n可见 斑驳、裂纹、风化、轻微剥落、历史包浆、粉化边缘、古壁肌理；\n同时保留局部 描金、残损金箔、磨蚀后的鎏金光泽，形成 “旧而贵、残而华、古而神圣” 的高级艺术质感。\n整体要求：华丽、细腻、神秘、庄严、统一、收藏级、艺术化、高级感极强。\n\n负面约束词：\n避免现代国潮风，避免商业插画感，避免普通古风美女插画，避免动漫感，避免网红审美，避免塑料质感，避免廉价土豪金，避免金色过亮过俗，避免荧光色，避免过度饱和，避免人物过多，避免背景元素过满，避免装饰平均铺满全画面，避免碎花感过重，避免视觉主次不清，避免主体不突出，避免低级堆砌感，避免平庸感，避免轻浮感，避免现代服装感，避免摄影感，避免3D建模塑料感。",
+    "outputImages": [
+      "/images/2046845640580239567_0.jpeg",
+      "/images/2046845640580239567_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046845640580239567",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046984876336058603",
+    "title": "十八名家丹青绘山城朝天门",
+    "thumbnail": "/images/2046984876336058603_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "xiaoerzhan",
+    "authorUrl": "https://x.com/xiaoerzhan",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T14:00:49.020Z",
+    "prompt": "请创作一张原创的中文艺术策展海报，主题为《不同画家笔下的重庆朝天门》。\n\n内容设定：\n以18位中国画家为灵感来源，分别用不同艺术风格来表现“重庆朝天门”这一同一主题。每一幅小画面都围绕重庆朝天门展开，体现两江交汇、码头、江岸城市、山城层叠建筑、船只、水雾、城市天际线等特征。注意：必须是重庆朝天门，不要出现上海东方明珠。\n\n18位画家如下：\n顾恺之、吴道子、王希孟、倪瓒、沈周、仇英、齐白石、张大千、徐悲鸿、林风眠、傅抱石、李可染、吴冠中、黄永玉、范曾、周春芽、曾梵志、刘小东。\n\n风格方向：\n- 顾恺之：线描飘逸、设色淡雅、古意人物与山水结合\n- 吴道子：奔放墨线、气势强烈、动态感强\n- 王希孟：青绿山水、宏阔精丽、矿物色华美\n- 倪瓒：疏淡空灵、文人山水、留白明显\n- 沈周：温润文人笔墨、层次丰富\n- 仇英：工笔重彩、精致繁丽、叙事感强\n- 齐白石：笔墨简练、色彩鲜活、天真生动\n- 张大千：泼墨泼彩、气象开阔\n- 徐悲鸿：中西融合、造型严谨\n- 林风眠：现代中国绘画、色块概括、诗意朦胧\n- 傅抱石：笔墨奔放、氤氲厚重\n- 李可染：积墨深厚、层次沉稳\n- 吴冠中：形式感强、点线面构成鲜明\n- 黄永玉：灵动明快、色彩跳跃\n- 范曾：文人气、书写性强、人物意味浓厚\n- 周春芽：表现性强、色彩浓烈、带花卉意象\n- 曾梵志：情绪张力强、厚重笔触、都市感\n- 刘小东：写实油画、现场感、人物与江边生活结合\n\n排版要求：\n不要模仿任何已有图片的版式，不要使用表格对照图结构，不要复刻示例海报。\n请设计成“原创策展海报”形式，可以采用更自由、更高级的美术馆展陈排版：\n- 画面为横向大幅\n- 整体分为古代、近现代、当代三个章节\n- 每个章节内以若干小幅作品和文字标签自由编排\n- 版面具有展览感、出版物感、策展设计感\n- 文字为中文\n- 标题大字：不同画家笔下的重庆朝天门\n- 可加入简短作品说明与风格关键词\n- 底部加入小字说明：以上作品为AI依据不同画家艺术语言进行风格化创作，仅供艺术欣赏与学习交流\n\n视觉要求：\n高级、克制、学术气质、美术馆出版物风格、纸本质感、留白舒适、排版精致、细节丰富、4K高清。",
+    "outputImages": [
+      "/images/2046984876336058603_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/xiaoerzhan/status/2046984876336058603",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2047153211560399009",
+    "title": "濒危动物科普信息图设计",
+    "thumbnail": "/images/2047153211560399009_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "billtheinvestor",
+    "authorUrl": "https://x.com/billtheinvestor",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T14:00:45.031Z",
+    "prompt": "创建一个关于濒危动物的中文视觉丰富信息图。首先在网上找一个，研究它的栖息地、饮食和独特特征。通过带注释的视觉元素和结构化的标注来呈现信息，而不是通用的部分。风格要像大胆的图形插画：一个详细的、逼真的中心动物作为焦点，由图表、标注和简洁的文本元素支持。使用干净的背景，并在分层构图中混合使用逼真效果与强烈的图形元素（形状、图标、色块）。使其密集、有触感且专业制作。",
+    "outputImages": [
+      "/images/2047153211560399009_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/billtheinvestor/status/2047153211560399009",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046928375076536380",
+    "title": "iX未来科技品牌设计套件",
+    "thumbnail": "/images/2046928375076536380_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "iX00AI",
+    "authorUrl": "https://x.com/iX00AI",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T14:00:43.539Z",
+    "prompt": "为一家名为 iX 的公司制作一份精致的多页品牌套件，其中每一页都作为一个专属的产品展示，展示一款不同的高科技小工具。\n该品牌应感觉俏皮、未来主义、充满活力且具有设计前瞻性，将玩具启发产品的能量与高端创意科技品牌的精致感相融合。使用大胆、实验性的视觉识别，具有明亮的色彩、简洁的几何形状、现代的排版、动态的运动暗示和略带超现实主义的意象。\n对于每张图像，聚焦一款独特、富有创意的小工具——例如未来主义的可穿戴设备、触觉音频设备或超现实的家庭科技产品——以编辑化、以产品为中心的版式呈现。整体氛围应感觉富有创意、年轻、有节奏感且具有高概念，在有趣的消费文化与时尚般的呈现之间取得平衡。通过特写的视觉实验、创新的包装探索和跨平台应用，包含一种对产品的痴迷感。让它感觉像一个自信、当代的品牌世界，既平易近人又具有艺术指导感，具有强烈的图形凝聚力和高端创意工作室的美学。",
+    "outputImages": [
+      "/images/2046928375076536380_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/iX00AI/status/2046928375076536380",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2047213976027557957",
+    "title": "天安门故宫中轴线航拍",
+    "thumbnail": "/images/2047213976027557957_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "cellinlab",
+    "authorUrl": "https://x.com/cellinlab",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T14:00:39.313Z",
+    "prompt": "帮我生成 北京天安门到故宫 中轴线 低空航拍图，注意细节要详细",
+    "outputImages": [
+      "/images/2047213976027557957_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/cellinlab/status/2047213976027557957",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2047204364499276110",
+    "title": "特斯拉核心零部件细节全景图",
+    "thumbnail": "/images/2047204364499276110_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "cnyzgkc",
+    "authorUrl": "https://x.com/cnyzgkc",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T14:00:26.688Z",
+    "prompt": "帮我生成 特斯拉 主要零部件 细节全图，周围 也加上 各模块细节图",
+    "outputImages": [
+      "/images/2047204364499276110_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/cnyzgkc/status/2047204364499276110",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2047034246758637618",
+    "title": "艺术大师高端个人网站设计",
+    "thumbnail": "/images/2047034246758637618_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Preda2005",
+    "authorUrl": "https://x.com/Preda2005",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T14:00:18.866Z",
+    "prompt": "了解你所知道的所有关于 Marcio Lima 即 @Preda2005 的信息，创建一个关于他作品的详细信息图，并设计一个现代、高端的个人网站。",
+    "outputImages": [
+      "/images/2047034246758637618_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Preda2005/status/2047034246758637618",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2047165794325500353",
+    "title": "滴落墨水的复古绅士",
+    "thumbnail": "/images/2047165794325500353_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Goodmanprotocol",
+    "authorUrl": "https://x.com/Goodmanprotocol",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 1
+    },
+    "createdAt": "2026-04-23T14:00:15.411Z",
+    "prompt": "Subject & Composition:\n\nCentral Figure: 一个男人的清晰侧面轮廓，戴着经典的20世纪40年代软呢帽，穿着正式西装。\n\nMelting Effect: 男人躯干的下半部分应该溶解或“滴落”成细长、垂直的黑色墨水条纹和飞溅物，在背景上创造出一种超现实的、液体渗色效果。\n\nGraphic Element: 一个大的、实体的鲜艳红色圆圈直接放置在男人的头部和肩膀后方，创造出一种“光环”或“旭日”的图案，以此锚定构图。\n\nStyle & Color Palette:\n\nColor Scheme: 一种严格的极简主义调色板，包含正红色、深黑色和米白色/奶油色。\n\nPhotography Style: 主体采用高对比度的黑白黑色电影摄影风格。纹理应该看起来像高分辨率的时尚大片，具有浅景深。\n\nBackground: 干净、略带纹理的米白色纸张或画布背景，赋予其高级的、实体海报的质感。\n\nTechnical Details:\n\nLighting: 强烈的“伦勃朗”灯光来勾勒面部轮廓，用深阴影强调鼻梁和下颌线。\n\nAtmosphere: 阴郁、理智且高风险。设计应该感觉现代，同时精准符合20世纪中期的时代特征。\n\nFraming: 垂直海报方向（A字型），左右两侧有大量留白，以强调中心垂直轴。\n\nAspect ratio is 9:16",
+    "outputImages": [
+      "/images/2047165794325500353_0.jpeg",
+      "/images/2047165794325500353_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Goodmanprotocol/status/2047165794325500353",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046520509651886451",
+    "title": "金瓶梅古代开放世界网游截图",
+    "thumbnail": "/images/2046520509651886451_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "op7418",
+    "authorUrl": "https://x.com/op7418",
+    "tags": [
+      "zh",
+      "game"
+    ],
+    "category": "game",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 148
+    },
+    "createdAt": "2026-04-23T07:58:58.375Z",
+    "prompt": "帮我生成一个以《金瓶梅》为主题的古代 ARPG MMO 开放世界游戏的截图",
+    "outputImages": [
+      "/images/2046520509651886451_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/op7418/status/2046520509651886451",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046952548469530716",
+    "title": "汽车人月球基地集结",
+    "thumbnail": "/images/2046952548469530716_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T07:58:50.215Z",
+    "prompt": "汽车人全员月球基地集结，地球悬于身后星空，赛博坦旗帜飘扬",
+    "outputImages": [
+      "/images/2046952548469530716_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046952548469530716",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046952548469530716",
+    "title": "霸天虎外星战舰列阵图",
+    "thumbnail": "/images/2046952548469530716_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T07:58:49.093Z",
+    "prompt": "霸天虎全员列阵外星战舰甲板，威震天坐于王座俯视全军",
+    "outputImages": [
+      "/images/2046952548469530716_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046952548469530716",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046924538643107922",
+    "title": "青蛇小青妖娆写真集",
+    "thumbnail": "/images/2046924538643107922_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 7
+    },
+    "createdAt": "2026-04-23T07:58:43.433Z",
+    "prompt": "青蛇小青写真大片，绿色紧身蛇鳞裙，湿发红唇，妖娆妩媚",
+    "outputImages": [
+      "/images/2046924538643107922_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046924538643107922",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046900795229217063",
+    "title": "冷艳高级感镜中倒影美女",
+    "thumbnail": "/images/2046900795229217063_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T07:58:39.066Z",
+    "prompt": "极其美丽的女人，带有冷酷、超然的氛围感，精致考究的面部特征，冷艳的高级脸，飘逸的长发，优雅迷人的身材，（角色特征完全锁定且一致）场景：带有镜子的室内空间（浴室或镜面墙），多重倒影，空间具有层次感姿势：站在镜子前，一只手轻轻触碰镜面或搭在台面上，身体微微倾斜，头部轻柔地转向镜头表情：平静且面无表情，带有一丝冷酷的冷漠与超然镜头角度：低角度或轻微侧角度拍摄，画面中清晰可见镜中的倒影灯光：冷白光作为主光源，带有局部阴影，强调结构轮廓和立体感风格：高端时尚大片，微妙的胶片颗粒，低对比度细节：细腻逼真的皮肤纹理，清晰却又柔和分层且略带模糊的镜中倒影氛围：克制、理性、疏离，带有一丝超现实的虚幻感质量：超清晰的8K，极致的细节，电影级的光影，美丽的景深散景",
+    "outputImages": [
+      "/images/2046900795229217063_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046900795229217063",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046766344163737788",
+    "title": "暗黑宫廷武则天皇后香水",
+    "thumbnail": "/images/2046766344163737788_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T07:58:36.919Z",
+    "prompt": "武则天同款皇后香水广告，龙纹金瓶，暗黑宫廷氛围感大片",
+    "outputImages": [
+      "/images/2046766344163737788_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046766344163737788",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046761780920381490",
+    "title": "经典影视鬼畜表情包",
+    "thumbnail": "/images/2046761780920381490_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T07:58:31.908Z",
+    "prompt": "经典影视角色鬼畜表情包，配上\"你说的都对\"文字气泡",
+    "outputImages": [
+      "/images/2046761780920381490_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046761780920381490",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046795105802289214",
+    "title": "黑化周芷若SSR绝美立绘",
+    "thumbnail": "/images/2046795105802289214_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 1
+    },
+    "createdAt": "2026-04-23T07:58:10.515Z",
+    "prompt": "周芷若黑化版SSR立绘，黑纱红唇，九阴白骨爪寒光凛冽",
+    "outputImages": [
+      "/images/2046795105802289214_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046795105802289214",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046836657035641103",
+    "title": "古筝弹唱古典美人",
+    "thumbnail": "/images/2046836657035641103_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T07:58:08.313Z",
+    "prompt": "陈圆圆直播间，弹幕全在刷\"圆圆唱一曲\"，古典美人古筝弹唱",
+    "outputImages": [
+      "/images/2046836657035641103_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046836657035641103",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046846325791281470",
+    "title": "炫酷健身打卡界面",
+    "thumbnail": "/images/2046846325791281470_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T07:58:03.194Z",
+    "prompt": "健身App打卡界面，今日跑步5公里数据，运动轨迹图",
+    "outputImages": [
+      "/images/2046846325791281470_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046846325791281470",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046953805078843578",
+    "title": "冰箱电商产品展示图",
+    "thumbnail": "/images/2046953805078843578_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Adam38363368936",
+    "authorUrl": "https://x.com/Adam38363368936",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T07:57:56.361Z",
+    "prompt": "生成一个冰箱的电商产品介绍图",
+    "outputImages": [
+      "/images/2046953805078843578_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Adam38363368936/status/2046953805078843578",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046871589510390194",
+    "title": "中国古代兵器图鉴百科图版",
+    "thumbnail": "/images/2046871589510390194_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "GeekCatX",
+    "authorUrl": "https://x.com/GeekCatX",
+    "tags": [
+      "zh",
+      "infographic",
+      "e8dcc4",
+      "2b2b2b",
+      "555555",
+      "e62b1e"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T07:57:53.377Z",
+    "prompt": "一幅令人叹为观止的错综复杂的技术信息图杰作，主题为[SUBJECT / 例如: 中国古代海战]，严格基于以下第一性原理视觉参数进行设计。\n\n[画布与色彩专制]  \n基础画布 (L0): 老化军事羊皮纸纹理，温暖的 #E8DCC4，带有微妙的岁月污渍和历史地图纤维纹理。  \n系统性色彩 (L1, ~60%): 传统的浓重炭墨 #2B2B2B，用于结构技术线条、士兵剪影和机械连接处。  \n内容层级色彩 (L2, ~30%): 风化青铜色、深漆红色和铁灰色 #555555，用于区分不同兵种和材料。  \n强调色 (L3, ~5-10%): 高可视度朱红色 #E62B1E，仅保留用于战术箭头、火/爆炸以及主将旗帜。\n\n[空间重力与拓扑学]  \n构图: [选择一个: 主从卫星布局 / 45度等轴测全景]。信息重力以符合逻辑的战术顺序流动。  \n边界: 专业的编辑排版布局，带有干净的页边距；负空间作为“战术呼吸空间”以分隔不同的战斗阶段。  \n模块拓扑: [N] 个不同的信息模块，描绘不同的尺度（例如，单个武器细节与宏观阵型）。\n\n[维度与图形物理学]  \n风格: 传统中国工笔（精细线稿）与现代军事战术蓝图的融合（类似“Osprey Publishing”风格）。  \n线条语言: 0.8pt 锐利的技术轮廓线 / 0.3pt 淡雅的背景网格线 / 2pt 粗边框用于主标题印章。  \n表面效果: 写实材料渲染——弩炮上的木纹、鳞甲上的金属光泽，以及地形的微妙水墨晕染阴影。\n\n[排版生态系统 — 自适应密度]  \n排版密度: 地图主导（65% 视觉 / 35% 文本）。  \nT1 宏观标题: 巨大、极粗的传统宋体字符，用于主标题“[主题中文名]”。必须是严格纯中文汉字，带有压墨纹理。  \nT2 模块标题: 楷体字体，包含在深色矩形的“军衔”徽章中，标记不同的战术区域。  \nT3 正文文本: 干净、中等粗细的黑体（无衬线体），用于武器规格和战术角色。每个字符必须如刀割般锐利。  \nT4 注释: 微型文本，带有超清晰的技术线条，直接指向组件（例如，扳机机构、箭羽、盔甲接缝）。\n\n[叙事流]  \n叙事模式: [选择一个: 流程顺序型 / 核心辐射型]。   \n视觉入口点: 最重要的战术单位（例如，指挥战车或主攻城器械）。  \n路径机制: 数字序列（1, 2, 3…）或粗体朱红色箭头，引导观者了解战斗逻辑。\n\n[图像学与隐喻]  \n图标风格: 高度详细的历史象形图，用于各个兵种（步兵、骑兵、弓箭手）。  \n核心隐喻: 军事秩序如同精密的钟表发条机制。  \n一致性: 所有符号必须遵循[时期/王朝, 如: Tang Dynasty]的军事美学。\n\n[模块结构 — 建议区块]  \n[MOD 1: 核心展品] — 主要的[武器/阵型]，带有展示内部机械结构的爆炸视图细节。  \n[MOD 2: 战术地图] — 俯视图示意图，显示单位移动和火力线。  \n[MOD 3: 士兵装备] — 攻击与防御装备的特写并排对比。  \n[MOD 4: 后勤/统计数据] — 基于小图标的图表，显示射程、重量或部队密度。\n\n[最终执行锁定]  \n渲染为单个、超细节的教育图版。所有视觉系统必须在内部保持一致，具有专业的博物馆档案美学。每一个像素都必须服务于阐明复杂军事历史的目的。  \n分辨率目标: 最大信息密度，达到印刷级百科全书质量。\n\n主题：中国古代兵器图鉴 3:4 4k文字清晰可读",
+    "outputImages": [
+      "/images/2046871589510390194_0.jpeg",
+      "/images/2046871589510390194_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/GeekCatX/status/2046871589510390194",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046875573574877663",
+    "title": "卡哇伊国家主题贴纸包",
+    "thumbnail": "/images/2046875573574877663_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "aleenaamiir",
+    "authorUrl": "https://x.com/aleenaamiir",
+    "tags": [
+      "zh",
+      "logo"
+    ],
+    "category": "logo",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 2
+    },
+    "createdAt": "2026-04-23T07:57:51.160Z",
+    "prompt": "设计一款可爱的卡哇伊贴纸包，特色是来自[国家]的著名事物，包括标志性美食、地标建筑和传统物品，全都带有可爱的脸庞，柔和的粉彩色，圆润的形状，极简的阴影，Q版风格，光泽贴纸质感，高分辨率，以贴纸排版的形式排列",
+    "outputImages": [
+      "/images/2046875573574877663_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/aleenaamiir/status/2046875573574877663",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046995536528445697",
+    "title": "绝美佳肴制作创意海报",
+    "thumbnail": "/images/2046995536528445697_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "johnAGI168",
+    "authorUrl": "https://x.com/johnAGI168",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T07:57:44.752Z",
+    "prompt": "制作一张 XXXX 美食制作海报",
+    "outputImages": [
+      "/images/2046995536528445697_0.jpeg",
+      "/images/2046995536528445697_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/johnAGI168/status/2046995536528445697",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046891801072501046",
+    "title": "心脏病发作过程图解",
+    "thumbnail": "/images/2046891801072501046_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "LudovicCreator",
+    "authorUrl": "https://x.com/LudovicCreator",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T07:57:27.036Z",
+    "prompt": "{\n  \"type\": \"comprehensive medical infographic\",\n  \"style\": \"highly detailed 3D medical illustration, clinical white background, clean typography\",\n  \"header\": {\n    \"title_cn\": \"\",\n    \"title_en\": \"{argument name=\\\"english title\\\" default=\\\"THE CAUSAL CHAIN OF HEART ATTACK\\\"}\",\n    \"subtitle\": \"Chest pain is not the beginning. Vascular damage is.\",\n    \"top_right_sequence\": {\n      \"count\": 6,\n      \"labels\": [\n        \"Risk Factors\",\n        \"Plaque Formation\",\n        \"Rupture\",\n        \"Clotting\",\n        \"Ischemia\",\n        \"Damage\"\n      ]\n    }\n  },\n  \"centerpiece\": {\n    \"description\": \"{argument name=\\\"central figure\\\" default=\\\"transparent anatomical human body showing heart, coronary arteries, lungs, and vascular system\\\"}\",\n    \"details\": \"pathway highlighted in {argument name=\\\"highlight color\\\" default=\\\"glowing red\\\"} focusing on the coronary arteries and radiating pain to the chest and left arm\"\n  },\n  \"layout\": {\n    \"left_column\": [\n      {\n        \"id\": \"01\",\n        \"title\": \"Major Risk Factors\",\n        \"elements\": 6,\n        \"labels\": [\n          \"Smoking\",\n          \"High LDL cholesterol\",\n          \"Hypertension\",\n          \"Diabetes\",\n          \"Obesity\",\n          \"Chronic stress\"\n        ]\n      },\n      {\n        \"id\": \"02\",\n        \"title\": \"Atherosclerosis Development\",\n        \"elements\": 2,\n        \"labels\": [\n          \"Fatty streak to plaque\",\n          \"Coronary artery wall\"\n        ]\n      },\n      {\n        \"id\": \"03\",\n        \"title\": \"Reduced Coronary Blood Flow\",\n        \"elements\": 2,\n        \"labels\": [\n          \"Narrowed artery lumen\",\n          \"Oxygen delivery decline\"\n        ]\n      },\n      {\n        \"id\": \"04\",\n        \"title\": \"Vulnerable Plaque\",\n        \"elements\": 2,\n        \"labels\": [\n          \"Thin fibrous cap\",\n          \"Lipid-rich core\"\n        ]\n      }\n    ],\n    \"center_overlay\": [\n      {\n        \"id\": \"05\",\n        \"title\": \"Plaque Rupture & Clot Formation\",\n        \"elements\": 3,\n        \"labels\": [\n          \"Plaque rupture diagram\",\n          \"Platelet aggregation\",\n          \"Occlusive thrombus\"\n        ]\n      },\n      {\n        \"id\": \"06\",\n        \"title\": \"Myocardial Ischemia\",\n        \"elements\": 1,\n        \"labels\": [\n          \"Heart muscle cross-section with blocked coronary artery\"\n        ]\n      }\n    ],\n    \"right_column\": [\n      {\n        \"id\": \"07\",\n        \"title\": \"Cellular Injury Cascade\",\n        \"elements\": 4,\n        \"labels\": [\n          \"Oxygen deprivation\",\n          \"Mitochondrial failure\",\n          \"Cell membrane breakdown\",\n          \"Troponin release\"\n        ]\n      },\n      {\n        \"id\": \"08\",\n        \"title\": \"Acute Heart Attack\",\n        \"elements\": 1,\n        \"labels\": [\n          \"Patient clutching chest\"\n        ]\n      },\n      {\n        \"id\": \"09\",\n        \"title\": \"Permanent Myocardial Damage\",\n        \"elements\": 1,\n        \"labels\": [\n          \"Necrotic heart tissue\"\n        ]\n      },\n      {\n        \"id\": \"10\",\n        \"title\": \"Complications\",\n        \"elements\": 2,\n        \"labels\": [\n          \"Arrhythmia\",\n          \"Heart failure\"\n        ]\n      },\n      {\n        \"id\": \"11\",\n        \"title\": \"Beyond the Heart\",\n        \"elements\": 2,\n        \"labels\": [\n          \"Reduced systemic perfusion\",\n          \"Brain and kidney impact\"\n        ]\n      }\n    ],\n    \"bottom_row\": [\n      {\n        \"id\": \"12\",\n        \"title\": \"Pain Is the Final Signal\",\n        \"elements\": 7,\n        \"labels\": [\n          \"Risk Exposure\",\n          \"Plaque Buildup\",\n          \"Artery Narrowing\",\n          \"Plaque Rupture\",\n          \"Clot Formation\",\n          \"Muscle Death\",\n          \"Man in pain\"\n        ]\n      }\n    ]\n  },\n  \"theme\": \"{argument name=\\\"disease focus\\\" default=\\\"heart attack and coronary artery blockage\\\"}\"\n}",
+    "outputImages": [
+      "/images/2046891801072501046_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/LudovicCreator/status/2046891801072501046",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046760848455286951",
+    "title": "四大蜘蛛精缠丝洞诱惑",
+    "thumbnail": "/images/2046760848455286951_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:41:11.673Z",
+    "prompt": "西游记蜘蛛精诱惑海报，四位妖艳女妖缠丝洞中，迷雾朦胧妖冶",
+    "outputImages": [
+      "/images/2046760848455286951_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046760848455286951",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046767237042970849",
+    "title": "老板突降红包的搞笑群聊",
+    "thumbnail": "/images/2046767237042970849_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:41:01.551Z",
+    "prompt": "微信聊天截图，群聊里老板突然发红包的搞笑对话界面",
+    "outputImages": [
+      "/images/2046767237042970849_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046767237042970849",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046762531860168915",
+    "title": "王熙凤金丝浮雕手机壳",
+    "thumbnail": "/images/2046762531860168915_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:40:59.212Z",
+    "prompt": "王熙凤联名手机壳，凤冠霞帔金丝浮雕，背面烫金凤凰纹饰",
+    "outputImages": [
+      "/images/2046762531860168915_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046762531860168915",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046838142939066463",
+    "title": "中国版封面潘金莲高定大片",
+    "thumbnail": "/images/2046838142939066463_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:40:42.870Z",
+    "prompt": "VOGUE中国版封面，潘金莲穿现代高定礼服，冷艳红唇眼神凌厉",
+    "outputImages": [
+      "/images/2046838142939066463_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046838142939066463",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046758832131461255",
+    "title": "韩系女友私密白衬衫特写",
+    "thumbnail": "/images/2046758832131461255_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain",
+    "tags": [
+      "zh",
+      "portrait"
+    ],
+    "category": "portrait",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:40:18.563Z",
+    "prompt": "9:16 竖屏 — 韩国偶像私密肖像，单人主体，男友视角\n\n柔和黑雾滤镜，发光高光，温柔光晕，轻微过曝，柔和薄雾，降低对比度，奶油色调\n\n近距离构图，私密视角，轻微手持感\n\n年轻韩国女偶像，自然柔和妆容，水润逼真皮肤纹理，微妙瑕疵\n\n服装：略微宽松慵懒的超大号白衬衫 + 短底装，柔软面料，自然垂坠，无暴露元素\n\n头发：长黑发，微乱，脸颊周围柔和动态\n\n姿势：坐着或向镜头微微前倾，上半身微倾；一只手轻轻搭在锁骨附近或轻握衬衫边缘，另一只手放松；肩膀松弛，轻微自然身体曲线\n\n表情：柔和俏皮的微笑，微启的双唇，与镜头温暖的眼神接触，带有挑逗亲密的暗示\n\n镜头：近景至半身构图，平视或微低角度，仿佛观看者就在她正前方\n\n光影：温暖漫射的窗户光，皮肤上柔和的高光光晕，温柔阴影，轻微镜头眩光或漏光\n\n氛围：私密，浪漫，微妙诱惑，“捕捉到的私密瞬间”感觉\n\n画质：超写实，细腻电影颗粒，轻微动态模糊，不完美构图，梦幻电影级柔焦",
+    "outputImages": [
+      "/images/2046758832131461255_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2046758832131461255",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046881068578689257",
+    "title": "宝可梦立体纸雕奇幻世界",
+    "thumbnail": "/images/2046881068578689257_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "0x00_Krypt",
+    "authorUrl": "https://x.com/0x00_Krypt",
+    "tags": [
+      "zh",
+      "logo"
+    ],
+    "category": "logo",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:40:15.729Z",
+    "prompt": "平视直视视角，直视一个极度鲜艳的3D分层纸雕立体模型。\n精灵球红白色，皮卡丘黄色，天空蓝和\n草绿色点缀，极高饱和度，\n在每一个深度平面上都能清晰看到带有硬切割边缘和厚纸横截面的实体纸张分层。极繁主义构图，拥挤的宝可梦世界场景 —— 分层的宝可梦中心和道馆建筑在所有深度平面中向后退去，\n皮卡丘作为中心人物在前景层释放雷电的半空中，数十只标志性宝可梦 —— 喷火龙、耿鬼、伊布、卡比兽、超梦 —— 每一只都占据着单独的深度平面，训练家小智和劲敌在战斗层之间穿梭，精灵球爆裂效果在释放中途冻结在所有平面上，栖息地层之间的高草丛和路线通道，遥远背景层中的传说级宝可梦剪影，\n散落的精灵球、徽章和树果物品挤满了充满活力的前景。柔和的单向影棚照明在每一个实体纸张层之间创造出深深的投影，整体呈现哑光纸张纹理，\n无发光，无柔和边缘，无体积光，octane渲染，8k，干净细节 --ar 3:4",
+    "outputImages": [
+      "/images/2046881068578689257_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/0x00_Krypt/status/2046881068578689257",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046913167553352189",
+    "title": "复古手绘拉面食谱插画页",
+    "thumbnail": "/images/2046913167553352189_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "icreatelife",
+    "authorUrl": "https://x.com/icreatelife",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:40:13.006Z",
+    "prompt": "将这碗拉面变成一个带有插画的可爱食谱页面，风格类似手绘的复古烹饪书。精心绘制的带有标签、测量单位以及像碗、打蛋器或勺子这样工具的食材应该环绕着构图的焦点。为了营造一种温馨、怀旧的氛围，使用有质感的阴影、温暖的粉彩色调和细腻的、类似墨水的轮廓线。以手写的方式添加食谱文字，将食材和说明有机地融入布局中。确保页面具有艺术性和教育性的基调，将彩色插画的美丽与烹饪书的审美结合起来。",
+    "outputImages": [
+      "/images/2046913167553352189_0.jpeg",
+      "/images/2046913167553352189_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/icreatelife/status/2046913167553352189",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046871258105618854",
+    "title": "真人实拍效果转换",
+    "thumbnail": "/images/2046871258105618854_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "johnAGI168",
+    "authorUrl": "https://x.com/johnAGI168",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:40:09.330Z",
+    "prompt": "给我看看这张图片的真人拍摄版本",
+    "outputImages": [
+      "/images/2046871258105618854_0.jpeg",
+      "/images/2046871258105618854_1.png"
+    ],
+    "sourceUrl": "https://x.com/johnAGI168/status/2046871258105618854",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046816755864220082",
+    "title": "实景女性旅行杂志设计",
+    "thumbnail": "/images/2046816755864220082_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "KusoPhoto",
+    "authorUrl": "https://x.com/KusoPhoto",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:40:08.095Z",
+    "prompt": "请在纬度35.31721720077321，经度139.5357227423284的位置上，创建一本女性旅行杂志（包括封面和对开页）以及介绍该杂志的LP页面和专用APP，这些内容要与当地当前的时间氛围和实时天气相匹配。请将指定的角色融入其中，使其看起来像是在进行旅游。\n\n【要融入的内容】\n・主标题・宣传语（吸引读者目光的大标题和小标题）\n・导读文（简洁传达特辑主题或魅力的引言文本）\n・主视觉图（占据对开页整体或单面的大幅象征性照片）\n・辅助照片群（料理特写、空间氛围、商品细节等细部镜头）\n・亮点・看点（将该地点或事物的最大卖点归纳为约3个话题）\n・基本信息数据（地址、营业时间、定休日、费用、交通方式、联系方式等规格）\n・周边地图・地图（显示目的地与最近车站或地标的位置关系图）\n・小知识・Tips（了解后有益的信息或历史背景等小栏目）\n・评价・口碑（访客、专业人士、编辑的推荐评论）\n・布局构成（注重Z法则或F法则的视线引导和留白的运用）\n・排版・字体（标题的装饰字体与正文高可读性字体的区分使用）\n・配色・色彩调色板（与主题相符的基色和强调色的统一）\n・装饰・点缀（对话框、图标、邮戳风徽章等视觉强调元素）\n\n【NG】\n・不更改参考角色的时尚风格。\n・不直接使用参考角色的表情或姿势，而是进行调整。\n・在杂志、APP、LP中，不使用相同的姿势或角度。",
+    "outputImages": [
+      "/images/2046816755864220082_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/KusoPhoto/status/2046816755864220082",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046865811323973989",
+    "title": "和风歌舞伎酒吧歌手列表页",
+    "thumbnail": "/images/2046865811323973989_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "suu2u33",
+    "authorUrl": "https://x.com/suu2u33",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:40:04.646Z",
+    "prompt": "虚构的网站　请为名为suzuri的和风歌舞伎酒吧的HP制作一名歌手列表页面。请让每位歌舞伎女郎拥有不同氛围的脸型，并穿上不同的和风服装",
+    "outputImages": [
+      "/images/2046865811323973989_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/suu2u33/status/2046865811323973989",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046865811323973989",
+    "title": "重塑独特面部特征",
+    "thumbnail": "/images/2046865811323973989_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "suu2u33",
+    "authorUrl": "https://x.com/suu2u33",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:40:03.546Z",
+    "prompt": "因为脸型过于相似，请更改面部信息，让各自的特征更加突出",
+    "outputImages": [
+      "/images/2046865811323973989_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/suu2u33/status/2046865811323973989",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046866168208916503",
+    "title": "太阳能驱动的未来沙漠文明设定集",
+    "thumbnail": "/images/2046866168208916503_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "aleenaamiir",
+    "authorUrl": "https://x.com/aleenaamiir",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 1
+    },
+    "createdAt": "2026-04-23T01:40:00.762Z",
+    "prompt": "为一个由太阳能技术驱动的未来沙漠文明创建一个完整的视觉世界观设定集，多张图像包括建筑、角色、服装、车辆和地图，连贯的设计语言，电影级现实主义，超精细。",
+    "outputImages": [
+      "/images/2046866168208916503_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/aleenaamiir/status/2046866168208916503",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046889604817777067",
+    "title": "复古电影票根海报",
+    "thumbnail": "/images/2046889604817777067_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "GeekCatX",
+    "authorUrl": "https://x.com/GeekCatX",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:39:59.684Z",
+    "prompt": "设计一张[电影名称]的复古电影票根海报，风格为黑白木刻版画/油印版画。  \n画布：竖版3:4比例，纯黑色背景。\n\n━━━━━━━━ 整体布局 ━━━━━━━━\n\n左侧（占宽20%）：垂直排列3张完全相同的缩小版票根，  \n像胶片负片一样上下叠放，每张之间用圆形打孔分隔。  \n右侧（占宽80%）：1张大幅主票根，竖向排列，填满画布全高。  \n左侧与右侧内容100%一致，左侧仅为等比缩小3倍的重复，不得变形。  \n票根内所有文字元素全部左对齐，无任何居中排列。\n\n━━━━━━━━ 票根内容（从上到下）━━━━━━━━\n\n【主插图区】占票根高度45%  \n该电影最具代表性的木刻版画场景，纯黑白，  \n密集排线质感，零灰色，极高对比度，无任何中间色调\n\n四边锯齿形打孔撕边边框贯穿全票\n\n【标题区】全部左对齐  \n中文片名[中文片名](%E5%B9%B4%E4%BB%BD) ← 最大字号，粗黑体，视觉重量最重  \n英文片名 [English Title] ← 次大字号，衬线体，紧跟中文下方\n\n- 虚线分隔\n\n【信息区】全部左对齐\n\n以下所有行：导演、类型、日期、HALL/SEAT/PRICE、DATE/TIME，  \n必须使用完全相同的字号、完全相同的字重、完全相同的字体，  \n视觉效果如同一台老式针式打印机从头到尾连续打印，  \n中途从未换过字号或字体，每一行文字高度像素级一致。\n\n字体规格：\n\n- 字号：极小，约9px等效，不得超过这个尺寸\n    \n- 字重：极细，笔画纤细如针，类似 Courier New Regular\n    \n- 字形：等宽字体，每个字符占格相同\n    \n- 质感：轻微色块不均，模拟色带油墨印迹，  \n    部分笔画边缘略有锯齿或断点，非完美矢量\n\n排版节奏严格还原如下（全部顶格左对齐）：\n\n[国家] 导演中文姓名 Director English Name  \nGenre1/Genre2  \n首映日期(节展名称) / 上映日期(地区) / XXX分钟\n\n---\n\nHALL : SEAT : PRICE :  \n[XX] [XX-XX] [XX.X]  \nDATE : TIME :  \n[DD/Mon/YYYY] [HH:MM-HH:MM]\n\n---\n\n此信息区每一行在视觉上拥有完全相同的存在感，  \n如同一张连续打印的收据，无任何行拥有视觉特权，  \n无加粗，无字号差异，无例外。\n\n【台词装饰区】全部左对齐  \n台词外围仅用一根细线单框围合，四角无花纹无装饰，  \n线条纤细均匀，类似钢笔划出的简单矩形边框，  \n留有适当内边距，边框与票根左右边距对齐，  \n框内文字左对齐排列：\n\n“[该电影最经典的英文台词]”  \n手写草书字体或打字机字体，字号略大于信息区\n\n━━━━━━━━ 强制执行规则 ━━━━━━━━\n\n【字号层级 · 全局唯一标准】  \n第1级：中文片名 → 最大，粗黑体  \n第2级：英文片名 → 次大，衬线体  \n第3级：台词 → 中等，手写草书或打字机体  \n第4级：信息区全部内容 → 最小，等宽极细体，  \n导演/类型/日期/HALL/SEAT/PRICE/DATE/TIME  \n所有行严格等高等重，像素级一致\n\n【绝对禁止】  \n✗ 画面中出现任何序号标记（①②③等符号一律不得渲染）  \n✗ 任何区域出现居中对齐，全局统一左对齐  \n✗ 台词边框出现花纹、角饰、藤蔓等复杂装饰  \n✗ 信息区任意两行出现字号差异  \n✗ HALL / SEAT / PRICE 三列出现高低错位  \n✗ DATE / TIME 两列字号不一致  \n✗ 信息区出现任何加粗或加重笔画  \n✗ 左右票根出现非等比变形  \n✗ 任何字段保留占位符，必须填写真实内容\n\n电影名称：阿甘正传",
+    "outputImages": [
+      "/images/2046889604817777067_0.jpeg",
+      "/images/2046889604817777067_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/GeekCatX/status/2046889604817777067",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046869915034890703",
+    "title": "异想天开的传统美食视觉",
+    "thumbnail": "/images/2046869915034890703_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "LinusEkenstam",
+    "authorUrl": "https://x.com/LinusEkenstam",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:39:57.183Z",
+    "prompt": "创建一份品牌指南文档，以及关于如何在视觉上呈现这家餐厅的详细信息。它的名字应该是“Can Dende”，色彩丰富，异想天开，但又很传统，荷叶边是必备元素，鲜艳的黄色，红白格子以及超级干净和新鲜的食物。让我微笑",
+    "outputImages": [
+      "/images/2046869915034890703_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/LinusEkenstam/status/2046869915034890703",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046866186026254747",
+    "title": "红夹克少女的四重场景穿梭",
+    "thumbnail": "/images/2046866186026254747_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "aleenaamiir",
+    "authorUrl": "https://x.com/aleenaamiir",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:39:55.514Z",
+    "prompt": "创建一个高度一致的多图套组，其中同一位留着黑色短发、长有雀斑、穿着红色夹克的年轻女子出现在不同的环境中（城市、海滩、山脉、夜街），保持完全一致的面部特征、比例和服装细节，超写实，电影感光照变化。",
+    "outputImages": [
+      "/images/2046866186026254747_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/aleenaamiir/status/2046866186026254747",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046866223762423852",
+    "title": "规范化的色彩与排版设计系统",
+    "thumbnail": "/images/2046866223762423852_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "aleenaamiir",
+    "authorUrl": "https://x.com/aleenaamiir",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:39:53.663Z",
+    "prompt": "生成一个多页面的设计系统，其中每张图像都遵循严格的8px网格、一致的间距、排版比例和色彩系统，展示具有完美对齐和一致性的UI组件、布局和变体。",
+    "outputImages": [
+      "/images/2046866223762423852_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/aleenaamiir/status/2046866223762423852",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046866247678398482",
+    "title": "未来主义时尚杂志跨页设计",
+    "thumbnail": "/images/2046866247678398482_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "aleenaamiir",
+    "authorUrl": "https://x.com/aleenaamiir",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:39:51.787Z",
+    "prompt": "设计一个关于未来主义时尚的多页编辑杂志跨页，包括封面页、目录页和专题排版，粗体字体，实验性网格，高级时尚摄影风格，戏剧性灯光，现代编辑美学。",
+    "outputImages": [
+      "/images/2046866247678398482_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/aleenaamiir/status/2046866247678398482",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046866321040925180",
+    "title": "VoltRush能量饮料全套营销视觉",
+    "thumbnail": "/images/2046866321040925180_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "aleenaamiir",
+    "authorUrl": "https://x.com/aleenaamiir",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:39:48.313Z",
+    "prompt": "创建一个名为‘VoltRush’的新能量饮料的完整营销活动视觉套件，多张图像包括广告牌广告、Instagram帖子、网站横幅和产品拍摄，霓虹色彩调色板，粗体排版，高能量商业风格。",
+    "outputImages": [
+      "/images/2046866321040925180_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/aleenaamiir/status/2046866321040925180",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046768167608090775",
+    "title": "直播PK比分胶着瞬间",
+    "thumbnail": "/images/2046768167608090775_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 1
+    },
+    "createdAt": "2026-04-23T01:39:43.392Z",
+    "prompt": "直播PK对决截图，左右分屏两位主播，票数实时比分胶着",
+    "outputImages": [
+      "/images/2046768167608090775_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046768167608090775",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046924538643107922",
+    "title": "三国绝色貂蝉回眸立绘",
+    "thumbnail": "/images/2046924538643107922_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "game"
+    ],
+    "category": "game",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:39:36.168Z",
+    "prompt": "三国游戏貂蝉角色立绘，紫色薄纱舞裙，回眸一笑百媚生",
+    "outputImages": [
+      "/images/2046924538643107922_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046924538643107922",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046846325791281470",
+    "title": "深色毛玻璃音乐播放器界面",
+    "thumbnail": "/images/2046846325791281470_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:39:32.479Z",
+    "prompt": "音乐播放器界面，深色毛玻璃风格，正在播放周杰伦歌曲",
+    "outputImages": [
+      "/images/2046846325791281470_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046846325791281470",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046782295609324000",
+    "title": "深夜烧烤啤酒外卖UI界面",
+    "thumbnail": "/images/2046782295609324000_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:39:22.283Z",
+    "prompt": "外卖App首页界面，深夜模式，推荐\"烧烤啤酒夜宵专区\"",
+    "outputImages": [
+      "/images/2046782295609324000_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046782295609324000",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046785940593725633",
+    "title": "绝美唐风凤冠佳人的微醺特写",
+    "thumbnail": "/images/2046785940593725633_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "liyue_ai",
+    "authorUrl": "https://x.com/liyue_ai",
+    "tags": [
+      "zh",
+      "portrait"
+    ],
+    "category": "portrait",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:39:07.315Z",
+    "prompt": "国风CG插画，唐风美学，古代绝美女子，半身近景特写，画面重心聚焦面部与上半身，高级人像构图，电影级镜头语言与空间透视\n\n人物设定：\n东亚古典美人，冷白通透肌肤，细腻真实皮肤质感，柔润微光；\n五官精致立体但自然不过度夸张，狭长凤眼，眼尾微挑，眼神含情带羞、微醺朦胧，长睫毛投下细微阴影；\n唇色如胭脂晕染，微启唇，神态柔美而富有情绪张力，呈现“含蓄东方美”\n\n造型设计：\n粉色系华丽唐风服饰，轻柔贴合身体曲线，层次丰富但不过度堆叠；\n适度低领设计，强调锁骨与颈肩线条，视觉引导自然不过分直白；\n头戴精工凤冠（金属、珍珠、宝石、流苏），材质真实反光，随动作轻微摆动\n\n动态与姿态：\n身体微侧或轻旋转姿态，颈部延展，肩线舒展，手部形成柔性引导线，增强画面韵律与女性柔美张力\n\n光影系统：\n电影级布光\n主光：暖金侧前方光聚焦面部与肌肤高光\n辅光：冷色环境光塑造体积与空间\n边缘光勾勒发丝与肩颈轮廓\n高光控制不过曝，阴影保留细节，面部光影柔和过渡\n\n画面风格：\n超写实CG人像融合东方写意气韵，轻微朦胧美学\n\n氛围与质感：\n梦幻、含蓄、东方审美的高级氛围；\n背景虚化，弱化环境强化人物；\n轻微胶片颗粒+ 柔焦辉光，增强情绪与质感\n\n色彩体系：\n主色：胭脂粉、鎏金\n辅色：冷青蓝灰\n整体低饱和高质感，避免艳俗\n\n镜头参数：\n85mm portrait lens, f1.4–f2, shallow depth of field, cinematic framing\n\n画质：\nultra detailed, 8K–16K, extreme detail, high resolution, cinematic lighting\n\n比例：\n9:16",
+    "outputImages": [
+      "/images/2046785940593725633_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/liyue_ai/status/2046785940593725633",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046554315410821292",
+    "title": "蒸汽朋克探险记分镜图",
+    "thumbnail": "/images/2046554315410821292_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "YaReYaRu30Life",
+    "authorUrl": "https://x.com/YaReYaRu30Life",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:39:05.963Z",
+    "prompt": "从这张图像中想象  \n像蒸汽朋克探险记那样的分镜  \n假设大约1分钟的影像。  \n\n分镜内所示画面的宽高比是16:9（这里优先度较高）  \n\n分镜整体的设计图以宽高比9:16输出  \n\n专业的设计规格",
+    "outputImages": [
+      "/images/2046554315410821292_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/YaReYaRu30Life/status/2046554315410821292",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046762498087342534",
+    "title": "个人品牌多页套件设计",
+    "thumbnail": "/images/2046762498087342534_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Jashanx_gill",
+    "authorUrl": "https://x.com/Jashanx_gill",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:39:03.439Z",
+    "prompt": "为个人品牌创建了一个多页品牌套件",
+    "outputImages": [
+      "/images/2046762498087342534_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Jashanx_gill/status/2046762498087342534",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046899315952566498",
+    "title": "悟空全形态超级赛亚人变身",
+    "thumbnail": "/images/2046899315952566498_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "CharaspowerAI",
+    "authorUrl": "https://x.com/CharaspowerAI",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:39:01.205Z",
+    "prompt": "创作龙珠Z中的悟空，在一个充满电影感的构图中展示他从基础形态到终极形态的所有超级赛亚人变身。",
+    "outputImages": [
+      "/images/2046899315952566498_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/CharaspowerAI/status/2046899315952566498",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046853330140639278",
+    "title": "极简命运星盘塔罗海报",
+    "thumbnail": "/images/2046853330140639278_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "VoxcatAI",
+    "authorUrl": "https://x.com/VoxcatAI",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:38:59.882Z",
+    "prompt": "根据【角色/主题】生成一张收藏级极简命运星盘 / 塔罗海报。画面中央为该角色巨大、优雅、完整的人物剪影式主视觉，整体保留强烈剪影感，但不是纯黑剪影，而是带有角色主题色倾向的低饱和、有色、偏暗的半剪影；内部只保留非常克制的颜色层次、轻微渐变与微弱辉光，不做完整上色立绘。人物主要通过轮廓、姿态、发型、服饰外形与标志性配饰体现角色辨识度，不强调具体五官，不在剪影内部填充场景，不做叙事拼贴。   \n\n人物背后自动生成与【角色】高度匹配的专属星盘 / 命盘系统，包括同心圆、星轨、黄道刻度、星座连线、月相、神秘符号、几何占星纹样、象征徽记与少量装饰细节。所有配色、纹样、符号系统、装饰元素、材质倾向与光感氛围，全部根据【角色】的身份、气质、能力、阵营、元素属性、世界观与命运感自动推演生成，必须强绑定角色本身，不得模板化。\n\n整体采用严格对称、完整克制的收藏版塔罗牌构图，具有完整边框、角饰、顶部编号区、中部主视觉区、底部角色名铭牌与箴言区。风格融合塔罗构图、新艺术装饰风格、神秘学符号设计与高级极简电影海报审美，整体庄重、神圣、安静、精致、宿命、诗意，具有收藏感与专属感。\n\n整体质感应干净、通透、锐利、精工、华丽，装饰线条清晰细腻，可带有微弱辉光、星尘、能量光纹或金属饰线感；不要纸张纹理，不要纸绘感，不要古旧纸面，不要印刷噪点，不要版画肌理，不要手稿感，不要做旧质感。\n\n画面文字自然融入版式：顶部可有罗马数字或命运编号，中下部呈现【角色】名字，底部加入一句与角色气质高度契合的命运箴言 / 神谕短句，简洁、克制、诗性，像专属于该角色的命运注解。\n\n不要复杂场景，不要剪影内部叙事，不要额外人物，不要模板化背景，不要现代UI，不要廉价奇幻素材，不要过度拥挤，不要失去留白，不要普通角色插画感，不要纯黑剪影，不要完整厚涂立绘感。\n\n竖版 3:4，高清，收藏级，高完成度，精致细节。",
+    "outputImages": [
+      "/images/2046853330140639278_0.jpeg",
+      "/images/2046853330140639278_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/VoxcatAI/status/2046853330140639278",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046844986533056947",
+    "title": "冷艳缠枝莲宫廷香膏广告",
+    "thumbnail": "/images/2046844986533056947_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "joshesye",
+    "authorUrl": "https://x.com/joshesye",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:38:53.212Z",
+    "prompt": "赵飞燕同款掌中舞香膏广告，错金缠枝莲铜瓶，冷艳诡谲深宫氛围感，竖屏9:16",
+    "outputImages": [
+      "/images/2046844986533056947_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/joshesye/status/2046844986533056947",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046859276682219775",
+    "title": "苹果风软盘发布会宣传图",
+    "thumbnail": "/images/2046859276682219775_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "TanShilong",
+    "authorUrl": "https://x.com/TanShilong",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:38:50.515Z",
+    "prompt": "生成一页苹果风格的发布会图片，以BentoCard形式呈现最新一代的3.5寸软盘的宣传页",
+    "outputImages": [
+      "/images/2046859276682219775_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/TanShilong/status/2046859276682219775",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046798164162916741",
+    "title": "妙笔生花极简东方插画",
+    "thumbnail": "/images/2046798164162916741_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "liyue_ai",
+    "authorUrl": "https://x.com/liyue_ai",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:38:48.720Z",
+    "prompt": "极简东方美学 × 商业插画风格，主题“妙笔生花”，\n\n竖版构图，采用S型流动视觉动线，画面简洁但具有设计感，\n\n背景为浅米色宣纸质感，带柔和渐变，\n\n一支毛笔作为起点，笔触延展为流动的彩色墨迹，墨迹在空中逐渐转化为盛开的花朵，花朵造型优雅、适度写实，\n\n色彩体系协调丰富：\n青绿 + 粉色 + 淡橙 + 鎏金点缀，颜色柔和通透不过饱和，\n\n加入轻微粒子光效与流动感，局部金色细线勾勒轮廓，\n\n整体风格：高级商业插画，东方意境 + 现代设计融合，\n\n画面干净、有呼吸感，视觉中心明确，适合海报或品牌KV\n\n高精度细节，柔和光影，细腻质感，优雅格调，电影级画面质感，潮流风格，数字艺术质感，现代图形设计元素。",
+    "outputImages": [
+      "/images/2046798164162916741_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/liyue_ai/status/2046798164162916741",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046866266829553722",
+    "title": "奢华巧克力包装设计全案",
+    "thumbnail": "/images/2046866266829553722_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "aleenaamiir",
+    "authorUrl": "https://x.com/aleenaamiir",
+    "tags": [
+      "zh",
+      "logo"
+    ],
+    "category": "logo",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:38:27.248Z",
+    "prompt": "为名为‘Veloura’的奢华巧克力品牌创建一个多图像包装设计系统，包括盒子设计、烫金logo、标签变体、刀模线、品牌元素以及逼真的产品模型，深沉优雅的色调、电影级工作室照明、照片般逼真的纹理。",
+    "outputImages": [
+      "/images/2046866266829553722_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/aleenaamiir/status/2046866266829553722",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046866206721028117",
+    "title": "疗愈系心理健康应用界面套件",
+    "thumbnail": "/images/2046866206721028117_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "aleenaamiir",
+    "authorUrl": "https://x.com/aleenaamiir",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:38:24.268Z",
+    "prompt": "为一款名为‘CalmSpace’的心理健康应用设计一套完整的移动应用UI套件，多屏幕布局包括引导页、冥想播放器、情绪追踪器、个人资料和设置，柔和渐变，柔和色调，玻璃拟态UI，平滑阴影，高保真，一致的设计系统。",
+    "outputImages": [
+      "/images/2046866206721028117_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/aleenaamiir/status/2046866206721028117",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046836657035641103",
+    "title": "李师师古风琵琶弹唱直播间",
+    "thumbnail": "/images/2046836657035641103_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:38:01.481Z",
+    "prompt": "李师师直播间，古风美人琵琶弹唱，弹幕全刷\"打赏一万\"",
+    "outputImages": [
+      "/images/2046836657035641103_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046836657035641103",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046783664466677965",
+    "title": "潘金莲砒霜古风暗黑包装盒设计",
+    "thumbnail": "/images/2046783664466677965_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-23T01:37:56.787Z",
+    "prompt": "潘金莲同款砒霜包装盒设计，古风暗黑系，水浒周边文创产品",
+    "outputImages": [
+      "/images/2046783664466677965_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046783664466677965",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "opennana-13553",
+    "title": "极简文字的个人色彩诊断图",
+    "thumbnail": "/images/opennana-13553_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "OpenNana",
+    "authorUrl": "https://opennana.com/awesome-prompt-gallery/minimal-text-personal-color-chart",
+    "tags": [
+      "zh",
+      "portrait"
+    ],
+    "category": "portrait",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T12:41:48.641Z",
+    "prompt": "使用这张肖像，创建一个图表优先的个人色彩分析。通过视觉对比展示哪些服装颜色适合对象。保持文本最少并避免段落。",
+    "outputImages": [
+      "/images/opennana-13553_0.jpeg"
+    ],
+    "sourceUrl": "https://opennana.com/awesome-prompt-gallery/minimal-text-personal-color-chart",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046788355396968859",
+    "title": "手绘草图包装提案板设计海报",
+    "thumbnail": "/images/2046788355396968859_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T12:41:47.541Z",
+    "prompt": "请为【产品名称】生成一张“手绘包装提案板风格”的产品介绍海报。 \n\n如果我提供了产品图片，请以该图片为主要参考，保留产品的核心外观特征、包装形态、颜色、材质、品牌识别和整体气质，并优先沿用产品图中的主色调与配色关系进行设计。\n如果我没有提供产品图片，请根据【产品名称】自动生成符合该产品定位的产品外观与包装设计，并根据产品属性、品类特征和气质，自动搭配自然合理的主色、辅助色和背景色。\n\n海报整体风格要求：\n这不是普通电商详情页，也不是单纯棚拍海报，而是一张融合“产品成品图 + 包装设计草图 + 品牌概念开发过程”的创意提案板。整体呈现为高审美、高完成度的品牌设计展示图，像设计师正在展示一个包装概念方案。\n\n画面要求：\n- 竖版构图\n- 使用统一且有品牌感的主色调背景，背景颜色根据产品本身自然决定，不固定为某一种颜色\n- 配色应与产品属性协调：如果有参考图，优先继承参考图的主色和品牌色；如果没有参考图，则根据产品名称自动生成合理的色彩方案\n- 画面中央放置一个最完整、最吸睛的产品主视觉，具有真实质感、立体光影和商业成品效果\n- 产品周围加入多个辅助视觉元素：不同角度的包装草图、结构草图、局部造型探索、手持展示小稿、包装展开思路、品牌字样排版试验\n- 加入自然随性的黑色或深色手绘线稿、箭头、圈画、符号、手写中文批注，让画面具有强烈“设计过程感”和“创意提案感”\n- 成品图要相对精致真实，草图部分要相对随性灵动，形成“完成品 + 设计草图”的对比\n- 版式看起来松弛自由，但整体要有秩序、有节奏、有视觉中心，体现高级平面设计感\n- 可以适度加入与产品相关的小图形、小符号或趣味元素，增强品牌记忆点\n- 最终效果应具有品牌感、创意感、过程感和视觉冲击力\n\n配色原则：\n- 不要固定黄色背景\n- 要根据产品类型、材质、用途、消费感受和品牌气质自动选择主色调\n- 背景色、产品色、文字色、草图线稿色应彼此协调\n- 可以使用高饱和单色背景，也可以使用柔和统一色系背景，只要整体有品牌感和视觉冲击力\n- 色彩应自然服务于产品，而不是喧宾夺主\n\n风格关键词：\n包装设计提案板、品牌概念开发、手绘草图、设计过程感、moodboard、创意评审稿、产品成品渲染、视觉实验、商业设计海报\n\n请特别注意：\n- 如果有参考产品图，优先遵循参考图，不要偏离产品本身\n- 如果没有参考图，则根据产品名称自动生成合理的产品外观、包装和配色方案，并保持整体风格统一\n- 画面重点是“产品介绍 + 创意设计过程展示”\n- 不要做成普通电商详情页，不要做成促销海报，不要过度整齐呆板，不要缺少草图和手写批注，不要廉价感，不要低幼卡通感",
+    "outputImages": [
+      "/images/2046788355396968859_0.jpeg",
+      "/images/2046788355396968859_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046788355396968859",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046844986533056947",
+    "title": "幽暗水殿洛神凝露大片",
+    "thumbnail": "/images/2046844986533056947_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "joshesye",
+    "authorUrl": "https://x.com/joshesye",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T12:41:38.619Z",
+    "prompt": "甄宓同款洛神凝露广告，青玉浮雕洛水纹瓶，幽寂水殿暗黑宫廷大片，比例9:16",
+    "outputImages": [
+      "/images/2046844986533056947_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/joshesye/status/2046844986533056947",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046700418554851630",
+    "title": "旧金山砖墙上的AI海报矩阵",
+    "thumbnail": "/images/2046700418554851630_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "venturetwins",
+    "authorUrl": "https://x.com/venturetwins",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T12:41:36.087Z",
+    "prompt": "在旧金山的一砖墙上制作一个浆糊糊贴海报装置，展示来自各种AI实验室的海报",
+    "outputImages": [
+      "/images/2046700418554851630_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/venturetwins/status/2046700418554851630",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046867191849767142",
+    "title": "中国文明演变史长卷",
+    "thumbnail": "/images/2046867191849767142_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "rionaifantasy",
+    "authorUrl": "https://x.com/rionaifantasy",
+    "tags": [
+      "zh",
+      "manga"
+    ],
+    "category": "manga",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T12:41:33.792Z",
+    "prompt": "请生成一张适合作为“历史科普读物”的纵向长图海报，主题为《中国文明演变史》。\n\n整体内容：\n以时间轴方式，系统展示中国文明从“唐尧虞舜时代”开始，经过各个重要历史时期，一直到“2026年的当代中国”的演变过程。整张图要像一本高质量历史科普读物中的插图页，兼具知识性、可读性和观赏性。\n\n画面风格：\n采用经典欧洲清线漫画风格，类似《丁丁历险记》那种干净清晰的线条、平涂上色、明快复古的色彩、精致而有秩序的构图。整体像“历史百科 + 漫画分镜 + 时间轴长卷”的结合体。画风统一，具有复古知识读物和冒险漫画的感觉。\n\n画面形式：\n- 纵向长图\n- 清晰的中央或侧边时间轴\n- 每个历史时期用独立的小分镜 / 小场景呈现\n- 每个分镜包含：\n  1）时期名称\n  2）对应代表性画面\n  3）2到3条简洁中文知识点讲解\n- 排版整齐清楚，像历史科普读物内页\n- 文字简洁、清晰、易读，不要过多堆砌长段文字\n- 每个历史阶段之间有明显区分，但整体过渡自然连贯\n\n标题与说明文字：\n主标题：中国文明演变史\n副标题：从唐尧虞舜到2026，一张图看懂中国文明如何一步步走到今天\n\n请包含以下历史时期，并为每个时期配上代表画面和简洁知识点：\n\n1. 唐尧虞舜（传说时代）\n画面元素：部落联盟、祭祀、农耕、河流、山川、早期聚落\n知识点：\n- 华夏文明的早期传说时代\n- 禅让故事体现早期政治理想\n- 农耕和部落联盟逐渐形成\n\n2. 夏朝\n画面元素：早期王朝、治水、礼制萌芽、原始城邑\n知识点：\n- 被视为中国最早的王朝之一\n- 早期国家形态开始形成\n- 治水传说和王权观念逐渐发展\n\n3. 商朝\n画面元素：青铜鼎、甲骨文、祭祀、王都\n知识点：\n- 青铜文明高度发展\n- 甲骨文是早期成熟文字的重要代表\n- 宗教祭祀和王权密切结合\n\n4. 西周\n画面元素：分封诸侯、礼乐制度、宗法秩序\n知识点：\n- 分封制和宗法制度逐渐完善\n- 礼乐制度影响深远\n- 为后世政治文化奠定基础\n\n5. 春秋战国\n画面元素：诸侯争霸、百家争鸣、孔子、战争与学术并存\n知识点：\n- 中国古代思想最活跃的时期之一\n- 儒家、道家、法家等百家争鸣\n- 铁器和社会变革推动历史转型\n\n6. 秦朝\n画面元素：秦始皇、长城、统一文字、郡县制、车同轨\n知识点：\n- 中国进入大一统帝国时代\n- 统一文字、度量衡和道路制度\n- 郡县制加强中央集权\n\n7. 汉朝\n画面元素：丝绸之路、驼队、宫廷、儒学、对外交流\n知识点：\n- 汉朝奠定了强盛帝国格局\n- 丝绸之路促进中外交流\n- 儒学逐渐成为主流思想\n\n8. 三国两晋南北朝\n画面元素：战乱分裂、民族融合、佛教寺庙、文人风度\n知识点：\n- 长期分裂，但文化持续发展\n- 民族融合不断加深\n- 佛教传播对思想文化影响巨大\n\n9. 隋唐\n画面元素：大运河、长安、科举、盛唐气象、丝路商旅\n知识点：\n- 隋朝重新统一中国\n- 唐朝国力强盛、对外开放\n- 科举制和长安繁荣具有代表性\n\n10. 宋朝\n画面元素：城市商业、书院、活字印刷、指南针、繁华市井\n知识点：\n- 商品经济和城市文化高度繁荣\n- 科技发明影响深远\n- 文人文化和审美高度发展\n\n11. 元朝\n画面元素：辽阔疆域、驿站、商旅往来、欧亚交流\n知识点：\n- 统一了更广阔的疆域\n- 加强欧亚大陆之间联系\n- 不同民族和文化交流更频繁\n\n12. 明朝\n画面元素：紫禁城、郑和下西洋、宝船、小说戏曲、市民社会\n知识点：\n- 皇权体制进一步加强\n- 郑和下西洋体现航海能力\n- 商品经济与文化创作活跃\n\n13. 清朝前中期\n画面元素：大一统版图、宫廷、农业社会、盛世景象\n知识点：\n- 版图进一步巩固\n- 人口增长和农业发展明显\n- 帝国秩序达到高峰\n\n14. 清朝晚期\n画面元素：鸦片战争、列强入侵、洋务运动、近代危机\n知识点：\n- 中国遭遇前所未有的外部冲击\n- 传统秩序受到严重挑战\n- 开始艰难探索近代化道路\n\n15. 近代中国\n画面元素：辛亥革命、民国城市、报刊、学生、抗战、民族觉醒\n知识点：\n- 中国社会进入剧烈转型阶段\n- 革命、改革与救亡并行\n- 民族觉醒和现代国家观念增强\n\n16. 新中国建设时期\n画面元素：开国场景、工厂、工人、农田、基础建设\n知识点：\n- 新中国成立后开始大规模建设\n- 工业化和社会重建逐步推进\n- 为现代化发展打下基础\n\n17. 改革开放\n画面元素：高楼、工厂、市场经济、沿海城市、快速发展\n知识点：\n- 经济体制逐步转型\n- 城市化和全球化显著加快\n- 中国经济实现快速增长\n\n18. 当代中国（到2026）\n画面元素：高铁、航天火箭、现代城市、互联网、AI、芯片、新能源汽车、机器人、年轻人\n知识点：\n- 中国持续推进科技创新和现代化建设\n- 高铁、航天、数字经济和AI快速发展\n- 2026年的中国呈现科技化、城市化、全球化面貌\n\n底部总结区：\n添加一个简洁总结模块，写上：\n“中国文明并不是一条直线，而是在统一与分合、传承与变革中不断演进。几千年的积累，最终塑造出今天的中国。”\n\n视觉要求：\n- 每个时期的人物服饰、建筑、器物和交通工具都要有时代辨识度\n- 画面精致细腻，但保持清晰简洁，不要杂乱\n- 整体具有历史厚重感、知识图鉴感和冒险漫画感\n- 中文必须清晰、正确、易读\n- 版式像高质量历史科普读物插图页\n- 整体统一、专业、美观，适合做历史科普长图海报",
+    "outputImages": [
+      "/images/2046867191849767142_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/rionaifantasy/status/2046867191849767142",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046850958672449638",
+    "title": "东方仙侠神话圣像概念原画",
+    "thumbnail": "/images/2046850958672449638_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T12:41:32.299Z",
+    "prompt": "请创作一幅【人物角色】使用【乐器或武器】的东方幻想人物概念插画。\n\n整体风格融合国风仙侠、神话圣像感与电影级CG概念原画质感，画面具有强烈的东方幻想美学、高级审美与史诗感。人物为主视觉核心，气质空灵、神圣、优雅、清冷或威严，根据【人物角色】自动匹配最合适的神态、服饰、发型、配饰与身份设定。\n\n如果【乐器或武器】是乐器，则人物呈现演奏、拨弦、吹奏、执乐而立等充满仪式感与流动感的姿态，强调音乐能量、灵气流动、音波化作光纹、云气、星辉或法阵。\n如果【乐器或武器】是武器，则人物呈现持械、蓄势、对峙、施法或战斗前一瞬的姿态，强调力量感、压迫感、气场与能量汇聚。\n\n构图以人物居中或偏中心为主，整体平衡、庄严、具有海报级主视觉效果；人物背后可带有月轮、法环、神性光晕、古老纹阵或圣像式圆形结构。服装采用东方幻想风格，材质轻盈华美，带轻纱、飘带、层叠衣摆、金属饰件、玉饰或冠饰，发丝与布料在风中流动，形成强烈的动态美感。\n\n背景根据角色气质自动匹配为星空神域、云海天界、月下圣境、竹林仙山、冰雪秘境、幽夜神坛、古风遗迹等东方幻想场景，环境带有薄雾、流光、粒子、神秘能量与空间纵深。色彩以统一且高级的主色调控制画面，可根据角色和道具自动选择冰蓝、月白、青绿、幽紫、赤金、墨黑、银灰等配色，并用少量淡金或冷光进行神性点缀。\n\n整体要求：唯美、梦幻、空灵、神秘、超脱、神圣、精致，具有电影级光影、体积光、空气感、超细节CG插画质感，避免俗艳、避免廉价古风写真感、避免网红脸、避免杂乱背景、避免塑料质感。",
+    "outputImages": [
+      "/images/2046850958672449638_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046850958672449638",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046709371007058096",
+    "title": "精美多页品牌套件设计",
+    "thumbnail": "/images/2046709371007058096_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "jameygannon",
+    "authorUrl": "https://x.com/jameygannon",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T12:41:30.112Z",
+    "prompt": "创建一个精美的多页（多张图片）品牌套件为 ___________",
+    "outputImages": [
+      "/images/2046709371007058096_0.jpeg",
+      "/images/2046709371007058096_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/jameygannon/status/2046709371007058096",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046603938485637446",
+    "title": "老干妈星巴克高端联名运营图",
+    "thumbnail": "/images/2046603938485637446_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "ai_xiaomu",
+    "authorUrl": "https://x.com/ai_xiaomu",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T07:07:02.511Z",
+    "prompt": "生成完整高端的品牌运营图 ，产品是老干妈和星巴克的联名款：老干妈美式，中间是主图，下面放一些联名的设计，包装袋、杯套以及吉祥物。",
+    "outputImages": [
+      "/images/2046603938485637446_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/ai_xiaomu/status/2046603938485637446",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "opennana-13551",
+    "title": "热血少年宝玉角色设定图",
+    "thumbnail": "/images/opennana-13551_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "OpenNana",
+    "authorUrl": "https://opennana.com/awesome-prompt-gallery/hot-blood-bao-yu-sheet",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T07:07:00.516Z",
+    "prompt": "根据你对我了解的所有信息，制作一张我的少年漫风格动漫角色设定图，名字是宝玉",
+    "outputImages": [
+      "/images/opennana-13551_0.jpeg"
+    ],
+    "sourceUrl": "https://opennana.com/awesome-prompt-gallery/hot-blood-bao-yu-sheet",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046767127265501370",
+    "title": "三维立体元素周期表微距摄影",
+    "thumbnail": "/images/2046767127265501370_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "TanShilong",
+    "authorUrl": "https://x.com/TanShilong",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T07:06:55.024Z",
+    "prompt": "等距轴测isometic视角展示以三维立体的形式呈现元素周期表的一部分，要求每一个格子内的文字准确，每个格子配有一个符合对应元素的物体，\n每个格子严格的对齐规整，角度大概是45°到60°的斜侧视角，极致的大特写，几乎只聚焦到中央的几个元素，光圈很大，移轴的模糊效果很明显",
+    "outputImages": [
+      "/images/2046767127265501370_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/TanShilong/status/2046767127265501370",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046717569013293231",
+    "title": "精美美妆邮件序列排版",
+    "thumbnail": "/images/2046717569013293231_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Salmaaboukarr",
+    "authorUrl": "https://x.com/Salmaaboukarr",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T07:06:50.977Z",
+    "prompt": "为fenty beauty创建一个精美的电子邮件序列模板",
+    "outputImages": [
+      "/images/2046717569013293231_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Salmaaboukarr/status/2046717569013293231",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046781357460967660",
+    "title": "支付宝到账收款截图",
+    "thumbnail": "/images/2046781357460967660_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "imwsl90",
+    "authorUrl": "https://x.com/imwsl90",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T07:06:46.286Z",
+    "prompt": "生成一张支付宝到账信息图",
+    "outputImages": [
+      "/images/2046781357460967660_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/imwsl90/status/2046781357460967660",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046693434526708189",
+    "title": "乔丹传奇生涯史诗海报",
+    "thumbnail": "/images/2046693434526708189_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "CharaspowerAI",
+    "authorUrl": "https://x.com/CharaspowerAI",
+    "tags": [
+      "zh",
+      "logo"
+    ],
+    "category": "logo",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T07:06:43.385Z",
+    "prompt": "创作一张史诗级海报，展示迈克尔·乔丹职业生涯中最具标志性的时刻。史诗级，电影感，镜头光晕",
+    "outputImages": [
+      "/images/2046693434526708189_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/CharaspowerAI/status/2046693434526708189",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046585220393324553",
+    "title": "诗仙李白月下直播起舞",
+    "thumbnail": "/images/2046585220393324553_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:55:18.457Z",
+    "prompt": "李白在抖音直播月下起舞",
+    "outputImages": [
+      "/images/2046585220393324553_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046585220393324553",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046478609238626569",
+    "title": "特朗普太空直播间破千万",
+    "thumbnail": "/images/2046478609238626569_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "songguoxiansen",
+    "authorUrl": "https://x.com/songguoxiansen",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:55:09.173Z",
+    "prompt": "一张9:16竖屏的抖音直播截图，太空直播风格。特朗普穿着NASA风格的白色宇航服，头盔面罩半开，露出他标志性的金色头发和笑容。他漂浮在国际空间站的舱内进行直播，处于微重力失重状态，身体微微悬浮。他双手举着一块固定在宇航服上的金属铭牌，铭牌上用NASA风格的印刷体写着\"感谢松果先森送的大火箭\"。身后圆形舷窗外可以看到蓝色的地球和深邃的太空。直播界面显示在线人数\"地球+火星共888万\"。弹幕区有人刷\"真的在太空直播？\"\"松果先森的火箭把你送上天了\"。屏幕中央的火箭礼物特效与窗外太空中一枚正在发射的真实火箭遥相呼应，形成虚实结合的效果。舱内有各种精密仪器和控制面板，绿色和蓝色的指示灯闪烁。画面色调以深蓝、白色和金色为主，舷窗外的星光点缀其间，8K超高清，电影《地心引力》级别的视觉效果。",
+    "outputImages": [
+      "/images/2046478609238626569_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/songguoxiansen/status/2046478609238626569",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046576100592201946",
+    "title": "炫酷游戏界面UI设计套件",
+    "thumbnail": "/images/2046576100592201946_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "xin_pai88825",
+    "authorUrl": "https://x.com/xin_pai88825",
+    "tags": [
+      "zh",
+      "game"
+    ],
+    "category": "game",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:54:39.673Z",
+    "prompt": "生成一套游戏 uikit",
+    "outputImages": [
+      "/images/2046576100592201946_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/xin_pai88825/status/2046576100592201946",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046576100592201946",
+    "title": "品牌视觉设计全案展示",
+    "thumbnail": "/images/2046576100592201946_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "xin_pai88825",
+    "authorUrl": "https://x.com/xin_pai88825",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:54:37.662Z",
+    "prompt": "帮我生成一张品牌视觉",
+    "outputImages": [
+      "/images/2046576100592201946_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/xin_pai88825/status/2046576100592201946",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046510988367945983",
+    "title": "百件A字头物品矩阵图",
+    "thumbnail": "/images/2046510988367945983_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "umesh_ai",
+    "authorUrl": "https://x.com/umesh_ai",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:54:17.744Z",
+    "prompt": "创建一个包含 10x10 网格的图像，每个对象名称都以字母 a 开头。",
+    "outputImages": [
+      "/images/2046510988367945983_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/umesh_ai/status/2046510988367945983",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046575354555617761",
+    "title": "赛博科幻桃太郎主视觉图",
+    "thumbnail": "/images/2046575354555617761_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "SSSS_CRYPTOMAN",
+    "authorUrl": "https://x.com/SSSS_CRYPTOMAN",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:54:13.909Z",
+    "prompt": "设计虚构动画的钥匙视觉图。主题是「科幻桃太郎」。设计有魅力的角色、背景、标志和宣传语，以一幅美丽插画的形式完成，让世界观在一张图中传达出来。",
+    "outputImages": [
+      "/images/2046575354555617761_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/SSSS_CRYPTOMAN/status/2046575354555617761",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046508731090018331",
+    "title": "银河繁星点缀的冰蓝襦裙",
+    "thumbnail": "/images/2046508731090018331_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "fdtreesky",
+    "authorUrl": "https://x.com/fdtreesky",
+    "tags": [
+      "zh",
+      "portrait"
+    ],
+    "category": "portrait",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:54:11.355Z",
+    "prompt": "服裝細節： 模特兒身穿一套精緻的淡冰藍色齊胸襦裙，採用多層輕盈的薄紗和絲綢歐根紗材質制成。其寬大的、半透明的廣袖上點綴著如繁星般微小的銀色和淺藍色亮片刺繡，在光線下閃爍（具有銀河般的夢幻感）。抹胸位置有複雜的銀色蕾絲和編織紋理細節，腰帶自然垂落。\n\n材質與光影： 畫面呈現 8k 超高分辨率和對織物微距紋理的極致渲染。光線採用柔和的自然側光（丁達爾效應 Typndall Effect），精準地透射過輕薄的紗布，營造出面料的半透明感（Translucency）和流動感。\n\n構圖與鏡頭： 採用 85mm 黄金人像鏡頭效果，f/1.8 大光圈，全身構圖，模特居中站立",
+    "outputImages": [
+      "/images/2046508731090018331_0.jpeg",
+      "/images/2046508731090018331_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/fdtreesky/status/2046508731090018331",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046565555025367392",
+    "title": "唐朝贵妇遛粉色马甲异形工笔画",
+    "thumbnail": "/images/2046565555025367392_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "johnAGI168",
+    "authorUrl": "https://x.com/johnAGI168",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:54:08.554Z",
+    "prompt": "一幅细节丰富的工笔画，描绘了一位唐朝贵族女子在御花园中漫步。她看起来优雅而平静。\n\n她手里拿着一根金色的牵引绳。牵引绳的尽头是一只可怕的**异形怪物（出自电影《异形》）**。然而，这只异形穿着一件**可爱的粉色丝绸马甲**，并且表现得像一只训练有素的狗。\n\n背景有牡丹和蝴蝶。\n\n**在右下角，有一个红色的竖排艺术家印章，写着“吴先生”（Mr. Wu），风格像水印一样。** --ar 3:4",
+    "outputImages": [
+      "/images/2046565555025367392_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/johnAGI168/status/2046565555025367392",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046615173411262959",
+    "title": "高端AI演示平台封面设计",
+    "thumbnail": "/images/2046615173411262959_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "cellier_",
+    "authorUrl": "https://x.com/cellier_",
+    "tags": [
+      "zh",
+      "logo"
+    ],
+    "category": "logo",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:54:06.189Z",
+    "prompt": "创建一个高级的 4:3 演示文稿封面幻灯片，介绍来自 http://chroniclehq.com 的 AI 原生演示平台 Chronicle。  \n\nStyle: \n优雅，极简，现代，高级初创企业美学。类似于高端品牌指南封面（如 Apple / Linear / Notion 风格）。带有微妙深度感的柔和渐变背景，干净的留白，精致的排版，经过打磨的编辑式布局。  \n\nMain title: \nCHRONICLE  \n\nSubtitle: \nAI PRESENTATION PLATFORM  \n\nBody copy (small elegant text): \n将原始想法转化为经过打磨的、高影响力的演示文稿。 \n从笔记、文档、链接或现有幻灯片开始。 \n使用 AI 生成美观的、符合品牌调性的幻灯片。 \n在灵活的画布上自由编辑。 \n导出为 PPT、PDF，或发布为网站。  \n\nFeature highlights (small premium labels): \nSTORY-FIRST \nON-BRAND DESIGN \nAI EDITING \nFREEFORM CANVAS \nPPT EXPORT \nTEAM COLLABORATION  \n\nBottom-right elegant logo text: \nchronicle  \n\nVisual feeling: \n商务级高级感，战略级幻灯片质量，咨询级演示文稿，略带未来感但高度专业。  \n\nComposition: \n干净的编辑式平衡，不对称布局，强烈的留白，演示软件主视觉感。  \n\nAspect ratio: \n4:3  \n\nLanguage: \n仅限英文",
+    "outputImages": [
+      "/images/2046615173411262959_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/cellier_/status/2046615173411262959",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046585220393324553",
+    "title": "苏轼被贬首日朋友圈曝光",
+    "thumbnail": "/images/2046585220393324553_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:54:04.561Z",
+    "prompt": "苏轼被贬第一天小红书截图",
+    "outputImages": [
+      "/images/2046585220393324553_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046585220393324553",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046576100592201946",
+    "title": "吉利银河暗黑中控界面",
+    "thumbnail": "/images/2046576100592201946_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "xin_pai88825",
+    "authorUrl": "https://x.com/xin_pai88825",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:54:00.631Z",
+    "prompt": "帮我生成一个吉利银河m9的中控界面，尺寸为21:9，暗色系",
+    "outputImages": [
+      "/images/2046576100592201946_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/xin_pai88825/status/2046576100592201946",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046576100592201946",
+    "title": "亚马逊详情图设计",
+    "thumbnail": "/images/2046576100592201946_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "xin_pai88825",
+    "authorUrl": "https://x.com/xin_pai88825",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:53:57.297Z",
+    "prompt": "生成一套亚马逊 A+=详情图",
+    "outputImages": [
+      "/images/2046576100592201946_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/xin_pai88825/status/2046576100592201946",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046499177916682600",
+    "title": "荒诞超现实女装大叔海报",
+    "thumbnail": "/images/2046499177916682600_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "aiehon_aya",
+    "authorUrl": "https://x.com/aiehon_aya",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:53:52.042Z",
+    "prompt": "一个看似真实却微妙地古怪的女装大叔出现的电影海报，4 种。达到专业设计师制作的水平。 企划和设定本身就是那种“这种东西真要拍成电影吗？”的、认真却忍不住想笑的超现实动画。 标题和播出信息也要用日文显示的状态。",
+    "outputImages": [
+      "/images/2046499177916682600_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/aiehon_aya/status/2046499177916682600",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046488248256806981",
+    "title": "千禧年日系校园喜剧场景",
+    "thumbnail": "/images/2046488248256806981_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "UminekoStudio",
+    "authorUrl": "https://x.com/UminekoStudio",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:53:38.914Z",
+    "prompt": "2000 年代面向中学生的日剧喜剧场景",
+    "outputImages": [
+      "/images/2046488248256806981_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/UminekoStudio/status/2046488248256806981",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046560406760505727",
+    "title": "一张中文健身信息图",
+    "thumbnail": "/images/2046560406760505727_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:53:36.726Z",
+    "prompt": "请生成一张中文健身信息图，主题为：【xxx】。 \n\n要求这张图既专业又实用，适合普通成年人作为训练参考。默认对象为无严重伤病的健康成年人；如果没有额外说明，默认训练目标为“增肌 + 基础力量提升”，默认训练水平为“新手到中级之间”，默认训练场景为“普通健身房”，默认单次训练时长控制在 40–60 分钟内。\n\n请根据【训练主题】自动判断输出类型：\n\n1）如果【训练主题】是某个肌群或身体部位（例如：胸肌、背阔肌、肱二头肌、腹肌、肩部、腿部等），请输出一张“该部位训练计划信息图”。\n2）如果【训练主题】是某个动作或技能目标（例如：引体向上、俯卧撑、双杠臂屈伸、深蹲等），请输出一张“动作解锁 / 进阶训练计划信息图”。\n\n整张图请采用清晰、现代、专业、易读的中文信息图风格，竖版排版，视觉简洁，重点突出，适合社交媒体分享或训练参考卡片。不要写成长篇大论，每个模块用简洁短句呈现，数字信息要醒目。\n\n这张信息图必须包含以下内容：\n\n【A. 标题区】\n- 主标题：直接写【训练主题】训练计划 / 解锁计划\n- 副标题：自动补充适用人群、目标、训练场景、建议时长\n例如：适合新手 / 增肌导向 / 健身房版 / 45分钟\n\n【B. 训练目标区】\n用简洁语言说明：\n- 这次训练主要针对什么\n- 主要目标是什么（增肌 / 力量 / 技能解锁 / 核心控制等）\n- 本次训练的重点刺激或能力提升方向\n\n【C. 热身区】\n给出 2–4 个热身建议，简洁列出即可，例如：\n- 动态活动\n- 目标肌群激活\n- 轻重量预热组\n每项可附一句说明\n\n【D. 主训练区】\n这是核心部分，请列出 4–6 个主要训练动作。\n每个动作都要包含以下信息：\n- 动作名称\n- 训练作用 / 针对部位\n- 组数 × 次数（或时间）\n- RIR 建议\n- 每组间休息时间\n- 动作关键要点（1–2 条）\n- 常见错误（1 条即可）\n\n请确保动作安排合理：\n- 先复合动作，后孤立动作\n- 整体训练量适中\n- 新手不要安排过度极限训练\n- 主动作通常建议 RIR 1–3\n- 孤立动作可建议 RIR 0–2\n- 如果是腹肌或核心类动作，可用“秒数 / 次数”形式\n- 如果是技能类动作，请优先安排“前置能力动作 + 过渡动作 + 目标动作尝试”\n\n【E. 进阶 / 解锁逻辑区】\n根据主题自动生成：\n- 如果是肌群训练：写“如何渐进超负荷”，例如达到次数上限后再加重量、优先保证动作标准等\n- 如果是动作解锁：写“分阶段进阶路径”，例如从悬垂、肩胛引体、离心训练、弹力带辅助，到标准动作完成\n\n【F. 替代动作区】\n请给出 2–3 个替代动作，适用于以下情况：\n- 没有器械\n- 家庭训练\n- 当前能力不足\n- 某些动作做不了\n\n【G. 执行提醒区】\n请给出 4–6 条简洁提醒，例如：\n- 动作标准优先于重量\n- 不要每组都练到力竭\n- 同肌群建议间隔 48–72 小时\n- 疼痛不等于正常发力\n- 睡眠不足时可适当减少训练量\n\n【H. 恢复建议区】\n简洁说明：\n- 训练后恢复重点\n- 蛋白质 / 睡眠 / 恢复间隔建议\n- 1 句风险提醒（如有明显疼痛应停止并评估）\n\n【I. 视觉设计要求】\n- 整体为单页中文信息图\n- 竖版排版\n- 风格现代、清爽、专业、健身感强\n- 使用模块化卡片布局\n- 重点数字（组数、次数、RIR、休息）要醒目\n- 可加入简洁的人体肌群图标、哑铃、杠铃、引体向上等小图标\n- 颜色保持高级、干净、有运动感\n- 中文文字必须清晰、准确、易读\n- 避免过多装饰，强调实用性与执行性\n\n请最终输出为“一张完整的信息图内容”，而不是只给普通段落文字。",
+    "outputImages": [
+      "/images/2046560406760505727_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046560406760505727",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046585220393324553",
+    "title": "杜甫朋友圈吐槽茅屋被掀翻",
+    "thumbnail": "/images/2046585220393324553_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:53:33.043Z",
+    "prompt": "杜甫发朋友圈吐槽房顶被风刮没了",
+    "outputImages": [
+      "/images/2046585220393324553_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046585220393324553",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046585220393324553",
+    "title": "武则天发微博自拍太魔性了",
+    "thumbnail": "/images/2046585220393324553_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 1
+    },
+    "createdAt": "2026-04-22T00:53:31.095Z",
+    "prompt": "武则天自拍登记发微博",
+    "outputImages": [
+      "/images/2046585220393324553_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046585220393324553",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046534215311970694",
+    "title": "奇幻RPG百件像素风道具图鉴",
+    "thumbnail": "/images/2046534215311970694_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "ProperPrompter",
+    "authorUrl": "https://x.com/ProperPrompter",
+    "tags": [
+      "zh",
+      "game"
+    ],
+    "category": "game",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:53:28.649Z",
+    "prompt": "创建一个包含100种不同奇幻RPG物品的10×10网格，以经典像素艺术风格渲染（16位或32位精灵图美学，让人联想到SNES/GBA时代的日式RPG）。每个物品应出现在其独立的方形瓷砖中，下方带有简短清晰的标签。在白色背景上保持网格整洁。使每个物品在视觉上都有所区分，并且每个标签拼写正确。使用清晰的像素边缘、每个精灵图有限的调色板，以及用于阴影的微妙抖动。\n使用这些行主题：\n第1行：剑与刀刃\n第2行：盾牌与盔甲\n第3行：弓、弩与远程武器\n第4行：法杖、魔杖与魔法焦点\n第5行：药水、灵药与烧瓶\n第6行：卷轴、典籍与法术书\n第7行：戒指、护身符与附魔小饰品\n第8行：头盔、王冠与头饰\n第9行：钥匙、遗物与任务物品\n第10行：宝石、符文与制作材料\n将每个瓷砖显示为干净背景方形上居中的物品精灵图，渲染为经典的库存图标——你在奇幻RPG菜单中会看到的那种。保持整体风格一致、连贯，并让人联想到备受喜爱的复古奇幻RPG——迷人、细节丰富，且在小尺寸下易于辨认。",
+    "outputImages": [
+      "/images/2046534215311970694_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/ProperPrompter/status/2046534215311970694",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046556758521573546",
+    "title": "暗黑极简头像网站视觉设计",
+    "thumbnail": "/images/2046556758521573546_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "xiaoxiaodong01",
+    "authorUrl": "https://x.com/xiaoxiaodong01",
+    "tags": [
+      "zh",
+      "portrait"
+    ],
+    "category": "portrait",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:53:23.636Z",
+    "prompt": "用 ABCD（a black cover design) 的风格，为 图你太美 设计一个 vi 系统。图你太美是一个头像美图分享 网站。",
+    "outputImages": [
+      "/images/2046556758521573546_0.jpeg",
+      "/images/2046556758521573546_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/xiaoxiaodong01/status/2046556758521573546",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046544209117634735",
+    "title": "清新夏日女装连衣裙电商展示",
+    "thumbnail": "/images/2046544209117634735_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:53:21.814Z",
+    "prompt": "夏季女裙电商详情图",
+    "outputImages": [
+      "/images/2046544209117634735_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046544209117634735",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046544209117634735",
+    "title": "全自动咖啡机产品展示",
+    "thumbnail": "/images/2046544209117634735_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:53:20.523Z",
+    "prompt": "全自动咖啡机电商详情图",
+    "outputImages": [
+      "/images/2046544209117634735_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046544209117634735",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046544209117634735",
+    "title": "未来科技感AI智能眼镜详情页",
+    "thumbnail": "/images/2046544209117634735_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:53:03.251Z",
+    "prompt": "AI智能眼镜电商详情图",
+    "outputImages": [
+      "/images/2046544209117634735_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046544209117634735",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046565555025367392",
+    "title": "千手观音化身打工人",
+    "thumbnail": "/images/2046565555025367392_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "johnAGI168",
+    "authorUrl": "https://x.com/johnAGI168",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:53:00.419Z",
+    "prompt": "一幅高度详细的千手观音菩萨工笔画。\n\n然而，千手并没有拿着神圣的宗教法器，而是拿着现代办公和家用物品：**笔记本电脑、智能手机、成堆的文件、咖啡杯、印章、计算器、拖把和奶瓶**。它代表了终极的多任务处理现代工作者。\n\n脑后的金色光环由旋转的时钟齿轮组成。\n\n**在右下角，一个单一的红色竖排艺术家印章写着“吴先生”（Mr. Wu），风格化得像水印一样。** --ar 3:4",
+    "outputImages": [
+      "/images/2046565555025367392_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/johnAGI168/status/2046565555025367392",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046544209117634735",
+    "title": "健身蛋白粉电商详情页",
+    "thumbnail": "/images/2046544209117634735_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrLarus",
+    "authorUrl": "https://x.com/MrLarus",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:52:48.977Z",
+    "prompt": "健身蛋白粉电商详情图",
+    "outputImages": [
+      "/images/2046544209117634735_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrLarus/status/2046544209117634735",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046596103919767857",
+    "title": "超写实与水墨的梦幻融合",
+    "thumbnail": "/images/2046596103919767857_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "johnAGI168",
+    "authorUrl": "https://x.com/johnAGI168",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:52:46.714Z",
+    "prompt": "一张动态的混合媒体摄影作品，将超写实肖像与传统的中国水墨插画相融合。\n\n中心人物是一位具有柔和短波波头短发造型的照片般逼真的年轻亚洲女性。她的妆容自然且极简，表情平静而温柔。她背对相机站立，姿态呈现出优雅的S型曲线，营造出优美流畅的剪影。她微微转动上半身，越过肩膀回眸，带着一种安静、内省的情绪。\n\n她穿着一件简约、修身的白色长袖服装，线条干净，面料柔软，传达出纯洁与极简主义，不显露细节。\n\n她被置于一个靠近阳光明媚窗户的真实世界室内环境中。背景被严重模糊，具有强烈的散景和浅景深，营造出梦幻且充满氛围的环境。\n\n从这种柔和模糊的现实之中，爆发出丰富的传统水墨插画，并环绕着她的身形。构图包括：\n\n- 带有耀眼光环的庄严如来佛像\n- 在云端漂浮的优雅观音像\n- 在空间中盘旋的流动中国水墨龙\n- 在动态的水墨笔触中游动的成群锦鲤\n\n这些元素以黑墨和朱红色调渲染，形成一幅密集的、具有精神力量的视觉织锦。水墨在她周围有机地流动，部分重叠并融入她的剪影之中，在现实与神话之间创造出无缝的融合。\n\n没有轮廓线或贴纸效果。融合是自然、流畅且沉浸式的。\n\n风格：电影级摄影，超精细，8k，柔光，现实与水墨艺术之间的高对比度，美术构图，博物馆级美学\n宽高比：3:4",
+    "outputImages": [
+      "/images/2046596103919767857_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/johnAGI168/status/2046596103919767857",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046539797578330152",
+    "title": "试卷上的涂鸦巨龙",
+    "thumbnail": "/images/2046539797578330152_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "GeekCatX",
+    "authorUrl": "https://x.com/GeekCatX",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-22T00:52:43.250Z",
+    "prompt": "一个巨大的巨龙，庞大的规模，高耸的存在感，\n一个远超人类尺寸的巨大实体，压倒性和压迫性的，\n用极其密集的混乱涂鸦线条绘制，\n超密集的重叠笔触，纠缠和混乱的线条画，\n在真实的印刷英文/中文教科书或试卷页面上，\n可见的文本、布局和纸张纹理清晰透出，\n圆珠笔绘画风格，精细的墨水线条，杂乱的分层笔触，\n没有干净的轮廓，一切由混乱的涂鸦构成，\n黑暗和柔和的底色（黑色，深靛蓝，暗紫罗兰色），\n带有微妙的低饱和度霓虹点缀（蓝色，青色，紫色），\n仅在关键区域（眼睛，核心，裂缝，静脉）有选择性的生物发光，\n不是整体的亮度，\n取决于主体的有机或机械纹理，\n错综复杂的细节，复杂的表面图案，\n形态从混乱中浮现，\n高密度中心，边缘消融为松散的涂鸦，\n主体附近微小的人类剪影强调了尺度感，\n半透明层，由线条密度产生的深度，\n原始的，不完美的，嘈杂的，充满活力的手绘感，\n略带诡异，超现实，神秘的氛围，\n混合媒体插画，涂鸦艺术，\n极其详细，黑暗团块和发光点缀之间的高对比度，\n杰作，极其详细",
+    "outputImages": [
+      "/images/2046539797578330152_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/GeekCatX/status/2046539797578330152",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046529342415790275",
+    "title": "英雄联盟特朗普中路对决哈梅内伊",
+    "thumbnail": "/images/2046529342415790275_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "underwoodxie96",
+    "authorUrl": "https://x.com/underwoodxie96",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 1
+    },
+    "createdAt": "2026-04-21T15:15:14.945Z",
+    "prompt": "帮我生成一张特朗普对战哈梅内伊在英雄联盟中路对线的截图。",
+    "outputImages": [
+      "/images/2046529342415790275_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/underwoodxie96/status/2046529342415790275",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046602266627465534",
+    "title": "超写实海滩高角度手机自拍",
+    "thumbnail": "/images/2046602266627465534_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "IamEmily2050",
+    "authorUrl": "https://x.com/IamEmily2050",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T15:14:23.395Z",
+    "prompt": "{\n  超写实iPhone 15 Pro前置摄像头自拍，一位成年女性在明亮的沙滩上，\n  从举臂高角度自拍视角拍摄。手机略微举在脸部上方，\n  营造出自然的前置摄像头几何形态，带有轻微的等效24mm广角畸变，\n  写实的面部比例，\n  以及智能手机的深景深。她向上抬起下巴，一只手遮挡刺眼的阳光，同时直视手机镜头。她的表情中性，\n  面无表情，\n  且略带疏离感，\n  眼睛大而专注，但在解剖学上具有真实的眼部尺寸和自然面部比例。\\n\\n她有着极浅的铂金色头发，梳成两条紧紧的辫子，\n  苍白的皮肤带有真实摄影的皮肤纹理，\n  可见的毛孔，\n  细微的绒毛，\n  淡淡的眼下纹理，\n  自然的唇部纹理，\n  以及柔和的阳光光泽，而不是磨皮后的完美无瑕。她的嘴唇是自然色调且略丰满，\n  她的鼻子小巧精致但很写实。她的指甲是鲜艳的蓝色。她穿着一件浅蓝色紧身弹力棉上衣，领口非常深且宽，以自然、\n  非风格化的方式露出突出的锁骨和上胸结构。\\n\\n背景是宽阔的海岸沙滩，在强烈的上午晚些时候的阳光下，\n  背景中有一条柔和模糊的地平线。光线明亮，\n  色温约5500K的高调海岸日光，\n  强烈的白色沙子反光从下方和脸部周围均匀地填充阴影。皮肤被直射阳光加上海滩宽阔柔和的反射补光照亮，\n  产生清脆但写实的高光，没有生硬的对比。明亮沙子的细小颗粒微妙地捕捉光线。整体图像应该感觉像是在强烈的海边光线下在户外拍摄的真正高曝光智能手机自拍。\\n\\n色彩渲染应该是柔和、\n  干净、\n  且现代的，\n  带有中性至柔和的色调，\n  写实的iPhone计算摄影，\n  略微提高的曝光，\n  受控的高光过渡，\n  自然的肤色，\n  没有电影级调色。优先考虑写实性、\n  物理准确性、\n  可信的解剖结构，\n  以及真实的智能手机图像表现，而不是美化风格化。\", \"negative_prompt\": \"动漫，\n  洋娃娃脸，\n  瓷器皮肤，\n  无毛孔皮肤，\n  塑料皮肤，\n  CGI，\n  3D渲染，\n  超现实眼睛，\n  过大的眼睛，\n  奇幻美，\n  磨皮精修，\n  浓妆，\n  魅力光，\n  戏剧性阴影，\n  胶片颗粒，\n  雪，\n  冬装，\n  黑色上衣，\n  红指甲，\n  保守领口，\n  影棚背景，\n  人造模糊，\n  扭曲的手，\n  变形的手指，\n  畸形的脸，\n  对称完美，\n  美颜滤镜，\n  惊悚的皮肤平滑\" }",
+    "outputImages": [
+      "/images/2046602266627465534_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/IamEmily2050/status/2046602266627465534",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046546317766500834",
+    "title": "三甲医院真实门诊处方笺",
+    "thumbnail": "/images/2046546317766500834_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "msjiaozhu",
+    "authorUrl": "https://x.com/msjiaozhu",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 1
+    },
+    "createdAt": "2026-04-21T15:14:05.075Z",
+    "prompt": "一张三甲医院的门诊处方笺，医生潦草的手写字，包含真实合理的 诊断、药品名、剂量，右下角有医生签名和科室章。",
+    "outputImages": [
+      "/images/2046546317766500834_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/msjiaozhu/status/2046546317766500834",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046596222505361866",
+    "title": "宅男必看绝美二次元少女",
+    "thumbnail": "/images/2046596222505361866_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "joshesye",
+    "authorUrl": "https://x.com/joshesye",
+    "tags": [
+      "zh",
+      "portrait"
+    ],
+    "category": "portrait",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T15:05:37.121Z",
+    "prompt": "生成高质量美女（宅男必备）",
+    "outputImages": [
+      "/images/2046596222505361866_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/joshesye/status/2046596222505361866",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046596222505361866",
+    "title": "杠精视角的独特文案创意",
+    "thumbnail": "/images/2046596222505361866_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "joshesye",
+    "authorUrl": "https://x.com/joshesye",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T15:05:35.744Z",
+    "prompt": "杠精视角文案 + GPT Image 2",
+    "outputImages": [
+      "/images/2046596222505361866_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/joshesye/status/2046596222505361866",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046596222505361866",
+    "title": "智能动画分镜生成器",
+    "thumbnail": "/images/2046596222505361866_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "joshesye",
+    "authorUrl": "https://x.com/joshesye",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T15:05:34.636Z",
+    "prompt": "生成一张动画分镜生成器",
+    "outputImages": [
+      "/images/2046596222505361866_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/joshesye/status/2046596222505361866",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046596222505361866",
+    "title": "皇宫深处的御用快递驿站",
+    "thumbnail": "/images/2046596222505361866_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "joshesye",
+    "authorUrl": "https://x.com/joshesye",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T15:05:32.473Z",
+    "prompt": "生成一张古代皇宫 × 快递驿站",
+    "outputImages": [
+      "/images/2046596222505361866_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/joshesye/status/2046596222505361866",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046576160952443082",
+    "title": "黑神话潘金莲绝美游戏封面",
+    "thumbnail": "/images/2046576160952443082_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "liyue_ai",
+    "authorUrl": "https://x.com/liyue_ai",
+    "tags": [
+      "zh",
+      "game"
+    ],
+    "category": "game",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T14:59:27.909Z",
+    "prompt": "生成一张黑神话·潘金莲的游戏介绍画面，人物十分的迷人",
+    "outputImages": [
+      "/images/2046576160952443082_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/liyue_ai/status/2046576160952443082",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046593124646928397",
+    "title": "樱花树下害羞双马尾少女",
+    "thumbnail": "/images/2046593124646928397_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "joshesye",
+    "authorUrl": "https://x.com/joshesye",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T14:59:17.255Z",
+    "prompt": "生成一张高质量二次元美少女图片。 \n\n 角色设定：\n\n- 年龄：17岁 \n- 发型：双马尾，颜色：樱花粉，发梢带点渐变紫色\n - 眼睛：大而明亮，紫色瞳孔，有星星高光\n - 服装：JK制服，白色衬衫，深蓝色格子裙，红色领结\n - 配饰：白色过膝袜，棕色小皮鞋，头上戴一个粉色蝴蝶结  \n\n风格要求：\n - 日系动画风格，线条清晰 - 色彩鲜艳，对比度高 - 光影柔和，有层次感 \n- 背景：樱花树下，花瓣飘落，远处是学校教学楼  表情：微笑，有点害羞 姿势：站姿，双手放在身后，身体微微前倾  \n\n比例：16:9（手机壁纸） 质量：8K，超精细，细节丰富",
+    "outputImages": [
+      "/images/2046593124646928397_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/joshesye/status/2046593124646928397",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046519666047426967",
+    "title": "神话三国枪战世界",
+    "thumbnail": "/images/2046519666047426967_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "op7418",
+    "authorUrl": "https://x.com/op7418",
+    "tags": [
+      "zh",
+      "game"
+    ],
+    "category": "game",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T14:52:44.277Z",
+    "prompt": "模仿《无畏契约》的风格，生成一个三国神话的 FPS 游戏",
+    "outputImages": [
+      "/images/2046519666047426967_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/op7418/status/2046519666047426967",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046502136973001143",
+    "title": "萌系大模型训练图解",
+    "thumbnail": "/images/2046502136973001143_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "op7418",
+    "authorUrl": "https://x.com/op7418",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T14:52:41.640Z",
+    "prompt": "可爱地解释一下大语言模型训练过程",
+    "outputImages": [
+      "/images/2046502136973001143_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/op7418/status/2046502136973001143",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046524996013662380",
+    "title": "天坛古建拆解全图",
+    "thumbnail": "/images/2046524996013662380_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "TanShilong",
+    "authorUrl": "https://x.com/TanShilong",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T14:52:40.240Z",
+    "prompt": "生成一个天坛的建筑拆解图，有详细的说明，中式美学风格",
+    "outputImages": [
+      "/images/2046524996013662380_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/TanShilong/status/2046524996013662380",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046492817804099794",
+    "title": "专业设计师打造角色写真集",
+    "thumbnail": "/images/2046492817804099794_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Kashiko_AIart",
+    "authorUrl": "https://x.com/Kashiko_AIart",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T14:52:39.040Z",
+    "prompt": "请用这个角色制作一本专业设计师打造的照片集。语言为日语。  \n\n根据喜好加入提示词会让它更丰富多彩…  \n・丰富的场景  \n・信息量较多",
+    "outputImages": [
+      "/images/2046492817804099794_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Kashiko_AIart/status/2046492817804099794",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046520509651886451",
+    "title": "金瓶梅古风开放世界游戏截图",
+    "thumbnail": "/images/2046520509651886451_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "op7418",
+    "authorUrl": "https://x.com/op7418",
+    "tags": [
+      "zh",
+      "game"
+    ],
+    "category": "game",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 1
+    },
+    "createdAt": "2026-04-21T10:20:45.524Z",
+    "prompt": "帮我生成一个以《金瓶梅》为主题的古代 ARPG MMO 开放世界游戏的截图",
+    "outputImages": [
+      "/images/2046520509651886451_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/op7418/status/2046520509651886451",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046252164717416641",
+    "title": "绘制金瓶梅知识图谱",
+    "thumbnail": "/images/2046252164717416641_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "xiaoxiaodong01",
+    "authorUrl": "https://x.com/xiaoxiaodong01",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T10:20:44.596Z",
+    "prompt": "Role: World-class Scientific Encyclopedia Illustrator & Knowledge Graph Architect.\n\nTask: Generate a highly detailed, extremely intricate, and visually stunning \"Universal Illustrated Encyclopedia Science Infographic\" in a classic, unbranded (NO logos) scientific encyclopedia style.\n\nSubject Matter: Choose one from [People, Plants, or Animals]. \n\nSpecific Subject: [e.g., The Giant Squid / Leonardo da Vinci / The Sequoia Tree].\n\nStyle: Fine, detailed scientific illustration on a retro, aged beige paper background. Delicate linework. Intricately complex and professional.\n\nKey Visual Requirements:\n\n1.  Lifelike 3D Effect (The Central Subject): The central subject in the \"C position\" must be rendered with extraordinary realism and dynamism. Create a dramatic sense of depth where the character, plant, or animal appears to break the frame, leaping or bursting out of the flat paper towards the viewer (an effect similar to anamorphic 3D or dynamic pop-out, with high-precision realism).\n\n2.  Layout & Strategic White Space:\n    * Central Subject: Dominates the center, with intentional \"strategic white space\" around it to enhance the popping-out effect and make the figure the clear focal point.\n    * Surrounding Modules: The surrounding area (left, right, top, bottom, and corners) must be filled with 6-8 distinct, highly organized knowledge modules, depending on the subject. There should be a sense of organized density, not random clutter. The modules themselves must have clear borders, headers, and extensive, detailed content.\n\n3.  Connections: Use a complex, logical network of fine leader lines, arrows, brackets, dotted lines, and small connection points to link the central figure to all surrounding modules, and interconnect the modules themselves into a cohesive knowledge web.\n\n4.  Text & Annotation (Hard Requirement - Must be CLEAR Chinese):\n    * Main Title: A large, prominent, beautifully executed **Chinese calligraphy** (书法体) of the specific subject's name [e.g., \"大王乌贼\"].\n    * Calligraphic Accents: Scattered throughout the main content and module titles, use beautiful, clear Chinese calligraphy for important terms.\n    * Standard Chinese Text: All other descriptive text, handwritten notes (大量清晰中文手写注释), module content, and annotations must be clear, legible Chinese characters (简体中文), not gibberish or unreadable symbols. Ensure text clarity is prioritized.\n    * Leader Line Annotations: Every single small component, detail, submodule, diagram, or illustration within the modules must have detailed leader line annotations (拟解剖图) pointing directly to it for maximum professionalism and educational value. Every part should be labeled.\n\nSubject-Specific Module Structure (Example for general reference):\n\nA. For Humans [People]:\n   - Module 1: Anatomy & Skeletal Structure (w/ magnified cross-sections)\n   - Module 2: Physiological Processes (e.g., Circulatory/Nervous System)\n   - Module 3: Historical Context & Timeline (Key Achievements)\n   - Module 4: Major Contribution Diagram (Detailed breakdown)\n   - Module 5: Cognitive Process / Psychological Insight\n   - Module 6: Genetic Profile / Evolution\n   - Module 7: Global Influence & Cultural Impact\n   - Module 8: Cultural Representations / Legacy\n\nB. For Animals:\n   - Module 1: Full External Sketch & Anatomy (w/ microscope magnified detail circular windows)\n   - Module 2: Behavioral Patterns & Lifecycle (e.g., Mating/Migration, Flowchart style)\n   - Module 3: Digestive & Skeletal System\n   - Module 4: Habitats & Distribution Map (with environmental details)\n   - Module 5: Unique Adaptations (e.g., camouflage, hunting tools)\n   - Module 6: Evolutionary History & Relatives\n   - Module 7: Symbiotic Relationships / Ecosystem Role\n   - Module 8: Conservation Status & Human Interaction\n\nC. For Plants:\n   - Module 1: Full Plant Sketch & Anatomy (w/ magnified leaf/root details)\n   - Module 2: Photosynthesis & Lifecycle Flow (w/ icons for environment)\n   - Module 3: Cellular Structure (Magnified circular views)\n   - Module 4: Medicinal Properties / Practical Applications (as in original original prompt)\n   - Module 5: Environmental Adaptations / Unique Features\n   - Module 6: Distribution Map & Environmental Context\n   - Module 7: Genetic Variations & Cultivation\n   - Module 8: Historical Usage & Folklore\n\nOverall Composition: Extremely dense with information, organized into 6-8 structured modules, but balanced with strategic empty space around the center to allow the main, hyper-realistic figure to pop. Hard-core, professional, academic, but visually engaging due to the dynamic 3D central figure. No branding from any specific encyclopedia (e.g., no \"DK\" logos). All annotations must be legible. All handwritten notes must be clear. Main titles in Chinese calligraphy. Aspect Ratio: 3:4.\n\n主题内容：潘金莲",
+    "outputImages": [
+      "/images/2046252164717416641_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/xiaoxiaodong01/status/2046252164717416641",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "opennana-13478",
+    "title": "绘制科学百科知识图谱",
+    "thumbnail": "/images/opennana-13478_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "GeekCatX",
+    "authorUrl": "https://x.com/GeekCatX",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-21T00:52:06.049Z",
+    "prompt": "角色：世界级科学百科插画师兼知识图谱架构师\n任务：以经典、无品牌标识（无任何 Logo）的科学百科风格，创作一幅细节极致丰富、结构极其精巧、视觉效果惊艳的「环球图解百科科学信息图」。\n题材选择：从【人物、植物、动物】中任选其一。\n具体对象：【例如：大王乌贼 / 列奥纳多・达・芬奇 / 红杉树】\n风格：采用复古泛黄米色纸张背景，绘制精细工整的科学插画；线条细腻精致，整体繁复专业、严谨考究。\n核心视觉要求\n主体逼真 3D 效果\n位于画面视觉中心（C 位）的主体形象，需具备极致的写实感与动态张力。营造强烈的空间纵深感，让人物、植物或动物仿佛突破画框，从平面纸张中跃出、冲向观者（效果类似变形 3D 或动态弹出效果，高精度写实呈现）。\n版式布局与留白设计\n主体位置：占据画面中心，周围刻意设置规划式留白，强化立体弹出效果，使其成为绝对视觉焦点。\n周边模块：根据所选题材，在画面四周（上下左右及四角）排布 6–8 个独立且规整有序的知识模块。整体呈现规整的信息密度感，而非杂乱堆砌。每个模块需带有清晰边框、标题栏与详尽丰富的内容。\n关联结构\n运用纤细的指示线、箭头、括号、虚线与小型连接点，构建复杂且逻辑清晰的网络，将中心主体与所有周边模块相连，并使各模块之间相互关联，形成完整统一的知识体系。\n文字与标注（硬性要求：必须为清晰中文）\n主标题：以醒目大气、笔法优美的中文书法字体呈现具体对象名称【例如：大王乌贼】。\n书法点缀：在主体画面与模块标题中，对关键术语使用工整美观的中文书法字体标注。\n标准中文文本：其余所有说明文字、大量清晰中文手写注释、模块内容及注解均使用清晰可辨的简体汉字，不得出现乱码或无法识别符号，优先保证文字可读性。\n指示线标注：模块内所有细小结构、细节、子模块、图表与插画，均需搭配详尽的指示线标注（仿解剖图形式），直接指向对应部位，最大化体现专业性与科普价值，做到每一处结构均有标注。\n分题材模块结构（参考示例）\nA. 人物类\n模块 1：解剖结构与骨骼系统（含放大剖面图示）\n模块 2：生理运作机制（如循环系统、神经系统）\n模块 3：生平背景与时间线（核心成就）\n模块 4：主要贡献图解（详细拆解）\n模块 5：认知模式与心理特征\n模块 6：基因特征与演化溯源\n模块 7：全球影响力与文化冲击\n模块 8：艺术形象与后世传承\nB. 动物类\n模块 1：整体外形草图与解剖结构（含显微镜级圆形放大细节）\n模块 2：行为模式与生命周期（如交配、迁徙，流程图形式）\n模块 3：消化系统与骨骼系统\n模块 4：栖息环境与分布地图（含环境细节）\n模块 5：独特适应性特征（如伪装、捕食器官）\n模块 6：演化历史与亲缘物种\n模块 7：共生关系与生态位作用\n模块 8：保护现状与人类互动\nC. 植物类\n模块 1：植株整体草图与解剖结构（含叶片、根部放大细节）\n模块 2：光合作用与生命周期流程（搭配环境示意图标）\n模块 3：细胞结构（圆形放大视图）\n模块 4：药用价值与实际应用\n模块 5：环境适应性与独有特征\n模块 6：分布地图与生长环境\n模块 7：基因变异与培育方式\n模块 8：历史用途与民间传说\n整体构图要求\n信息密度极高，规整划分为 6–8 个结构化模块，同时通过中心区域的规划留白突出超写实主体的立体弹出效果。风格硬核、专业、学术化，凭借动态 3D 主体实现极强视觉吸引力。\n无任何百科品牌标识（如 DK 等 Logo）。\n所有标注清晰可辨，所有手写注释工整可读。\n主标题采用中文书法字体。\n画面比例：3:4。\n【主题内容】",
+    "outputImages": [
+      "/images/opennana-13478_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/GeekCatX",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045787856292151322",
+    "title": "完美匹配的海报广告图",
+    "thumbnail": "/images/2045787856292151322_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Kashiko_AIart",
+    "authorUrl": "https://x.com/Kashiko_AIart",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T06:37:05.728Z",
+    "prompt": "生成一张与这张图片完美匹配的广告图片。信息量要多一些。",
+    "outputImages": [
+      "/images/2045787856292151322_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Kashiko_AIart/status/2045787856292151322",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "opennana-13472",
+    "title": "疾风起狂草艺术字体设计",
+    "thumbnail": "/images/opennana-13472_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "OpenNana",
+    "authorUrl": "https://opennana.com/awesome-prompt-gallery/rising-wind-calligraphy-art",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T06:36:58.858Z",
+    "prompt": "创意艺术字体“纵有疾风起”，秀丽笔手写风格，整体文字横版排列，具有强烈视觉冲击力；\n深度融合手写书法笔意，笔触带毛笔书写的粗犷洒脱，如挥毫泼墨的肆意劲道；\n起收笔的飞白，顿挫，尽显促销的火爆张力，文字的形态打破规整，笔画的粗细变化；\ndutch angle，营造出动感冲刺的气势，字形呈奔放之势；\n重心上扬如蓄势待发，笔画的伸展，穿插毫无拘束，似全力冲刺的劲道；\n整体架构疏密交织，紧密处如促销热潮的汹涌，留白处似优惠间隙的呼吸感；\n纯净黑色背景打底，完美契合热烈氛围，艺术字的形态与色彩酣畅传递。",
+    "outputImages": [
+      "/images/opennana-13472_0.jpeg"
+    ],
+    "sourceUrl": "https://opennana.com/awesome-prompt-gallery/rising-wind-calligraphy-art",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2046037688969769346",
+    "title": "治愈系助眠指南九宫格",
+    "thumbnail": "/images/2046037688969769346_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "austinit",
+    "authorUrl": "https://x.com/austinit",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T06:36:49.230Z",
+    "prompt": "生成一张适合小红书发布的 3:4 竖版九宫格海报，整体为 3列 × 3行 排版，九个宫格边界清晰，方便后期直接切割成 9 张单图发布。整体风格干净、高级、统一，适合女性向健康生活方式内容，具有小红书爆款封面气质。画面要求 信息排版清晰、文字大、可读性强、留白舒服、配色温柔治愈。\n\n整体视觉风格：\n奶油白、浅米色、淡燕麦色、浅焦糖色为主色调，搭配少量深棕色文字，ins风、治愈感、睡眠疗愈主题，简约排版，轻拟物插画点缀，可加入枕头、月亮、星星、热牛奶、香薰、书本、眼罩、窗帘、床铺等元素。整体像专业新媒体设计图，字体工整，适合做知识科普类小红书九宫格。\n排版要求：\n\n整张图必须是标准九宫格构图，切分后每一格都能独立成图\n\n每个宫格内容完整居中，不要把标题或正文压在分割线附近\n每个格子之间保留明显间隔或细边框，保证裁切后不影响阅读\n所有文字使用中文，清晰易读，不要乱码，不要英文\n每个宫格都像独立的小红书图文卡片，但视觉风格保持统一\n画面精致、真实、自然，不要廉价营销感，不要过度花哨\n九宫格具体内容：\n\n第1格（封面）\n大标题：让你倒头就睡的8个 tips\n副标题：失眠党、熬夜党一定要收藏\n封面视觉最吸睛，适合做首图，加入柔软床铺、月亮、枕头、眼罩等治愈睡眠元素，标题突出，排版高级。\n\n第2格\n标题：1. 睡前1小时别玩手机\n正文：蓝光会让大脑更清醒，越刷越睡不着。\n配图元素：手机、月亮、困倦表情的小插画\n第3格\n标题：2. 睡前把灯光调暗\n正文：暖光环境能帮助身体进入“准备睡觉”的状态。\n配图元素：床头灯、暖黄色灯光、窗帘\n第4格\n标题：3. 房间温度别太高\n正文：稍微凉一点，更容易快速入睡。\n配图元素：空调、温度计、被子\n第5格\n标题：4. 晚上别喝浓茶咖啡\n正文：咖啡因会延迟困意，让你躺很久还睡不着。\n配图元素：咖啡杯、茶杯、禁止符号\n\n第6格\n标题：5. 睡前洗个热水澡\n正文：能让身体放松下来，入睡速度更快。\n配图元素：浴室蒸汽、毛巾、热水\n第7格\n标题：6. 脑子停不下来就写下来\n正文：把烦心事和待办清单写下，大脑会更容易放松。\n配图元素：笔记本、钢笔、小台灯\n第8格\n标题：7. 固定上床时间\n正文：每天差不多时间睡，生物钟会越来越稳定。\n配图元素：时钟、月亮、床\n第9格\n标题：8. 试试深呼吸放松法\n正文：吸气4秒，停4秒，呼气6秒，慢慢就有困意了。\n底部小字：收藏这组，今晚试试看\n配图元素：呼吸线条、闭眼人物、星星\n\n画质要求：\n高清，高级排版，杂志感，真实可发布，新媒体运营审美，小红书爆款图文风格，文字布局规整，适合直接切图。",
+    "outputImages": [
+      "/images/2046037688969769346_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/austinit/status/2046037688969769346",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045852114673635507",
+    "title": "夏日柑橘苏打高转化广告图",
+    "thumbnail": "/images/2045852114673635507_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "old_pgmrs_will",
+    "authorUrl": "https://x.com/old_pgmrs_will",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 1
+    },
+    "createdAt": "2026-04-20T06:36:43.080Z",
+    "prompt": "图像生成: 商品广告照片, 适合夏天的季节商品, 碳酸饮料, 名称=\"夏柑SODA\", 形状=PET瓶500ml, 研究2025年作为饮料广告的高CTA设计后设计并生成图像规格, 宽高比3:4",
+    "outputImages": [
+      "/images/2045852114673635507_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/old_pgmrs_will/status/2045852114673635507",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045052982728016131",
+    "title": "胶片闪光灯下的球场少女",
+    "thumbnail": "/images/2045052982728016131_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:32:57.613Z",
+    "prompt": "35毫米彩色胶片摄影，带有强烈的机顶直射闪光灯，皮肤和衣物上有镜面高光，眼睛里有强烈的眼神光，高对比度闪光灯照明，真实的胶片颗粒和色彩偏移，高级时尚清新纯真篮球场编辑风格，亲密的第一人称低角度仰视POV镜头，二十出头的性感中国女性偶像，具有超写实的精致细腻的中国特征，诱人的杏仁形狐狸眼，带有自然双眼皮，高鼻梁，小巧锋利的V型下颌线，无瑕逼真的瓷白肌肤，带有冷象牙色底调和可见的闪光镜面高光，细腻精致的皮肤纹理，带有微妙的毛孔微距细节和闪光灯下的自然水光感，清新自然的运动妆容，带有柔和的水光感，脸颊上有微妙的自然红晕，自然粉唇微张，鼻子和脸颊上有微妙的自然雀斑，深棕色长发扎成高高的俏皮马尾辫，有一些散落的发丝修饰脸型，以及逼真的散落发丝，穿着宽松的白色背心和白色高腰篮球短裤，白色及膝运动袜，在黄昏的户外球场上靠在篮球架杆上的诱人自然倾斜姿势，身体侧成角度，背部自然弓起，臀部轻轻向后推，以凸显挺拔圆润的臀部和性感的臀部曲线，一条腿自然向前伸向镜头，另一条腿微微弯曲以强调修长性感的双腿，双手轻轻放在肩膀高度的篮球杆上，极其诱人俏皮又惹人怜爱的鹿眼凝视直视观看者，带着柔软脆弱渴望的眼睛和温柔挑逗的微笑，充满安静的诱惑和欲望，强烈的机顶直射闪光灯产生锐利的镜面高光和强烈的眼神光，背景是黄昏天空下模糊的篮球场和篮筐，高对比度胶片调色，带有自然闪光灯外观，极其锐利却又柔和的皮肤渲染，具有真实的35毫米直射闪光美学，自然发丝，背心和短裤上逼真的织物纹理以及袜子细节，没有塑料感皮肤，没有数码过度锐化，没有磨皮，没有瑕疵，没有痣，没有油性皮肤，没有水印，没有文字，真实的35毫米直射闪光胶片篮球场外观 --ar 9:16",
+    "outputImages": [
+      "/images/2045052982728016131_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2045052982728016131",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045179926270361890",
+    "title": "关键人物关系图谱",
+    "thumbnail": "/images/2045179926270361890_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "yihui_indie",
+    "authorUrl": "https://x.com/yihui_indie",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-18T15:35:52.555Z",
+    "prompt": "请你生成 《XXX》 的关键人物关系图。",
+    "outputImages": [
+      "/images/2045179926270361890_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/yihui_indie/status/2045179926270361890",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045693939584516441",
+    "title": "绝美国风工笔画书签设计",
+    "thumbnail": "/images/2045693939584516441_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "akokoi1",
+    "authorUrl": "https://x.com/akokoi1",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:16:39.319Z",
+    "prompt": "生成一系列工笔画书签的设计稿",
+    "outputImages": [
+      "/images/2045693939584516441_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045693939584516441",
+    "title": "杜蕾斯茶颜悦色联名海报设计",
+    "thumbnail": "/images/2045693939584516441_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "akokoi1",
+    "authorUrl": "https://x.com/akokoi1",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:16:20.310Z",
+    "prompt": "设计一套杜蕾斯和茶颜悦色联名的宣传物料",
+    "outputImages": [
+      "/images/2045693939584516441_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045693939584516441",
+    "title": "马斯克专属篆刻印章设计",
+    "thumbnail": "/images/2045693939584516441_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "akokoi1",
+    "authorUrl": "https://x.com/akokoi1",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:16:13.790Z",
+    "prompt": "给”埃隆·马斯克”设计一组篆刻印章",
+    "outputImages": [
+      "/images/2045693939584516441_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045693939584516441",
+    "title": "黑白线稿勾勒的上海风情",
+    "thumbnail": "/images/2045693939584516441_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "akokoi1",
+    "authorUrl": "https://x.com/akokoi1",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:16:11.883Z",
+    "prompt": "设计一张黑色线稿风格的上海明信片",
+    "outputImages": [
+      "/images/2045693939584516441_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045693939584516441",
+    "title": "运动健身图标字体设计",
+    "thumbnail": "/images/2045693939584516441_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "akokoi1",
+    "authorUrl": "https://x.com/akokoi1",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:16:10.478Z",
+    "prompt": "生成一套运动类app的iconfont",
+    "outputImages": [
+      "/images/2045693939584516441_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045764695827562686",
+    "title": "景德镇青花瓷全景解说图谱",
+    "thumbnail": "/images/2045764695827562686_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "joshesye",
+    "authorUrl": "https://x.com/joshesye",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:16:05.890Z",
+    "prompt": "为我生成景德镇青花瓷的详细解说图，配上详细的中文知识解析",
+    "outputImages": [
+      "/images/2045764695827562686_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/joshesye/status/2045764695827562686",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2044796366950703316",
+    "title": "美女举牌感谢大哥打赏大火箭",
+    "thumbnail": "/images/2044796366950703316_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "joshesye",
+    "authorUrl": "https://x.com/joshesye",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:16:01.325Z",
+    "prompt": "生成一个抖音直播的截图 ，一个美女在直播，美女手里拿着牌子，上面写着：谢谢行者大哥的大火箭！",
+    "outputImages": [
+      "/images/2044796366950703316_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/joshesye/status/2044796366950703316",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045693939584516441",
+    "title": "小王子与星舰的浪漫联名",
+    "thumbnail": "/images/2045693939584516441_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "akokoi1",
+    "authorUrl": "https://x.com/akokoi1",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:15:44.467Z",
+    "prompt": "设计一张小王子和SpaceX联名的明信片",
+    "outputImages": [
+      "/images/2045693939584516441_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045693939584516441",
+    "title": "言叶之庭春雨绿意单日历",
+    "thumbnail": "/images/2045693939584516441_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "akokoi1",
+    "authorUrl": "https://x.com/akokoi1",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:15:41.620Z",
+    "prompt": "生成一张言叶之庭2026年4月19日单日日历",
+    "outputImages": [
+      "/images/2045693939584516441_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045693939584516441",
+    "title": "五一劳动节手举牌创意设计集",
+    "thumbnail": "/images/2045693939584516441_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "akokoi1",
+    "authorUrl": "https://x.com/akokoi1",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:15:40.060Z",
+    "prompt": "生成一系列五一劳动节的手举牌设计",
+    "outputImages": [
+      "/images/2045693939584516441_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045693939584516441",
+    "title": "2026谷雨节气唯美海报设计",
+    "thumbnail": "/images/2045693939584516441_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "akokoi1",
+    "authorUrl": "https://x.com/akokoi1",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:15:37.823Z",
+    "prompt": "生成一张2026年谷雨节气的海报",
+    "outputImages": [
+      "/images/2045693939584516441_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045693939584516441",
+    "title": "奔赴山海胶片感海报",
+    "thumbnail": "/images/2045693939584516441_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "akokoi1",
+    "authorUrl": "https://x.com/akokoi1",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:15:35.724Z",
+    "prompt": "设计一张主题是”奔赴山海”的胶片感摄影风格的海报",
+    "outputImages": [
+      "/images/2045693939584516441_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/akokoi1/status/2045693939584516441",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2044796366950703316",
+    "title": "瑜伽裤女主播展示身材曲线",
+    "thumbnail": "/images/2044796366950703316_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "joshesye",
+    "authorUrl": "https://x.com/joshesye",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:15:24.816Z",
+    "prompt": "手机竖屏界面，短视频直播平台风格，一位年轻亚洲女主播在家中直播带货，主播穿着贴身瑜伽裤与简约上衣，身材曲线自然，正在侧身展示裤子的线条与弹性，动作自然不夸张；",
+    "outputImages": [
+      "/images/2044796366950703316_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/joshesye/status/2044796366950703316",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2044796366950703316",
+    "title": "抖音直播间的绝美女主播",
+    "thumbnail": "/images/2044796366950703316_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "joshesye",
+    "authorUrl": "https://x.com/joshesye",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:16:47.355Z",
+    "prompt": "生成一个抖音直播的截图 里面是一个美女在直播",
+    "outputImages": [
+      "/images/2044796366950703316_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/joshesye/status/2044796366950703316",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2044796366950703316",
+    "title": "抖音汉服美女直播带货截图",
+    "thumbnail": "/images/2044796366950703316_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "joshesye",
+    "authorUrl": "https://x.com/joshesye",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T02:16:46.269Z",
+    "prompt": "生成一个抖音直播的截图里面是一个穿着中国传统服饰的美女在直播卖货",
+    "outputImages": [
+      "/images/2044796366950703316_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/joshesye/status/2044796366950703316",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2044968740782272596",
+    "title": "智能视频生成器暗黑界面设计",
+    "thumbnail": "/images/2044968740782272596_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "austinit",
+    "authorUrl": "https://x.com/austinit",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:50:08.226Z",
+    "prompt": "渲染一个专业的IOS APP首页UI图，该主题为AI Video Generator,英文界面。专业级设计，专业风格，暗黑色主题。",
+    "outputImages": [
+      "/images/2044968740782272596_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/austinit/status/2044968740782272596",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045378877363798279",
+    "title": "Z世代Y2K平价美妆广告图",
+    "thumbnail": "/images/2045378877363798279_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "midori_tatsuta",
+    "authorUrl": "https://x.com/midori_tatsuta",
+    "tags": [
+      "zh",
+      "advertising"
+    ],
+    "category": "advertising",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:49:41.132Z",
+    "prompt": "为Z世代设计的可爱Y2K风格的平价化妆品广告图像。使用鲜艳的配色，包括荧光色。纵横比为3:4。",
+    "outputImages": [
+      "/images/2045378877363798279_0.jpeg",
+      "/images/2045378877363798279_1.jpeg"
+    ],
+    "sourceUrl": "https://x.com/midori_tatsuta/status/2045378877363798279",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045253072289767815",
+    "title": "日式潮流广告四联画",
+    "thumbnail": "/images/2045253072289767815_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "midori_tatsuta",
+    "authorUrl": "https://x.com/midori_tatsuta",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:49:39.091Z",
+    "prompt": "生成四张虚构的日式广告图片，涵盖不同类型并排排列。采用专业设计师创作的潮流设计。宽高比为1:1",
+    "outputImages": [
+      "/images/2045253072289767815_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/midori_tatsuta/status/2045253072289767815",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045025277538107420",
+    "title": "官方角色设定资料图鉴",
+    "thumbnail": "/images/2045025277538107420_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "OpenNana",
+    "authorUrl": "](https://x.com/Toshi_nyaruo_AI/status/2045025277538107420",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:32:57.596Z",
+    "prompt": "このキャラクターと背景を元に、 公式設定資料のようなキャラクターシートを作成してください。 \n・正面、側面、背面の3面図を含める ・キャラクターの表情バリエーションを追加 \n・衣装や装備の詳細パーツを分解して表示 ・カラーパレットを追加 ・世界観の簡単な説明を入れる \n・全体は整理されたレイアウト\n（白背景、図解風） \n・アスペクト比16：9 　←\n\n高解像度、プロのコンセプトアートスタイル",
+    "outputImages": [
+      "/images/2045025277538107420_0.jpg"
+    ],
+    "sourceUrl": "](https://x.com/Toshi_nyaruo_AI/status/2045025277538107420",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045092449803284923",
+    "title": "日式温泉旅馆人像",
+    "thumbnail": "/images/2045092449803284923_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:32:57.578Z",
+    "prompt": "35mm film photography, warm vintage Japanese onsen ryokan aesthetic, soft ambient wooden lantern lighting mixed with gentle natural window light, subtle film grain, gentle color shift, high atmosphere editorial style, intimate medium shot, early 20s beautiful Chinese female idol with ultra-realistic delicate refined Chinese features, seductive almond-shaped fox eyes with natural double eyelids, high nose bridge, small sharp V-shaped jawline, flawless porcelain skin with warm ivory undertone, visible subtle skin texture and micro pores, soft natural makeup with dewy glow, subtle rosy flush on cheeks, natural soft pink lips slightly parted, long dark brown hair tied in a loose low bun with some messy strands falling around face and neck, wearing a loose white yukata (traditional Japanese bathrobe) deliberately slipped off one shoulder and loosely tied at the waist, the fabric slightly open revealing smooth skin and subtle cleavage, barefoot, seductive relaxed sitting pose on the edge of a traditional wooden engawa veranda at a vintage onsen ryokan, body slightly turned toward the camera, one leg bent with foot resting on the wooden floor, the other leg gently dangling, one hand lightly holding the yukata collar, the other hand resting on the wooden floor behind her for support, softly arched back to gently accentuate curves, intensely seductive yet gentle and inviting gaze straight at the viewer with soft doe eyes full of quiet temptation and warmth, warm wooden interior with paper sliding doors and distant steaming hot spring in soft focus, gentle rim lighting highlighting skin and fabric texture, authentic vintage film color grading with warm tones, extremely sharp yet soft skin rendering, natural hair strands, realistic fabric wrinkles and drape on the yukata, no plastic skin, no digital over-sharpening, no airbrushing, no blemishes, no moles, no oily skin, no watermark, no text, authentic 35mm film Japanese onsen ryokan atmosphere",
+    "outputImages": [
+      "/images/2045092449803284923_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2045092449803284923",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045151354679665101",
+    "title": "橙红渐变中的孤独剪影",
+    "thumbnail": "/images/2045151354679665101_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "iam_miharbi",
+    "authorUrl": "https://x.com/iam_miharbi",
+    "tags": [
+      "zh",
+      "portrait"
+    ],
+    "category": "portrait",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:32:40.704Z",
+    "prompt": "生成一张电影级极简肖像，一个孤独的男人站在强烈的橙色到红色渐变环境中，强烈的剪影光，深邃的阴影对比，反光的光滑地面，对称构图，极简",
+    "outputImages": [
+      "/images/2045151354679665101_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/iam_miharbi/status/2045151354679665101",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045440101359198302",
+    "title": "一张采用分层蒙太奇构图的电影海报",
+    "thumbnail": "/images/2045440101359198302_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "old_pgmrs_will",
+    "authorUrl": "https://x.com/old_pgmrs_will",
+    "tags": [
+      "zh",
+      "portrait"
+    ],
+    "category": "portrait",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:32:40.586Z",
+    "prompt": "“一张采用分层蒙太奇构图的电影海报。背景为日落时分的海滨小镇，平静的海面倒映着耀眼的日光眩光，薄雾笼罩的天空中有远处飞鸟，沿海公路旁立着电线杆剪影。左侧中景处，一位身着深灰色外套、留着深色卷发的中年男子站在混凝土海堤边，神情忧郁地低头凝视，被傍晚的阳光逆光勾勒轮廓。右侧前景主体为一张大幅特写年轻女子侧脸肖像，她望向右侧，身穿带白色条纹的深色水手校服，湿润的黑发贴在脸颊，柔和漫射光线下，一滴泪珠从她脸颊滑落。画面下方中央前景处，一只柴犬抬头朝右侧望去，红棕色毛发被温暖的轮廓光点亮。画面最底端为一条横向电影胶片，内含五幅独立矩形场景缩略图：女孩与柴犬在海滩、女孩骑车望向海面、女孩与男子坐在室内桌前、男子与女孩在海滩面对面站立、女孩拥抱柴犬的特写。画面叠加指定文字：左上角为深青绿色大号衬线字体标题《风间静语》，下方副标题为「—— 致那日的你 ——」；标题下方为小号深色衬线正文：“逝去之物，不复归来。然而，只要心灵稍稍相连，我们便能再度直面明日。” 画面右侧中部为深色衬线字体文字：“曾有一段时光，是你教会我如何生活。我永不会忘。” 左下角为大号白色文字：“10 月 31 日 周五 影院上映”。右下角为小号白色无衬线字体演职人员表：“主演：福波真子 / 桐嶋秀作 原作与剧本：柴野麻吕 导演：今仓七海 主题曲：SyVa《看得见海的地方》（Dogstar★唱片） 制作：《夕凪之尾》影视伙伴 制作公司：DABUSHIBANU-NU 发行：GOODSHIBALERS ©2026《夕凪之尾》影视伙伴”。\n分段提示词：\n图层索引：0\n片段：“背景为日落时分的海滨小镇，平静海面倒映耀眼日光眩光，薄雾天空中有远处飞鸟，沿海公路旁有电线杆剪影。”\n图层索引：1\n片段：“左侧中景处，身着深灰色外套、留深色卷发的中年男子站在混凝土海堤边，神情忧郁低头，被傍晚阳光逆光照射。”\n图层索引：2\n片段：“右侧前景主体为大幅特写年轻女子侧脸肖像，她望向右侧，身穿带白条纹的深色水手校服，湿润黑发贴脸，柔和漫射光下一滴泪珠滑落脸颊。”\n图层索引：3\n片段：“画面下方中央前景处，一只柴犬抬头望向右侧，红棕色毛发被温暖轮廓光点亮。”\n图层索引：4\n片段：“画面最底端为横向电影胶片，内含五幅独立矩形场景缩略图：女孩与柴犬在海滩、女孩骑车望向水面、女孩与男子坐在室内桌前、男子与女孩在海滩面对面、女孩拥抱柴犬特写。”\n图层索引：[5,6,7,8]\n片段：“画面叠加指定文字：左上角为深青绿色大号衬线字体《风间静语》，下方副标题「—— 致那日的你 ——」；其下小号深色衬线正文：“逝去之物，不复归来。然而，只要心灵稍稍相连，我们便能再度直面明日。” 右侧中部深色衬线文字：“曾有一段时光，是你教会我如何生活。我永不会忘。” 左下角大号白色文字：“10 月 31 日 周五 影院上映”。右下角小号白色无衬线字体演职信息：“主演：福波真子 / 桐嶋秀作 原作与剧本：柴野麻吕 导演：今仓七海 主题曲：SyVa《看得见海的地方》（Dogstar★唱片） 制作：《夕凪之尾》影视伙伴 制作公司：DABUSHIBANU-NU 发行：GOODSHIBALERS ©2026《夕凪之尾》影视伙伴”。\n负面提示词：\n“平光照明，无质感表面，对称构图，底部留白空荡，文字缺失，翻译文字，改写文字，3D 渲染，卡通风格，高对比生硬阴影，干涩头发，明亮欢快表情”",
+    "outputImages": [
+      "/images/2045440101359198302_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/old_pgmrs_will/status/2045440101359198302",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2044581766309060765",
+    "title": "奢华魅力黑人女性海滨摄影",
+    "thumbnail": "/images/2044581766309060765_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "patrickassale",
+    "authorUrl": "https://x.com/patrickassale",
+    "tags": [
+      "zh",
+      "portrait"
+    ],
+    "category": "portrait",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:32:40.561Z",
+    "prompt": "奢华魅力美容肖像：, 美丽的黑人女性, 青春活力, 奶油香草色, 丝绸柔顺发, 红木色, 微妙的自信, 有质感的面料, 蓝宝石色, 极简珠宝, 海滨微风, 镜头光晕效果, 怀旧的, 电影镜头, 对称构图, 柔焦, 高级时尚摄影, 单色的, 水光质感, 神秘张力, 分层元素",
+    "outputImages": [
+      "/images/2044581766309060765_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/patrickassale/status/2044581766309060765",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045368305079447853",
+    "title": "裂痕里的水墨东方山水画卷",
+    "thumbnail": "/images/2045368305079447853_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "liyue_ai",
+    "authorUrl": "https://x.com/liyue_ai",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:32:40.546Z",
+    "prompt": "极简新中式美学风格，画面以淡雅的灰白色为底，呈现出一种纸艺剪影般的立体感。\n一条S形蜿蜒的裂痕状边缘将画面分割，仿佛撕开了一层纸面，露出内部色彩斑斓的东方山水景象。\n裂口内，一条蜿蜒的河流自上而下贯穿整个构图，河水以深浅不一的蓝色渲染，层次分明，仿佛流动的丝带。\n河岸两侧点缀着青翠的山丘与梯田，色彩柔和，绿红交织，展现出田园的宁静之美。\n沿河而建的古风建筑错落有致，飞檐翘角，白墙黛瓦，在光影的映衬下更显古朴典雅。\n岸边树木葱茏，枝叶轻盈，一艘小船静泊于水中央，增添了几分悠然意境。\n整体构图呈S形曲线，富有韵律感，仿佛自然与人文的和谐共生。\n画作边缘采用撕纸效果，营造出立体浮雕般的视觉体验。\n下方题字\"东方美学\"以黑色楷体书写，日期\"2026/04/18\"与红色印章相呼应，底部\"CHINA\"字样庄重醒目，署名\"@LIYUE\"低调收尾，整体氛围静谧深远，充满诗意与哲思。",
+    "outputImages": [
+      "/images/2045368305079447853_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/liyue_ai/status/2045368305079447853",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "opennana-13427",
+    "title": "涂鸦速写风AI建造者大师",
+    "thumbnail": "/images/opennana-13427_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "OpenNana",
+    "authorUrl": "https://opennana.com/awesome-prompt-gallery/graffiti-sketch-ai-builder-master",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:32:40.545Z",
+    "prompt": "以涂鸦速写风表现【一个厉害的AI builder】，整体呈现快速勾勒、自由变形、即兴手绘与草稿式的视觉效果。线条随手、夸张、可粗细不一，略显凌乱但具有节奏和表现力，强调概括、夸张、趣味和随性，而不是严谨写实或精细刻画。  颜色采用粗糙、干刷感明显的块面表现，可保留不均匀的涂抹痕迹、刷痕、飞白与覆盖感，色彩根据【主题/主体】自动适配，但整体保持涂鸦式、速写式、概括式的表达。不要透明水彩晕染效果，不要细腻水彩过渡，不要纸纹理，不要柔和雾化，不要梦幻质感。  背景以留白为主，保持简洁、轻松、未完成感和设计感，可加入少量辅助性符号、箭头、记号、圈画、重复线、随手写的文字或其他涂鸦元素，以增强速写本或随笔式视觉语言，但不可过于拥挤，不可破坏主体和留白气质。  画面内容不需要预先写清楚，由【一个厉害的AI builder】自动推演并生成最适合的主体形象、动作、相关元素、符号或简化场景，整体保持统一的涂鸦速写风和夸张概括的表现方式，避免复杂写实背景和过度铺陈。 画面中需自然加入专属签名\"BlanPlan\"，作为画面的一部分，位置低调但清晰，可放在左下角、右下角或标题附近，风格需与整体版式统一，像作品署名或设计落款；签名字体精致、克制、高级，不可过大，不可破坏主体构图，不可显得突兀或廉价。",
+    "outputImages": [
+      "/images/opennana-13427_0.jpg"
+    ],
+    "sourceUrl": "https://opennana.com/awesome-prompt-gallery/graffiti-sketch-ai-builder-master",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045390207072256179",
+    "title": "赛博朋克科幻曼荼罗",
+    "thumbnail": "/images/2045390207072256179_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "4WEB1",
+    "authorUrl": "https://x.com/4WEB1",
+    "tags": [
+      "zh",
+      "other"
+    ],
+    "category": "other",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:32:40.534Z",
+    "prompt": "でChatGPTで画像を作成してもらって、今日また作成してもらったらGPT image 2かもしれず、出来が変わったように見えるのでメモ\n\n左の水色と黄色のが先週\n右の紫のが今日\n\n右のは透明感とか解像度、緻密さが違うような気がする…\n\nプロンプト\n曼荼羅の近未来SF版を描いて",
+    "outputImages": [
+      "/images/2045390207072256179_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/4WEB1/status/2045390207072256179",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045082518089810073",
+    "title": "温柔治愈系二次元手机截图",
+    "thumbnail": "/images/2045082518089810073_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "Zoulinshen",
+    "authorUrl": "https://x.com/Zoulinshen",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 1
+    },
+    "createdAt": "2026-04-20T01:32:40.529Z",
+    "prompt": "生成一张竖版手机截图风格的图片，整体比例接近 9:16。画面中心偏上是一位真人 coser，扮演（角色名称）的二次元角色。人物为写实风格，但五官略带动漫感，皮肤细腻，眼睛稍大，表情温柔地看向镜头，坐在室内的休闲场景中，例如咖啡厅或酒吧吧台前，背景有符合场景的道具。画面最上方加入手机系统状态栏 UI，包括时间、电量、信号、网络等图标，让整张图看起来像手机截图。画面底部叠加一块宽大的半透明 galgame 风格对话框，对话框左侧放一个与画面人物对应的动漫或 Q 版头像；对话框右侧排版文字：第一行用较大字体显示与前面相同的角色名字，下面一到两行显示一段适合这个角色人设的、温柔治愈风格的简体中文台词，由你自动创作。再在对话框下方加一条操作栏，仿照 galgame UI。整体风格高清、细节丰富、光线柔和、二次元与真人写真自然融合。",
+    "outputImages": [
+      "/images/2045082518089810073_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/Zoulinshen/status/2045082518089810073",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045114760937804187",
+    "title": "小恶魔莉莉香超任游戏海报",
+    "thumbnail": "/images/2045114760937804187_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "lilimliliychan",
+    "authorUrl": "https://x.com/lilimliliychan",
+    "tags": [
+      "zh",
+      "game"
+    ],
+    "category": "game",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:32:40.526Z",
+    "prompt": "が「小悪魔リリムリリィちゃんが　スーパーファミコンのゲームだったときのポスターを考えて」に　画像数枚だけで\nこのクオリティ　細かい説明呪文なし　すごいぜ！",
+    "outputImages": [
+      "/images/2045114760937804187_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/lilimliliychan/status/2045114760937804187",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045002808903020962",
+    "title": "温馨卧室里的少女自拍",
+    "thumbnail": "/images/2045002808903020962_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "Shinning1010",
+    "authorUrl": "https://x.com/Shinning1010",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:32:40.516Z",
+    "prompt": "一个惊艳的18岁中国女孩，拥有年轻纯真的脸庞和逼真的皮肤纹理，坐在她卧室里一张舒适且略显凌乱的床上。她正用智能手机拍镜子自拍，捕捉一个自然且亲密的瞬间。穿着随意的灰色居家服和整洁的白色船袜。柔和的自然光（黄金时刻）从侧面窗户照进来，营造出一种温暖、富有情绪感和电影般的氛围。35毫米镜头，对镜子中的主体保持锐利对焦，带有美丽模糊背景（散景）的景深。照片写实，8K，高分辨率，影棚级质量，杰作。反向提示词：没有多余的肢体，没有变形的手，没有模糊，没有噪点，没有水印，没有文字，没有卡通/动漫风格。长宽比：3:4。",
+    "outputImages": [
+      "/images/2045002808903020962_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/Shinning1010/status/2045002808903020962",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2044241997163311569",
+    "title": "真实动漫画面快照",
+    "thumbnail": "/images/2044241997163311569_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "Thereallo1026",
+    "authorUrl": "https://x.com/Thereallo1026",
+    "tags": [
+      "zh",
+      "manga"
+    ],
+    "category": "manga",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:32:40.486Z",
+    "prompt": "向我展示这张附带的图像作为一部真实动漫的快照",
+    "outputImages": [
+      "/images/2044241997163311569_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/Thereallo1026/status/2044241997163311569",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045527750606487877",
+    "title": "珠江新城剪纸璀璨夜景",
+    "thumbnail": "/images/2045527750606487877_0.jpg",
+    "thumbnailAspect": 1.33,
+    "author": "liyue_ai",
+    "authorUrl": "https://x.com/liyue_ai",
+    "tags": [
+      "zh",
+      "infographic"
+    ],
+    "category": "infographic",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-20T01:32:40.467Z",
+    "prompt": "以珠江新城现代都市景观为灵感的剪纸艺术，通过精巧的镂空手法在一整幅纸上，立体刻画广州塔、东西双塔等地标建筑与繁华城景。\n所有建筑与元素均以流畅的线条与结构相连，无孤立部分，构成一幅完整的都市画卷。\n画面采用金属箔或光泽纸材质，表面带有细腻的明暗光泽，在光照下呈现柔和的高光与阴影，仿佛被城市灯光轻轻照亮。\n背景以虚化的珠江新城天际线为衬，点缀隐约可见的花城广场与树木轮廓，整体透出现代浪漫的氛围。\n作品中巧妙融入轻盈的蒲公英绒毛或星光般的动态光点，象征梦想与活力在这座新城中飘散飞扬。整体呈现8K超高清视觉，细节丰富，真实而富有艺术感染力。",
+    "outputImages": [
+      "/images/2045527750606487877_0.jpg"
+    ],
+    "sourceUrl": "https://x.com/liyue_ai/status/2045527750606487877",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045435090923356415",
+    "title": "古风诗人镭射典藏卡牌",
+    "thumbnail": "/images/2045435090923356415_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "TanShilong",
+    "authorUrl": "https://x.com/TanShilong",
+    "tags": [
+      "zh",
+      "game"
+    ],
+    "category": "game",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-18T15:36:28.732Z",
+    "prompt": "为中国古代诗人设计一套游戏卡片，并按照SSR SR R 分级，重点卡片有放大展示的效果，包括卡面设计和人物介绍，有很高级的游戏卡片质感，稀有卡片还会有特色的光影例如镭射效果 需要有套卡设计和技能设计，并附带较为详细的说明",
+    "outputImages": [
+      "/images/2045435090923356415_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/TanShilong/status/2045435090923356415",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "opennana-13413",
+    "title": "极致奢华的弹珠店梦幻宣传单",
+    "thumbnail": "/images/opennana-13413_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "OpenNana",
+    "authorUrl": "https://opennana.com/awesome-prompt-gallery/luxurious-pachinko-flyer",
+    "tags": [
+      "zh",
+      "poster"
+    ],
+    "category": "poster",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-18T15:36:28.679Z",
+    "prompt": "以 3:4 比例制作一家弹珠店那种闪闪发光的宣传单。放置一个真实、精细的现代可爱日本女性。充分利用闪闪发光、立体感丰富的豪华装饰彩虹字体等，务必做到极致奢华。并列介绍几个不存在的虚构新机型。",
+    "outputImages": [
+      "/images/opennana-13413_0.jpeg"
+    ],
+    "sourceUrl": "https://opennana.com/awesome-prompt-gallery/luxurious-pachinko-flyer",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045193918736736365",
+    "title": "明朝登基宝玉的推文页面",
+    "thumbnail": "/images/2045193918736736365_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "tuzi_ai",
+    "authorUrl": "https://x.com/tuzi_ai",
+    "tags": [
+      "zh",
+      "ui"
+    ],
+    "category": "ui",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-18T15:36:25.569Z",
+    "prompt": "创建一个宝玉（查阅 https://x.com/dotey 这个推主的主页及部分推文）穿越到明朝，登基之后依据其业务/个性，绘制的其新的X帖子页面。",
+    "outputImages": [
+      "/images/2045193918736736365_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/tuzi_ai/status/2045193918736736365",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045358053831172358",
+    "title": "梦幻波士顿春季城市海报",
+    "thumbnail": "/images/2045358053831172358_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain",
+    "tags": [
+      "zh",
+      "logo"
+    ],
+    "category": "logo",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-18T15:36:01.611Z",
+    "prompt": "一张引人注目的2026年春季波士顿城市海报，具有优雅的庆典氛围和大胆的当代设计。在干净的米白色纹理背景上，带有大面积的留白，一个微型的单人赛艇手在图像右下角一条狭窄的反光水带上划行。船桨划出的尾波以动态的书法曲线向上扫过，逐渐变成查尔斯河，然后再变成一幅梦幻般的手绘波士顿全景。在这个流动的河流形状的构图中包含着标志性的波士顿元素：后湾天际线、灯塔山红砖联排别墅、橡树街、波士顿公共花园、天鹅船、扎基姆桥、芬威球场启发的细节、历史悠久的砖砌建筑、港口渡轮，以及这座城市的水滨氛围。柔和的晨雾，金色的春季光线，深红和金色的微妙节日点缀，丰富的细节，层次分明的深度，精致的城市海报美学，清新而优雅，视觉上强有力但不拥挤。左下角的优雅排版写着“SPRING 2026”，并附有垂直标语“BOSTON, A CITY OF RIVER, MEMORY, AND INVENTION”，文字清晰且构图优美，高端平面设计，9:16",
+    "outputImages": [
+      "/images/2045358053831172358_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2045358053831172358",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045148649869692982",
+    "title": "九位大师的机械键盘设计图鉴",
+    "thumbnail": "/images/2045148649869692982_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "TanShilong",
+    "authorUrl": "https://x.com/TanShilong",
+    "tags": [
+      "zh",
+      "portrait"
+    ],
+    "category": "portrait",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-18T15:35:43.837Z",
+    "prompt": "一个九宫格图片，展现九位当代知名设计师设计的同一组物体：机械键盘，包括设计师头像，设计师对于设计的中文文字解读和作品呈现。排版统一规则",
+    "outputImages": [
+      "/images/2045148649869692982_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/TanShilong/status/2045148649869692982",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045167461147042202",
+    "title": "深夜便利店里的性感霓虹少女",
+    "thumbnail": "/images/2045167461147042202_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "BubbleBrain",
+    "authorUrl": "https://x.com/BubbleBrain",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-18T15:35:26.847Z",
+    "prompt": "35毫米胶片摄影，带有刺眼的便利店荧光灯照明，混合着外面色彩斑斓的霓虹灯牌，真实的胶片颗粒，高对比度，轻微的偏色，电影感街头编辑风格，亲密的中景镜头，20岁出头性感的华人女性偶像，拥有超逼真精致细腻的东方五官，诱人的杏眼狐眼搭配天然双眼皮，高鼻梁，小巧尖锐的V型下颌线，无瑕的瓷白肌肤带有冷象牙底色以及来自荧光灯的可见高光，细腻的皮肤纹理和微小毛孔，自然清透妆容带有脸颊上的柔和红晕，水润自然的粉唇微张，鼻子和脸颊上散布着微妙的自然雀斑，深棕色的长发扎成凌乱的高马尾，许多松散的发丝垂在脸庞和颈部周围，穿着一件超大号的白衬衫作为唯一的上衣，顶部敞开露出深邃乳沟并在腰部宽松打结，搭配一条极小的黑色百褶迷你裙，赤脚穿着简约的白色拖鞋，在深夜24小时便利店的玻璃门上呈现出诱人随性的倚靠姿势，身体微微拱起，一条腿弯曲，脚搭在门框上，另一条腿伸直，一只手拿着一瓶冰饮，另一只手轻轻拉扯迷你裙的裙摆，极其诱人俏皮却又略显脆弱的目光直视观看者，柔和的鹿眼中充满安静的诱惑与挑逗的微笑，来自店内明亮冷调的荧光灯光混合着来自外面招牌的粉色和蓝色霓虹光芒，玻璃门上真实的反射，模糊的便利店内部，背景中有货架和零食，真实的35毫米胶片调色，带有刺眼的光照和霓虹点缀，极其锐利却又柔和的皮肤渲染，自然的发丝，超大号衬衫和迷你裙上逼真的织物褶皱和垂坠感，无塑料感皮肤，无数字过度锐化，无磨皮，无瑕疵，无痣，无油性皮肤，无水印，无文字，真实的深夜便利店氛围",
+    "outputImages": [
+      "/images/2045167461147042202_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/BubbleBrain/status/2045167461147042202",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2045013913901867334",
+    "title": "官方角色设定资料卡",
+    "thumbnail": "/images/2045013913901867334_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MANISH1027512",
+    "authorUrl": "https://x.com/MANISH1027512",
+    "tags": [
+      "zh",
+      "illustration"
+    ],
+    "category": "illustration",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 0
+    },
+    "createdAt": "2026-04-18T15:35:14.948Z",
+    "prompt": "基于此角色和背景，请制作一份类似官方设定资料的角色资料卡。\n・包含三视图：正面、侧面和背面\n・添加角色面部表情的变化・分解并展示服装和装备的详细部分\n・添加色板・包含世界观设定的简要说明\n・总体上，使用有组织的布局（白色背景，插画风格）",
+    "outputImages": [
+      "/images/2045013913901867334_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MANISH1027512/status/2045013913901867334",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2028087254757867560",
+    "title": "棘龙巨口中的酷飒少女与史前奇观",
+    "thumbnail": "/images/2028087254757867560_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "MrDasOnX",
+    "authorUrl": "https://x.com/MrDasOnX",
+    "tags": [
+      "zh",
+      "photography"
+    ],
+    "category": "photography",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 103
+    },
+    "createdAt": "2026-03-01T14:01:41.831Z",
+    "prompt": "超写实电影级奇幻场景，设定在郁郁葱葱的史前丛林山谷中。一只巨大的棘龙站在浅河边，它那长而类似鳄鱼的巨颚张得很大。一位年轻女子平静地坐在恐龙张开的嘴里，完美居中，双腿微微向前悬挂。她有一头深色直发，表情镇定无畏，皮肤纹理逼真。她身穿合身的黑色长袖短款上衣，蓝色牛仔短裤和黑色及膝战术靴。衣服和腿上可见微小的血迹和轻微划痕，增加了戏剧性的紧张感但并不血腥。她怀里温柔地抱着一只小恐龙幼崽，充满保护欲地抱着它。\n\n在他们身后，一道高耸而充满戏剧性的瀑布顺着覆盖着茂密绿色植被和薄雾的陡峭丛林悬崖倾泻而下。场景中栖息着多只恐龙：几只迅猛龙在河岸边潜行，小型食草动物在背景中奔跑，飞翔的翼龙在头顶盘旋。环境丰富，有长满苔藓的岩石、流动的河水、热带植物和柔和的大气雾。\n\n灯光具有电影感和自然感，漫射的日光照亮场景，阴影细节丰富，焦点清晰地聚在女子和棘龙身上，背景元素采用浅景深。恐龙鳞片、牙齿、水珠、树叶和织物上的超写实纹理。史诗奇幻写实主义，戏剧性构图，垂直构图，超精细，照片级真实感，4K，电影级调色，无文字，无水印。",
+    "outputImages": [
+      "/images/2028087254757867560_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/MrDasOnX/status/2028087254757867560",
+    "pending": false,
+    "approved": true
+  },
+  {
+    "id": "2027748030825500722",
+    "title": "冲破次元壁的写实漫画跑者",
+    "thumbnail": "/images/2027748030825500722_0.jpeg",
+    "thumbnailAspect": 1.33,
+    "author": "Fujimoto_hina",
+    "authorUrl": "https://x.com/Fujimoto_hina",
+    "tags": [
+      "zh",
+      "manga"
+    ],
+    "category": "manga",
+    "lang": "zh",
+    "stats": {
+      "likes": 0,
+      "retweets": 0,
+      "views": 116
+    },
+    "createdAt": "2026-03-01T13:15:42.288Z",
+    "prompt": "{\n  \"prompt\": \"超写实，一位留着深色短卷发、修剪整齐的胡须和黑色方形眼镜的年轻男子的鲜艳逼真渲染，身穿深色纹理高领毛衣和牛仔裤。他奔跑到一半被捕捉下来，姿态充满动感，向前突破，充满戏剧性地从一个破碎的漫画分镜框中显现——一条腿和一只手臂冲入现实世界，而身体的其余部分仍留在漫画框内。他的表情充满活力和喜悦，拥有锐利的面部细节，自然的皮肤纹理，以及具有高对比度和深度的戏剧性电影灯光。\\n\\n背景：一个非常详细的黑白漫画布局，充满了幽默、夸张的且与他直接互动的反应场景。周围的漫画人物表现出震惊和喜剧的表情，配有粗体的对话气泡和速度线。漫画分镜采用经典的高对比度水墨风格绘制，线条清晰，网点阴影。撕裂的纸张边缘和碎片增强了他冲破漫画世界的幻觉。全彩色的写实人物与单色的漫画环境形成强烈对比，创造出写实与漫画艺术之间的动态混合体。超精细，8k分辨率，清晰聚焦，戏剧性的阴影，电影级景深。\"\n}",
+    "outputImages": [
+      "/images/2027748030825500722_0.jpeg"
+    ],
+    "sourceUrl": "https://x.com/Fujimoto_hina/status/2027748030825500722",
+    "pending": false,
+    "approved": true
   }
 ]
