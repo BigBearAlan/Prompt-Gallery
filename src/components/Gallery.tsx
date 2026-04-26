@@ -233,7 +233,7 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
 
   const hasMore = displayed.length < filtered.length;
   const { columnCount, columns, containerRef } = useMasonryColumns(displayed);
-  const eagerImageCount = Math.min(displayed.length, columnCount * 3);
+  const eagerImageCount = Math.min(displayed.length, Math.max(12, columnCount * 4));
 
   const handleSearch = useCallback((v: string) => {
     startTransition(() => {
