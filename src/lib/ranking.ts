@@ -33,6 +33,33 @@ export function qualityWeight(entry: PromptEntry, imageQuality?: ImageQualityDat
   return 0.45 + qualityBoost + hqBoost;
 }
 
+function timestamp(entry: PromptEntry): number {
+  const parsed = Date.parse(entry.createdAt);
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
+export function compareByQualityRank(
+  a: PromptEntry,
+  b: PromptEntry,
+  imageQuality?: ImageQualityData | null
+): number {
+  const scoreDelta =
+    (getPromptQualityScore(b, imageQuality) ?? DEFAULT_SCORE) -
+    (getPromptQualityScore(a, imageQuality) ?? DEFAULT_SCORE);
+  if (scoreDelta) return scoreDelta;
+
+  const hqDelta = Number(Boolean(b.hq)) - Number(Boolean(a.hq));
+  if (hqDelta) return hqDelta;
+
+  const likeDelta = (b.stats?.likes || 0) - (a.stats?.likes || 0);
+  if (likeDelta) return likeDelta;
+
+  const dateDelta = timestamp(b) - timestamp(a);
+  if (dateDelta) return dateDelta;
+
+  return a.id.localeCompare(b.id);
+}
+
 export function sessionNoise(id: string, seed: number): number {
   let hash = 2166136261;
   const value = `${seed}:${id}`;

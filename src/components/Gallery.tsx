@@ -3,7 +3,7 @@
 import { useState, useMemo, useCallback, useEffect, useRef, useDeferredValue, startTransition } from 'react';
 import type { ImageQualityData, PromptEntry, SearchIndexFile, SortBy } from '@/lib/types';
 import { useLocale } from '@/lib/i18n';
-import { getPromptQualityScore, qualityAdjustedMetric, qualityWeight } from '@/lib/ranking';
+import { compareByQualityRank, getPromptQualityScore, qualityAdjustedMetric } from '@/lib/ranking';
 import {
   compareBySecondarySort,
   parseSearchQuery,
@@ -104,21 +104,8 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
   const [searchIndex, setSearchIndex] = useState<SearchIndexFile | null>(null);
   const [searchIndexStatus, setSearchIndexStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
 
-  const shuffled = useMemo(() => {
-    let seed = SHUFFLE_SEED;
-    const rng = () => {
-      seed = (seed * 9301 + 49297) % 233280;
-      return seed / 233280;
-    };
-    // Weighted random ordering: quality and HQ entries tend toward the front,
-    // while the session seed keeps the feed mixed instead of fixed.
-    return [...entries]
-      .map(e => {
-        const random = Math.max(rng(), Number.EPSILON);
-        return { e, pos: -Math.log(random) / qualityWeight(e, imageQuality) };
-      })
-      .sort((a, b) => a.pos - b.pos)
-      .map(x => x.e);
+  const qualityRanked = useMemo(() => {
+    return [...entries].sort((a, b) => compareByQualityRank(a, b, imageQuality));
   }, [entries, imageQuality]);
 
   const parsedSearch = useMemo(() => parseSearchQuery(deferredSearch), [deferredSearch]);
@@ -195,7 +182,7 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
 
       result = scored.map((item) => item.entry);
     } else {
-      result = shuffled;
+      result = qualityRanked;
     }
 
     if (category !== 'all') {
@@ -223,8 +210,8 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
       qualityAdjustedMetric(b, b.stats.views, SHUFFLE_SEED, imageQuality) -
       qualityAdjustedMetric(a, a.stats.views, SHUFFLE_SEED, imageQuality)
     );
-    return result; // 'recent' uses the weighted shuffle above
-  }, [category, entries, imageQuality, lang, parsedSearch, searchIndex, searchIndexStatus, shuffled, sortBy, tagFilter]);
+    return result; // 'recent' uses the deterministic quality ranking above
+  }, [category, entries, imageQuality, lang, parsedSearch, qualityRanked, searchIndex, searchIndexStatus, sortBy, tagFilter]);
 
   const displayed = useMemo(
     () => filtered.slice(0, page * PAGE_SIZE),
