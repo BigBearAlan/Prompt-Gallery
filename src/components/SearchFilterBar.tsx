@@ -27,6 +27,7 @@ interface Props {
   onSortChange: (v: SortBy) => void;
   tagFilter: string;
   onTagFilterClear: () => void;
+  compact?: boolean;
 }
 
 export default function SearchFilterBar({
@@ -35,6 +36,7 @@ export default function SearchFilterBar({
   lang, onLangChange,
   sortBy, onSortChange,
   tagFilter, onTagFilterClear,
+  compact = false,
 }: Props) {
   const { tx } = useLocale();
 
@@ -65,8 +67,16 @@ export default function SearchFilterBar({
 
   return (
     <div
-      className="sticky top-16 z-30 border-b backdrop-blur-xl"
-      style={{ background: 'rgba(255,255,255,0.88)', borderColor: 'var(--border)' }}
+      className={`sticky top-16 z-30 overflow-hidden backdrop-blur-xl transition-[max-height,opacity,transform,border-color] duration-200 ${
+        compact
+          ? 'max-h-0 -translate-y-1 border-b-0 opacity-0 pointer-events-none'
+          : 'max-h-40 translate-y-0 border-b opacity-100 pointer-events-auto'
+      }`}
+      aria-hidden={compact}
+      style={{
+        background: 'rgba(255,255,255,0.88)',
+        borderColor: compact ? 'transparent' : 'var(--border)',
+      }}
     >
       <div className="max-w-[1800px] mx-auto px-3 sm:px-5 pt-3 pb-2.5 flex items-center gap-2 sm:gap-3">
         <div className="relative flex-1 max-w-4xl">

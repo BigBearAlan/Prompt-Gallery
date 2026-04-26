@@ -12,9 +12,10 @@ function cardGradient(id: string): string {
 interface Props {
   entry: PromptEntry;
   onClick: () => void;
+  loading?: 'eager' | 'lazy';
 }
 
-export default function PromptCard({ entry, onClick }: Props) {
+export default function PromptCard({ entry, onClick, loading = 'lazy' }: Props) {
   const [imgFailed, setImgFailed]   = useState(false);
   const [imgLoaded, setImgLoaded]   = useState(false);
   const [cardCopied, setCardCopied] = useState(false);
@@ -56,7 +57,8 @@ export default function PromptCard({ entry, onClick }: Props) {
           <img
             src={entry.thumbnail}
             alt={entry.title}
-            loading="lazy"
+            loading={loading}
+            decoding="async"
             onLoad={() => setImgLoaded(true)}
             onError={() => { setImgFailed(true); setImgLoaded(true); }}
             className="w-full block object-cover transition-transform duration-300 group-hover:scale-[1.015]"

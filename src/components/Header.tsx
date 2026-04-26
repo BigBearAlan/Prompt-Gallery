@@ -2,13 +2,24 @@
 
 import { useLocale } from '@/lib/i18n';
 
-export default function Header() {
+interface Props {
+  compact?: boolean;
+}
+
+export default function Header({ compact = false }: Props) {
   const { locale, setLocale, tx } = useLocale();
 
   return (
     <header
-      className="sticky top-0 z-40 border-b backdrop-blur-xl"
-      style={{ background: 'rgba(255,255,255,0.88)', borderColor: 'var(--border)' }}
+      className={`sticky top-0 z-40 overflow-hidden backdrop-blur-xl transition-[max-height,opacity,border-color] duration-200 ${
+        compact
+          ? 'max-h-0 border-b-0 opacity-0 md:max-h-16 md:border-b md:opacity-100'
+          : 'max-h-16 border-b opacity-100'
+      }`}
+      style={{
+        background: 'rgba(255,255,255,0.88)',
+        borderColor: compact ? 'transparent' : 'var(--border)',
+      }}
     >
       <div className="max-w-[1800px] mx-auto px-4 sm:px-5 h-16 flex items-center justify-between gap-4">
         <div className="flex items-center gap-3 min-w-0">

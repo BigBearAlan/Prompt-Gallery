@@ -1,8 +1,9 @@
 'use client';
 
 import { useState, useMemo, useCallback, useEffect, useRef, useDeferredValue, startTransition } from 'react';
-import type { PromptEntry, SearchIndexFile, SortBy } from '@/lib/types';
+import type { ImageQualityData, PromptEntry, SearchIndexFile, SortBy } from '@/lib/types';
 import { useLocale } from '@/lib/i18n';
+import { getPromptQualityScore, qualityAdjustedMetric, qualityWeight } from '@/lib/ranking';
 import {
   compareBySecondarySort,
   parseSearchQuery,
@@ -18,9 +19,78 @@ const PAGE_SIZE = 48;
 
 interface Props {
   entries: PromptEntry[];
+  imageQuality: ImageQualityData;
+  chromeCompact?: boolean;
 }
 
-export default function Gallery({ entries }: Props) {
+interface MasonryCard {
+  entry: PromptEntry;
+  index: number;
+}
+
+function columnCountForWidth(width: number) {
+  if (width < 360) return 1;
+  if (width < 640) return 2;
+  if (width < 1024) return 3;
+  if (width < 1440) return 4;
+  return 5;
+}
+
+function safeAspect(entry: PromptEntry) {
+  return Number.isFinite(entry.thumbnailAspect) && entry.thumbnailAspect > 0
+    ? entry.thumbnailAspect
+    : 1.25;
+}
+
+function useMasonryColumns(displayed: PromptEntry[]) {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [columnCount, setColumnCount] = useState(2);
+
+  useEffect(() => {
+    const node = containerRef.current;
+    if (!node) return;
+
+    const updateColumnCount = () => {
+      const next = columnCountForWidth(node.clientWidth || window.innerWidth);
+      setColumnCount((current) => (current === next ? current : next));
+    };
+
+    updateColumnCount();
+
+    const ResizeObserverCtor = window.ResizeObserver;
+    if (ResizeObserverCtor) {
+      const observer = new ResizeObserverCtor(updateColumnCount);
+      observer.observe(node);
+      return () => observer.disconnect();
+    }
+
+    window.addEventListener('resize', updateColumnCount);
+    return () => window.removeEventListener('resize', updateColumnCount);
+  }, []);
+
+  const columns = useMemo(() => {
+    const next = Array.from({ length: columnCount }, () => ({
+      height: 0,
+      items: [] as MasonryCard[],
+    }));
+
+    displayed.forEach((entry, index) => {
+      let targetIndex = 0;
+      for (let i = 1; i < next.length; i += 1) {
+        if (next[i].height < next[targetIndex].height) targetIndex = i;
+      }
+
+      next[targetIndex].items.push({ entry, index });
+      next[targetIndex].height += safeAspect(entry) + 0.08;
+    });
+
+    return next.map((column) => column.items);
+  }, [columnCount, displayed]);
+
+  return { columnCount, columns, containerRef };
+}
+
+export default function Gallery({ entries, imageQuality, chromeCompact = false }: Props) {
   const { tx } = useLocale();
   const [search, setSearch] = useState('');
   const deferredSearch = useDeferredValue(search);
@@ -62,13 +132,16 @@ export default function Gallery({ entries }: Props) {
       seed = (seed * 9301 + 49297) % 233280;
       return seed / 233280;
     };
-    // Weighted shuffle: HQ entries draw from [0, 0.4), regular from [0, 1).
-    // They genuinely mix but HQ tends toward the front without being separated.
+    // Weighted random ordering: quality and HQ entries tend toward the front,
+    // while the session seed keeps the feed mixed instead of fixed.
     return [...entries]
-      .map(e => ({ e, pos: rng() * (e.hq ? 0.4 : 1) }))
+      .map(e => {
+        const random = Math.max(rng(), Number.EPSILON);
+        return { e, pos: -Math.log(random) / qualityWeight(e, imageQuality) };
+      })
       .sort((a, b) => a.pos - b.pos)
       .map(x => x.e);
-  }, [entries, shuffleSeed]);
+  }, [entries, imageQuality, shuffleSeed]);
 
   const parsedSearch = useMemo(() => parseSearchQuery(deferredSearch), [deferredSearch]);
 
@@ -130,6 +203,8 @@ export default function Gallery({ entries }: Props) {
           }
 
           score += entry.hq ? 30 : 0;
+          const qualityScore = getPromptQualityScore(entry, imageQuality);
+          if (qualityScore !== null) score += qualityScore * 0.25;
           return { entry, score };
         })
         // Minimum threshold: filters noise/weak partial matches.
@@ -163,13 +238,15 @@ export default function Gallery({ entries }: Props) {
 
     // HQ entries get a 1.5× score boost so they surface higher without hard-separating tiers
     if (sortBy === 'likes') return [...result].sort((a, b) =>
-      b.stats.likes * (b.hq ? 1.5 : 1) - a.stats.likes * (a.hq ? 1.5 : 1)
+      qualityAdjustedMetric(b, b.stats.likes, shuffleSeed, imageQuality) -
+      qualityAdjustedMetric(a, a.stats.likes, shuffleSeed, imageQuality)
     );
     if (sortBy === 'views') return [...result].sort((a, b) =>
-      b.stats.views * (b.hq ? 1.5 : 1) - a.stats.views * (a.hq ? 1.5 : 1)
+      qualityAdjustedMetric(b, b.stats.views, shuffleSeed, imageQuality) -
+      qualityAdjustedMetric(a, a.stats.views, shuffleSeed, imageQuality)
     );
     return result; // 'recent' uses the weighted shuffle above
-  }, [category, entries, lang, parsedSearch, searchIndex, searchIndexStatus, shuffled, sortBy, tagFilter]);
+  }, [category, entries, imageQuality, lang, parsedSearch, searchIndex, searchIndexStatus, shuffled, shuffleSeed, sortBy, tagFilter]);
 
   const displayed = useMemo(
     () => filtered.slice(0, page * PAGE_SIZE),
@@ -177,6 +254,8 @@ export default function Gallery({ entries }: Props) {
   );
 
   const hasMore = displayed.length < filtered.length;
+  const { columnCount, columns, containerRef } = useMasonryColumns(displayed);
+  const eagerImageCount = Math.min(displayed.length, columnCount * 3);
 
   const handleSearch = useCallback((v: string) => {
     startTransition(() => {
@@ -215,6 +294,7 @@ export default function Gallery({ entries }: Props) {
         onSortChange={setSortBy}
         tagFilter={tagFilter}
         onTagFilterClear={() => setTagFilter('')}
+        compact={chromeCompact}
       />
 
       <main className="max-w-[1800px] mx-auto px-2.5 sm:px-4 py-3 sm:py-4">
@@ -226,13 +306,22 @@ export default function Gallery({ entries }: Props) {
             {tx.noResults}
           </div>
         ) : (
-          <div className="masonry">
-            {displayed.map((entry) => (
-              <PromptCard
-                key={entry.id}
-                entry={entry}
-                onClick={() => setSelected(entry)}
-              />
+          <div
+            ref={containerRef}
+            className="masonry-grid"
+            style={{ gridTemplateColumns: `repeat(${columnCount}, minmax(0, 1fr))` }}
+          >
+            {columns.map((column, columnIndex) => (
+              <div className="masonry-column" key={columnIndex}>
+                {column.map(({ entry, index }) => (
+                  <PromptCard
+                    key={entry.id}
+                    entry={entry}
+                    loading={index < eagerImageCount ? 'eager' : 'lazy'}
+                    onClick={() => setSelected(entry)}
+                  />
+                ))}
+              </div>
             ))}
           </div>
         )}
