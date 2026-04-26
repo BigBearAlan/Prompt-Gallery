@@ -17,6 +17,8 @@
     "cleanup": "node scripts/cleanup-prompts.mjs",
     "search:index": "node scripts/build-search-index.mjs",
     "prompt:clean": "node scripts/prompt-clean-pending.mjs",
+    "image:quality:test": "node scripts/test-image-quality-ranker.mjs --limit 100 --model gemma4:e4b",
+    "image:quality:all": "node scripts/test-image-quality-ranker.mjs --all --model gemma4:e4b --resume --write-ranking-data",
     "test:image-metadata": "node scripts/image-metadata-self-test.mjs",
     "test:prompt-clean": "node scripts/prompt-clean-self-test.mjs"
   },
