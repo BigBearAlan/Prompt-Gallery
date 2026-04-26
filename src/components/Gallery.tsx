@@ -3,7 +3,7 @@
 import { useState, useMemo, useCallback, useEffect, useRef, useDeferredValue, startTransition } from 'react';
 import type { ImageQualityData, PromptEntry, SearchIndexFile, SortBy } from '@/lib/types';
 import { useLocale } from '@/lib/i18n';
-import { compareByQualityRank, getPromptQualityScore, qualityAdjustedMetric } from '@/lib/ranking';
+import { getPromptQualityScore, qualityAdjustedMetric, randomizedQualityRankValue } from '@/lib/ranking';
 import {
   compareBySecondarySort,
   parseSearchQuery,
@@ -103,10 +103,21 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
   const [tagFilter, setTagFilter] = useState('');
   const [searchIndex, setSearchIndex] = useState<SearchIndexFile | null>(null);
   const [searchIndexStatus, setSearchIndexStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
+  const [shuffleSeed, setShuffleSeed] = useState(SHUFFLE_SEED);
 
-  const qualityRanked = useMemo(() => {
-    return [...entries].sort((a, b) => compareByQualityRank(a, b, imageQuality));
-  }, [entries, imageQuality]);
+  useEffect(() => {
+    setShuffleSeed(Math.random());
+  }, []);
+
+  const qualityBoosted = useMemo(() => {
+    return [...entries]
+      .map((entry) => ({
+        entry,
+        rankValue: randomizedQualityRankValue(entry, shuffleSeed, imageQuality),
+      }))
+      .sort((a, b) => b.rankValue - a.rankValue)
+      .map((item) => item.entry);
+  }, [entries, imageQuality, shuffleSeed]);
 
   const parsedSearch = useMemo(() => parseSearchQuery(deferredSearch), [deferredSearch]);
 
@@ -182,7 +193,7 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
 
       result = scored.map((item) => item.entry);
     } else {
-      result = qualityRanked;
+      result = qualityBoosted;
     }
 
     if (category !== 'all') {
@@ -201,17 +212,18 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
       return result;
     }
 
-    // HQ entries get a 1.5× score boost so they surface higher without hard-separating tiers
+    // Likes/views remain mostly engagement-led, with quality and per-load jitter
+    // mixed in so strong visuals get a boost without creating a fixed order.
     if (sortBy === 'likes') return [...result].sort((a, b) =>
-      qualityAdjustedMetric(b, b.stats.likes, SHUFFLE_SEED, imageQuality) -
-      qualityAdjustedMetric(a, a.stats.likes, SHUFFLE_SEED, imageQuality)
+      qualityAdjustedMetric(b, b.stats.likes, shuffleSeed, imageQuality) -
+      qualityAdjustedMetric(a, a.stats.likes, shuffleSeed, imageQuality)
     );
     if (sortBy === 'views') return [...result].sort((a, b) =>
-      qualityAdjustedMetric(b, b.stats.views, SHUFFLE_SEED, imageQuality) -
-      qualityAdjustedMetric(a, a.stats.views, SHUFFLE_SEED, imageQuality)
+      qualityAdjustedMetric(b, b.stats.views, shuffleSeed, imageQuality) -
+      qualityAdjustedMetric(a, a.stats.views, shuffleSeed, imageQuality)
     );
-    return result; // 'recent' uses the deterministic quality ranking above
-  }, [category, entries, imageQuality, lang, parsedSearch, qualityRanked, searchIndex, searchIndexStatus, sortBy, tagFilter]);
+    return result; // 'recent' uses the score-boosted random feed above
+  }, [category, entries, imageQuality, lang, parsedSearch, qualityBoosted, searchIndex, searchIndexStatus, shuffleSeed, sortBy, tagFilter]);
 
   const displayed = useMemo(
     () => filtered.slice(0, page * PAGE_SIZE),

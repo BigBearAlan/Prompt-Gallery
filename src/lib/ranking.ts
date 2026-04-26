@@ -27,37 +27,9 @@ export function getPromptQualityScore(
 
 export function qualityWeight(entry: PromptEntry, imageQuality?: ImageQualityData | null): number {
   const score = getPromptQualityScore(entry, imageQuality) ?? DEFAULT_SCORE;
-  const normalized = Math.max(0, Math.min(1, score / 100));
-  const qualityBoost = Math.pow(normalized, 2.25) * 5.5;
-  const hqBoost = entry.hq ? 1.1 : 0;
-  return 0.45 + qualityBoost + hqBoost;
-}
-
-function timestamp(entry: PromptEntry): number {
-  const parsed = Date.parse(entry.createdAt);
-  return Number.isFinite(parsed) ? parsed : 0;
-}
-
-export function compareByQualityRank(
-  a: PromptEntry,
-  b: PromptEntry,
-  imageQuality?: ImageQualityData | null
-): number {
-  const scoreDelta =
-    (getPromptQualityScore(b, imageQuality) ?? DEFAULT_SCORE) -
-    (getPromptQualityScore(a, imageQuality) ?? DEFAULT_SCORE);
-  if (scoreDelta) return scoreDelta;
-
-  const hqDelta = Number(Boolean(b.hq)) - Number(Boolean(a.hq));
-  if (hqDelta) return hqDelta;
-
-  const likeDelta = (b.stats?.likes || 0) - (a.stats?.likes || 0);
-  if (likeDelta) return likeDelta;
-
-  const dateDelta = timestamp(b) - timestamp(a);
-  if (dateDelta) return dateDelta;
-
-  return a.id.localeCompare(b.id);
+  const qualityBoost = Math.exp((score - 55) / 5);
+  const hqBoost = entry.hq ? 1.2 : 1;
+  return Math.max(0.05, Math.min(250, qualityBoost * hqBoost));
 }
 
 export function sessionNoise(id: string, seed: number): number {
@@ -80,4 +52,16 @@ export function qualityAdjustedMetric(
   const qualityFactor = 0.72 + (score / 100) * 0.76;
   const jitter = 0.94 + sessionNoise(entry.id, seed) * 0.12;
   return baseMetric * qualityFactor * jitter + score * 8;
+}
+
+export function randomizedQualityRankValue(
+  entry: PromptEntry,
+  seed: number,
+  imageQuality?: ImageQualityData | null
+): number {
+  const score = getPromptQualityScore(entry, imageQuality) ?? DEFAULT_SCORE;
+  const jitter = sessionNoise(entry.id, seed) * 12;
+  const hqBoost = entry.hq ? 1.5 : 0;
+  const engagementTieBreaker = Math.log10((entry.stats?.likes || 0) + 1) * 0.25;
+  return score + jitter + hqBoost + engagementTieBreaker;
 }
