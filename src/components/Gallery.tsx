@@ -16,6 +16,7 @@ import PromptModal from './PromptModal';
 import SearchFilterBar from './SearchFilterBar';
 
 const PAGE_SIZE = 48;
+const SHUFFLE_SEED = 0.5;
 
 interface Props {
   entries: PromptEntry[];
@@ -102,32 +103,9 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
   const [tagFilter, setTagFilter] = useState('');
   const [searchIndex, setSearchIndex] = useState<SearchIndexFile | null>(null);
   const [searchIndexStatus, setSearchIndexStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
-  const [shuffleSeed, setShuffleSeed] = useState(0.5);
-
-  // Shuffle once per tab session after hydration so SSR and the first client
-  // render match, then preserve that order while the tab stays open.
-  useEffect(() => {
-    const key = 'prompt-gallery-shuffle-seed';
-    try {
-      const stored = sessionStorage.getItem(key);
-      if (stored) {
-        const parsed = Number(stored);
-        if (Number.isFinite(parsed)) {
-          setShuffleSeed(parsed);
-          return;
-        }
-      }
-
-      const next = Math.random();
-      sessionStorage.setItem(key, String(next));
-      setShuffleSeed(next);
-    } catch {
-      setShuffleSeed(Math.random());
-    }
-  }, []);
 
   const shuffled = useMemo(() => {
-    let seed = shuffleSeed;
+    let seed = SHUFFLE_SEED;
     const rng = () => {
       seed = (seed * 9301 + 49297) % 233280;
       return seed / 233280;
@@ -141,7 +119,7 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
       })
       .sort((a, b) => a.pos - b.pos)
       .map(x => x.e);
-  }, [entries, imageQuality, shuffleSeed]);
+  }, [entries, imageQuality]);
 
   const parsedSearch = useMemo(() => parseSearchQuery(deferredSearch), [deferredSearch]);
 
@@ -238,15 +216,15 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
 
     // HQ entries get a 1.5× score boost so they surface higher without hard-separating tiers
     if (sortBy === 'likes') return [...result].sort((a, b) =>
-      qualityAdjustedMetric(b, b.stats.likes, shuffleSeed, imageQuality) -
-      qualityAdjustedMetric(a, a.stats.likes, shuffleSeed, imageQuality)
+      qualityAdjustedMetric(b, b.stats.likes, SHUFFLE_SEED, imageQuality) -
+      qualityAdjustedMetric(a, a.stats.likes, SHUFFLE_SEED, imageQuality)
     );
     if (sortBy === 'views') return [...result].sort((a, b) =>
-      qualityAdjustedMetric(b, b.stats.views, shuffleSeed, imageQuality) -
-      qualityAdjustedMetric(a, a.stats.views, shuffleSeed, imageQuality)
+      qualityAdjustedMetric(b, b.stats.views, SHUFFLE_SEED, imageQuality) -
+      qualityAdjustedMetric(a, a.stats.views, SHUFFLE_SEED, imageQuality)
     );
     return result; // 'recent' uses the weighted shuffle above
-  }, [category, entries, imageQuality, lang, parsedSearch, searchIndex, searchIndexStatus, shuffled, shuffleSeed, sortBy, tagFilter]);
+  }, [category, entries, imageQuality, lang, parsedSearch, searchIndex, searchIndexStatus, shuffled, sortBy, tagFilter]);
 
   const displayed = useMemo(
     () => filtered.slice(0, page * PAGE_SIZE),

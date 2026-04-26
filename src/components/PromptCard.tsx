@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import type { PromptEntry } from '@/lib/types';
 import { useLocale } from '@/lib/i18n';
 
@@ -19,7 +19,22 @@ export default function PromptCard({ entry, onClick, loading = 'lazy' }: Props) 
   const [imgFailed, setImgFailed]   = useState(false);
   const [imgLoaded, setImgLoaded]   = useState(false);
   const [cardCopied, setCardCopied] = useState(false);
+  const imageRef = useRef<HTMLImageElement | null>(null);
   const { tx } = useLocale();
+
+  useEffect(() => {
+    const image = imageRef.current;
+    if (!image || imgLoaded || imgFailed) return;
+
+    if (image.complete) {
+      if (image.naturalWidth > 0) {
+        setImgLoaded(true);
+      } else {
+        setImgFailed(true);
+        setImgLoaded(true);
+      }
+    }
+  }, [entry.thumbnail, imgFailed, imgLoaded]);
 
   const handleQuickCopy = useCallback(async (e: React.MouseEvent) => {
     e.stopPropagation(); // don't open the modal
@@ -55,9 +70,11 @@ export default function PromptCard({ entry, onClick, loading = 'lazy' }: Props) 
 
         {!imgFailed && (
           <img
+            ref={imageRef}
             src={entry.thumbnail}
             alt={entry.title}
             loading={loading}
+            fetchPriority={loading === 'eager' ? 'high' : 'auto'}
             decoding="async"
             onLoad={() => setImgLoaded(true)}
             onError={() => { setImgFailed(true); setImgLoaded(true); }}
