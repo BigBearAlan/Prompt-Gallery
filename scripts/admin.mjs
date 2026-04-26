@@ -173,6 +173,9 @@ const server = createServer(async (req, res) => {
         return;
       }
 
+      // Remove previous static export to avoid ENOTEMPTY errors from Next.js
+      await runStep('rm', ['-rf', 'out'], 'clean previous export', req);
+
       const buildCode = await runStep('npm', ['run', 'build'], 'npm run build', req);
       if (buildCode !== 0) {
         finish({ ok: false, error: `Build exited ${buildCode}` });

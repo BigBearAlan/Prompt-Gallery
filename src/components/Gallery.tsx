@@ -232,6 +232,27 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
   );
 
   const hasMore = displayed.length < filtered.length;
+
+  // Infinite scroll — observe a sentinel element near the bottom of the feed
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const hasMoreRef  = useRef(hasMore);
+  useEffect(() => { hasMoreRef.current = hasMore; });
+
+  useEffect(() => {
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && hasMoreRef.current) {
+          setPage((p) => p + 1);
+        }
+      },
+      { rootMargin: '400px' }, // preload 400px before the bottom edge
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, []); // mount once — hasMoreRef keeps the callback up to date
+
   const { columnCount, columns, containerRef } = useMasonryColumns(displayed);
   const eagerImageCount = Math.min(displayed.length, Math.max(12, columnCount * 4));
 
@@ -304,16 +325,13 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
           </div>
         )}
 
-        {hasMore && (
-          <div className="text-center mt-8 pb-8">
-            <button
-              onClick={() => setPage((p) => p + 1)}
-              className="px-6 py-2.5 rounded-full text-sm font-medium border transition-colors hover:bg-gray-50"
-              style={{ borderColor: 'var(--border)', color: 'var(--text-primary)', background: '#fff' }}
-            >
-              {tx.loadMore(filtered.length - displayed.length)}
-            </button>
-          </div>
+        {/* Sentinel — IntersectionObserver fires ~400px before this to preload next page */}
+        <div ref={sentinelRef} style={{ height: 1 }} />
+
+        {!hasMore && displayed.length > 0 && (
+          <p className="text-center text-xs pb-10 pt-6" style={{ color: 'var(--text-secondary)' }}>
+            {tx.showingAll(displayed.length)}
+          </p>
         )}
       </main>
 
