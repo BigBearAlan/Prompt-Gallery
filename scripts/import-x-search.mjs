@@ -13,6 +13,7 @@ import { createWriteStream } from 'fs';
 import { pipeline } from 'stream/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { cleanupEntries, formatPromptCleanupSummary } from './prompt-cleanup.mjs';
 import { detectCategory, extractTags, truncate } from './gallery-utils.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -170,6 +171,14 @@ function titleFromText(text, fallback) {
     .map((line) => line.replace(/^["'`{[\s]+/, '').replace(/["'`}\]\s]+$/, '').trim())
     .find((line) => line.length > 0);
   return truncate(firstUsefulLine || fallback, 90);
+}
+
+function refreshEntryClassification(entry) {
+  const classificationText = `${entry.prompt || entry.title || ''}`.trim();
+  entry.lang = detectLang(undefined, classificationText);
+  entry.category = detectCategory(classificationText);
+  entry.tags = extractTags(classificationText, entry.lang, entry.category);
+  delete entry.aiReview;
 }
 
 function scoreTweet(tweet, photos) {
@@ -369,6 +378,8 @@ async function writeGalleryEntries(entries, opts) {
     console.log(`Images: ${ok} downloaded, ${fail} failed`);
   }
 
+  for (const entry of newEntries) entry.pending = true;
+
   const merged = [...existing, ...newEntries]
     .map(({ _dl, _score, ...entry }) => entry)
     .sort((a, b) => b.stats.likes - a.stats.likes);
@@ -409,6 +420,13 @@ async function main() {
   console.log(`Fetched ${raw.tweets.length} posts from X.`);
 
   const entries = toPromptEntries(raw, opts);
+  await cleanupEntries(entries, {
+    root: ROOT,
+    onProgress(entry, result, index, total) {
+      refreshEntryClassification(entry);
+      console.log(`Prompt cleanup ${index}/${total} ${entry.id}: ${formatPromptCleanupSummary(result)}`);
+    },
+  });
   printSummary(entries, opts);
 
   if (opts.write) {

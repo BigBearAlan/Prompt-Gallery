@@ -10,6 +10,8 @@ import { createWriteStream, existsSync } from 'fs';
 import { pipeline } from 'stream/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { formatImageMetadataSummary, generateImageMetadata } from './image-metadata.mjs';
+import { cleanupPromptText, formatPromptCleanupSummary } from './prompt-cleanup.mjs';
 import { detectCategory, truncate } from './gallery-utils.mjs';
 
 const __dirname  = path.dirname(fileURLToPath(import.meta.url));
@@ -19,15 +21,15 @@ const OUTPUT     = path.join(ROOT, 'src', 'data', 'prompts.json');
 
 // ── Tweets to fetch ──────────────────────────────────────────────────────────
 const TWEET_URLS = [
-  'https://x.com/biteye_sister/status/2046833441283752054',
-  'https://x.com/Mezzy__Utd/status/2046851110703374830',
-  'https://x.com/maxstephhh/status/2047052005118738904',
-  'https://x.com/azed_ai/status/2046590376241414446',
-  'https://x.com/billtheinvestor/status/2047058581816758396',
-  'https://x.com/AIARTGALLARY/status/2046938110429466817',
-  'https://x.com/songguoxiansen/status/2047207826913972518',
-  'https://x.com/dotey/status/2047202015307067412',
-  'https://x.com/Naiknelofar788/status/2041332501051036082',
+  'https://x.com/Lvdouren163/status/2047919218134511765',
+  'https://x.com/WooGabriel76263/status/2047919049284214842',
+  'https://x.com/cellinlab/status/2047890051820912867',
+  'https://x.com/joe_qiao_ai/status/2047848576491888874',
+  'https://x.com/xiaoxiaodong01/status/2047714102701883707', 
+  'https://x.com/akokoi1/status/2044789531615056175',
+  'https://x.com/JiafengS/status/2046723080211587145',
+  'https://x.com/liyue_ai/status/2045506567735558336',
+  'https://x.com/AbleGPT/status/2047224935144362400',
 ];
 
 // ── helpers ──────────────────────────────────────────────────────────────────
@@ -168,18 +170,21 @@ async function main() {
     if (!data) { console.log('FAILED'); continue; }
 
     const rawText  = data.text || data.full_text || '';
-    const prompt   = cleanText(rawText);
+    const cleanedText = cleanText(rawText);
     const author   = data.user?.name || data.core?.user_results?.result?.legacy?.name || username;
     const imageUrls = extractImages(data);
 
     if (imageUrls.length === 0) {
-      console.log(`NO IMAGES — skipping (prompt: "${prompt.slice(0, 60)}")`);
+      console.log(`NO IMAGES — skipping (prompt: "${cleanedText.slice(0, 60)}")`);
       continue;
     }
 
-    const lang     = detectLang(prompt);
-    const category = detectCategory(prompt);
-    const title    = truncate(prompt.split('\n')[0] || `Tweet by @${username}`, 80);
+    const cleanup  = await cleanupPromptText(cleanedText, { root: ROOT });
+    const prompt   = cleanup.cleanedPrompt;
+    const promptBasis = `${prompt || cleanedText}`.trim();
+    const lang     = detectLang(promptBasis);
+    const fallbackCategory = detectCategory(promptBasis);
+    const fallbackTitle    = truncate(cleanedText.split('\n')[0] || `Tweet by @${username}`, 80);
     const likes    = data.favorite_count ?? 0;
     const retweets = data.retweet_count  ?? 0;
     const views    = data.views?.count   ? Number(data.views.count) : 0;
@@ -196,24 +201,32 @@ async function main() {
 
     const entry = {
       id,
-      title,
+      title:           fallbackTitle,
       thumbnail:       localImages[0],
       thumbnailAspect: aspect,
       author,
       authorUrl:       `https://x.com/${username}`,
-      tags:            [...new Set([lang, category !== 'other' ? category : undefined].filter(Boolean))],
-      category,
+      tags:            [],
+      category:        fallbackCategory,
       lang,
       stats:           { likes, retweets, views },
       createdAt:       data.created_at || '',
       prompt,
       outputImages:    localImages,
       sourceUrl:       tweetUrl,
+      pending:         true,
     };
 
+    const imageMetadata = await generateImageMetadata(entry, { root: ROOT });
+    entry.title = imageMetadata.title || fallbackTitle;
+    entry.category = imageMetadata.category || fallbackCategory;
+    entry.tags = [...new Set([lang, entry.category !== 'other' ? entry.category : undefined].filter(Boolean))];
+
     newEntries.push(entry);
-    console.log(`OK  (${imageUrls.length} img, cat: ${category}, lang: ${lang})`);
-    console.log(`      title: ${title}`);
+    console.log(`OK  (${imageUrls.length} img, cat: ${entry.category}, lang: ${lang})`);
+    console.log(`      title: ${entry.title}`);
+    console.log(`      ${formatPromptCleanupSummary(cleanup)}`);
+    console.log(`      ${formatImageMetadataSummary(imageMetadata)}`);
 
     await new Promise(r => setTimeout(r, 800)); // gentle rate-limit
   }

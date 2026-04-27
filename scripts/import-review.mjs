@@ -8,11 +8,24 @@
 import { readFile, writeFile } from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { detectCategory } from './gallery-utils.mjs';
+import { cleanupEntries, formatPromptCleanupSummary } from './prompt-cleanup.mjs';
 
 const __dirname    = path.dirname(fileURLToPath(import.meta.url));
 const ROOT         = path.resolve(__dirname, '..');
 const REVIEW_FILE  = path.join(ROOT, 'tmp', 'review.json');
 const PROMPTS_FILE = path.join(ROOT, 'src', 'data', 'prompts.json');
+
+function detectLang(text = '') {
+  if (/[一-鿿]/.test(text)) return 'zh';
+  if (/[぀-ヿㇰ-ㇿ]/.test(text)) return 'ja';
+  return 'en';
+}
+
+function updateTags(entry) {
+  const baseTags = (entry.tags || []).filter((tag) => tag !== entry.lang && tag !== entry.category);
+  entry.tags = [...new Set([entry.lang, entry.category, ...baseTags])];
+}
 
 async function main() {
   const candidates = JSON.parse(await readFile(REVIEW_FILE, 'utf-8'));
@@ -35,6 +48,21 @@ async function main() {
   if (toAdd.length === 0) {
     console.log('Nothing new to add (all already in gallery or all skipped).');
     return;
+  }
+
+  await cleanupEntries(toAdd, {
+    root: ROOT,
+    onProgress(entry, result, index, total) {
+      console.log(`Prompt cleanup ${index}/${total} ${entry.id}: ${formatPromptCleanupSummary(result)}`);
+    },
+  });
+
+  for (const entry of toAdd) {
+    delete entry.aiReview;
+    const classificationText = `${entry.prompt || entry.title || ''}`.trim();
+    entry.lang = detectLang(classificationText);
+    entry.category = detectCategory(classificationText);
+    updateTags(entry);
   }
 
   const out = [...existing, ...toAdd];
