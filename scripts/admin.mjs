@@ -191,8 +191,12 @@ const server = createServer(async (req, res) => {
         return;
       }
 
-      // Stage curated data + any newly uploaded images. Vercel builds from GitHub.
-      const addCode = await runStep('git', ['add', 'src/data/prompts.json', 'src/data/curation.json', 'public/images/'], 'git add prompt data + images', req);
+      // Stage all tracked modifications (source code, data, scripts) + new images.
+      // git add -u only stages files git already tracks — untracked debug scripts stay out.
+      const addUCode = await runStep('git', ['add', '-u'], 'git add -u (all tracked changes)', req);
+      if (addUCode !== 0) { finish({ ok: false, error: `git add -u exited ${addUCode}` }); return; }
+      // Also pick up any newly uploaded images (untracked new files in public/images/)
+      const addCode = await runStep('git', ['add', 'public/images/'], 'git add new images', req);
       if (addCode !== 0) {
         finish({ ok: false, error: `git add exited ${addCode}` });
         return;
@@ -206,7 +210,7 @@ const server = createServer(async (req, res) => {
       } else {
         const commitCode = await runStep(
           'git',
-          ['commit', '-m', '"chore: update prompts data via admin"'],
+          ['commit', '-m', '"chore: deploy via admin portal"'],
           'git commit',
           req,
         );
