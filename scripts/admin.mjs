@@ -187,12 +187,111 @@ async function downloadTweetImage(imgUrl, dest) {
   }
 }
 
-function buildTweetFullText(data) {
+// Public bearer token from Twitter's own web app — used for unauthenticated public reads.
+const TWITTER_BEARER = 'AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA';
+
+async function getTwitterGuestToken() {
+  try {
+    const res = await fetch('https://api.twitter.com/1.1/guest/activate.json', {
+      method:  'POST',
+      headers: { 'Authorization': `Bearer ${TWITTER_BEARER}` },
+      signal:  AbortSignal.timeout(8_000),
+    });
+    if (!res.ok) return null;
+    const d = await res.json();
+    return d.guest_token || null;
+  } catch { return null; }
+}
+
+// Extract all available text from a syndication API response object.
+function extractAllTweetText(data) {
   const parts = [];
-  const main  = data.text || data.full_text || '';
-  if (main) parts.push(main);
-  const qt = data.quoted_status?.text || data.quotedTweet?.text || data.quoted_tweet?.full_text;
-  if (qt) parts.push(`[Quoted]: ${qt}`);
+  const main = data.text || data.full_text || '';
+  if (main) parts.push(cleanTweetText(main));
+
+  // Twitter Notes (long-form tweets use a separate field)
+  const note = data.note_tweet?.note_tweet_results?.result?.text || '';
+  if (note && note !== main) parts.push(cleanTweetText(note));
+
+  // Quoted tweet
+  const qt =
+    data.quoted_status?.full_text ||
+    data.quoted_status?.text      ||
+    data.quotedTweet?.full_text   ||
+    data.quotedTweet?.text        ||
+    '';
+  if (qt) parts.push(`[Quoted tweet]: ${cleanTweetText(qt)}`);
+
+  return parts.filter(Boolean);
+}
+
+// Follow in_reply_to chain upward (useful when the image IS a reply to a prompt post).
+async function fetchParentTweets(data, maxDepth = 3) {
+  const parentTexts = [];
+  let current = data;
+  for (let i = 0; i < maxDepth; i++) {
+    const parentId = String(current.in_reply_to_status_id_str || current.in_reply_to_status_id || '');
+    if (!parentId || parentId === 'null' || parentId === '0') break;
+    await new Promise(r => setTimeout(r, 400));
+    const parent = await fetchTweetData(parentId);
+    if (!parent) break;
+    const pTexts = extractAllTweetText(parent);
+    if (pTexts.length) {
+      const handle = parent.user?.screen_name || '?';
+      parentTexts.unshift(`[@${handle}]: ${pTexts.join(' ')}`);
+    }
+    current = parent;
+  }
+  return parentTexts;
+}
+
+// Fetch the author's own replies to the given tweet (self-thread pattern).
+async function fetchSelfReplies(tweetId, username, guestToken) {
+  if (!guestToken) return [];
+  try {
+    const url = 'https://api.twitter.com/1.1/statuses/user_timeline.json' +
+      `?screen_name=${encodeURIComponent(username)}&count=20` +
+      '&tweet_mode=extended&exclude_replies=false&trim_user=false';
+    const res = await fetch(url, {
+      headers: {
+        'Authorization': `Bearer ${TWITTER_BEARER}`,
+        'x-guest-token': guestToken,
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
+        'Referer': 'https://twitter.com/',
+        'Origin':  'https://twitter.com',
+      },
+      signal: AbortSignal.timeout(15_000),
+    });
+    if (!res.ok) return [];
+    const tweets = await res.json();
+    if (!Array.isArray(tweets)) return [];
+    return tweets
+      .filter(t => t.in_reply_to_status_id_str === tweetId)
+      .map(t => cleanTweetText(t.full_text || t.text || ''))
+      .filter(Boolean);
+  } catch (e) {
+    console.error(`[import] fetchSelfReplies: ${e.message}`);
+    return [];
+  }
+}
+
+// Assemble the richest possible text context for Ollama: main tweet + parents + self-replies.
+async function assembleTweetContext(data, tweetUrl, guestToken) {
+  const parts = extractAllTweetText(data);
+
+  // Walk up the reply chain (handles "image is a reply to a prompt post" pattern)
+  const parentTexts = await fetchParentTweets(data);
+  if (parentTexts.length) parts.unshift(...parentTexts);
+
+  // Fetch author's own reply thread (handles "prompt posted as self-reply" pattern)
+  const username    = extractTweetUsername(tweetUrl);
+  const tweetId     = String(data.id_str || data.id || extractTweetId(tweetUrl) || '');
+  const selfReplies = await fetchSelfReplies(tweetId, username, guestToken);
+  if (selfReplies.length) {
+    parts.push(...selfReplies.map(r => `[Reply by @${username}]: ${r}`));
+    console.log(`[import] +${selfReplies.length} self-repl(ies) for tweet ${tweetId}`);
+  }
+
   return parts.join('\n\n');
 }
 
@@ -328,6 +427,10 @@ const server = createServer(async (req, res) => {
         const existingIds = new Set(existing.map(e => e.id));
         const added       = [];
 
+        // Acquire once; reused across all tweets in this batch
+        const guestToken = await getTwitterGuestToken();
+        console.log(`[import] Guest token: ${guestToken ? 'OK' : 'unavailable (self-replies skipped)'}`);
+
         for (const tweetUrl of urls) {
           const id       = extractTweetId(tweetUrl);
           const username = extractTweetUsername(tweetUrl);
@@ -373,23 +476,25 @@ const server = createServer(async (req, res) => {
             } catch { /* skip */ }
           }
 
-          const fullText    = buildTweetFullText(data);
-          const cleanedText = cleanTweetText(fullText);
-          const author      = data.user?.name
+          // mainText is for title/lang fallbacks; fullText is the rich context sent to Ollama
+          const mainText = cleanTweetText(data.text || data.full_text || '');
+          const author   = data.user?.name
             || data.core?.user_results?.result?.legacy?.name
             || username;
 
           send('status', { url: tweetUrl, status: 'analyzing', message: 'AI 分析图片 + 提取提示词 (qwen2.5vl)…' });
 
-          const aiResult = await extractPromptWithOllama(imageBase64s, fullText);
-          const prompt   = aiResult?.prompt || cleanedText;
+          const fullText = await assembleTweetContext(data, tweetUrl, guestToken);
+          const aiResult  = await extractPromptWithOllama(imageBase64s, fullText);
+          const rawPrompt = aiResult?.prompt;
+          const prompt    = (typeof rawPrompt === 'string' && rawPrompt.trim()) ? rawPrompt : mainText;
           const aiTitle  = aiResult?.title  || null;
           const aiCat    = VALID_IMPORT_CATEGORIES.has(aiResult?.category) ? aiResult.category : 'other';
-          const lang     = detectTweetLang(prompt || cleanedText);
+          const lang     = detectTweetLang(prompt || mainText);
 
           const entry = {
             id,
-            title:           aiTitle || truncateTweetTitle(cleanedText || `Tweet by @${username}`),
+            title:           aiTitle || truncateTweetTitle(mainText || `Tweet by @${username}`),
             thumbnail:       localImages[0] || '',
             thumbnailAspect: getTweetAspect(data),
             author,
@@ -414,7 +519,7 @@ const server = createServer(async (req, res) => {
           send('status', {
             url:     tweetUrl,
             status:  'done',
-            message: `OK — "${(aiTitle || truncateTweetTitle(cleanedText)).slice(0, 45)}"`,
+            message: `OK — "${(aiTitle || truncateTweetTitle(mainText)).slice(0, 45)}"`,
           });
         }
 

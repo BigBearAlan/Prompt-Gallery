@@ -1145,7 +1145,7 @@ function renderGrid() {
     const mod    = changes.has(p.id);
     const nw     = isNew(p);
     const src    = imgSrc(c);
-    const prompt = (c.prompt || '').trim();
+    const prompt = (typeof c.prompt === 'string' ? c.prompt : '').trim();
     const srcLabel = c.sourceUrl
       ? c.sourceUrl.replace(/^https?:\/\/(www\.)?/, '').slice(0, 55)
       : '';
@@ -1374,8 +1374,9 @@ function openEdit(id) {
   document.getElementById('ei-title').value  = c.title    || '';
   document.getElementById('ei-cat').value    = c.category || 'other';
   document.getElementById('ei-author').value = c.author   || '';
-  document.getElementById('ei-prompt').value = c.prompt   || '';
-  document.getElementById('ei-charcount').textContent = (c.prompt||'').length + ' 字符';
+  const safePrompt = typeof c.prompt === 'string' ? c.prompt : '';
+  document.getElementById('ei-prompt').value = safePrompt;
+  document.getElementById('ei-charcount').textContent = safePrompt.length + ' 字符';
   const scoreVal = Math.min(100, Math.max(0, parseInt(c.score) || 0));
   document.getElementById('ei-score').value    = scoreVal;
   document.getElementById('ei-score-num').textContent = scoreVal;
