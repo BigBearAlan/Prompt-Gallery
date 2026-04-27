@@ -79,6 +79,14 @@ export interface LocalizedSearchKeywords {
   ja: string[];
 }
 
+export interface VisionLabels {
+  en: string[];
+  zh: string[];
+  style?: string;
+  scene?: string;
+  version?: string;
+}
+
 export interface ImageSearchDoc {
   id: string;
   caption: LocalizedSearchText;
@@ -88,6 +96,7 @@ export interface ImageSearchDoc {
   searchText: string;
   version: string;
   imagePaths?: string[];
+  visionLabels?: VisionLabels;
 }
 
 export interface SearchIndexFile {

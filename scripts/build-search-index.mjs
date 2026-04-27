@@ -618,6 +618,10 @@ async function main() {
       else fromFallback++;
 
       if (detectLowConfidence(doc)) lowConfidence.push(entry.id);
+      // Preserve vision labels from the previous index entry — they come from
+      // build-vision-labels.mjs and are independent of text metadata.
+      const prevVisionLabels = existing.entries?.[entry.id]?.visionLabels;
+      if (prevVisionLabels) doc.visionLabels = prevVisionLabels;
       index.entries[entry.id] = doc;
       processed++;
       console.log(`[${source}] ${processed}/${slicedTargets.length} ${entry.id} ${entry.title.slice(0, 48)}`);

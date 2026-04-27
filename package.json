@@ -16,6 +16,8 @@
     "admin": "node scripts/admin.mjs",
     "cleanup": "node scripts/cleanup-prompts.mjs",
     "search:index": "node scripts/build-search-index.mjs",
+    "search:labels": "node scripts/build-vision-labels.mjs",
+    "search:labels:all": "node scripts/build-vision-labels.mjs --all --model gemma4:e4b",
     "prompt:clean": "node scripts/prompt-clean-pending.mjs",
     "image:quality:test": "node scripts/test-image-quality-ranker.mjs --limit 100 --model gemma4:e4b",
     "image:quality:all": "node scripts/test-image-quality-ranker.mjs --all --model gemma4:e4b --resume --write-ranking-data",

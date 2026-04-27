@@ -132,22 +132,38 @@ export function scorePromptText(entry: PromptEntry, query: ParsedSearchQuery): n
 export function scoreImageSearch(doc: ImageSearchDoc | undefined, query: ParsedSearchQuery): number {
   if (!doc || !query.normalizedTerm) return 0;
 
+  // ── Vision labels (ground-truth visual content, highest signal) ──────────
+  const vl = doc.visionLabels;
+  const visionScore = vl
+    ? maxStrength([...(vl.en ?? []), ...(vl.zh ?? [])], query)
+    : 0;
+  // Style ("photography", "anime", "watercolor") and scene ("park", "bedroom")
+  // as standalone fields so single-word queries like "watercolor" match directly
+  const styleScore = vl?.style ? tokenMatchStrength(vl.style, query) : 0;
+  const sceneScore = vl?.scene ? tokenMatchStrength(vl.scene, query) : 0;
+
+  // ── Legacy metadata signals (YouMind/heuristic, lower trust) ─────────────
   const keywordCandidates = [...doc.keywords.zh, ...doc.keywords.en, ...doc.keywords.ja];
-  const keywordScore = maxStrength(keywordCandidates, query);
-  const objectScore = maxStrength(doc.objects, query);
-  const visibleTextScore = maxStrength(doc.visibleText, query);
-  const captionScore = maxStrength([doc.caption.zh, doc.caption.en, doc.caption.ja], query);
-  const searchTextScore = query.isCjk ? 0 : tokenMatchStrength(doc.searchText, query);
+  const keywordScore     = maxStrength(keywordCandidates, query);
+  const objectScore      = maxStrength(doc.objects, query);      // often OCR fragments
+  const visibleTextScore = maxStrength(doc.visibleText, query);  // raw OCR text
+  const captionScore     = maxStrength([doc.caption.zh, doc.caption.en, doc.caption.ja], query);
+  const searchTextScore  = query.isCjk ? 0 : tokenMatchStrength(doc.searchText, query);
 
   let score = 0;
-  score += keywordScore * 120;
-  score += objectScore * 110;
-  score += visibleTextScore * 50; // OCR text — lower weight to avoid spurious brand/label matches
-  score += captionScore * 70;
-  score += searchTextScore * 35;
+  score += visionScore     * 160; // direct visual analysis — most trustworthy
+  score += styleScore      *  70; // visual style ("anime", "watercolor")
+  score += sceneScore      *  55; // scene setting ("bedroom", "forest")
+  score += keywordScore    *  90; // YouMind/OpenAI keywords
+  score += objectScore     *  55; // OCR — treat as lower confidence
+  score += visibleTextScore * 40; // raw OCR text in image
+  score += captionScore    *  60; // multilingual caption
+  score += searchTextScore *  30; // catch-all text blob
 
-  if (keywordScore > 0 && (objectScore > 0 || visibleTextScore > 0)) score += 18;
-  if (visibleTextScore > 0 && captionScore > 0) score += 10;
+  // Bonus when multiple independent sources agree on a match
+  if (visionScore > 0 && keywordScore > 0)  score += 25;
+  if (visionScore > 0 && captionScore > 0)  score += 12;
+  if (keywordScore > 0 && objectScore > 0)  score += 10;
 
   return Math.round(score);
 }
