@@ -5,8 +5,9 @@
  */
 
 import { createServer } from 'http';
-import { readFile, writeFile, stat } from 'fs/promises';
-import { createReadStream } from 'fs';
+import { readFile, writeFile, stat, mkdir } from 'fs/promises';
+import { createReadStream, createWriteStream, existsSync } from 'fs';
+import { pipeline } from 'stream/promises';
 import { spawn } from 'child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -83,6 +84,156 @@ function sseSetup(res) {
   return { send, runStep };
 }
 
+// ── X/Twitter import helpers ──────────────────────────────────────────────────
+
+function extractTweetId(url) {
+  const m = url.match(/status\/(\d+)/);
+  return m ? m[1] : null;
+}
+
+function extractTweetUsername(url) {
+  const m = url.match(/x\.com\/([^/]+)\/status/);
+  return m ? m[1] : 'unknown';
+}
+
+function syndicationToken(idStr) {
+  const n = Number(idStr) / 1e15;
+  return Math.floor(n * Math.PI).toString(36).replace(/(0+|\.)/g, '');
+}
+
+async function fetchTweetData(id) {
+  const token  = syndicationToken(id);
+  const apiUrl = `https://cdn.syndication.twimg.com/tweet-result?id=${id}&lang=en&token=${token}`;
+  try {
+    const res = await fetch(apiUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
+        'Accept': 'application/json',
+        'Referer': 'https://platform.twitter.com/',
+      },
+      signal: AbortSignal.timeout(20_000),
+    });
+    if (!res.ok) { console.error(`[import] HTTP ${res.status} for tweet ${id}`); return null; }
+    return await res.json();
+  } catch (e) {
+    console.error(`[import] Fetch error for tweet ${id}: ${e.message}`);
+    return null;
+  }
+}
+
+function extractTweetImages(data) {
+  const imgs = [];
+  if (Array.isArray(data.photos)) {
+    for (const p of data.photos) {
+      const base = p.url || p.media_url_https;
+      if (base) imgs.push(`${base}?format=jpg&name=large`);
+    }
+  }
+  if (Array.isArray(data.mediaDetails)) {
+    for (const m of data.mediaDetails) {
+      if (m.type === 'photo') {
+        const base = m.media_url_https || m.media_url;
+        if (base) imgs.push(`${base}?format=jpg&name=large`);
+      }
+    }
+  }
+  return imgs;
+}
+
+function getTweetAspect(data) {
+  const src =
+    (Array.isArray(data.photos)       && data.photos[0]) ||
+    (Array.isArray(data.mediaDetails) && data.mediaDetails[0]) ||
+    null;
+  if (!src) return 1.33;
+  const w = src.width  || src.original_info?.width  || 0;
+  const h = src.height || src.original_info?.height || 0;
+  return w > 0 && h > 0 ? parseFloat((h / w).toFixed(4)) : 1.33;
+}
+
+function cleanTweetText(text = '') {
+  return text
+    .replace(/https?:\/\/t\.co\/\S+/g, '')
+    .replace(/https?:\/\/pic\.x\.com\/\S+/g, '')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
+function detectTweetLang(text = '') {
+  if (/[一-鿿]/.test(text)) return 'zh';
+  if (/[぀-ヿㇰ-ㇿ]/.test(text)) return 'ja';
+  return 'en';
+}
+
+function truncateTweetTitle(text, max = 80) {
+  if (!text) return '';
+  const first = text.split('\n').find(l => l.trim()) || text;
+  return first.length > max ? first.slice(0, max - 1) + '…' : first;
+}
+
+async function downloadTweetImage(imgUrl, dest) {
+  if (existsSync(dest)) return true;
+  try {
+    const res = await fetch(imgUrl, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; PromptGallery/1.0)' },
+      signal: AbortSignal.timeout(30_000),
+    });
+    if (!res.ok || !res.body) return false;
+    await pipeline(res.body, createWriteStream(dest));
+    return true;
+  } catch (e) {
+    console.error(`[import] Image download failed: ${e.message}`);
+    return false;
+  }
+}
+
+function buildTweetFullText(data) {
+  const parts = [];
+  const main  = data.text || data.full_text || '';
+  if (main) parts.push(main);
+  const qt = data.quoted_status?.text || data.quotedTweet?.text || data.quoted_tweet?.full_text;
+  if (qt) parts.push(`[Quoted]: ${qt}`);
+  return parts.join('\n\n');
+}
+
+const VALID_IMPORT_CATEGORIES = new Set([
+  'manga','advertising','game','portrait','photography',
+  'poster','illustration','ui','infographic','logo','other',
+]);
+
+async function extractPromptWithOllama(imageBase64s, fullText) {
+  const userContent =
+    `The following is a tweet about an AI-generated image:\n\n---\n${fullText}\n---\n\n` +
+    `Look at the image(s) and the tweet text. Extract the AI image generation prompt that was used to create these images.\n\n` +
+    `Return JSON only:\n{"prompt":"the complete prompt text used to generate the image","title":"short descriptive title under 80 chars","category":"one of: manga/advertising/game/portrait/photography/poster/illustration/ui/infographic/logo/other"}`;
+
+  try {
+    const res = await fetch('http://localhost:11434/api/chat', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model:    'qwen2.5vl:7b',
+        messages: [{ role: 'user', content: userContent, images: imageBase64s.slice(0, 4) }],
+        format:   'json',
+        stream:   false,
+        options:  { num_predict: 3000, temperature: 0.2 },
+      }),
+      signal: AbortSignal.timeout(300_000),
+    });
+
+    if (!res.ok) return null;
+    const data    = await res.json();
+    const raw     = data.message?.content || '';
+    const cleaned = raw.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
+    const m       = cleaned.match(/\{[\s\S]*\}/);
+    if (!m) return null;
+    try { return JSON.parse(m[0]); } catch { return null; }
+  } catch (e) {
+    console.error(`[import] Ollama error: ${e.message}`);
+    return null;
+  }
+}
+
 // ── server ────────────────────────────────────────────────────────────────────
 
 const server = createServer(async (req, res) => {
@@ -155,6 +306,130 @@ const server = createServer(async (req, res) => {
       const raw = await readFile(QUALITY_FILE, 'utf-8');
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(raw);
+      return;
+    }
+
+    // ── POST /api/import/tweet  (SSE: syndication fetch + download + Ollama → prompts.json) ──
+    if (path_ === '/api/import/tweet' && req.method === 'POST') {
+      const body = await getBody(req);
+      const urls = (body?.urls || [])
+        .filter(u => typeof u === 'string' && /x\.com\/.+\/status\/\d+/.test(u));
+
+      if (urls.length === 0) {
+        json(res, { error: 'No valid X/Twitter status URLs provided' }, 400);
+        return;
+      }
+
+      const { send } = sseSetup(res);
+
+      try {
+        await mkdir(IMAGES_DIR, { recursive: true });
+        const existing    = JSON.parse(await readFile(PROMPTS_FILE, 'utf-8'));
+        const existingIds = new Set(existing.map(e => e.id));
+        const added       = [];
+
+        for (const tweetUrl of urls) {
+          const id       = extractTweetId(tweetUrl);
+          const username = extractTweetUsername(tweetUrl);
+
+          if (!id) {
+            send('status', { url: tweetUrl, status: 'error', message: '无法提取推文 ID' });
+            continue;
+          }
+          if (existingIds.has(id)) {
+            send('status', { url: tweetUrl, status: 'skip', message: '已存在，跳过' });
+            continue;
+          }
+
+          send('status', { url: tweetUrl, status: 'fetching', message: '获取推文数据…' });
+          const data = await fetchTweetData(id);
+          if (!data) {
+            send('status', { url: tweetUrl, status: 'error', message: '获取推文失败（可能已删除）' });
+            continue;
+          }
+
+          const imageUrls = extractTweetImages(data);
+          if (imageUrls.length === 0) {
+            send('status', { url: tweetUrl, status: 'error', message: '推文无图片，跳过' });
+            continue;
+          }
+
+          send('status', { url: tweetUrl, status: 'downloading', message: `下载图片 (${imageUrls.length} 张)…` });
+          const localImages = [];
+          for (let i = 0; i < imageUrls.length; i++) {
+            const dest    = path.join(IMAGES_DIR, `${id}_${i}.jpg`);
+            const webPath = `/images/${id}_${i}.jpg`;
+            const ok = await downloadTweetImage(imageUrls[i], dest);
+            localImages.push(ok ? webPath : imageUrls[i]);
+          }
+
+          // Load downloaded images as base64 for Ollama vision
+          const imageBase64s = [];
+          for (const localPath of localImages) {
+            if (!localPath.startsWith('/images/')) continue;
+            try {
+              const buf = await readFile(path.join(ROOT, 'public', localPath));
+              imageBase64s.push(buf.toString('base64'));
+            } catch { /* skip */ }
+          }
+
+          const fullText    = buildTweetFullText(data);
+          const cleanedText = cleanTweetText(fullText);
+          const author      = data.user?.name
+            || data.core?.user_results?.result?.legacy?.name
+            || username;
+
+          send('status', { url: tweetUrl, status: 'analyzing', message: 'AI 分析图片 + 提取提示词 (qwen2.5vl)…' });
+
+          const aiResult = await extractPromptWithOllama(imageBase64s, fullText);
+          const prompt   = aiResult?.prompt || cleanedText;
+          const aiTitle  = aiResult?.title  || null;
+          const aiCat    = VALID_IMPORT_CATEGORIES.has(aiResult?.category) ? aiResult.category : 'other';
+          const lang     = detectTweetLang(prompt || cleanedText);
+
+          const entry = {
+            id,
+            title:           aiTitle || truncateTweetTitle(cleanedText || `Tweet by @${username}`),
+            thumbnail:       localImages[0] || '',
+            thumbnailAspect: getTweetAspect(data),
+            author,
+            authorUrl:       `https://x.com/${username}`,
+            tags:            [lang, aiCat].filter(Boolean),
+            category:        aiCat,
+            lang,
+            stats: {
+              likes:    data.favorite_count ?? 0,
+              retweets: data.retweet_count  ?? 0,
+              views:    data.views?.count   ? Number(data.views.count) : 0,
+            },
+            createdAt:    data.created_at || '',
+            prompt,
+            outputImages: localImages,
+            sourceUrl:    tweetUrl,
+            pending:      true,
+          };
+
+          added.push(entry);
+          existingIds.add(id);
+          send('status', {
+            url:     tweetUrl,
+            status:  'done',
+            message: `OK — "${(aiTitle || truncateTweetTitle(cleanedText)).slice(0, 45)}"`,
+          });
+        }
+
+        if (added.length > 0) {
+          await writeFile(PROMPTS_FILE, JSON.stringify([...existing, ...added], null, 2), 'utf-8');
+          console.log(`[import] Added ${added.length} tweet(s) to prompts.json`);
+        }
+
+        send('done', { ok: true, added: added.length, total: urls.length });
+      } catch (err) {
+        console.error('[import] Error:', err);
+        send('done', { ok: false, error: err.message });
+      }
+
+      res.end();
       return;
     }
 
