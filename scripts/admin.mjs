@@ -13,8 +13,9 @@ import { fileURLToPath } from 'url';
 
 const __dirname   = path.dirname(fileURLToPath(import.meta.url));
 const ROOT        = path.resolve(__dirname, '..');
-const PROMPTS_FILE = path.join(ROOT, 'src', 'data', 'prompts.json');
-const IMAGES_DIR   = path.join(ROOT, 'public', 'images');
+const PROMPTS_FILE  = path.join(ROOT, 'src', 'data', 'prompts.json');
+const QUALITY_FILE  = path.join(ROOT, 'src', 'data', 'image-quality.json');
+const IMAGES_DIR    = path.join(ROOT, 'public', 'images');
 const HTML_FILE    = path.join(__dirname, 'admin.html');
 const PORT         = 3001;
 
@@ -146,6 +147,14 @@ const server = createServer(async (req, res) => {
       await writeFile(destPath, imageBuffer);
       console.log(`[admin] Uploaded image → ${safeName} (${imageBuffer.length} bytes)`);
       json(res, { ok: true, path: `/images/${safeName}` });
+      return;
+    }
+
+    // ── GET /api/quality ──
+    if (path_ === '/api/quality' && req.method === 'GET') {
+      const raw = await readFile(QUALITY_FILE, 'utf-8');
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(raw);
       return;
     }
 

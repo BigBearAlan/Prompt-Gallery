@@ -249,6 +249,60 @@ body {
   font-size: 11px; font-weight: 800; padding: 1px 6px;
   border-radius: 10px; pointer-events: none; z-index: 2;
 }
+
+/* ── Quality score badge ────────────────────────────── */
+.card-quality-badge {
+  display: inline-flex; align-items: center; gap: 2px;
+  font-size: 9px; font-weight: 800; padding: 2px 6px;
+  border-radius: 4px; flex-shrink: 0;
+}
+.card-quality-badge.tier-excellent { background: #dcfce7; color: #15803d; }
+.card-quality-badge.tier-good      { background: #dbeafe; color: #1d4ed8; }
+.card-quality-badge.tier-average   { background: #f3f4f6; color: #4b5563; }
+.card-quality-badge.tier-poor      { background: #fee2e2; color: #b91c1c; }
+
+/* ── Score badge (admin boost) ───────────────────────── */
+.card-score-badge {
+  display: inline-flex; align-items: center; gap: 2px;
+  font-size: 9px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .04em; padding: 2px 6px; border-radius: 4px;
+  background: #e0e7ff; color: #3730a3; flex-shrink: 0;
+}
+
+/* ── Inline score stepper on card ───────────────────── */
+.score-ctrl {
+  display: inline-flex; align-items: center; gap: 2px; flex-shrink: 0;
+}
+.score-btn {
+  width: 20px; height: 20px; border-radius: 5px;
+  border: 1px solid #c7d2fe; background: #eef2ff; color: #4338ca;
+  font-size: 14px; font-weight: 700; line-height: 1;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background .1s;
+}
+.score-btn:hover { background: #c7d2fe; }
+.score-input {
+  width: 36px; height: 20px; border-radius: 5px;
+  border: 1px solid #c7d2fe; background: #eef2ff;
+  color: #3730a3; font-size: 11px; font-weight: 700;
+  text-align: center; outline: none; padding: 0;
+  -moz-appearance: textfield;
+}
+.score-input::-webkit-inner-spin-button,
+.score-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+.score-input:focus { border-color: #6366f1; background: #fff; }
+
+/* ── Score field in edit modal ──────────────────────── */
+.fld-score-wrap {
+  display: flex; align-items: center; gap: 8px;
+}
+.fld-score-wrap input[type=range] {
+  flex: 1; accent-color: #4f46e5; cursor: pointer;
+}
+.fld-score-num {
+  width: 38px; text-align: center;
+  font-size: 13px; font-weight: 700; color: #4f46e5;
+}
 /* ── Tab bar ────────────────────────────────────────── */
 #tab-bar {
   background: #fff; border-bottom: 1px solid var(--border);
@@ -522,6 +576,20 @@ body {
 #toast.on { transform: translateY(0); opacity: 1; }
 #toast.err { background: #dc2626; }
 
+/* ── Admin pagination ───────────────────────────────── */
+.admin-pager {
+  display: flex; align-items: center; justify-content: center;
+  gap: 14px; padding: 24px 0 8px; width: 100%;
+}
+.pager-btn {
+  padding: 7px 18px; border-radius: 10px; border: 1px solid var(--border);
+  background: #fff; color: var(--text-primary);
+  font-size: 13px; font-weight: 600; cursor: pointer; transition: background .12s;
+}
+.pager-btn:hover:not(:disabled) { background: #f0f0f0; }
+.pager-btn:disabled { opacity: .35; cursor: not-allowed; }
+.pager-info { font-size: 13px; color: var(--text-secondary); }
+
 /* ── Misc ───────────────────────────────────────────── */
 .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
 .scrollbar-none::-webkit-scrollbar { display: none; }
@@ -569,6 +637,14 @@ body {
     <option value="en">EN</option>
     <option value="zh">中文</option>
     <option value="ja">日本語</option>
+  </select>
+
+  <select class="tb-select" id="sort-select" onchange="applyFilters()">
+    <option value="default">排序: 默认</option>
+    <option value="quality-desc">质量分 高→低</option>
+    <option value="quality-asc">质量分 低→高</option>
+    <option value="score-desc">置顶分 高→低</option>
+    <option value="likes-desc">点赞 高→低</option>
   </select>
 
   <span id="count-label"></span>
@@ -698,6 +774,14 @@ body {
         <div class="fld">
           <label class="fld-label">作者</label>
           <input class="fld-input" id="ei-author" type="text" placeholder="作者名称">
+        </div>
+        <div class="fld">
+          <label class="fld-label">置顶权重 Score (0 = 正常排序，1–100 = 置顶)</label>
+          <div class="fld-score-wrap">
+            <input type="range" min="0" max="100" step="1" id="ei-score"
+              oninput="document.getElementById('ei-score-num').textContent=this.value">
+            <span class="fld-score-num" id="ei-score-num">0</span>
+          </div>
         </div>
         <div class="fld" style="flex:1">
           <label class="fld-label">提示词</label>
@@ -854,14 +938,24 @@ let editActiveIdx   = 0;      // which image index is currently selected in edit
 let currentTab      = 'review';
 let lightboxImgs    = [];
 let lightboxIdx     = 0;
+let qualityEntries  = {};     // id → {score, rawScore, tier}
+let adminPage       = 0;
+const ADMIN_PAGE_SIZE = 500;
 // ════════════════════════════════════════════════════
 //  Bootstrap
 // ════════════════════════════════════════════════════
 async function init() {
   try {
-    const r = await fetch('/api/prompts');
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    allPrompts = await r.json();
+    const [pr, qr] = await Promise.all([
+      fetch('/api/prompts'),
+      fetch('/api/quality').catch(() => null),
+    ]);
+    if (!pr.ok) throw new Error(`HTTP ${pr.status}`);
+    allPrompts = await pr.json();
+    if (qr && qr.ok) {
+      const qd = await qr.json();
+      qualityEntries = qd.entries || {};
+    }
     applyFilters();
     updateTabCounts();
     document.getElementById('msg').style.display = 'none';
@@ -878,6 +972,7 @@ function applyFilters() {
   const q    = (document.getElementById('search').value || '').toLowerCase();
   const cat  = document.getElementById('cat-filter').value;
   const lang = document.getElementById('lang-filter').value;
+  const sort = document.getElementById('sort-select').value;
   const pool = [...newEntries, ...allPrompts];
 
   filtered = pool.filter(p => {
@@ -895,6 +990,16 @@ function applyFilters() {
     return true;
   });
 
+  if (sort === 'quality-desc') {
+    filtered.sort((a, b) => (qualityEntries[b.id]?.score ?? -1) - (qualityEntries[a.id]?.score ?? -1));
+  } else if (sort === 'quality-asc') {
+    filtered.sort((a, b) => (qualityEntries[a.id]?.score ?? 101) - (qualityEntries[b.id]?.score ?? 101));
+  } else if (sort === 'score-desc') {
+    filtered.sort((a, b) => (merged(b).score || 0) - (merged(a).score || 0));
+  } else if (sort === 'likes-desc') {
+    filtered.sort((a, b) => (merged(b).stats?.likes || 0) - (merged(a).stats?.likes || 0));
+  }
+
   const total = pool.length - deletes.size;
   document.getElementById('count-label').textContent =
     filtered.length === total ? `${total.toLocaleString()} 个`
@@ -902,8 +1007,16 @@ function applyFilters() {
 
   updateTabCounts();
   syncSelection();
+  adminPage = 0;
   renderGrid();
   updateBulkControls();
+}
+
+function goAdminPage(delta) {
+  const maxPage = Math.ceil(filtered.length / ADMIN_PAGE_SIZE) - 1;
+  adminPage = Math.max(0, Math.min(maxPage, adminPage + delta));
+  renderGrid();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function merged(p) {
@@ -929,7 +1042,17 @@ function renderGrid() {
     return;
   }
 
-  grid.innerHTML = filtered.map(p => {
+  const totalPages = Math.ceil(filtered.length / ADMIN_PAGE_SIZE);
+  const pageSlice  = filtered.slice(adminPage * ADMIN_PAGE_SIZE, (adminPage + 1) * ADMIN_PAGE_SIZE);
+
+  const pagerHtml = totalPages > 1 ? `
+    <div class="admin-pager">
+      <button class="pager-btn" onclick="goAdminPage(-1)" ${adminPage === 0 ? 'disabled' : ''}>← 上一页</button>
+      <span class="pager-info">第 ${adminPage + 1} / ${totalPages} 页 &nbsp;·&nbsp; 共 ${filtered.length.toLocaleString()} 条</span>
+      <button class="pager-btn" onclick="goAdminPage(1)" ${adminPage >= totalPages - 1 ? 'disabled' : ''}>下一页 →</button>
+    </div>` : '';
+
+  grid.innerHTML = pageSlice.map(p => {
     const c      = merged(p);
     const mod    = changes.has(p.id);
     const nw     = isNew(p);
@@ -940,6 +1063,10 @@ function renderGrid() {
       : '';
     const likes = c.stats?.likes || c.likes || 0;
     const likesStr = likes >= 1000 ? (likes/1000).toFixed(1)+'K' : likes > 0 ? String(likes) : '';
+    const qe = qualityEntries[p.id];
+    const qualityBadge = qe
+      ? `<span class="card-quality-badge tier-${qe.tier}" title="Raw: ${qe.rawScore}">Q ${qe.score}</span>`
+      : '';
 
     return `<div class="mitem">
       <div class="card${selectedIds.has(p.id) ? ' selected' : ''}" data-id="${esc(p.id)}">
@@ -970,6 +1097,15 @@ function renderGrid() {
               <span class="card-meta-author">@${esc(c.author)}</span>
               <span class="card-meta-dot">·</span>
               <span class="card-meta-author">${esc((c.lang||'').toUpperCase())}</span>
+              ${qualityBadge}
+              <span class="score-ctrl" title="置顶权重 (0=正常, 1–100=置顶)" onclick="event.stopPropagation()">
+                <button class="score-btn" onclick="adjustScore('${esc(p.id)}',-10)">−</button>
+                <input class="score-input" type="number" min="0" max="100"
+                  value="${c.score||0}"
+                  onchange="setScore('${esc(p.id)}',+this.value)"
+                  onclick="this.select()">
+                <button class="score-btn" onclick="adjustScore('${esc(p.id)}',+10)">+</button>
+              </span>
               ${mod ? '<span class="card-meta-status">edited</span>' : ''}
               ${nw  ? '<span class="card-meta-status" style="color:#2563eb;background:#eff6ff">new</span>' : ''}
             </div>
@@ -1026,7 +1162,7 @@ function renderGrid() {
         </div>
       </div>
     </div>`;
-  }).join('');
+  }).join('') + pagerHtml;
 }
 
 function esc(s) {
@@ -1152,6 +1288,9 @@ function openEdit(id) {
   document.getElementById('ei-author').value = c.author   || '';
   document.getElementById('ei-prompt').value = c.prompt   || '';
   document.getElementById('ei-charcount').textContent = (c.prompt||'').length + ' 字符';
+  const scoreVal = Math.min(100, Math.max(0, parseInt(c.score) || 0));
+  document.getElementById('ei-score').value    = scoreVal;
+  document.getElementById('ei-score-num').textContent = scoreVal;
 
   // Images
   const imgs = c.outputImages || (c.thumbnail ? [c.thumbnail] : []);
@@ -1241,6 +1380,7 @@ async function applyEdit() {
       category: document.getElementById('ei-cat').value,
       author:   document.getElementById('ei-author').value.trim(),
       prompt:   document.getElementById('ei-prompt').value,
+      score:    Math.min(100, Math.max(0, parseInt(document.getElementById('ei-score').value) || 0)),
     };
 
     if (imagePath) {
@@ -1441,6 +1581,29 @@ function isApproved(p) {
 function isHQ(p) {
   const c = merged(p);
   return c.hq === true;
+}
+
+async function setScore(id, val) {
+  const score = Math.min(100, Math.max(0, Math.round(val) || 0));
+  const existing = changes.get(id) || {};
+  changes.set(id, { ...existing, score });
+  markDirty();
+  try {
+    const out = await saveData();
+    allPrompts = out; newEntries = []; changes.clear(); deletes.clear(); clearDirty();
+    toast(score > 0 ? `⬆ Score set to ${score}` : 'Score cleared');
+  } catch(e) {
+    toast('保存失败：' + e.message, true);
+  }
+  applyFilters();
+}
+
+function adjustScore(id, delta) {
+  const pool = [...newEntries, ...allPrompts];
+  const p = pool.find(q => q.id === id);
+  if (!p) return;
+  const current = parseInt(merged(p).score) || 0;
+  setScore(id, current + delta);
 }
 
 async function toggleHQ(id) {

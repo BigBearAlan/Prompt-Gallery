@@ -150,6 +150,12 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [parsedSearch.mode, parsedSearch.normalizedTerm]);
 
+  const pinScore = (list: PromptEntry[]) => {
+    const pinned = list.filter(e => (e.score ?? 0) > 0).sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
+    const normal = list.filter(e => !((e.score ?? 0) > 0));
+    return [...pinned, ...normal];
+  };
+
   const filtered = useMemo(() => {
     let result: PromptEntry[];
 
@@ -209,20 +215,20 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
     }
 
     if (parsedSearch.normalizedTerm) {
-      return result;
+      return pinScore(result);
     }
 
     // Likes/views remain mostly engagement-led, with quality and per-load jitter
     // mixed in so strong visuals get a boost without creating a fixed order.
-    if (sortBy === 'likes') return [...result].sort((a, b) =>
+    if (sortBy === 'likes') return pinScore([...result].sort((a, b) =>
       qualityAdjustedMetric(b, b.stats.likes, shuffleSeed, imageQuality) -
       qualityAdjustedMetric(a, a.stats.likes, shuffleSeed, imageQuality)
-    );
-    if (sortBy === 'views') return [...result].sort((a, b) =>
+    ));
+    if (sortBy === 'views') return pinScore([...result].sort((a, b) =>
       qualityAdjustedMetric(b, b.stats.views, shuffleSeed, imageQuality) -
       qualityAdjustedMetric(a, a.stats.views, shuffleSeed, imageQuality)
-    );
-    return result; // 'recent' uses the score-boosted random feed above
+    ));
+    return pinScore(result); // 'recent' uses the score-boosted random feed above
   }, [category, entries, imageQuality, lang, parsedSearch, qualityBoosted, searchIndex, searchIndexStatus, shuffleSeed, sortBy, tagFilter]);
 
   const displayed = useMemo(

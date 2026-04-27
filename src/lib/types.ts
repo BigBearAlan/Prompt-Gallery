@@ -21,6 +21,7 @@ export interface PromptEntry {
   hq?: boolean;
   approved?: boolean;
   pending?: boolean;
+  score?: number;
 }
 
 export interface ImageQualityImageScore {
