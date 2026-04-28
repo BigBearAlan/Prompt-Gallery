@@ -83,7 +83,9 @@
       "WebFetch(domain:api.opennana.com)",
       "Bash(git pull *)",
       "Bash(wait)",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "Bash(ls .env.local)",
+      "Bash(cat .env.local)"
     ]
   }
 }
