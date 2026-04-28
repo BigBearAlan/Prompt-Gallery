@@ -1,6 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { useLocale } from '@/lib/i18n';
+import { useAuth } from '@/lib/auth-context';
 
 interface Props {
   compact?: boolean;
@@ -8,6 +10,7 @@ interface Props {
 
 export default function Header({ compact = false }: Props) {
   const { locale, setLocale, tx } = useLocale();
+  const { user, loading, openAuth, signOut } = useAuth();
 
   return (
     <header
@@ -22,7 +25,7 @@ export default function Header({ compact = false }: Props) {
       }}
     >
       <div className="max-w-[1800px] mx-auto px-4 sm:px-5 h-16 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3 min-w-0">
+        <Link href="/" className="flex items-center gap-3 min-w-0">
           <img
             src="/brand/prompt-gallery-logo.png"
             alt=""
@@ -33,9 +36,42 @@ export default function Header({ compact = false }: Props) {
           <span className="font-semibold text-[15px] sm:text-base tracking-tight whitespace-nowrap" style={{ color: 'var(--text-primary)' }}>
             Prompt Gallery
           </span>
-        </div>
+        </Link>
 
         <div className="flex items-center gap-2 shrink-0">
+          {user && (
+            <Link
+              href="/saved"
+              className="flex items-center gap-1.5 text-xs font-medium px-3 py-2 rounded-full border transition-colors hover:bg-gray-50"
+              style={{ borderColor: 'var(--border)', color: 'var(--text-primary)', background: '#fff' }}
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+              </svg>
+              Saved
+            </Link>
+          )}
+
+          {!loading && (
+            user ? (
+              <button
+                onClick={signOut}
+                className="flex items-center gap-1.5 text-xs font-medium px-3 py-2 rounded-full border transition-colors hover:bg-gray-50"
+                style={{ borderColor: 'var(--border)', color: 'var(--text-secondary)', background: '#fff' }}
+              >
+                Sign out
+              </button>
+            ) : (
+              <button
+                onClick={() => openAuth()}
+                className="flex items-center gap-1.5 text-xs font-medium px-3 py-2 rounded-full border transition-colors hover:bg-gray-50"
+                style={{ borderColor: 'var(--border)', color: 'var(--text-primary)', background: '#fff' }}
+              >
+                Sign in
+              </button>
+            )
+          )}
+
           <button
             onClick={() => setLocale(locale === 'zh' ? 'en' : 'zh')}
             className="flex items-center gap-1.5 text-xs font-medium px-3 py-2 rounded-full border transition-colors hover:bg-gray-50"

@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { PromptEntry } from '@/lib/types';
 import { useLocale } from '@/lib/i18n';
+import { useAuth } from '@/lib/auth-context';
 
 interface Props {
   entry: PromptEntry;
@@ -21,6 +22,8 @@ export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNe
   const [imgFailed, setImgFailed] = useState(false);
   const [mobileTab, setMobileTab] = useState<'image' | 'prompt'>('image');
   const { tx } = useLocale();
+  const { savedIds, toggleSave } = useAuth();
+  const isSaved = savedIds.has(entry.id);
 
   useEffect(() => {
     setEditedPrompt(entry.prompt);
@@ -294,6 +297,21 @@ export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNe
                     {tx.copyPrompt}
                   </>
                 )}
+              </button>
+
+              <button
+                onClick={() => toggleSave(entry.id)}
+                aria-label={isSaved ? 'Unsave' : 'Save'}
+                className="flex items-center justify-center w-10 h-10 rounded-lg border transition-all active:scale-95 shrink-0"
+                style={{
+                  borderColor: isSaved ? '#e60023' : 'var(--border)',
+                  background: isSaved ? '#fff0f1' : 'transparent',
+                  color: isSaved ? '#e60023' : 'var(--text-secondary)',
+                }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill={isSaved ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
+                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                </svg>
               </button>
 
               <a

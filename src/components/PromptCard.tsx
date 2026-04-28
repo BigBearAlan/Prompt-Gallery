@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import type { PromptEntry } from '@/lib/types';
 import { useLocale } from '@/lib/i18n';
+import { useAuth } from '@/lib/auth-context';
 
 function cardGradient(id: string): string {
   const n = (parseInt(id.slice(-6), 16) % 360 + 360) % 360;
@@ -21,6 +22,8 @@ export default function PromptCard({ entry, onClick, loading = 'lazy' }: Props) 
   const [cardCopied, setCardCopied] = useState(false);
   const imageRef = useRef<HTMLImageElement | null>(null);
   const { tx } = useLocale();
+  const { savedIds, toggleSave } = useAuth();
+  const isSaved = savedIds.has(entry.id);
 
   useEffect(() => {
     const image = imageRef.current;
@@ -35,6 +38,11 @@ export default function PromptCard({ entry, onClick, loading = 'lazy' }: Props) 
       }
     }
   }, [entry.thumbnail, imgFailed, imgLoaded]);
+
+  const handleSave = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation();
+    toggleSave(entry.id);
+  }, [entry.id, toggleSave]);
 
   const handleQuickCopy = useCallback(async (e: React.MouseEvent) => {
     e.stopPropagation(); // don't open the modal
@@ -120,23 +128,36 @@ export default function PromptCard({ entry, onClick, loading = 'lazy' }: Props) 
             {entry.title}
           </span>
 
-          <button
-            onClick={handleQuickCopy}
-            aria-label={tx.copyPrompt}
-            className="flex items-center justify-center w-8 h-8 rounded-full transition-all active:scale-90 shrink-0"
-            style={{ background: cardCopied ? '#16a34a' : 'rgba(255,255,255,0.92)', color: cardCopied ? '#fff' : '#111', backdropFilter: 'blur(8px)' }}
-          >
-            {cardCopied ? (
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                <polyline points="20 6 9 17 4 12" />
+          <div className="flex items-center gap-1 shrink-0">
+            <button
+              onClick={handleSave}
+              aria-label={isSaved ? 'Unsave' : 'Save'}
+              className="flex items-center justify-center w-8 h-8 rounded-full transition-all active:scale-90"
+              style={{ background: isSaved ? '#e60023' : 'rgba(255,255,255,0.92)', color: isSaved ? '#fff' : '#111', backdropFilter: 'blur(8px)' }}
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill={isSaved ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2.2">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
               </svg>
-            ) : (
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-                <rect width="12" height="12" x="9" y="9" rx="2" />
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-              </svg>
-            )}
-          </button>
+            </button>
+
+            <button
+              onClick={handleQuickCopy}
+              aria-label={tx.copyPrompt}
+              className="flex items-center justify-center w-8 h-8 rounded-full transition-all active:scale-90"
+              style={{ background: cardCopied ? '#16a34a' : 'rgba(255,255,255,0.92)', color: cardCopied ? '#fff' : '#111', backdropFilter: 'blur(8px)' }}
+            >
+              {cardCopied ? (
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              ) : (
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+                  <rect width="12" height="12" x="9" y="9" rx="2" />
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </div>
     </article>

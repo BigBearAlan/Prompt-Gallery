@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { ImageQualityData, PromptEntry } from '@/lib/types';
-import { LocaleProvider } from '@/lib/i18n';
 import Header from './Header';
 import Gallery from './Gallery';
 
@@ -73,13 +72,13 @@ export default function ClientRoot({
   const chromeCompact = useScrollChromeCompact();
 
   return (
-    <LocaleProvider>
+    <>
       <Header compact={chromeCompact} />
       <Gallery
         entries={entries}
         imageQuality={imageQuality}
         chromeCompact={chromeCompact}
       />
-    </LocaleProvider>
+    </>
   );
 }
