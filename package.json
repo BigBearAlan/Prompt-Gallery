@@ -23,7 +23,8 @@
     "image:quality:all": "node scripts/test-image-quality-ranker.mjs --all --model gemma4:e4b --resume --write-ranking-data",
     "test:image-metadata": "node scripts/image-metadata-self-test.mjs",
     "test:prompt-clean": "node scripts/prompt-clean-self-test.mjs",
-    "pinterest": "node scripts/fetch-pinterest.mjs"
+    "pinterest": "node scripts/fetch-pinterest.mjs",
+    "import:local": "node scripts/import-local-images.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.105.0",
