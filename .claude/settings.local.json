@@ -85,7 +85,8 @@
       "Bash(wait)",
       "Bash(python3 *)",
       "Bash(ls .env.local)",
-      "Bash(cat .env.local)"
+      "Bash(cat .env.local)",
+      "Read(//private/tmp/pinterest-test/**)"
     ]
   }
 }

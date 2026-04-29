@@ -206,12 +206,23 @@ async function getTwitterGuestToken() {
 // Extract all available text from a syndication API response object.
 function extractAllTweetText(data) {
   const parts = [];
-  const main = data.text || data.full_text || '';
+
+  // For tweets with "Show more" in the X UI, the full text lives in note_tweet.
+  // Prefer it over data.text which is typically truncated at ~280 chars.
+  const noteText =
+    data.note_tweet?.note_tweet_results?.result?.text ||
+    data.note_tweet?.note_tweet_results?.result?.richText?.richtextTags?.[0]?.text ||
+    '';
+  const main = noteText || data.full_text || data.text || '';
   if (main) parts.push(cleanTweetText(main));
 
-  // Twitter Notes (long-form tweets use a separate field)
-  const note = data.note_tweet?.note_tweet_results?.result?.text || '';
-  if (note && note !== main) parts.push(cleanTweetText(note));
+  // Alt text attached to images (authors sometimes put the full prompt here)
+  const altTexts = [];
+  for (const m of (data.mediaDetails || [])) {
+    const alt = m.ext_alt_text || m.accessibility_label || '';
+    if (alt) altTexts.push(alt.trim());
+  }
+  if (altTexts.length) parts.push(`[Alt text]: ${altTexts.join(' | ')}`);
 
   // Quoted tweet
   const qt =
@@ -300,24 +311,24 @@ const VALID_IMPORT_CATEGORIES = new Set([
   'poster','illustration','ui','infographic','logo','other',
 ]);
 
-async function extractPromptWithOllama(imageBase64s, fullText) {
+async function classifyWithOllama(imageBase64s, fullText) {
   const userContent =
-    `The following is a tweet about an AI-generated image:\n\n---\n${fullText}\n---\n\n` +
-    `Look at the image(s) and the tweet text. Extract the AI image generation prompt that was used to create these images.\n\n` +
-    `Return JSON only:\n{"prompt":"the complete prompt text used to generate the image","title":"short descriptive title under 80 chars","category":"one of: manga/advertising/game/portrait/photography/poster/illustration/ui/infographic/logo/other"}`;
+    `Tweet text about an AI-generated image:\n\n---\n${fullText.slice(0, 800)}\n---\n\n` +
+    `Give a short title (under 80 chars) and pick the best category.\n` +
+    `Return JSON only:\n{"title":"...","category":"one of: manga/advertising/game/portrait/photography/poster/illustration/ui/infographic/logo/other"}`;
 
   try {
     const res = await fetch('http://localhost:11434/api/chat', {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model:    'qwen2.5vl:7b',
-        messages: [{ role: 'user', content: userContent, images: imageBase64s.slice(0, 4) }],
+        model:    'gemma4:4b',
+        messages: [{ role: 'user', content: userContent, images: imageBase64s.slice(0, 2) }],
         format:   'json',
         stream:   false,
-        options:  { num_predict: 3000, temperature: 0.2 },
+        options:  { num_predict: 200, temperature: 0.2 },
       }),
-      signal: AbortSignal.timeout(300_000),
+      signal: AbortSignal.timeout(120_000),
     });
 
     if (!res.ok) return null;
@@ -485,10 +496,10 @@ const server = createServer(async (req, res) => {
           send('status', { url: tweetUrl, status: 'analyzing', message: 'AI 分析图片 + 提取提示词 (qwen2.5vl)…' });
 
           const fullText = await assembleTweetContext(data, tweetUrl, guestToken);
-          const aiResult  = await extractPromptWithOllama(imageBase64s, fullText);
-          const rawPrompt = aiResult?.prompt;
-          const prompt    = (typeof rawPrompt === 'string' && rawPrompt.trim()) ? rawPrompt : mainText;
-          const aiTitle  = aiResult?.title  || null;
+          console.log(`[import] Tweet text (${fullText.length} chars):\n${fullText.slice(0, 300)}${fullText.length > 300 ? '…' : ''}`);
+          const aiResult = await classifyWithOllama(imageBase64s, fullText);
+          const prompt   = fullText || mainText;
+          const aiTitle  = aiResult?.title || null;
           const aiCat    = VALID_IMPORT_CATEGORIES.has(aiResult?.category) ? aiResult.category : 'other';
           const lang     = detectTweetLang(prompt || mainText);
 
