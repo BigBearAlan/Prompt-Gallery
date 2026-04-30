@@ -15,27 +15,44 @@ interface Props {
   onNext?: () => void;
 }
 
-export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNext, onPrev, onNext }: Props) {
+// Read-only prompt display with [VARIABLE] highlighted in vermilion.
+function HighlightedPrompt({ text }: { text: string }) {
+  return (
+    <>
+      {text.split(/(\[[^\]]+\])/g).map((part, i) =>
+        /^\[[^\]]+\]$/.test(part)
+          ? <span key={i} style={{ color: '#c8442a', fontWeight: 500 }}>{part}</span>
+          : <span key={i}>{part}</span>
+      )}
+    </>
+  );
+}
+
+export default function PromptModal({
+  entry, onClose, onTagClick, hasPrev, hasNext, onPrev, onNext,
+}: Props) {
   const [editedPrompt, setEditedPrompt] = useState(entry.prompt);
-  const [copied, setCopied] = useState(false);
-  const [activeImage, setActiveImage] = useState(0);
-  const [imgFailed, setImgFailed] = useState(false);
-  const [mobileTab, setMobileTab] = useState<'image' | 'prompt'>('image');
-  const { tx } = useLocale();
-  const { savedIds, toggleSave } = useAuth();
+  const [editMode, setEditMode]         = useState(false);
+  const [copied, setCopied]             = useState(false);
+  const [activeImage, setActiveImage]   = useState(0);
+  const [imgFailed, setImgFailed]       = useState(false);
+  const [mobileTab, setMobileTab]       = useState<'image' | 'prompt'>('image');
+  const { tx, locale }                  = useLocale();
+  const { savedIds, toggleSave }        = useAuth();
   const isSaved = savedIds.has(entry.id);
+  const isZh    = locale === 'zh';
 
   useEffect(() => {
     setEditedPrompt(entry.prompt);
     setActiveImage(0);
     setImgFailed(false);
+    setEditMode(false);
     setMobileTab('image');
   }, [entry]);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') { onClose(); return; }
-      // Arrow nav — skip when user is typing in the textarea
       if (document.activeElement?.tagName === 'TEXTAREA') return;
       if (e.key === 'ArrowLeft'  && hasPrev && onPrev) onPrev();
       if (e.key === 'ArrowRight' && hasNext && onNext) onNext();
@@ -62,276 +79,432 @@ export default function PromptModal({ entry, onClose, onTagClick, hasPrev, hasNe
       document.body.removeChild(ta);
     }
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => setCopied(false), 2200);
   }, [editedPrompt]);
 
-  const handleReset = useCallback(() => setEditedPrompt(entry.prompt), [entry.prompt]);
-  const hasEdits = editedPrompt !== entry.prompt;
+  const hasEdits    = editedPrompt !== entry.prompt;
+  const catLabel    = tx.catLabels[entry.category] ?? entry.category;
+  const createdDate = (() => {
+    try {
+      return new Date(entry.createdAt).toLocaleDateString(
+        isZh ? 'zh-CN' : 'en-US',
+        { month: 'short', day: 'numeric', year: 'numeric' },
+      );
+    } catch { return '—'; }
+  })();
 
-  const NavBtn = ({ dir }: { dir: 'prev' | 'next' }) => {
-    const active = dir === 'prev' ? hasPrev : hasNext;
-    const handle = dir === 'prev' ? onPrev   : onNext;
-    const label  = dir === 'prev' ? tx.prevEntry : tx.nextEntry;
-    return (
-      <button
-        onClick={(e) => { e.stopPropagation(); handle?.(); }}
-        aria-label={label}
-        className="fixed top-1/2 -translate-y-1/2 z-[51] flex items-center justify-center w-10 h-10 rounded-full transition-all duration-150 active:scale-90"
-        style={{
-          [dir === 'prev' ? 'left' : 'right']: '12px',
-          background: active ? 'rgba(255,255,255,0.92)' : 'rgba(255,255,255,0.25)',
-          boxShadow: active ? '0 2px 12px rgba(0,0,0,0.18)' : 'none',
-          opacity: active ? 1 : 0.35,
-          cursor: active ? 'pointer' : 'default',
-          pointerEvents: active ? 'auto' : 'none',
-        }}
-      >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="2.5" strokeLinecap="round">
-          {dir === 'prev'
-            ? <polyline points="15 18 9 12 15 6" />
-            : <polyline points="9 18 15 12 9 6" />}
-        </svg>
-      </button>
-    );
-  };
+  const meta = isZh
+    ? [['模型', 'GPT Image'], ['创建于', createdDate], ['收藏数', entry.stats.likes.toLocaleString()]]
+    : [['Model', 'GPT Image'], ['Created', createdDate], ['Saved', entry.stats.likes.toLocaleString()]];
+
+  const saveLabel = isZh
+    ? (isSaved ? '已收藏' : '收藏')
+    : (isSaved ? 'Saved' : 'Save');
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
-      <NavBtn dir="prev" />
-      <NavBtn dir="next" />
 
+      {/* Prev / Next arrows */}
+      {hasPrev && (
+        <button
+          onClick={(e) => { e.stopPropagation(); onPrev?.(); }}
+          className="fixed z-[51] flex items-center justify-center"
+          style={arrowStyle('left')}
+          aria-label={tx.prevEntry}
+        >‹</button>
+      )}
+      {hasNext && (
+        <button
+          onClick={(e) => { e.stopPropagation(); onNext?.(); }}
+          className="fixed z-[51] flex items-center justify-center"
+          style={arrowStyle('right')}
+          aria-label={tx.nextEntry}
+        >›</button>
+      )}
+
+      {/* Modal shell */}
       <div
-        className="modal-content w-full max-w-5xl max-h-[92vh] rounded-xl overflow-hidden flex flex-col"
-        style={{ background: 'var(--card)' }}
+        className="modal-content w-full flex flex-col md:grid"
+        style={{
+          maxWidth: 1080,
+          maxHeight: '92vh',
+          background: '#f6f3ec',
+          border: '1px solid rgba(26,23,20,0.1)',
+          boxShadow: '0 30px 80px rgba(0,0,0,0.4)',
+          gridTemplateColumns: '1fr 1fr',
+          position: 'relative',
+          overflow: 'hidden',
+          fontFamily: isZh
+            ? '"Noto Sans SC", "PingFang SC", Inter, sans-serif'
+            : 'Inter, -apple-system, sans-serif',
+        }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* ── Modal header ─────────────────────────────────── */}
+
+        {/* ── Top header strip (spans both columns on desktop) ── */}
         <div
-          className="flex items-center justify-between px-4 py-3 border-b shrink-0"
-          style={{ borderColor: 'var(--border)' }}
+          className="flex items-center justify-between shrink-0"
+          style={{
+            position: 'absolute', top: 0, left: 0, right: 0, height: 46,
+            padding: '0 16px',
+            borderBottom: '1px solid rgba(26,23,20,0.1)',
+            background: '#f6f3ec',
+            zIndex: 2,
+          }}
         >
-          <div className="flex items-center gap-2 min-w-0">
-            <span
-              className="text-xs font-semibold px-2 py-0.5 rounded-full uppercase tracking-wide shrink-0"
-              style={{ background: '#f0f0f0', color: 'var(--text-secondary)' }}
-            >
-              {tx.catLabels[entry.category] ?? entry.category}
+          <div className="flex items-center gap-2.5">
+            <span style={{
+              padding: '4px 10px', borderRadius: 99,
+              background: '#1a1714', color: '#f6f3ec',
+              fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '0.12em',
+            }}>
+              {catLabel.toUpperCase()}
             </span>
-              <span className="text-xs truncate hidden sm:inline" style={{ color: 'var(--text-secondary)' }}>
-                @{entry.author}
-              </span>
+            <span style={{ fontSize: 12, color: '#5a5450' }}>@{entry.author}</span>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-full hover:bg-gray-100 transition-colors ml-2 shrink-0"
+            style={{
+              width: 30, height: 30, border: 'none', background: 'transparent',
+              cursor: 'pointer', fontSize: 20, color: '#1a1714',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+            }}
             aria-label={tx.close}
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M18 6 6 18M6 6l12 12" />
-            </svg>
-          </button>
+          >×</button>
         </div>
 
-        {/* ── Mobile tab bar ───────────────────────────────── */}
+        {/* ── Mobile tab bar ── */}
         <div
-          className="flex md:hidden shrink-0 border-b"
-          style={{ borderColor: 'var(--border)' }}
+          className="flex md:hidden shrink-0"
+          style={{
+            marginTop: 46,
+            borderBottom: '1px solid rgba(26,23,20,0.1)',
+          }}
         >
-          <button
-            onClick={() => setMobileTab('image')}
-            className="flex-1 py-2.5 text-sm font-medium transition-colors relative"
-            style={{ color: mobileTab === 'image' ? 'var(--text-primary)' : 'var(--text-secondary)' }}
-          >
-            {tx.tabImage}
-            {mobileTab === 'image' && (
-              <span className="absolute bottom-0 left-1/4 right-1/4 h-0.5 rounded-full" style={{ background: 'var(--text-primary)' }} />
-            )}
-          </button>
-          <button
-            onClick={() => setMobileTab('prompt')}
-            className="flex-1 py-2.5 text-sm font-medium transition-colors relative"
-            style={{ color: mobileTab === 'prompt' ? 'var(--text-primary)' : 'var(--text-secondary)' }}
-          >
-            {tx.tabPrompt}
-            {mobileTab === 'prompt' && (
-              <span className="absolute bottom-0 left-1/4 right-1/4 h-0.5 rounded-full" style={{ background: 'var(--text-primary)' }} />
-            )}
-          </button>
+          {(['image', 'prompt'] as const).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setMobileTab(tab)}
+              className="flex-1 py-2.5 text-sm font-medium transition-colors relative"
+              style={{
+                color: mobileTab === tab ? '#1a1714' : '#8a8278',
+                background: 'none', border: 'none', cursor: 'pointer',
+                fontFamily: 'inherit',
+              }}
+            >
+              {tab === 'image' ? tx.tabImage : tx.tabPrompt}
+              {mobileTab === tab && (
+                <span
+                  className="absolute bottom-0 left-1/4 right-1/4 h-0.5 rounded-full"
+                  style={{ background: '#1a1714' }}
+                />
+              )}
+            </button>
+          ))}
         </div>
 
-        {/* ── Modal body ───────────────────────────────────── */}
-        <div className="flex flex-col md:flex-row overflow-hidden flex-1 min-h-0">
+        {/* ── LEFT — dark image panel ── */}
+        <div
+          className={`${mobileTab === 'prompt' ? 'hidden' : 'flex'} md:flex flex-col items-center justify-center gap-3`}
+          style={{
+            background: '#0c0b0a',
+            padding: '62px 20px 20px',
+            paddingTop: 'max(62px, calc(46px + 16px))',
+            minHeight: 0,
+            overflow: 'hidden',
+          }}
+        >
+          {/* Main image */}
+          <div style={{ width: '100%', maxWidth: 460 }}>
+            {!imgFailed ? (
+              <img
+                key={entry.outputImages[activeImage]}
+                src={entry.outputImages[activeImage] || entry.thumbnail}
+                alt={entry.title}
+                style={{
+                  width: '100%', display: 'block',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  boxShadow: '0 20px 50px rgba(0,0,0,0.6)',
+                }}
+                onError={() => setImgFailed(true)}
+              />
+            ) : (
+              <div style={{
+                width: '100%', aspectRatio: '4/3',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                color: 'rgba(255,255,255,0.3)', fontSize: 13,
+                background: 'rgba(255,255,255,0.04)',
+              }}>
+                {tx.imageUnavailable}
+              </div>
+            )}
+          </div>
 
-          {/* Left: image panel */}
-          <div
-            className={`${mobileTab === 'prompt' ? 'hidden' : 'flex'} md:flex md:w-[48%] shrink-0 flex-col p-3 gap-3 overflow-y-auto scrollbar-none border-b md:border-b-0 md:border-r`}
-            style={{ borderColor: 'var(--border)', background: 'var(--surface-muted)' }}
-          >
-            <div className="w-full rounded-lg overflow-hidden bg-gray-200 flex items-center justify-center">
-              {!imgFailed ? (
-                <img
-                  key={entry.outputImages[activeImage]}
-                  src={entry.outputImages[activeImage] || entry.thumbnail}
-                  alt={entry.title}
-                  className="w-full object-cover"
-                  onError={() => setImgFailed(true)}
+          {/* Thumbnail strip */}
+          {entry.outputImages.length > 1 && (
+            <div className="flex gap-2 overflow-x-auto" style={{ width: '100%', maxWidth: 460 }}>
+              {entry.outputImages.map((url, i) => (
+                <button
+                  key={url}
+                  onClick={() => { setActiveImage(i); setImgFailed(false); }}
+                  style={{
+                    flexShrink: 0, width: 48, height: 48, padding: 0,
+                    border: `2px solid ${i === activeImage ? '#c8442a' : 'rgba(255,255,255,0.12)'}`,
+                    background: 'none', cursor: 'pointer', overflow: 'hidden',
+                    opacity: i === activeImage ? 1 : 0.55,
+                    transition: 'opacity 0.15s, border-color 0.15s',
+                  }}
+                >
+                  <img src={url} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* ── RIGHT — cream content panel ── */}
+        <div
+          className={`${mobileTab === 'image' ? 'hidden' : 'flex'} md:flex flex-col`}
+          style={{
+            background: '#f6f3ec',
+            overflow: 'hidden',
+            paddingTop: 46,
+            minHeight: 0,
+          }}
+        >
+          {/* Title + tags */}
+          <div style={{ padding: '20px 28px 16px' }}>
+            <h2 style={{
+              fontFamily: isZh ? '"Noto Serif SC", serif' : 'var(--serif)',
+              fontSize: isZh ? 19 : 21, fontWeight: 500, lineHeight: 1.3,
+              margin: 0, color: '#1a1714', letterSpacing: '-0.01em',
+            }}>
+              {entry.title}
+            </h2>
+            <div className="flex flex-wrap gap-1.5" style={{ marginTop: 12 }}>
+              <span style={{
+                padding: '4px 12px', borderRadius: 99, fontSize: 11,
+                background: '#1a1714', color: '#f6f3ec',
+              }}>
+                {entry.lang.toUpperCase()}
+              </span>
+              {entry.tags.filter(t => t !== entry.lang).map(tag => (
+                <span
+                  key={tag}
+                  onClick={() => { onTagClick(tag); onClose(); }}
+                  style={{
+                    padding: '4px 12px', borderRadius: 99, fontSize: 11,
+                    background: 'transparent', color: '#1a1714',
+                    border: '1px solid rgba(26,23,20,0.18)', cursor: 'pointer',
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ margin: '0 28px', borderTop: '1px solid rgba(26,23,20,0.1)' }} />
+
+          {/* Prompt section */}
+          <div style={{
+            padding: '14px 28px 10px',
+            flex: 1, overflow: 'hidden',
+            display: 'flex', flexDirection: 'column',
+          }}>
+            {/* Prompt header */}
+            <div className="flex items-baseline justify-between" style={{ marginBottom: 8 }}>
+              <span style={{
+                fontFamily: 'var(--mono)', fontSize: 10,
+                color: '#8a8278', letterSpacing: '0.14em',
+              }}>
+                {tx.promptTemplate.toUpperCase()}
+              </span>
+              <div className="flex items-center gap-2">
+                {editMode && hasEdits && (
+                  <button
+                    onClick={() => setEditedPrompt(entry.prompt)}
+                    style={{
+                      fontSize: 11, color: '#8a8278', background: 'none',
+                      border: 'none', cursor: 'pointer', textDecoration: 'underline',
+                      fontFamily: 'inherit',
+                    }}
+                  >
+                    {tx.reset}
+                  </button>
+                )}
+                <button
+                  onClick={() => setEditMode(m => !m)}
+                  style={{
+                    fontSize: 11, padding: '2px 10px',
+                    borderRadius: 4, cursor: 'pointer',
+                    background: editMode ? '#1a1714' : 'transparent',
+                    color: editMode ? '#f6f3ec' : '#8a8278',
+                    border: '1px solid rgba(26,23,20,0.2)',
+                    fontFamily: 'var(--mono)',
+                    transition: 'background 0.15s, color 0.15s',
+                  }}
+                >
+                  {editMode ? (isZh ? '完成' : 'Done') : (isZh ? '编辑' : 'Edit')}
+                </button>
+              </div>
+            </div>
+
+            {/* Prompt display / edit */}
+            <div style={{
+              flex: 1, overflow: 'hidden', position: 'relative',
+              background: '#fbf9f3',
+              border: '1px solid rgba(26,23,20,0.08)',
+              borderRadius: 3,
+            }}>
+              {editMode ? (
+                <textarea
+                  value={editedPrompt}
+                  onChange={(e) => setEditedPrompt(e.target.value)}
+                  spellCheck={false}
+                  style={{
+                    width: '100%', height: '100%',
+                    border: 'none', outline: 'none', resize: 'none',
+                    background: 'transparent',
+                    padding: '14px 16px',
+                    fontFamily: 'var(--mono)', fontSize: 11.5, lineHeight: 1.65,
+                    color: '#2a251f',
+                  }}
                 />
               ) : (
-                <div className="w-full aspect-[4/3] flex items-center justify-center text-gray-400 text-sm">
-                  {tx.imageUnavailable}
+                <div style={{
+                  height: '100%', overflow: 'hidden', position: 'relative',
+                  padding: '14px 16px',
+                  fontFamily: 'var(--mono)', fontSize: 11.5, lineHeight: 1.65,
+                  color: '#2a251f', whiteSpace: 'pre-wrap', wordBreak: 'break-word',
+                }}>
+                  <HighlightedPrompt text={editedPrompt} />
+                  {/* fade-out gradient at bottom */}
+                  <div style={{
+                    position: 'absolute', left: 0, right: 0, bottom: 0, height: 40,
+                    background: 'linear-gradient(to bottom, rgba(251,249,243,0), #fbf9f3)',
+                    pointerEvents: 'none',
+                  }} />
                 </div>
               )}
             </div>
 
-            {/* Thumbnail strip */}
-            {entry.outputImages.length > 1 && (
-              <div className="flex gap-2 overflow-x-auto scrollbar-none">
-                {entry.outputImages.map((url, i) => (
-                  <button
-                    key={url}
-                    onClick={() => { setActiveImage(i); setImgFailed(false); }}
-                    className={`shrink-0 w-14 h-14 rounded-lg overflow-hidden border transition-all ${
-                      i === activeImage ? 'border-gray-900' : 'border-transparent opacity-60 hover:opacity-100'
-                    }`}
-                  >
-                    <img src={url} alt="" className="w-full h-full object-cover" />
-                  </button>
-                ))}
-              </div>
-            )}
+            {/* Char count */}
+            <div style={{
+              fontSize: 11, color: '#8a8278',
+              marginTop: 6, textAlign: 'right',
+            }}>
+              {tx.chars(editedPrompt.length)}
+              {hasEdits && (
+                <span style={{ marginLeft: 8, fontStyle: 'italic' }}>{tx.edited}</span>
+              )}
+            </div>
           </div>
 
-          {/* Right: prompt panel */}
-          <div
-            className={`${mobileTab === 'image' ? 'hidden' : 'flex'} md:flex flex-1 flex-col min-h-0 overflow-y-auto`}
-          >
-            <div className="p-4 md:p-5 flex flex-col gap-4 flex-1">
-              {/* Title */}
-              <div>
-                <h2 className="text-base font-bold leading-snug mb-2" style={{ color: 'var(--text-primary)' }}>
-                  {entry.title}
-                </h2>
-                <div className="flex flex-wrap gap-1.5">
-                  <span
-                    className="tag-pill cursor-pointer"
-                    style={{ background: '#111', color: '#fff' }}
-                    onClick={() => { onTagClick(entry.lang); onClose(); }}
-                  >
-                    {entry.lang.toUpperCase()}
-                  </span>
-                  {entry.tags
-                    .filter((t) => t !== entry.lang)
-                    .map((tag) => (
-                      <span
-                        key={tag}
-                        className="tag-pill cursor-pointer"
-                        onClick={() => { onTagClick(tag); onClose(); }}
-                      >
-                        {tag}
-                      </span>
-                    ))}
+          {/* Meta strip */}
+          <div style={{ padding: '4px 28px 10px', display: 'flex', gap: 20 }}>
+            {meta.map(([k, v]) => (
+              <div key={k}>
+                <div style={{
+                  fontFamily: 'var(--mono)', fontSize: 9,
+                  color: '#8a8278', letterSpacing: '0.1em',
+                }}>
+                  {k.toUpperCase()}
+                </div>
+                <div style={{ fontSize: 12, color: '#1a1714', marginTop: 2, fontWeight: 500 }}>
+                  {v}
                 </div>
               </div>
+            ))}
+          </div>
 
-              <div className="border-t" style={{ borderColor: 'var(--border)' }} />
-
-              {/* Prompt editor */}
-              <div className="flex flex-col gap-2 flex-1">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--text-secondary)' }}>
-                    {tx.promptTemplate}
-                  </span>
-                  {hasEdits && (
-                    <button
-                      onClick={handleReset}
-                      className="text-xs underline underline-offset-2"
-                      style={{ color: 'var(--text-secondary)' }}
-                    >
-                      {tx.reset}
-                    </button>
-                  )}
-                </div>
-
-                <textarea
-                  className="prompt-textarea w-full flex-1 min-h-[180px] p-3 rounded-lg border outline-none focus:ring-2 focus:ring-gray-900/10 transition"
-                  style={{
-                    borderColor: hasEdits ? '#999' : 'var(--border)',
-                    background: 'var(--surface-muted)',
-                    color: 'var(--text-primary)',
-                  }}
-                  value={editedPrompt}
-                  onChange={(e) => setEditedPrompt(e.target.value)}
-                  spellCheck={false}
-                />
-
-                <div className="flex items-center justify-between text-xs" style={{ color: 'var(--text-secondary)' }}>
-                  <span>{tx.chars(editedPrompt.length)}</span>
-                  {hasEdits && <span className="italic">{tx.edited}</span>}
-                </div>
-              </div>
-            </div>
-
-            {/* Sticky action bar */}
-            <div
-              className="px-4 md:px-5 py-3 border-t flex items-center gap-2 shrink-0"
-              style={{ borderColor: 'var(--border)', background: 'var(--card)' }}
+          {/* Action bar */}
+          <div style={{
+            padding: '12px 28px 20px',
+            display: 'flex', gap: 8,
+            borderTop: '1px solid rgba(26,23,20,0.08)',
+          }}>
+            {/* Copy */}
+            <button
+              onClick={handleCopy}
+              style={{
+                flex: 1, padding: '12px 16px',
+                background: copied ? '#16a34a' : '#1a1714',
+                color: '#f6f3ec', border: 'none',
+                fontFamily: 'inherit', fontSize: 13, fontWeight: 500,
+                cursor: 'pointer', borderRadius: 3,
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+                transition: 'background 0.2s',
+              }}
             >
-              <button
-                onClick={handleCopy}
-                className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold text-white transition-all active:scale-95"
-                style={{ background: copied ? '#16a34a' : 'var(--accent)' }}
-              >
-                {copied ? (
-                  <>
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    {tx.copied}
-                  </>
-                ) : (
-                  <>
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
-                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
-                    </svg>
-                    {tx.copyPrompt}
-                  </>
-                )}
-              </button>
+              {copied ? (
+                <>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                  {tx.copied}
+                </>
+              ) : (
+                <>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect width="12" height="12" x="9" y="9" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  {tx.copyPrompt}
+                </>
+              )}
+            </button>
 
-              <button
-                onClick={() => toggleSave(entry.id)}
-                aria-label={isSaved ? 'Unsave' : 'Save'}
-                className="flex items-center justify-center w-10 h-10 rounded-lg border transition-all active:scale-95 shrink-0"
-                style={{
-                  borderColor: isSaved ? '#e60023' : 'var(--border)',
-                  background: isSaved ? '#fff0f1' : 'transparent',
-                  color: isSaved ? '#e60023' : 'var(--text-secondary)',
-                }}
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill={isSaved ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2">
-                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-                </svg>
-              </button>
+            {/* Save */}
+            <button
+              onClick={() => toggleSave(entry.id)}
+              style={{
+                padding: '12px 14px', borderRadius: 3, cursor: 'pointer',
+                background: isSaved ? '#fff0ee' : '#fff',
+                color: '#1a1714',
+                border: `1px solid ${isSaved ? '#c8442a' : 'rgba(26,23,20,0.18)'}`,
+                fontFamily: 'inherit', fontSize: 13,
+                display: 'flex', alignItems: 'center', gap: 5,
+                transition: 'border-color 0.15s, background 0.15s',
+              }}
+            >
+              <span style={{ color: '#c8442a', fontSize: 14 }}>{isSaved ? '♥' : '♡'}</span>
+              {saveLabel}
+            </button>
 
+            {/* Source */}
+            {entry.sourceUrl && (
               <a
                 href={entry.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-4 py-2.5 rounded-lg text-sm font-medium border transition-colors hover:bg-gray-50"
-                style={{ borderColor: 'var(--border)', color: 'var(--text-secondary)' }}
+                style={{
+                  padding: '12px 14px', borderRadius: 3, cursor: 'pointer',
+                  background: '#fff', color: '#1a1714',
+                  border: '1px solid rgba(26,23,20,0.18)',
+                  fontFamily: 'inherit', fontSize: 13,
+                  display: 'flex', alignItems: 'center', gap: 5,
+                  textDecoration: 'none',
+                }}
               >
                 {tx.source}
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" x2="21" y1="14" y2="3" />
-                </svg>
+                <span style={{ fontSize: 11, opacity: 0.55 }}>↗</span>
               </a>
-            </div>
+            )}
           </div>
         </div>
+
       </div>
     </div>
   );
 }
+
+const arrowStyle = (side: 'left' | 'right'): React.CSSProperties => ({
+  top: '50%',
+  transform: 'translateY(-50%)',
+  [side]: 14,
+  width: 44, height: 44, borderRadius: 99,
+  background: 'rgba(246,243,236,0.96)',
+  color: '#1a1714',
+  border: '1px solid rgba(26,23,20,0.12)',
+  fontFamily: 'Georgia, serif',
+  fontSize: 26, lineHeight: 1,
+  cursor: 'pointer',
+  boxShadow: '0 4px 16px rgba(0,0,0,0.22)',
+  userSelect: 'none',
+});

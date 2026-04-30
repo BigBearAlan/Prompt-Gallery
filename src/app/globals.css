@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --bg: #f7f7f5;
+  --bg: #f6f3ec;
   --card: #ffffff;
-  --accent: #e60023;
-  --text-primary: #111111;
-  --text-secondary: #767676;
-  --border: #e5e5e5;
-  --surface-muted: #f4f4f2;
+  --accent: #c8442a;
+  --text-primary: #1a1714;
+  --text-secondary: #8a8278;
+  --border: rgba(26,23,20,0.1);
+  --surface-muted: #fbf9f3;
+  --mono: 'JetBrains Mono', 'SF Mono', monospace;
+  --serif: 'Fraunces', Georgia, serif;
 }
 
 * {
@@ -79,8 +83,9 @@ body {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.52);
+  background: rgba(26, 23, 20, 0.65);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 50;
   display: flex;
   align-items: center;
@@ -99,7 +104,7 @@ body {
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
 

@@ -118,7 +118,7 @@ export default function PromptCard({ entry, onClick, loading = 'lazy' }: Props) 
 
         <div
           className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
-          style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.42), rgba(0,0,0,0.04) 58%, transparent)' }}
+          style={{ background: 'linear-gradient(to top, rgba(26,23,20,0.55), rgba(26,23,20,0.04) 60%, transparent)' }}
         />
 
         <div
@@ -133,7 +133,7 @@ export default function PromptCard({ entry, onClick, loading = 'lazy' }: Props) 
               onClick={handleSave}
               aria-label={isSaved ? 'Unsave' : 'Save'}
               className="flex items-center justify-center w-8 h-8 rounded-full transition-all active:scale-90"
-              style={{ background: isSaved ? '#e60023' : 'rgba(255,255,255,0.92)', color: isSaved ? '#fff' : '#111', backdropFilter: 'blur(8px)' }}
+              style={{ background: isSaved ? '#c8442a' : 'rgba(246,243,236,0.95)', color: isSaved ? '#fff' : '#1a1714', backdropFilter: 'blur(8px)' }}
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill={isSaved ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2.2">
                 <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
@@ -144,7 +144,7 @@ export default function PromptCard({ entry, onClick, loading = 'lazy' }: Props) 
               onClick={handleQuickCopy}
               aria-label={tx.copyPrompt}
               className="flex items-center justify-center w-8 h-8 rounded-full transition-all active:scale-90"
-              style={{ background: cardCopied ? '#16a34a' : 'rgba(255,255,255,0.92)', color: cardCopied ? '#fff' : '#111', backdropFilter: 'blur(8px)' }}
+              style={{ background: cardCopied ? '#16a34a' : 'rgba(246,243,236,0.95)', color: cardCopied ? '#fff' : '#1a1714', backdropFilter: 'blur(8px)' }}
             >
               {cardCopied ? (
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">

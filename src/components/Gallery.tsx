@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useMemo, useCallback, useEffect, useRef, useDeferredValue, startTransition } from 'react';
-import type { ImageQualityData, PromptEntry, SearchIndexFile, SortBy } from '@/lib/types';
+import { useState, useMemo, useEffect, useRef, useDeferredValue } from 'react';
+import type { ImageQualityData, PromptEntry, SearchIndexFile } from '@/lib/types';
 import { useLocale } from '@/lib/i18n';
-import { getPromptQualityScore, qualityAdjustedMetric, randomizedQualityRankValue } from '@/lib/ranking';
+import { getPromptQualityScore, randomizedQualityRankValue } from '@/lib/ranking';
 import {
   compareBySecondarySort,
   parseSearchQuery,
@@ -13,7 +13,6 @@ import {
 } from '@/lib/search';
 import PromptCard from './PromptCard';
 import PromptModal from './PromptModal';
-import SearchFilterBar from './SearchFilterBar';
 
 const PAGE_SIZE = 48;
 const SHUFFLE_SEED = 0.5;
@@ -21,7 +20,7 @@ const SHUFFLE_SEED = 0.5;
 interface Props {
   entries: PromptEntry[];
   imageQuality: ImageQualityData;
-  chromeCompact?: boolean;
+  chromeCompact?: boolean; // eslint-disable-line @typescript-eslint/no-unused-vars
 }
 
 interface MasonryCard {
@@ -91,13 +90,13 @@ function useMasonryColumns(displayed: PromptEntry[]) {
   return { columnCount, columns, containerRef };
 }
 
-export default function Gallery({ entries, imageQuality, chromeCompact = false }: Props) {
+export default function Gallery({ entries, imageQuality }: Props) {
   const { tx } = useLocale();
-  const [search, setSearch] = useState('');
+  const [search] = useState('');
   const deferredSearch = useDeferredValue(search);
-  const [category, setCategory] = useState('all');
-  const [lang, setLang] = useState('all');
-  const [sortBy, setSortBy] = useState<SortBy>('recent');
+  const [category] = useState('all');
+  const [lang] = useState('all');
+  const sortBy = 'recent' as const;
   const [page, setPage] = useState(1);
   const [selected, setSelected] = useState<PromptEntry | null>(null);
   const [tagFilter, setTagFilter] = useState('');
@@ -218,18 +217,9 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
       return pinScore(result);
     }
 
-    // Likes/views remain mostly engagement-led, with quality and per-load jitter
-    // mixed in so strong visuals get a boost without creating a fixed order.
-    if (sortBy === 'likes') return pinScore([...result].sort((a, b) =>
-      qualityAdjustedMetric(b, b.stats.likes, shuffleSeed, imageQuality) -
-      qualityAdjustedMetric(a, a.stats.likes, shuffleSeed, imageQuality)
-    ));
-    if (sortBy === 'views') return pinScore([...result].sort((a, b) =>
-      qualityAdjustedMetric(b, b.stats.views, shuffleSeed, imageQuality) -
-      qualityAdjustedMetric(a, a.stats.views, shuffleSeed, imageQuality)
-    ));
-    return pinScore(result); // 'recent' uses the score-boosted random feed above
-  }, [category, entries, imageQuality, lang, parsedSearch, qualityBoosted, searchIndex, searchIndexStatus, shuffleSeed, sortBy, tagFilter]);
+    return pinScore(result);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [category, entries, imageQuality, lang, parsedSearch, qualityBoosted, searchIndex, searchIndexStatus, tagFilter]);
 
   const displayed = useMemo(
     () => filtered.slice(0, page * PAGE_SIZE),
@@ -261,45 +251,59 @@ export default function Gallery({ entries, imageQuality, chromeCompact = false }
   const { columnCount, columns, containerRef } = useMasonryColumns(displayed);
   const eagerImageCount = Math.min(displayed.length, Math.max(12, columnCount * 4));
 
-  const handleSearch = useCallback((v: string) => {
-    startTransition(() => {
-      setSearch(v);
-      setPage(1);
-    });
-  }, []);
-
-  const handleCategory = useCallback((v: string) => {
-    setCategory(v);
-    setPage(1);
-  }, []);
-
-  const handleLang = useCallback((v: string) => {
-    setLang(v);
-    setPage(1);
-  }, []);
-
-  const handleTagClick = useCallback((tag: string) => {
+  const handleTagClick = (tag: string) => {
     setTagFilter((prev) => (prev === tag ? '' : tag));
-    setCategory('all');
-    setSearch('');
     setPage(1);
-  }, []);
+  };
+
+  const isZh = tx.langToggle === 'EN'; // zh locale shows 'EN' as the toggle label
+
+  // Compute current month/year for the hero strip
+  const heroDate = new Date().toLocaleString(isZh ? 'zh-CN' : 'en-US', { month: 'long', year: 'numeric' }).toUpperCase();
 
   return (
     <>
-      <SearchFilterBar
-        search={search}
-        onSearchChange={handleSearch}
-        category={category}
-        onCategoryChange={handleCategory}
-        lang={lang}
-        onLangChange={handleLang}
-        sortBy={sortBy}
-        onSortChange={setSortBy}
-        tagFilter={tagFilter}
-        onTagFilterClear={() => setTagFilter('')}
-        compact={chromeCompact}
-      />
+      {/* ── Hero strip ── */}
+      <div
+        className="max-w-[1800px] mx-auto"
+        style={{ padding: '28px 20px 8px' }}
+      >
+        <div
+          className="flex items-end justify-between gap-6"
+          style={{ borderBottom: '1px solid rgba(26,23,20,0.1)', paddingBottom: 20 }}
+        >
+          <h1
+            style={{
+              fontFamily: 'var(--serif)',
+              fontSize: 'clamp(22px, 2.8vw, 34px)',
+              fontWeight: 400,
+              lineHeight: 1.2,
+              margin: 0,
+              letterSpacing: '-0.01em',
+              color: 'var(--text-primary)',
+              maxWidth: 820,
+            }}
+          >
+            {isZh
+              ? '一座关于生成影像与提示词的资料库'
+              : 'An archive of generative imagery & prompts'}
+          </h1>
+          <div
+            className="hidden sm:block shrink-0 text-right"
+            style={{
+              fontFamily: 'var(--mono)',
+              fontSize: 10,
+              color: 'var(--text-secondary)',
+              lineHeight: 1.9,
+              letterSpacing: '0.08em',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {heroDate}<br />
+            {entries.length.toLocaleString()} {isZh ? '条作品' : 'ENTRIES'}
+          </div>
+        </div>
+      </div>
 
       <main className="max-w-[1800px] mx-auto px-2.5 sm:px-4 py-3 sm:py-4">
         {displayed.length === 0 ? (
