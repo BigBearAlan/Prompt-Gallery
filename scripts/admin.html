@@ -348,6 +348,28 @@ body {
 .bulk-btn-delete { background: #fee2e2; color: #b91c1c; }
 .bulk-btn-clear { background: #f3f4f6; color: #4b5563; }
 
+/* ── Batch score controls ───────────────────────────── */
+.bulk-score {
+  display: flex; align-items: center; gap: 6px;
+  padding-left: 12px; border-left: 1px solid var(--border); flex-shrink: 0;
+}
+.bulk-score-label { font-size: 12px; color: #444; white-space: nowrap; font-weight: 600; }
+.bulk-score-input {
+  width: 46px; height: 26px; text-align: center;
+  border: 1px solid #c7d2fe; border-radius: 7px;
+  font-size: 12px; font-weight: 700; color: #3730a3;
+  background: #eef2ff; outline: none;
+  -moz-appearance: textfield;
+}
+.bulk-score-input::-webkit-inner-spin-button,
+.bulk-score-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+.bulk-score-input:disabled { opacity: .4; }
+.bulk-sep { width: 1px; height: 18px; background: var(--border); flex-shrink: 0; margin: 0 2px; }
+.bulk-btn-score-adj { background: #eef2ff; color: #4338ca; font-size: 11px; }
+.bulk-btn-score-set { background: #4338ca; color: #fff; }
+.bulk-btn-hq-on  { background: #fef9c3; color: #713f12; }
+.bulk-btn-hq-off { background: #f3f4f6; color: #6b7280; }
+
 /* ── Lightbox ───────────────────────────────────────── */
 #lightbox {
   position: fixed; inset: 0; z-index: 500;
@@ -756,6 +778,18 @@ body {
     <button class="bulk-btn bulk-btn-approve" id="bulk-approve-btn" onclick="approveSelected()" disabled>通过</button>
     <button class="bulk-btn bulk-btn-delete" id="bulk-delete-btn" onclick="openBulkDel()" disabled>删除</button>
     <button class="bulk-btn bulk-btn-clear" id="bulk-clear-btn" onclick="clearSelection()" disabled>清空</button>
+  </div>
+
+  <!-- Batch score controls -->
+  <div class="bulk-score">
+    <span class="bulk-score-label">批量打分</span>
+    <button class="bulk-btn bulk-btn-score-adj" id="bulk-score-minus" onclick="batchAdjustScore(-10)" disabled title="所有选中项 −10">−10</button>
+    <input type="number" id="bulk-score-input" class="bulk-score-input" min="0" max="100" value="50" disabled title="目标分数 (0–100)">
+    <button class="bulk-btn bulk-btn-score-adj" id="bulk-score-plus" onclick="batchAdjustScore(+10)" disabled title="所有选中项 +10">+10</button>
+    <button class="bulk-btn bulk-btn-score-set" id="bulk-score-set-btn" onclick="batchSetScore()" disabled title="将所有选中项的分数设为输入框的值">设置</button>
+    <div class="bulk-sep"></div>
+    <button class="bulk-btn bulk-btn-hq-on"  id="bulk-hq-on-btn"  onclick="batchSetHQ(true)"  disabled>★ 精选</button>
+    <button class="bulk-btn bulk-btn-hq-off" id="bulk-hq-off-btn" onclick="batchSetHQ(false)" disabled>☆ 取消精选</button>
   </div>
 </div>
 
@@ -1279,13 +1313,22 @@ function updateBulkControls() {
   const allVisibleSelected = ids.length > 0 && selectedVisible.length === ids.length;
   const someVisibleSelected = selectedVisible.length > 0 && selectedVisible.length < ids.length;
   const selectAll = document.getElementById('select-all-visible');
+  const hasSelected = selectedCount > 0;
 
   selectAll.checked = allVisibleSelected;
   selectAll.indeterminate = someVisibleSelected;
   document.getElementById('bulk-count').textContent = `已选择 ${selectedCount} 项`;
-  document.getElementById('bulk-approve-btn').disabled = selectedCount === 0;
-  document.getElementById('bulk-delete-btn').disabled = selectedCount === 0;
-  document.getElementById('bulk-clear-btn').disabled = selectedCount === 0;
+  document.getElementById('bulk-approve-btn').disabled = !hasSelected;
+  document.getElementById('bulk-delete-btn').disabled = !hasSelected;
+  document.getElementById('bulk-clear-btn').disabled = !hasSelected;
+
+  // Batch score controls
+  document.getElementById('bulk-score-minus').disabled = !hasSelected;
+  document.getElementById('bulk-score-plus').disabled = !hasSelected;
+  document.getElementById('bulk-score-input').disabled = !hasSelected;
+  document.getElementById('bulk-score-set-btn').disabled = !hasSelected;
+  document.getElementById('bulk-hq-on-btn').disabled = !hasSelected;
+  document.getElementById('bulk-hq-off-btn').disabled = !hasSelected;
 }
 
 function toggleSelect(id, checked) {
@@ -1351,6 +1394,66 @@ function openBulkDel() {
   document.getElementById('del-desc').textContent =
     `将删除已选择的 ${selectedIds.size} 项，点击"保存"后生效。`;
   document.getElementById('del-modal').classList.remove('hidden');
+}
+
+async function batchSetScore() {
+  const ids = [...selectedIds];
+  if (ids.length === 0) return;
+  const val = Math.min(100, Math.max(0, parseInt(document.getElementById('bulk-score-input').value, 10) || 0));
+  ids.forEach(id => {
+    const existing = changes.get(id) || {};
+    changes.set(id, { ...existing, score: val });
+  });
+  markDirty();
+  try {
+    const out = await saveData();
+    allPrompts = out; newEntries = []; changes.clear(); deletes.clear(); clearDirty();
+    toast(`✓ 已将 ${ids.length} 项分数设为 ${val}`);
+  } catch(e) {
+    toast('批量打分失败：' + e.message, true);
+  }
+  applyFilters(false);
+}
+
+async function batchAdjustScore(delta) {
+  const ids = [...selectedIds];
+  if (ids.length === 0) return;
+  const pool = [...newEntries, ...allPrompts];
+  ids.forEach(id => {
+    const p = pool.find(q => q.id === id);
+    if (!p) return;
+    const current = parseInt(merged(p).score) || 0;
+    const next = Math.min(100, Math.max(0, current + delta));
+    const existing = changes.get(id) || {};
+    changes.set(id, { ...existing, score: next });
+  });
+  markDirty();
+  try {
+    const out = await saveData();
+    allPrompts = out; newEntries = []; changes.clear(); deletes.clear(); clearDirty();
+    toast(`✓ 已将 ${ids.length} 项分数 ${delta > 0 ? '+' : ''}${delta}`);
+  } catch(e) {
+    toast('批量调分失败：' + e.message, true);
+  }
+  applyFilters(false);
+}
+
+async function batchSetHQ(flag) {
+  const ids = [...selectedIds];
+  if (ids.length === 0) return;
+  ids.forEach(id => {
+    const existing = changes.get(id) || {};
+    changes.set(id, { ...existing, hq: flag });
+  });
+  markDirty();
+  try {
+    const out = await saveData();
+    allPrompts = out; newEntries = []; changes.clear(); deletes.clear(); clearDirty();
+    toast(flag ? `★ 已将 ${ids.length} 项标记为精选` : `已将 ${ids.length} 项取消精选`);
+  } catch(e) {
+    toast('操作失败：' + e.message, true);
+  }
+  applyFilters(false);
 }
 
 // ════════════════════════════════════════════════════
