@@ -31,20 +31,42 @@ function buildColumns(items: PromptEntry[], count: number) {
   return cols;
 }
 
-interface Props { entries: PromptEntry[]; }
-
-export default function SavedClient({ entries }: Props) {
+export default function SavedClient() {
   const { user, savedIds, loading, openAuth } = useAuth();
   const [selected, setSelected] = useState<number | null>(null);
   const [colCount, setColCount] = useState(2);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
+  // Fetch all chunks to have the full dataset for saved-prompt lookup
+  const [entries, setEntries] = useState<PromptEntry[]>([]);
+  const [dataLoading, setDataLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function load() {
+      try {
+        const manifest = await fetch('/data/manifest.json').then((r) => r.json());
+        const chunks = await Promise.all(
+          Array.from({ length: manifest.chunks }, (_, i) =>
+            fetch(`/data/chunk-${String(i + 1).padStart(3, '0')}.json`).then((r) => r.json())
+          )
+        );
+        if (!cancelled) {
+          setEntries(chunks.flat());
+          setDataLoading(false);
+        }
+      } catch {
+        if (!cancelled) setDataLoading(false);
+      }
+    }
+    load();
+    return () => { cancelled = true; };
+  }, []);
+
   useEffect(() => {
     const node = containerRef.current;
     if (!node) return;
-    const update = () => {
-      setColCount(columnCountForWidth(node.clientWidth || window.innerWidth));
-    };
+    const update = () => setColCount(columnCountForWidth(node.clientWidth || window.innerWidth));
     update();
     const ro = new ResizeObserver(update);
     ro.observe(node);
@@ -52,7 +74,7 @@ export default function SavedClient({ entries }: Props) {
   }, []);
 
   const savedEntries = useMemo(
-    () => entries.filter(e => savedIds.has(e.id)),
+    () => entries.filter((e) => savedIds.has(e.id)),
     [entries, savedIds],
   );
 
@@ -62,6 +84,7 @@ export default function SavedClient({ entries }: Props) {
   );
 
   const selectedEntry = selected !== null ? savedEntries[selected] : null;
+  const isLoading = loading || dataLoading;
 
   return (
     <div className="min-h-screen" style={{ background: 'var(--bg)' }}>
@@ -82,7 +105,7 @@ export default function SavedClient({ entries }: Props) {
           )}
         </div>
 
-        {loading ? (
+        {isLoading ? (
           <div className="flex items-center justify-center py-32 text-sm" style={{ color: 'var(--text-secondary)' }}>
             Loading…
           </div>
@@ -143,8 +166,8 @@ export default function SavedClient({ entries }: Props) {
           onTagClick={() => {}}
           hasPrev={selected! > 0}
           hasNext={selected! < savedEntries.length - 1}
-          onPrev={() => setSelected(v => (v ?? 1) - 1)}
-          onNext={() => setSelected(v => (v ?? 0) + 1)}
+          onPrev={() => setSelected((v) => (v ?? 1) - 1)}
+          onNext={() => setSelected((v) => (v ?? 0) + 1)}
         />
       )}
     </div>

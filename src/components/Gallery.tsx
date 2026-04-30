@@ -15,11 +15,8 @@ import PromptCard from './PromptCard';
 import PromptModal from './PromptModal';
 
 const PAGE_SIZE = 48;
-const SHUFFLE_SEED = 0.5;
 
 interface Props {
-  entries: PromptEntry[];
-  imageQuality: ImageQualityData;
   chromeCompact?: boolean; // eslint-disable-line @typescript-eslint/no-unused-vars
 }
 
@@ -90,45 +87,112 @@ function useMasonryColumns(displayed: PromptEntry[]) {
   return { columnCount, columns, containerRef };
 }
 
-export default function Gallery({ entries, imageQuality }: Props) {
+export default function Gallery({}: Props) {
   const { tx } = useLocale();
-  const [search] = useState('');
-  const deferredSearch = useDeferredValue(search);
-  const [category] = useState('all');
-  const [lang] = useState('all');
-  const sortBy = 'recent' as const;
-  const [page, setPage] = useState(1);
-  const [selected, setSelected] = useState<PromptEntry | null>(null);
-  const [tagFilter, setTagFilter] = useState('');
-  const [searchIndex, setSearchIndex] = useState<SearchIndexFile | null>(null);
-  const [searchIndexStatus, setSearchIndexStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
-  const [shuffleSeed, setShuffleSeed] = useState(SHUFFLE_SEED);
+
+  // ── Data: load chunks progressively from public/data/ ──────────────────
+  const [entries, setEntries] = useState<PromptEntry[]>([]);
+  const [imageQuality, setImageQuality] = useState<ImageQualityData | null>(null);
+  const [dataLoading, setDataLoading] = useState(true);
 
   useEffect(() => {
-    setShuffleSeed(Math.random());
+    let cancelled = false;
+
+    async function load() {
+      try {
+        const [manifest, iq] = await Promise.all([
+          fetch('/data/manifest.json').then((r) => r.json()),
+          fetch('/data/image-quality.json').then((r) => r.json()),
+        ]);
+        if (cancelled) return;
+        setImageQuality(iq);
+
+        const chunk1: PromptEntry[] = await fetch('/data/chunk-001.json').then((r) => r.json());
+        if (cancelled) return;
+        setEntries(chunk1);
+        setDataLoading(false);
+
+        // Fire remaining chunks in parallel; merge as each arrives
+        for (let i = 2; i <= manifest.chunks; i++) {
+          const num = String(i).padStart(3, '0');
+          fetch(`/data/chunk-${num}.json`)
+            .then((r) => r.json())
+            .then((chunk: PromptEntry[]) => {
+              if (!cancelled) setEntries((prev) => [...prev, ...chunk]);
+            })
+            .catch(() => {});
+        }
+      } catch {
+        if (!cancelled) setDataLoading(false);
+      }
+    }
+
+    load();
+    return () => { cancelled = true; };
   }, []);
 
-  const qualityBoosted = useMemo(() => {
-    return [...entries]
-      .map((entry) => ({
-        entry,
-        rankValue: randomizedQualityRankValue(entry, shuffleSeed, imageQuality),
-      }))
-      .sort((a, b) => b.rankValue - a.rankValue)
-      .map((item) => item.entry);
-  }, [entries, imageQuality, shuffleSeed]);
+  // ── Search (fix #1) ─────────────────────────────────────────────────────
+  const [search, setSearch] = useState('');
+  const deferredSearch = useDeferredValue(search);
 
-  const parsedSearch = useMemo(() => parseSearchQuery(deferredSearch), [deferredSearch]);
+  const [category] = useState('all');
+  const [lang]     = useState('all');
+  const sortBy = 'recent' as const;
 
-  // Track whether a fetch has been started so we never double-fetch or
-  // accidentally cancel an in-flight request when dependencies re-render.
+  const [page, setPage]           = useState(1);
+  const [selected, setSelected]   = useState<PromptEntry | null>(null);
+  const [tagFilter, setTagFilter] = useState('');
+  const [searchIndex, setSearchIndex]           = useState<SearchIndexFile | null>(null);
+  const [searchIndexStatus, setSearchIndexStatus] =
+    useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
+  const [shuffleSeed, setShuffleSeed] = useState(0.5);
+
+  useEffect(() => { setShuffleSeed(Math.random()); }, []);
+
+  // ── Deep links (fix #2) ─────────────────────────────────────────────────
+  const [pendingId, setPendingId] = useState<string | null>(null);
+
+  // Read ?p= from URL on mount; close modal on browser back
+  useEffect(() => {
+    const id = new URLSearchParams(window.location.search).get('p');
+    if (id) setPendingId(id);
+
+    const onPop = () => {
+      const newId = new URLSearchParams(window.location.search).get('p');
+      if (!newId) setSelected(null);
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+
+  // Resolve pending deep link once the matching entry has loaded
+  useEffect(() => {
+    if (!pendingId || !entries.length) return;
+    const entry = entries.find((e) => e.id === pendingId);
+    if (entry) {
+      setSelected(entry);
+      setPendingId(null);
+    }
+  }, [entries, pendingId]);
+
+  const handleSelect = (entry: PromptEntry) => {
+    setSelected(entry);
+    window.history.pushState({ p: entry.id }, '', `?p=${entry.id}`);
+  };
+
+  const handleClose = () => {
+    setSelected(null);
+    window.history.replaceState({}, '', window.location.pathname);
+  };
+
+  // ── Search index (lazy, only for image-mode search) ─────────────────────
   const fetchAttempted = useRef(false);
+  const parsedSearch   = useMemo(() => parseSearchQuery(deferredSearch), [deferredSearch]);
 
   useEffect(() => {
     if (!parsedSearch.normalizedTerm || parsedSearch.mode !== 'image') return;
     if (fetchAttempted.current) return;
     fetchAttempted.current = true;
-
     setSearchIndexStatus('loading');
 
     fetch('/search-index.json')
@@ -141,17 +205,26 @@ export default function Gallery({ entries, imageQuality }: Props) {
         setSearchIndexStatus('ready');
       })
       .catch(() => {
-        fetchAttempted.current = false; // allow retry on next search
+        fetchAttempted.current = false;
         setSearchIndexStatus('error');
       });
-  // Only re-run when search mode/term changes — intentionally excludes
-  // searchIndex and searchIndexStatus to avoid cancelling an in-flight fetch.
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [parsedSearch.mode, parsedSearch.normalizedTerm]);
 
+  // ── Ranking ─────────────────────────────────────────────────────────────
+  const qualityBoosted = useMemo(() => {
+    return [...entries]
+      .map((entry) => ({
+        entry,
+        rankValue: randomizedQualityRankValue(entry, shuffleSeed, imageQuality),
+      }))
+      .sort((a, b) => b.rankValue - a.rankValue)
+      .map((item) => item.entry);
+  }, [entries, imageQuality, shuffleSeed]);
+
   const pinScore = (list: PromptEntry[]) => {
-    const pinned = list.filter(e => (e.score ?? 0) > 0).sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
-    const normal = list.filter(e => !((e.score ?? 0) > 0));
+    const pinned = list.filter((e) => (e.score ?? 0) > 0).sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
+    const normal = list.filter((e) => !((e.score ?? 0) > 0));
     return [...pinned, ...normal];
   };
 
@@ -160,75 +233,48 @@ export default function Gallery({ entries, imageQuality }: Props) {
 
     if (parsedSearch.normalizedTerm) {
       const indexReady = searchIndexStatus === 'ready';
-
       const scored = entries
         .map((entry) => {
           let score = 0;
-
           if (parsedSearch.mode !== 'image') {
-            // author / title — instant, no index needed
             score = scorePrefixSearch(entry, parsedSearch);
           } else if (indexReady) {
-            // Image index ready: image-content score (primary) + prompt text (secondary)
             const imgScore = scoreImageSearch(searchIndex?.entries?.[entry.id], parsedSearch);
             const txtScore = scorePromptText(entry, parsedSearch);
-            // Require text-side corroboration to suppress OCR noise (e.g. brand names
-            // accidentally matching a query word). Image-only matches get a 45% penalty.
             const imgFinal = imgScore > 0
               ? (txtScore > 0 ? imgScore + txtScore * 0.35 : imgScore * 0.45)
               : 0;
             score = imgFinal > 0 ? imgFinal : txtScore * 0.6;
           } else {
-            // Index still loading — search title + prompt text immediately
             score = scorePromptText(entry, parsedSearch);
           }
-
           score += entry.hq ? 30 : 0;
           const qualityScore = getPromptQualityScore(entry, imageQuality);
           if (qualityScore !== null) score += qualityScore * 0.25;
           return { entry, score };
         })
-        // Minimum threshold: filters noise/weak partial matches.
-        // scorePromptText title-match alone ≈ 79, prompt-match alone ≈ 48 — both pass 38.
         .filter((item) => item.score >= 38)
         .sort((a, b) => {
           if (b.score !== a.score) return b.score - a.score;
           return compareBySecondarySort(a.entry, b.entry, sortBy);
         });
-
       result = scored.map((item) => item.entry);
     } else {
       result = qualityBoosted;
     }
 
-    if (category !== 'all') {
-      result = result.filter((e) => e.category === category);
-    }
-
-    if (lang !== 'all') {
-      result = result.filter((e) => e.lang === lang);
-    }
-
-    if (tagFilter) {
-      result = result.filter((e) => e.tags.includes(tagFilter));
-    }
-
-    if (parsedSearch.normalizedTerm) {
-      return pinScore(result);
-    }
+    if (category !== 'all') result = result.filter((e) => e.category === category);
+    if (lang !== 'all')     result = result.filter((e) => e.lang === lang);
+    if (tagFilter)          result = result.filter((e) => e.tags.includes(tagFilter));
 
     return pinScore(result);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category, entries, imageQuality, lang, parsedSearch, qualityBoosted, searchIndex, searchIndexStatus, tagFilter]);
 
-  const displayed = useMemo(
-    () => filtered.slice(0, page * PAGE_SIZE),
-    [filtered, page]
-  );
+  const displayed = useMemo(() => filtered.slice(0, page * PAGE_SIZE), [filtered, page]);
+  const hasMore   = displayed.length < filtered.length;
 
-  const hasMore = displayed.length < filtered.length;
-
-  // Infinite scroll — observe a sentinel element near the bottom of the feed
+  // Infinite scroll
   const sentinelRef = useRef<HTMLDivElement>(null);
   const hasMoreRef  = useRef(hasMore);
   useEffect(() => { hasMoreRef.current = hasMore; });
@@ -238,15 +284,13 @@ export default function Gallery({ entries, imageQuality }: Props) {
     if (!sentinel) return;
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting && hasMoreRef.current) {
-          setPage((p) => p + 1);
-        }
+        if (entries[0].isIntersecting && hasMoreRef.current) setPage((p) => p + 1);
       },
-      { rootMargin: '400px' }, // preload 400px before the bottom edge
+      { rootMargin: '400px' },
     );
     observer.observe(sentinel);
     return () => observer.disconnect();
-  }, []); // mount once — hasMoreRef keeps the callback up to date
+  }, []);
 
   const { columnCount, columns, containerRef } = useMasonryColumns(displayed);
   const eagerImageCount = Math.min(displayed.length, Math.max(12, columnCount * 4));
@@ -256,18 +300,15 @@ export default function Gallery({ entries, imageQuality }: Props) {
     setPage(1);
   };
 
-  const isZh = tx.langToggle === 'EN'; // zh locale shows 'EN' as the toggle label
-
-  // Compute current month/year for the hero strip
-  const heroDate = new Date().toLocaleString(isZh ? 'zh-CN' : 'en-US', { month: 'long', year: 'numeric' }).toUpperCase();
+  const isZh     = tx.langToggle === 'EN';
+  const heroDate = new Date()
+    .toLocaleString(isZh ? 'zh-CN' : 'en-US', { month: 'long', year: 'numeric' })
+    .toUpperCase();
 
   return (
     <>
       {/* ── Hero strip ── */}
-      <div
-        className="max-w-[1800px] mx-auto"
-        style={{ padding: '28px 20px 8px' }}
-      >
+      <div className="max-w-[1800px] mx-auto" style={{ padding: '28px 20px 0' }}>
         <div
           className="flex items-end justify-between gap-6"
           style={{ borderBottom: '1px solid rgba(26,23,20,0.1)', paddingBottom: 20 }}
@@ -303,10 +344,93 @@ export default function Gallery({ entries, imageQuality }: Props) {
             {entries.length.toLocaleString()} {isZh ? '条作品' : 'ENTRIES'}
           </div>
         </div>
+
+        {/* ── Search bar (fix #1) ── */}
+        <div style={{ padding: '14px 0 10px', display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+          <div style={{ position: 'relative', flex: '1 1 220px', maxWidth: 480 }}>
+            <svg
+              width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2"
+              style={{
+                position: 'absolute', left: 11, top: '50%', transform: 'translateY(-50%)',
+                color: 'var(--text-secondary)', pointerEvents: 'none',
+              }}
+            >
+              <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
+            </svg>
+            <input
+              type="search"
+              value={search}
+              onChange={(e) => { setSearch(e.target.value); setPage(1); }}
+              placeholder={tx.searchPlaceholder}
+              style={{
+                width: '100%',
+                padding: '8px 32px 8px 34px',
+                fontSize: 13,
+                border: '1px solid rgba(26,23,20,0.14)',
+                borderRadius: 5,
+                background: 'rgba(255,255,255,0.9)',
+                color: 'var(--text-primary)',
+                outline: 'none',
+                fontFamily: 'inherit',
+                appearance: 'none',
+              }}
+            />
+            {search && (
+              <button
+                onClick={() => { setSearch(''); setPage(1); }}
+                aria-label="Clear search"
+                style={{
+                  position: 'absolute', right: 9, top: '50%', transform: 'translateY(-50%)',
+                  background: 'none', border: 'none', cursor: 'pointer',
+                  color: 'var(--text-secondary)', fontSize: 17, lineHeight: 1, padding: 2,
+                }}
+              >×</button>
+            )}
+          </div>
+
+          {/* Active tag chip */}
+          {tagFilter && (
+            <button
+              onClick={() => setTagFilter('')}
+              style={{
+                display: 'flex', alignItems: 'center', gap: 5,
+                padding: '6px 12px', borderRadius: 99, fontSize: 12,
+                background: '#1a1714', color: '#f6f3ec',
+                border: 'none', cursor: 'pointer', fontFamily: 'inherit',
+              }}
+            >
+              {tagFilter}
+              <span style={{ opacity: 0.7, fontSize: 15 }}>×</span>
+            </button>
+          )}
+
+          {/* Search index loading hint */}
+          {parsedSearch.normalizedTerm && searchIndexStatus === 'loading' && (
+            <span style={{ fontSize: 11, color: 'var(--text-secondary)', fontFamily: 'var(--mono)' }}>
+              {tx.searchLoadingFallback}
+            </span>
+          )}
+        </div>
       </div>
 
       <main className="max-w-[1800px] mx-auto px-2.5 sm:px-4 py-3 sm:py-4">
-        {displayed.length === 0 ? (
+        {/* Loading skeleton */}
+        {dataLoading ? (
+          <div
+            className="masonry-grid"
+            style={{ gridTemplateColumns: `repeat(${columnCount}, minmax(0, 1fr))` }}
+          >
+            {Array.from({ length: columnCount * 3 }).map((_, i) => (
+              <div key={i} className="masonry-column">
+                <div
+                  className="skeleton rounded-lg"
+                  style={{ width: '100%', aspectRatio: `1 / ${1 + (i % 3) * 0.3}` }}
+                />
+              </div>
+            ))}
+          </div>
+        ) : displayed.length === 0 ? (
           <div
             className="text-center py-24 text-sm"
             style={{ color: 'var(--text-secondary)' }}
@@ -326,7 +450,7 @@ export default function Gallery({ entries, imageQuality }: Props) {
                     key={entry.id}
                     entry={entry}
                     loading={index < eagerImageCount ? 'eager' : 'lazy'}
-                    onClick={() => setSelected(entry)}
+                    onClick={() => handleSelect(entry)}
                   />
                 ))}
               </div>
@@ -334,7 +458,6 @@ export default function Gallery({ entries, imageQuality }: Props) {
           </div>
         )}
 
-        {/* Sentinel — IntersectionObserver fires ~400px before this to preload next page */}
         <div ref={sentinelRef} style={{ height: 1 }} />
 
         {!hasMore && displayed.length > 0 && (
@@ -345,16 +468,20 @@ export default function Gallery({ entries, imageQuality }: Props) {
       </main>
 
       {selected && (() => {
-        const idx = filtered.findIndex(e => e.id === selected.id);
+        const idx = filtered.findIndex((e) => e.id === selected.id);
         return (
           <PromptModal
             entry={selected}
-            onClose={() => setSelected(null)}
+            onClose={handleClose}
             onTagClick={handleTagClick}
             hasPrev={idx > 0}
             hasNext={idx < filtered.length - 1}
-            onPrev={() => idx > 0 && setSelected(filtered[idx - 1])}
-            onNext={() => idx < filtered.length - 1 && setSelected(filtered[idx + 1])}
+            onPrev={() => {
+              if (idx > 0) handleSelect(filtered[idx - 1]);
+            }}
+            onNext={() => {
+              if (idx < filtered.length - 1) handleSelect(filtered[idx + 1]);
+            }}
           />
         );
       })()}

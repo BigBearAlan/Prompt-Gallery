@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import type { ImageQualityData, PromptEntry } from '@/lib/types';
 import Header from './Header';
 import Gallery from './Gallery';
 
@@ -62,23 +61,13 @@ function useScrollChromeCompact() {
   return compact;
 }
 
-export default function ClientRoot({
-  entries,
-  imageQuality,
-}: {
-  entries: PromptEntry[];
-  imageQuality: ImageQualityData;
-}) {
+export default function ClientRoot() {
   const chromeCompact = useScrollChromeCompact();
 
   return (
     <>
       <Header compact={chromeCompact} />
-      <Gallery
-        entries={entries}
-        imageQuality={imageQuality}
-        chromeCompact={chromeCompact}
-      />
+      <Gallery chromeCompact={chromeCompact} />
     </>
   );
 }
