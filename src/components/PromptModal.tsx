@@ -127,7 +127,7 @@ export default function PromptModal({
         className="modal-content w-full flex flex-col md:grid"
         style={{
           maxWidth: 1080,
-          maxHeight: '92vh',
+          height: 'min(92vh, 860px)',
           background: '#f6f3ec',
           border: '1px solid rgba(26,23,20,0.1)',
           boxShadow: '0 30px 80px rgba(0,0,0,0.4)',
@@ -381,15 +381,41 @@ export default function PromptModal({
               )}
             </div>
 
-            {/* Char count */}
+            {/* Char count + Copy row */}
             <div style={{
-              fontSize: 11, color: '#8a8278',
-              marginTop: 6, textAlign: 'right',
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              marginTop: 6,
             }}>
-              {tx.chars(editedPrompt.length)}
-              {hasEdits && (
-                <span style={{ marginLeft: 8, fontStyle: 'italic' }}>{tx.edited}</span>
-              )}
+              <div style={{ fontSize: 11, color: '#8a8278' }}>
+                {tx.chars(editedPrompt.length)}
+                {hasEdits && (
+                  <span style={{ marginLeft: 8, fontStyle: 'italic' }}>{tx.edited}</span>
+                )}
+              </div>
+              <button
+                onClick={handleCopy}
+                style={{
+                  padding: '6px 14px',
+                  background: copied ? '#16a34a' : '#1a1714',
+                  color: '#f6f3ec', border: 'none',
+                  fontFamily: 'inherit', fontSize: 12, fontWeight: 500,
+                  cursor: 'pointer', borderRadius: 3,
+                  display: 'flex', alignItems: 'center', gap: 5,
+                  transition: 'background 0.2s',
+                }}
+              >
+                {copied ? (
+                  <>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                    {tx.copied}
+                  </>
+                ) : (
+                  <>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect width="12" height="12" x="9" y="9" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    {tx.copyPrompt}
+                  </>
+                )}
+              </button>
             </div>
           </div>
 
@@ -416,32 +442,6 @@ export default function PromptModal({
             display: 'flex', gap: 8,
             borderTop: '1px solid rgba(26,23,20,0.08)',
           }}>
-            {/* Copy */}
-            <button
-              onClick={handleCopy}
-              style={{
-                flex: 1, padding: '12px 16px',
-                background: copied ? '#16a34a' : '#1a1714',
-                color: '#f6f3ec', border: 'none',
-                fontFamily: 'inherit', fontSize: 13, fontWeight: 500,
-                cursor: 'pointer', borderRadius: 3,
-                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
-                transition: 'background 0.2s',
-              }}
-            >
-              {copied ? (
-                <>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
-                  {tx.copied}
-                </>
-              ) : (
-                <>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect width="12" height="12" x="9" y="9" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  {tx.copyPrompt}
-                </>
-              )}
-            </button>
-
             {/* Save */}
             <button
               onClick={() => toggleSave(entry.id)}
