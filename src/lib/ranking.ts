@@ -60,7 +60,10 @@ export function randomizedQualityRankValue(
   imageQuality?: ImageQualityData | null
 ): number {
   const score = getPromptQualityScore(entry, imageQuality) ?? DEFAULT_SCORE;
-  const jitter = sessionNoise(entry.id, seed) * 12;
+  // Jitter raised to 55 so the random component spans ~55% of the quality
+  // range — enough for a noticeably different order every page load while
+  // still letting genuinely strong images surface more often than weak ones.
+  const jitter = sessionNoise(entry.id, seed) * 55;
   const hqBoost = entry.hq ? 1.5 : 0;
   const engagementTieBreaker = Math.log10((entry.stats?.likes || 0) + 1) * 0.25;
   return score + jitter + hqBoost + engagementTieBreaker;
