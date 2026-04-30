@@ -8,7 +8,10 @@ export const metadata: Metadata = {
   description:
     'A curated archive of AI image prompts. Browse, save, edit and copy prompts for GPT Image, Midjourney, and more.',
   icons: {
-    icon: '/brand/prompt-gallery-logo.png',
+    icon: [
+      { url: '/brand/pixwo-favicon.svg', type: 'image/svg+xml' },
+      { url: '/brand/prompt-gallery-logo.png', type: 'image/png' },
+    ],
     apple: '/brand/prompt-gallery-logo.png',
   },
   openGraph: {

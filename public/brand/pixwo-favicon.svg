@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="7" fill="#f6f3ec"/>
+  <!-- 3×3 pixel grid, top-right cell removed, centre cell vermilion -->
+  <!-- cell size = 8px, pad = 1.5px, pixel = 5px, radius = 1px -->
+  <!-- row 0 -->
+  <rect x="4"  y="4"  width="7" height="7" rx="1.2" fill="#1a1714"/>
+  <rect x="13" y="4"  width="7" height="7" rx="1.2" fill="#1a1714"/>
+  <!-- [0][2] missing — negative corner -->
+  <!-- row 1 -->
+  <rect x="4"  y="13" width="7" height="7" rx="1.2" fill="#1a1714"/>
+  <rect x="13" y="13" width="7" height="7" rx="1.2" fill="#c8442a"/>
+  <rect x="22" y="13" width="7" height="7" rx="1.2" fill="#1a1714"/>
+  <!-- row 2 -->
+  <rect x="4"  y="22" width="7" height="7" rx="1.2" fill="#1a1714"/>
+  <rect x="13" y="22" width="7" height="7" rx="1.2" fill="#1a1714"/>
+  <rect x="22" y="22" width="7" height="7" rx="1.2" fill="#1a1714"/>
+</svg>
