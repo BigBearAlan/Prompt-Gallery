@@ -86,7 +86,12 @@
       "Bash(python3 *)",
       "Bash(ls .env.local)",
       "Bash(cat .env.local)",
-      "Read(//private/tmp/pinterest-test/**)"
+      "Read(//private/tmp/pinterest-test/**)",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(cp \"/Users/bearsmacbook16/.claude/projects/-Users-bearsmacbook16-Desktop-Google-Drive-Folder-CODEX-Prompt-Gallery/45772198-4887-4b95-abcf-37abf6fa7746/tool-results/webfetch-1777517868306-4izmef.bin\" /tmp/design.gz)",
+      "Bash(gunzip -f /tmp/design.gz)",
+      "Read(//tmp/**)",
+      "Bash(tar *)"
     ]
   }
 }
