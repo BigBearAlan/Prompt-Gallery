@@ -363,46 +363,42 @@ export default function Gallery({}: Props) {
       </div>
 
       <main className="max-w-[1800px] mx-auto px-2.5 sm:px-4 py-3 sm:py-4">
-        {/* Loading skeleton */}
-        {dataLoading ? (
-          <div
-            className="masonry-grid"
-            style={{ gridTemplateColumns: `repeat(${columnCount}, minmax(0, 1fr))` }}
-          >
-            {Array.from({ length: columnCount * 3 }).map((_, i) => (
-              <div key={i} className="masonry-column">
-                <div
-                  className="skeleton rounded-lg"
-                  style={{ width: '100%', aspectRatio: `1 / ${1 + (i % 3) * 0.3}` }}
-                />
-              </div>
-            ))}
-          </div>
-        ) : displayed.length === 0 ? (
+        {/* containerRef must always be in the DOM so ResizeObserver fires on mount */}
+        <div
+          ref={containerRef}
+          className="masonry-grid"
+          style={{ gridTemplateColumns: `repeat(${columnCount}, minmax(0, 1fr))` }}
+        >
+          {dataLoading
+            ? Array.from({ length: columnCount * 3 }).map((_, i) => (
+                <div key={i} className="masonry-column">
+                  <div
+                    className="skeleton rounded-lg"
+                    style={{ width: '100%', aspectRatio: `1 / ${1 + (i % 3) * 0.3}` }}
+                  />
+                </div>
+              ))
+            : columns.map((column, columnIndex) => (
+                <div className="masonry-column" key={columnIndex}>
+                  {column.map(({ entry, index }) => (
+                    <PromptCard
+                      key={entry.id}
+                      entry={entry}
+                      loading={index < eagerImageCount ? 'eager' : 'lazy'}
+                      onClick={() => handleSelect(entry)}
+                    />
+                  ))}
+                </div>
+              ))
+          }
+        </div>
+
+        {!dataLoading && displayed.length === 0 && (
           <div
             className="text-center py-24 text-sm"
             style={{ color: 'var(--text-secondary)' }}
           >
             {tx.noResults}
-          </div>
-        ) : (
-          <div
-            ref={containerRef}
-            className="masonry-grid"
-            style={{ gridTemplateColumns: `repeat(${columnCount}, minmax(0, 1fr))` }}
-          >
-            {columns.map((column, columnIndex) => (
-              <div className="masonry-column" key={columnIndex}>
-                {column.map(({ entry, index }) => (
-                  <PromptCard
-                    key={entry.id}
-                    entry={entry}
-                    loading={index < eagerImageCount ? 'eager' : 'lazy'}
-                    onClick={() => handleSelect(entry)}
-                  />
-                ))}
-              </div>
-            ))}
           </div>
         )}
 
