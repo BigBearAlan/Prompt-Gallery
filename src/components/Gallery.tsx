@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect, useRef, useDeferredValue } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import type { ImageQualityData, PromptEntry, SearchIndexFile } from '@/lib/types';
 import { useLocale } from '@/lib/i18n';
 import { getPromptQualityScore, randomizedQualityRankValue } from '@/lib/ranking';
@@ -131,9 +131,7 @@ export default function Gallery({}: Props) {
     return () => { cancelled = true; };
   }, []);
 
-  // ── Search (fix #1) ─────────────────────────────────────────────────────
-  const [search, setSearch] = useState('');
-  const deferredSearch = useDeferredValue(search);
+  const search = '';
 
   const [category] = useState('all');
   const [lang]     = useState('all');
@@ -187,7 +185,7 @@ export default function Gallery({}: Props) {
 
   // ── Search index (lazy, only for image-mode search) ─────────────────────
   const fetchAttempted = useRef(false);
-  const parsedSearch   = useMemo(() => parseSearchQuery(deferredSearch), [deferredSearch]);
+  const parsedSearch   = useMemo(() => parseSearchQuery(search), [search]);
 
   useEffect(() => {
     if (!parsedSearch.normalizedTerm || parsedSearch.mode !== 'image') return;
@@ -308,7 +306,7 @@ export default function Gallery({}: Props) {
   return (
     <>
       {/* ── Hero strip ── */}
-      <div className="max-w-[1800px] mx-auto" style={{ padding: '28px 20px 0' }}>
+      <div className="max-w-[1800px] mx-auto" style={{ padding: '28px 20px 8px' }}>
         <div
           className="flex items-end justify-between gap-6"
           style={{ borderBottom: '1px solid rgba(26,23,20,0.1)', paddingBottom: 20 }}
@@ -345,56 +343,13 @@ export default function Gallery({}: Props) {
           </div>
         </div>
 
-        {/* ── Search bar (fix #1) ── */}
-        <div style={{ padding: '14px 0 10px', display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
-          <div style={{ position: 'relative', flex: '1 1 220px', maxWidth: 480 }}>
-            <svg
-              width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" strokeWidth="2"
-              style={{
-                position: 'absolute', left: 11, top: '50%', transform: 'translateY(-50%)',
-                color: 'var(--text-secondary)', pointerEvents: 'none',
-              }}
-            >
-              <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />
-            </svg>
-            <input
-              type="search"
-              value={search}
-              onChange={(e) => { setSearch(e.target.value); setPage(1); }}
-              placeholder={tx.searchPlaceholder}
-              style={{
-                width: '100%',
-                padding: '8px 32px 8px 34px',
-                fontSize: 13,
-                border: '1px solid rgba(26,23,20,0.14)',
-                borderRadius: 5,
-                background: 'rgba(255,255,255,0.9)',
-                color: 'var(--text-primary)',
-                outline: 'none',
-                fontFamily: 'inherit',
-                appearance: 'none',
-              }}
-            />
-            {search && (
-              <button
-                onClick={() => { setSearch(''); setPage(1); }}
-                aria-label="Clear search"
-                style={{
-                  position: 'absolute', right: 9, top: '50%', transform: 'translateY(-50%)',
-                  background: 'none', border: 'none', cursor: 'pointer',
-                  color: 'var(--text-secondary)', fontSize: 17, lineHeight: 1, padding: 2,
-                }}
-              >×</button>
-            )}
-          </div>
-
-          {/* Active tag chip */}
-          {tagFilter && (
+        {/* Active tag chip */}
+        {tagFilter && (
+          <div style={{ paddingTop: 12, paddingBottom: 4 }}>
             <button
               onClick={() => setTagFilter('')}
               style={{
-                display: 'flex', alignItems: 'center', gap: 5,
+                display: 'inline-flex', alignItems: 'center', gap: 5,
                 padding: '6px 12px', borderRadius: 99, fontSize: 12,
                 background: '#1a1714', color: '#f6f3ec',
                 border: 'none', cursor: 'pointer', fontFamily: 'inherit',
@@ -403,15 +358,8 @@ export default function Gallery({}: Props) {
               {tagFilter}
               <span style={{ opacity: 0.7, fontSize: 15 }}>×</span>
             </button>
-          )}
-
-          {/* Search index loading hint */}
-          {parsedSearch.normalizedTerm && searchIndexStatus === 'loading' && (
-            <span style={{ fontSize: 11, color: 'var(--text-secondary)', fontFamily: 'var(--mono)' }}>
-              {tx.searchLoadingFallback}
-            </span>
-          )}
-        </div>
+          </div>
+        )}
       </div>
 
       <main className="max-w-[1800px] mx-auto px-2.5 sm:px-4 py-3 sm:py-4">
