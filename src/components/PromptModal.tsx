@@ -267,7 +267,7 @@ export default function PromptModal({
           className={`${mobileTab === 'image' ? 'hidden' : 'flex'} md:flex flex-col`}
           style={{
             background: '#f6f3ec',
-            overflow: 'hidden',
+            overflowY: 'auto',
             paddingTop: 46,
             minHeight: 0,
           }}
@@ -309,7 +309,6 @@ export default function PromptModal({
           {/* Prompt section */}
           <div style={{
             padding: '14px 28px 10px',
-            flex: 1, overflow: 'hidden',
             display: 'flex', flexDirection: 'column',
           }}>
             {/* Prompt header */}
@@ -352,7 +351,7 @@ export default function PromptModal({
 
             {/* Prompt display / edit */}
             <div style={{
-              flex: 1, overflow: 'hidden', position: 'relative',
+              minHeight: 160, maxHeight: 340, overflowY: 'auto',
               background: '#fbf9f3',
               border: '1px solid rgba(26,23,20,0.08)',
               borderRadius: 3,
@@ -363,8 +362,8 @@ export default function PromptModal({
                   onChange={(e) => setEditedPrompt(e.target.value)}
                   spellCheck={false}
                   style={{
-                    width: '100%', height: '100%',
-                    border: 'none', outline: 'none', resize: 'none',
+                    width: '100%', minHeight: 160,
+                    border: 'none', outline: 'none', resize: 'vertical',
                     background: 'transparent',
                     padding: '14px 16px',
                     fontFamily: 'var(--mono)', fontSize: 11.5, lineHeight: 1.65,
@@ -373,18 +372,11 @@ export default function PromptModal({
                 />
               ) : (
                 <div style={{
-                  height: '100%', overflow: 'hidden', position: 'relative',
                   padding: '14px 16px',
                   fontFamily: 'var(--mono)', fontSize: 11.5, lineHeight: 1.65,
                   color: '#2a251f', whiteSpace: 'pre-wrap', wordBreak: 'break-word',
                 }}>
                   <HighlightedPrompt text={editedPrompt} />
-                  {/* fade-out gradient at bottom */}
-                  <div style={{
-                    position: 'absolute', left: 0, right: 0, bottom: 0, height: 40,
-                    background: 'linear-gradient(to bottom, rgba(251,249,243,0), #fbf9f3)',
-                    pointerEvents: 'none',
-                  }} />
                 </div>
               )}
             </div>
