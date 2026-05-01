@@ -97,7 +97,8 @@
       "Bash(vercel --prod)",
       "Bash(vercel --prod --yes)",
       "Bash(echo \"EXIT:$?\")",
-      "Bash(vercel ls *)"
+      "Bash(vercel ls *)",
+      "Bash(vercel --prod --yes --archive=tgz)"
     ]
   }
 }
